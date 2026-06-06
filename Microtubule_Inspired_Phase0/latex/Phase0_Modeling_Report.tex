@@ -1,0 +1,140 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=blue!60!black,
+    urlcolor=blue!60!black
+}
+
+\title{\textbf{Phase 0 Computational Setup and Modeling Strategy}}
+\author{Daniel Alejandro Olaya}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Phase 0 Objective}
+
+Phase 0 is designed to compare three representative baseline architectures under controlled and identical simulation conditions: an organic/biomimetic tubular structure, a hybrid organic--inorganic tubular structure, and a predominantly inorganic tubular structure. The objective is to identify which baseline architecture maximizes physical plausibility, computational tractability, and measurable output contrast.
+
+\section{Computational Environment}
+
+The initial computational setup is developed on macOS. This environment will be used for documentation, geometry generation, small test systems, scripting, post-processing, plotting, and visualization. Larger production simulations may later be migrated to a Linux workstation, HPC system, or cloud compute environment.
+
+\section{Software Stack and Justification}
+
+The initial computational environment is a macOS workstation used for documentation, model generation, local testing, trajectory analysis, and plotting. Larger production simulations may be migrated later to a Linux workstation, HPC system, or cloud compute environment depending on system size, number of replicas, trajectory length, and computational cost.
+
+\subsection{LAMMPS}
+
+LAMMPS is available locally through the executable \texttt{lmp\_mpi}. The installed version is LAMMPS 10 Dec 2025, compiled with Open MPI v5.0.7. The build includes several packages relevant to this project, including \texttt{MOLECULE}, \texttt{KSPACE}, \texttt{DIPOLE}, \texttt{DRUDE}, \texttt{DIELECTRIC}, \texttt{MANYBODY}, \texttt{REAXFF}, \texttt{QEQ}, \texttt{RIGID}, \texttt{SPIN}, \texttt{PHONON}, \texttt{BROWNIAN}, \texttt{COLLOID}, \texttt{CORESHELL}, and \texttt{DPD}.
+
+LAMMPS is selected as the primary engine for inorganic, hybrid organic--inorganic, coarse-grained, and field-driven models because it provides broad support for particle-based materials modeling, long-range electrostatics, dipolar interactions, external fields, rigid bodies, many-body potentials, reactive force fields, and specialized packages for dielectric, spin, and phonon-related models. Its flexibility is particularly relevant for Phase 0 because the candidate architectures include inorganic tubes, hybrid coated tubes, and confined polar media. The use of LAMMPS for large-scale particle-based molecular simulation is supported by the foundational and modern LAMMPS literature.
+
+The current macOS LAMMPS build is suitable for local setup, geometry validation, debugging, and small-to-medium test systems. Because OpenMP is not enabled at the compiler level and no GPU acceleration is reported, large production simulations may be more efficiently executed later on a Linux workstation or HPC/cloud environment.
+
+\subsection{GROMACS}
+
+GROMACS is available locally through the executable \texttt{gmx}. The installed version is GROMACS 2025.4, compiled in mixed precision with thread-MPI, OpenMP support, AVX2 SIMD instructions, and FFTW. GPU support is disabled in the local build.
+
+GROMACS is selected for biomolecular, peptide-like, organic, and soft-matter candidates because it is highly optimized for classical molecular dynamics of water-containing molecular systems and provides mature tools for energy minimization, equilibration, trajectory generation, and standard structural analyses. It is particularly suitable if the organic/biomimetic Phase 0 candidate is represented as a peptide-like or biomolecular tubular assembly. The use of GROMACS for efficient molecular simulations is supported by standard GROMACS references.
+
+The current macOS GROMACS build is suitable for local testing and moderate CPU-based simulations. Large-scale production runs may benefit from optimized Linux/GPU builds.
+
+\subsection{Python Analysis Environment}
+
+Python 3.12.12 is available through the Miniforge environment. Python will be used for geometry generation, workflow automation, trajectory analysis, dipole-orientation metrics, autocorrelation functions, plotting, tabular summaries, and preparation of report-ready figures. The initial package list includes \texttt{NumPy}, \texttt{SciPy}, \texttt{pandas}, \texttt{matplotlib}, \texttt{MDAnalysis}, \texttt{MDTraj}, \texttt{Jupyter}, and \texttt{tqdm}.
+
+\subsection{Later-Stage Tools}
+
+Quantum ESPRESSO and Octopus are reserved for later electronic-structure and optical-response modules, including DFT, TDDFT, transition-dipole calculations, polarizability estimates, and fragment-level electronic parameterization. COMSOL is reserved for later continuum electromagnetic and device-level modeling once effective dielectric, polarizability, or conductivity parameters are available from molecular simulations, electronic calculations, or literature data.
+
+\section{Repository Structure}
+
+The repository is organized to separate documentation, references, scripts, systems, controls, simulations, results, figures, logs, and daily notes.
+
+\section{Candidate Architecture Definition}
+
+The first validated geometric reference is a tubular scaffold with outer diameter
+\SI{24.0}{nm}, lumen diameter \SI{14.0}{nm}, wall thickness \SI{5.0}{nm}, and
+segment length \SI{20.0}{nm}. This geometry is used as a common reference for
+Phase 0 so that the organic/biomimetic, hybrid organic--inorganic, and
+predominantly inorganic candidates can be compared under identical dimensional
+constraints.
+
+The initial generated scaffold is a geometric point-cloud representation rather
+than a force-field-ready molecular model. Its purpose is to verify dimensions,
+coordinate conventions, plotting routines, and documentation workflow before
+constructing chemically specific candidate systems. Geometry inspection confirmed
+an estimated lumen diameter of \SI{14.0}{nm}, outer diameter of \SI{24.0}{nm},
+segment length of \SI{20.0}{nm}, and 17,280 shell points.
+
+\begin{table}[h!]
+\centering
+\caption{Initial Phase 0 candidate matrix.}
+\begin{tabularx}{\textwidth}{p{3.1cm} X X}
+\toprule
+\textbf{Class} & \textbf{Initial candidate} & \textbf{Primary purpose} \\
+\midrule
+Organic / biomimetic &
+Peptide-like or aromatic peptide tubular scaffold with polar wall groups &
+Test biomimetic confinement, hydration-layer behavior, polar wall effects, and structural persistence. \\
+Hybrid organic--inorganic &
+BNNT or CNT scaffold with polar or peptide-like coating &
+Test whether a mechanically robust inorganic tube plus polar coating improves confined-water ordering and dielectric response. \\
+Predominantly inorganic &
+BNNT with confined water &
+Test robust tubular confinement, confined-water ordering, dipole autocorrelation, and field-induced dielectric response. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Control Systems}
+
+The Phase 0 comparison requires controls to determine whether the measured
+response is caused by structured confinement, confined water, wall chemistry, or
+ordered functionalization. The initial controls are:
+
+\begin{itemize}
+    \item dry or empty tube, to isolate the role of confined water;
+    \item water-filled unfunctionalized tube, to separate confinement from wall functionalization;
+    \item bulk or unconfined water, to compare confined and unconfined relaxation behavior;
+    \item randomized wall polarity, when applicable, to test whether ordered dipolar patterning matters.
+\end{itemize}
+
+\section{Simulation Protocol}
+
+Pending definition.
+
+\section{Analysis Metrics}
+
+Pending definition.
+
+\section{Results}
+
+Pending simulations.
+
+\section{Discussion}
+
+Pending results.
+
+\section{Next-Step Decision Criteria}
+
+The first decision criterion is whether the computational setup is sufficiently reproducible and flexible to support the Phase 0 comparison.
+
+\end{document}

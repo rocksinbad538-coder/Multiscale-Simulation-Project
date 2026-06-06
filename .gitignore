@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Conda / environments
+.env
+.venv
+env/
+venv/
+
+# Temporary folders
+tmp/
+tmp_vmd/
+tmp_frames/
+vmd_frames/
+
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+
+# Editor
+.vscode/
+.idea/

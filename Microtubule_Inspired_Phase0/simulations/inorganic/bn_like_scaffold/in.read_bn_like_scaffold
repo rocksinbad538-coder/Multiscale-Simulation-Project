@@ -1,0 +1,30 @@
+# Phase 0 — BN-like scaffold LAMMPS read test
+# Purpose: verify that the generated LAMMPS data file can be read correctly.
+
+units           real
+atom_style      charge
+boundary        f f f
+
+read_data       ../../../systems/inorganic/bn_like_scaffold/lammps/bn_like_scaffold_24OD_14ID_20L.data
+
+group           scaffold type 1 2
+
+mass            1 10.811
+mass            2 14.007
+
+# Minimal nonbonded placeholder for read/run sanity check.
+# This is not yet the final production force field.
+pair_style      lj/cut/coul/cut 10.0
+pair_coeff      1 1 0.050 3.40
+pair_coeff      2 2 0.050 3.40
+pair_coeff      1 2 0.050 3.40
+
+neighbor        2.0 bin
+neigh_modify    every 1 delay 0 check yes
+
+thermo          1
+thermo_style    custom step atoms temp pe ke etotal press
+
+run             0
+
+write_data      ../../../systems/inorganic/bn_like_scaffold/outputs/bn_like_scaffold_checked.data

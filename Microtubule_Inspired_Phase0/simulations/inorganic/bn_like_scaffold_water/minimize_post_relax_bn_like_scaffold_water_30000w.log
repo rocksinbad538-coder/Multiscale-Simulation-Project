@@ -1,0 +1,115 @@
+LAMMPS (10 Dec 2025)
+Reading data file ...
+  orthogonal box = (-140 -140 -120) to (140 140 120)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  107280 atoms
+  reading velocities ...
+  107280 velocities
+  scanning bonds ...
+  2 = max bonds/atom
+  scanning angles ...
+  1 = max angles/atom
+  orthogonal box = (-140 -140 -120) to (140 140 120)
+  1 by 1 by 1 MPI processor grid
+  reading bonds ...
+  60000 bonds
+  reading angles ...
+  30000 angles
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     2 = max # of 1-2 neighbors
+     1 = max # of 1-3 neighbors
+     1 = max # of 1-4 neighbors
+     2 = max # of special neighbors
+  special bonds CPU = 0.041 seconds
+  read_data CPU = 1.415 seconds
+17280 atoms in group scaffold
+90000 atoms in group water
+Generated 0 of 6 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 12
+  ghost atom cutoff = 12
+  binsize = 6, bins = 47 47 40
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/cut, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d
+      bin: standard
+Setting up fire style minimization ...
+  Unit style    : real
+  Current step  : 0
+  Parameters for fire:
+    dmax  delaystep dtgrow dtshrink alpha0 alphashrink tmax tmin   integrator   halfstepback   abcfire  
+     0.1     20      1.1     0.5     0.25     0.99      10  0.02 eulerimplicit      yes          no     
+Per MPI rank memory allocation (min/avg/max) = 85.47 | 85.47 | 85.47 Mbytes
+   Step        Atoms        PotEng         TotEng         Press           Fmax     
+         0      107280  -290795.02     -290795.02     -445.11187      43.084698    
+        50      107280  -294251.7      -293785.28     -437.35493      6.4413901    
+       100      107280  -297141.7      -297034.73     -438.73052      6.2849101    
+       150      107280  -296225.34     -296152.62     -436.52693      6.4760811    
+       200      107280  -292761.04     -292691.32     -431.01205      7.0175067    
+       250      107280  -296169.17     -296156.84     -434.35919      6.3098242    
+       300      107280  -296802.27     -296788.73     -434.71083      6.7499086    
+       350      107280  -298846.4      -298809.28     -436.69178      6.6911785    
+       400      107280  -296506.07     -296500.07     -433.66158      5.9467139    
+       450      107280  -299148.85     -299139.84     -436.61103      5.7204137    
+       500      107280  -292234.79     -292218.94     -427.89634      6.8529883    
+       550      107280  -296827.67     -296825.91     -433.24252      7.4797178    
+       600      107280  -295306.54     -295300.47     -431.26302      6.3907841    
+       650      107280  -298038.79     -298031.38     -434.35732      6.3617903    
+       700      107280  -298421.83     -298415.74     -434.6062       5.7989852    
+       750      107280  -295046.12     -295041.96     -430.45146      5.5877831    
+       800      107280  -298755.11     -298750.9      -434.79         7.2494434    
+       850      107280  -297192.25     -297170.85     -432.63894      6.8023243    
+       900      107280  -297365.63     -297363.21     -432.83838      6.2563443    
+       950      107280  -295938.19     -295935.27     -431.0453       5.8870371    
+      1000      107280  -296149.27     -296140.13     -431.12689      6.3582355    
+      1050      107280  -300142.43     -300140.72     -435.91659      5.8558328    
+      1100      107280  -298888.62     -298886.35     -434.3342       5.6302121    
+      1150      107280  -298016.95     -298012.75     -433.16389      6.1808657    
+      1195      107280  -296454.34     -296440.83     -431.17327      7.1816992    
+Loop time of 322.197 on 1 procs for 1195 steps with 107280 atoms
+
+99.9% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -290795.015314707  -296455.765118864  -296454.342225786
+  Force two-norm initial, final = 3390.7355 348.63199
+  Force max component initial, final = 43.084698 7.1816992
+  Final line search alpha, max atom move = 0 0
+  Iterations, force evaluations = 1195 1255
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 311.93     | 311.93     | 311.93     |   0.0 | 96.81
+Bond    | 5.3365     | 5.3365     | 5.3365     |   0.0 |  1.66
+Neigh   | 0.36818    | 0.36818    | 0.36818    |   0.0 |  0.11
+Comm    | 0.002565   | 0.002565   | 0.002565   |   0.0 |  0.00
+Output  | 0.33628    | 0.33628    | 0.33628    |   0.0 |  0.10
+Modify  | 0.28914    | 0.28914    | 0.28914    |   0.0 |  0.09
+Other   |            | 3.932      |            |       |  1.22
+
+Nlocal:         107280 ave      107280 max      107280 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:              0 ave           0 max           0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.01031e+07 ave 1.01031e+07 max 1.01031e+07 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 10103136
+Ave neighs/atom = 94.175391
+Ave special neighs/atom = 1.6778523
+Neighbor list builds = 1
+Dangerous builds = 0
+System init for write_data ...
+Generated 0 of 6 mixed pair_coeff terms from geometric mixing rule
+WARNING: Not all mixed pair coeffs generated from mixing. Use write_data with 'pair ij' option to store all pair coeffs. (../write_data.cpp:364)
+Total wall time: 0:05:24
