@@ -415,3 +415,30 @@ The current baseline is therefore suitable for continued short-temperature ramp 
 
 VMD-compatible XYZ files and LAMMPS trajectories are generated locally for qualitative inspection. Visualization is used to confirm scaffold geometry, water confinement, and overall structural integrity. Quantitative conclusions will be based on LAMMPS logs and trajectory analysis, not visual inspection alone.
 
+
+## Thermal ramp and 300 K hold
+
+The BN-like scaffold + 30,000 confined water system was advanced through a staged NVT thermal ramp and a short 300 K hold.
+
+Completed stages:
+
+- 50 K corrected NVT
+- 50 → 150 K ramp
+- 150 → 200 K ramp
+- 200 → 250 K ramp
+- 250 → 300 K ramp
+- 300 K constant-temperature hold
+
+Final 300 K hold metrics:
+
+- Water-specific temperature: 299.74 K
+- Water MSD: 12.349 Å²
+- Dangerous builds: 0
+- No NaNs detected
+- No lost atoms reported
+- Final fraction of water oxygen atoms inside the nominal lumen segment: 0.9983
+- Final fraction radially outside the nominal lumen radius: 0.00163
+- Final fraction axially outside the nominal segment: 0.000133
+- Final fraction outside the outer scaffold radius: 0.0
+
+Generated outputs include thermodynamic summaries, confinement summaries, updated figures, LAMMPS trajectories, and final data files. These results validate short-timescale numerical stability and confinement for the Phase 0 inorganic baseline. The force field remains provisional and should not yet be interpreted as a final predictive material model.

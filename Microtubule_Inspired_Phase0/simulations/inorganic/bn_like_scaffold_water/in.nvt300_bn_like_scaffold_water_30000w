@@ -1,0 +1,71 @@
+# Phase 0 — BN-like scaffold + confined water NVT ramp to 300 K
+# System: 30,000 confined water molecules
+# Starting point: 250 K ramp output
+# Purpose: continue finite-temperature stability testing from 250 K to 300 K.
+
+units           real
+atom_style      full
+boundary        f f f
+
+# These styles must be declared before read_data because the data file
+# contains Pair Coeffs, Bond Coeffs, and Angle Coeffs sections.
+pair_style      lj/cut/coul/cut 10.0
+bond_style      harmonic
+angle_style     harmonic
+
+read_data       ../../../systems/inorganic/bn_like_scaffold_water/outputs/bn_like_scaffold_water_30000w_nvt250.data
+
+group           scaffold type 1 2
+group           water type 3 4
+
+mass            1 10.811
+mass            2 14.007
+mass            3 15.9994
+mass            4 1.008
+
+# Placeholder nonbonded parameters for Phase 0 initialization/testing.
+# These are not yet final production force-field parameters.
+pair_coeff      1 1 0.0500 3.40
+pair_coeff      2 2 0.0500 3.40
+pair_coeff      1 2 0.0500 3.40
+
+# TIP3P-like water oxygen LJ; hydrogens LJ set to zero.
+pair_coeff      3 3 0.1521 3.1507
+pair_coeff      4 4 0.0000 0.0000
+
+pair_coeff      1 3 0.0872 3.275
+pair_coeff      2 3 0.0872 3.275
+pair_coeff      1 4 0.0000 0.0000
+pair_coeff      2 4 0.0000 0.0000
+pair_coeff      3 4 0.0000 0.0000
+
+bond_coeff      1 450.0 0.9572
+angle_coeff     1 55.0 104.52
+
+neighbor        2.0 bin
+neigh_modify    every 1 delay 0 check yes
+
+# Keep scaffold fixed during this baseline confined-water relaxation.
+fix             freeze_scaffold scaffold setforce 0.0 0.0 0.0
+
+# Water-specific temperature and MSD.
+compute         twater water temp
+compute         msdwater water msd
+
+# Continue ramp from 250 K to 300 K.
+velocity        water scale 250.0
+
+fix             nvt_water water nvt temp 250.0 300.0 25.0
+fix_modify      nvt_water temp twater
+
+timestep        0.25
+
+thermo          100
+thermo_style    custom step atoms temp c_twater pe ke etotal press c_msdwater[4]
+
+dump            dmp all custom 1000 ../../../systems/inorganic/bn_like_scaffold_water/outputs/nvt300_30000w.lammpstrj id type mol q x y z
+dump_modify     dmp sort id
+
+run             10000
+
+write_data      ../../../systems/inorganic/bn_like_scaffold_water/outputs/bn_like_scaffold_water_30000w_nvt300.data
