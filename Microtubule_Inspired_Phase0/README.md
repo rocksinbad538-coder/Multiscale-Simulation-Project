@@ -442,3 +442,32 @@ Final 300 K hold metrics:
 - Final fraction outside the outer scaffold radius: 0.0
 
 Generated outputs include thermodynamic summaries, confinement summaries, updated figures, LAMMPS trajectories, and final data files. These results validate short-timescale numerical stability and confinement for the Phase 0 inorganic baseline. The force field remains provisional and should not yet be interpreted as a final predictive material model.
+
+## Phase 0 status — Day 004 update
+
+Day 004 completed the BN-like inorganic baseline controls and short field-response diagnostics.
+
+Completed items:
+
+- Dry BN-like scaffold 300 K tethered control.
+- Hydrated BN-like scaffold-water extended contained 300 K hold.
+- Water-only contained reference generated from the hydrated state.
+- Scaffold-water vs water-only confinement comparison.
+- Water dipole orientation and dipole autocorrelation diagnostics.
+- Short axial electric-field response test at Ez = 0.01 V/Å for both scaffold-water and water-only systems.
+
+Main result:
+
+The BN-like scaffold preserves radial confinement of the water phase relative to the water-only contained reference. Water dipoles show near-isotropic average orientation without field, but strong axial alignment under the applied field. Under the current short-timescale provisional-force-field diagnostics, the scaffold contribution is clearer for radial confinement than for average axial dipolar ordering.
+
+Key figures:
+
+- `figures/day004/day004_bn_like_hydrated_and_dry_controls_dashboard.png`
+- `figures/day004/day004_scaffold_water_vs_water_only_control_comparison.png`
+- `figures/day004/day004_water_dipole_autocorrelation_comparison.png`
+- `figures/day004/day004_fieldZ_response_scaffold_water_vs_water_only.png`
+
+Detailed notes:
+
+- `notes/day_003.md`
+- `notes/day_004.md`
