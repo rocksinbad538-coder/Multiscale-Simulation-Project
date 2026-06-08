@@ -1,0 +1,67 @@
+# Phase 0 — BN-like scaffold + 30,000 confined waters
+# Extended 300 K NVT hold
+# Purpose: extend room-temperature stability test from the equilibrated 300 K hold state.
+
+units           real
+atom_style      full
+boundary        f f f
+
+# Define styles before read_data because the restart-like data file contains Coeff sections.
+pair_style      lj/cut/coul/cut 10.0
+bond_style      harmonic
+angle_style     harmonic
+
+read_data       ../../../systems/inorganic/bn_like_scaffold_water/outputs/bn_like_scaffold_water_30000w_nvt300_hold.data
+
+group           scaffold type 1 2
+group           water type 3 4
+
+mass            1 10.811
+mass            2 14.007
+mass            3 15.9994
+mass            4 1.008
+
+# Placeholder nonbonded parameters for Phase 0 workflow validation.
+# These are not final production-level material parameters.
+pair_coeff      1 1 0.0500 3.40
+pair_coeff      2 2 0.0500 3.40
+pair_coeff      1 2 0.0500 3.40
+
+# TIP3P-like water oxygen LJ; hydrogens LJ set to zero.
+pair_coeff      3 3 0.1521 3.1507
+pair_coeff      4 4 0.0000 0.0000
+
+# Baseline scaffold-water cross interactions.
+pair_coeff      1 3 0.0872 3.275
+pair_coeff      2 3 0.0872 3.275
+pair_coeff      1 4 0.0000 0.0000
+pair_coeff      2 4 0.0000 0.0000
+pair_coeff      3 4 0.0000 0.0000
+
+bond_coeff      1 450.0 0.9572
+angle_coeff     1 55.0 104.52
+
+neighbor        2.0 bin
+neigh_modify    every 1 delay 0 check yes
+
+timestep        0.25
+
+# Keep scaffold fixed during confined-water stability testing.
+fix             freeze_scaffold scaffold setforce 0.0 0.0 0.0
+
+# Thermostat only mobile water.
+compute         twater water temp
+compute         msdwater water msd
+
+fix             nvt_water water nvt temp 300.0 300.0 100.0
+fix_modify      nvt_water temp twater
+
+thermo          500
+thermo_style    custom step atoms temp c_twater pe ke etotal press c_msdwater[4]
+
+dump            dmp all custom 1000 ../../../systems/inorganic/bn_like_scaffold_water/outputs/nvt300_hold_extended_30000w.lammpstrj id type mol q x y z
+dump_modify     dmp sort id
+
+run             20000
+
+write_data      ../../../systems/inorganic/bn_like_scaffold_water/outputs/bn_like_scaffold_water_30000w_nvt300_hold_extended.data

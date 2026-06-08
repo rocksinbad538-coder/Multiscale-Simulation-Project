@@ -21,7 +21,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-RUN_ORDER = ["nvt50_corrected", "nvt150", "nvt200", "nvt250", "nvt300", "nvt300_hold"]
+RUN_ORDER = ["nvt50_corrected", "nvt150", "nvt200", "nvt250", "nvt300", "nvt300_hold", "nvt300_hold_extended_contained"]
 
 
 def add_cumulative_step(df: pd.DataFrame) -> pd.DataFrame:

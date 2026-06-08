@@ -1,0 +1,67 @@
+# Phase 0 Day 004 — Water-only contained control
+# Purpose:
+#   Run the 30,000-water control extracted from the hydrated BN-like scaffold-water
+#   extended-contained state, without scaffold atoms.
+#
+# Interpretation:
+#   This is a finite-box contained water-only control, not an equilibrated bulk-water
+#   material prediction.
+
+units           real
+atom_style      full
+boundary        f f f
+
+pair_style      lj/cut/coul/cut 10.0
+bond_style      harmonic
+angle_style     harmonic
+
+read_data       ../../../systems/inorganic/water_only_control/water_only_30000w_from_extended_contained.data
+
+group           water type 3 4
+group           oxygen type 3
+group           hydrogen type 4
+
+mass            3 15.9994
+mass            4 1.008
+
+# Provisional TIP3P-like placeholder parameters.
+# This is still Phase 0 workflow-validation, not a production force field.
+pair_coeff      1 1 0.0000 1.0000
+pair_coeff      2 2 0.0000 1.0000
+pair_coeff      3 3 0.1553 3.166
+pair_coeff      4 4 0.0000 1.0000
+pair_coeff      1 2 0.0000 1.0000
+pair_coeff      1 3 0.0000 1.0000
+pair_coeff      1 4 0.0000 1.0000
+pair_coeff      2 3 0.0000 1.0000
+pair_coeff      2 4 0.0000 1.0000
+pair_coeff      3 4 0.0000 1.0000
+
+bond_coeff      1 450.0 0.9572
+angle_coeff     1 55.0 104.52
+
+special_bonds   lj/coul 0.0 0.0 0.0
+
+neighbor        2.0 bin
+neigh_modify    every 1 delay 0 check yes one 4000 page 400000
+
+timestep        0.10
+
+compute         twater water temp
+compute         msdwater oxygen msd
+
+fix             freezegeom water shake 1.0e-5 200 0 b 1 a 1
+fix             thermostat water nvt temp 300.0 300.0 100.0
+fix_modify      thermostat temp twater
+
+fix             walls all wall/reflect xlo EDGE xhi EDGE ylo EDGE yhi EDGE zlo EDGE zhi EDGE
+
+thermo          500
+thermo_style    custom step atoms temp c_twater pe ke etotal press c_msdwater[4]
+
+dump            traj all custom 1000 ../../../systems/inorganic/water_only_control/outputs/nvt300_water_only_contained_30000w.lammpstrj id mol type q x y z ix iy iz
+dump_modify     traj sort id
+
+run             20000
+
+write_data      ../../../systems/inorganic/water_only_control/outputs/water_only_30000w_nvt300_contained.data
