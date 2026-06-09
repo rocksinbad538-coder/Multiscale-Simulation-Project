@@ -471,3 +471,30 @@ Detailed notes:
 
 - `notes/day_003.md`
 - `notes/day_004.md`
+
+## Day 005 update: charge/polarity screening and field-response controls
+
+Day 005 completed a matched Phase 0 charge/polarity-control matrix for the inorganic scaffold-water branch.
+
+Starting from the validated BN-like polar scaffold-water baseline, two matched scaffold controls were generated and simulated:
+
+- BN-neutralized scaffold-water: same BN-like geometry and B/N atom-type topology, but scaffold charges set to zero.
+- carbon-like neutral scaffold-water: same tubular geometry and water configuration, but scaffold represented as a neutral carbon-like placeholder.
+- water-only contained reference: same confined water loading without scaffold.
+
+The field-free controls were compared at 20,000 steps. The BN-like polar scaffold maintained strong radial confinement, with final maximum radial water oxygen position near 73.34 Å. In contrast, BN-neutralized and carbon-like neutral controls reached approximately 95.25 Å and 97.12 Å, respectively. This indicates that the BN-like polar wall is not acting only as a geometric tube; its charge/polarity pattern is a key confinement variable.
+
+A corresponding axial field diagnostic was completed for all four systems using \(E_z = 0.01\) V/Å. Under fieldZ, all systems showed similar axial water-dipole alignment, with final mean cos(theta_z) near 0.59 and final S_z near 0.26. However, radial confinement remained strongly architecture-dependent: BN-like polar stayed near 72.82 Å, while BN-neutralized and carbon-like neutral reached approximately 105.12 Å and 107.78 Å.
+
+Main conclusion:
+
+The applied axial field controls average axial water-dipole alignment, while the BN-like scaffold charge/polarity pattern controls radial confinement. The BN-like polar scaffold is therefore the strongest current inorganic Phase 0 baseline.
+
+Key outputs:
+
+- `results/phase0/day005_charge_polarity_screening_summary.csv`
+- `figures/day005/day005_charge_polarity_controls_20k_comparison.png`
+- `figures/day005/day005_fieldZ_charge_polarity_controls_comparison.png`
+- `latex/Phase0_Modeling_Report.pdf`
+- `latex/Phase0_Modeling_Report.tex`
+

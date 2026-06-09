@@ -5,13 +5,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{microtype}
-\usepackage{amsmath,amssymb,bm}
-\usepackage{siunitx}
-\usepackage{booktabs}
-\usepackage{tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
 \usepackage{longtable}
 \usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{placeins}
 \usepackage{hyperref}
 
 \hypersetup{
@@ -21,44 +21,51 @@
     urlcolor=blue!60!black
 }
 
-\title{\textbf{Phase 0 Computational Setup and Modeling Strategy}}
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{\textbf{Phase 0 Computational Setup, Simulation Progress, and Modeling Strategy}}
 \author{Daniel Alejandro Olaya}
 \date{\today}
 
 \begin{document}
+
 \maketitle
 
 \section{Phase 0 Objective}
 
-Phase 0 is designed to compare three representative baseline architectures under controlled and identical simulation conditions: an organic/biomimetic tubular structure, a hybrid organic--inorganic tubular structure, and a predominantly inorganic tubular structure. The objective is to identify which baseline architecture maximizes physical plausibility, computational tractability, and measurable output contrast.
+Phase 0 is designed to compare representative baseline tubular architectures under controlled and identical simulation conditions. The broader screening matrix includes an organic or biomimetic tubular structure, a hybrid organic--inorganic tubular structure, and a predominantly inorganic tubular structure. The objective is to identify which baseline architecture maximizes physical plausibility, computational tractability, structural stability, confined-water retention, and measurable response under external field perturbation.
+
+The initial validated simulation branch focuses on a predominantly inorganic BN-like tubular scaffold with confined water. This branch is used as the first reference architecture because it provides a mechanically robust, geometrically well-defined tubular domain that can be directly modified to test wall charge, wall polarity, neutralization, and field-response controls.
 
 \section{Computational Environment}
 
-The initial computational setup is developed on macOS. This environment will be used for documentation, geometry generation, small test systems, scripting, post-processing, plotting, and visualization. Larger production simulations may later be migrated to a Linux workstation, HPC system, or cloud compute environment.
+The initial computational setup is developed on macOS. This environment is used for documentation, geometry generation, small test systems, scripting, post-processing, plotting, and visualization. Larger production simulations may later be migrated to a Linux workstation, HPC system, or cloud compute environment depending on system size, number of replicas, trajectory length, and computational cost.
 
 \section{Software Stack and Justification}
 
-The initial computational environment is a macOS workstation used for documentation, model generation, local testing, trajectory analysis, and plotting. Larger production simulations may be migrated later to a Linux workstation, HPC system, or cloud compute environment depending on system size, number of replicas, trajectory length, and computational cost.
-
 \subsection{LAMMPS}
 
-LAMMPS is available locally through the executable \texttt{lmp\_mpi}. The installed version is LAMMPS 10 Dec 2025, compiled with Open MPI v5.0.7. The build includes several packages relevant to this project, including \texttt{MOLECULE}, \texttt{KSPACE}, \texttt{DIPOLE}, \texttt{DRUDE}, \texttt{DIELECTRIC}, \texttt{MANYBODY}, \texttt{REAXFF}, \texttt{QEQ}, \texttt{RIGID}, \texttt{SPIN}, \texttt{PHONON}, \texttt{BROWNIAN}, \texttt{COLLOID}, \texttt{CORESHELL}, and \texttt{DPD}.
+LAMMPS is available locally through the executable \code{lmp_mpi}. The installed version is LAMMPS 10 Dec 2025, compiled with Open MPI v5.0.7. The build includes several packages relevant to this project, including \code{MOLECULE}, \code{KSPACE}, \code{DIPOLE}, \code{DRUDE}, \code{DIELECTRIC}, \code{MANYBODY}, \code{REAXFF}, \code{QEQ}, \code{RIGID}, \code{SPIN}, \code{PHONON}, \code{BROWNIAN}, \code{COLLOID}, \code{CORESHELL}, and \code{DPD}.
 
-LAMMPS is selected as the primary engine for inorganic, hybrid organic--inorganic, coarse-grained, and field-driven models because it provides broad support for particle-based materials modeling, long-range electrostatics, dipolar interactions, external fields, rigid bodies, many-body potentials, reactive force fields, and specialized packages for dielectric, spin, and phonon-related models. Its flexibility is particularly relevant for Phase 0 because the candidate architectures include inorganic tubes, hybrid coated tubes, and confined polar media. The use of LAMMPS for large-scale particle-based molecular simulation is supported by the foundational and modern LAMMPS literature.
+LAMMPS is selected as the primary engine for inorganic, hybrid organic--inorganic, coarse-grained, and field-driven models because it provides broad support for particle-based materials modeling, long-range electrostatics, dipolar interactions, external fields, rigid bodies, many-body potentials, reactive force fields, and specialized packages for dielectric, spin, and phonon-related models. Its flexibility is particularly relevant for Phase 0 because the candidate architectures include inorganic tubes, hybrid coated tubes, organic or biomimetic tubes, confined polar media, and externally driven response tests.
 
-The current macOS LAMMPS build is suitable for local setup, geometry validation, debugging, and small-to-medium test systems. Because OpenMP is not enabled at the compiler level and no GPU acceleration is reported, large production simulations may be more efficiently executed later on a Linux workstation or HPC/cloud environment.
+The current macOS LAMMPS build is suitable for local setup, geometry validation, debugging, and small-to-medium test systems. Because OpenMP is not enabled at the compiler level and no GPU acceleration is reported, larger production simulations may be more efficiently executed later on a Linux workstation or HPC/cloud environment.
 
 \subsection{GROMACS}
 
-GROMACS is available locally through the executable \texttt{gmx}. The installed version is GROMACS 2025.4, compiled in mixed precision with thread-MPI, OpenMP support, AVX2 SIMD instructions, and FFTW. GPU support is disabled in the local build.
+GROMACS is available locally through the executable \code{gmx}. The installed version is GROMACS 2025.4, compiled in mixed precision with thread-MPI, OpenMP support, AVX2 SIMD instructions, and FFTW. GPU support is disabled in the local build.
 
-GROMACS is selected for biomolecular, peptide-like, organic, and soft-matter candidates because it is highly optimized for classical molecular dynamics of water-containing molecular systems and provides mature tools for energy minimization, equilibration, trajectory generation, and standard structural analyses. It is particularly suitable if the organic/biomimetic Phase 0 candidate is represented as a peptide-like or biomolecular tubular assembly. The use of GROMACS for efficient molecular simulations is supported by standard GROMACS references.
+GROMACS is selected for biomolecular, peptide-like, organic, and soft-matter candidates because it is highly optimized for classical molecular dynamics of water-containing molecular systems and provides mature tools for energy minimization, equilibration, trajectory generation, and standard structural analyses. It is particularly suitable if the organic or biomimetic Phase 0 candidate is represented as a peptide-like, aromatic peptide-like, or other biomolecular tubular assembly.
 
-The current macOS GROMACS build is suitable for local testing and moderate CPU-based simulations. Large-scale production runs may benefit from optimized Linux/GPU builds.
+The current macOS GROMACS build is suitable for local testing and moderate CPU-based simulations. Large-scale production runs may benefit from optimized Linux or GPU builds.
 
 \subsection{Python Analysis Environment}
 
-Python 3.12.12 is available through the Miniforge environment. Python will be used for geometry generation, workflow automation, trajectory analysis, dipole-orientation metrics, autocorrelation functions, plotting, tabular summaries, and preparation of report-ready figures. The initial package list includes \texttt{NumPy}, \texttt{SciPy}, \texttt{pandas}, \texttt{matplotlib}, \texttt{MDAnalysis}, \texttt{MDTraj}, \texttt{Jupyter}, and \texttt{tqdm}.
+Python 3.12.12 is available through the Miniforge environment. Python is used for geometry generation, workflow automation, trajectory analysis, dipole-orientation metrics, autocorrelation functions, plotting, tabular summaries, and preparation of report-ready figures. The initial package list includes NumPy, SciPy, pandas, matplotlib, MDAnalysis, MDTraj, Jupyter, and tqdm.
 
 \subsection{Later-Stage Tools}
 
@@ -66,75 +73,212 @@ Quantum ESPRESSO and Octopus are reserved for later electronic-structure and opt
 
 \section{Repository Structure}
 
-The repository is organized to separate documentation, references, scripts, systems, controls, simulations, results, figures, logs, and daily notes.
+The repository is organized to separate documentation, references, scripts, systems, controls, simulations, results, figures, logs, and daily notes. Simulation inputs are stored under \code{simulations/}, structural data and generated trajectories under \code{systems/}, processed numerical outputs under \code{results/}, and report-ready plots under \code{figures/}. Daily progress is tracked in \code{notes/}. Heavy output files such as \code{.data}, \code{.lammpstrj}, and visualization files are intended to be tracked through Git LFS.
 
 \section{Candidate Architecture Definition}
 
-The first validated geometric reference is a tubular scaffold with outer diameter
-\SI{24.0}{nm}, lumen diameter \SI{14.0}{nm}, wall thickness \SI{5.0}{nm}, and
-segment length \SI{20.0}{nm}. This geometry is used as a common reference for
-Phase 0 so that the organic/biomimetic, hybrid organic--inorganic, and
-predominantly inorganic candidates can be compared under identical dimensional
-constraints.
+The first validated geometric reference is a tubular scaffold with outer diameter 24.0 nm, lumen diameter 14.0 nm, wall thickness 5.0 nm, and segment length 20.0 nm. This geometry is used as a common reference for Phase 0 so that the organic or biomimetic, hybrid organic--inorganic, and predominantly inorganic candidates can be compared under identical dimensional constraints.
 
-The initial generated scaffold is a geometric point-cloud representation rather
-than a force-field-ready molecular model. Its purpose is to verify dimensions,
-coordinate conventions, plotting routines, and documentation workflow before
-constructing chemically specific candidate systems. Geometry inspection confirmed
-an estimated lumen diameter of \SI{14.0}{nm}, outer diameter of \SI{24.0}{nm},
-segment length of \SI{20.0}{nm}, and 17,280 shell points.
+The initial generated scaffold is a geometric point-cloud representation that was then used to construct force-field-ready simulation branches. Geometry inspection confirmed an estimated lumen diameter of 14.0 nm, outer diameter of 24.0 nm, segment length of 20.0 nm, and 17,280 shell points.
 
 \begin{table}[h!]
 \centering
+\small
 \caption{Initial Phase 0 candidate matrix.}
-\begin{tabularx}{\textwidth}{p{3.1cm} X X}
-\toprule
+\begin{tabular}{|L{0.23\textwidth}|L{0.32\textwidth}|L{0.34\textwidth}|}
+\hline
 \textbf{Class} & \textbf{Initial candidate} & \textbf{Primary purpose} \\
-\midrule
-Organic / biomimetic &
+\hline
+Organic or biomimetic &
 Peptide-like or aromatic peptide tubular scaffold with polar wall groups &
 Test biomimetic confinement, hydration-layer behavior, polar wall effects, and structural persistence. \\
+\hline
 Hybrid organic--inorganic &
 BNNT or CNT scaffold with polar or peptide-like coating &
 Test whether a mechanically robust inorganic tube plus polar coating improves confined-water ordering and dielectric response. \\
+\hline
 Predominantly inorganic &
-BNNT with confined water &
-Test robust tubular confinement, confined-water ordering, dipole autocorrelation, and field-induced dielectric response. \\
-\bottomrule
-\end{tabularx}
+BN-like tubular scaffold with confined water &
+Test robust tubular confinement, confined-water ordering, dipole autocorrelation, and field-induced response. \\
+\hline
+\end{tabular}
 \end{table}
 
 \section{Control Systems}
 
-The Phase 0 comparison requires controls to determine whether the measured
-response is caused by structured confinement, confined water, wall chemistry, or
-ordered functionalization. The initial controls are:
+The Phase 0 comparison requires controls to determine whether the measured response is caused by structured confinement, confined water, wall chemistry, wall charge, or ordered functionalization. The initial controls are:
 
 \begin{itemize}
-    \item dry or empty tube, to isolate the role of confined water;
-    \item water-filled unfunctionalized tube, to separate confinement from wall functionalization;
-    \item bulk or unconfined water, to compare confined and unconfined relaxation behavior;
-    \item randomized wall polarity, when applicable, to test whether ordered dipolar patterning matters.
+    \item dry or empty scaffold, to isolate the role of confined water;
+    \item water-filled BN-like polar scaffold, to establish the first inorganic reference;
+    \item water-only contained reference, to separate scaffold effects from finite-domain confinement;
+    \item carbon-like neutral scaffold-water control, to test a neutral matched tubular scaffold;
+    \item BN-neutralized scaffold-water control, to isolate the effect of BN-like wall charge while preserving BN-like geometry and B/N atom-type topology;
+    \item field-free and axial-field versions of the water-containing controls.
 \end{itemize}
 
 \section{Simulation Protocol}
 
-Pending definition.
+The Phase 0 simulation protocol was implemented as a staged molecular simulation workflow using LAMMPS. The first production-ready baseline was the predominantly inorganic BN-like tubular scaffold with confined water. The scaffold geometry was kept fixed during the initial water-equilibration and screening simulations so that differences among systems could be attributed primarily to scaffold chemistry, scaffold charge patterning, and field response rather than to scaffold deformation.
+
+All directly compared water-containing systems used the same nominal geometry, box dimensions, water count, and contained finite-domain protocol. The common simulation box was defined over the following Cartesian bounds:
+\[
+x,y \in [-140,140]~\mathrm{\AA}, \qquad z \in [-120,120]~\mathrm{\AA}.
+\]
+The nominal lumen radius used for analysis was \(70~\mathrm{\AA}\), the nominal outer scaffold radius was \(120~\mathrm{\AA}\), and the nominal analyzed axial half-length was \(100~\mathrm{\AA}\).
+
+The principal systems analyzed in the Day 005 charge and polarity control matrix were:
+
+\begin{itemize}
+    \item BN-like polar scaffold-water reference;
+    \item BN-neutralized scaffold-water control;
+    \item carbon-like neutral scaffold-water control;
+    \item water-only contained reference.
+\end{itemize}
+
+The BN-like polar scaffold-water reference contains 17,280 scaffold atoms and 30,000 water molecules, for a total of 107,280 atoms. The water-only reference contains the same 30,000 water molecules but no scaffold. The BN-neutralized control preserves the BN-like scaffold geometry and B/N atom-type topology, but sets the scaffold charges to zero. The carbon-like neutral control preserves the same scaffold geometry and water configuration, but converts the scaffold to a neutral carbon-like placeholder wall.
+
+All contained molecular dynamics tests used a timestep of \(0.10~\mathrm{fs}\), SHAKE-constrained water, reflective finite-domain walls, and a water thermostat at \(300~\mathrm{K}\). Field-free matched-time controls were analyzed at 20,000 steps. Axial electric-field diagnostics were run for 10,000 steps using:
+\[
+E_z = 0.01~\mathrm{V/\AA},
+\]
+implemented in LAMMPS real units as \(0.230605~\mathrm{kcal/(mol~\AA~e)}\).
 
 \section{Analysis Metrics}
 
-Pending definition.
+The Phase 0 analysis emphasized stability, radial confinement, confined-water structure, and water dipole response. The primary scalar metrics extracted from each trajectory were:
+
+\begin{itemize}
+    \item mean radial water oxygen position, \( \langle r_{\mathrm{O}} \rangle \);
+    \item maximum radial water oxygen position, \( r_{\mathrm{O,max}} \);
+    \item mean axial absolute position, \( \langle |z_{\mathrm{O}}| \rangle \);
+    \item fraction of water oxygens inside the nominal lumen segment;
+    \item fraction of water oxygens radially outside the nominal lumen radius;
+    \item mean axial dipole projection, \( \langle \cos(\theta_z) \rangle \);
+    \item mean absolute axial dipole projection, \( \langle |\cos(\theta_z)| \rangle \);
+    \item axial dipolar order parameter, \(S_z\).
+\end{itemize}
+
+The axial dipolar order parameter was computed as:
+\[
+S_z = \frac{1}{2}\left(3\langle \cos^2(\theta_z)\rangle - 1\right),
+\]
+where \(\theta_z\) is the angle between the water dipole vector and the axial \(z\)-direction. For an approximately isotropic orientation distribution, \(\langle |\cos(\theta_z)| \rangle \approx 0.5\) and \(S_z \approx 0\).
+
+The quantitative Day 005 screening table is stored in \code{results/phase0/day005_charge_polarity_screening_summary.csv}.
 
 \section{Results}
 
-Pending simulations.
+\subsection{BN-like Scaffold-Water Baseline}
+
+The BN-like polar scaffold-water baseline was successfully stabilized using a contained finite-domain protocol. The validated system contained 17,280 scaffold atoms and 30,000 confined water molecules. The 300 K contained trajectory reached 20,000 steps without lost atoms, missing bonds, NaNs, or dangerous neighbor-list builds.
+
+In the field-free 20,000-step control, the BN-like scaffold maintained a maximum radial water oxygen position of approximately \(73.34~\mathrm{\AA}\). This value remained close to the nominal lumen boundary and was substantially lower than the corresponding values observed in the neutralized and carbon-like controls.
+
+\subsection{Matched Charge and Polarity Controls}
+
+Day 005 introduced two matched scaffold controls to separate geometric confinement from wall polarity and charge-pattern effects. The BN-neutralized control preserved the BN-like geometry and B/N atom-type topology but removed the scaffold charges. The carbon-like control preserved the same tubular geometry and water configuration, but replaced the scaffold chemistry with a neutral carbon-like placeholder.
+
+The field-free 20,000-step comparison showed that the BN-like polar scaffold maintained the strongest radial confinement. In contrast, both neutral scaffold controls allowed much larger radial excursions. The BN-neutralized scaffold reached a maximum radial water oxygen position of approximately \(95.25~\mathrm{\AA}\), and the carbon-like neutral scaffold reached approximately \(97.12~\mathrm{\AA}\). The water-only contained control reached approximately \(89.84~\mathrm{\AA}\).
+
+\begin{table}[h!]
+\centering
+\small
+\caption{Final field-free Day 005 metrics at 20,000 steps.}
+\begin{tabular}{|L{0.38\textwidth}|r|r|r|r|}
+\hline
+\textbf{System} &
+\textbf{\(r_{\mathrm{O,max}}\) (\AA)} &
+\textbf{\(\langle r_{\mathrm{O}}\rangle\) (\AA)} &
+\textbf{\(\langle \cos\theta_z\rangle\)} &
+\textbf{\(S_z\)} \\
+\hline
+BN-like polar scaffold-water & 73.34 & 41.79 & 0.0024 & -0.0030 \\
+\hline
+BN-neutralized scaffold-water & 95.25 & 40.72 & 0.0026 & -0.0049 \\
+\hline
+carbon-like neutral scaffold-water & 97.12 & 40.76 & 0.0035 & -0.0020 \\
+\hline
+water-only contained & 89.84 & 40.88 & 0.0044 & -0.0049 \\
+\hline
+\end{tabular}
+\end{table}
+
+The water dipole orientation remained approximately isotropic in all field-free systems. The final \(S_z\) values were close to zero, and the final mean axial dipole projections were also near zero. Therefore, the dominant architecture-dependent difference in the field-free simulations was radial confinement rather than spontaneous axial dipole ordering.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{../figures/day005/day005_charge_polarity_controls_20k_comparison.png}
+    \caption{Matched-time field-free charge and polarity controls at 20,000 steps. The BN-like polar scaffold maintains strong radial water confinement, whereas BN-neutralized and carbon-like neutral controls allow substantially larger radial excursions.}
+    \label{fig:day005_charge_polarity_controls_20k}
+\end{figure}
+
+\FloatBarrier
+
+\subsection{Axial Field-Response Matrix}
+
+A short axial electric-field diagnostic was performed for all four water-containing systems using \(E_z = 0.01~\mathrm{V/\AA}\). All systems showed a strong and similar axial water-dipole response. The final mean axial dipole projection was approximately 0.59 in all cases, and the final \(S_z\) values were approximately 0.26.
+
+The architecture-dependent difference again appeared in radial confinement. The BN-like polar scaffold maintained the maximum radial water oxygen position near \(72.82~\mathrm{\AA}\) under fieldZ. By contrast, the BN-neutralized scaffold reached \(105.12~\mathrm{\AA}\), the carbon-like neutral scaffold reached \(107.78~\mathrm{\AA}\), and the water-only control reached \(97.15~\mathrm{\AA}\).
+
+\begin{table}[h!]
+\centering
+\small
+\caption{Final Day 005 axial field-response metrics after 10,000 fieldZ steps.}
+\begin{tabular}{|L{0.38\textwidth}|r|r|r|r|}
+\hline
+\textbf{System} &
+\textbf{\(r_{\mathrm{O,max}}\) (\AA)} &
+\textbf{\(\langle r_{\mathrm{O}}\rangle\) (\AA)} &
+\textbf{\(\langle \cos\theta_z\rangle\)} &
+\textbf{\(S_z\)} \\
+\hline
+BN-like polar scaffold-water + fieldZ & 72.82 & 41.50 & 0.5880 & 0.2567 \\
+\hline
+BN-neutralized scaffold-water + fieldZ & 105.12 & 40.25 & 0.5891 & 0.2592 \\
+\hline
+carbon-like neutral scaffold-water + fieldZ & 107.78 & 40.26 & 0.5949 & 0.2605 \\
+\hline
+water-only contained + fieldZ & 97.15 & 40.36 & 0.5962 & 0.2652 \\
+\hline
+\end{tabular}
+\end{table}
+
+These results indicate that the applied axial field dominates the average axial dipole alignment of water, while scaffold charge and polarity control radial confinement.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{../figures/day005/day005_fieldZ_charge_polarity_controls_comparison.png}
+    \caption{Axial field-response charge and polarity controls. All systems show similar field-induced axial water-dipole alignment, but only the BN-like polar scaffold preserves strong radial confinement under fieldZ.}
+    \label{fig:day005_fieldZ_charge_polarity_controls}
+\end{figure}
+
+\FloatBarrier
 
 \section{Discussion}
 
-Pending results.
+The Day 005 charge and polarity matrix provides the first direct Phase 0 evidence that the BN-like polar scaffold is not simply acting as a geometric tube. The BN-like polar scaffold, the BN-neutralized scaffold, and the carbon-like neutral scaffold share the same nominal tubular geometry and water loading. However, only the BN-like polar scaffold maintains strong radial confinement over the screened trajectories.
+
+The BN-neutralized scaffold is the most direct control because it preserves the BN-like geometry and B/N atom-type topology while removing scaffold charge. Its loss of confinement relative to the BN-like polar scaffold indicates that wall charge and polarity are key design variables. The carbon-like neutral control supports the same conclusion because it also fails to reproduce the radial confinement behavior of the BN-like polar scaffold.
+
+The field-response simulations show that all water-containing systems respond similarly to the applied axial field in terms of mean axial dipole projection and \(S_z\). Therefore, on the current short diagnostic timescale, the field controls average axial dipole alignment, while the wall charge and polarity pattern controls radial confinement. This distinction is important for Phase 0 because it separates a confinement-stability criterion from a field-response criterion.
+
+These results should be interpreted as short-timescale screening diagnostics rather than converged dielectric-response calculations. Longer trajectories, replicate runs, improved force-field validation, and weaker-field linear-response tests will be required before extracting quantitative susceptibility, relaxation time, or dielectric-response parameters.
 
 \section{Next-Step Decision Criteria}
 
-The first decision criterion is whether the computational setup is sufficiently reproducible and flexible to support the Phase 0 comparison.
+The current Phase 0 decision criterion is whether a candidate architecture can maintain stable confined water while producing measurable and interpretable dipole-response metrics. Based on the Day 005 screening matrix, the BN-like polar scaffold is the strongest current inorganic baseline because it preserves radial confinement under both field-free and fieldZ conditions.
+
+The next decision points are:
+
+\begin{enumerate}
+    \item extend the BN-like polar scaffold trajectories to longer timescales;
+    \item run replicate trajectories to separate systematic architecture effects from trajectory noise;
+    \item test weaker electric fields to approach a linear-response regime;
+    \item introduce a hybrid organic--inorganic coated scaffold while preserving the same geometric reference;
+    \item define the organic or biomimetic tubular candidate under the same lumen, hydration, and temperature constraints.
+\end{enumerate}
+
+The immediate Phase 0 ranking criterion is not total energy alone, but the combined behavior of structural stability, radial confinement, water dipole statistics, and controlled response under external axial field.
 
 \end{document}
