@@ -498,3 +498,44 @@ Key outputs:
 - `latex/Phase0_Modeling_Report.pdf`
 - `latex/Phase0_Modeling_Report.tex`
 
+
+## Day 006 update: BN-like polar long-stability and extended field-response validation
+
+Day 006 extended the strongest Phase 0 inorganic baseline identified during Day 005: the BN-like polar scaffold-water system.
+
+Two longer validation simulations were completed:
+
+1. Field-free BN-like polar scaffold-water extension from 20k to 50k total steps.
+2. BN-like polar scaffold-water fieldZ extension from 10k to 30k total fieldZ steps.
+
+Both simulations completed cleanly with:
+
+- 107,280 total atoms
+- 17,280 scaffold atoms
+- 30,000 water molecules
+- timestep: 0.10 fs
+- dangerous builds: 0
+- no detected NaNs, lost atoms, or missing bonds
+
+Field-free 50k result:
+
+The BN-like polar scaffold-water system remained radially confined through 50,000 total steps. The final maximum radial water oxygen position was approximately 73.25 Å, with a final fraction inside the nominal lumen segment of approximately 0.99613. Field-free water dipole orientation remained approximately isotropic, with mean cos(theta_z) near zero and S_z near zero.
+
+FieldZ 30k result:
+
+The BN-like polar scaffold-water system also remained radially confined under prolonged axial field exposure. At 30,000 fieldZ steps, the final maximum radial water oxygen position was approximately 74.25 Å, with a final fraction inside the nominal lumen segment of approximately 0.99597. The axial water-dipole response strengthened substantially under prolonged field exposure, reaching mean cos(theta_z) of approximately 0.763 and S_z of approximately 0.471.
+
+Main conclusion:
+
+The BN-like polar scaffold-water baseline preserves radial confinement both without field and under prolonged axial field exposure. Under fieldZ, the system develops strong axial water-dipole ordering without radial destabilization over the tested timescale.
+
+Key Day 006 outputs:
+
+- `systems/inorganic/bn_like_scaffold_water/outputs/bn_like_scaffold_water_30000w_nvt300_hold_contained_50k.data`
+- `systems/inorganic/bn_like_scaffold_water/outputs/nvt300_hold_contained_bn_like_extend_20k_to_50k_30000w.lammpstrj`
+- `systems/inorganic/bn_like_scaffold_water/outputs/bn_like_scaffold_water_30000w_nvt300_fieldZ_contained_30k.data`
+- `systems/inorganic/bn_like_scaffold_water/outputs/nvt300_fieldZ_contained_bn_like_extend_10k_to_30k_30000w.lammpstrj`
+- `figures/day006/day006_bn_like_50k_stability_vs_day005_controls.png`
+- `figures/day006/day006_bn_like_fieldZ_30k_response.png`
+- `notes/day_006.md`
+
