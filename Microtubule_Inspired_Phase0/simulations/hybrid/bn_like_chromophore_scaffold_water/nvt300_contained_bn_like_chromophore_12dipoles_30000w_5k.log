@@ -1,0 +1,64 @@
+LAMMPS (10 Dec 2025)
+Reading data file ...
+  orthogonal box = (-140 -140 -120) to (140 140 120)
+  1 by 1 by 1 MPI processor grid
+WARNING: Bond style harmonic in data file differs from currently defined bond style zero (../read_data.cpp:835)
+WARNING: Angle style harmonic in data file differs from currently defined angle style zero (../read_data.cpp:848)
+  reading atoms ...
+  107304 atoms
+  reading velocities ...
+  107304 velocities
+  scanning bonds ...
+  2 = max bonds/atom
+  scanning angles ...
+  1 = max angles/atom
+  orthogonal box = (-140 -140 -120) to (140 140 120)
+  1 by 1 by 1 MPI processor grid
+  reading bonds ...
+  60000 bonds
+  reading angles ...
+  30000 angles
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     2 = max # of 1-2 neighbors
+     1 = max # of 1-3 neighbors
+     1 = max # of 1-4 neighbors
+     2 = max # of special neighbors
+  special bonds CPU = 0.037 seconds
+  read_data CPU = 1.303 seconds
+17280 atoms in group scaffold
+90000 atoms in group water
+30000 atoms in group oxygen
+60000 atoms in group hydrogen
+24 atoms in group chromophore
+17304 atoms in group fixed_support
+Finding SHAKE clusters ...
+       0 = # of size 2 clusters
+       0 = # of size 3 clusters
+       0 = # of size 4 clusters
+   30000 = # of frozen angles
+  find clusters CPU = 0.040 seconds
+WARNING: Temperature for fix modify is not for group all (../fix_nh.cpp:1403)
+Generated 0 of 15 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 4000, page size: 400000
+  master list distance cutoff = 12
+  ghost atom cutoff = 12
+  binsize = 6, bins = 47 47 40
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/cut, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 0
+  Time step     : 0.1
+Per MPI rank memory allocation (min/avg/max) = 116 | 116 | 116 Mbytes
+   Step        Atoms         Temp         c_twater        PotEng         KinEng         TotEng         Press      c_msdwater[4] 
+         0      107304   233.46959      300.80335      7.9578774e+08  53797.362      7.9584154e+08 -3.384047e+219  8.8863668e-24
+ERROR: Lost atoms: original 107304 current 107301
+For more information see https://docs.lammps.org/err0008 (../thermo.cpp:527)

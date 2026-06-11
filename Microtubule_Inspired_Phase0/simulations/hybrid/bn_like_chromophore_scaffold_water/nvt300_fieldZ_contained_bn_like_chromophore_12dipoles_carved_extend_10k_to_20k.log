@@ -1,0 +1,115 @@
+LAMMPS (10 Dec 2025)
+Reading data file ...
+  orthogonal box = (-140 -140 -120) to (140 140 120)
+  1 by 1 by 1 MPI processor grid
+WARNING: Pair style lj/cut/coul/cut in data file differs from currently defined pair style zero (../read_data.cpp:811)
+WARNING: Bond style harmonic in data file differs from currently defined bond style zero (../read_data.cpp:835)
+WARNING: Angle style harmonic in data file differs from currently defined angle style zero (../read_data.cpp:848)
+  reading atoms ...
+  107265 atoms
+  reading velocities ...
+  107265 velocities
+  scanning bonds ...
+  2 = max bonds/atom
+  scanning angles ...
+  1 = max angles/atom
+  orthogonal box = (-140 -140 -120) to (140 140 120)
+  1 by 1 by 1 MPI processor grid
+  reading bonds ...
+  59974 bonds
+  reading angles ...
+  29987 angles
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     2 = max # of 1-2 neighbors
+     1 = max # of 1-3 neighbors
+     1 = max # of 1-4 neighbors
+     2 = max # of special neighbors
+  special bonds CPU = 0.041 seconds
+  read_data CPU = 1.559 seconds
+17280 atoms in group scaffold
+89961 atoms in group water
+29987 atoms in group oxygen
+59974 atoms in group hydrogen
+24 atoms in group chromophore
+17304 atoms in group fixed_support
+Finding SHAKE clusters ...
+       0 = # of size 2 clusters
+       0 = # of size 3 clusters
+       0 = # of size 4 clusters
+   29987 = # of frozen angles
+  find clusters CPU = 0.041 seconds
+WARNING: Temperature for fix modify is not for group all (../fix_nh.cpp:1403)
+Generated 0 of 15 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 4000, page size: 400000
+  master list distance cutoff = 12
+  ghost atom cutoff = 12
+  binsize = 6, bins = 47 47 40
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/cut, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 10000
+  Time step     : 0.05
+Per MPI rank memory allocation (min/avg/max) = 119 | 119 | 119 Mbytes
+   Step        Atoms         Temp         c_twater        PotEng         KinEng         TotEng         Press      c_msdwater[4] 
+     10000      107265   233.01472      300.24641     -266559.12      53674.487     -212884.64     -95.267142      1.452555e-14 
+     10500      107265   233.34421      300.67098     -260344.4       53750.386     -206594.01     -126.8261       0.025966592  
+     11000      107265   232.55133      299.64933     -246208.31      53567.748     -192640.56     -108.18455      0.088983613  
+     11500      107265   233.08952      300.34281     -257478.32      53691.719     -203786.6      -123.81004      0.16731377   
+     12000      107265   233.78505      301.23901     -254933.73      53851.931     -201081.8      -126.35608      0.24727811   
+     12500      107265   233.53971      300.92288     -265291.38      53795.418     -211495.96     -141.71493      0.32548732   
+     13000      107265   232.9907       300.21547     -251959.44      53668.955     -198290.48     -126.44259      0.40141006   
+     13500      107265   233.39128      300.73163     -253110.19      53761.228     -199348.96     -129.4868       0.47480489   
+     14000      107265   233.86026      301.33593     -253584.54      53869.258     -199715.28     -131.63959      0.54498514   
+     14500      107265   233.21894      300.50957     -263257.54      53721.531     -209536.01     -143.09231      0.61240204   
+     15000      107265   233.4727       300.83654     -255772.94      53779.982     -201992.95     -134.21092      0.67810772   
+     15500      107265   233.32102      300.64109     -256689.44      53745.044     -202944.4      -136.2151       0.74272825   
+     16000      107265   232.60447      299.7178      -255950.7       53579.988     -202370.71     -133.09467      0.80703205   
+     16500      107265   233.88926      301.37329     -254021.82      53875.936     -200145.88     -130.2816       0.87081886   
+     17000      107265   232.95494      300.16939     -270630.81      53660.718     -216970.09     -149.80084      0.93455812   
+     17500      107265   233.41896      300.76729     -256250.33      53767.603     -202482.73     -133.85968      0.99764031   
+     18000      107265   233.66332      301.08217     -255090.06      53823.893     -201266.17     -134.45373      1.0612817    
+     18500      107265   232.86011      300.0472      -265806.42      53638.875     -212167.55     -148.81455      1.1240039    
+     19000      107265   232.52405      299.61418     -280159.42      53561.464     -226597.96     -168.7286       1.1863841    
+     19500      107265   233.24939      300.54879     -268143.61      53728.543     -214415.07     -160.39378      1.2491671    
+     20000      107265   232.43853      299.50398     -270628.82      53541.764     -217087.05     -163.99315      1.3137668    
+Loop time of 2726.14 on 1 procs for 10000 steps with 107265 atoms
+
+Performance: 0.016 ns/day, 1514.522 hours/ns, 3.668 timesteps/s, 393.469 katom-step/s
+99.6% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 2597.6     | 2597.6     | 2597.6     |   0.0 | 95.29
+Bond    | 0.014811   | 0.014811   | 0.014811   |   0.0 |  0.00
+Neigh   | 16.699     | 16.699     | 16.699     |   0.0 |  0.61
+Comm    | 0.33426    | 0.33426    | 0.33426    |   0.0 |  0.01
+Output  | 2.1775     | 2.1775     | 2.1775     |   0.0 |  0.08
+Modify  | 104.26     | 104.26     | 104.26     |   0.0 |  3.82
+Other   |            | 5.005      |            |       |  0.18
+
+Nlocal:         107265 ave      107265 max      107265 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:              0 ave           0 max           0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:     1.6633e+07 ave  1.6633e+07 max  1.6633e+07 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 16633011
+Ave neighs/atom = 155.06466
+Ave special neighs/atom = 1.6773598
+Neighbor list builds = 32
+Dangerous builds = 0
+System init for write_data ...
+Generated 0 of 15 mixed pair_coeff terms from geometric mixing rule
+WARNING: Not all mixed pair coeffs generated from mixing. Use write_data with 'pair ij' option to store all pair coeffs. (../write_data.cpp:364)
+Total wall time: 0:45:29

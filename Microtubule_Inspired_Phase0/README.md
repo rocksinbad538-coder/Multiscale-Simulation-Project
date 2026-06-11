@@ -539,3 +539,58 @@ Key Day 006 outputs:
 - `figures/day006/day006_bn_like_fieldZ_30k_response.png`
 - `notes/day_006.md`
 
+
+## Day 007 update: first lead hybrid/chromophore-bearing BN-like candidate
+
+Day 007 transitioned the project from the validated BN-like polar scaffold-water baseline toward a first hybrid/chromophore-bearing embodiment.
+
+A carved 12-dipole hybrid candidate was built from the validated BN-like polar 50k field-free state. The model adds 12 fixed chromophore-like dipolar pseudo-site pairs near the inner lumen wall. To avoid initial overlap artifacts, nearby water molecules were locally removed around the pseudo-sites.
+
+Lead hybrid model:
+
+- BN-like polar tubular scaffold
+- confined water
+- 12 fixed chromophore-like dipolar pseudo-site pairs
+- 24 chromophore pseudo-atoms
+- chromophore charge magnitude: +/- 0.10 e
+- water molecules after carving: 29,987
+- total atoms: 107,265
+
+The initial uncarved model produced overlap-driven instability, but the carved model corrected this and completed stable field-free and fieldZ tests.
+
+Completed Day 007 simulations:
+
+1. carved hybrid field-free 5k stability test
+2. carved hybrid field-free extension to 20k
+3. carved hybrid fieldZ test to 10k
+4. carved hybrid fieldZ extension to 20k
+5. carved hybrid fieldZ extension to 30k
+
+All successful Day 007 production runs completed with dangerous builds = 0 and no detected lost atoms, NaNs, or missing bonds.
+
+Final field-free 20k result:
+
+- maximum radial water oxygen position: approximately 72.80 Å
+- fraction inside nominal lumen segment: approximately 0.99596
+- S_z: approximately -0.00991
+
+Final fieldZ 30k result:
+
+- maximum radial water oxygen position: approximately 73.67 Å
+- fraction inside nominal lumen segment: approximately 0.99586
+- mean cos(theta_z): approximately 0.662
+- S_z: approximately 0.342
+
+Main conclusion:
+
+The carved 12-dipole chromophore-bearing BN-like scaffold-water model preserves radial confinement under both field-free and fieldZ conditions while producing a measurable, progressively increasing axial water-dipole response under fieldZ. This model is the current lead Phase 0 hybrid embodiment candidate.
+
+Key Day 007 outputs:
+
+- `systems/hybrid/bn_like_chromophore_scaffold_water/outputs/bn_like_chromophore_12dipoles_carved_nvt300_contained_20k.data`
+- `systems/hybrid/bn_like_chromophore_scaffold_water/outputs/bn_like_chromophore_12dipoles_carved_nvt300_fieldZ_contained_30k.data`
+- `results/phase0/day007_lead_hybrid_candidate_summary.csv`
+- `figures/day007/day007_hybrid_carved_20k_vs_bn_like_baseline.png`
+- `figures/day007/day007_hybrid_carved_fieldfree_and_fieldZ_to_30k.png`
+- `notes/day_007.md`
+
