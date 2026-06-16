@@ -594,3 +594,42 @@ Key Day 007 outputs:
 - `figures/day007/day007_hybrid_carved_fieldfree_and_fieldZ_to_30k.png`
 - `notes/day_007.md`
 
+
+## Day 009 status — Phase 0 closure and Phase 1A atomistic transition
+
+Day 009 closed the coarse-grained Phase 0 model as a screening and methodology-validation stage. The Phase 0 scaffold is retained as evidence of stable confined water behavior and reproducible field-induced water polarization, but it is not used as a chemically valid electronic-structure model.
+
+Phase 1A was initiated to build a chemically valid atomistic route consistent with the master multiscale plan:
+
+- atomistic h-BN nanotube scaffold;
+- real chromophores;
+- explicit water;
+- classical MD preparation;
+- representative fragment extraction;
+- DFT/TDDFT parameterization;
+- excitonic Hamiltonian construction;
+- open-system dynamics.
+
+Accepted Phase 1A components now include:
+
+- non-passivated atomistic h-BN nanotube scaffold;
+- standalone pyrene geometry;
+- dry h-BN + four-pyrene hybrid;
+- GAFF2/AM1-BCC pyrene parameterization;
+- GROMACS-compatible pyrene block;
+- dry h-BN + four-pyrene GROMACS baseline;
+- local TIP4P/2005 water block.
+
+A first hydrated h-BN + four-pyrene + TIP4P/2005 system was generated and cleaned. It is topologically executable and numerically stable, but it is not yet accepted as a minimized hydrated baseline because the latest minimization did not converge to the target force threshold.
+
+Current hydrated-system status:
+
+- water molecules after conservative cleanup: 15861;
+- post-cleaning minimum water-solute contact: approximately 0.320 nm;
+- fatal/NaN detected: false;
+- minimization converged: false;
+- latest maximum force: approximately 871 kJ/mol/nm, localized on a pyrene atom.
+
+Next step:
+
+Continue hydrated-system stabilization by diagnosing the local pyrene/scaffold environment and testing a staged minimization protocol before starting any MD production.

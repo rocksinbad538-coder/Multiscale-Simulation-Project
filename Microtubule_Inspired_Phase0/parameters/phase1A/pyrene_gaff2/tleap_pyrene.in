@@ -1,0 +1,6 @@
+source leaprc.gaff2
+PYR = loadmol2 pyrene_gaff2.mol2
+loadamberparams pyrene_gaff2.frcmod
+check PYR
+saveamberparm PYR pyrene.prmtop pyrene.inpcrd
+quit

@@ -1,0 +1,14 @@
+metric,value
+input_prmtop_exists,True
+input_inpcrd_exists,True
+gro_exists,True
+top_exists,True
+itp_exists,True
+atom_count,26
+residue_count,1
+bond_count,29
+angle_count,48
+dihedral_count,92
+unique_atom_types,ca;ha
+total_charge_e,-0.00000200
+abs_total_charge_e,2.00314999e-06

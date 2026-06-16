@@ -1,0 +1,21 @@
+cluster_label,source_label,pair_index,source_timestep,n_bn_atoms,n_internal_bn_bonds,n_connected_components,component_sizes,n_undercoordinated_bn_atoms,n_cut_bn_bonds,n_full_coordination_anomalies,minimum_internal_bn_bond_A,maximum_internal_bn_bond_A,mean_internal_bn_bond_A,mean_cut_bn_bond_A,n_omitted_coarse_grained_neighbors,status
+fieldZ_early_step2000_pair_04_water6A_scaffold8A,fieldZ_early_step2000,4,2000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_early_step2000_pair_05_water6A_scaffold8A,fieldZ_early_step2000,5,2000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_early_step2000_pair_07_water6A_scaffold8A,fieldZ_early_step2000,7,2000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_early_step2000_pair_08_water6A_scaffold8A,fieldZ_early_step2000,8,2000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_intermediate_step12000_pair_04_water6A_scaffold8A,fieldZ_intermediate_step12000,4,12000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_intermediate_step12000_pair_05_water6A_scaffold8A,fieldZ_intermediate_step12000,5,12000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_intermediate_step12000_pair_07_water6A_scaffold8A,fieldZ_intermediate_step12000,7,12000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_intermediate_step12000_pair_08_water6A_scaffold8A,fieldZ_intermediate_step12000,8,12000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_late_replica01_step17000_pair_04_water6A_scaffold8A,fieldZ_late_replica01_step17000,4,17000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_late_replica01_step17000_pair_05_water6A_scaffold8A,fieldZ_late_replica01_step17000,5,17000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_late_replica01_step17000_pair_07_water6A_scaffold8A,fieldZ_late_replica01_step17000,7,17000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_late_replica01_step17000_pair_08_water6A_scaffold8A,fieldZ_late_replica01_step17000,8,17000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_late_step17000_pair_04_water6A_scaffold8A,fieldZ_late_step17000,4,17000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_late_step17000_pair_05_water6A_scaffold8A,fieldZ_late_step17000,5,17000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_late_step17000_pair_07_water6A_scaffold8A,fieldZ_late_step17000,7,17000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldZ_late_step17000_pair_08_water6A_scaffold8A,fieldZ_late_step17000,8,17000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldfree_step14000_pair_04_water6A_scaffold8A,fieldfree_step14000,4,14000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldfree_step14000_pair_05_water6A_scaffold8A,fieldfree_step14000,5,14000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldfree_step14000_pair_07_water6A_scaffold8A,fieldfree_step14000,7,14000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch
+fieldfree_step14000_pair_08_water6A_scaffold8A,fieldfree_step14000,8,14000,8,5,3,4 2 2,6,6,0,3.3897999999999975,3.389900000000001,3.389819999999999,3.389850000000001,6,disconnected_bn_patch

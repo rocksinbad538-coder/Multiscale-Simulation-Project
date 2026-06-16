@@ -1,0 +1,31 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx grompp -f runs/phase1A/pyrene_gromacs_min/min.mdp -c parameters/phase1A/pyrene_gromacs/pyrene.gro -p parameters/phase1A/pyrene_gromacs/pyrene.top -o runs/phase1A/pyrene_gromacs_min/min.tpr -maxwarn 1
+
+
+ERROR 1 [file runs/phase1A/pyrene_gromacs_min/min.mdp]:
+  With Verlet lists only full pbc or pbc=xy with walls is supported
+
+Generating 1-4 interactions: fudge = 0.5
+
+-------------------------------------------------------
+Program:     gmx grompp, version 2025.4
+Source file: src/gromacs/gmxpreprocess/grompp.cpp (line 2400)
+
+Fatal error:
+There was 1 error in input file(s)
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------
+Setting the LD random seed to 2113795478
+
+Generated 3 of the 3 non-bonded parameter combinations
+
+Generated 3 of the 3 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'PYR'

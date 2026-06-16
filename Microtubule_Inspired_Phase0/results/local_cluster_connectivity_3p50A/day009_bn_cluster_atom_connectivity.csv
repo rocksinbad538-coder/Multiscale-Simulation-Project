@@ -1,0 +1,161 @@
+cluster_label,source_label,pair_index,atom_id,atom_type,element,full_coordination,internal_coordination,n_cut_bonds,internal_neighbor_ids,omitted_neighbor_ids
+fieldZ_early_step2000_pair_04_water6A_scaffold8A,fieldZ_early_step2000,4,6397,1,B,2,1,1,6685,6109
+fieldZ_early_step2000_pair_04_water6A_scaffold8A,fieldZ_early_step2000,4,6684,1,B,2,1,1,6972,6396
+fieldZ_early_step2000_pair_04_water6A_scaffold8A,fieldZ_early_step2000,4,6685,2,N,2,2,0,6397 6973,
+fieldZ_early_step2000_pair_04_water6A_scaffold8A,fieldZ_early_step2000,4,6686,1,B,2,1,1,6974,6398
+fieldZ_early_step2000_pair_04_water6A_scaffold8A,fieldZ_early_step2000,4,6972,2,N,2,1,1,6684,7260
+fieldZ_early_step2000_pair_04_water6A_scaffold8A,fieldZ_early_step2000,4,6973,1,B,2,2,0,6685 7261,
+fieldZ_early_step2000_pair_04_water6A_scaffold8A,fieldZ_early_step2000,4,6974,2,N,2,1,1,6686,7262
+fieldZ_early_step2000_pair_04_water6A_scaffold8A,fieldZ_early_step2000,4,7261,2,N,2,1,1,6973,7549
+fieldZ_early_step2000_pair_05_water6A_scaffold8A,fieldZ_early_step2000,5,6349,1,B,2,1,1,6637,6061
+fieldZ_early_step2000_pair_05_water6A_scaffold8A,fieldZ_early_step2000,5,6636,1,B,2,1,1,6924,6348
+fieldZ_early_step2000_pair_05_water6A_scaffold8A,fieldZ_early_step2000,5,6637,2,N,2,2,0,6349 6925,
+fieldZ_early_step2000_pair_05_water6A_scaffold8A,fieldZ_early_step2000,5,6638,1,B,2,1,1,6926,6350
+fieldZ_early_step2000_pair_05_water6A_scaffold8A,fieldZ_early_step2000,5,6924,2,N,2,1,1,6636,7212
+fieldZ_early_step2000_pair_05_water6A_scaffold8A,fieldZ_early_step2000,5,6925,1,B,2,2,0,6637 7213,
+fieldZ_early_step2000_pair_05_water6A_scaffold8A,fieldZ_early_step2000,5,6926,2,N,2,1,1,6638,7214
+fieldZ_early_step2000_pair_05_water6A_scaffold8A,fieldZ_early_step2000,5,7213,2,N,2,1,1,6925,7501
+fieldZ_early_step2000_pair_07_water6A_scaffold8A,fieldZ_early_step2000,7,9841,1,B,2,1,1,10129,9553
+fieldZ_early_step2000_pair_07_water6A_scaffold8A,fieldZ_early_step2000,7,10128,1,B,2,1,1,10416,9840
+fieldZ_early_step2000_pair_07_water6A_scaffold8A,fieldZ_early_step2000,7,10129,2,N,2,2,0,9841 10417,
+fieldZ_early_step2000_pair_07_water6A_scaffold8A,fieldZ_early_step2000,7,10130,1,B,2,1,1,10418,9842
+fieldZ_early_step2000_pair_07_water6A_scaffold8A,fieldZ_early_step2000,7,10416,2,N,2,1,1,10128,10704
+fieldZ_early_step2000_pair_07_water6A_scaffold8A,fieldZ_early_step2000,7,10417,1,B,2,2,0,10129 10705,
+fieldZ_early_step2000_pair_07_water6A_scaffold8A,fieldZ_early_step2000,7,10418,2,N,2,1,1,10130,10706
+fieldZ_early_step2000_pair_07_water6A_scaffold8A,fieldZ_early_step2000,7,10705,2,N,2,1,1,10417,10993
+fieldZ_early_step2000_pair_08_water6A_scaffold8A,fieldZ_early_step2000,8,9793,1,B,2,1,1,10081,9505
+fieldZ_early_step2000_pair_08_water6A_scaffold8A,fieldZ_early_step2000,8,10081,2,N,2,2,0,9793 10369,
+fieldZ_early_step2000_pair_08_water6A_scaffold8A,fieldZ_early_step2000,8,10082,1,B,2,1,1,10370,9794
+fieldZ_early_step2000_pair_08_water6A_scaffold8A,fieldZ_early_step2000,8,10152,1,B,2,1,1,10440,9864
+fieldZ_early_step2000_pair_08_water6A_scaffold8A,fieldZ_early_step2000,8,10369,1,B,2,2,0,10081 10657,
+fieldZ_early_step2000_pair_08_water6A_scaffold8A,fieldZ_early_step2000,8,10370,2,N,2,1,1,10082,10658
+fieldZ_early_step2000_pair_08_water6A_scaffold8A,fieldZ_early_step2000,8,10440,2,N,2,1,1,10152,10728
+fieldZ_early_step2000_pair_08_water6A_scaffold8A,fieldZ_early_step2000,8,10657,2,N,2,1,1,10369,10945
+fieldZ_intermediate_step12000_pair_04_water6A_scaffold8A,fieldZ_intermediate_step12000,4,6397,1,B,2,1,1,6685,6109
+fieldZ_intermediate_step12000_pair_04_water6A_scaffold8A,fieldZ_intermediate_step12000,4,6684,1,B,2,1,1,6972,6396
+fieldZ_intermediate_step12000_pair_04_water6A_scaffold8A,fieldZ_intermediate_step12000,4,6685,2,N,2,2,0,6397 6973,
+fieldZ_intermediate_step12000_pair_04_water6A_scaffold8A,fieldZ_intermediate_step12000,4,6686,1,B,2,1,1,6974,6398
+fieldZ_intermediate_step12000_pair_04_water6A_scaffold8A,fieldZ_intermediate_step12000,4,6972,2,N,2,1,1,6684,7260
+fieldZ_intermediate_step12000_pair_04_water6A_scaffold8A,fieldZ_intermediate_step12000,4,6973,1,B,2,2,0,6685 7261,
+fieldZ_intermediate_step12000_pair_04_water6A_scaffold8A,fieldZ_intermediate_step12000,4,6974,2,N,2,1,1,6686,7262
+fieldZ_intermediate_step12000_pair_04_water6A_scaffold8A,fieldZ_intermediate_step12000,4,7261,2,N,2,1,1,6973,7549
+fieldZ_intermediate_step12000_pair_05_water6A_scaffold8A,fieldZ_intermediate_step12000,5,6349,1,B,2,1,1,6637,6061
+fieldZ_intermediate_step12000_pair_05_water6A_scaffold8A,fieldZ_intermediate_step12000,5,6636,1,B,2,1,1,6924,6348
+fieldZ_intermediate_step12000_pair_05_water6A_scaffold8A,fieldZ_intermediate_step12000,5,6637,2,N,2,2,0,6349 6925,
+fieldZ_intermediate_step12000_pair_05_water6A_scaffold8A,fieldZ_intermediate_step12000,5,6638,1,B,2,1,1,6926,6350
+fieldZ_intermediate_step12000_pair_05_water6A_scaffold8A,fieldZ_intermediate_step12000,5,6924,2,N,2,1,1,6636,7212
+fieldZ_intermediate_step12000_pair_05_water6A_scaffold8A,fieldZ_intermediate_step12000,5,6925,1,B,2,2,0,6637 7213,
+fieldZ_intermediate_step12000_pair_05_water6A_scaffold8A,fieldZ_intermediate_step12000,5,6926,2,N,2,1,1,6638,7214
+fieldZ_intermediate_step12000_pair_05_water6A_scaffold8A,fieldZ_intermediate_step12000,5,7213,2,N,2,1,1,6925,7501
+fieldZ_intermediate_step12000_pair_07_water6A_scaffold8A,fieldZ_intermediate_step12000,7,9841,1,B,2,1,1,10129,9553
+fieldZ_intermediate_step12000_pair_07_water6A_scaffold8A,fieldZ_intermediate_step12000,7,10128,1,B,2,1,1,10416,9840
+fieldZ_intermediate_step12000_pair_07_water6A_scaffold8A,fieldZ_intermediate_step12000,7,10129,2,N,2,2,0,9841 10417,
+fieldZ_intermediate_step12000_pair_07_water6A_scaffold8A,fieldZ_intermediate_step12000,7,10130,1,B,2,1,1,10418,9842
+fieldZ_intermediate_step12000_pair_07_water6A_scaffold8A,fieldZ_intermediate_step12000,7,10416,2,N,2,1,1,10128,10704
+fieldZ_intermediate_step12000_pair_07_water6A_scaffold8A,fieldZ_intermediate_step12000,7,10417,1,B,2,2,0,10129 10705,
+fieldZ_intermediate_step12000_pair_07_water6A_scaffold8A,fieldZ_intermediate_step12000,7,10418,2,N,2,1,1,10130,10706
+fieldZ_intermediate_step12000_pair_07_water6A_scaffold8A,fieldZ_intermediate_step12000,7,10705,2,N,2,1,1,10417,10993
+fieldZ_intermediate_step12000_pair_08_water6A_scaffold8A,fieldZ_intermediate_step12000,8,9793,1,B,2,1,1,10081,9505
+fieldZ_intermediate_step12000_pair_08_water6A_scaffold8A,fieldZ_intermediate_step12000,8,10081,2,N,2,2,0,9793 10369,
+fieldZ_intermediate_step12000_pair_08_water6A_scaffold8A,fieldZ_intermediate_step12000,8,10082,1,B,2,1,1,10370,9794
+fieldZ_intermediate_step12000_pair_08_water6A_scaffold8A,fieldZ_intermediate_step12000,8,10152,1,B,2,1,1,10440,9864
+fieldZ_intermediate_step12000_pair_08_water6A_scaffold8A,fieldZ_intermediate_step12000,8,10369,1,B,2,2,0,10081 10657,
+fieldZ_intermediate_step12000_pair_08_water6A_scaffold8A,fieldZ_intermediate_step12000,8,10370,2,N,2,1,1,10082,10658
+fieldZ_intermediate_step12000_pair_08_water6A_scaffold8A,fieldZ_intermediate_step12000,8,10440,2,N,2,1,1,10152,10728
+fieldZ_intermediate_step12000_pair_08_water6A_scaffold8A,fieldZ_intermediate_step12000,8,10657,2,N,2,1,1,10369,10945
+fieldZ_late_replica01_step17000_pair_04_water6A_scaffold8A,fieldZ_late_replica01_step17000,4,6397,1,B,2,1,1,6685,6109
+fieldZ_late_replica01_step17000_pair_04_water6A_scaffold8A,fieldZ_late_replica01_step17000,4,6684,1,B,2,1,1,6972,6396
+fieldZ_late_replica01_step17000_pair_04_water6A_scaffold8A,fieldZ_late_replica01_step17000,4,6685,2,N,2,2,0,6397 6973,
+fieldZ_late_replica01_step17000_pair_04_water6A_scaffold8A,fieldZ_late_replica01_step17000,4,6686,1,B,2,1,1,6974,6398
+fieldZ_late_replica01_step17000_pair_04_water6A_scaffold8A,fieldZ_late_replica01_step17000,4,6972,2,N,2,1,1,6684,7260
+fieldZ_late_replica01_step17000_pair_04_water6A_scaffold8A,fieldZ_late_replica01_step17000,4,6973,1,B,2,2,0,6685 7261,
+fieldZ_late_replica01_step17000_pair_04_water6A_scaffold8A,fieldZ_late_replica01_step17000,4,6974,2,N,2,1,1,6686,7262
+fieldZ_late_replica01_step17000_pair_04_water6A_scaffold8A,fieldZ_late_replica01_step17000,4,7261,2,N,2,1,1,6973,7549
+fieldZ_late_replica01_step17000_pair_05_water6A_scaffold8A,fieldZ_late_replica01_step17000,5,6349,1,B,2,1,1,6637,6061
+fieldZ_late_replica01_step17000_pair_05_water6A_scaffold8A,fieldZ_late_replica01_step17000,5,6636,1,B,2,1,1,6924,6348
+fieldZ_late_replica01_step17000_pair_05_water6A_scaffold8A,fieldZ_late_replica01_step17000,5,6637,2,N,2,2,0,6349 6925,
+fieldZ_late_replica01_step17000_pair_05_water6A_scaffold8A,fieldZ_late_replica01_step17000,5,6638,1,B,2,1,1,6926,6350
+fieldZ_late_replica01_step17000_pair_05_water6A_scaffold8A,fieldZ_late_replica01_step17000,5,6924,2,N,2,1,1,6636,7212
+fieldZ_late_replica01_step17000_pair_05_water6A_scaffold8A,fieldZ_late_replica01_step17000,5,6925,1,B,2,2,0,6637 7213,
+fieldZ_late_replica01_step17000_pair_05_water6A_scaffold8A,fieldZ_late_replica01_step17000,5,6926,2,N,2,1,1,6638,7214
+fieldZ_late_replica01_step17000_pair_05_water6A_scaffold8A,fieldZ_late_replica01_step17000,5,7213,2,N,2,1,1,6925,7501
+fieldZ_late_replica01_step17000_pair_07_water6A_scaffold8A,fieldZ_late_replica01_step17000,7,9841,1,B,2,1,1,10129,9553
+fieldZ_late_replica01_step17000_pair_07_water6A_scaffold8A,fieldZ_late_replica01_step17000,7,10128,1,B,2,1,1,10416,9840
+fieldZ_late_replica01_step17000_pair_07_water6A_scaffold8A,fieldZ_late_replica01_step17000,7,10129,2,N,2,2,0,9841 10417,
+fieldZ_late_replica01_step17000_pair_07_water6A_scaffold8A,fieldZ_late_replica01_step17000,7,10130,1,B,2,1,1,10418,9842
+fieldZ_late_replica01_step17000_pair_07_water6A_scaffold8A,fieldZ_late_replica01_step17000,7,10416,2,N,2,1,1,10128,10704
+fieldZ_late_replica01_step17000_pair_07_water6A_scaffold8A,fieldZ_late_replica01_step17000,7,10417,1,B,2,2,0,10129 10705,
+fieldZ_late_replica01_step17000_pair_07_water6A_scaffold8A,fieldZ_late_replica01_step17000,7,10418,2,N,2,1,1,10130,10706
+fieldZ_late_replica01_step17000_pair_07_water6A_scaffold8A,fieldZ_late_replica01_step17000,7,10705,2,N,2,1,1,10417,10993
+fieldZ_late_replica01_step17000_pair_08_water6A_scaffold8A,fieldZ_late_replica01_step17000,8,9793,1,B,2,1,1,10081,9505
+fieldZ_late_replica01_step17000_pair_08_water6A_scaffold8A,fieldZ_late_replica01_step17000,8,10081,2,N,2,2,0,9793 10369,
+fieldZ_late_replica01_step17000_pair_08_water6A_scaffold8A,fieldZ_late_replica01_step17000,8,10082,1,B,2,1,1,10370,9794
+fieldZ_late_replica01_step17000_pair_08_water6A_scaffold8A,fieldZ_late_replica01_step17000,8,10152,1,B,2,1,1,10440,9864
+fieldZ_late_replica01_step17000_pair_08_water6A_scaffold8A,fieldZ_late_replica01_step17000,8,10369,1,B,2,2,0,10081 10657,
+fieldZ_late_replica01_step17000_pair_08_water6A_scaffold8A,fieldZ_late_replica01_step17000,8,10370,2,N,2,1,1,10082,10658
+fieldZ_late_replica01_step17000_pair_08_water6A_scaffold8A,fieldZ_late_replica01_step17000,8,10440,2,N,2,1,1,10152,10728
+fieldZ_late_replica01_step17000_pair_08_water6A_scaffold8A,fieldZ_late_replica01_step17000,8,10657,2,N,2,1,1,10369,10945
+fieldZ_late_step17000_pair_04_water6A_scaffold8A,fieldZ_late_step17000,4,6397,1,B,2,1,1,6685,6109
+fieldZ_late_step17000_pair_04_water6A_scaffold8A,fieldZ_late_step17000,4,6684,1,B,2,1,1,6972,6396
+fieldZ_late_step17000_pair_04_water6A_scaffold8A,fieldZ_late_step17000,4,6685,2,N,2,2,0,6397 6973,
+fieldZ_late_step17000_pair_04_water6A_scaffold8A,fieldZ_late_step17000,4,6686,1,B,2,1,1,6974,6398
+fieldZ_late_step17000_pair_04_water6A_scaffold8A,fieldZ_late_step17000,4,6972,2,N,2,1,1,6684,7260
+fieldZ_late_step17000_pair_04_water6A_scaffold8A,fieldZ_late_step17000,4,6973,1,B,2,2,0,6685 7261,
+fieldZ_late_step17000_pair_04_water6A_scaffold8A,fieldZ_late_step17000,4,6974,2,N,2,1,1,6686,7262
+fieldZ_late_step17000_pair_04_water6A_scaffold8A,fieldZ_late_step17000,4,7261,2,N,2,1,1,6973,7549
+fieldZ_late_step17000_pair_05_water6A_scaffold8A,fieldZ_late_step17000,5,6349,1,B,2,1,1,6637,6061
+fieldZ_late_step17000_pair_05_water6A_scaffold8A,fieldZ_late_step17000,5,6636,1,B,2,1,1,6924,6348
+fieldZ_late_step17000_pair_05_water6A_scaffold8A,fieldZ_late_step17000,5,6637,2,N,2,2,0,6349 6925,
+fieldZ_late_step17000_pair_05_water6A_scaffold8A,fieldZ_late_step17000,5,6638,1,B,2,1,1,6926,6350
+fieldZ_late_step17000_pair_05_water6A_scaffold8A,fieldZ_late_step17000,5,6924,2,N,2,1,1,6636,7212
+fieldZ_late_step17000_pair_05_water6A_scaffold8A,fieldZ_late_step17000,5,6925,1,B,2,2,0,6637 7213,
+fieldZ_late_step17000_pair_05_water6A_scaffold8A,fieldZ_late_step17000,5,6926,2,N,2,1,1,6638,7214
+fieldZ_late_step17000_pair_05_water6A_scaffold8A,fieldZ_late_step17000,5,7213,2,N,2,1,1,6925,7501
+fieldZ_late_step17000_pair_07_water6A_scaffold8A,fieldZ_late_step17000,7,9841,1,B,2,1,1,10129,9553
+fieldZ_late_step17000_pair_07_water6A_scaffold8A,fieldZ_late_step17000,7,10128,1,B,2,1,1,10416,9840
+fieldZ_late_step17000_pair_07_water6A_scaffold8A,fieldZ_late_step17000,7,10129,2,N,2,2,0,9841 10417,
+fieldZ_late_step17000_pair_07_water6A_scaffold8A,fieldZ_late_step17000,7,10130,1,B,2,1,1,10418,9842
+fieldZ_late_step17000_pair_07_water6A_scaffold8A,fieldZ_late_step17000,7,10416,2,N,2,1,1,10128,10704
+fieldZ_late_step17000_pair_07_water6A_scaffold8A,fieldZ_late_step17000,7,10417,1,B,2,2,0,10129 10705,
+fieldZ_late_step17000_pair_07_water6A_scaffold8A,fieldZ_late_step17000,7,10418,2,N,2,1,1,10130,10706
+fieldZ_late_step17000_pair_07_water6A_scaffold8A,fieldZ_late_step17000,7,10705,2,N,2,1,1,10417,10993
+fieldZ_late_step17000_pair_08_water6A_scaffold8A,fieldZ_late_step17000,8,9793,1,B,2,1,1,10081,9505
+fieldZ_late_step17000_pair_08_water6A_scaffold8A,fieldZ_late_step17000,8,10081,2,N,2,2,0,9793 10369,
+fieldZ_late_step17000_pair_08_water6A_scaffold8A,fieldZ_late_step17000,8,10082,1,B,2,1,1,10370,9794
+fieldZ_late_step17000_pair_08_water6A_scaffold8A,fieldZ_late_step17000,8,10152,1,B,2,1,1,10440,9864
+fieldZ_late_step17000_pair_08_water6A_scaffold8A,fieldZ_late_step17000,8,10369,1,B,2,2,0,10081 10657,
+fieldZ_late_step17000_pair_08_water6A_scaffold8A,fieldZ_late_step17000,8,10370,2,N,2,1,1,10082,10658
+fieldZ_late_step17000_pair_08_water6A_scaffold8A,fieldZ_late_step17000,8,10440,2,N,2,1,1,10152,10728
+fieldZ_late_step17000_pair_08_water6A_scaffold8A,fieldZ_late_step17000,8,10657,2,N,2,1,1,10369,10945
+fieldfree_step14000_pair_04_water6A_scaffold8A,fieldfree_step14000,4,6397,1,B,2,1,1,6685,6109
+fieldfree_step14000_pair_04_water6A_scaffold8A,fieldfree_step14000,4,6684,1,B,2,1,1,6972,6396
+fieldfree_step14000_pair_04_water6A_scaffold8A,fieldfree_step14000,4,6685,2,N,2,2,0,6397 6973,
+fieldfree_step14000_pair_04_water6A_scaffold8A,fieldfree_step14000,4,6686,1,B,2,1,1,6974,6398
+fieldfree_step14000_pair_04_water6A_scaffold8A,fieldfree_step14000,4,6972,2,N,2,1,1,6684,7260
+fieldfree_step14000_pair_04_water6A_scaffold8A,fieldfree_step14000,4,6973,1,B,2,2,0,6685 7261,
+fieldfree_step14000_pair_04_water6A_scaffold8A,fieldfree_step14000,4,6974,2,N,2,1,1,6686,7262
+fieldfree_step14000_pair_04_water6A_scaffold8A,fieldfree_step14000,4,7261,2,N,2,1,1,6973,7549
+fieldfree_step14000_pair_05_water6A_scaffold8A,fieldfree_step14000,5,6349,1,B,2,1,1,6637,6061
+fieldfree_step14000_pair_05_water6A_scaffold8A,fieldfree_step14000,5,6636,1,B,2,1,1,6924,6348
+fieldfree_step14000_pair_05_water6A_scaffold8A,fieldfree_step14000,5,6637,2,N,2,2,0,6349 6925,
+fieldfree_step14000_pair_05_water6A_scaffold8A,fieldfree_step14000,5,6638,1,B,2,1,1,6926,6350
+fieldfree_step14000_pair_05_water6A_scaffold8A,fieldfree_step14000,5,6924,2,N,2,1,1,6636,7212
+fieldfree_step14000_pair_05_water6A_scaffold8A,fieldfree_step14000,5,6925,1,B,2,2,0,6637 7213,
+fieldfree_step14000_pair_05_water6A_scaffold8A,fieldfree_step14000,5,6926,2,N,2,1,1,6638,7214
+fieldfree_step14000_pair_05_water6A_scaffold8A,fieldfree_step14000,5,7213,2,N,2,1,1,6925,7501
+fieldfree_step14000_pair_07_water6A_scaffold8A,fieldfree_step14000,7,9841,1,B,2,1,1,10129,9553
+fieldfree_step14000_pair_07_water6A_scaffold8A,fieldfree_step14000,7,10128,1,B,2,1,1,10416,9840
+fieldfree_step14000_pair_07_water6A_scaffold8A,fieldfree_step14000,7,10129,2,N,2,2,0,9841 10417,
+fieldfree_step14000_pair_07_water6A_scaffold8A,fieldfree_step14000,7,10130,1,B,2,1,1,10418,9842
+fieldfree_step14000_pair_07_water6A_scaffold8A,fieldfree_step14000,7,10416,2,N,2,1,1,10128,10704
+fieldfree_step14000_pair_07_water6A_scaffold8A,fieldfree_step14000,7,10417,1,B,2,2,0,10129 10705,
+fieldfree_step14000_pair_07_water6A_scaffold8A,fieldfree_step14000,7,10418,2,N,2,1,1,10130,10706
+fieldfree_step14000_pair_07_water6A_scaffold8A,fieldfree_step14000,7,10705,2,N,2,1,1,10417,10993
+fieldfree_step14000_pair_08_water6A_scaffold8A,fieldfree_step14000,8,9793,1,B,2,1,1,10081,9505
+fieldfree_step14000_pair_08_water6A_scaffold8A,fieldfree_step14000,8,10081,2,N,2,2,0,9793 10369,
+fieldfree_step14000_pair_08_water6A_scaffold8A,fieldfree_step14000,8,10082,1,B,2,1,1,10370,9794
+fieldfree_step14000_pair_08_water6A_scaffold8A,fieldfree_step14000,8,10152,1,B,2,1,1,10440,9864
+fieldfree_step14000_pair_08_water6A_scaffold8A,fieldfree_step14000,8,10369,1,B,2,2,0,10081 10657,
+fieldfree_step14000_pair_08_water6A_scaffold8A,fieldfree_step14000,8,10370,2,N,2,1,1,10082,10658
+fieldfree_step14000_pair_08_water6A_scaffold8A,fieldfree_step14000,8,10440,2,N,2,1,1,10152,10728
+fieldfree_step14000_pair_08_water6A_scaffold8A,fieldfree_step14000,8,10657,2,N,2,1,1,10369,10945

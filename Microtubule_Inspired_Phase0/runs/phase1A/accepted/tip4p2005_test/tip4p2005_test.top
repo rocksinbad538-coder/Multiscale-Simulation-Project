@@ -1,0 +1,12 @@
+[ defaults ]
+; nbfunc comb-rule gen-pairs fudgeLJ fudgeQQ
+1 2 yes 0.5 0.83333333
+
+#include "../../../parameters/phase1A/water_tip4p2005/tip4p2005_atomtypes.itp"
+#include "../../../parameters/phase1A/water_tip4p2005/tip4p2005.itp"
+
+[ system ]
+Single TIP4P/2005 water syntax test
+
+[ molecules ]
+SOL 1

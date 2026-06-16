@@ -1,0 +1,6 @@
+; TIP4P/2005 atom types
+[ atomtypes ]
+; name  at.num  mass     charge  ptype  sigma      epsilon
+OW      8       15.9994  0.0000  A      0.315890   0.774900
+HW      1        1.0080  0.0000  A      0.000000   0.000000
+MW      0        0.0000  0.0000  D      0.000000   0.000000

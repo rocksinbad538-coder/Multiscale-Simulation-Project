@@ -1,0 +1,9 @@
+metric,value
+formula_expected,C16H10
+C_atoms,16
+H_atoms,10
+total_atoms,26
+bond_count,29
+nonbonded_overlap_count,0
+carbon_plane_rms_A,0.000005
+carbon_plane_max_abs_A,0.000009

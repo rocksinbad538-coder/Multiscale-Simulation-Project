@@ -1,0 +1,10 @@
+metric,value
+mol2_exists,True
+frcmod_exists,True
+tleap_log_exists,True
+atom_count,26
+unique_atom_types,ca;ha
+total_charge_e,0.00200000
+abs_total_charge_e,2.00000000e-03
+tleap_errors_detected,False
+frcmod_missing_or_attention_detected,False

@@ -1,0 +1,27 @@
+; Dry h-BN + 4 pyrene GROMACS topology, Phase 1A.7
+; h-BN currently dummy/fixed/non-interacting: not physical h-BN FF
+
+[ defaults ]
+; nbfunc comb-rule gen-pairs fudgeLJ fudgeQQ
+1 2 yes 0.5 0.83333333
+
+[ atomtypes ]
+; name at.num mass charge ptype sigma epsilon
+B0 5 10.810000 0.000000 A 0.000000 0.000000
+N0 7 14.007000 0.000000 A 0.000000 0.000000
+; Pyrene atomtypes are defined in pyrene.itp/topology conversion if needed
+
+; GAFF2 atomtypes used by pyrene
+ca 6 12.010000 0.000000 A 0.33152123 0.4133792
+ha 1 1.008000 0.000000 A 0.26254785 0.0673624
+
+#include "hbn_fixed_dummy.itp"
+#include "pyrene.itp"
+
+[ system ]
+Dry h-BN fixed dummy scaffold + 4 pyrenes
+
+[ molecules ]
+; molname count
+HBN 1
+PYR 4

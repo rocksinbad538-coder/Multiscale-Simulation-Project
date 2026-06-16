@@ -1,0 +1,41 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx grompp -f runs/phase1A/pyrene_gromacs_min/min.mdp -c runs/phase1A/pyrene_gromacs_min/pyrene_box.gro -p parameters/phase1A/pyrene_gromacs/pyrene.top -o runs/phase1A/pyrene_gromacs_min/min.tpr
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 75.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 1 [file runs/phase1A/pyrene_gromacs_min/min.mdp]:
+  The optimal PME mesh load for parallel simulations is below 0.5
+  and for highly parallel simulations between 0.25 and 0.33,
+  for higher performance, increase the cut-off and the PME grid spacing.
+
+
+
+There was 1 NOTE
+
+GROMACS reminds you: "Why Weren't You at My Funeral ?" (G. Groenhof)
+
+Setting the LD random seed to 1974975484
+
+Generated 3 of the 3 non-bonded parameter combinations
+
+Generated 3 of the 3 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'PYR'
+Analysing residue names:
+There are:     1      Other residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between excluded atoms is 0.373 nm between atom 3 and 10
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 42x42x42, spacing 0.117 0.117 0.117
+
+Estimate for the relative computational load of the PME mesh part: 0.99
+
+This run will generate roughly 0 Mb of data

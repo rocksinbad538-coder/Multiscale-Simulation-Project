@@ -1,0 +1,15 @@
+metric,value
+m_circumference_cells,30
+rows,28
+radius_A,11.991403
+diameter_A,23.982807
+atoms_total,1680
+B_atoms,840
+N_atoms,840
+H_atoms,0
+bonds_total,2460
+BN_bonds,2460
+BH_bonds,0
+NH_bonds,0
+overlap_count,0
+non_degree3_BN_after_passivation,60

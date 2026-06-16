@@ -1,0 +1,8 @@
+metric,value
+gro_exists,True
+top_exists,True
+tpr_exists,True
+natoms_gro,1784
+fatal_or_error_detected,False
+note_count,2
+warning_count,0

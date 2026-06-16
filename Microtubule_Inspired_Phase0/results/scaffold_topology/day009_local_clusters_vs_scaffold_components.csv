@@ -1,0 +1,21 @@
+cluster,n_bn_atoms,n_scaffold_components,component_indices,atoms_per_component
+fieldZ_early_step2000_pair_04_water6A_scaffold8A,8,3,60 61 62,60:2 61:4 62:2
+fieldZ_early_step2000_pair_05_water6A_scaffold8A,8,3,12 13 14,12:2 13:4 14:2
+fieldZ_early_step2000_pair_07_water6A_scaffold8A,8,3,48 49 50,48:2 49:4 50:2
+fieldZ_early_step2000_pair_08_water6A_scaffold8A,8,3,1 2 72,1:4 2:2 72:2
+fieldZ_intermediate_step12000_pair_04_water6A_scaffold8A,8,3,60 61 62,60:2 61:4 62:2
+fieldZ_intermediate_step12000_pair_05_water6A_scaffold8A,8,3,12 13 14,12:2 13:4 14:2
+fieldZ_intermediate_step12000_pair_07_water6A_scaffold8A,8,3,48 49 50,48:2 49:4 50:2
+fieldZ_intermediate_step12000_pair_08_water6A_scaffold8A,8,3,1 2 72,1:4 2:2 72:2
+fieldZ_late_replica01_step17000_pair_04_water6A_scaffold8A,8,3,60 61 62,60:2 61:4 62:2
+fieldZ_late_replica01_step17000_pair_05_water6A_scaffold8A,8,3,12 13 14,12:2 13:4 14:2
+fieldZ_late_replica01_step17000_pair_07_water6A_scaffold8A,8,3,48 49 50,48:2 49:4 50:2
+fieldZ_late_replica01_step17000_pair_08_water6A_scaffold8A,8,3,1 2 72,1:4 2:2 72:2
+fieldZ_late_step17000_pair_04_water6A_scaffold8A,8,3,60 61 62,60:2 61:4 62:2
+fieldZ_late_step17000_pair_05_water6A_scaffold8A,8,3,12 13 14,12:2 13:4 14:2
+fieldZ_late_step17000_pair_07_water6A_scaffold8A,8,3,48 49 50,48:2 49:4 50:2
+fieldZ_late_step17000_pair_08_water6A_scaffold8A,8,3,1 2 72,1:4 2:2 72:2
+fieldfree_step14000_pair_04_water6A_scaffold8A,8,3,60 61 62,60:2 61:4 62:2
+fieldfree_step14000_pair_05_water6A_scaffold8A,8,3,12 13 14,12:2 13:4 14:2
+fieldfree_step14000_pair_07_water6A_scaffold8A,8,3,48 49 50,48:2 49:4 50:2
+fieldfree_step14000_pair_08_water6A_scaffold8A,8,3,1 2 72,1:4 2:2 72:2

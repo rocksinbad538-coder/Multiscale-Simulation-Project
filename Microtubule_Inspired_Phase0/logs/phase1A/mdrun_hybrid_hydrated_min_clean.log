@@ -1,0 +1,31 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -deffnm runs/phase1A/hybrid_hydrated_gromacs_min/min_clean
+
+Reading file runs/phase1A/hybrid_hydrated_gromacs_min/min_clean.tpr, VERSION 2025.4 (single precision)
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+02
+   Number of steps    =          500
+
+Energy minimization reached the maximum number of steps before the forces
+reached the requested precision Fmax < 100.
+
+writing lowest energy coordinates.
+
+Steepest Descents did not converge to Fmax < 100 in 501 steps.
+Potential Energy  = -8.4359462e+05
+Maximum force     =  3.5605867e+03 on atom 1773
+Norm of force     =  3.7231207e+01
+
+GROMACS reminds you: "Requiem, bring the dissident from slumber" (Bad Religion)
+

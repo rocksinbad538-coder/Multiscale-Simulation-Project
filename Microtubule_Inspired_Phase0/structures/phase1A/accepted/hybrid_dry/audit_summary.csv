@@ -1,0 +1,10 @@
+metric,value
+hBN_atoms,1680
+pyrene_count,4
+pyrene_atoms_total,104
+total_atoms,1784
+hBN_radius_A,11.991403
+radial_gap_requested_A,3.400000
+zmin_A,0.000000
+zmax_A,60.175000
+intercomponent_overlap_count,0

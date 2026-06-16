@@ -1,0 +1,44 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx grompp -f runs/phase1A/tip4p2005_test/min.mdp -c parameters/phase1A/water_tip4p2005/tip4p2005.gro -p runs/phase1A/tip4p2005_test/tip4p2005_test.top -o runs/phase1A/tip4p2005_test/min.tpr
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 3.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 1 [file runs/phase1A/tip4p2005_test/min.mdp]:
+  The optimal PME mesh load for parallel simulations is below 0.5
+  and for highly parallel simulations between 0.25 and 0.33,
+  for higher performance, increase the cut-off and the PME grid spacing.
+
+
+
+There was 1 NOTE
+
+GROMACS reminds you: "Humbug! Most things free-born will submit to anything for a salary" (Mr. Rochester in Jane Eyre by Charlotte Bronte)
+
+Setting the LD random seed to -6365721
+
+Generated 6 of the 6 non-bonded parameter combinations
+
+Generated 6 of the 6 1-4 parameter combinations
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+Analysing residue names:
+There are:     1      Water residues
+
+The largest distance between excluded atoms is 0.152 nm between atom 2 and 3
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 25x25x25, spacing 0.120 0.120 0.120
+
+Estimate for the relative computational load of the PME mesh part: 1.00
+
+This run will generate roughly 0 Mb of data

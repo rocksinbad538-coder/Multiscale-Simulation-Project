@@ -1,0 +1,4 @@
+label,cutoff_A,n_frames,n_water,frame_spacing_fs,mean_contact_count,std_contact_count,mean_contact_fraction,waters_ever_contacting,fraction_waters_ever_contacting,mean_occupancy_fraction_among_all_waters,mean_occupancy_fraction_among_contacting_waters,n_continuous_contact_events,mean_continuous_residence_fs,maximum_continuous_residence_fs
+day008_hybrid_fieldZ_replica01_0_to_10k,3.5,11,29987,50.0,0.0,0.0,0.0,0,0.0,0.0,0.0,0,0.0,0.0
+day008_hybrid_fieldZ_replica01_0_to_10k,4.5,11,29987,50.0,1.6363636363636365,1.0679400113155209,5.456910115595546e-05,5,0.0001667389201987528,5.456910115595546e-05,0.32727272727272727,7,128.57142857142858,300.0
+day008_hybrid_fieldZ_replica01_0_to_10k,6.0,11,29987,50.0,12.454545454545455,1.5587661999529314,0.00041533149213143875,17,0.0005669123286757595,0.0004153314921314388,0.7326203208556149,21,326.1904761904762,550.0

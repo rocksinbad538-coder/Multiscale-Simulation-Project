@@ -1,225 +1,483 @@
 #!/usr/bin/env python3
 
-from pathlib import Path
+from __future__ import annotations
+
 import argparse
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Iterator
+
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 
-def read_lammps_dump(path):
-    path = Path(path)
-    with path.open("r", errors="ignore") as f:
+@dataclass
+class Frame:
+    timestep: int
+    mols: np.ndarray
+    types: np.ndarray
+    xyz: np.ndarray
+
+
+def iter_lammpstrj(path: Path) -> Iterator[Frame]:
+    with path.open("r", encoding="utf-8") as handle:
         while True:
-            line = f.readline()
+            line = handle.readline()
             if not line:
-                break
+                return
 
             if not line.startswith("ITEM: TIMESTEP"):
                 continue
 
-            timestep = int(f.readline().strip())
+            timestep = int(handle.readline().strip())
 
-            line = f.readline()
-            if not line.startswith("ITEM: NUMBER OF ATOMS"):
-                raise RuntimeError("Expected NUMBER OF ATOMS block")
-            n_atoms = int(f.readline().strip())
+            if not handle.readline().startswith("ITEM: NUMBER OF ATOMS"):
+                raise ValueError("Expected NUMBER OF ATOMS")
+            natoms = int(handle.readline().strip())
 
-            line = f.readline()
-            if not line.startswith("ITEM: BOX BOUNDS"):
-                raise RuntimeError("Expected BOX BOUNDS block")
-            bounds = [f.readline().split() for _ in range(3)]
+            if not handle.readline().startswith("ITEM: BOX BOUNDS"):
+                raise ValueError("Expected BOX BOUNDS")
 
-            line = f.readline()
-            if not line.startswith("ITEM: ATOMS"):
-                raise RuntimeError("Expected ATOMS block")
+            for _ in range(3):
+                handle.readline()
 
-            cols = line.split()[2:]
-            idx = {c: i for i, c in enumerate(cols)}
+            columns = handle.readline().strip().split()[2:]
+            required = {"mol", "type", "x", "y", "z"}
+            missing = required.difference(columns)
 
-            required = ["id", "mol", "type", "x", "y", "z"]
-            missing = [c for c in required if c not in idx]
             if missing:
-                raise RuntimeError(f"Missing columns in dump: {missing}. Available: {cols}")
+                raise ValueError(
+                    f"Missing required trajectory columns: {sorted(missing)}"
+                )
 
-            data = np.empty((n_atoms, 6), dtype=float)
+            col = {name: columns.index(name) for name in required}
 
-            for i in range(n_atoms):
-                p = f.readline().split()
-                data[i, 0] = int(p[idx["id"]])
-                data[i, 1] = int(p[idx["mol"]])
-                data[i, 2] = int(p[idx["type"]])
-                data[i, 3] = float(p[idx["x"]])
-                data[i, 4] = float(p[idx["y"]])
-                data[i, 5] = float(p[idx["z"]])
+            mols = np.empty(natoms, dtype=np.int64)
+            types = np.empty(natoms, dtype=np.int32)
+            xyz = np.empty((natoms, 3), dtype=np.float64)
 
-            yield timestep, data, bounds
+            for index in range(natoms):
+                fields = handle.readline().split()
+                mols[index] = int(fields[col["mol"]])
+                types[index] = int(fields[col["type"]])
+                xyz[index, 0] = float(fields[col["x"]])
+                xyz[index, 1] = float(fields[col["y"]])
+                xyz[index, 2] = float(fields[col["z"]])
 
-
-def compute_dipole_unit_vectors(frame, oxygen_type, hydrogen_type):
-    """
-    Reconstruct water dipole directions from O and two H atoms by molecule ID.
-
-    Dipole direction used here:
-        u = normalize( (r_H1 + r_H2)/2 - r_O )
-
-    This gives the molecular orientation from oxygen toward the hydrogen midpoint.
-    """
-    oxy = frame[frame[:, 2] == oxygen_type]
-    hyd = frame[frame[:, 2] == hydrogen_type]
-
-    if len(oxy) == 0 or len(hyd) == 0:
-        raise RuntimeError("No oxygen or hydrogen atoms found with the requested types.")
-
-    oxy_by_mol = {}
-    for row in oxy:
-        mol = int(row[1])
-        oxy_by_mol[mol] = row[3:6]
-
-    h_by_mol = {}
-    for row in hyd:
-        mol = int(row[1])
-        h_by_mol.setdefault(mol, []).append(row[3:6])
-
-    mols = []
-    uvecs = []
-
-    for mol, ro in oxy_by_mol.items():
-        hs = h_by_mol.get(mol, [])
-        if len(hs) != 2:
-            continue
-
-        rh = 0.5 * (np.asarray(hs[0]) + np.asarray(hs[1]))
-        u = rh - ro
-        norm = np.linalg.norm(u)
-
-        if norm <= 0.0:
-            continue
-
-        mols.append(mol)
-        uvecs.append(u / norm)
-
-    if not uvecs:
-        raise RuntimeError("No valid water dipoles reconstructed.")
-
-    return np.asarray(mols, dtype=int), np.asarray(uvecs, dtype=float)
+            yield Frame(
+                timestep=timestep,
+                mols=mols,
+                types=types,
+                xyz=xyz,
+            )
 
 
-def multi_origin_autocorrelation(times, mol_ids_per_frame, uvecs_per_frame):
-    """
-    Multi-time-origin orientational autocorrelation.
+def water_dipole_vectors(
+    frame: Frame,
+    oxygen_type: int,
+    hydrogen_type: int,
+) -> tuple[np.ndarray, np.ndarray]:
+    oxygen_mask = frame.types == oxygen_type
+    hydrogen_mask = frame.types == hydrogen_type
 
-    For each lag k:
-        C(k) = average over all origins i and molecules common to frames i and i+k
-               of u_i(mol) dot u_{i+k}(mol)
-    """
-    n = len(times)
-    records = []
+    oxygen_mols = frame.mols[oxygen_mask]
+    oxygen_xyz = frame.xyz[oxygen_mask]
 
-    # Convert each frame into mol -> index mapping for fast intersection.
-    maps = []
-    for mols in mol_ids_per_frame:
-        maps.append({int(m): j for j, m in enumerate(mols)})
+    hydrogen_mols = frame.mols[hydrogen_mask]
+    hydrogen_xyz = frame.xyz[hydrogen_mask]
 
-    for lag in range(n):
-        values = []
-        n_pairs_total = 0
+    oxygen_order = np.argsort(oxygen_mols)
+    oxygen_mols = oxygen_mols[oxygen_order]
+    oxygen_xyz = oxygen_xyz[oxygen_order]
 
-        for i0 in range(0, n - lag):
-            i1 = i0 + lag
+    hydrogen_order = np.argsort(hydrogen_mols)
+    hydrogen_mols = hydrogen_mols[hydrogen_order]
+    hydrogen_xyz = hydrogen_xyz[hydrogen_order]
 
-            mols0 = maps[i0]
-            mols1 = maps[i1]
-            common = sorted(set(mols0).intersection(mols1))
+    unique_h_mols, starts, counts = np.unique(
+        hydrogen_mols,
+        return_index=True,
+        return_counts=True,
+    )
 
-            if not common:
+    if not np.all(counts == 2):
+        bad = unique_h_mols[counts != 2]
+        raise ValueError(
+            f"Expected exactly two hydrogens per water molecule. "
+            f"Bad molecule IDs include: {bad[:10]}"
+        )
+
+    if not np.array_equal(oxygen_mols, unique_h_mols):
+        raise ValueError(
+            "Oxygen and hydrogen molecule-ID sets do not match"
+        )
+
+    h1 = hydrogen_xyz[starts]
+    h2 = hydrogen_xyz[starts + 1]
+    midpoint = 0.5 * (h1 + h2)
+
+    vectors = midpoint - oxygen_xyz
+    norms = np.linalg.norm(vectors, axis=1)
+
+    if np.any(norms <= 0.0):
+        raise ValueError("Zero-length dipole vector detected")
+
+    unit_vectors = vectors / norms[:, None]
+
+    return oxygen_mols, unit_vectors
+
+
+def validate_uniform_timesteps(timesteps: np.ndarray) -> int:
+    if len(timesteps) < 2:
+        raise ValueError("At least two frames are required")
+
+    differences = np.diff(timesteps)
+    unique = np.unique(differences)
+
+    if len(unique) != 1:
+        raise ValueError(
+            f"Nonuniform saved-step spacing detected: {unique.tolist()}"
+        )
+
+    return int(unique[0])
+
+
+def autocorrelations(
+    vectors: np.ndarray,
+) -> pd.DataFrame:
+    n_frames = vectors.shape[0]
+
+    instantaneous_mean = vectors.mean(axis=1, keepdims=True)
+    fluctuations = vectors - instantaneous_mean
+
+    rows: list[dict[str, float | int]] = []
+
+    fluctuation_zero = np.mean(
+        np.sum(fluctuations * fluctuations, axis=2)
+    )
+
+    if fluctuation_zero <= 0.0:
+        raise ValueError("Connected-correlation normalization is zero")
+
+    for lag in range(n_frames):
+        left = vectors[: n_frames - lag]
+        right = vectors[lag:]
+
+        dots = np.einsum("tmi,tmi->tm", left, right)
+
+        c1 = float(dots.mean())
+        c2 = float((0.5 * (3.0 * dots**2 - 1.0)).mean())
+
+        fluct_left = fluctuations[: n_frames - lag]
+        fluct_right = fluctuations[lag:]
+
+        connected_numerator = np.mean(
+            np.einsum("tmi,tmi->tm", fluct_left, fluct_right)
+        )
+        connected_c1 = float(
+            connected_numerator / fluctuation_zero
+        )
+
+        rows.append(
+            {
+                "lag_index": lag,
+                "n_time_origins": n_frames - lag,
+                "C1_raw": c1,
+                "C2_raw": c2,
+                "C1_connected": connected_c1,
+            }
+        )
+
+    return pd.DataFrame(rows)
+
+
+def positive_window_integral(
+    time_ps: np.ndarray,
+    values: np.ndarray,
+) -> tuple[float, float]:
+    if len(values) < 2:
+        return 0.0, 0.0
+
+    stop = len(values)
+
+    nonpositive = np.where(values[1:] <= 0.0)[0]
+    if len(nonpositive):
+        stop = int(nonpositive[0] + 2)
+
+    selected_time = time_ps[:stop]
+    selected_values = values[:stop]
+
+    integral = float(np.trapezoid(selected_values, selected_time))
+    max_time = float(selected_time[-1])
+
+    return integral, max_time
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        "--trajectory",
+        required=True,
+        nargs="+",
+        type=Path,
+    )
+    parser.add_argument("--label", required=True)
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path("results/dipole_autocorrelation"),
+    )
+    parser.add_argument("--oxygen-type", type=int, default=3)
+    parser.add_argument("--hydrogen-type", type=int, default=4)
+    parser.add_argument(
+        "--timestep-fs",
+        type=float,
+        default=0.05,
+    )
+    parser.add_argument(
+        "--min-step",
+        type=int,
+        default=None,
+        help="Optional inclusive minimum timestep",
+    )
+    parser.add_argument(
+        "--max-step",
+        type=int,
+        default=None,
+        help="Optional inclusive maximum timestep",
+    )
+
+    args = parser.parse_args()
+
+    for path in args.trajectory:
+        if not path.exists():
+            raise FileNotFoundError(path)
+
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+
+    unique_frames: dict[int, Frame] = {}
+
+    for path in args.trajectory:
+        print(f"Reading {path}")
+
+        for frame in iter_lammpstrj(path):
+            if frame.timestep in unique_frames:
+                print(
+                    f"Skipping duplicate timestep {frame.timestep} "
+                    f"from {path.name}"
+                )
                 continue
 
-            idx0 = np.asarray([mols0[m] for m in common], dtype=int)
-            idx1 = np.asarray([mols1[m] for m in common], dtype=int)
+            unique_frames[frame.timestep] = frame
 
-            u0 = uvecs_per_frame[i0][idx0]
-            u1 = uvecs_per_frame[i1][idx1]
+    selected_steps = sorted(unique_frames)
 
-            dots = np.sum(u0 * u1, axis=1)
-            values.append(dots)
-            n_pairs_total += len(dots)
+    if args.min_step is not None:
+        selected_steps = [
+            step for step in selected_steps
+            if step >= args.min_step
+        ]
 
-        if values:
-            all_values = np.concatenate(values)
-            c1 = float(np.mean(all_values))
-            c1_std = float(np.std(all_values))
-        else:
-            c1 = np.nan
-            c1_std = np.nan
+    if args.max_step is not None:
+        selected_steps = [
+            step for step in selected_steps
+            if step <= args.max_step
+        ]
 
-        records.append({
-            "lag_index": lag,
-            "lag_steps": int(times[lag] - times[0]) if lag < len(times) else lag,
-            "n_time_origins": n - lag,
-            "n_molecule_pairs": n_pairs_total,
-            "C1_mu": c1,
-            "C1_mu_std": c1_std,
-        })
+    if len(selected_steps) < 2:
+        raise ValueError(
+            "The selected timestep window contains fewer than two frames"
+        )
 
-    return pd.DataFrame(records)
+    timesteps = np.asarray(selected_steps, dtype=np.int64)
+    saved_step_spacing = validate_uniform_timesteps(timesteps)
 
+    molecule_ids_reference: np.ndarray | None = None
+    dipole_frames: list[np.ndarray] = []
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--trajectory", required=True)
-    ap.add_argument("--label", required=True)
-    ap.add_argument("--oxygen-type", type=int, default=3)
-    ap.add_argument("--hydrogen-type", type=int, default=4)
-    ap.add_argument("--timestep-fs", type=float, default=0.10)
-    ap.add_argument("--output-dir", required=True)
-    args = ap.parse_args()
+    for frame_number, timestep in enumerate(timesteps, start=1):
+        frame = unique_frames[int(timestep)]
 
-    outdir = Path(args.output_dir)
-    outdir.mkdir(parents=True, exist_ok=True)
-
-    times = []
-    mol_ids_per_frame = []
-    uvecs_per_frame = []
-
-    for iframe, (step, frame, _bounds) in enumerate(read_lammps_dump(args.trajectory), start=1):
-        print(f"[{args.label}] processing frame {iframe}, step {step}")
-
-        mols, uvecs = compute_dipole_unit_vectors(
+        molecule_ids, vectors = water_dipole_vectors(
             frame,
             oxygen_type=args.oxygen_type,
             hydrogen_type=args.hydrogen_type,
         )
 
-        times.append(step)
-        mol_ids_per_frame.append(mols)
-        uvecs_per_frame.append(uvecs)
+        if molecule_ids_reference is None:
+            molecule_ids_reference = molecule_ids
+        elif not np.array_equal(
+            molecule_ids_reference,
+            molecule_ids,
+        ):
+            raise ValueError(
+                "Water molecule IDs changed between frames"
+            )
 
-    times = np.asarray(times, dtype=int)
+        dipole_frames.append(vectors)
 
-    acf = multi_origin_autocorrelation(times, mol_ids_per_frame, uvecs_per_frame)
+        print(
+            f"[{args.label}] frame {frame_number}/{len(timesteps)}, "
+            f"step {timestep}"
+        )
 
-    acf["lag_time_ps"] = acf["lag_steps"] * args.timestep_fs / 1000.0
+    vectors = np.stack(dipole_frames, axis=0)
+    correlation = autocorrelations(vectors)
 
-    csv = outdir / f"{args.label}_water_dipole_autocorrelation.csv"
-    acf.to_csv(csv, index=False)
+    frame_spacing_fs = (
+        saved_step_spacing * args.timestep_fs
+    )
 
-    plt.figure(figsize=(8, 5))
-    plt.plot(acf["lag_time_ps"], acf["C1_mu"], marker="o", label="C_mu(t)")
-    plt.axhline(0.0, linestyle="--", linewidth=1)
-    plt.xlabel("Lag time, ps")
-    plt.ylabel("Dipole orientational autocorrelation")
-    plt.title(f"Water dipole autocorrelation: {args.label}")
-    plt.legend()
-    plt.tight_layout()
+    correlation["lag_steps"] = (
+        correlation["lag_index"] * saved_step_spacing
+    )
+    correlation["lag_fs"] = (
+        correlation["lag_index"] * frame_spacing_fs
+    )
+    correlation["lag_ps"] = correlation["lag_fs"] / 1000.0
 
-    png = outdir / f"{args.label}_water_dipole_autocorrelation.png"
-    plt.savefig(png, dpi=200)
-    plt.close()
+    correlation = correlation[
+        [
+            "lag_index",
+            "lag_steps",
+            "lag_fs",
+            "lag_ps",
+            "n_time_origins",
+            "C1_raw",
+            "C2_raw",
+            "C1_connected",
+        ]
+    ]
 
-    print("Water dipole autocorrelation analysis complete.")
-    print(f"CSV: {csv}")
-    print(f"PNG: {png}")
+    integral_c1, integral_window_c1 = positive_window_integral(
+        correlation["lag_ps"].to_numpy(),
+        correlation["C1_raw"].to_numpy(),
+    )
+
+    integral_c2, integral_window_c2 = positive_window_integral(
+        correlation["lag_ps"].to_numpy(),
+        correlation["C2_raw"].to_numpy(),
+    )
+
+    integral_connected, integral_window_connected = (
+        positive_window_integral(
+            correlation["lag_ps"].to_numpy(),
+            correlation["C1_connected"].to_numpy(),
+        )
+    )
+
+    collective_mean = vectors.mean(axis=1)
+    collective_magnitude = np.linalg.norm(
+        collective_mean,
+        axis=1,
+    )
+
+    collective_z = collective_mean[:, 2]
+
+    summary = pd.DataFrame(
+        [
+            {
+                "label": args.label,
+                "n_frames": vectors.shape[0],
+                "n_water": vectors.shape[1],
+                "first_timestep": int(timesteps[0]),
+                "last_timestep": int(timesteps[-1]),
+                "saved_step_spacing": saved_step_spacing,
+                "frame_spacing_fs": frame_spacing_fs,
+                "total_sampled_window_fs": (
+                    timesteps[-1] - timesteps[0]
+                ) * args.timestep_fs,
+                "initial_C1_connected": float(
+                    correlation.iloc[0]["C1_connected"]
+                ),
+                "final_C1_raw": float(
+                    correlation.iloc[-1]["C1_raw"]
+                ),
+                "final_C2_raw": float(
+                    correlation.iloc[-1]["C2_raw"]
+                ),
+                "final_C1_connected": float(
+                    correlation.iloc[-1]["C1_connected"]
+                ),
+                "positive_window_integral_C1_ps": integral_c1,
+                "positive_window_limit_C1_ps": integral_window_c1,
+                "positive_window_integral_C2_ps": integral_c2,
+                "positive_window_limit_C2_ps": integral_window_c2,
+                "positive_window_integral_connected_C1_ps": (
+                    integral_connected
+                ),
+                "positive_window_limit_connected_C1_ps": (
+                    integral_window_connected
+                ),
+                "mean_collective_dipole_magnitude": float(
+                    collective_magnitude.mean()
+                ),
+                "initial_collective_z": float(
+                    collective_z[0]
+                ),
+                "final_collective_z": float(
+                    collective_z[-1]
+                ),
+            }
+        ]
+    )
+
+    records_csv = (
+        args.output_dir / f"{args.label}_dipole_autocorrelation.csv"
+    )
+    summary_csv = (
+        args.output_dir
+        / f"{args.label}_dipole_autocorrelation_summary.csv"
+    )
+
+    correlation.to_csv(records_csv, index=False)
+    summary.to_csv(summary_csv, index=False)
+
+    fig, axis = plt.subplots(figsize=(9, 6))
+
+    axis.plot(
+        correlation["lag_ps"],
+        correlation["C1_raw"],
+        marker="o",
+        label="C1 raw",
+    )
+    axis.plot(
+        correlation["lag_ps"],
+        correlation["C2_raw"],
+        marker="o",
+        label="C2 raw",
+    )
+    axis.plot(
+        correlation["lag_ps"],
+        correlation["C1_connected"],
+        marker="o",
+        label="C1 connected",
+    )
+
+    axis.axhline(0.0, linewidth=1)
+    axis.set_xlabel("Lag time, ps")
+    axis.set_ylabel("Orientational autocorrelation")
+    axis.set_title(
+        f"Water-dipole orientational autocorrelation\n{args.label}"
+    )
+    axis.legend()
+    fig.tight_layout()
+
+    figure = (
+        args.output_dir
+        / f"{args.label}_dipole_autocorrelation.png"
+    )
+    fig.savefig(figure, dpi=200)
+    plt.close(fig)
+
+    print("\nDipole autocorrelation analysis complete.")
+    print(f"Records: {records_csv}")
+    print(f"Summary: {summary_csv}")
+    print(f"Figure: {figure}")
+    print("\nSummary:")
+    print(summary.to_string(index=False))
 
 
 if __name__ == "__main__":

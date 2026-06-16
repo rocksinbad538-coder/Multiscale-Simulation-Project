@@ -1,0 +1,52 @@
+metric,value
+source_gro,runs/phase1A/hybrid_hydrated_gromacs_min/min_clean.gro
+natoms,66152
+box_nm,7.17453;7.17453;10.0175
+min_OW_PYR_nm,0.27960
+min_OW_PYR_pair,26261:SOL:OW - 1775:PYR:H
+min_WATERATOM_PYR_nm,0.23697
+min_WATERATOM_PYR_pair,8807:SOL:HW2 - 1742:PYR:C9
+min_OW_HBN_nm,0.23253
+min_OW_HBN_pair,25933:SOL:OW - 930:HBN:N0930
+min_WATERATOM_HBN_nm,0.21873
+min_WATERATOM_HBN_pair,26338:SOL:HW1 - 1462:HBN:N1462
+target_atom_1773,1773:PYR:C14
+neighbors_1773_within_0p45nm_count,38
+neighbor_1773,0.13860 nm -> 1761:PYR:C2
+neighbor_1773,0.13881 nm -> 1771:PYR:C12
+neighbor_1773,0.14704 nm -> 1774:PYR:C15
+neighbor_1773,0.24160 nm -> 1760:PYR:C1
+neighbor_1773,0.24202 nm -> 1772:PYR:C13
+neighbor_1773,0.24305 nm -> 1762:PYR:C3
+neighbor_1773,0.24317 nm -> 1770:PYR:C11
+neighbor_1773,0.24466 nm -> 1764:PYR:C5
+neighbor_1773,0.24470 nm -> 1768:PYR:C9
+neighbor_1773,0.26642 nm -> 22327:SOL:HW2
+neighbor_1773,0.27808 nm -> 1759:PYR:C
+neighbor_1773,0.28248 nm -> 1763:PYR:C4
+neighbor_1773,0.28281 nm -> 1769:PYR:C10
+neighbor_1773,0.34066 nm -> 1776:PYR:H1
+neighbor_1773,0.34074 nm -> 1784:PYR:H9
+neighbor_1773,0.34248 nm -> 1783:PYR:H8
+neighbor_1773,0.34250 nm -> 1777:PYR:H2
+neighbor_1773,0.34517 nm -> 22328:SOL:MW
+neighbor_1773,0.34636 nm -> 1403:HBN:B1403
+neighbor_1773,0.35593 nm -> 22325:SOL:OW
+neighbor_1773,0.36027 nm -> 1344:HBN:N1344
+neighbor_1773,0.37082 nm -> 1404:HBN:N1404
+neighbor_1773,0.37595 nm -> 1765:PYR:C6
+neighbor_1773,0.37610 nm -> 1767:PYR:C8
+neighbor_1773,0.37886 nm -> 22326:SOL:HW1
+neighbor_1773,0.38693 nm -> 1775:PYR:H
+neighbor_1773,0.39000 nm -> 22578:SOL:HW1
+neighbor_1773,0.39180 nm -> 1778:PYR:H3
+neighbor_1773,0.39191 nm -> 1782:PYR:H7
+neighbor_1773,0.40642 nm -> 1461:HBN:B1461
+neighbor_1773,0.40643 nm -> 1346:HBN:N1346
+neighbor_1773,0.40671 nm -> 1401:HBN:B1401
+neighbor_1773,0.41855 nm -> 1343:HBN:B1343
+neighbor_1773,0.42500 nm -> 1766:PYR:C7
+neighbor_1773,0.42773 nm -> 1402:HBN:N1402
+neighbor_1773,0.43500 nm -> 22580:SOL:MW
+neighbor_1773,0.44072 nm -> 22577:SOL:OW
+neighbor_1773,0.44785 nm -> 1463:HBN:B1463

@@ -1,0 +1,10 @@
+Minimize standalone pyrene GAFF2/AM1-BCC
+&cntrl
+  imin=1,
+  maxcyc=2000,
+  ncyc=1000,
+  cut=999.0,
+  ntb=0,
+  igb=0,
+  ntpr=50,
+/

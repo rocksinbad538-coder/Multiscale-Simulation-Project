@@ -1,0 +1,31 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -deffnm runs/phase1A/pyrene_gromacs_min/min
+
+Reading file runs/phase1A/pyrene_gromacs_min/min.tpr, VERSION 2025.4 (single precision)
+
+NOTE: Parallelization is limited by the small number of atoms,
+      only starting 1 thread-MPI ranks.
+      You can use the -nt and/or -ntmpi option to optimize the number of threads.
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+02
+   Number of steps    =         2000
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to Fmax < 100 in 8 steps
+Potential Energy  =  4.6381096e+01
+Maximum force     =  9.5378738e+01 on atom 13
+Norm of force     =  5.8042578e+01
+
+GROMACS reminds you: "Predictions can be very difficult - especially about the future." (Niels Bohr)
+

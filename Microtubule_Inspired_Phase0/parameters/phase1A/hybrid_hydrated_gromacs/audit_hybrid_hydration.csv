@@ -1,0 +1,15 @@
+metric,value
+solvated_gro_exists,True
+top_exists,True
+solvate_fatal_or_error_detected,False
+natoms_total,67436
+hbn_atoms,1680
+pyrene_atoms_total,104
+sol_atoms,65652
+sol_molecules_from_gro,16413
+sol_molecules_from_top,16413
+expected_atoms_from_counts,67436
+count_consistent,True
+box_x_nm,7.17453
+box_y_nm,7.17453
+box_z_nm,10.01750

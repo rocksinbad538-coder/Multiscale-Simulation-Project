@@ -1,0 +1,11 @@
+metric,value
+input_atoms,67436
+output_atoms,66152
+input_water_molecules,16413
+removed_water_molecules,321
+kept_water_molecules,16092
+cutoff_nm,0.25
+pre_min_water_solute_nm,0.16147
+post_min_water_solute_nm,0.25010
+pre_min_pair,42327:SOL:HW2 - 824:HBN:N0824
+post_min_pair,41955:SOL:HW2 - 119:HBN:B0119

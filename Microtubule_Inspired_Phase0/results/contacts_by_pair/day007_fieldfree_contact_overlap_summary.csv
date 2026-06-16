@@ -1,0 +1,9 @@
+label,frame,timestep,waters_contacting_any_pair,waters_contacting_multiple_pairs,maximum_pairs_contacted_by_one_water
+day007_fieldfree,1,6000,13,0,1
+day007_fieldfree,2,8000,15,0,1
+day007_fieldfree,3,10000,13,0,1
+day007_fieldfree,4,12000,11,0,1
+day007_fieldfree,5,14000,12,0,1
+day007_fieldfree,6,16000,13,0,1
+day007_fieldfree,7,18000,15,0,1
+day007_fieldfree,8,20000,19,0,1

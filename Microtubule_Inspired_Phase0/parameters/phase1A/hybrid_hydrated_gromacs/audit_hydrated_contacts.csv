@@ -1,0 +1,40 @@
+metric,value
+natoms,67436
+hbn_atoms,1680
+pyrene_atoms,104
+water_atoms,65652
+water_molecules,16413
+min_OW_PYR_nm,0.15793
+min_OW_PYR_atom_A,41537:SOL:OW
+min_OW_PYR_atom_B,1704:PYR:H7
+min_WATERATOM_PYR_nm,0.14169
+min_WATERATOM_PYR_atom_A,43339:SOL:HW2
+min_WATERATOM_PYR_atom_B,1781:PYR:H6
+min_OW_HBN_nm,0.18039
+min_OW_HBN_atom_A,30217:SOL:OW
+min_OW_HBN_atom_B,1022:HBN:N1022
+min_WATERATOM_HBN_nm,0.15827
+min_WATERATOM_HBN_atom_A,47347:SOL:HW2
+min_WATERATOM_HBN_atom_B,1426:HBN:N1426
+target_atom_1773,1773:PYR:C14
+neighbors_within_0p35nm_count,22
+neighbor_1773,0.14069 nm -> 1761:PYR:C2
+neighbor_1773,0.14083 nm -> 1774:PYR:C15
+neighbor_1773,0.14103 nm -> 1771:PYR:C12
+neighbor_1773,0.24275 nm -> 1760:PYR:C1
+neighbor_1773,0.24306 nm -> 1762:PYR:C3
+neighbor_1773,0.24368 nm -> 1772:PYR:C13
+neighbor_1773,0.24409 nm -> 1770:PYR:C11
+neighbor_1773,0.24420 nm -> 1768:PYR:C9
+neighbor_1773,0.24461 nm -> 1764:PYR:C5
+neighbor_1773,0.27960 nm -> 1759:PYR:C
+neighbor_1773,0.28126 nm -> 1763:PYR:C4
+neighbor_1773,0.28150 nm -> 1769:PYR:C10
+neighbor_1773,0.28863 nm -> 22877:SOL:OW
+neighbor_1773,0.30088 nm -> 22880:SOL:MW
+neighbor_1773,0.31978 nm -> 22331:SOL:HW2
+neighbor_1773,0.33693 nm -> 22879:SOL:HW2
+neighbor_1773,0.33959 nm -> 1403:HBN:B1403
+neighbor_1773,0.34154 nm -> 1776:PYR:H1
+neighbor_1773,0.34215 nm -> 1784:PYR:H9
+neighbor_1773,0.34242 nm -> 1777:PYR:H2
