@@ -1,0 +1,26 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -deffnm runs/phase1A/hybrid_dry_gromacs_min/min_gap45
+
+Reading file runs/phase1A/hybrid_dry_gromacs_min/min_gap45.tpr, VERSION 2025.4 (single precision)
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+02
+   Number of steps    =          500
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to Fmax < 100 in 14 steps
+Potential Energy  =  1.8469263e+02
+Maximum force     =  4.7837498e+01 on atom 1722
+Norm of force     =  6.6772653e+00
+
+GROMACS reminds you: "How Do You Like Your Vacation So Far ?" (Speed 2 - Cruise Control)
+

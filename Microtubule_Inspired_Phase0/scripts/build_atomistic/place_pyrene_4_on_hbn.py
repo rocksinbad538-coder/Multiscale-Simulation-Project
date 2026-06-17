@@ -9,7 +9,7 @@ OUT = Path("structures/phase1A/hybrid_dry")
 OUT.mkdir(parents=True, exist_ok=True)
 
 # Placement parameters
-radial_gap = 3.40       # approximate pi-surface to BN-surface separation, Angstrom
+radial_gap = 4.50       # approximate pi-surface to BN-surface separation, Angstrom
 axial_margin = 10.0     # avoid open tube edges
 n_pyrene = 4
 

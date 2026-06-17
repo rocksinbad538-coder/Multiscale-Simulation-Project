@@ -1,0 +1,5 @@
+pyrene_resnr,min_pyr_hbn_nm,pyr_atom,hbn_atom,contacts_lt_0p35,contacts_lt_0p40,contacts_lt_0p45
+2,0.38425,1684:C3,356:N0356,0,9,74
+3,0.41860,1725:H2,724:N0724,0,0,36
+4,0.41204,1735:C2,1034:N1034,0,0,48
+5,0.36086,1783:H8,1286:N1286,0,16,75

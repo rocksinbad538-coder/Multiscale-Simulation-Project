@@ -1,0 +1,20 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -v -deffnm runs/phase1A/hybrid_hydrated_gap45_pyr5shift_clean032_nvt/nvt_100ps_nohbondconstraints
+
+Reading file runs/phase1A/hybrid_hydrated_gap45_pyr5shift_clean032_nvt/nvt_100ps_nohbondconstraints.tpr, VERSION 2025.4 (single precision)
+Changing nstlist from 20 to 100, rlist from 1.2 to 1.252
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+starting mdrun 'h-BN fixed dummy scaffold + 4 pyrenes + TIP4P/2005 water'
+200000 steps,    100.0 ps.
+step 0step 100, will finish Wed Jun 17 17:37:15 2026step 200, will finish Wed Jun 17 17:04:18 2026step 300, will finish Wed Jun 17 16:52:55 2026step 400, will finish Wed Jun 17 16:45:35 2026step 500, will finish Wed Jun 17 16:41:20 2026step 600, will finish Wed Jun 17 16:37:36 2026step 700, will finish Wed Jun 17 16:34:11 2026step 800, will finish Wed Jun 17 16:32:39 2026step 900, will finish Wed Jun 17 16:32:10 2026step 1000, will finish Wed Jun 17 16:31:55 2026
+step 1043: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates

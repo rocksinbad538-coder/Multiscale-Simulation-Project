@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
-src = Path("parameters/phase1A/accepted/hybrid_dry_gromacs")
+src = Path("parameters/phase1A/hybrid_dry_gromacs")
 water = Path("parameters/phase1A/accepted/water_tip4p2005")
 out = Path("parameters/phase1A/hybrid_hydrated_gromacs")
 out.mkdir(parents=True, exist_ok=True)

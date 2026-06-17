@@ -30,4 +30,5 @@ h-BN fixed dummy scaffold + 4 pyrenes + TIP4P/2005 water
 ; molname count
 HBN 1
 PYR 4
-SOL             16413
+SOL             17227
+SOL             17224

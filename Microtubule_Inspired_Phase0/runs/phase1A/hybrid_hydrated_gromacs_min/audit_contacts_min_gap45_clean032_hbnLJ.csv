@@ -1,0 +1,10 @@
+metric,value
+source_gro,runs/phase1A/hybrid_hydrated_gromacs_min/min_gap45_clean032_hbnLJ.gro
+natoms,68356
+water_molecules,16643
+min_OW_solute_nm,0.25025
+min_OW_solute_pair,38185:SOL:OW - 1782:PYR:H7
+min_WATERATOM_solute_nm,0.20799
+min_WATERATOM_solute_pair,56543:SOL:HW2 - 1690:PYR:C9
+min_PYR_HBN_nm,0.26268
+min_PYR_HBN_pair,1725:PYR:H2 - 724:HBN:N0724

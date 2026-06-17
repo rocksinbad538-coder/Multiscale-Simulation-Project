@@ -3,7 +3,7 @@ from pathlib import Path
 import csv
 import math
 
-XYZ = Path("structures/phase1A/accepted/hybrid_dry/hbn_pyrene_4_dry.xyz")
+XYZ = Path("structures/phase1A/hybrid_dry/hbn_pyrene_4_dry.xyz")
 PYR_ITP_SRC = Path("parameters/phase1A/accepted/pyrene_gromacs/pyrene.itp")
 OUT = Path("parameters/phase1A/hybrid_dry_gromacs")
 OUT.mkdir(parents=True, exist_ok=True)

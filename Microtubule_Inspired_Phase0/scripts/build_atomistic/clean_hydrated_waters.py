@@ -2,12 +2,12 @@
 from pathlib import Path
 import math, csv, re
 
-inp = Path("parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_tip4p2005_solvated.gro")
+inp = Path("parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_tip4p2005_solvated_gap45.gro")
 top_in = Path("parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_hydratable.top")
 
-outgro = Path("parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_tip4p2005_solvated_clean032.gro")
-outtop = Path("parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_hydratable_clean032.top")
-audit = Path("parameters/phase1A/hybrid_hydrated_gromacs/audit_hydration_cleaning032.csv")
+outgro = Path("parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_tip4p2005_solvated_gap45_clean032.gro")
+outtop = Path("parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_hydratable_gap45_clean032.top")
+audit = Path("parameters/phase1A/hybrid_hydrated_gromacs/audit_hydration_gap45_clean032.csv")
 
 cutoff_nm = 0.32
 

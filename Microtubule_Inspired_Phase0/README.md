@@ -633,3 +633,48 @@ Current hydrated-system status:
 Next step:
 
 Continue hydrated-system stabilization by diagnosing the local pyrene/scaffold environment and testing a staged minimization protocol before starting any MD production.
+
+---
+
+## Phase 1A — Hydration Stability Validation, Day 010
+
+A 100 ps frozen-solute NVT hydration validation was completed for the h-BN + 4 pyrene + TIP4P/2005 system.
+
+### Accepted protocol
+
+- h-BN scaffold frozen
+- 4 pyrene chromophores frozen
+- TIP4P/2005 water mobile
+- NVT ensemble
+- dt = 0.0005 ps
+- total simulation time = 100 ps
+- PME electrostatics
+- cutoff = 1.2 nm
+
+### Accepted final metrics
+
+Minimum pyrene–hBN distances after 100 ps:
+
+| Chromophore | Minimum PYR–hBN distance (nm) |
+|---|---:|
+| PYR2 | 0.44153 |
+| PYR3 | 0.44466 |
+| PYR4 | 0.44362 |
+| PYR5 | 0.56126 |
+
+Hydration contacts after 100 ps:
+
+| Metric | Value |
+|---|---:|
+| min OW–solute distance | 0.24549 nm |
+| min water atom–solute distance | 0.18479 nm |
+
+### Conclusion
+
+The hydration protocol is stable when the h-BN scaffold and pyrenes are held fixed. The instability observed in fully mobile simulations is attributed to the current dummy h-BN scaffold topology/mechanics, not to TIP4P/2005 water packing or pyrene placement.
+
+The accepted baseline is stored at:
+
+```text
+runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute
+```

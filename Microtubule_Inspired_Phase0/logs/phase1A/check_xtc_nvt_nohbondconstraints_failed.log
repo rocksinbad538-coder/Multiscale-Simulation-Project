@@ -1,0 +1,26 @@
+                      :-) GROMACS - gmx check, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx check -f runs/phase1A/hybrid_hydrated_gap45_pyr5shift_clean032_nvt/nvt_100ps_nohbondconstraints.xtc
+
+Reading frame       0 time    0.000   
+# Atoms  68320
+Precision 0.001 (nm)
+Reading frame       1 time    0.500   Last frame          1 time    0.500   
+
+
+Item        #frames Timestep (ps)
+Step             2    0.5
+Time             2    0.5
+Lambda           0
+Coords           2    0.5
+Velocities       0
+Forces           0
+Box              2    0.5
+
+GROMACS reminds you: "Christianity may be OK between consenting adults in private but should not be taught to young children." (Francis Crick)
+
+Checking file runs/phase1A/hybrid_hydrated_gap45_pyr5shift_clean032_nvt/nvt_100ps_nohbondconstraints.xtc

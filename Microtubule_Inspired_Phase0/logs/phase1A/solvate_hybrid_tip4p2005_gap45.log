@@ -1,0 +1,58 @@
+                     :-) GROMACS - gmx solvate, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx solvate -cp parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_dry_for_solvation.gro -cs /usr/local/gromacs/share/gromacs/top/tip4p.gro -o parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_tip4p2005_solvated_gap45.gro -p parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_hydratable.top
+
+Reading solute configuration
+Reading solvent configuration
+
+Initialising inter-atomic distances...
+
+WARNING: Masses and atomic (Van der Waals) radii will be guessed
+         based on residue and atom names, since they could not be
+         definitively assigned from the information in your input
+         files. These guessed numbers might deviate from the mass
+         and radius of the atom type. Please check the output
+         files if necessary. Note, that this functionality may
+         be removed in a future GROMACS version. Please, consider
+         using another file format for your input.
+
+NOTE: From version 5.0 gmx solvate uses the Van der Waals radii
+from the source below. This means the results may be different
+compared to previous GROMACS versions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+A. Bondi
+van der Waals Volumes and Radii
+J. Phys. Chem. (1964)
+DOI: 10.1021/j100785a001
+-------- -------- --- Thank You --- -------- --------
+
+Generating solvent configuration
+Will generate new solvent configuration of 4x4x6 boxes
+Solvent box contains 76288 atoms in 19072 residues
+Removed 4668 solvent atoms due to solvent-solvent overlap
+Removed 2712 solvent atoms due to solute-solvent overlap
+Sorting configuration
+Found 1 molecule type:
+    SOL (   4 atoms): 17227 residues
+Generated solvent containing 68908 atoms in 17227 residues
+Writing generated configuration to parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_tip4p2005_solvated_gap45.gro
+
+Back Off! I just backed up parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_tip4p2005_solvated_gap45.gro to parameters/phase1A/hybrid_hydrated_gromacs/#hbn_pyrene_4_tip4p2005_solvated_gap45.gro.2#
+
+Output configuration contains 70692 atoms in 17232 residues
+Volume                 :     547.748 (nm^3)
+Density                :     1009.07 (g/l)
+Number of solvent molecules:  17227   
+
+Processing topology
+
+Back Off! I just backed up parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_hydratable.top to parameters/phase1A/hybrid_hydrated_gromacs/#hbn_pyrene_4_hydratable.top.4#
+
+GROMACS reminds you: "The Feeling of Power was Intoxicating, Magic" (Frida Hyvonen)
+
+Adding line for 17227 solvent molecules with resname (SOL) to topology file (parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_hydratable.top)

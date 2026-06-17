@@ -1,0 +1,11 @@
+metric,value
+source_gro,parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_tip4p2005_solvated_gap45_pyr5shift.gro
+natoms,70680
+water_molecules,17224
+box_nm,7.39453;7.39453;10.0175
+min_OW_solute_nm,0.17108
+min_OW_solute_pair,42817:SOL:OW - 1700:PYR:H3
+min_WATERATOM_solute_nm,0.14777
+min_WATERATOM_solute_pair,42818:SOL:HW1 - 1699:PYR:H2
+min_PYR_HBN_nm,0.44153
+min_PYR_HBN_pair,1683:PYR:C2 - 355:HBN:B0355

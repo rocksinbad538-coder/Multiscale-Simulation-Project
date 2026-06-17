@@ -1,0 +1,12 @@
+metric,value
+tpr_exists,True
+gro_exists,True
+xtc_exists,True
+edr_exists,True
+log_exists,True
+finished_mdrun_detected,True
+fatal_or_lincs_detected,False
+nan_detected,False
+average_temperature_K,2.96401e+02
+conserved_energy_drift_kJmol_ps_atom,9.65e-05
+performance_ns_per_day,4.063
