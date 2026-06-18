@@ -1,0 +1,11 @@
+metric,value
+hbn_atoms,1680
+candidate_bonds_lt_0p20nm,2460
+degree0_atoms,0
+degree1_atoms,60
+degree2_atoms,0
+degree3_atoms,1620
+degree_gt3_atoms,0
+min_bond_nm,0.14481
+max_bond_nm,0.14826
+mean_bond_nm,0.14640

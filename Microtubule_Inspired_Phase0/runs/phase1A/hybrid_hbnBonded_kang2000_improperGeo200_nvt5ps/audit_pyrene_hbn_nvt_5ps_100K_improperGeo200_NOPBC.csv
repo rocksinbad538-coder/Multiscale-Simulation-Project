@@ -1,0 +1,5 @@
+source_gro,pyrene_resnr,atom_count,min_pyr_hbn_nm,pyr_atom,hbn_atom,contacts_lt_0p30,contacts_lt_0p35,contacts_lt_0p40,contacts_lt_0p45
+runs/phase1A/hybrid_hbnBonded_kang2000_improperGeo200_nvt5ps/nvt_5ps_100K.gro,2,26,0.52308,1699:H2,414:N0414,0,0,0,0
+runs/phase1A/hybrid_hbnBonded_kang2000_improperGeo200_nvt5ps/nvt_5ps_100K.gro,3,26,0.40603,1710:C3,723:B0723,0,0,0,52
+runs/phase1A/hybrid_hbnBonded_kang2000_improperGeo200_nvt5ps/nvt_5ps_100K.gro,4,26,0.35486,1735:C2,1033:B1033,0,0,46,128
+runs/phase1A/hybrid_hbnBonded_kang2000_improperGeo200_nvt5ps/nvt_5ps_100K.gro,5,26,0.66540,1783:H8,1226:N1226,0,0,0,0

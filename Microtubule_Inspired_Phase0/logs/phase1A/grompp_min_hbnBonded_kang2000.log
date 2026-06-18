@@ -1,0 +1,39 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx grompp -f runs/phase1A/hybrid_hbnBonded_kang2000_min/min_hbnBonded_kang2000.mdp -c runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_min/min_gap45_pyr5shift_clean032_hbnSoftLJ_posresPYR50k.gro -p parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded_kang2000.top -o runs/phase1A/hybrid_hbnBonded_kang2000_min/min_hbnBonded_kang2000.tpr
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 105153.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+GROMACS reminds you: "How Do You Like Your Vacation So Far ?" (Speed 2 - Cruise Control)
+
+Setting the LD random seed to -1218788
+
+Generated 28 of the 28 non-bonded parameter combinations
+
+Generated 28 of the 28 1-4 parameter combinations
+
+Excluding 1 bonded neighbours molecule type 'HBN'
+
+Excluding 3 bonded neighbours molecule type 'PYR'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+Analysing residue names:
+There are:     5      Other residues
+There are: 16634      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between excluded atoms is 0.387 nm between atom 1760 and 1774
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 64x64x84, spacing 0.116 0.116 0.119
+
+Estimate for the relative computational load of the PME mesh part: 0.13
+
+This run will generate roughly 5 Mb of data

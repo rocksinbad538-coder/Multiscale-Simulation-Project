@@ -1,0 +1,25 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/notes/phase1_atomistic
+Command line:
+  gmx mdrun -v -deffnm runs/phase1A/hybrid_hbnBonded_kang2000_improperGeo100_nvt100ps/nvt_100ps_100K
+
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2025.4
+Source file: src/gromacs/options/options.cpp (line 184)
+Function:    void gmx::internal::OptionSectionImpl::finish()
+
+Error in user input:
+Invalid input values
+  In option s
+    Required option was not provided, and the default file 'topol' does not
+    exist or is not accessible.
+    The following extensions were tried to complete the file name:
+      .tpr
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------

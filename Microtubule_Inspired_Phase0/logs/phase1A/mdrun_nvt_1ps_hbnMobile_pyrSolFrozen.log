@@ -1,0 +1,26 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -v -deffnm runs/phase1A/hybrid_hbnBonded_nvt1ps/nvt_1ps_hbnMobile_pyrSolFrozen
+
+Reading file runs/phase1A/hybrid_hbnBonded_nvt1ps/nvt_1ps_hbnMobile_pyrSolFrozen.tpr, VERSION 2025.4 (single precision)
+Changing nstlist from 20 to 100, rlist from 1.2 to 1.2
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+starting mdrun 'h-BN fixed dummy scaffold + 4 pyrenes + TIP4P/2005 water'
+4000 steps,      1.0 ps.
+step 0step 100, remaining wall clock time:    66 s          step 200, remaining wall clock time:    62 s          step 300, remaining wall clock time:    63 s          step 400, remaining wall clock time:    63 s          step 500, remaining wall clock time:    62 s          step 600, remaining wall clock time:    59 s          step 700, remaining wall clock time:    57 s          step 800, remaining wall clock time:    55 s          step 900, remaining wall clock time:    53 s          step 1000, remaining wall clock time:    51 s          step 1100, remaining wall clock time:    49 s          step 1200, remaining wall clock time:    48 s          step 1300, remaining wall clock time:    46 s          step 1400, remaining wall clock time:    44 s          step 1500, remaining wall clock time:    42 s          step 1600, remaining wall clock time:    41 s          step 1700, remaining wall clock time:    39 s          step 1800, remaining wall clock time:    37 s          step 1900, remaining wall clock time:    35 s          step 2000, remaining wall clock time:    34 s          step 2100, remaining wall clock time:    32 s          step 2200, remaining wall clock time:    30 s          step 2300, remaining wall clock time:    28 s          step 2400, remaining wall clock time:    27 s          step 2500, remaining wall clock time:    25 s          step 2600, remaining wall clock time:    23 s          step 2700, remaining wall clock time:    22 s          step 2800, remaining wall clock time:    20 s          step 2900, remaining wall clock time:    18 s          step 3000, remaining wall clock time:    16 s          step 3100, remaining wall clock time:    15 s          step 3200, remaining wall clock time:    13 s          step 3300, remaining wall clock time:    11 s          step 3400, remaining wall clock time:    10 s          step 3500, remaining wall clock time:     8 s          step 3600, remaining wall clock time:     6 s          step 3700, remaining wall clock time:     5 s          step 3800, remaining wall clock time:     3 s          step 3900, remaining wall clock time:     1 s          
+Writing final coordinates.
+step 4000, remaining wall clock time:     0 s          
+               Core t (s)   Wall t (s)        (%)
+       Time:      814.450       67.873     1200.0
+                 (ns/day)    (hour/ns)
+Performance:        1.273       18.849
+
+GROMACS reminds you: "Don't Push Me, Cause I'm Close to the Edge" (Grandmaster Flash)
+

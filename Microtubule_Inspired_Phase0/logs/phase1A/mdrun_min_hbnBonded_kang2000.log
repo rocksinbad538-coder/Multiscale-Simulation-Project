@@ -1,0 +1,81 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -v -deffnm runs/phase1A/hybrid_hbnBonded_kang2000_min/min_hbnBonded_kang2000
+
+Reading file runs/phase1A/hybrid_hbnBonded_kang2000_min/min_hbnBonded_kang2000.tpr, VERSION 2025.4 (single precision)
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+02
+   Number of steps    =        20000
+Step=    0, Dmax= 1.0e-04 nm, Epot= -9.09726e+05 Fmax= 1.37235e+03, atom= 1759
+Step=    1, Dmax= 1.0e-04 nm, Epot= -9.09728e+05 Fmax= 1.32076e+03, atom= 1759
+Step=    2, Dmax= 1.2e-04 nm, Epot= -9.09730e+05 Fmax= 1.26017e+03, atom= 1759
+Step=    3, Dmax= 1.4e-04 nm, Epot= -9.09733e+05 Fmax= 1.18970e+03, atom= 1759
+Step=    4, Dmax= 1.7e-04 nm, Epot= -9.09737e+05 Fmax= 1.10831e+03, atom= 1759
+Step=    5, Dmax= 2.1e-04 nm, Epot= -9.09742e+05 Fmax= 1.01580e+03, atom= 1759
+Step=    6, Dmax= 2.5e-04 nm, Epot= -9.09747e+05 Fmax= 9.12710e+02, atom= 1759
+Step=    7, Dmax= 3.0e-04 nm, Epot= -9.09754e+05 Fmax= 8.01577e+02, atom= 1759
+Step=    8, Dmax= 3.6e-04 nm, Epot= -9.09761e+05 Fmax= 6.88123e+02, atom= 1759
+Step=    9, Dmax= 4.3e-04 nm, Epot= -9.09772e+05 Fmax= 5.82795e+02, atom= 1759
+Step=   10, Dmax= 5.2e-04 nm, Epot= -9.09786e+05 Fmax= 4.99436e+02, atom= 1759
+Step=   11, Dmax= 6.2e-04 nm, Epot= -9.09804e+05 Fmax= 4.80312e+02, atom= 1775
+Step=   12, Dmax= 7.4e-04 nm, Epot= -9.09824e+05 Fmax= 4.63939e+02, atom= 1775
+Step=   13, Dmax= 8.9e-04 nm, Epot= -9.09847e+05 Fmax= 4.33962e+02, atom= 1775
+Step=   14, Dmax= 1.1e-03 nm, Epot= -9.09873e+05 Fmax= 3.92519e+02, atom= 1775
+Step=   15, Dmax= 1.3e-03 nm, Epot= -9.09901e+05 Fmax= 3.42155e+02, atom= 1775
+Step=   16, Dmax= 1.5e-03 nm, Epot= -9.09794e+05 Fmax= 1.93814e+03, atom= 1325Step=   17, Dmax= 7.7e-04 nm, Epot= -9.09893e+05 Fmax= 8.57463e+02, atom= 1325Step=   18, Dmax= 3.9e-04 nm, Epot= -9.09907e+05 Fmax= 3.26313e+02, atom= 1775
+Step=   19, Dmax= 4.6e-04 nm, Epot= -9.09906e+05 Fmax= 6.59168e+02, atom= 1325Step=   20, Dmax= 2.3e-04 nm, Epot= -9.09916e+05 Fmax= 3.17403e+02, atom= 1775
+Step=   21, Dmax= 2.8e-04 nm, Epot= -9.09923e+05 Fmax= 3.06706e+02, atom= 1775
+Step=   22, Dmax= 3.3e-04 nm, Epot= -9.09930e+05 Fmax= 2.93912e+02, atom= 1775
+Step=   23, Dmax= 4.0e-04 nm, Epot= -9.09934e+05 Fmax= 4.36392e+02, atom= 1325
+Step=   24, Dmax= 4.8e-04 nm, Epot= -9.09932e+05 Fmax= 6.16207e+02, atom= 1325Step=   25, Dmax= 2.4e-04 nm, Epot= -9.09945e+05 Fmax= 2.72965e+02, atom= 1776
+Step=   26, Dmax= 2.9e-04 nm, Epot= -9.09952e+05 Fmax= 2.64399e+02, atom= 1776
+Step=   27, Dmax= 3.5e-04 nm, Epot= -9.09959e+05 Fmax= 2.54071e+02, atom= 1776
+Step=   28, Dmax= 4.1e-04 nm, Epot= -9.09951e+05 Fmax= 6.40056e+02, atom= 1327Step=   29, Dmax= 2.1e-04 nm, Epot= -9.09964e+05 Fmax= 2.47816e+02, atom= 1776
+Step=   30, Dmax= 2.5e-04 nm, Epot= -9.09970e+05 Fmax= 2.50974e+02, atom= 1268
+Step=   31, Dmax= 3.0e-04 nm, Epot= -9.09971e+05 Fmax= 4.14553e+02, atom= 1327
+Step=   32, Dmax= 3.6e-04 nm, Epot= -9.09977e+05 Fmax= 3.88599e+02, atom= 1268
+Step=   33, Dmax= 4.3e-04 nm, Epot= -9.09973e+05 Fmax= 5.70800e+02, atom= 1327Step=   34, Dmax= 2.1e-04 nm, Epot= -9.09989e+05 Fmax= 2.21780e+02, atom= 1776
+Step=   35, Dmax= 2.6e-04 nm, Epot= -9.09994e+05 Fmax= 2.13910e+02, atom= 1776
+Step=   36, Dmax= 3.1e-04 nm, Epot= -9.09997e+05 Fmax= 3.53649e+02, atom= 1483
+Step=   37, Dmax= 3.7e-04 nm, Epot= -9.09996e+05 Fmax= 4.74597e+02, atom= 1079Step=   38, Dmax= 1.9e-04 nm, Epot= -9.10007e+05 Fmax= 2.01085e+02, atom= 1776
+Step=   39, Dmax= 2.2e-04 nm, Epot= -9.10013e+05 Fmax= 1.94252e+02, atom= 1776
+Step=   40, Dmax= 2.7e-04 nm, Epot= -9.10018e+05 Fmax= 2.18466e+02, atom= 1424
+Step=   41, Dmax= 3.2e-04 nm, Epot= -9.10014e+05 Fmax= 5.09779e+02, atom= 1423Step=   42, Dmax= 1.6e-04 nm, Epot= -9.10024e+05 Fmax= 1.81776e+02, atom= 1776
+Step=   43, Dmax= 1.9e-04 nm, Epot= -9.10028e+05 Fmax= 2.06534e+02, atom= 1424
+Step=   44, Dmax= 2.3e-04 nm, Epot= -9.10031e+05 Fmax= 3.22875e+02, atom= 1423
+Step=   45, Dmax= 2.8e-04 nm, Epot= -9.10036e+05 Fmax= 2.94937e+02, atom= 1364
+Step=   46, Dmax= 3.3e-04 nm, Epot= -9.10033e+05 Fmax= 4.73635e+02, atom= 1423Step=   47, Dmax= 1.7e-04 nm, Epot= -9.10044e+05 Fmax= 1.62225e+02, atom= 1776
+Step=   48, Dmax= 2.0e-04 nm, Epot= -9.10049e+05 Fmax= 1.59934e+02, atom= 1424
+Step=   49, Dmax= 2.4e-04 nm, Epot= -9.10049e+05 Fmax= 3.73419e+02, atom= 1423
+Step=   50, Dmax= 2.9e-04 nm, Epot= -9.10057e+05 Fmax= 2.78145e+02, atom= 1362
+Step=   51, Dmax= 3.4e-04 nm, Epot= -9.10052e+05 Fmax= 5.07840e+02, atom= 1423Step=   52, Dmax= 1.7e-04 nm, Epot= -9.10064e+05 Fmax= 1.42277e+02, atom= 1776
+Step=   53, Dmax= 2.1e-04 nm, Epot= -9.10067e+05 Fmax= 2.68062e+02, atom= 1362
+Step=   54, Dmax= 2.5e-04 nm, Epot= -9.10071e+05 Fmax= 3.02905e+02, atom= 1421
+Step=   55, Dmax= 3.0e-04 nm, Epot= -9.10072e+05 Fmax= 3.66232e+02, atom= 1362
+Step=   56, Dmax= 3.6e-04 nm, Epot= -9.10073e+05 Fmax= 4.52343e+02, atom= 1421
+Step=   57, Dmax= 4.3e-04 nm, Epot= -9.10072e+05 Fmax= 5.17587e+02, atom= 1362Step=   58, Dmax= 2.1e-04 nm, Epot= -9.10087e+05 Fmax= 1.22262e+02, atom= 1784
+Step=   59, Dmax= 2.6e-04 nm, Epot= -9.10096e+05 Fmax= 1.57666e+02, atom= 1421
+Step=   60, Dmax= 3.1e-04 nm, Epot= -9.10092e+05 Fmax= 4.87735e+02, atom= 1362Step=   61, Dmax= 1.5e-04 nm, Epot= -9.10100e+05 Fmax= 1.84378e+02, atom= 1362
+Step=   62, Dmax= 1.9e-04 nm, Epot= -9.10103e+05 Fmax= 2.38580e+02, atom= 1421
+Step=   63, Dmax= 2.2e-04 nm, Epot= -9.10106e+05 Fmax= 2.62169e+02, atom= 1362
+Step=   64, Dmax= 2.7e-04 nm, Epot= -9.10108e+05 Fmax= 3.46065e+02, atom= 1421
+Step=   65, Dmax= 3.2e-04 nm, Epot= -9.10110e+05 Fmax= 3.78933e+02, atom= 1362
+Step=   66, Dmax= 3.8e-04 nm, Epot= -9.10109e+05 Fmax= 4.97049e+02, atom= 1421Step=   67, Dmax= 1.9e-04 nm, Epot= -9.10121e+05 Fmax= 9.65618e+01, atom= 1784
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to Fmax < 100 in 68 steps
+Potential Energy  = -9.1012069e+05
+Maximum force     =  9.6561775e+01 on atom 1784
+Norm of force     =  8.8144328e+00
+
+GROMACS reminds you: "I'm An Oakman" (Pulp Fiction)
+

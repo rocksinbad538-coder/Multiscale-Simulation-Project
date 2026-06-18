@@ -678,3 +678,40 @@ The accepted baseline is stored at:
 ```text
 runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute
 ```
+
+## Current Status (2026-06-18)
+
+### Phase 1A Scaffold Mechanics
+
+Status: COMPLETE
+
+Accepted baseline:
+
+- bonded h-BN nanotube
+- kang2000 angular model
+- improperGeo100 geometry-referenced improper model
+
+Validation:
+
+- NVT
+- 100 ps
+- 100 K
+
+Results:
+
+- no nanotube collapse
+- no PYR-HBN contacts below 0.30 nm
+- stable radial deformation
+- stable potential energy
+
+Accepted baseline:
+
+runs/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated_100ps_100K
+
+Accepted parameters:
+
+parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated
+
+Next milestone:
+
+Phase 1A controlled hydration validation.
