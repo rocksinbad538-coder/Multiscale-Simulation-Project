@@ -1,0 +1,8 @@
+metric,value
+source,structures/phase1A/accepted/hybrid_dry/hbn_pyrene_4_dry.xyz
+natoms,1784
+element_counts,"{'B': 840, 'N': 840, 'C': 64, 'H': 40}"
+B-N_min_mean_max_count,"('1.44950', '1.44967', '1.45000', '2460')"
+B-H_min_mean_max_count,"('NA', 'NA', 'NA', '0')"
+N-H_min_mean_max_count,"('NA', 'NA', 'NA', '0')"
+overlaps_lt_0p50A_count,0

@@ -1,0 +1,29 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -v -deffnm runs/phase1A/day012_waterRelax_min/min_waterRelax
+
+Reading file runs/phase1A/day012_waterRelax_min/min_waterRelax.tpr, VERSION 2025.4 (single precision)
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+02
+   Number of steps    =         5000
+Step=    0, Dmax= 1.0e-03 nm, Epot= -9.05559e+05 Fmax= 1.48886e+02, atom= 45989
+Step=    1, Dmax= 1.0e-03 nm, Epot= -9.05615e+05 Fmax= 1.24508e+02, atom= 45989
+Step=    2, Dmax= 1.2e-03 nm, Epot= -9.05652e+05 Fmax= 9.83039e+01, atom= 45989
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to Fmax < 100 in 3 steps
+Potential Energy  = -9.0565206e+05
+Maximum force     =  9.8303917e+01 on atom 45989
+Norm of force     =  5.8632211e+00
+
+GROMACS reminds you: "Take Dehydrated Water On Your Desert Trips" (Space Quest III)
+

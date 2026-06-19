@@ -1,0 +1,12 @@
+metric,value
+source_gro,runs/phase1A/day012_waterFree_10ps100K_postmin/postmin.gro
+hbn_center_x_nm,3.74447
+hbn_center_y_nm,3.81719
+hbn_rmin_nm,1.11132
+hbn_rmean_nm,1.21494
+hbn_rmax_nm,1.38097
+hbn_zmin_nm,1.93600
+hbn_zmax_nm,8.03400
+total_ow,16634
+internal_ow_strict,423
+internal_ow_mean_radius,423

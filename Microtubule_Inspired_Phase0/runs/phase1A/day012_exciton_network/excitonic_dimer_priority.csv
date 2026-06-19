@@ -1,0 +1,7 @@
+pair,center_distance_nm,min_atom_distance_nm,lateral_slip_nm,plane_angle_deg,normal_dot,classification,rationale
+PYR2-PYR4,4.25169,3.95167,3.31500,1.149,0.99980,PRIMARY_PARALLEL_DIMER,Near-parallel chromophore pair; prioritized for same-orientation excitonic coupling tests.
+PYR3-PYR5,4.34339,4.05089,3.52881,0.993,0.99985,PRIMARY_PARALLEL_DIMER,Near-parallel chromophore pair; prioritized for same-orientation excitonic coupling tests.
+PYR2-PYR3,2.69177,2.22428,1.36277,89.997,0.00005,ORTHOGONAL_NEAREST_CONTROL,Nearest-neighbor pair with near-orthogonal chromophore planes; useful as weak-coupling control.
+PYR3-PYR4,2.69074,2.22258,1.36608,89.923,0.00135,ORTHOGONAL_NEAREST_CONTROL,Nearest-neighbor pair with near-orthogonal chromophore planes; useful as weak-coupling control.
+PYR4-PYR5,2.76521,2.29794,1.35517,89.460,0.00942,ORTHOGONAL_NEAREST_CONTROL,Nearest-neighbor pair with near-orthogonal chromophore planes; useful as weak-coupling control.
+PYR2-PYR5,4.69020,4.22280,4.04376,89.518,0.00842,DISTANT_ORTHOGONAL_CONTROL,Distant near-orthogonal pair; lowest-priority control.

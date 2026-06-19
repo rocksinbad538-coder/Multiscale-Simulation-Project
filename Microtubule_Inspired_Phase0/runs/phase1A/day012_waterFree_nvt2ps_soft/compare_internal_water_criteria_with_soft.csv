@@ -1,0 +1,5 @@
+state,ow_inside_inner_plus_0p05_and_hbn_z,ow_inside_mean_radius,ow_inside_mean_radius_and_hbn_z,hbn_r_min_nm,hbn_r_mean_nm,hbn_r_max_nm,hbn_zmin_nm,hbn_zmax_nm
+accepted_100ps_before_water_free,435,1003,435,1.11132,1.21494,1.38097,1.93600,8.03400
+after_strict_min,432,1003,432,1.11132,1.21494,1.38097,1.93600,8.03400
+after_waterFree_5ps_100K,427,1009,427,1.11132,1.21494,1.38097,1.93600,8.03400
+after_waterFree_2ps_soft_50K,425,1002,425,1.11132,1.21494,1.38097,1.93600,8.03400

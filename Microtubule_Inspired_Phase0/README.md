@@ -715,3 +715,53 @@ parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated
 Next milestone:
 
 Phase 1A controlled hydration validation.
+
+## Day012 – Electronic Structure Milestone
+
+Day012 initiated the electronic-structure stage of Phase 1A.
+
+Main outcomes:
+
+- Validated the accepted h-BN nanotube geometry:
+  - 1680 atoms
+  - 840 B atoms
+  - 840 N atoms
+  - mean B–N bond length: 1.44967 Å
+  - no overlaps below 0.50 Å
+
+- Installed and validated ORCA 6.1.1 locally on macOS Intel.
+
+- Completed TDDFT calculations for four isolated pyrene chromophores using:
+  - PBE0
+  - def2-SVP
+  - TightSCF
+  - SlowConv
+  - ORCA 6.1.1
+
+- Completed TDDFT calculations for two primary pyrene dimers:
+  - PYR2–PYR4
+  - PYR3–PYR5
+
+Monomer S1 energies:
+
+| Chromophore | S1 (eV) |
+|---|---:|
+| PYR2 | 3.779 |
+| PYR3 | 3.774 |
+| PYR4 | 3.782 |
+| PYR5 | 3.767 |
+
+The isolated pyrene chromophores are electronically homogeneous, with a maximum S1 spread of approximately 0.015 eV.
+
+Primary dimer low-energy TDDFT states:
+
+| Dimer | Lowest states (eV) |
+|---|---|
+| PYR2–PYR4 | 3.726, 3.731 |
+| PYR3–PYR5 | 3.729, 3.731 |
+
+These low-lying dimer states provide the first direct electronic-structure evidence of excitonic-state splitting in the MD-derived Phase 1A chromophore geometry.
+
+Current status:
+
+Phase 1A has transitioned from structural/hydration validation to electronic-structure and excitonic-model construction.

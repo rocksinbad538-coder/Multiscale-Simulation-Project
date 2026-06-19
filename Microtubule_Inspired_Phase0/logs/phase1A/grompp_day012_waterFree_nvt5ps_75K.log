@@ -1,0 +1,54 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx grompp -f runs/phase1A/day012_waterFree_nvt5ps_75K/nvt_5ps_waterFree_75K.mdp -c runs/phase1A/day012_waterFree_nvt2ps_soft/nvt_2ps_waterFree_soft.gro -p parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded_kang2000_improperGeo100.top -o runs/phase1A/day012_waterFree_nvt5ps_75K/nvt_5ps_waterFree_75K.tpr
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 99804.00
+
+GROMACS reminds you: "C is not a high-level language." (Brian Kernighan, C author)
+
+Setting the LD random seed to 2054123518
+
+Generated 28 of the 28 non-bonded parameter combinations
+
+Generated 28 of the 28 1-4 parameter combinations
+
+Excluding 1 bonded neighbours molecule type 'HBN'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'PYR'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Velocities were taken from a Maxwell distribution at 75 K
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+Analysing residue names:
+There are:     5      Other residues
+There are: 16634      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between excluded atoms is 0.374 nm between atom 1761 and 1768
+
+Determining Verlet buffer for a tolerance of 0.001 kJ/mol/ps at 75 K
+
+Calculated rlist for 1x1 atom pair-list as 1.201 nm, buffer size 0.001 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 64x64x84, spacing 0.116 0.116 0.119
+
+Estimate for the relative computational load of the PME mesh part: 0.14
+
+This run will generate roughly 12 Mb of data

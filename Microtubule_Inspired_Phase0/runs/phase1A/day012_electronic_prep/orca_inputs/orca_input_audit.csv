@@ -1,0 +1,9 @@
+input_file,qm_atoms,bad_virtual_sites,has_charge_multiplicity,has_tddft_block,has_pbe0
+runs/phase1A/day012_electronic_prep/orca_inputs/pyr_only_tddft/PYR2_only.inp,26,0,True,True,True
+runs/phase1A/day012_electronic_prep/orca_inputs/pyr_only_tddft/PYR3_only.inp,26,0,True,True,True
+runs/phase1A/day012_electronic_prep/orca_inputs/pyr_only_tddft/PYR4_only.inp,26,0,True,True,True
+runs/phase1A/day012_electronic_prep/orca_inputs/pyr_only_tddft/PYR5_only.inp,26,0,True,True,True
+runs/phase1A/day012_electronic_prep/orca_inputs/pyr_water0p50_tddft/PYR2_water0p50.inp,83,0,True,True,True
+runs/phase1A/day012_electronic_prep/orca_inputs/pyr_water0p50_tddft/PYR3_water0p50.inp,80,0,True,True,True
+runs/phase1A/day012_electronic_prep/orca_inputs/pyr_water0p50_tddft/PYR4_water0p50.inp,83,0,True,True,True
+runs/phase1A/day012_electronic_prep/orca_inputs/pyr_water0p50_tddft/PYR5_water0p50.inp,95,0,True,True,True
