@@ -716,6 +716,99 @@ Next milestone:
 
 Phase 1A controlled hydration validation.
 
+## Phase 1A Day013: Excitonic Hamiltonian and Hydrated TDDFT Pilots
+
+Day013 advanced the Phase 1A electronic workflow from isolated pyrene TDDFT calculations to a preliminary four-site excitonic Hamiltonian and explicit-water validation.
+
+### Main Outputs
+
+- Built the preliminary 4×4 excitonic Hamiltonian for PYR2, PYR3, PYR4, and PYR5.
+- Used isolated pyrene TDDFT S1 energies as site energies.
+- Estimated first-pass pair couplings from the two lowest TDDFT dimer excited-state splittings.
+- Diagonalized the 4-site Hamiltonian to obtain exciton eigenenergies, eigenvectors, participation ratios, and dominant site contributions.
+- Generated vacuum vs hydrated Hamiltonian comparisons using local 0.50 nm water-shell TDDFT site energies.
+- Generated diagnostic plots for coupling-distance trends, coupling-orientation trends, exciton energies, and participation ratios.
+- Completed the first explicit-water hydrated dimer TDDFT pilot for the PYR4–PYR5 pair.
+
+### Hydrated PYR4–PYR5 TDDFT Pilot
+
+**System:** PYR4–PYR5 hydrated dimer (0.50 nm local water shell)
+
+**Method:** ORCA 6.1.1, PBE0/def2-SVP, TDDFT/TDA
+
+**Roots:** 20
+
+**Status:** ORCA terminated normally
+
+**Final single-point energy:**
+
+```text
+-4433.282643972761 Eh
+```
+
+### Lowest Excited States
+
+| State | Energy (eV) | Energy (cm⁻¹) |
+|---------|---------:|------------:|
+| S1 | 2.959 | 23864.7 |
+| S2 | 3.746 | 30212.2 |
+| S3 | 3.757 | 30302.9 |
+| S4 | 3.779 | 30479.2 |
+| S5 | 3.812 | 30746.7 |
+
+### Oscillator Strength Analysis
+
+The first excited state (S1) appears at **2.959 eV (419 nm)** and is formally dark:
+
+| State | Energy (eV) | λ (nm) | Oscillator Strength |
+|---------|---------:|---------:|---------:|
+| S1 | 2.959 | 419.0 | 0.0000 |
+| S2 | 3.746 | 331.0 | 0.3715 |
+| S5 | 3.812 | 325.2 | 0.4249 |
+
+The dominant bright transitions remain near the expected pyrene absorption window (~325–331 nm), while the low-energy S1 state carries essentially zero oscillator strength.
+
+### Preliminary Interpretation
+
+The hydrated PYR4–PYR5 dimer does **not** behave as a simple vacuum exciton-splitting system.
+
+A low-energy dark state appears approximately **0.79 eV below** the first bright excitation manifold. Because this state is optically forbidden, it should not be interpreted directly as an excitonic coupling estimate.
+
+Possible origins include:
+
+- Excitonic mixing induced by the local environment.
+- Symmetry-forbidden dimer excitations.
+- Charge-transfer-like configurations.
+- Solvent-stabilized electronic states.
+
+The state character must be inspected from the TDDFT excited-state configuration analysis before extracting physically meaningful hydrated couplings.
+
+### Excitonic Hamiltonian Implications
+
+Current results suggest that:
+
+- Vacuum-derived couplings provide a useful first approximation.
+- Explicit hydration modifies site energies and introduces additional energetic disorder.
+- Hydrated dimers may require state-character analysis rather than simple energy-splitting extraction.
+- Future Hamiltonian refinement should incorporate transition densities, transition dipoles, oscillator strengths, and excited-state composition.
+
+### Generated Files
+
+```text
+runs/phase1A/day013_exciton_hamiltonian/
+runs/phase1A/day013_hydrated_exciton_hamiltonian/
+runs/phase1A/day013_orca_dimers/
+runs/phase1A/day013_orca_water_site_energies/
+runs/phase1A/day013_orca_hydrated_dimer_pilots/PYR4_PYR5_water0p50_serial_tight/
+notes/day013_phase1A_exciton_hamiltonian_log.md
+```
+
+### Important Limitation
+
+All current couplings remain preliminary.
+
+The next refinement stage should analyze transition dipoles, oscillator strengths, natural transition orbitals (NTOs), and TDDFT excited-state character before finalizing hydrated-environment coupling parameters for the multiscale excitonic model.
+
 ## Day012 – Electronic Structure Milestone
 
 Day012 initiated the electronic-structure stage of Phase 1A.
