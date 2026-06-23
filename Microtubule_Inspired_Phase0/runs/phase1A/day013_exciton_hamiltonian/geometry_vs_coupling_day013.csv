@@ -1,0 +1,7 @@
+pair,center_distance_nm,center_distance_A,min_atom_distance_nm,min_atom_distance_A,plane_angle_deg,J_eff_meV,geometry_class
+PYR2-PYR3,2.69177,26.918,2.22428,22.243,89.997,6.500,near-orthogonal
+PYR2-PYR4,4.25169,42.517,3.95167,39.517,1.149,2.500,near-parallel_long-range
+PYR2-PYR5,4.69020,46.902,4.22280,42.228,89.518,8.500,near-orthogonal
+PYR3-PYR4,2.69074,26.907,2.22258,22.226,89.923,10.500,near-orthogonal
+PYR3-PYR5,4.34339,43.434,4.05089,40.509,0.993,1.000,near-parallel_long-range
+PYR4-PYR5,2.76521,27.652,2.29794,22.979,89.460,11.000,near-orthogonal
