@@ -1,0 +1,6 @@
+state,energy_eV,energy_cm-1,wavelength_nm,fosc_D2,dominant_transition,dominant_weight,character
+S1,2.959,23864.7,419.0,0.000000000,315a->316a,0.999988,dark inter-chromophore CT-like
+S2,3.746,30212.2,331.0,0.371510312,314a->316a,0.794275,bright Frenkel-like candidate
+S3,3.757,30302.9,330.0,0.008126814,314a->318a,0.528051,weak/mixed transition
+S4,3.779,30479.2,328.1,0.001646680,315a->321a,0.548333,dark or weak transition
+S5,3.812,30746.7,325.2,0.424868742,315a->317a,0.829674,bright Frenkel-like candidate
