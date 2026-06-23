@@ -858,3 +858,59 @@ These low-lying dimer states provide the first direct electronic-structure evide
 Current status:
 
 Phase 1A has transitioned from structural/hydration validation to electronic-structure and excitonic-model construction.
+
+## Phase 1A — Day014 explicit-hydration excitonic Hamiltonian
+
+Day014 completed the first explicit-hydration nearest-neighbor excitonic Hamiltonian for the PYR2-PYR5 chromophore segment.
+
+### Main result
+
+Explicit hydration produces a strongly asymmetric Frenkel network:
+
+| Pair | Effective hydrated coupling |
+|---|---:|
+| PYR2-PYR3 | 2.37 meV |
+| PYR3-PYR4 | 17.00 meV |
+| PYR4-PYR5 | 33.00 meV |
+
+The PYR4-PYR5 coupling is dominant, PYR3-PYR4 is intermediate, and PYR2-PYR3 is weak/mixed.
+
+### State classification
+
+The hydrated dimer TDDFT/TDA calculations show low-energy dark charge-transfer-like states that must not be used directly as Frenkel splitting estimates. These CT-like states were excluded from the Frenkel Hamiltonian construction.
+
+For the hydrated Frenkel Hamiltonian, only bright or operationally Frenkel-like states were used.
+
+### Full hydrated Hamiltonian
+
+The resulting PYR2-PYR5 Hamiltonian, in eV, is:
+
+|      | PYR2 | PYR3 | PYR4 | PYR5 |
+|---|---:|---:|---:|---:|
+| PYR2 | 3.75500 | 0.00237 | 0.00000 | 0.00000 |
+| PYR3 | 0.00237 | 3.77750 | 0.01700 | 0.00000 |
+| PYR4 | 0.00000 | 0.01700 | 3.77750 | 0.03300 |
+| PYR5 | 0.00000 | 0.00000 | 0.03300 | 3.77750 |
+
+Exciton eigenstate summary:
+
+| State | Energy (eV) | Dominant site | Participation ratio |
+|---|---:|---|---:|
+| X1 | 3.740338 | PYR4 | 2.417521 |
+| X2 | 3.754835 | PYR2 | 1.023333 |
+| X3 | 3.777696 | PYR3 | 1.521618 |
+| X4 | 3.814631 | PYR4 | 2.399793 |
+
+### Interpretation
+
+The hydrated Hamiltonian is not a homogeneous nearest-neighbor chain. PYR2 remains nearly localized, while the remaining excitonic states are distributed mainly over the PYR3-PYR5 subnetwork.
+
+### Key Day014 outputs
+
+- `notes/day014_phase1A_hydrated_exciton_hamiltonian_log.md`
+- `runs/phase1A/day014_hydrated_hamiltonian_sensitivity/hydrated_neighbor_couplings_summary.csv`
+- `runs/phase1A/day014_hydrated_hamiltonian_sensitivity/full_hydrated_hamiltonian_4x4_eV.csv`
+- `runs/phase1A/day014_hydrated_hamiltonian_sensitivity/full_hydrated_hamiltonian_4x4_meV.csv`
+- `runs/phase1A/day014_hydrated_hamiltonian_sensitivity/full_hydrated_exciton_eigenstates_day014.csv`
+- `runs/phase1A/day014_hydrated_hamiltonian_sensitivity/full_hydrated_exciton_eigenvectors_day014.csv`
+- `runs/phase1A/day014_hydrated_hamiltonian_sensitivity/FULL_HYDRATED_HAMILTONIAN_DAY014.md`
