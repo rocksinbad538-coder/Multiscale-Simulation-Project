@@ -11,3 +11,8 @@
 *.mkv filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
 *.tar.gz filter=lfs diff=lfs merge=lfs -text
+*.gbw filter=lfs diff=lfs merge=lfs -text
+*.cube filter=lfs diff=lfs merge=lfs -text
+*.cis filter=lfs diff=lfs merge=lfs -text
+*.densities filter=lfs diff=lfs merge=lfs -text
+*.out filter=lfs diff=lfs merge=lfs -text
