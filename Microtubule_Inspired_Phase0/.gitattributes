@@ -25,3 +25,4 @@ results/dipoles/*_records.csv filter=lfs diff=lfs merge=lfs -text
 *.cis filter=lfs diff=lfs merge=lfs -text
 *.densities filter=lfs diff=lfs merge=lfs -text
 *.cube filter=lfs diff=lfs merge=lfs -text
+*.TDDFTGuess.gbw filter=lfs diff=lfs merge=lfs -text

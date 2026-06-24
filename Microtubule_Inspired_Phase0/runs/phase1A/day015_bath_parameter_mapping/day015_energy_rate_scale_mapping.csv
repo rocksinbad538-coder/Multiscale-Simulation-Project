@@ -1,0 +1,9 @@
+quantity,value,unit,interpretation
+kBT_300K,25.851999786435,meV,Thermal energy at 300 K
+J23,2.37,meV,Weak PYR2-PYR3 bottleneck coupling
+J34,17.0,meV,Intermediate PYR3-PYR4 coupling
+J45,33.0,meV,Dominant PYR4-PYR5 coupling
+gamma_phi_tested,1.0,ps^-1,Phenomenological exciton-basis pure dephasing used in Lindblad scan
+k_down_tested_low,0.1,ps^-1,Slow relaxation scan point
+k_down_tested_reference,1.0,ps^-1,Reference relaxation scan point
+k_down_tested_high,10.0,ps^-1,Fast relaxation scan point

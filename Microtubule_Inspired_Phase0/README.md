@@ -914,3 +914,28 @@ The hydrated Hamiltonian is not a homogeneous nearest-neighbor chain. PYR2 remai
 - `runs/phase1A/day014_hydrated_hamiltonian_sensitivity/full_hydrated_exciton_eigenstates_day014.csv`
 - `runs/phase1A/day014_hydrated_hamiltonian_sensitivity/full_hydrated_exciton_eigenvectors_day014.csv`
 - `runs/phase1A/day014_hydrated_hamiltonian_sensitivity/FULL_HYDRATED_HAMILTONIAN_DAY014.md`
+
+## Day015 — Open-System Dynamics and Dynamic Disorder
+
+Day015 established the first validated open-system transport framework for the hydrated PYR2–PYR5 excitonic subsystem.
+
+New capabilities include:
+
+- Haken-Strobl dynamics.
+- Lindblad exciton relaxation.
+- Thermal-equilibrium validation.
+- Initial-condition robustness analysis.
+- J23 bottleneck sensitivity analysis.
+- PYR2 detuning sensitivity analysis.
+- Bath-parameter mapping workflow.
+- Dynamic-disorder ensemble simulations.
+- Sigma–tau transport-enhancement maps.
+- Gamma–sigma transport-enhancement maps.
+
+Main result:
+
+The hydrated excitonic chain exhibits an ENAQT-like transport-enhancement regime.
+
+Dynamic site-energy fluctuations with amplitudes of approximately 10–20 meV and correlation times of approximately 0.02–0.10 ps increase PYR2 access and accelerate transport across the PYR2–PYR3 bottleneck.
+
+Best cases improve transport by roughly 1.7–1.9× relative to the static Hamiltonian.

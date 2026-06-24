@@ -1,0 +1,6 @@
+model,parameter,final_PYR2,final_PYR3,final_PYR4,final_PYR5,max_PYR2,t_PYR2_1pct_fs,t_PYR2_5pct_fs,t_PYR2_10pct_fs,interpretation
+Haken-Strobl,gamma=10 ps^-1,0.234131013707095,0.2550868605858474,0.2554510059545295,0.2553311197525282,0.234131013707095,80.0,760.0,1810.0,pure dephasing; long-time uniform population is a model artifact
+Lindblad exciton relaxation,"k_down=0.1 ps^-1, gamma_phi=1 ps^-1",0.2883321442754765,0.1770134479503914,0.2812795077318735,0.2533749000422604,0.2883321442754765,60.0,600.0,1340.0,exciton-basis relaxation with detailed-balance structure
+Lindblad exciton relaxation,"k_down=1 ps^-1, gamma_phi=1 ps^-1",0.3054316892071267,0.1609188509778943,0.2831575222023031,0.2504919376126745,0.3056153717502963,20.0,60.0,130.0,exciton-basis relaxation with detailed-balance structure
+Lindblad exciton relaxation,"k_down=5 ps^-1, gamma_phi=1 ps^-1",0.3054316884481723,0.1609188511065294,0.283157521472731,0.2504919389725643,0.305750506326706,10.0,20.0,30.0,exciton-basis relaxation with detailed-balance structure
+Lindblad exciton relaxation,"k_down=10 ps^-1, gamma_phi=1 ps^-1",0.305431688446681,0.1609188513387439,0.2831575203782093,0.2504919398363647,0.3055074605354796,10.0,10.0,20.0,exciton-basis relaxation with detailed-balance structure
