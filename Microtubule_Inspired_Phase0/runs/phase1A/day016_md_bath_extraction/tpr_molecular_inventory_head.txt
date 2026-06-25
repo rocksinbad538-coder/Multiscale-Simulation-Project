@@ -1,0 +1,120 @@
+       reference-density-filename = reference.mrc
+       qmfilenames                = 
+   natoms = 68320
+   name="h-BN fixed dummy scaffold + 4 pyrenes + TIP4P/2005 water"
+   #atoms                         = 68320
+   #molblock                      = 3
+   molblock (0):
+      moltype              = 0 "HBN"
+   molblock (1):
+      moltype              = 1 "PYR"
+   molblock (2):
+      moltype              = 2 "SOL"
+   moltype (0):
+      name="HBN"
+      atoms:
+            atom[0]={name="B0001"}
+            atom[1]={name="N0002"}
+            atom[2]={name="B0003"}
+            atom[3]={name="N0004"}
+            atom[4]={name="B0005"}
+            atom[5]={name="N0006"}
+            atom[6]={name="B0007"}
+            atom[7]={name="N0008"}
+            atom[8]={name="B0009"}
+            atom[9]={name="N0010"}
+            atom[10]={name="B0011"}
+            atom[11]={name="N0012"}
+            atom[12]={name="B0013"}
+            atom[13]={name="N0014"}
+            atom[14]={name="B0015"}
+            atom[15]={name="N0016"}
+            atom[16]={name="B0017"}
+            atom[17]={name="N0018"}
+            atom[18]={name="B0019"}
+            atom[19]={name="N0020"}
+            atom[20]={name="B0021"}
+            atom[21]={name="N0022"}
+            atom[22]={name="B0023"}
+            atom[23]={name="N0024"}
+            atom[24]={name="B0025"}
+            atom[25]={name="N0026"}
+            atom[26]={name="B0027"}
+            atom[27]={name="N0028"}
+            atom[28]={name="B0029"}
+            atom[29]={name="N0030"}
+            atom[30]={name="B0031"}
+            atom[31]={name="N0032"}
+            atom[32]={name="B0033"}
+            atom[33]={name="N0034"}
+            atom[34]={name="B0035"}
+            atom[35]={name="N0036"}
+            atom[36]={name="B0037"}
+            atom[37]={name="N0038"}
+            atom[38]={name="B0039"}
+            atom[39]={name="N0040"}
+            atom[40]={name="B0041"}
+            atom[41]={name="N0042"}
+            atom[42]={name="B0043"}
+            atom[43]={name="N0044"}
+            atom[44]={name="B0045"}
+            atom[45]={name="N0046"}
+            atom[46]={name="B0047"}
+            atom[47]={name="N0048"}
+            atom[48]={name="B0049"}
+            atom[49]={name="N0050"}
+            atom[50]={name="B0051"}
+            atom[51]={name="N0052"}
+            atom[52]={name="B0053"}
+            atom[53]={name="N0054"}
+            atom[54]={name="B0055"}
+            atom[55]={name="N0056"}
+            atom[56]={name="B0057"}
+            atom[57]={name="N0058"}
+            atom[58]={name="B0059"}
+            atom[59]={name="N0060"}
+            atom[60]={name="B0061"}
+            atom[61]={name="N0062"}
+            atom[62]={name="B0063"}
+            atom[63]={name="N0064"}
+            atom[64]={name="B0065"}
+            atom[65]={name="N0066"}
+            atom[66]={name="B0067"}
+            atom[67]={name="N0068"}
+            atom[68]={name="B0069"}
+            atom[69]={name="N0070"}
+            atom[70]={name="B0071"}
+            atom[71]={name="N0072"}
+            atom[72]={name="B0073"}
+            atom[73]={name="N0074"}
+            atom[74]={name="B0075"}
+            atom[75]={name="N0076"}
+            atom[76]={name="B0077"}
+            atom[77]={name="N0078"}
+            atom[78]={name="B0079"}
+            atom[79]={name="N0080"}
+            atom[80]={name="B0081"}
+            atom[81]={name="N0082"}
+            atom[82]={name="B0083"}
+            atom[83]={name="N0084"}
+            atom[84]={name="B0085"}
+            atom[85]={name="N0086"}
+            atom[86]={name="B0087"}
+            atom[87]={name="N0088"}
+            atom[88]={name="B0089"}
+            atom[89]={name="N0090"}
+            atom[90]={name="B0091"}
+            atom[91]={name="N0092"}
+            atom[92]={name="B0093"}
+            atom[93]={name="N0094"}
+            atom[94]={name="B0095"}
+            atom[95]={name="N0096"}
+            atom[96]={name="B0097"}
+            atom[97]={name="N0098"}
+            atom[98]={name="B0099"}
+            atom[99]={name="N0100"}
+            atom[100]={name="B0101"}
+            atom[101]={name="N0102"}
+            atom[102]={name="B0103"}
+            atom[103]={name="N0104"}
+            atom[104]={name="B0105"}

@@ -1,0 +1,13 @@
+{
+  "description": "Diagonal excitonic Hamiltonians extracted from embedded TDDFT calculations.",
+  "units": "eV",
+  "method": "TDA-TDDFT electrostatic embedding",
+  "hamiltonian_type": "diagonal",
+  "chromophores": [
+    "PYR2",
+    "PYR3",
+    "PYR4",
+    "PYR5"
+  ],
+  "source": "Day016 production pilot"
+}

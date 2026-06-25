@@ -1,0 +1,5 @@
+md_label,md_resid,atom_start,atom_end,model_label
+MD_PYR1,2,1681,1706,PYR2
+MD_PYR2,3,1707,1732,PYR3
+MD_PYR3,4,1733,1758,PYR4
+MD_PYR4,5,1759,1784,PYR5

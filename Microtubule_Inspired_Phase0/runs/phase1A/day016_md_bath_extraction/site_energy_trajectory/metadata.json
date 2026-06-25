@@ -1,0 +1,24 @@
+{
+  "day": "016",
+  "source": "runs/phase1A/day016_md_bath_extraction/orca_embedding_analysis/embedding_pilot_summary.csv",
+  "quantity": "TDDFT/TDA S1 site energies",
+  "units": "eV",
+  "centering": {
+    "site_energy_trajectory_centered.csv": "per-frame mean removed",
+    "site_energy_trajectory_global_centered.csv": "global mean over all frames and chromophores removed"
+  },
+  "frames": [
+    0,
+    10,
+    20
+  ],
+  "chromophores": [
+    "PYR2",
+    "PYR3",
+    "PYR4",
+    "PYR5"
+  ],
+  "embedding": "electrostatic point-charge embedding from MD water shell",
+  "software": "ORCA",
+  "hamiltonian_note": "Only diagonal site-energy terms are included here. Off-diagonal excitonic couplings J_ij(t) are not included yet."
+}

@@ -939,3 +939,50 @@ The hydrated excitonic chain exhibits an ENAQT-like transport-enhancement regime
 Dynamic site-energy fluctuations with amplitudes of approximately 10–20 meV and correlation times of approximately 0.02–0.10 ps increase PYR2 access and accelerate transport across the PYR2–PYR3 bottleneck.
 
 Best cases improve transport by roughly 1.7–1.9× relative to the static Hamiltonian.
+
+## Day016 — QM/MM electrostatic embedding and production-ready diagonal excitonic Hamiltonians
+
+### Objective
+
+Validate the electrostatic-embedding TDDFT workflow and promote it from a pilot calculation to a reproducible production pipeline for extracting time-dependent site energies from MD snapshots.
+
+### Completed
+
+- Implemented ORCA electrostatic embedding using external point charges.
+- Fixed the point-charge file format required by ORCA (`N` header followed by `q x y z` records).
+- Validated embedded TDDFT calculations for all four chromophores (PYR2–PYR5).
+- Generated production-quality embedded calculations for frames 000, 010 and 020.
+- Automated extraction of:
+  - S1–S3 excitation energies
+  - oscillator strengths
+  - dipole moments
+  - runtime statistics
+- Built the complete site-energy trajectory.
+- Generated frame-centered and globally centered site-energy fluctuations.
+- Constructed the first time-dependent diagonal excitonic Hamiltonians
+
+$begin:math:display$
+H\_\{\\mathrm\{diag\}\}\(t\)
+$end:math:display$
+
+for every sampled MD frame.
+
+### Main outputs
+
+```
+runs/phase1A/day016_md_bath_extraction/
+
+    orca_embedding_analysis/
+
+    site_energy_trajectory/
+
+    hamiltonian_diagonals/
+```
+
+### Scientific outcome
+
+The MD → QM/MM embedding → TDDFT → site-energy pipeline is now fully operational.
+
+This removes the final technical blocker preventing production-scale extraction of time-dependent diagonal excitonic Hamiltonians from molecular dynamics trajectories.
+
+The next development stage will extend the Hamiltonian beyond its diagonal terms by introducing excitonic couplings and preparing the quantum-dynamics workflow.
