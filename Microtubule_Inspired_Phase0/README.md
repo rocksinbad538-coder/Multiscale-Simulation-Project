@@ -986,3 +986,36 @@ The MD → QM/MM embedding → TDDFT → site-energy pipeline is now fully opera
 This removes the final technical blocker preventing production-scale extraction of time-dependent diagonal excitonic Hamiltonians from molecular dynamics trajectories.
 
 The next development stage will extend the Hamiltonian beyond its diagonal terms by introducing excitonic couplings and preparing the quantum-dynamics workflow.
+
+## Day017 — Scalable embedded TDDFT production workflow
+
+Day017 promoted the Day016 electrostatic-embedding TDDFT workflow from a controlled pilot to a scalable production workflow.
+
+Key outcomes:
+
+- Full production manifest reconstructed for 21 MD snapshots.
+- Four chromophores per frame: PYR2, PYR3, PYR4, PYR5.
+- Total planned embedded TDDFT site-energy jobs: 84.
+- ORCA input layer expanded from 12 pilot jobs to 84 production jobs.
+- Resumable batch runner implemented for safe production execution.
+- First production batch beyond the pilot completed successfully:
+  - frames 001–003
+  - 12 additional embedded TDDFT calculations
+  - 12/12 normal ORCA termination
+  - 12/12 successful TDDFT completion
+- Total completed embedded TDDFT jobs so far:
+  - 24/84
+  - completed frames: 000, 001, 002, 003, 010, 020
+- Site-energy trajectory and diagonal excitonic Hamiltonians regenerated for all completed frames.
+
+Main files:
+
+- `scripts/phase1A/build_day017_full_orca_manifest.py`
+- `scripts/phase1A/run_day017_orca_embedding_batch.py`
+- `runs/phase1A/day016_md_bath_extraction/DAY017_PRODUCTION_QC_SUMMARY.md`
+- `runs/phase1A/day016_md_bath_extraction/site_energy_trajectory/`
+- `runs/phase1A/day016_md_bath_extraction/hamiltonian_diagonals/`
+
+Scientific status:
+
+The current production subset confirms that PYR2–PYR4 remain clustered near 4.00–4.02 eV, whereas PYR5 remains consistently red-shifted at approximately 3.75–3.79 eV. The diagonal Hamiltonian spread across completed frames is currently 229–269 meV.
