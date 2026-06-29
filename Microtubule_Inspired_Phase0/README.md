@@ -1019,3 +1019,180 @@ Main files:
 Scientific status:
 
 The current production subset confirms that PYR2–PYR4 remain clustered near 4.00–4.02 eV, whereas PYR5 remains consistently red-shifted at approximately 3.75–3.79 eV. The diagonal Hamiltonian spread across completed frames is currently 229–269 meV.
+
+---
+
+## Phase 1A status — Day018: complete embedded TDDFT production
+
+The embedded TDDFT production has been completed for all 21 selected MD snapshots and four pyrene chromophores per snapshot.
+
+### Completed dataset
+
+- 84/84 ORCA calculations completed successfully
+- 21/21 complete MD snapshots
+- 84/84 SCF-converged calculations
+- 84/84 completed TDDFT/TDA calculations
+- No explicit ORCA error signatures
+- No point-charge count mismatches
+- No non-neutral electrostatic-embedding files
+- Frozen h-BN scaffold and frozen pyrene geometries
+- Time-dependent variation represents solvent-induced electrostatic fluctuations for fixed solute structures
+
+### Electronic-state tracking
+
+The same bright local excitation was tracked using its dominant `52a -> 53a` HOMO-to-LUMO character rather than its adiabatic root number.
+
+The root ordering remained stable across all 21 frames:
+
+| Chromophore | Tracked root | Frames |
+|---|---:|---:|
+| PYR2 | S2 | 21 |
+| PYR3 | S2 | 21 |
+| PYR4 | S2 | 21 |
+| PYR5 | S1 | 21 |
+
+The minimum target-state character weight over all 84 calculations was:
+
+\[
+w_{\min}=0.738175
+\]
+
+### Principal result
+
+PYR5 remains systematically lower in energy than PYR2–PYR4 in the electronically tracked manifold.
+
+- Mean PYR5 offset: 308.794 meV
+- Standard deviation: 18.483 meV
+- Minimum offset: 272.667 meV
+- Maximum offset: 340.667 meV
+
+This offset cannot yet be assigned exclusively to solvent electrostatics because the frozen PYR5 geometry differs measurably from the other three pyrenes.
+
+### Physical interpretation
+
+The source MD trajectory used frozen h-BN and pyrene coordinates. Therefore, the time-dependent site-energy fluctuations represent solvent-induced electrostatic disorder under fixed-solute conditions.
+
+The mean differences among chromophores may contain:
+
+- static chromophore-geometry contributions;
+- static site and orientation contributions;
+- solvent electrostatic contributions.
+
+### Generated Hamiltonians
+
+The complete workflow generated:
+
+- 21 absolute tracked diagonal Hamiltonians in CSV format
+- 21 absolute tracked diagonal Hamiltonians in NPY format
+- 21 per-frame-centered tracked diagonal Hamiltonians in CSV format
+- 21 per-frame-centered tracked diagonal Hamiltonians in NPY format
+- the lowest-adiabatic-root trajectory for diagnostic comparison
+- electronic-state identity tables
+- structural-equivalence diagnostics
+- temporal site-energy quality-control tables
+- a consolidated Day018 production report
+
+The tracked diagonal Hamiltonian is:
+
+\[
+H_{\mathrm{diag}}(t)
+=
+\operatorname{diag}
+\left[
+E_{\mathrm{PYR2}}(t),
+E_{\mathrm{PYR3}}(t),
+E_{\mathrm{PYR4}}(t),
+E_{\mathrm{PYR5}}(t)
+\right]
+\]
+
+Off-diagonal excitonic couplings are not included yet.
+
+### Reproducible workflow
+
+The Day018 workflow is implemented in:
+
+```text
+scripts/phase1A/analyze_day018_orca_embedding_outputs.py
+scripts/phase1A/build_day018_site_energy_products.py
+scripts/phase1A/audit_day018_pyrene_structure_and_state_identity.py
+scripts/phase1A/build_day018_tracked_state_products.py
+scripts/phase1A/finalize_day018_orca_embedding_production.py
+```
+
+The finalizer performs:
+
+1. validation of all expected ORCA outputs;
+2. SCF and TDDFT/TDA completion checks;
+3. electrostatic-embedding consistency checks;
+4. construction of the lowest-root trajectory;
+5. structural-equivalence analysis;
+6. electronic-state identity tracking;
+7. construction of the tracked-state trajectory;
+8. generation of absolute and centered diagonal Hamiltonians;
+9. production of consolidated quality-control reports.
+
+### Validation status
+
+The independent final audit verified:
+
+- ORCA calculations: 84/84
+- Tracked-state rows: 84/84
+- Complete frames: 21/21
+- Minimum tracked-state character: 0.738175
+- Root-ordering stability: passed
+- Point-charge consistency: passed
+- Matrix/trajectory consistency: passed
+- Absolute Hamiltonians: 21 CSV and 21 NPY
+- Centered Hamiltonians: 21 CSV and 21 NPY
+
+Final status:
+
+```text
+FINAL AUDIT: PASS
+```
+
+### Principal outputs
+
+```text
+runs/phase1A/day016_md_bath_extraction/orca_embedding_analysis/
+runs/phase1A/day016_md_bath_extraction/site_energy_trajectory/
+runs/phase1A/day016_md_bath_extraction/site_energy_qc/
+runs/phase1A/day016_md_bath_extraction/state_identity_analysis/
+runs/phase1A/day016_md_bath_extraction/tracked_site_energy_trajectory/
+runs/phase1A/day016_md_bath_extraction/tracked_hamiltonian_diagonals/
+runs/phase1A/day016_md_bath_extraction/day018_production_summary/
+```
+
+Detailed technical record:
+
+```text
+docs/phase1A/DAY018_2026-06-29.md
+```
+
+Consolidated production report:
+
+```text
+runs/phase1A/day016_md_bath_extraction/day018_production_summary/PRODUCTION_FINALIZATION_DAY018.md
+```
+
+### Next step
+
+The next stage will use vacuum-reference TDDFT calculations and representative NTO analyses to separate static geometry/site effects from solvent-induced shifts.
+
+The solvent-induced shift will be evaluated as:
+
+\[
+\Delta E_i^{\mathrm{solvent}}(t)
+=
+E_i^{\mathrm{embedded}}(t)
+-
+E_i^{\mathrm{vac}}
+\]
+
+These results will determine whether the excitonic model should use:
+
+- one tracked local state per chromophore; or
+- both low-lying local states per chromophore.
+
+After the local-state manifold is finalized, the off-diagonal excitonic couplings \(J_{ij}\) will be parameterized and incorporated into the complete excitonic Hamiltonian.

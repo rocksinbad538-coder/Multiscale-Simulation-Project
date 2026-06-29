@@ -1,0 +1,69 @@
+Jobs parsed: 84
+Fully successful: 84/84
+Explicit error signatures: 0
+Wrote: runs/phase1A/day016_md_bath_extraction/orca_embedding_analysis/embedding_pilot_summary.csv
+Wrote: runs/phase1A/day016_md_bath_extraction/orca_embedding_analysis/EMBEDDING_PRODUCTION_AUDIT_DAY018.md
+Day018 site-energy products generated successfully.
+Validated ORCA calculations: 84
+Complete frames: 21
+Frames: 000, 001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020
+Absolute Hamiltonians exported: 21
+Site-energy directory: runs/phase1A/day016_md_bath_extraction/site_energy_trajectory
+Hamiltonian directory: runs/phase1A/day016_md_bath_extraction/hamiltonian_diagonals
+QC directory: runs/phase1A/day016_md_bath_extraction/site_energy_qc
+State-identity audit completed.
+Jobs audited: 84
+
+Tracked-root counts:
+cluster  tracked_root  n_jobs
+   PYR2             2      21
+   PYR3             2      21
+   PYR4             2      21
+   PYR5             1      21
+
+Tracked-state statistics:
+cluster  n_jobs  mean_tracked_energy_eV  std_tracked_energy_eV  min_tracked_energy_eV  max_tracked_energy_eV  mean_tracked_fosc  mean_HOMO_LUMO_weight  min_HOMO_LUMO_weight  mean_state_separation_meV
+   PYR2      21                4.088571               0.011084                  4.068                  4.104           0.493290               0.830708              0.738175                  82.428571
+   PYR3      21                4.078048               0.011902                  4.052                  4.096           0.501778               0.836158              0.793849                  74.857143
+   PYR4      21                4.090619               0.007586                  4.069                  4.104           0.510859               0.841515              0.823216                  71.380952
+   PYR5      21                3.776952               0.016430                  3.750                  3.797           0.648089               0.863937              0.827679                  70.857143
+
+Maximum structural deviations:
+direct_rmsd_vs_same_cluster_first_frame_A     0.000000
+kabsch_rmsd_vs_frame000_PYR2_heavy_atoms_A    0.090479
+distance_matrix_max_abs_vs_frame000_PYR2_A    0.308059
+carbon_planarity_rmsd_A                       0.009318
+
+Wrote: runs/phase1A/day016_md_bath_extraction/state_identity_analysis
+Tracked-state products generated successfully.
+Validated calculations: 84
+Complete frames: 21
+Mean PYR5 offset: 308.794 meV
+
+Tracked-root counts:
+cluster  tracked_root  n_jobs
+   PYR2             2      21
+   PYR3             2      21
+   PYR4             2      21
+   PYR5             1      21
+
+Trajectory directory: runs/phase1A/day016_md_bath_extraction/tracked_site_energy_trajectory
+Hamiltonian directory: runs/phase1A/day016_md_bath_extraction/tracked_hamiltonian_diagonals
+Day018 ORCA production finalization
+Expected calculations: 84
+Expected complete frames: 21
+Preflight passed: 84/84 ORCA outputs complete.
+
+RUN: /Users/alejandro/miniforge3/envs/mt_phase0/bin/python3 /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/analyze_day018_orca_embedding_outputs.py --quiet
+
+RUN: /Users/alejandro/miniforge3/envs/mt_phase0/bin/python3 /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/build_day018_site_energy_products.py
+
+RUN: /Users/alejandro/miniforge3/envs/mt_phase0/bin/python3 /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/audit_day018_pyrene_structure_and_state_identity.py
+
+RUN: /Users/alejandro/miniforge3/envs/mt_phase0/bin/python3 /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/build_day018_tracked_state_products.py
+
+Day018 finalization completed successfully.
+ORCA calculations: 84/84
+Complete frames: 21/21
+Mean tracked PYR5 offset: 308.794 meV
+Wrote: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day018_production_summary/PRODUCTION_FINALIZATION_DAY018.md

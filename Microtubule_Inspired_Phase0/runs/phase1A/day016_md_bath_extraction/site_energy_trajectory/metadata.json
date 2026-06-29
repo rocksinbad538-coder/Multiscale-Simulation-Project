@@ -1,24 +1,44 @@
 {
-  "day": "016",
+  "production_day": "018",
   "source": "runs/phase1A/day016_md_bath_extraction/orca_embedding_analysis/embedding_pilot_summary.csv",
-  "quantity": "TDDFT/TDA S1 site energies",
+  "quantity": "TDA-TDDFT S1 site energies",
   "units": "eV",
-  "centering": {
-    "site_energy_trajectory_centered.csv": "per-frame mean removed",
-    "site_energy_trajectory_global_centered.csv": "global mean over all frames and chromophores removed"
-  },
-  "frames": [
-    0,
-    10,
-    20
-  ],
-  "chromophores": [
+  "chromophore_order": [
     "PYR2",
     "PYR3",
     "PYR4",
     "PYR5"
   ],
-  "embedding": "electrostatic point-charge embedding from MD water shell",
-  "software": "ORCA",
-  "hamiltonian_note": "Only diagonal site-energy terms are included here. Off-diagonal excitonic couplings J_ij(t) are not included yet."
+  "frames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "frame_spacing_ps": 5.0,
+  "embedding": "TIP4P/2005 water represented as electrostatic point charges within the production 5 \u00c5 local-shell construction",
+  "solute_condition": "h-BN scaffold and pyrene chromophores frozen in x, y, and z during the source MD trajectory",
+  "physical_scope": "solvent-induced site-energy fluctuations under frozen-solute conditions",
+  "hamiltonian_note": "Only diagonal site-energy terms are generated. Off-diagonal excitonic couplings J_ij are not included.",
+  "centering": {
+    "site_energy_trajectory_centered.csv": "Per-frame common energy removed. This subtracts an identity contribution from each diagonal Hamiltonian.",
+    "site_energy_trajectory_global_centered.csv": "Single global mean over all frames and chromophores removed."
+  }
 }

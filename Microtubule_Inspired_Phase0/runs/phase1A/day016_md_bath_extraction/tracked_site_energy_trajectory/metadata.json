@@ -1,0 +1,39 @@
+{
+  "production_day": "018",
+  "description": "Site-energy trajectory obtained by tracking the low-lying state with maximum 52a->53a configuration weight.",
+  "state_tracking_rule": "Among S1 and S2, select the root with the largest HOMO-LUMO 52a->53a CI weight.",
+  "minimum_accepted_character_weight": 0.7,
+  "units": "eV",
+  "chromophores": [
+    "PYR2",
+    "PYR3",
+    "PYR4",
+    "PYR5"
+  ],
+  "frames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "physical_scope": "Tracked bright local excited-state energies under electrostatic water embedding and frozen-solute conditions.",
+  "important_limitation": "The PYR5 frozen geometry is structurally distinct from PYR2-PYR4. The site offset therefore includes static geometry/site effects and solvent electrostatics.",
+  "off_diagonal_couplings": "Not included in these diagonal Hamiltonians."
+}

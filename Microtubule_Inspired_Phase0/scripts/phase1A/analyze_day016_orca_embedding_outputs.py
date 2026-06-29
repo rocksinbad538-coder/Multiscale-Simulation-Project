@@ -1,143 +1,349 @@
-from pathlib import Path
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import argparse
 import re
+from pathlib import Path
+
 import pandas as pd
 
-ROOT = Path("runs/phase1A/day016_md_bath_extraction/orca_embedding_pilot_inputs")
-OUTDIR = Path("runs/phase1A/day016_md_bath_extraction/orca_embedding_analysis")
-OUTDIR.mkdir(parents=True, exist_ok=True)
 
-state_re = re.compile(
-    r"STATE\s+(\d+):\s+E=\s+([-0-9.]+)\s+au\s+([-0-9.]+)\s+eV\s+([-0-9.]+)\s+cm\*\*-1"
+DEFAULT_ROOT = Path(
+    "runs/phase1A/day016_md_bath_extraction/"
+    "orca_embedding_pilot_inputs"
+)
+DEFAULT_OUTDIR = Path(
+    "runs/phase1A/day016_md_bath_extraction/"
+    "orca_embedding_analysis"
 )
 
-abs_re = re.compile(
-    r"0-1A\s+->\s+(\d+)-1A\s+([-0-9.]+)\s+([-0-9.]+)\s+([-0-9.]+)\s+([-0-9.Ee+]+)"
+STATE_RE = re.compile(
+    r"STATE\s+(\d+):\s+E=\s+"
+    r"([-+0-9.Ee]+)\s+au\s+"
+    r"([-+0-9.Ee]+)\s+eV\s+"
+    r"([-+0-9.Ee]+)\s+cm\*\*-1"
 )
 
-def parse_frame_cluster(name: str):
-    m = re.match(r"frame(\d+)_([^_]+)_embedding", name)
-    if not m:
-        return None, None
-    return int(m.group(1)), m.group(2)
+ABS_RE = re.compile(
+    r"0-1A\s+->\s+(\d+)-1A\s+"
+    r"([-+0-9.Ee]+)\s+"
+    r"([-+0-9.Ee]+)\s+"
+    r"([-+0-9.Ee]+)\s+"
+    r"([-+0-9.Ee]+)"
+)
 
-def parse_pc(pc_path: Path):
-    if not pc_path.exists():
+ERROR_PATTERNS = [
+    re.compile(r"ORCA finished by error termination", re.I),
+    re.compile(r"error termination", re.I),
+    re.compile(r"aborting the run", re.I),
+    re.compile(r"SCF NOT CONVERGED", re.I),
+    re.compile(r"SCF failed", re.I),
+    re.compile(r"segmentation fault", re.I),
+    re.compile(r"Please increase MaxIter", re.I),
+]
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Parse completed ORCA electrostatic-embedding TDDFT outputs "
+            "and generate a validated production summary."
+        )
+    )
+    parser.add_argument(
+        "--root",
+        type=Path,
+        default=DEFAULT_ROOT,
+        help="Directory containing frame*_PYR*_embedding job directories.",
+    )
+    parser.add_argument(
+        "--outdir",
+        type=Path,
+        default=DEFAULT_OUTDIR,
+        help="Directory for CSV and Markdown analysis products.",
+    )
+    parser.add_argument(
+        "--quiet",
+        action="store_true",
+        help="Suppress the full parsed-job table.",
+    )
+    return parser.parse_args()
+
+
+def parse_frame_cluster(name: str) -> tuple[int | None, str | None]:
+    match = re.fullmatch(r"frame(\d+)_([^_]+)_embedding", name)
+    if not match:
         return None, None
-    lines = [x.strip() for x in pc_path.read_text(errors="ignore").splitlines() if x.strip()]
+    return int(match.group(1)), match.group(2)
+
+
+def parse_pc(pc_path: Path) -> tuple[int | None, float | None]:
+    if not pc_path.is_file():
+        return None, None
+
+    lines = [
+        line.strip()
+        for line in pc_path.read_text(errors="ignore").splitlines()
+        if line.strip()
+    ]
     if not lines:
         return None, None
+
     try:
         declared = int(float(lines[0].split()[0]))
-    except Exception:
+    except (ValueError, IndexError):
         declared = None
-    qsum = 0.0
-    n = 0
+
+    charge_sum = 0.0
+    parsed = 0
+
     for line in lines[1:]:
-        p = line.split()
-        if len(p) == 4:
-            try:
-                qsum += float(p[0])
-                n += 1
-            except Exception:
-                pass
-    return declared if declared is not None else n, qsum
+        fields = line.split()
+        if len(fields) != 4:
+            continue
+        try:
+            charge_sum += float(fields[0])
+            parsed += 1
+        except ValueError:
+            continue
 
-rows = []
+    return declared if declared is not None else parsed, charge_sum
 
-for out in sorted(ROOT.glob("frame*_PYR*_embedding/frame*_PYR*_embedding.out")):
-    name = out.parent.name
-    frame, cluster = parse_frame_cluster(name)
-    txt = out.read_text(errors="ignore")
 
-    ok = "ORCA TERMINATED NORMALLY" in txt
-    tddft_ok = "ORCA-CIS/TD-DFT FINISHED WITHOUT ERROR" in txt
-    scf_ok = "SCF CONVERGED" in txt
-    has_error = bool(re.search(r"\bERROR\b|aborting the run|error termination", txt, re.I))
+def parse_output(out_path: Path) -> dict:
+    frame, cluster = parse_frame_cluster(out_path.parent.name)
+    if frame is None or cluster is None:
+        raise ValueError(f"Cannot parse frame/cluster from {out_path.parent.name}")
+
+    text = out_path.read_text(errors="ignore")
+
+    terminated_normally = "ORCA TERMINATED NORMALLY" in text
+    tddft_finished = "ORCA-CIS/TD-DFT FINISHED WITHOUT ERROR" in text
+    scf_converged = "SCF CONVERGED" in text
+    has_error_flag = any(pattern.search(text) for pattern in ERROR_PATTERNS)
 
     final_energy = None
-    for line in txt.splitlines():
+    for line in text.splitlines():
         if "FINAL SINGLE POINT ENERGY" in line:
             try:
                 final_energy = float(line.split()[-1])
-            except Exception:
+            except (ValueError, IndexError):
                 pass
 
-    total_minutes = None
-    m = re.search(r"TOTAL RUN TIME:\s+(\d+)\s+days\s+(\d+)\s+hours\s+(\d+)\s+minutes\s+([0-9.]+)\s+seconds", txt)
-    if m:
-        d, h, mi, s = m.groups()
-        total_minutes = int(d)*1440 + int(h)*60 + int(mi) + float(s)/60.0
+    total_runtime_min = None
+    runtime_match = re.search(
+        r"TOTAL RUN TIME:\s+"
+        r"(\d+)\s+days\s+"
+        r"(\d+)\s+hours\s+"
+        r"(\d+)\s+minutes\s+"
+        r"([0-9.]+)\s+seconds",
+        text,
+    )
+    if runtime_match:
+        days, hours, minutes, seconds = runtime_match.groups()
+        total_runtime_min = (
+            int(days) * 1440
+            + int(hours) * 60
+            + int(minutes)
+            + float(seconds) / 60.0
+        )
 
-    pc_file = out.parent / (out.stem + ".pc")
-    n_pc_file, pc_total_charge = parse_pc(pc_file)
+    pc_path = out_path.parent / f"{out_path.stem}.pc"
+    n_pc_file, pc_total_charge = parse_pc(pc_path)
 
-    pc_reads = re.findall(r"ok \((\d+) point charges\)", txt)
+    pc_reads = re.findall(r"ok \((\d+) point charges\)", text)
     n_pc_orca = int(pc_reads[-1]) if pc_reads else None
 
     row = {
         "frame": frame,
         "cluster": cluster,
-        "job": name,
-        "terminated_normally": ok,
-        "scf_converged": scf_ok,
-        "tddft_finished": tddft_ok,
-        "has_error_flag": has_error,
+        "job": out_path.parent.name,
+        "terminated_normally": terminated_normally,
+        "scf_converged": scf_converged,
+        "tddft_finished": tddft_finished,
+        "has_error_flag": has_error_flag,
         "final_single_point_energy_Eh": final_energy,
         "n_point_charges_file": n_pc_file,
         "n_point_charges_orca": n_pc_orca,
         "point_charge_total": pc_total_charge,
-        "total_runtime_min": total_minutes,
-        "out_file": str(out),
+        "total_runtime_min": total_runtime_min,
+        "out_file": str(out_path),
     }
 
-    states = state_re.findall(txt)
-    for state_id, e_au, e_ev, e_cm in states[:10]:
-        k = int(state_id)
-        row[f"S{k}_au"] = float(e_au)
-        row[f"S{k}_eV"] = float(e_ev)
-        row[f"S{k}_cm-1"] = float(e_cm)
+    for state_id, energy_au, energy_ev, energy_cm in STATE_RE.findall(text)[:10]:
+        state = int(state_id)
+        row[f"S{state}_au"] = float(energy_au)
+        row[f"S{state}_eV"] = float(energy_ev)
+        row[f"S{state}_cm-1"] = float(energy_cm)
 
-    in_abs = False
-    for line in txt.splitlines():
+    in_absorption_block = False
+    for line in text.splitlines():
         if "ABSORPTION SPECTRUM VIA TRANSITION ELECTRIC DIPOLE MOMENTS" in line:
-            in_abs = True
+            in_absorption_block = True
             continue
-        if in_abs and "ABSORPTION SPECTRUM VIA TRANSITION VELOCITY" in line:
+
+        if (
+            in_absorption_block
+            and "ABSORPTION SPECTRUM VIA TRANSITION VELOCITY" in line
+        ):
             break
-        if in_abs:
-            m = abs_re.search(line)
-            if m:
-                state, e_ev, e_cm, wl_nm, fosc = m.groups()
-                k = int(state)
-                row[f"f{k}"] = float(fosc)
-                row[f"lambda{k}_nm"] = float(wl_nm)
 
-    dip = re.search(r"Magnitude \(Debye\)\s+:\s+([-0-9.]+)", txt)
-    row["dipole_D"] = float(dip.group(1)) if dip else None
+        if in_absorption_block:
+            match = ABS_RE.search(line)
+            if match:
+                state, energy_ev, energy_cm, wavelength_nm, oscillator_strength = (
+                    match.groups()
+                )
+                state_i = int(state)
+                row[f"f{state_i}"] = float(oscillator_strength)
+                row[f"lambda{state_i}_nm"] = float(wavelength_nm)
 
-    rows.append(row)
+    dipole_match = re.search(
+        r"Magnitude \(Debye\)\s+:\s+([-+0-9.Ee]+)",
+        text,
+    )
+    row["dipole_D"] = (
+        float(dipole_match.group(1)) if dipole_match else None
+    )
 
-df = pd.DataFrame(rows).sort_values(["frame", "cluster"])
-csv_path = OUTDIR / "embedding_pilot_summary.csv"
-df.to_csv(csv_path, index=False)
+    return row
 
-successful = int((df["terminated_normally"] & df["tddft_finished"]).sum()) if len(df) else 0
 
-md = OUTDIR / "EMBEDDING_PILOT_AUDIT_DAY016.md"
-with md.open("w") as f:
-    f.write("# Day016 ORCA embedding pilot audit\n\n")
-    f.write(f"- Jobs parsed: {len(df)}\n")
-    f.write(f"- Successful embedded TDDFT jobs: {successful}/{len(df)}\n")
-    if len(df):
-        f.write(f"- Point charges read by ORCA: {df['n_point_charges_orca'].min()}–{df['n_point_charges_orca'].max()}\n")
-        f.write(f"- S1 range: {df['S1_eV'].min():.3f}–{df['S1_eV'].max():.3f} eV\n")
-        f.write(f"- Mean S1: {df['S1_eV'].mean():.3f} eV\n")
-        f.write(f"- Std S1: {df['S1_eV'].std(ddof=1):.3f} eV\n")
-    f.write("\n## Parsed jobs\n\n")
-    cols = ["frame","cluster","terminated_normally","tddft_finished","n_point_charges_orca","S1_eV","S2_eV","S3_eV","f1","dipole_D","total_runtime_min"]
-    f.write(df[cols].to_string(index=False))
-    f.write("\n")
+def main() -> None:
+    args = parse_args()
 
-print(df[["frame","cluster","terminated_normally","tddft_finished","n_point_charges_orca","S1_eV","S2_eV","S3_eV","f1","dipole_D","total_runtime_min"]].to_string(index=False))
-print("Wrote:", csv_path)
-print("Wrote:", md)
+    if not args.root.is_dir():
+        raise SystemExit(f"Input root does not exist: {args.root}")
+
+    outputs = sorted(
+        args.root.glob(
+            "frame*_PYR*_embedding/frame*_PYR*_embedding.out"
+        )
+    )
+    if not outputs:
+        raise SystemExit(f"No ORCA outputs found under: {args.root}")
+
+    rows = [parse_output(path) for path in outputs]
+    df = pd.DataFrame(rows).sort_values(["frame", "cluster"]).reset_index(drop=True)
+
+    duplicate_mask = df.duplicated(["frame", "cluster"], keep=False)
+    if duplicate_mask.any():
+        raise SystemExit(
+            "Duplicate frame/cluster outputs detected:\n"
+            + df.loc[duplicate_mask, ["frame", "cluster", "out_file"]]
+            .to_string(index=False)
+        )
+
+    args.outdir.mkdir(parents=True, exist_ok=True)
+
+    csv_path = args.outdir / "embedding_pilot_summary.csv"
+    df.to_csv(csv_path, index=False)
+
+    success_mask = (
+        df["terminated_normally"]
+        & df["scf_converged"]
+        & df["tddft_finished"]
+        & ~df["has_error_flag"]
+    )
+    successful = int(success_mask.sum())
+
+    audit_path = args.outdir / "EMBEDDING_PILOT_AUDIT_DAY016.md"
+    with audit_path.open("w", encoding="utf-8") as handle:
+        handle.write("# Day016/Day017 ORCA embedding production audit\n\n")
+        handle.write(f"- Jobs parsed: {len(df)}\n")
+        handle.write(
+            f"- Fully successful embedded TDDFT jobs: "
+            f"{successful}/{len(df)}\n"
+        )
+        handle.write(
+            f"- Normal ORCA terminations: "
+            f"{int(df['terminated_normally'].sum())}/{len(df)}\n"
+        )
+        handle.write(
+            f"- SCF converged: "
+            f"{int(df['scf_converged'].sum())}/{len(df)}\n"
+        )
+        handle.write(
+            f"- TDDFT/TDA completed: "
+            f"{int(df['tddft_finished'].sum())}/{len(df)}\n"
+        )
+        handle.write(
+            f"- Explicit error signatures: "
+            f"{int(df['has_error_flag'].sum())}\n"
+        )
+
+        if len(df):
+            handle.write(
+                f"- Point charges read by ORCA: "
+                f"{int(df['n_point_charges_orca'].min())}–"
+                f"{int(df['n_point_charges_orca'].max())}\n"
+            )
+            handle.write(
+                f"- S1 range: "
+                f"{df['S1_eV'].min():.3f}–"
+                f"{df['S1_eV'].max():.3f} eV\n"
+            )
+            handle.write(
+                f"- Mean S1 across all sites and frames: "
+                f"{df['S1_eV'].mean():.3f} eV\n"
+            )
+            handle.write(
+                f"- Standard deviation across all sites and frames: "
+                f"{df['S1_eV'].std(ddof=1):.3f} eV\n"
+            )
+
+        handle.write("\n## Parsed jobs\n\n")
+        columns = [
+            "frame",
+            "cluster",
+            "terminated_normally",
+            "scf_converged",
+            "tddft_finished",
+            "has_error_flag",
+            "n_point_charges_orca",
+            "S1_eV",
+            "S2_eV",
+            "S3_eV",
+            "f1",
+            "dipole_D",
+            "total_runtime_min",
+        ]
+        handle.write(df[columns].to_string(index=False))
+        handle.write("\n")
+
+    display_columns = [
+        "frame",
+        "cluster",
+        "terminated_normally",
+        "scf_converged",
+        "tddft_finished",
+        "has_error_flag",
+        "n_point_charges_orca",
+        "S1_eV",
+        "S2_eV",
+        "S3_eV",
+        "f1",
+        "dipole_D",
+        "total_runtime_min",
+    ]
+
+    if not args.quiet:
+        print(df[display_columns].to_string(index=False))
+
+    print(f"Jobs parsed: {len(df)}")
+    print(f"Fully successful: {successful}/{len(df)}")
+    print(f"Explicit error signatures: {int(df['has_error_flag'].sum())}")
+    print(f"Wrote: {csv_path}")
+    print(f"Wrote: {audit_path}")
+
+    if successful != len(df):
+        failed = df.loc[~success_mask, display_columns]
+        raise SystemExit(
+            "One or more parsed calculations failed production QC:\n"
+            + failed.to_string(index=False)
+        )
+
+
+if __name__ == "__main__":
+    main()
