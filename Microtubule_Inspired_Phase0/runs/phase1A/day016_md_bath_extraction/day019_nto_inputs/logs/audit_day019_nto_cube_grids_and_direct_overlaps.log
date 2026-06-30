@@ -1,0 +1,83 @@
+Day019 cube-grid and direct-overlap audit
+Cube selections: 48
+[01/48] parsed frame003_PYR5_embedding_nto_s1_s2.s1.mo52a.cube norm=1.00000806
+[02/48] parsed frame003_PYR5_embedding_nto_s1_s2.s1.mo53a.cube norm=1.00000877
+[03/48] parsed frame003_PYR5_embedding_nto_s1_s2.s2.mo52a.cube norm=1.00000865
+[04/48] parsed frame003_PYR5_embedding_nto_s1_s2.s2.mo53a.cube norm=0.99997808
+[05/48] parsed frame003_PYR5_embedding_nto_s1_s2.s2.mo51a.cube norm=0.99998391
+[06/48] parsed frame003_PYR5_embedding_nto_s1_s2.s2.mo54a.cube norm=1.00000601
+[07/48] parsed frame005_PYR2_embedding_nto_s1_s2.s1.mo52a.cube norm=0.99999871
+[08/48] parsed frame005_PYR2_embedding_nto_s1_s2.s1.mo53a.cube norm=1.00006325
+[09/48] parsed frame005_PYR2_embedding_nto_s1_s2.s1.mo51a.cube norm=1.00005428
+[10/48] parsed frame005_PYR2_embedding_nto_s1_s2.s1.mo54a.cube norm=0.99999571
+[11/48] parsed frame005_PYR2_embedding_nto_s1_s2.s2.mo52a.cube norm=1.00003323
+[12/48] parsed frame005_PYR2_embedding_nto_s1_s2.s2.mo53a.cube norm=1.00001317
+[13/48] parsed frame005_PYR5_embedding_nto_s1_s2.s1.mo52a.cube norm=1.00000800
+[14/48] parsed frame005_PYR5_embedding_nto_s1_s2.s1.mo53a.cube norm=1.00000702
+[15/48] parsed frame005_PYR5_embedding_nto_s1_s2.s2.mo52a.cube norm=1.00000851
+[16/48] parsed frame005_PYR5_embedding_nto_s1_s2.s2.mo53a.cube norm=0.99997525
+[17/48] parsed frame005_PYR5_embedding_nto_s1_s2.s2.mo51a.cube norm=0.99998264
+[18/48] parsed frame005_PYR5_embedding_nto_s1_s2.s2.mo54a.cube norm=1.00000841
+[19/48] parsed frame013_PYR5_embedding_nto_s1_s2.s1.mo52a.cube norm=1.00000714
+[20/48] parsed frame013_PYR5_embedding_nto_s1_s2.s1.mo53a.cube norm=1.00000467
+[21/48] parsed frame013_PYR5_embedding_nto_s1_s2.s2.mo52a.cube norm=1.00000675
+[22/48] parsed frame013_PYR5_embedding_nto_s1_s2.s2.mo53a.cube norm=0.99997710
+[23/48] parsed frame013_PYR5_embedding_nto_s1_s2.s2.mo51a.cube norm=0.99998271
+[24/48] parsed frame013_PYR5_embedding_nto_s1_s2.s2.mo54a.cube norm=1.00000528
+[25/48] parsed frame000_PYR2_vacuum_reference_nto_s1_s2.s1.mo52a.cube norm=1.00002031
+[26/48] parsed frame000_PYR2_vacuum_reference_nto_s1_s2.s1.mo53a.cube norm=1.00003585
+[27/48] parsed frame000_PYR2_vacuum_reference_nto_s1_s2.s1.mo51a.cube norm=1.00003393
+[28/48] parsed frame000_PYR2_vacuum_reference_nto_s1_s2.s1.mo54a.cube norm=1.00002358
+[29/48] parsed frame000_PYR2_vacuum_reference_nto_s1_s2.s2.mo52a.cube norm=1.00002348
+[30/48] parsed frame000_PYR2_vacuum_reference_nto_s1_s2.s2.mo53a.cube norm=1.00002507
+[31/48] parsed frame000_PYR3_vacuum_reference_nto_s1_s2.s1.mo52a.cube norm=1.00002296
+[32/48] parsed frame000_PYR3_vacuum_reference_nto_s1_s2.s1.mo53a.cube norm=1.00003181
+[33/48] parsed frame000_PYR3_vacuum_reference_nto_s1_s2.s1.mo51a.cube norm=1.00003094
+[34/48] parsed frame000_PYR3_vacuum_reference_nto_s1_s2.s1.mo54a.cube norm=1.00002728
+[35/48] parsed frame000_PYR3_vacuum_reference_nto_s1_s2.s2.mo52a.cube norm=1.00002079
+[36/48] parsed frame000_PYR3_vacuum_reference_nto_s1_s2.s2.mo53a.cube norm=1.00002332
+[37/48] parsed frame000_PYR4_vacuum_reference_nto_s1_s2.s1.mo52a.cube norm=1.00002922
+[38/48] parsed frame000_PYR4_vacuum_reference_nto_s1_s2.s1.mo53a.cube norm=1.00002371
+[39/48] parsed frame000_PYR4_vacuum_reference_nto_s1_s2.s1.mo51a.cube norm=1.00002475
+[40/48] parsed frame000_PYR4_vacuum_reference_nto_s1_s2.s1.mo54a.cube norm=1.00003496
+[41/48] parsed frame000_PYR4_vacuum_reference_nto_s1_s2.s2.mo52a.cube norm=1.00001965
+[42/48] parsed frame000_PYR4_vacuum_reference_nto_s1_s2.s2.mo53a.cube norm=1.00002340
+[43/48] parsed frame000_PYR5_vacuum_reference_nto_s1_s2.s1.mo52a.cube norm=1.00000753
+[44/48] parsed frame000_PYR5_vacuum_reference_nto_s1_s2.s1.mo53a.cube norm=1.00000519
+[45/48] parsed frame000_PYR5_vacuum_reference_nto_s1_s2.s2.mo52a.cube norm=1.00000658
+[46/48] parsed frame000_PYR5_vacuum_reference_nto_s1_s2.s2.mo53a.cube norm=0.99997851
+[47/48] parsed frame000_PYR5_vacuum_reference_nto_s1_s2.s2.mo51a.cube norm=0.99998346
+[48/48] parsed frame000_PYR5_vacuum_reference_nto_s1_s2.s2.mo54a.cube norm=1.00000458
+[direct 01/24] frame003 PYR5 S1 MO52a |S|=0.98494947
+[direct 02/24] frame003 PYR5 S1 MO53a |S|=0.96182357
+[direct 03/24] frame003 PYR5 S2 MO52a |S|=0.92695109
+[direct 04/24] frame003 PYR5 S2 MO53a |S|=0.77900980
+[direct 05/24] frame003 PYR5 S2 MO51a |S|=0.92455845
+[direct 06/24] frame003 PYR5 S2 MO54a |S|=0.77937191
+[direct 07/24] frame005 PYR2 S1 MO52a |S|=0.91194350
+[direct 08/24] frame005 PYR2 S1 MO53a |S|=0.75925303
+[direct 09/24] frame005 PYR2 S1 MO51a |S|=0.91344425
+[direct 10/24] frame005 PYR2 S1 MO54a |S|=0.76262650
+[direct 11/24] frame005 PYR2 S2 MO52a |S|=0.97843696
+[direct 12/24] frame005 PYR2 S2 MO53a |S|=0.96564783
+[direct 13/24] frame005 PYR5 S1 MO52a |S|=0.99440839
+[direct 14/24] frame005 PYR5 S1 MO53a |S|=0.98824872
+[direct 15/24] frame005 PYR5 S2 MO52a |S|=0.96055057
+[direct 16/24] frame005 PYR5 S2 MO53a |S|=0.89063927
+[direct 17/24] frame005 PYR5 S2 MO51a |S|=0.95946683
+[direct 18/24] frame005 PYR5 S2 MO54a |S|=0.89053745
+[direct 19/24] frame013 PYR5 S1 MO52a |S|=0.99964404
+[direct 20/24] frame013 PYR5 S1 MO53a |S|=0.99937872
+[direct 21/24] frame013 PYR5 S2 MO52a |S|=0.99786445
+[direct 22/24] frame013 PYR5 S2 MO53a |S|=0.99530854
+[direct 23/24] frame013 PYR5 S2 MO51a |S|=0.99772224
+[direct 24/24] frame013 PYR5 S2 MO54a |S|=0.99578297
+
+Day019 cube-grid and direct-overlap audit completed.
+Cubes parsed: 48/48
+Direct overlaps: 24/24
+Pair comparisons: 12/12
+Identical grids and frozen geometries: 24/24
+Orbital norm range: 0.9999752506-1.0000632503
+Direct |overlap| range: 0.75925303-0.99964404
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_nto_cube_overlap_analysis

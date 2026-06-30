@@ -1,0 +1,10 @@
+Day019 NTO ORCA runner
+ORCA executable: /Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca
+Jobs selected: 1
+RUN frame000_PYR2_vacuum_reference_nto_s1_s2
+DONE frame000_PYR2_vacuum_reference_nto_s1_s2 returncode=0 core_ok=True nto_text=True candidate_artifacts=9 runtime_min=8.64
+
+Day019 NTO runner completed.
+Core-successful jobs: 1/1
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/NTO_RUN_SUMMARY_DAY019.csv
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/NTO_RUN_SUMMARY_DAY019.md

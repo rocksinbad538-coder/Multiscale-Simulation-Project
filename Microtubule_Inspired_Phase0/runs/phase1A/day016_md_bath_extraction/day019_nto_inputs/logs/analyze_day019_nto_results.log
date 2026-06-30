@@ -1,0 +1,9 @@
+Day019 NTO analysis completed.
+Jobs analyzed: 8/8
+States analyzed: 16/16
+Tracked root equals brightest S1/S2 root: 8/8
+Representative S1-S2 gap range: 53.0-102.0 meV
+Tracked single-pair fraction: 1.000
+Alternate two-pair fraction: 1.000
+Primary model recommendation: 8-state
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_nto_analysis

@@ -1,0 +1,16 @@
+Day019 vacuum-reference ORCA runner
+ORCA executable: /Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca
+Jobs selected: 4
+RUN frame000_PYR2_vacuum_reference
+DONE frame000_PYR2_vacuum_reference returncode=0 ok=True runtime_min=8.65
+RUN frame000_PYR3_vacuum_reference
+DONE frame000_PYR3_vacuum_reference returncode=0 ok=True runtime_min=8.61
+RUN frame000_PYR4_vacuum_reference
+DONE frame000_PYR4_vacuum_reference returncode=0 ok=True runtime_min=8.64
+RUN frame000_PYR5_vacuum_reference
+DONE frame000_PYR5_vacuum_reference returncode=0 ok=True runtime_min=9.71
+
+Day019 vacuum-reference run completed.
+Fully successful: 4/4
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_vacuum_reference_inputs/VACUUM_REFERENCE_RUN_SUMMARY_DAY019.csv
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_vacuum_reference_inputs/VACUUM_REFERENCE_RUN_SUMMARY_DAY019.md

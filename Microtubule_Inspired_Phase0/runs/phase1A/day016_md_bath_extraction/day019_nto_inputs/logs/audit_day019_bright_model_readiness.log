@@ -1,0 +1,12 @@
+Day019 bright-model readiness audit completed.
+Snapshots: 21/21
+Energy-SD range: 7.403-16.034 meV
+Maximum |J|: 1.492201 meV
+Coupling timescale hbar/max|J|: 0.441101 ps
+Sampling/coupling-timescale ratio: 11.335
+Maximum |J|/|detuning|: 1.228157
+Participation-ratio range: 1.000034-2.320444
+Static-disorder ensemble: READY
+Continuous stochastic propagation: NOT READY
+Spectral-density extraction: NOT READY
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_bright_model_readiness_audit

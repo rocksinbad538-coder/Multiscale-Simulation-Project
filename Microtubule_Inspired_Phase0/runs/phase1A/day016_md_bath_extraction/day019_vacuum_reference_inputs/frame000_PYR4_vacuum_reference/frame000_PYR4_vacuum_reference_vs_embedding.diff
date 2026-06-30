@@ -1,0 +1,10 @@
+--- runs/phase1A/day016_md_bath_extraction/orca_embedding_pilot_inputs/frame000_PYR4_embedding/frame000_PYR4_embedding.inp
++++ runs/phase1A/day016_md_bath_extraction/day019_vacuum_reference_inputs/frame000_PYR4_vacuum_reference/frame000_PYR4_vacuum_reference.inp
+@@ -4,7 +4,6 @@
+   nroots 10
+   tda true
+ end
+-%pointcharges "frame000_PYR4_embedding.pc"
+ * xyz 0 1
+ C       20.850000      40.470000      56.700000
+ C       20.790000      39.800000      57.930000

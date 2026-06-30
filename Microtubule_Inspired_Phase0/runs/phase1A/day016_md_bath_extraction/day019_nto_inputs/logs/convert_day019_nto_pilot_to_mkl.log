@@ -1,0 +1,12 @@
+===== DAY019 NTO → MKL PILOT =====
+Input NTO: runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR2_vacuum_reference_nto_s1_s2/frame000_PYR2_vacuum_reference_nto_s1_s2.s1.nto
+Output MKL: runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR2_vacuum_reference_nto_s1_s2/frame000_PYR2_vacuum_reference_nto_s1_s2.s1.nto.mkl
+
+Reading the input file runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR2_vacuum_reference_nto_s1_s2/frame000_PYR2_vacuum_reference_nto_s1_s2.s1.nto       ... done
+Writing the output file runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR2_vacuum_reference_nto_s1_s2/frame000_PYR2_vacuum_reference_nto_s1_s2.s1.nto.mkl      ... done
+The basis set has NOT been un-normalized for printing
+
+Return code: 0
+Generated MKL size: 1032115 bytes
+
+Conversion: PASS

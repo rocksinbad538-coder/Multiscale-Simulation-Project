@@ -1,0 +1,9 @@
+site,family,reference_frame,n_frames,n_sign_flips,minimum_absolute_raw_cosine_to_reference,minimum_aligned_cosine_to_reference,gauge_stability_pass
+PYR2,alternate_like,0,21,13,0.06051898283064307,0.06051898283064307,False
+PYR2,bright_like,0,21,12,0.9997521293359193,0.9997521293359193,True
+PYR3,alternate_like,0,21,13,0.011737996333574531,0.011737996333574531,False
+PYR3,bright_like,0,21,15,0.9997336615480003,0.9997336615480003,True
+PYR4,alternate_like,0,21,9,0.0380224077320254,0.0380224077320254,False
+PYR4,bright_like,0,21,9,0.9997406514183156,0.9997406514183156,True
+PYR5,alternate_like,0,21,9,0.07798622290561699,0.07798622290561699,False
+PYR5,bright_like,0,21,13,0.9989537461886161,0.9989537461886161,True

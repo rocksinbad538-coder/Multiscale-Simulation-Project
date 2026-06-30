@@ -1,0 +1,33 @@
+Day019 point-transition-dipole coupling baseline
+Relative permittivity divisor: 1.000000
+Gauge: each site/family aligned to its frame000 dipole
+[frame 000/020] couplings=24 range=-1.391671 to +1.221499 meV max|J|=1.391671 meV
+[frame 001/020] couplings=24 range=-1.423645 to +1.190348 meV max|J|=1.423645 meV
+[frame 002/020] couplings=24 range=-1.350419 to +1.219527 meV max|J|=1.350419 meV
+[frame 003/020] couplings=24 range=-1.321083 to +1.230410 meV max|J|=1.321083 meV
+[frame 004/020] couplings=24 range=-1.400992 to +1.266366 meV max|J|=1.400992 meV
+[frame 005/020] couplings=24 range=-1.349283 to +1.212421 meV max|J|=1.349283 meV
+[frame 006/020] couplings=24 range=-1.375088 to +1.204558 meV max|J|=1.375088 meV
+[frame 007/020] couplings=24 range=-1.393989 to +1.210900 meV max|J|=1.393989 meV
+[frame 008/020] couplings=24 range=-1.375075 to +1.220076 meV max|J|=1.375075 meV
+[frame 009/020] couplings=24 range=-1.352786 to +1.242239 meV max|J|=1.352786 meV
+[frame 010/020] couplings=24 range=-1.401488 to +1.227858 meV max|J|=1.401488 meV
+[frame 011/020] couplings=24 range=-1.424239 to +1.259864 meV max|J|=1.424239 meV
+[frame 012/020] couplings=24 range=-1.381197 to +1.232874 meV max|J|=1.381197 meV
+[frame 013/020] couplings=24 range=-1.398493 to +1.239265 meV max|J|=1.398493 meV
+[frame 014/020] couplings=24 range=-1.401226 to +1.228680 meV max|J|=1.401226 meV
+[frame 015/020] couplings=24 range=-1.380204 to +1.218860 meV max|J|=1.380204 meV
+[frame 016/020] couplings=24 range=-1.403154 to +1.239195 meV max|J|=1.403154 meV
+[frame 017/020] couplings=24 range=-1.409410 to +1.231920 meV max|J|=1.409410 meV
+[frame 018/020] couplings=24 range=-1.395369 to +1.249590 meV max|J|=1.395369 meV
+[frame 019/020] couplings=24 range=-1.400029 to +1.229452 meV max|J|=1.400029 meV
+[frame 020/020] couplings=24 range=-1.423442 to +1.229494 meV max|J|=1.423442 meV
+
+Day019 point-transition-dipole baseline completed.
+Dipole observations: 168/168
+Coupling observations: 504/504
+Hamiltonian snapshots: 21/21
+Gauge-stability groups: 4/8 (minimum cosine 0.011738)
+Overall |J| range: 0.000112-1.424239 meV
+Bright-bright maximum |J|: 1.424239 meV
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_point_transition_dipole_couplings

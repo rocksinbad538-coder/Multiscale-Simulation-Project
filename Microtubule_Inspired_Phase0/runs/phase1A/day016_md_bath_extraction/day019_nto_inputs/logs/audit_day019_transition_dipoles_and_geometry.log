@@ -1,0 +1,100 @@
+Day019 transition-dipole and geometry audit
+Selected embedded outputs: 84/84
+[01/84] frame000 PYR2 S1|mu|=0.128569 au S2|mu|=2.224507 au
+[02/84] frame000 PYR3 S1|mu|=0.283090 au S2|mu|=2.246802 au
+[03/84] frame000 PYR4 S1|mu|=0.398522 au S2|mu|=2.240879 au
+[04/84] frame000 PYR5 S1|mu|=2.655189 au S2|mu|=0.474774 au
+[05/84] frame001 PYR2 S1|mu|=0.565765 au S2|mu|=2.188426 au
+[06/84] frame001 PYR3 S1|mu|=0.590678 au S2|mu|=2.176904 au
+[07/84] frame001 PYR4 S1|mu|=0.142232 au S2|mu|=2.274300 au
+[08/84] frame001 PYR5 S1|mu|=2.679084 au S2|mu|=0.382374 au
+[09/84] frame002 PYR2 S1|mu|=0.302242 au S2|mu|=2.253326 au
+[10/84] frame002 PYR3 S1|mu|=0.342462 au S2|mu|=2.220707 au
+[11/84] frame002 PYR4 S1|mu|=0.312458 au S2|mu|=2.257556 au
+[12/84] frame002 PYR5 S1|mu|=2.624079 au S2|mu|=0.355542 au
+[13/84] frame003 PYR2 S1|mu|=0.299500 au S2|mu|=2.223967 au
+[14/84] frame003 PYR3 S1|mu|=0.155048 au S2|mu|=2.244079 au
+[15/84] frame003 PYR4 S1|mu|=0.293684 au S2|mu|=2.252368 au
+[16/84] frame003 PYR5 S1|mu|=2.588314 au S2|mu|=0.672287 au
+[17/84] frame004 PYR2 S1|mu|=0.336497 au S2|mu|=2.227671 au
+[18/84] frame004 PYR3 S1|mu|=0.267843 au S2|mu|=2.274161 au
+[19/84] frame004 PYR4 S1|mu|=0.158304 au S2|mu|=2.283670 au
+[20/84] frame004 PYR5 S1|mu|=2.653162 au S2|mu|=0.407836 au
+[21/84] frame005 PYR2 S1|mu|=0.772748 au S2|mu|=2.064105 au
+[22/84] frame005 PYR3 S1|mu|=0.300799 au S2|mu|=2.246553 au
+[23/84] frame005 PYR4 S1|mu|=0.292626 au S2|mu|=2.238593 au
+[24/84] frame005 PYR5 S1|mu|=2.637908 au S2|mu|=0.465961 au
+[25/84] frame006 PYR2 S1|mu|=0.430546 au S2|mu|=2.206830 au
+[26/84] frame006 PYR3 S1|mu|=0.340602 au S2|mu|=2.216412 au
+[27/84] frame006 PYR4 S1|mu|=0.320078 au S2|mu|=2.257098 au
+[28/84] frame006 PYR5 S1|mu|=2.670026 au S2|mu|=0.204157 au
+[29/84] frame007 PYR2 S1|mu|=0.304220 au S2|mu|=2.207963 au
+[30/84] frame007 PYR3 S1|mu|=0.362478 au S2|mu|=2.217814 au
+[31/84] frame007 PYR4 S1|mu|=0.274900 au S2|mu|=2.261040 au
+[32/84] frame007 PYR5 S1|mu|=2.664907 au S2|mu|=0.345789 au
+[33/84] frame008 PYR2 S1|mu|=0.242136 au S2|mu|=2.241194 au
+[34/84] frame008 PYR3 S1|mu|=0.427960 au S2|mu|=2.219385 au
+[35/84] frame008 PYR4 S1|mu|=0.412104 au S2|mu|=2.240208 au
+[36/84] frame008 PYR5 S1|mu|=2.656788 au S2|mu|=0.506892 au
+[37/84] frame009 PYR2 S1|mu|=0.287507 au S2|mu|=2.239728 au
+[38/84] frame009 PYR3 S1|mu|=0.202682 au S2|mu|=2.270984 au
+[39/84] frame009 PYR4 S1|mu|=0.508920 au S2|mu|=2.260841 au
+[40/84] frame009 PYR5 S1|mu|=2.604308 au S2|mu|=0.371618 au
+[41/84] frame010 PYR2 S1|mu|=0.298060 au S2|mu|=2.243564 au
+[42/84] frame010 PYR3 S1|mu|=0.221585 au S2|mu|=2.258300 au
+[43/84] frame010 PYR4 S1|mu|=0.366470 au S2|mu|=2.235422 au
+[44/84] frame010 PYR5 S1|mu|=2.673847 au S2|mu|=0.330121 au
+[45/84] frame011 PYR2 S1|mu|=0.379460 au S2|mu|=2.221319 au
+[46/84] frame011 PYR3 S1|mu|=0.274135 au S2|mu|=2.248877 au
+[47/84] frame011 PYR4 S1|mu|=0.222396 au S2|mu|=2.275016 au
+[48/84] frame011 PYR5 S1|mu|=2.666668 au S2|mu|=0.312858 au
+[49/84] frame012 PYR2 S1|mu|=0.196214 au S2|mu|=2.249576 au
+[50/84] frame012 PYR3 S1|mu|=0.136528 au S2|mu|=2.260668 au
+[51/84] frame012 PYR4 S1|mu|=0.299533 au S2|mu|=2.259369 au
+[52/84] frame012 PYR5 S1|mu|=2.632560 au S2|mu|=0.390205 au
+[53/84] frame013 PYR2 S1|mu|=0.170763 au S2|mu|=2.241950 au
+[54/84] frame013 PYR3 S1|mu|=0.460445 au S2|mu|=2.236947 au
+[55/84] frame013 PYR4 S1|mu|=0.108351 au S2|mu|=2.253761 au
+[56/84] frame013 PYR5 S1|mu|=2.672503 au S2|mu|=0.339367 au
+[57/84] frame014 PYR2 S1|mu|=0.137040 au S2|mu|=2.243141 au
+[58/84] frame014 PYR3 S1|mu|=0.320671 au S2|mu|=2.233262 au
+[59/84] frame014 PYR4 S1|mu|=0.234265 au S2|mu|=2.256367 au
+[60/84] frame014 PYR5 S1|mu|=2.616437 au S2|mu|=0.632479 au
+[61/84] frame015 PYR2 S1|mu|=0.297607 au S2|mu|=2.206325 au
+[62/84] frame015 PYR3 S1|mu|=0.373390 au S2|mu|=2.258017 au
+[63/84] frame015 PYR4 S1|mu|=0.430267 au S2|mu|=2.229105 au
+[64/84] frame015 PYR5 S1|mu|=2.576082 au S2|mu|=0.716861 au
+[65/84] frame016 PYR2 S1|mu|=0.285167 au S2|mu|=2.197555 au
+[66/84] frame016 PYR3 S1|mu|=0.206591 au S2|mu|=2.240745 au
+[67/84] frame016 PYR4 S1|mu|=0.087293 au S2|mu|=2.265394 au
+[68/84] frame016 PYR5 S1|mu|=2.628243 au S2|mu|=0.539472 au
+[69/84] frame017 PYR2 S1|mu|=0.200873 au S2|mu|=2.241419 au
+[70/84] frame017 PYR3 S1|mu|=0.399437 au S2|mu|=2.231878 au
+[71/84] frame017 PYR4 S1|mu|=0.207292 au S2|mu|=2.268317 au
+[72/84] frame017 PYR5 S1|mu|=2.675864 au S2|mu|=0.452847 au
+[73/84] frame018 PYR2 S1|mu|=0.219636 au S2|mu|=2.237626 au
+[74/84] frame018 PYR3 S1|mu|=0.191024 au S2|mu|=2.266616 au
+[75/84] frame018 PYR4 S1|mu|=0.230326 au S2|mu|=2.263754 au
+[76/84] frame018 PYR5 S1|mu|=2.654272 au S2|mu|=0.278370 au
+[77/84] frame019 PYR2 S1|mu|=0.234521 au S2|mu|=2.248242 au
+[78/84] frame019 PYR3 S1|mu|=0.155788 au S2|mu|=2.250742 au
+[79/84] frame019 PYR4 S1|mu|=0.235053 au S2|mu|=2.255147 au
+[80/84] frame019 PYR5 S1|mu|=2.647123 au S2|mu|=0.445702 au
+[81/84] frame020 PYR2 S1|mu|=0.332671 au S2|mu|=2.184898 au
+[82/84] frame020 PYR3 S1|mu|=0.230630 au S2|mu|=2.239346 au
+[83/84] frame020 PYR4 S1|mu|=0.263723 au S2|mu|=2.283718 au
+[84/84] frame020 PYR5 S1|mu|=2.694929 au S2|mu|=0.310950 au
+
+Maximum D2 reconstruction error: 2.43145000e-05 (tolerance 5.00000000e-05)
+Maximum oscillator-strength reconstruction error: 2.32073333e-06 (tolerance 2.00000000e-05)
+Maximum state/table energy discrepancy: 4.96000000e-04 eV
+
+Day019 transition-dipole and geometry audit completed.
+Embedded outputs: 84/84
+Transition-dipole records: 168/168
+Frozen geometries: 4/4
+Maximum D2 error: 2.431e-05
+Maximum fosc error: 2.321e-06
+Minimum carbon-centroid distance: 26.894353 A
+Minimum interatomic distance: 20.686104 A
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_transition_dipole_geometry_audit

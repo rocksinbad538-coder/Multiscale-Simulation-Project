@@ -1,0 +1,11 @@
+Day019 eight-state diagonal model completed.
+Frame/site rows: 84/84
+State observations: 168/168
+Hamiltonian snapshots: 21/21
+State-statistics SD unit validation: PASS
+Basis states: 8
+Frame spacing: 5.000 ps
+Energy-zero convention: global_minimum
+Mean-energy range: 3.776952-4.090619 eV
+Energy-SD range: 7.403-16.034 meV
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_eight_state_diagonal_model

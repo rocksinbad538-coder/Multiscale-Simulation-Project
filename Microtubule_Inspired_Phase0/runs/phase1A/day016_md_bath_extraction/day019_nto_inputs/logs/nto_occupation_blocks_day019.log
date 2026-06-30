@@ -1,0 +1,161 @@
+===== DAY019 NTO OCCUPATION BLOCKS =====
+
+================================================================================
+JOB: frame000_PYR2_vacuum_reference_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR2_vacuum_reference_nto_s1_s2.s1.nto
+
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR2_vacuum_reference_nto_s1_s2.s2.nto
+
+
+================================================================================
+JOB: frame000_PYR3_vacuum_reference_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR3_vacuum_reference_nto_s1_s2.s1.nto
+
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR3_vacuum_reference_nto_s1_s2.s2.nto
+
+
+================================================================================
+JOB: frame000_PYR4_vacuum_reference_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR4_vacuum_reference_nto_s1_s2.s1.nto
+
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR4_vacuum_reference_nto_s1_s2.s2.nto
+
+
+================================================================================
+JOB: frame000_PYR5_vacuum_reference_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR5_vacuum_reference_nto_s1_s2.s1.nto
+
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR5_vacuum_reference_nto_s1_s2.s2.nto
+
+
+================================================================================
+JOB: frame003_PYR5_embedding_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame003_PYR5_embedding_nto_s1_s2.s1.nto
+
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame003_PYR5_embedding_nto_s1_s2.s2.nto
+
+
+================================================================================
+JOB: frame005_PYR2_embedding_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame005_PYR2_embedding_nto_s1_s2.s1.nto
+
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame005_PYR2_embedding_nto_s1_s2.s2.nto
+
+
+================================================================================
+JOB: frame005_PYR5_embedding_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame005_PYR5_embedding_nto_s1_s2.s1.nto
+
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame005_PYR5_embedding_nto_s1_s2.s2.nto
+
+
+================================================================================
+JOB: frame013_PYR5_embedding_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame013_PYR5_embedding_nto_s1_s2.s1.nto
+
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame013_PYR5_embedding_nto_s1_s2.s2.nto
+

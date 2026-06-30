@@ -1,0 +1,11 @@
+Day019 PYR2 S2 transition-density cube validation completed.
+Grid points: 64000/64000
+Net transition charge: 5.677196e-04
+Boundary max ratio: 1.797585e-07
+Best dipole convention: +centered_first_moment
+Cube |mu|: 1.561270 au
+ORCA |mu|: 2.224507 au
+Absolute cosine: 0.999999
+Relative magnitude error: 29.814980%
+Overall pilot status: REVIEW
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_transition_density_pilot/pilot_validation

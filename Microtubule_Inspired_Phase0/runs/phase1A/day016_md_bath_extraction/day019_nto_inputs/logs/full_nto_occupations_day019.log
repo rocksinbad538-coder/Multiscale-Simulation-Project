@@ -1,0 +1,540 @@
+===== DAY019 COMPLETE NTO OCCUPATIONS =====
+
+================================================================================
+JOB: frame000_PYR2_vacuum_reference_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR2_vacuum_reference_nto_s1_s2.s1.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.147025 au      4.001 eV    32268.3 cm**-1
+    52a ->  53a  : n=  0.52346818
+    51a ->  54a  : n=  0.44756600
+    50a ->  55a  : n=  0.01389662
+    49a ->  56a  : n=  0.01329712
+    48a ->  57a  : n=  0.00040041
+    47a ->  58a  : n=  0.00039475
+    46a ->  59a  : n=  0.00011780
+    45a ->  60a  : n=  0.00011450
+
+
+------------------------------------------
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR2_vacuum_reference_nto_s1_s2.s2.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.150296 au      4.090 eV    32986.2 cm**-1
+    52a ->  53a  : n=  0.84685883
+    51a ->  54a  : n=  0.12769211
+    50a ->  55a  : n=  0.00605701
+    49a ->  56a  : n=  0.00259528
+    48a ->  57a  : n=  0.00244939
+    47a ->  58a  : n=  0.00163085
+    46a ->  59a  : n=  0.00158481
+    45a ->  60a  : n=  0.00143406
+    44a ->  61a  : n=  0.00138644
+    43a ->  62a  : n=  0.00114439
+    42a ->  63a  : n=  0.00114298
+    41a ->  64a  : n=  0.00085101
+    40a ->  65a  : n=  0.00071921
+    39a ->  66a  : n=  0.00060983
+    38a ->  67a  : n=  0.00045541
+    37a ->  68a  : n=  0.00041418
+    36a ->  69a  : n=  0.00039505
+    35a ->  70a  : n=  0.00034860
+    34a ->  71a  : n=  0.00030047
+    33a ->  72a  : n=  0.00028668
+    32a ->  73a  : n=  0.00027711
+    31a ->  74a  : n=  0.00024767
+    30a ->  75a  : n=  0.00016282
+    29a ->  76a  : n=  0.00015907
+    28a ->  77a  : n=  0.00012611
+    27a ->  78a  : n=  0.00012044
+
+
+-----------------------------
+TD-DFT/TDA-EXCITATION SPECTRA
+
+================================================================================
+JOB: frame000_PYR3_vacuum_reference_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR3_vacuum_reference_nto_s1_s2.s1.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.147043 au      4.001 eV    32272.2 cm**-1
+    52a ->  53a  : n=  0.52107006
+    51a ->  54a  : n=  0.44990980
+    50a ->  55a  : n=  0.01393733
+    49a ->  56a  : n=  0.01330905
+    48a ->  57a  : n=  0.00040068
+    47a ->  58a  : n=  0.00039817
+    46a ->  59a  : n=  0.00011722
+    45a ->  60a  : n=  0.00011445
+
+
+------------------------------------------
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR3_vacuum_reference_nto_s1_s2.s2.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.149969 au      4.081 eV    32914.4 cm**-1
+    52a ->  53a  : n=  0.84918055
+    51a ->  54a  : n=  0.12522478
+    50a ->  55a  : n=  0.00610614
+    49a ->  56a  : n=  0.00256802
+    48a ->  57a  : n=  0.00248069
+    47a ->  58a  : n=  0.00165854
+    46a ->  59a  : n=  0.00160522
+    45a ->  60a  : n=  0.00146611
+    44a ->  61a  : n=  0.00138238
+    43a ->  62a  : n=  0.00115950
+    42a ->  63a  : n=  0.00114246
+    41a ->  64a  : n=  0.00085060
+    40a ->  65a  : n=  0.00072285
+    39a ->  66a  : n=  0.00061059
+    38a ->  67a  : n=  0.00045114
+    37a ->  68a  : n=  0.00041442
+    36a ->  69a  : n=  0.00038250
+    35a ->  70a  : n=  0.00034289
+    34a ->  71a  : n=  0.00030334
+    33a ->  72a  : n=  0.00029279
+    32a ->  73a  : n=  0.00028095
+    31a ->  74a  : n=  0.00025029
+    30a ->  75a  : n=  0.00016326
+    29a ->  76a  : n=  0.00015993
+    28a ->  77a  : n=  0.00012822
+    27a ->  78a  : n=  0.00012058
+
+
+-----------------------------
+TD-DFT/TDA-EXCITATION SPECTRA
+
+================================================================================
+JOB: frame000_PYR4_vacuum_reference_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR4_vacuum_reference_nto_s1_s2.s1.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.147559 au      4.015 eV    32385.5 cm**-1
+    52a ->  53a  : n=  0.52610185
+    51a ->  54a  : n=  0.44476213
+    50a ->  55a  : n=  0.01399167
+    49a ->  56a  : n=  0.01335698
+    48a ->  57a  : n=  0.00040570
+    47a ->  58a  : n=  0.00039132
+    46a ->  59a  : n=  0.00011921
+    45a ->  60a  : n=  0.00011578
+
+
+------------------------------------------
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR4_vacuum_reference_nto_s1_s2.s2.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.150252 au      4.089 eV    32976.5 cm**-1
+    52a ->  53a  : n=  0.85071095
+    51a ->  54a  : n=  0.12370190
+    50a ->  55a  : n=  0.00600130
+    49a ->  56a  : n=  0.00255232
+    48a ->  57a  : n=  0.00249412
+    47a ->  58a  : n=  0.00166373
+    46a ->  59a  : n=  0.00162017
+    45a ->  60a  : n=  0.00148250
+    44a ->  61a  : n=  0.00140892
+    43a ->  62a  : n=  0.00116447
+    42a ->  63a  : n=  0.00116024
+    41a ->  64a  : n=  0.00086037
+    40a ->  65a  : n=  0.00073139
+    39a ->  66a  : n=  0.00061433
+    38a ->  67a  : n=  0.00045084
+    37a ->  68a  : n=  0.00041823
+    36a ->  69a  : n=  0.00038305
+    35a ->  70a  : n=  0.00034401
+    34a ->  71a  : n=  0.00029905
+    33a ->  72a  : n=  0.00028898
+    32a ->  73a  : n=  0.00027523
+    31a ->  74a  : n=  0.00024883
+    30a ->  75a  : n=  0.00016423
+    29a ->  76a  : n=  0.00015987
+    28a ->  77a  : n=  0.00012788
+    27a ->  78a  : n=  0.00012181
+
+
+-----------------------------
+TD-DFT/TDA-EXCITATION SPECTRA
+
+================================================================================
+JOB: frame000_PYR5_vacuum_reference_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR5_vacuum_reference_nto_s1_s2.s1.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.138920 au      3.780 eV    30489.4 cm**-1
+    52a ->  53a  : n=  0.87956493
+    51a ->  54a  : n=  0.08923490
+    50a ->  55a  : n=  0.00843493
+    49a ->  56a  : n=  0.00335329
+    48a ->  57a  : n=  0.00242155
+    47a ->  58a  : n=  0.00217173
+    46a ->  59a  : n=  0.00212193
+    45a ->  60a  : n=  0.00171514
+    44a ->  61a  : n=  0.00154575
+    43a ->  62a  : n=  0.00138288
+    42a ->  63a  : n=  0.00137489
+    41a ->  64a  : n=  0.00100526
+    40a ->  65a  : n=  0.00083376
+    39a ->  66a  : n=  0.00072393
+    38a ->  67a  : n=  0.00050902
+    37a ->  68a  : n=  0.00040147
+    36a ->  69a  : n=  0.00039945
+    35a ->  70a  : n=  0.00036188
+    34a ->  71a  : n=  0.00035246
+    33a ->  72a  : n=  0.00032093
+    32a ->  73a  : n=  0.00030556
+    31a ->  74a  : n=  0.00028287
+    30a ->  75a  : n=  0.00019347
+    29a ->  76a  : n=  0.00016267
+    28a ->  77a  : n=  0.00015162
+    27a ->  78a  : n=  0.00011656
+
+
+------------------------------------------
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame000_PYR5_vacuum_reference_nto_s1_s2.s2.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.141327 au      3.846 eV    31017.6 cm**-1
+    52a ->  53a  : n=  0.57755870
+    51a ->  54a  : n=  0.39078663
+    50a ->  55a  : n=  0.01574722
+    49a ->  56a  : n=  0.01389633
+    48a ->  57a  : n=  0.00050441
+    47a ->  58a  : n=  0.00042434
+    46a ->  59a  : n=  0.00013641
+    45a ->  60a  : n=  0.00012008
+
+
+-----------------------------
+TD-DFT/TDA-EXCITATION SPECTRA
+
+================================================================================
+JOB: frame003_PYR5_embedding_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame003_PYR5_embedding_nto_s1_s2.s1.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.137792 au      3.750 eV    30241.8 cm**-1
+    52a ->  53a  : n=  0.87581545
+    51a ->  54a  : n=  0.09392891
+    50a ->  55a  : n=  0.00752227
+    49a ->  56a  : n=  0.00329746
+    48a ->  57a  : n=  0.00306360
+    47a ->  58a  : n=  0.00242263
+    46a ->  59a  : n=  0.00197504
+    45a ->  60a  : n=  0.00194973
+    44a ->  61a  : n=  0.00155046
+    43a ->  62a  : n=  0.00125623
+    42a ->  63a  : n=  0.00122149
+    41a ->  64a  : n=  0.00090831
+    40a ->  65a  : n=  0.00074517
+    39a ->  66a  : n=  0.00063182
+    38a ->  67a  : n=  0.00045097
+    37a ->  68a  : n=  0.00037400
+    36a ->  69a  : n=  0.00036966
+    35a ->  70a  : n=  0.00034108
+    34a ->  71a  : n=  0.00031191
+    33a ->  72a  : n=  0.00027535
+    32a ->  73a  : n=  0.00026753
+    31a ->  74a  : n=  0.00025337
+    30a ->  75a  : n=  0.00017710
+    29a ->  76a  : n=  0.00014856
+    28a ->  77a  : n=  0.00014406
+    27a ->  78a  : n=  0.00010452
+
+
+------------------------------------------
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame003_PYR5_embedding_nto_s1_s2.s2.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.141552 au      3.852 eV    31067.0 cm**-1
+    52a ->  53a  : n=  0.63068887
+    51a ->  54a  : n=  0.33855656
+    50a ->  55a  : n=  0.01436457
+    49a ->  56a  : n=  0.01260297
+    48a ->  57a  : n=  0.00061067
+    47a ->  58a  : n=  0.00053073
+    46a ->  59a  : n=  0.00036291
+    45a ->  60a  : n=  0.00035456
+    44a ->  61a  : n=  0.00030607
+    43a ->  62a  : n=  0.00024136
+    42a ->  63a  : n=  0.00019842
+    41a ->  64a  : n=  0.00019303
+    40a ->  65a  : n=  0.00013399
+    39a ->  66a  : n=  0.00012118
+    38a ->  67a  : n=  0.00011472
+
+
+-----------------------------
+TD-DFT/TDA-EXCITATION SPECTRA
+
+================================================================================
+JOB: frame005_PYR2_embedding_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame005_PYR2_embedding_nto_s1_s2.s1.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.147217 au      4.006 eV    32310.4 cm**-1
+    52a ->  53a  : n=  0.63060731
+    51a ->  54a  : n=  0.34138756
+    50a ->  55a  : n=  0.01252453
+    49a ->  56a  : n=  0.01173731
+    48a ->  57a  : n=  0.00061365
+    47a ->  58a  : n=  0.00043498
+    46a ->  59a  : n=  0.00040755
+    45a ->  60a  : n=  0.00027283
+    44a ->  61a  : n=  0.00026227
+    43a ->  62a  : n=  0.00024923
+    42a ->  63a  : n=  0.00020320
+    41a ->  64a  : n=  0.00018741
+    40a ->  65a  : n=  0.00016100
+    39a ->  66a  : n=  0.00013875
+    38a ->  67a  : n=  0.00011827
+
+
+------------------------------------------
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame005_PYR2_embedding_nto_s1_s2.s2.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.149499 au      4.068 eV    32811.3 cm**-1
+    52a ->  53a  : n=  0.83774482
+    51a ->  54a  : n=  0.13818977
+    50a ->  55a  : n=  0.00474089
+    49a ->  56a  : n=  0.00389192
+    48a ->  57a  : n=  0.00232819
+    47a ->  58a  : n=  0.00206854
+    46a ->  59a  : n=  0.00139067
+    45a ->  60a  : n=  0.00133207
+    44a ->  61a  : n=  0.00120081
+    43a ->  62a  : n=  0.00095302
+    42a ->  63a  : n=  0.00093781
+    41a ->  64a  : n=  0.00071995
+    40a ->  65a  : n=  0.00061137
+    39a ->  66a  : n=  0.00050445
+    38a ->  67a  : n=  0.00042201
+    37a ->  68a  : n=  0.00039266
+    36a ->  69a  : n=  0.00035616
+    35a ->  70a  : n=  0.00030432
+    34a ->  71a  : n=  0.00026555
+    33a ->  72a  : n=  0.00024991
+    32a ->  73a  : n=  0.00022663
+    31a ->  74a  : n=  0.00020799
+    30a ->  75a  : n=  0.00014388
+    29a ->  76a  : n=  0.00013297
+    28a ->  77a  : n=  0.00011993
+    27a ->  78a  : n=  0.00010751
+
+
+-----------------------------
+TD-DFT/TDA-EXCITATION SPECTRA
+
+================================================================================
+JOB: frame005_PYR5_embedding_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame005_PYR5_embedding_nto_s1_s2.s1.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.139535 au      3.797 eV    30624.4 cm**-1
+    52a ->  53a  : n=  0.87757754
+    51a ->  54a  : n=  0.09158606
+    50a ->  55a  : n=  0.00820298
+    49a ->  56a  : n=  0.00328355
+    48a ->  57a  : n=  0.00274289
+    47a ->  58a  : n=  0.00213108
+    46a ->  59a  : n=  0.00205072
+    45a ->  60a  : n=  0.00185159
+    44a ->  61a  : n=  0.00163772
+    43a ->  62a  : n=  0.00133577
+    42a ->  63a  : n=  0.00125981
+    41a ->  64a  : n=  0.00091652
+    40a ->  65a  : n=  0.00077226
+    39a ->  66a  : n=  0.00067075
+    38a ->  67a  : n=  0.00048817
+    37a ->  68a  : n=  0.00039573
+    36a ->  69a  : n=  0.00039232
+    35a ->  70a  : n=  0.00035932
+    34a ->  71a  : n=  0.00035060
+    33a ->  72a  : n=  0.00029616
+    32a ->  73a  : n=  0.00028723
+    31a ->  74a  : n=  0.00027026
+    30a ->  75a  : n=  0.00018944
+    29a ->  76a  : n=  0.00015984
+    28a ->  77a  : n=  0.00014610
+    27a ->  78a  : n=  0.00011293
+
+
+------------------------------------------
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame005_PYR5_embedding_nto_s1_s2.s2.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.142257 au      3.871 eV    31221.7 cm**-1
+    52a ->  53a  : n=  0.61350706
+    51a ->  54a  : n=  0.35503720
+    50a ->  55a  : n=  0.01511926
+    49a ->  56a  : n=  0.01364442
+    48a ->  57a  : n=  0.00052677
+    47a ->  58a  : n=  0.00038648
+    46a ->  59a  : n=  0.00024063
+    45a ->  60a  : n=  0.00021964
+    44a ->  61a  : n=  0.00018528
+    43a ->  62a  : n=  0.00015236
+    42a ->  63a  : n=  0.00013880
+    41a ->  64a  : n=  0.00012147
+
+
+-----------------------------
+TD-DFT/TDA-EXCITATION SPECTRA
+
+================================================================================
+JOB: frame013_PYR5_embedding_nto_s1_s2
+================================================================================
+NATURAL TRANSITION ORBITALS FOR STATE    1
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame013_PYR5_embedding_nto_s1_s2.s1.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.139029 au      3.783 eV    30513.4 cm**-1
+    52a ->  53a  : n=  0.87956822
+    51a ->  54a  : n=  0.08952215
+    50a ->  55a  : n=  0.00848955
+    49a ->  56a  : n=  0.00336595
+    48a ->  57a  : n=  0.00237282
+    47a ->  58a  : n=  0.00217239
+    46a ->  59a  : n=  0.00210615
+    45a ->  60a  : n=  0.00168054
+    44a ->  61a  : n=  0.00153115
+    43a ->  62a  : n=  0.00136328
+    42a ->  63a  : n=  0.00129601
+    41a ->  64a  : n=  0.00094825
+    40a ->  65a  : n=  0.00079728
+    39a ->  66a  : n=  0.00069704
+    38a ->  67a  : n=  0.00050516
+    37a ->  68a  : n=  0.00040200
+    36a ->  69a  : n=  0.00038966
+    35a ->  70a  : n=  0.00036161
+    34a ->  71a  : n=  0.00035223
+    33a ->  72a  : n=  0.00031916
+    32a ->  73a  : n=  0.00030437
+    31a ->  74a  : n=  0.00028622
+    30a ->  75a  : n=  0.00019210
+    29a ->  76a  : n=  0.00016158
+    28a ->  77a  : n=  0.00015081
+    27a ->  78a  : n=  0.00011541
+
+
+------------------------------------------
+NATURAL TRANSITION ORBITALS FOR STATE    2
+------------------------------------------
+
+Making the (pseudo)densities                       ... done
+Solving eigenvalue problem for the occupied space  ... done
+Solving eigenvalue problem for the virtual space   ... done
+Natural Transition Orbitals were saved in frame013_PYR5_embedding_nto_s1_s2.s2.nto
+Threshold for printing occupation numbers 0.000100
+
+ E=   0.140987 au      3.836 eV    30943.1 cm**-1
+    52a ->  53a  : n=  0.61148015
+    51a ->  54a  : n=  0.35735875
+    50a ->  55a  : n=  0.01533754
+    49a ->  56a  : n=  0.01371662
+    48a ->  57a  : n=  0.00050290
+    47a ->  58a  : n=  0.00041534
+    46a ->  59a  : n=  0.00015057
+    45a ->  60a  : n=  0.00013210
+    44a ->  61a  : n=  0.00010914
+
+
+-----------------------------
+TD-DFT/TDA-EXCITATION SPECTRA

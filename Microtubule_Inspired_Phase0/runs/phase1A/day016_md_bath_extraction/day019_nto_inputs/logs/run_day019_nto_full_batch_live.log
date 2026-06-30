@@ -1,0 +1,24 @@
+Day019 NTO ORCA runner
+ORCA executable: /Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca
+Jobs selected: 8
+ARCHIVE frame003_PYR5_embedding_nto_s1_s2: frame003_PYR5_embedding_nto_s1_s2.incomplete_20260630_113207.out
+RUN frame003_PYR5_embedding_nto_s1_s2
+DONE frame003_PYR5_embedding_nto_s1_s2 returncode=0 core_ok=True nto_text=True candidate_artifacts=10 runtime_min=8.84
+RUN frame005_PYR2_embedding_nto_s1_s2
+DONE frame005_PYR2_embedding_nto_s1_s2 returncode=0 core_ok=True nto_text=True candidate_artifacts=9 runtime_min=8.71
+RUN frame005_PYR5_embedding_nto_s1_s2
+DONE frame005_PYR5_embedding_nto_s1_s2 returncode=0 core_ok=True nto_text=True candidate_artifacts=9 runtime_min=8.39
+RUN frame013_PYR5_embedding_nto_s1_s2
+DONE frame013_PYR5_embedding_nto_s1_s2 returncode=0 core_ok=True nto_text=True candidate_artifacts=9 runtime_min=8.75
+SKIP frame000_PYR2_vacuum_reference_nto_s1_s2: already core-complete; candidate_artifacts=9
+RUN frame000_PYR3_vacuum_reference_nto_s1_s2
+DONE frame000_PYR3_vacuum_reference_nto_s1_s2 returncode=0 core_ok=True nto_text=True candidate_artifacts=9 runtime_min=8.60
+RUN frame000_PYR4_vacuum_reference_nto_s1_s2
+DONE frame000_PYR4_vacuum_reference_nto_s1_s2 returncode=0 core_ok=True nto_text=True candidate_artifacts=9 runtime_min=8.64
+RUN frame000_PYR5_vacuum_reference_nto_s1_s2
+DONE frame000_PYR5_vacuum_reference_nto_s1_s2 returncode=0 core_ok=True nto_text=True candidate_artifacts=9 runtime_min=9.92
+
+Day019 NTO runner completed.
+Core-successful jobs: 8/8
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/NTO_RUN_SUMMARY_DAY019.csv
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/NTO_RUN_SUMMARY_DAY019.md

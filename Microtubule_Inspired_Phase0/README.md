@@ -1196,3 +1196,207 @@ These results will determine whether the excitonic model should use:
 - both low-lying local states per chromophore.
 
 After the local-state manifold is finalized, the off-diagonal excitonic couplings \(J_{ij}\) will be parameterized and incorporated into the complete excitonic Hamiltonian.
+
+## Day019 — Bright-State Couplings and Dynamics
+
+Day019 completed the construction, validation, and initial dynamical analysis of the four-state bright excitonic model derived from the accepted frozen-solute molecular-dynamics ensemble and embedded TDDFT calculations.
+
+The complete technical record is available in [`notes/day_019.md`](notes/day_019.md).
+
+### Completed workflows
+
+- PYR2 transition-density grid-convergence analysis.
+- Bright transition-density production for PYR2, PYR3, PYR4, and PYR5 on \(80^3\) grids.
+- Validation of the common \(\sqrt{2}\) transition-density normalization.
+- Transition-density-derived atom-centered charge construction.
+- Point-transition-dipole versus TDC-AC finite-size coupling benchmark.
+- Construction of corrected bright Hamiltonians for all 21 solvent snapshots.
+- Bright-model temporal-resolution and readiness audit.
+- Exact quasi-static coherent propagation.
+- Haken–Strobl pure-dephasing sensitivity analysis.
+
+### Accepted bright-state model
+
+The primary dynamical model is the four-state TDC-AC-corrected bright Hamiltonian ensemble with basis:
+
+- `PYR2_bright`
+- `PYR3_bright`
+- `PYR4_bright`
+- `PYR5_bright`
+
+Accepted bright-root mapping:
+
+| Site | Bright root |
+|---|---:|
+| PYR2 | S2 |
+| PYR3 | S2 |
+| PYR4 | S2 |
+| PYR5 | S1 |
+
+The PYR5 root inversion is an energy-ordering inversion and not a change in electronic-state identity.
+
+### Transition-density validation
+
+- Bright transition-density cubes validated: 4/4.
+- Production grid: \(80\times80\times80\).
+- Maximum normalized transition-dipole error: 0.153978%.
+- Minimum directional cosine: 0.9999966616.
+- Maximum absolute raw transition charge: \(9.88\times10^{-5}e\).
+- Maximum boundary-density ratio: \(2.91\times10^{-7}\).
+- Overall validation status: **PASS**.
+
+The common \(\sqrt{2}\) normalization was accepted for the four bright transition densities.
+
+### Finite-size coupling benchmark
+
+The TDC-AC atom-centered charge model was used to quantify finite-size corrections to the point-transition-dipole approximation.
+
+Key results:
+
+- All six bright-state coupling signs were preserved.
+- Maximum finite-size correction at frame000: 0.066408 meV.
+- Maximum correction across the 21 snapshots: 0.067962 meV.
+- Maximum corrected bright eigenvalue shift: 0.042074 meV.
+- Minimum matched point-dipole/TDC-AC eigenvector overlap: 0.9998556977.
+
+The point-transition-dipole and TDC-AC-corrected Hamiltonians remain in the same weak-coupling, disorder-dominated regime.
+
+No arbitrary dielectric-screening factor was introduced.
+
+### Bright-state energy and coupling scales
+
+Embedded bright-state statistics:
+
+| Site | Mean energy (eV) | SD (meV) |
+|---|---:|---:|
+| PYR2 | 4.088571 | 10.817 |
+| PYR3 | 4.078048 | 11.615 |
+| PYR4 | 4.090619 | 7.403 |
+| PYR5 | 3.776952 | 16.034 |
+
+Additional scales:
+
+- Maximum corrected bright coupling: 1.492201 meV.
+- Minimum sampled absolute site detuning: 1.000000 meV.
+- Maximum sampled \(|J|/|\Delta|\): 1.228157.
+- Electronic coupling timescale: 0.441101 ps.
+- Solvent snapshot spacing: 5 ps.
+- Snapshot-spacing/coupling-timescale ratio: 11.335.
+
+PYR5 lies approximately 309 meV below the PYR2–PYR4 bright manifold. This offset is dominated by the fixed PYR5 geometry, while solvent embedding primarily supplies dynamic diagonal disorder.
+
+### Dynamical readiness
+
+The 21 Hamiltonians are accepted as a **quasi-static disorder ensemble**.
+
+Supported analyses:
+
+- independent coherent propagation;
+- ensemble population averaging;
+- localization and participation-ratio analysis;
+- point-dipole versus TDC-AC sensitivity;
+- phenomenological pure-dephasing sensitivity.
+
+Not supported by the current 5 ps sampling:
+
+- sequential stochastic Hamiltonian propagation;
+- microscopic bath autocorrelation functions;
+- spectral-density extraction;
+- memory-kernel extraction;
+- microscopic dephasing-rate determination.
+
+### Quasi-static coherent dynamics
+
+Exact unitary propagation was completed for:
+
+- 2 coupling models;
+- 4 localized initial states;
+- 21 independent solvent realizations;
+- 0–20 ps;
+- 0.005 ps output interval;
+- 4001 time points.
+
+Numerical validation:
+
+- Maximum population-norm error: \(3.553\times10^{-15}\).
+
+Corrected-model minimum ensemble survival:
+
+| Initial state | Minimum survival |
+|---|---:|
+| PYR2 | 0.873483 |
+| PYR3 | 0.856748 |
+| PYR4 | 0.905243 |
+| PYR5 | 0.999914 |
+
+Maximum ensemble-mean PYR5 population from a PYR2, PYR3, or PYR4 initial excitation:
+
+\[
+8.200093\times10^{-5}.
+\]
+
+Direct coherent transfer into PYR5 is therefore strongly suppressed by its approximately 300 meV energy offset.
+
+The maximum instantaneous difference between point-dipole and TDC-AC ensemble-mean populations was approximately 0.0512. This difference results from accumulated coherent phase shifts and does not alter the overall localization regime.
+
+### Haken–Strobl pure-dephasing sensitivity
+
+A phenomenological pure-dephasing sweep was completed for:
+
+\[
+\gamma_\phi =
+0,\ 0.05,\ 0.1,\ 0.2,\ 0.5,\ 1,\ 2,\ 5,\ 10
+\ \mathrm{ps}^{-1}.
+\]
+
+The local Lindblad operators were defined as:
+
+\[
+L_i =
+\sqrt{\gamma_\phi}
+|i\rangle\langle i|.
+\]
+
+Numerical validation:
+
+- Gamma values completed: 9/9.
+- Frames per gamma: 21/21.
+- Initial states: 4/4.
+- Time points: 2001.
+- Maximum trace error: \(2.005\times10^{-13}\).
+- Maximum Hermiticity error: \(1.091\times10^{-13}\).
+- Minimum sampled density-matrix eigenvalue: \(-2.801\times10^{-14}\).
+- Gamma-zero error versus the accepted coherent trajectories: \(5.778\times10^{-13}\).
+- Overall numerical validation: **PASS**.
+
+Within the tested interval:
+
+- increasing pure dephasing suppresses \(l_1\) coherence;
+- population redistribution within PYR2–PYR4 increases monotonically;
+- the high-dephasing turnover was not reached;
+- the largest tested redistribution occurs at \(\gamma_\phi=10\ \mathrm{ps}^{-1}\);
+- the maximum PYR5 population reaches approximately \(5.0\times10^{-3}\).
+
+The Haken–Strobl calculation is a phenomenological sensitivity analysis. It contains no population-relaxation operators, detailed balance, thermal-equilibrium constraint, or microscopic solvent spectral density. The generated PYR5 population must not be interpreted as physical downhill relaxation.
+
+### Reusable Day019 scripts
+
+- `scripts/phase1A/validate_day019_pyr2_transition_density_cube.py`
+- `scripts/phase1A/converge_day019_pyr2_transition_density_grid.py`
+- `scripts/phase1A/build_day019_bright_transition_density_N80.py`
+- `scripts/phase1A/build_day019_bright_tdc_atomic_charge_couplings.py`
+- `scripts/phase1A/build_day019_bright_finite_size_corrected_hamiltonians.py`
+- `scripts/phase1A/audit_day019_bright_model_readiness.py`
+- `scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py`
+- `scripts/phase1A/run_day019_bright_haken_strobl_dephasing_sensitivity.py`
+
+### Next steps
+
+1. Extend the pure-dephasing sweep to \(20\), \(50\), \(100\), and \(200\ \mathrm{ps}^{-1}\).
+2. Locate the turnover toward high-dephasing or Zeno suppression.
+3. Audit the high-dephasing behavior against the expected effective hopping scaling.
+4. Decide whether a separate detailed-balance population-relaxation model is required.
+5. Generate reproducible figures for couplings, coherent dynamics, dephasing sensitivity, near-resonant frames, and PYR5 accessibility.
+6. Determine whether finer embedded sampling is required for microscopic bath modeling.
+
+**Day019 status: complete and numerically validated.**

@@ -1,0 +1,95 @@
+Day019 full two-state embedded-manifold analysis
+Source root: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction
+Selected embedded outputs: 84/84
+[01/84] frame000 PYR2 bright=S2 gap=69.0 meV f_bright=0.493214 mapping=PASS
+[02/84] frame000 PYR3 bright=S2 gap=79.0 meV f_bright=0.504490 mapping=PASS
+[03/84] frame000 PYR4 bright=S2 gap=77.0 meV f_bright=0.503190 mapping=PASS
+[04/84] frame000 PYR5 bright=S1 gap=66.0 meV f_bright=0.652758 mapping=PASS
+[05/84] frame001 PYR2 bright=S2 gap=89.0 meV f_bright=0.479081 mapping=PASS
+[06/84] frame001 PYR3 bright=S2 gap=55.0 meV f_bright=0.471984 mapping=PASS
+[07/84] frame001 PYR4 bright=S2 gap=72.0 meV f_bright=0.518124 mapping=PASS
+[08/84] frame001 PYR5 bright=S1 gap=83.0 meV f_bright=0.660520 mapping=PASS
+[09/84] frame002 PYR2 bright=S2 gap=85.0 meV f_bright=0.509241 mapping=PASS
+[10/84] frame002 PYR3 bright=S2 gap=73.0 meV f_bright=0.493704 mapping=PASS
+[11/84] frame002 PYR4 bright=S2 gap=72.0 meV f_bright=0.511090 mapping=PASS
+[12/84] frame002 PYR5 bright=S1 gap=68.0 meV f_bright=0.637472 mapping=PASS
+[13/84] frame003 PYR2 bright=S2 gap=89.0 meV f_bright=0.497306 mapping=PASS
+[14/84] frame003 PYR3 bright=S2 gap=67.0 meV f_bright=0.502294 mapping=PASS
+[15/84] frame003 PYR4 bright=S2 gap=78.0 meV f_bright=0.509273 mapping=PASS
+[16/84] frame003 PYR5 bright=S1 gap=102.0 meV f_bright=0.615413 mapping=PASS
+[17/84] frame004 PYR2 bright=S2 gap=86.0 meV f_bright=0.498540 mapping=PASS
+[18/84] frame004 PYR3 bright=S2 gap=81.0 meV f_bright=0.518861 mapping=PASS
+[19/84] frame004 PYR4 bright=S2 gap=63.0 meV f_bright=0.522246 mapping=PASS
+[20/84] frame004 PYR5 bright=S1 gap=54.0 meV f_bright=0.648595 mapping=PASS
+[21/84] frame005 PYR2 bright=S2 gap=62.0 meV f_bright=0.424630 mapping=PASS
+[22/84] frame005 PYR3 bright=S2 gap=57.0 meV f_bright=0.501038 mapping=PASS
+[23/84] frame005 PYR4 bright=S2 gap=55.0 meV f_bright=0.501976 mapping=PASS
+[24/84] frame005 PYR5 bright=S1 gap=74.0 meV f_bright=0.647308 mapping=PASS
+[25/84] frame006 PYR2 bright=S2 gap=66.0 meV f_bright=0.486884 mapping=PASS
+[26/84] frame006 PYR3 bright=S2 gap=77.0 meV f_bright=0.492967 mapping=PASS
+[27/84] frame006 PYR4 bright=S2 gap=63.0 meV f_bright=0.510757 mapping=PASS
+[28/84] frame006 PYR5 bright=S1 gap=69.0 meV f_bright=0.659520 mapping=PASS
+[29/84] frame007 PYR2 bright=S2 gap=92.0 meV f_bright=0.490046 mapping=PASS
+[30/84] frame007 PYR3 bright=S2 gap=101.0 meV f_bright=0.490450 mapping=PASS
+[31/84] frame007 PYR4 bright=S2 gap=73.0 meV f_bright=0.512698 mapping=PASS
+[32/84] frame007 PYR5 bright=S1 gap=69.0 meV f_bright=0.659437 mapping=PASS
+[33/84] frame008 PYR2 bright=S2 gap=85.0 meV f_bright=0.501966 mapping=PASS
+[34/84] frame008 PYR3 bright=S2 gap=66.0 meV f_bright=0.491496 mapping=PASS
+[35/84] frame008 PYR4 bright=S2 gap=72.0 meV f_bright=0.503082 mapping=PASS
+[36/84] frame008 PYR5 bright=S1 gap=78.0 meV f_bright=0.655884 mapping=PASS
+[37/84] frame009 PYR2 bright=S2 gap=77.0 meV f_bright=0.503202 mapping=PASS
+[38/84] frame009 PYR3 bright=S2 gap=73.0 meV f_bright=0.514855 mapping=PASS
+[39/84] frame009 PYR4 bright=S2 gap=61.0 meV f_bright=0.510874 mapping=PASS
+[40/84] frame009 PYR5 bright=S1 gap=90.0 meV f_bright=0.623179 mapping=PASS
+[41/84] frame010 PYR2 bright=S2 gap=81.0 meV f_bright=0.503065 mapping=PASS
+[42/84] frame010 PYR3 bright=S2 gap=69.0 meV f_bright=0.507950 mapping=PASS
+[43/84] frame010 PYR4 bright=S2 gap=79.0 meV f_bright=0.501788 mapping=PASS
+[44/84] frame010 PYR5 bright=S1 gap=68.0 meV f_bright=0.663969 mapping=PASS
+[45/84] frame011 PYR2 bright=S2 gap=90.0 meV f_bright=0.495369 mapping=PASS
+[46/84] frame011 PYR3 bright=S2 gap=92.0 meV f_bright=0.504427 mapping=PASS
+[47/84] frame011 PYR4 bright=S2 gap=74.0 meV f_bright=0.518576 mapping=PASS
+[48/84] frame011 PYR5 bright=S1 gap=67.0 meV f_bright=0.659752 mapping=PASS
+[49/84] frame012 PYR2 bright=S2 gap=87.0 meV f_bright=0.505777 mapping=PASS
+[50/84] frame012 PYR3 bright=S2 gap=74.0 meV f_bright=0.511610 mapping=PASS
+[51/84] frame012 PYR4 bright=S2 gap=69.0 meV f_bright=0.513306 mapping=PASS
+[52/84] frame012 PYR5 bright=S1 gap=73.0 meV f_bright=0.644719 mapping=PASS
+[53/84] frame013 PYR2 bright=S2 gap=84.0 meV f_bright=0.505300 mapping=PASS
+[54/84] frame013 PYR3 bright=S2 gap=67.0 meV f_bright=0.499481 mapping=PASS
+[55/84] frame013 PYR4 bright=S2 gap=71.0 meV f_bright=0.510445 mapping=PASS
+[56/84] frame013 PYR5 bright=S1 gap=53.0 meV f_bright=0.661990 mapping=PASS
+[57/84] frame014 PYR2 bright=S2 gap=85.0 meV f_bright=0.504495 mapping=PASS
+[58/84] frame014 PYR3 bright=S2 gap=82.0 meV f_bright=0.500472 mapping=PASS
+[59/84] frame014 PYR4 bright=S2 gap=91.0 meV f_bright=0.507558 mapping=PASS
+[60/84] frame014 PYR5 bright=S1 gap=58.0 meV f_bright=0.634868 mapping=PASS
+[61/84] frame015 PYR2 bright=S2 gap=90.0 meV f_bright=0.488878 mapping=PASS
+[62/84] frame015 PYR3 bright=S2 gap=80.0 meV f_bright=0.510482 mapping=PASS
+[63/84] frame015 PYR4 bright=S2 gap=69.0 meV f_bright=0.498507 mapping=PASS
+[64/84] frame015 PYR5 bright=S1 gap=64.0 meV f_bright=0.617290 mapping=PASS
+[65/84] frame016 PYR2 bright=S2 gap=90.0 meV f_bright=0.484550 mapping=PASS
+[66/84] frame016 PYR3 bright=S2 gap=94.0 meV f_bright=0.500973 mapping=PASS
+[67/84] frame016 PYR4 bright=S2 gap=67.0 meV f_bright=0.514036 mapping=PASS
+[68/84] frame016 PYR5 bright=S1 gap=61.0 meV f_bright=0.640872 mapping=PASS
+[69/84] frame017 PYR2 bright=S2 gap=93.0 meV f_bright=0.503383 mapping=PASS
+[70/84] frame017 PYR3 bright=S2 gap=77.0 meV f_bright=0.499303 mapping=PASS
+[71/84] frame017 PYR4 bright=S2 gap=72.0 meV f_bright=0.516237 mapping=PASS
+[72/84] frame017 PYR5 bright=S1 gap=59.0 meV f_bright=0.658948 mapping=PASS
+[73/84] frame018 PYR2 bright=S2 gap=76.0 meV f_bright=0.501315 mapping=PASS
+[74/84] frame018 PYR3 bright=S2 gap=72.0 meV f_bright=0.514667 mapping=PASS
+[75/84] frame018 PYR4 bright=S2 gap=66.0 meV f_bright=0.513302 mapping=PASS
+[76/84] frame018 PYR5 bright=S1 gap=82.0 meV f_bright=0.647780 mapping=PASS
+[77/84] frame019 PYR2 bright=S2 gap=87.0 meV f_bright=0.505900 mapping=PASS
+[78/84] frame019 PYR3 bright=S2 gap=70.0 meV f_bright=0.506261 mapping=PASS
+[79/84] frame019 PYR4 bright=S2 gap=88.0 meV f_bright=0.509308 mapping=PASS
+[80/84] frame019 PYR5 bright=S1 gap=70.0 meV f_bright=0.649181 mapping=PASS
+[81/84] frame020 PYR2 bright=S2 gap=68.0 meV f_bright=0.476938 mapping=PASS
+[82/84] frame020 PYR3 bright=S2 gap=66.0 meV f_bright=0.499581 mapping=PASS
+[83/84] frame020 PYR4 bright=S2 gap=67.0 meV f_bright=0.521661 mapping=PASS
+[84/84] frame020 PYR5 bright=S1 gap=80.0 meV f_bright=0.670424 mapping=PASS
+
+Day019 full two-state analysis completed.
+Embedded outputs: 84/84
+State observations: 168/168
+Bright-root mapping preserved: 84/84
+Full S1-S2 gap range: 53.000-102.000 meV
+Minimum bright fosc share: 0.878722
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_full_two_state_manifold_analysis

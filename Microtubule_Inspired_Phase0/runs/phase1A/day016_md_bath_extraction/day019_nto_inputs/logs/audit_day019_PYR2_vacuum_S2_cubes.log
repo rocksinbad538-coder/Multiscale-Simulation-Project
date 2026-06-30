@@ -1,0 +1,10 @@
+===== PYR2 VACUUM S2 NTO CUBES =====
+
+runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR2_vacuum_reference_nto_s1_s2/frame000_PYR2_vacuum_reference_nto_s1_s2.s2.mo52a.cube | 7259247 bytes
+runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR2_vacuum_reference_nto_s1_s2/frame000_PYR2_vacuum_reference_nto_s1_s2.s2.mo53a.cube | 7259247 bytes
+
+Cube count:        2
+
+Expected orbital-specific files:
+runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR2_vacuum_reference_nto_s1_s2/frame000_PYR2_vacuum_reference_nto_s1_s2.s2.mo52a.cube
+runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR2_vacuum_reference_nto_s1_s2/frame000_PYR2_vacuum_reference_nto_s1_s2.s2.mo53a.cube

@@ -1,0 +1,21 @@
+Day019 quasi-static coherent bright-state dynamics
+Exact propagation: 4001 points from 0 to 20.000 ps, dt=0.005 ps
+Each of the 21 solvent frames is propagated independently.
+[point_dipole] initial=PYR2_bright: completed 21/21
+[point_dipole] initial=PYR3_bright: completed 21/21
+[point_dipole] initial=PYR4_bright: completed 21/21
+[point_dipole] initial=PYR5_bright: completed 21/21
+[tdcac_corrected] initial=PYR2_bright: completed 21/21
+[tdcac_corrected] initial=PYR3_bright: completed 21/21
+[tdcac_corrected] initial=PYR4_bright: completed 21/21
+[tdcac_corrected] initial=PYR5_bright: completed 21/21
+
+Day019 quasi-static coherent dynamics completed.
+Models: 2/2
+Initial states: 4/4
+Frames per condition: 21/21
+Time points: 4001
+Maximum norm error: 3.553e-15
+Maximum point-vs-corrected ensemble population difference: 5.124317e-02
+Maximum ensemble-mean PYR5 population from PYR2/PYR3/PYR4: 8.200093e-05
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_bright_quasistatic_coherent_dynamics

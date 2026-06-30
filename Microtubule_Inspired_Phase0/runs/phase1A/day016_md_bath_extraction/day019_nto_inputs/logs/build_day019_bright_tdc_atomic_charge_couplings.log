@@ -1,0 +1,22 @@
+Day019 bright transition-density atomic-charge benchmark
+Partition: nearest-atom Voronoi on normalized N80 cubes
+Correction: minimum-norm atomic-charge adjustment
+Constraints: exact Q=0 and exact ORCA transition dipole
+[PYR2] S2: Qcube=+1.308e-04, raw dipole error=1.492%, corrected dipole error=8.988e-15, RMS dq=8.767e-03 e
+[PYR3] S2: Qcube=-1.397e-04, raw dipole error=1.411%, corrected dipole error=4.902e-15, RMS dq=1.548e-02 e
+[PYR4] S2: Qcube=+5.976e-06, raw dipole error=1.440%, corrected dipole error=5.210e-16, RMS dq=2.483e-03 e
+[PYR5] S1: Qcube=-1.033e-04, raw dipole error=1.128%, corrected dipole error=6.527e-15, RMS dq=1.085e-02 e
+[PYR2-PYR3] point=-1.170805 meV, TDC-AC=-1.208873 meV, delta=-0.038067 meV, ratio=+1.032514
+[PYR2-PYR4] point=+0.254942 meV, TDC-AC=+0.253160 meV, delta=-0.001782 meV, ratio=+0.993009
+[PYR2-PYR5] point=+0.073324 meV, TDC-AC=+0.078609 meV, delta=+0.005285 meV, ratio=+1.072071
+[PYR3-PYR4] point=+1.221499 meV, TDC-AC=+1.200548 meV, delta=-0.020951 meV, ratio=+0.982848
+[PYR3-PYR5] point=+0.286177 meV, TDC-AC=+0.282232 meV, delta=-0.003945 meV, ratio=+0.986214
+[PYR4-PYR5] point=-1.391671 meV, TDC-AC=-1.458079 meV, delta=-0.066408 meV, ratio=+1.047718
+
+Day019 bright TDC-derived atomic-charge benchmark completed.
+Validated sites: 4/4
+Coupling pairs: 6/6
+Maximum point reproduction error: 2.838e-08 meV
+Maximum |TDC-AC - point|: 0.066408 meV
+Maximum relative deviation: 7.2071%
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_bright_tdc_atomic_charge_couplings

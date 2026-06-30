@@ -1,0 +1,9 @@
+# Day019 four-state bright TDC-AC-corrected Hamiltonian, frame=005, time_ps=25.000000
+# energy units: eV; matrix is real symmetric
+# bright-bright finite-size correction factors were derived from frame000 TDC-AC / point-dipole ratios
+# no dielectric screening is included
+# basis: PYR2_bright PYR3_bright PYR4_bright PYR5_bright
+0.318000000000 -0.001128528343 0.000235041551 0.000077808066
+-0.001128528343 0.302000000000 0.001191626623 0.000282131171
+0.000235041551 0.001191626623 0.339000000000 -0.001413668710
+0.000077808066 0.000282131171 -0.001413668710 0.047000000000

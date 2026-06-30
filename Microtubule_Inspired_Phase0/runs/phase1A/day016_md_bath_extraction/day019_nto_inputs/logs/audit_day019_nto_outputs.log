@@ -1,0 +1,102 @@
+===== DAY019 NTO OUTPUT AUDIT =====
+
+--------------------------------------------------------------------------------
+JOB: frame000_PYR2_vacuum_reference_nto_s1_s2
+Normal termination: PASS
+SCF convergence: PASS
+TDDFT completion: PASS
+S1 NTO section: PASS
+S2 NTO section: PASS
+S1 NTO files:        1
+S2 NTO files:        1
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR2_vacuum_reference_nto_s1_s2/frame000_PYR2_vacuum_reference_nto_s1_s2.s1.nto | 1852132 bytes
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR2_vacuum_reference_nto_s1_s2/frame000_PYR2_vacuum_reference_nto_s1_s2.s2.nto | 1852132 bytes
+
+--------------------------------------------------------------------------------
+JOB: frame000_PYR3_vacuum_reference_nto_s1_s2
+Normal termination: PASS
+SCF convergence: PASS
+TDDFT completion: PASS
+S1 NTO section: PASS
+S2 NTO section: PASS
+S1 NTO files:        1
+S2 NTO files:        1
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR3_vacuum_reference_nto_s1_s2/frame000_PYR3_vacuum_reference_nto_s1_s2.s1.nto | 1852132 bytes
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR3_vacuum_reference_nto_s1_s2/frame000_PYR3_vacuum_reference_nto_s1_s2.s2.nto | 1852132 bytes
+
+--------------------------------------------------------------------------------
+JOB: frame000_PYR4_vacuum_reference_nto_s1_s2
+Normal termination: PASS
+SCF convergence: PASS
+TDDFT completion: PASS
+S1 NTO section: PASS
+S2 NTO section: PASS
+S1 NTO files:        1
+S2 NTO files:        1
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR4_vacuum_reference_nto_s1_s2/frame000_PYR4_vacuum_reference_nto_s1_s2.s1.nto | 1852132 bytes
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR4_vacuum_reference_nto_s1_s2/frame000_PYR4_vacuum_reference_nto_s1_s2.s2.nto | 1852132 bytes
+
+--------------------------------------------------------------------------------
+JOB: frame000_PYR5_vacuum_reference_nto_s1_s2
+Normal termination: PASS
+SCF convergence: PASS
+TDDFT completion: PASS
+S1 NTO section: PASS
+S2 NTO section: PASS
+S1 NTO files:        1
+S2 NTO files:        1
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR5_vacuum_reference_nto_s1_s2/frame000_PYR5_vacuum_reference_nto_s1_s2.s1.nto | 1852132 bytes
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame000_PYR5_vacuum_reference_nto_s1_s2/frame000_PYR5_vacuum_reference_nto_s1_s2.s2.nto | 1852132 bytes
+
+--------------------------------------------------------------------------------
+JOB: frame003_PYR5_embedding_nto_s1_s2
+Normal termination: PASS
+SCF convergence: PASS
+TDDFT completion: PASS
+S1 NTO section: PASS
+S2 NTO section: PASS
+S1 NTO files:        1
+S2 NTO files:        1
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame003_PYR5_embedding_nto_s1_s2/frame003_PYR5_embedding_nto_s1_s2.s1.nto | 1852132 bytes
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame003_PYR5_embedding_nto_s1_s2/frame003_PYR5_embedding_nto_s1_s2.s2.nto | 1852132 bytes
+
+--------------------------------------------------------------------------------
+JOB: frame005_PYR2_embedding_nto_s1_s2
+Normal termination: PASS
+SCF convergence: PASS
+TDDFT completion: PASS
+S1 NTO section: PASS
+S2 NTO section: PASS
+S1 NTO files:        1
+S2 NTO files:        1
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame005_PYR2_embedding_nto_s1_s2/frame005_PYR2_embedding_nto_s1_s2.s1.nto | 1852132 bytes
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame005_PYR2_embedding_nto_s1_s2/frame005_PYR2_embedding_nto_s1_s2.s2.nto | 1852132 bytes
+
+--------------------------------------------------------------------------------
+JOB: frame005_PYR5_embedding_nto_s1_s2
+Normal termination: PASS
+SCF convergence: PASS
+TDDFT completion: PASS
+S1 NTO section: PASS
+S2 NTO section: PASS
+S1 NTO files:        1
+S2 NTO files:        1
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame005_PYR5_embedding_nto_s1_s2/frame005_PYR5_embedding_nto_s1_s2.s1.nto | 1852132 bytes
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame005_PYR5_embedding_nto_s1_s2/frame005_PYR5_embedding_nto_s1_s2.s2.nto | 1852132 bytes
+
+--------------------------------------------------------------------------------
+JOB: frame013_PYR5_embedding_nto_s1_s2
+Normal termination: PASS
+SCF convergence: PASS
+TDDFT completion: PASS
+S1 NTO section: PASS
+S2 NTO section: PASS
+S1 NTO files:        1
+S2 NTO files:        1
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame013_PYR5_embedding_nto_s1_s2/frame013_PYR5_embedding_nto_s1_s2.s1.nto | 1852132 bytes
+  runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/frame013_PYR5_embedding_nto_s1_s2/frame013_PYR5_embedding_nto_s1_s2.s2.nto | 1852132 bytes
+
+===== GLOBAL COUNTS =====
+Validated current outputs: 8
+S1 NTO files:        8
+S2 NTO files:        8

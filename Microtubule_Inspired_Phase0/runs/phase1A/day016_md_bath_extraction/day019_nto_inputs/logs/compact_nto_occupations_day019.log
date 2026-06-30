@@ -1,0 +1,65 @@
+===== DAY019 COMPACT NTO OCCUPATIONS =====
+
+JOB: frame000_PYR2_vacuum_reference_nto_s1_s2
+NATURAL TRANSITION ORBITALS FOR STATE    1
+Threshold for printing occupation numbers 0.000100
+ E=   0.147025 au      4.001 eV    32268.3 cm**-1
+NATURAL TRANSITION ORBITALS FOR STATE    2
+Threshold for printing occupation numbers 0.000100
+ E=   0.150296 au      4.090 eV    32986.2 cm**-1
+
+JOB: frame000_PYR3_vacuum_reference_nto_s1_s2
+NATURAL TRANSITION ORBITALS FOR STATE    1
+Threshold for printing occupation numbers 0.000100
+ E=   0.147043 au      4.001 eV    32272.2 cm**-1
+NATURAL TRANSITION ORBITALS FOR STATE    2
+Threshold for printing occupation numbers 0.000100
+ E=   0.149969 au      4.081 eV    32914.4 cm**-1
+
+JOB: frame000_PYR4_vacuum_reference_nto_s1_s2
+NATURAL TRANSITION ORBITALS FOR STATE    1
+Threshold for printing occupation numbers 0.000100
+ E=   0.147559 au      4.015 eV    32385.5 cm**-1
+NATURAL TRANSITION ORBITALS FOR STATE    2
+Threshold for printing occupation numbers 0.000100
+ E=   0.150252 au      4.089 eV    32976.5 cm**-1
+
+JOB: frame000_PYR5_vacuum_reference_nto_s1_s2
+NATURAL TRANSITION ORBITALS FOR STATE    1
+Threshold for printing occupation numbers 0.000100
+ E=   0.138920 au      3.780 eV    30489.4 cm**-1
+NATURAL TRANSITION ORBITALS FOR STATE    2
+Threshold for printing occupation numbers 0.000100
+ E=   0.141327 au      3.846 eV    31017.6 cm**-1
+
+JOB: frame003_PYR5_embedding_nto_s1_s2
+NATURAL TRANSITION ORBITALS FOR STATE    1
+Threshold for printing occupation numbers 0.000100
+ E=   0.137792 au      3.750 eV    30241.8 cm**-1
+NATURAL TRANSITION ORBITALS FOR STATE    2
+Threshold for printing occupation numbers 0.000100
+ E=   0.141552 au      3.852 eV    31067.0 cm**-1
+
+JOB: frame005_PYR2_embedding_nto_s1_s2
+NATURAL TRANSITION ORBITALS FOR STATE    1
+Threshold for printing occupation numbers 0.000100
+ E=   0.147217 au      4.006 eV    32310.4 cm**-1
+NATURAL TRANSITION ORBITALS FOR STATE    2
+Threshold for printing occupation numbers 0.000100
+ E=   0.149499 au      4.068 eV    32811.3 cm**-1
+
+JOB: frame005_PYR5_embedding_nto_s1_s2
+NATURAL TRANSITION ORBITALS FOR STATE    1
+Threshold for printing occupation numbers 0.000100
+ E=   0.139535 au      3.797 eV    30624.4 cm**-1
+NATURAL TRANSITION ORBITALS FOR STATE    2
+Threshold for printing occupation numbers 0.000100
+ E=   0.142257 au      3.871 eV    31221.7 cm**-1
+
+JOB: frame013_PYR5_embedding_nto_s1_s2
+NATURAL TRANSITION ORBITALS FOR STATE    1
+Threshold for printing occupation numbers 0.000100
+ E=   0.139029 au      3.783 eV    30513.4 cm**-1
+NATURAL TRANSITION ORBITALS FOR STATE    2
+Threshold for printing occupation numbers 0.000100
+ E=   0.140987 au      3.836 eV    30943.1 cm**-1

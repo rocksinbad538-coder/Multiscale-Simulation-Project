@@ -1,0 +1,375 @@
+Day019 bright transition-density N80 production
+[PYR2] Reusing existing N80 cube: pilot.cistp02.N80.cube
+[PYR2] S2: raw |mu|=1.570543 au, sqrt(2)-scaled |mu|=2.221083 au, ORCA |mu|=2.224508 au, error=0.1540%, status=PASS
+[PYR3] Generating bright S2 transition density on 80^3 grid...
+-----------------------------------------------------------------------
+Entering interactive generation of plots ...
+GBW-file   : pilot.gbw
+-----------------------------------------------------------------------
+ ... the gbw file was successfully read
+ ... the default volumetric output format is Cube
+ ... the output filenames are pilot.moxy.plt
+-----------------------------------------------------------------------
+ NOTE: x=no of the MO to plot:
+       y='a' for op=0 (spin up or closed shell)
+       y='b' for op=1 (spin-down)
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+ ... The XYZ file pilot.xyz did not exist. Has been written now
+-----------------------------------------------------------------------
+       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+       ===>>> Number of available orbitals : 274
+       ===>>> Number of operators          : 1
+       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 0 0
+Output file    ... (null)
+Format         ... Grid3d/Cube
+Resolution     ... 40 40 40
+Boundaries     ...    54.227127    85.518121 (x direction)
+                      93.117691   108.950725 (y direction)
+                      68.551251    95.439183 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: Enter NGRID: Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 0 0
+Output file    ... (null)
+Format         ... Grid3d/Cube
+Resolution     ... 80 80 80
+Boundaries     ...    54.227127    85.518121 (x direction)
+                      93.117691   108.950725 (y direction)
+                      68.551251    95.439183 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: The default name of the CIS-File would be: frame000_PYR3_embedding.cis
+Is this the one you want (y/n)?Number of Vectors found: 10
+Orbital Window: 16...52 -> 53...273
+Below you have to enter the states to compute the difference/transition densities for
+Their generation may take some time and therefore you may want to enter several
+states that should be used for this computation and then go for a beer.
+Give a list like: 1 5 12 26 (just blanks to separate state numbers)
+NOTE: a. the first excited state will be state 1 as in the program output and
+      the ground state cannot be given
+      b. if you did a TDA FALSE calculation, the states should be given as
+      2 * state - 1, for these correspond to the X+Y vectors, while the 2 * state
+      correspond to the X-Y vectors. E.g. the first three states should be 1, 3 and 5.
+      while 2, 4 and 6 would refer to the X-Y components of these.
+Enter states: You entered 1 states to compute
+-------------------------------------
+HANDLING DENSITY   1 OF   1 STATE=  2
+-------------------------------------
+Output filename                   ... pilot.cistp02.cube
+Operator   0: i= 16... 52 a= 53...273
+
+                             ---------------------------------
+                             FINISHED CIS TRANSITION DENSITIES
+                             ----------------------------------
+
+Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 0 0
+Output file    ... pilot.cistp02.cube
+Format         ... Grid3d/Cube
+Resolution     ... 80 80 80
+Boundaries     ...    54.227127    85.518121 (x direction)
+                      93.117691   108.950725 (y direction)
+                      68.551251    95.439183 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: [PYR3] Generated pilot.cistp02.N80.cube (7259224 bytes)
+[PYR3] S2: raw |mu|=1.586683 au, sqrt(2)-scaled |mu|=2.243908 au, ORCA |mu|=2.246803 au, error=0.1288%, status=PASS
+[PYR4] Generating bright S2 transition density on 80^3 grid...
+-----------------------------------------------------------------------
+Entering interactive generation of plots ...
+GBW-file   : pilot.gbw
+-----------------------------------------------------------------------
+ ... the gbw file was successfully read
+ ... the default volumetric output format is Cube
+ ... the output filenames are pilot.moxy.plt
+-----------------------------------------------------------------------
+ NOTE: x=no of the MO to plot:
+       y='a' for op=0 (spin up or closed shell)
+       y='b' for op=1 (spin-down)
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+ ... The XYZ file pilot.xyz did not exist. Has been written now
+-----------------------------------------------------------------------
+       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+       ===>>> Number of available orbitals : 274
+       ===>>> Number of operators          : 1
+       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 0 0
+Output file    ... (null)
+Format         ... Grid3d/Cube
+Resolution     ... 40 40 40
+Boundaries     ...    30.794523    46.608660 (x direction)
+                      54.227127    85.518121 (y direction)
+                      93.854684   120.742616 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: Enter NGRID: Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 0 0
+Output file    ... (null)
+Format         ... Grid3d/Cube
+Resolution     ... 80 80 80
+Boundaries     ...    30.794523    46.608660 (x direction)
+                      54.227127    85.518121 (y direction)
+                      93.854684   120.742616 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: The default name of the CIS-File would be: frame000_PYR4_embedding.cis
+Is this the one you want (y/n)?Number of Vectors found: 10
+Orbital Window: 16...52 -> 53...273
+Below you have to enter the states to compute the difference/transition densities for
+Their generation may take some time and therefore you may want to enter several
+states that should be used for this computation and then go for a beer.
+Give a list like: 1 5 12 26 (just blanks to separate state numbers)
+NOTE: a. the first excited state will be state 1 as in the program output and
+      the ground state cannot be given
+      b. if you did a TDA FALSE calculation, the states should be given as
+      2 * state - 1, for these correspond to the X+Y vectors, while the 2 * state
+      correspond to the X-Y vectors. E.g. the first three states should be 1, 3 and 5.
+      while 2, 4 and 6 would refer to the X-Y components of these.
+Enter states: You entered 1 states to compute
+-------------------------------------
+HANDLING DENSITY   1 OF   1 STATE=  2
+-------------------------------------
+Output filename                   ... pilot.cistp02.cube
+Operator   0: i= 16... 52 a= 53...273
+
+                             ---------------------------------
+                             FINISHED CIS TRANSITION DENSITIES
+                             ----------------------------------
+
+Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 0 0
+Output file    ... pilot.cistp02.cube
+Format         ... Grid3d/Cube
+Resolution     ... 80 80 80
+Boundaries     ...    30.794523    46.608660 (x direction)
+                      54.227127    85.518121 (y direction)
+                      93.854684   120.742616 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: [PYR4] Generated pilot.cistp02.N80.cube (7259224 bytes)
+[PYR4] S2: raw |mu|=1.583542 au, sqrt(2)-scaled |mu|=2.239467 au, ORCA |mu|=2.240876 au, error=0.0629%, status=PASS
+[PYR5] Generating bright S1 transition density on 80^3 grid...
+-----------------------------------------------------------------------
+Entering interactive generation of plots ...
+GBW-file   : pilot.gbw
+-----------------------------------------------------------------------
+ ... the gbw file was successfully read
+ ... the default volumetric output format is Cube
+ ... the output filenames are pilot.moxy.plt
+-----------------------------------------------------------------------
+ NOTE: x=no of the MO to plot:
+       y='a' for op=0 (spin up or closed shell)
+       y='b' for op=1 (spin-down)
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+ ... The XYZ file pilot.xyz did not exist. Has been written now
+-----------------------------------------------------------------------
+       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+       ===>>> Number of available orbitals : 274
+       ===>>> Number of operators          : 1
+       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 0 0
+Output file    ... (null)
+Format         ... Grid3d/Cube
+Resolution     ... 40 40 40
+Boundaries     ...    53.924771    85.801580 (x direction)
+                      28.621338    44.378783 (y direction)
+                     119.195911   146.027152 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: Enter NGRID: Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 0 0
+Output file    ... (null)
+Format         ... Grid3d/Cube
+Resolution     ... 80 80 80
+Boundaries     ...    53.924771    85.801580 (x direction)
+                      28.621338    44.378783 (y direction)
+                     119.195911   146.027152 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: The default name of the CIS-File would be: frame000_PYR5_embedding.cis
+Is this the one you want (y/n)?Number of Vectors found: 10
+Orbital Window: 16...52 -> 53...273
+Below you have to enter the states to compute the difference/transition densities for
+Their generation may take some time and therefore you may want to enter several
+states that should be used for this computation and then go for a beer.
+Give a list like: 1 5 12 26 (just blanks to separate state numbers)
+NOTE: a. the first excited state will be state 1 as in the program output and
+      the ground state cannot be given
+      b. if you did a TDA FALSE calculation, the states should be given as
+      2 * state - 1, for these correspond to the X+Y vectors, while the 2 * state
+      correspond to the X-Y vectors. E.g. the first three states should be 1, 3 and 5.
+      while 2, 4 and 6 would refer to the X-Y components of these.
+Enter states: You entered 1 states to compute
+-------------------------------------
+HANDLING DENSITY   1 OF   1 STATE=  1
+-------------------------------------
+Output filename                   ... pilot.cistp01.cube
+Operator   0: i= 16... 52 a= 53...273
+
+                             ---------------------------------
+                             FINISHED CIS TRANSITION DENSITIES
+                             ----------------------------------
+
+Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 0 0
+Output file    ... pilot.cistp01.cube
+Format         ... Grid3d/Cube
+Resolution     ... 80 80 80
+Boundaries     ...    53.924771    85.801580 (x direction)
+                      28.621338    44.378783 (y direction)
+                     119.195911   146.027152 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: [PYR5] Generated pilot.cistp01.N80.cube (7259224 bytes)
+[PYR5] S1: raw |mu|=1.877981 au, sqrt(2)-scaled |mu|=2.655866 au, ORCA |mu|=2.655189 au, error=0.0255%, status=PASS
+
+Day019 bright transition-density N80 production completed.
+Raw cubes: 4/4
+sqrt(2)-normalized cubes: 4/4
+Validated sites: 4/4
+Maximum normalized dipole error: 0.1540%
+Minimum directional cosine: 0.99999666
+Overall status: PASS
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_bright_transition_density_N80

@@ -1,0 +1,9 @@
+calculation_type,frame,cluster,job,tracked_root,reason,metric_value
+embedded,3,PYR5,frame003_PYR5_embedding,1,minimum_PYR5_solvent_shift,-29.999999999999805
+embedded,5,PYR2,frame005_PYR2_embedding,2,minimum_tracked_character_weight,0.738175
+embedded,5,PYR5,frame005_PYR5_embedding,1,maximum_PYR5_solvent_shift,17.000000000000348
+embedded,13,PYR5,frame013_PYR5_embedding,1,minimum_S1_S2_separation_meV,52.999999999999936
+vacuum_reference,0,PYR2,frame000_PYR2_vacuum_reference,2,vacuum_reference_for_each_chromophore,0.846347
+vacuum_reference,0,PYR3,frame000_PYR3_vacuum_reference,2,vacuum_reference_for_each_chromophore,0.848738
+vacuum_reference,0,PYR4,frame000_PYR4_vacuum_reference,2,vacuum_reference_for_each_chromophore,0.849718
+vacuum_reference,0,PYR5,frame000_PYR5_vacuum_reference,1,vacuum_reference_for_each_chromophore,0.877731

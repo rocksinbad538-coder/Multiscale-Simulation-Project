@@ -1,0 +1,26 @@
+Day019 Haken-Strobl pure-dephasing sensitivity
+Gamma values: 0, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10 ps^-1
+Exact Liouvillian propagation: 2001 points, 0-20.000 ps, dt=0.010 ps
+All 21 solvent Hamiltonians are propagated independently.
+[gamma=0 ps^-1] completed 21/21 frames
+[gamma=0.05 ps^-1] completed 21/21 frames
+[gamma=0.1 ps^-1] completed 21/21 frames
+[gamma=0.2 ps^-1] completed 21/21 frames
+[gamma=0.5 ps^-1] completed 21/21 frames
+[gamma=1 ps^-1] completed 21/21 frames
+[gamma=2 ps^-1] completed 21/21 frames
+[gamma=5 ps^-1] completed 21/21 frames
+[gamma=10 ps^-1] completed 21/21 frames
+
+Day019 Haken-Strobl dephasing sensitivity completed.
+Gamma values: 9/9
+Frames per gamma: 21/21
+Initial states: 4/4
+Time points: 2001
+Maximum trace error: 2.005e-13
+Minimum sampled density eigenvalue: -2.801e-14
+Gamma=0 coherent-reference error: 5.778e-13
+Gamma maximizing mean high-manifold transfer: 10 ps^-1
+Maximum PYR5 population across sweep: 5.000637e-03
+Overall numerical validation: PASS
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity

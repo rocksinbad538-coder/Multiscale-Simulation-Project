@@ -1,0 +1,144 @@
+Day019 cross-site NTO aligned-subspace analysis
+Vacuum sites: PYR2, PYR3, PYR4, PYR5
+Loading 24 selected vacuum-reference cubes.
+[load 01/24] frame000_PYR2_vacuum_reference_nto_s1_s2.s1.mo51a.cube
+[load 02/24] frame000_PYR2_vacuum_reference_nto_s1_s2.s1.mo52a.cube
+[load 03/24] frame000_PYR2_vacuum_reference_nto_s1_s2.s1.mo53a.cube
+[load 04/24] frame000_PYR2_vacuum_reference_nto_s1_s2.s1.mo54a.cube
+[load 05/24] frame000_PYR2_vacuum_reference_nto_s1_s2.s2.mo52a.cube
+[load 06/24] frame000_PYR2_vacuum_reference_nto_s1_s2.s2.mo53a.cube
+[load 07/24] frame000_PYR3_vacuum_reference_nto_s1_s2.s1.mo51a.cube
+[load 08/24] frame000_PYR3_vacuum_reference_nto_s1_s2.s1.mo52a.cube
+[load 09/24] frame000_PYR3_vacuum_reference_nto_s1_s2.s1.mo53a.cube
+[load 10/24] frame000_PYR3_vacuum_reference_nto_s1_s2.s1.mo54a.cube
+[load 11/24] frame000_PYR3_vacuum_reference_nto_s1_s2.s2.mo52a.cube
+[load 12/24] frame000_PYR3_vacuum_reference_nto_s1_s2.s2.mo53a.cube
+[load 13/24] frame000_PYR4_vacuum_reference_nto_s1_s2.s1.mo51a.cube
+[load 14/24] frame000_PYR4_vacuum_reference_nto_s1_s2.s1.mo52a.cube
+[load 15/24] frame000_PYR4_vacuum_reference_nto_s1_s2.s1.mo53a.cube
+[load 16/24] frame000_PYR4_vacuum_reference_nto_s1_s2.s1.mo54a.cube
+[load 17/24] frame000_PYR4_vacuum_reference_nto_s1_s2.s2.mo52a.cube
+[load 18/24] frame000_PYR4_vacuum_reference_nto_s1_s2.s2.mo53a.cube
+[load 19/24] frame000_PYR5_vacuum_reference_nto_s1_s2.s1.mo52a.cube
+[load 20/24] frame000_PYR5_vacuum_reference_nto_s1_s2.s1.mo53a.cube
+[load 21/24] frame000_PYR5_vacuum_reference_nto_s1_s2.s2.mo51a.cube
+[load 22/24] frame000_PYR5_vacuum_reference_nto_s1_s2.s2.mo52a.cube
+[load 23/24] frame000_PYR5_vacuum_reference_nto_s1_s2.s2.mo53a.cube
+[load 24/24] frame000_PYR5_vacuum_reference_nto_s1_s2.s2.mo54a.cube
+
+========================================================================================
+[pair 1/6] PYR2 <-> PYR3
+========================================================================================
+    PYR3->PYR2 S2 MO52a captured_norm=0.99821887 coverage=0.962896
+    PYR3->PYR2 S2 MO53a captured_norm=0.99764751 coverage=0.962896
+    PYR3->PYR2 S1 MO52a captured_norm=0.99822449 coverage=0.962896
+    PYR3->PYR2 S1 MO51a captured_norm=0.99804870 coverage=0.962896
+    PYR3->PYR2 S1 MO53a captured_norm=0.99774762 coverage=0.962896
+    PYR3->PYR2 S1 MO54a captured_norm=0.99759691 coverage=0.962896
+    PYR2->PYR3 S2 MO52a captured_norm=0.99822204 coverage=0.962896
+    PYR2->PYR3 S2 MO53a captured_norm=0.99764927 coverage=0.962896
+    PYR2->PYR3 S1 MO52a captured_norm=0.99821734 coverage=0.962896
+    PYR2->PYR3 S1 MO51a captured_norm=0.99805405 coverage=0.962896
+    PYR2->PYR3 S1 MO53a captured_norm=0.99775644 coverage=0.962896
+    PYR2->PYR3 S1 MO54a captured_norm=0.99758850 coverage=0.962896
+  symmetric tracked-pair similarity=0.99907510
+  symmetric alternate-subspace similarity=0.99962910
+
+========================================================================================
+[pair 2/6] PYR2 <-> PYR4
+========================================================================================
+    PYR4->PYR2 S2 MO52a captured_norm=0.99768885 coverage=0.956285
+    PYR4->PYR2 S2 MO53a captured_norm=0.99720072 coverage=0.956285
+    PYR4->PYR2 S1 MO52a captured_norm=0.99771311 coverage=0.956285
+    PYR4->PYR2 S1 MO51a captured_norm=0.99769380 coverage=0.956285
+    PYR4->PYR2 S1 MO53a captured_norm=0.99713298 coverage=0.956285
+    PYR4->PYR2 S1 MO54a captured_norm=0.99715346 coverage=0.956285
+    PYR2->PYR4 S2 MO52a captured_norm=0.99766859 coverage=0.969711
+    PYR2->PYR4 S2 MO53a captured_norm=0.99717360 coverage=0.969711
+    PYR2->PYR4 S1 MO52a captured_norm=0.99766049 coverage=0.969711
+    PYR2->PYR4 S1 MO51a captured_norm=0.99768389 coverage=0.969711
+    PYR2->PYR4 S1 MO53a captured_norm=0.99712989 coverage=0.969711
+    PYR2->PYR4 S1 MO54a captured_norm=0.99709662 coverage=0.969711
+  symmetric tracked-pair similarity=0.99851951
+  symmetric alternate-subspace similarity=0.99962916
+
+========================================================================================
+[pair 3/6] PYR2 <-> PYR5
+========================================================================================
+    PYR5->PYR2 S1 MO52a captured_norm=0.99037239 coverage=0.957709
+    PYR5->PYR2 S1 MO53a captured_norm=0.98749289 coverage=0.957709
+    PYR5->PYR2 S2 MO52a captured_norm=0.99034675 coverage=0.957709
+    PYR5->PYR2 S2 MO51a captured_norm=0.98859327 coverage=0.957709
+    PYR5->PYR2 S2 MO53a captured_norm=0.98846336 coverage=0.957709
+    PYR5->PYR2 S2 MO54a captured_norm=0.98700603 coverage=0.957709
+    PYR2->PYR5 S2 MO52a captured_norm=0.99061165 coverage=0.967926
+    PYR2->PYR5 S2 MO53a captured_norm=0.98793154 coverage=0.967926
+    PYR2->PYR5 S1 MO52a captured_norm=0.99058292 coverage=0.967926
+    PYR2->PYR5 S1 MO51a captured_norm=0.98885557 coverage=0.967926
+    PYR2->PYR5 S1 MO53a captured_norm=0.98872039 coverage=0.967926
+    PYR2->PYR5 S1 MO54a captured_norm=0.98746198 coverage=0.967926
+  symmetric tracked-pair similarity=0.99115282
+  symmetric alternate-subspace similarity=0.99079513
+
+========================================================================================
+[pair 4/6] PYR3 <-> PYR4
+========================================================================================
+    PYR4->PYR3 S2 MO52a captured_norm=0.99940556 coverage=0.950779
+    PYR4->PYR3 S2 MO53a captured_norm=0.99946097 coverage=0.950779
+    PYR4->PYR3 S1 MO52a captured_norm=0.99942060 coverage=0.950779
+    PYR4->PYR3 S1 MO51a captured_norm=0.99958485 coverage=0.950779
+    PYR4->PYR3 S1 MO53a captured_norm=0.99932608 coverage=0.950779
+    PYR4->PYR3 S1 MO54a captured_norm=0.99945528 coverage=0.950779
+    PYR3->PYR4 S2 MO52a captured_norm=0.99937604 coverage=0.975156
+    PYR3->PYR4 S2 MO53a captured_norm=0.99942866 coverage=0.975156
+    PYR3->PYR4 S1 MO52a captured_norm=0.99937697 coverage=0.975156
+    PYR3->PYR4 S1 MO51a captured_norm=0.99956373 coverage=0.975156
+    PYR3->PYR4 S1 MO53a captured_norm=0.99930049 coverage=0.975156
+    PYR3->PYR4 S1 MO54a captured_norm=0.99941439 coverage=0.975156
+  symmetric tracked-pair similarity=0.99976503
+  symmetric alternate-subspace similarity=0.99983243
+
+========================================================================================
+[pair 5/6] PYR3 <-> PYR5
+========================================================================================
+    PYR5->PYR3 S1 MO52a captured_norm=0.99030502 coverage=0.957775
+    PYR5->PYR3 S1 MO53a captured_norm=0.98742766 coverage=0.957775
+    PYR5->PYR3 S2 MO52a captured_norm=0.99027932 coverage=0.957775
+    PYR5->PYR3 S2 MO51a captured_norm=0.98850815 coverage=0.957775
+    PYR5->PYR3 S2 MO53a captured_norm=0.98835478 coverage=0.957775
+    PYR5->PYR3 S2 MO54a captured_norm=0.98693756 coverage=0.957775
+    PYR3->PYR5 S2 MO52a captured_norm=0.99054306 coverage=0.967863
+    PYR3->PYR5 S2 MO53a captured_norm=0.98785134 coverage=0.967863
+    PYR3->PYR5 S1 MO52a captured_norm=0.99050463 coverage=0.967863
+    PYR3->PYR5 S1 MO51a captured_norm=0.98875864 coverage=0.967863
+    PYR3->PYR5 S1 MO53a captured_norm=0.98858181 coverage=0.967863
+    PYR3->PYR5 S1 MO54a captured_norm=0.98739009 coverage=0.967863
+  symmetric tracked-pair similarity=0.99226410
+  symmetric alternate-subspace similarity=0.99098435
+
+========================================================================================
+[pair 6/6] PYR4 <-> PYR5
+========================================================================================
+    PYR5->PYR4 S1 MO52a captured_norm=0.99022550 coverage=0.959160
+    PYR5->PYR4 S1 MO53a captured_norm=0.98737990 coverage=0.959160
+    PYR5->PYR4 S2 MO52a captured_norm=0.99019794 coverage=0.959160
+    PYR5->PYR4 S2 MO51a captured_norm=0.98846100 coverage=0.959160
+    PYR5->PYR4 S2 MO53a captured_norm=0.98814713 coverage=0.959160
+    PYR5->PYR4 S2 MO54a captured_norm=0.98688434 coverage=0.959160
+    PYR4->PYR5 S2 MO52a captured_norm=0.99046671 coverage=0.966525
+    PYR4->PYR5 S2 MO53a captured_norm=0.98780597 coverage=0.966525
+    PYR4->PYR5 S1 MO52a captured_norm=0.99038103 coverage=0.966525
+    PYR4->PYR5 S1 MO51a captured_norm=0.98875453 coverage=0.966525
+    PYR4->PYR5 S1 MO53a captured_norm=0.98834454 coverage=0.966525
+    PYR4->PYR5 S1 MO54a captured_norm=0.98736030 coverage=0.966525
+  symmetric tracked-pair similarity=0.99195482
+  symmetric alternate-subspace similarity=0.99111202
+
+Day019 cross-site NTO analysis completed.
+Site pairs analyzed: 6/6
+Directional calculations: 12/12
+Tracked-pair similarity range: 0.99115282-0.99976503
+Alternate-subspace similarity range: 0.99079513-0.99983243
+Minimum captured norm: 0.98688434
+Maximum directional asymmetry: 0.00039128
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_nto_cross_site_overlap_analysis

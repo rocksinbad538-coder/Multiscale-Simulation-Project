@@ -1,0 +1,220 @@
+2
+52
+3
+0
+4
+80
+5
+7
+8
+0
+11
+12
+-----------------------------------------------------------------------
+Entering interactive generation of plots ...
+GBW-file   : frame013_PYR5_embedding_nto_s1_s2.s2.nto
+-----------------------------------------------------------------------
+ ... the gbw file was successfully read
+ ... the default volumetric output format is Cube
+ ... the output filenames are frame013_PYR5_embedding_nto_s1_s2.s2.moxy.plt
+-----------------------------------------------------------------------
+ NOTE: x=no of the MO to plot:
+       y='a' for op=0 (spin up or closed shell)
+       y='b' for op=1 (spin-down)
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+ ... The XYZ file frame013_PYR5_embedding_nto_s1_s2.s2.xyz did not exist. Has been written now
+-----------------------------------------------------------------------
+       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+       ===>>> Number of available orbitals : 274
+       ===>>> Number of operators          : 1
+       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 0 0
+Output file    ... (null)
+Format         ... Grid3d/Cube
+Resolution     ... 40 40 40
+Boundaries     ...    53.924771    85.801580 (x direction)
+                      28.621338    44.378783 (y direction)
+                     119.195911   146.027152 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: Enter MO: Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 52 0
+Output file    ... (null)
+Format         ... Grid3d/Cube
+Resolution     ... 40 40 40
+Boundaries     ...    53.924771    85.801580 (x direction)
+                      28.621338    44.378783 (y direction)
+                     119.195911   146.027152 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: Enter OP: Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 52 0
+Output file    ... (null)
+Format         ... Grid3d/Cube
+Resolution     ... 40 40 40
+Boundaries     ...    53.924771    85.801580 (x direction)
+                      28.621338    44.378783 (y direction)
+                     119.195911   146.027152 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: Enter NGRID: Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 52 0
+Output file    ... (null)
+Format         ... Grid3d/Cube
+Resolution     ... 80 80 80
+Boundaries     ...    53.924771    85.801580 (x direction)
+                      28.621338    44.378783 (y direction)
+                     119.195911   146.027152 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: File-Format is presently: 7
+     1 -  2D   Origin format
+     2 -  2D   HPGL format
+     3 -  2D   Gnuplot binary format
+     4 -  2D   Gnuplot ascii format
+     5 -  3D   Grid data binary (Fortran number format!)
+     6 -  3D   Grid data ASCII
+     7 -  3D   Gaussian cube
+     8 -  3D   simple format
+Enter Format: Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 52 0
+Output file    ... (null)
+Format         ... Grid3d/Cube
+Resolution     ... 80 80 80
+Boundaries     ...    53.924771    85.801580 (x direction)
+                      28.621338    44.378783 (y direction)
+                     119.195911   146.027152 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: Enter 0(MO) or 1(AO): Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 52 0
+Output file    ... (null)
+Format         ... Grid3d/Cube
+Resolution     ... 80 80 80
+Boundaries     ...    53.924771    85.801580 (x direction)
+                      28.621338    44.378783 (y direction)
+                     119.195911   146.027152 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: Calling PlotGrid3d with ATOM-A,B=0,0
+                 *** PLOTTING FINISHED ***
+ Output file: frame013_PYR5_embedding_nto_s1_s2.s2.mo52a.cube
+--------------------------------------------------------------------------
+Current-settings:
+
+PlotType id    ... 1
+PlotType       ... MO-PLOT
+MO/Operator    ... 52 0
+Output file    ... frame013_PYR5_embedding_nto_s1_s2.s2.mo52a.cube
+Format         ... Grid3d/Cube
+Resolution     ... 80 80 80
+Boundaries     ...    53.924771    85.801580 (x direction)
+                      28.621338    44.378783 (y direction)
+                     119.195911   146.027152 (z direction)
+
+       1 - Enter type of plot
+       2 - Enter no of orbital to plot
+       3 - Enter operator of orbital (0=alpha,1=beta)
+       4 - Enter number of grid intervals
+       5 - Select output file format
+       6 - Plot CIS/TD-DFT difference densities
+       7 - Plot CIS/TD-DFT transition densities
+       8 - Set AO(=1) vs MO(=0) to plot
+       9 - List all available densities
+      10 - Perform Density Algebraic Operations
+
+      11 - Generate the plot
+      12 - exit this program
+Enter a number: 

@@ -1,0 +1,34 @@
+Day019 finite-size-corrected bright Hamiltonian construction
+Primary model: four bright local states
+Sensitivity model: full eight-state Hamiltonian with only bright-bright couplings corrected
+[frame 000/020] max|delta J|=0.066408 meV, max bright4 eig shift=0.012587 meV, min eigvec overlap=0.99999311
+[frame 001/020] max|delta J|=0.067934 meV, max bright4 eig shift=0.004776 meV, min eigvec overlap=0.99999769
+[frame 002/020] max|delta J|=0.064440 meV, max bright4 eig shift=0.010340 meV, min eigvec overlap=0.99996980
+[frame 003/020] max|delta J|=0.063040 meV, max bright4 eig shift=0.002642 meV, min eigvec overlap=0.99999902
+[frame 004/020] max|delta J|=0.066853 meV, max bright4 eig shift=0.021122 meV, min eigvec overlap=0.99998162
+[frame 005/020] max|delta J|=0.064385 meV, max bright4 eig shift=0.004931 meV, min eigvec overlap=0.99999750
+[frame 006/020] max|delta J|=0.065617 meV, max bright4 eig shift=0.011512 meV, min eigvec overlap=0.99998800
+[frame 007/020] max|delta J|=0.066519 meV, max bright4 eig shift=0.002499 meV, min eigvec overlap=0.99999899
+[frame 008/020] max|delta J|=0.065616 meV, max bright4 eig shift=0.014330 meV, min eigvec overlap=0.99998446
+[frame 009/020] max|delta J|=0.064553 meV, max bright4 eig shift=0.008922 meV, min eigvec overlap=0.99999194
+[frame 010/020] max|delta J|=0.066877 meV, max bright4 eig shift=0.006579 meV, min eigvec overlap=0.99999629
+[frame 011/020] max|delta J|=0.067962 meV, max bright4 eig shift=0.003302 meV, min eigvec overlap=0.99999839
+[frame 012/020] max|delta J|=0.065908 meV, max bright4 eig shift=0.015720 meV, min eigvec overlap=0.99998740
+[frame 013/020] max|delta J|=0.066734 meV, max bright4 eig shift=0.002041 meV, min eigvec overlap=0.99999420
+[frame 014/020] max|delta J|=0.066864 meV, max bright4 eig shift=0.019415 meV, min eigvec overlap=0.99997391
+[frame 015/020] max|delta J|=0.065861 meV, max bright4 eig shift=0.007001 meV, min eigvec overlap=0.99999270
+[frame 016/020] max|delta J|=0.066956 meV, max bright4 eig shift=0.003795 meV, min eigvec overlap=0.99999768
+[frame 017/020] max|delta J|=0.067255 meV, max bright4 eig shift=0.042074 meV, min eigvec overlap=0.99999316
+[frame 018/020] max|delta J|=0.066585 meV, max bright4 eig shift=0.018796 meV, min eigvec overlap=0.99985570
+[frame 019/020] max|delta J|=0.066807 meV, max bright4 eig shift=0.014590 meV, min eigvec overlap=0.99998269
+[frame 020/020] max|delta J|=0.067924 meV, max bright4 eig shift=0.007245 meV, min eigvec overlap=0.99999493
+
+Day019 bright finite-size-corrected Hamiltonians completed.
+Correction factors: 6/6
+Full-eight-state snapshots: 21/21
+Bright-four-state snapshots: 21/21
+Maximum |delta J|: 0.067962 meV
+Maximum full8 eigenvalue shift: 0.042075 meV
+Maximum bright4 eigenvalue shift: 0.042074 meV
+Minimum matched bright4 eigenvector overlap: 0.9998556977
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_bright_finite_size_corrected_hamiltonians

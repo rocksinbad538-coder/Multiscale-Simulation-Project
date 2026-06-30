@@ -1,0 +1,12 @@
+Day019 transition-density pilot preparation
+[PYR2] bright=S2 GBW=2507310 bytes CIS=654596 bytes radius=4.604400 A
+[PYR3] bright=S2 GBW=2507310 bytes CIS=654596 bytes radius=4.605037 A
+[PYR4] bright=S2 GBW=2507310 bytes CIS=654596 bytes radius=4.604559 A
+[PYR5] bright=S1 GBW=2507310 bytes CIS=654596 bytes radius=4.756961 A
+
+Day019 transition-density pilot preparation completed.
+Pilot states: 4/4 READY
+GBW companions: 4/4
+CIS companions: 4/4
+Geometry pairs ranked: 6/6
+Wrote: runs/phase1A/day016_md_bath_extraction/day019_transition_density_pilot
