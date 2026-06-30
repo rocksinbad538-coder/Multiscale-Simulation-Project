@@ -16,3 +16,4 @@
 *.cis filter=lfs diff=lfs merge=lfs -text
 *.densities filter=lfs diff=lfs merge=lfs -text
 *.out filter=lfs diff=lfs merge=lfs -text
+*.npz filter=lfs diff=lfs merge=lfs -text
