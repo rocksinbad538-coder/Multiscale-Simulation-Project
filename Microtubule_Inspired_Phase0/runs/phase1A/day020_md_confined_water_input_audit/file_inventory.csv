@@ -1,0 +1,10 @@
+path,suffix,size_bytes,size_human
+runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/audit_contacts_nvt_100ps_frozenSolute.csv,.csv,380,380.000 B
+runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/audit_pyrene_hbn_nvt_100ps_frozenSolute_NOPBC.csv,.csv,639,639.000 B
+runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.cpt,.cpt,1641612,1.566 MiB
+runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.edr,.edr,202692,197.941 KiB
+runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.gro,.gro,4714174,4.496 MiB
+runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.log,.log,241859,236.190 KiB
+runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.mdp,.mdp,521,521.000 B
+runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.tpr,.tpr,1835688,1.751 MiB
+runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.xtc,.xtc,47418924,45.222 MiB

@@ -1,0 +1,14 @@
+Day020 density-grid geometry repair completed.
+Raw DAT shape: 161 x 55
+Density grid: 160 x 54
+Coordinate interpretation: lower cell edges
+Axial edges: -4.009000 to 4.009000 nm
+Radial edges: 0.000000 to 2.699126 nm
+Axial nominal spacing: 0.05011000 nm
+Radial nominal spacing: 0.04998400 nm
+Density range: 0.000000 to 88.541600 nm^-3
+Analysis cylinder volume: 183.511019 nm^3
+Integrated average water count: 5211.768138
+Volume-weighted mean density: 28.400301 nm^-3
+Overall validation: PASS
+Canonical V2: runs/phase1A/day020_confined_water_axial_radial_density/water_oxygen_axial_radial_density_canonical_v2.npz

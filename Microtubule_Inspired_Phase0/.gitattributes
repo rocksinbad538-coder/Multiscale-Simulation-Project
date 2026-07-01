@@ -26,3 +26,7 @@ results/dipoles/*_records.csv filter=lfs diff=lfs merge=lfs -text
 *.densities filter=lfs diff=lfs merge=lfs -text
 *.cube filter=lfs diff=lfs merge=lfs -text
 *.TDDFTGuess.gbw filter=lfs diff=lfs merge=lfs -text
+runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/ensemble_population_dephasing_statistics.csv filter=lfs diff=lfs merge=lfs -text
+runs/phase1A/day016_md_bath_extraction/day019_bright_quasistatic_coherent_dynamics/ensemble_population_statistics.csv filter=lfs diff=lfs merge=lfs -text
+runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/ensemble_population_dephasing_statistics.csv filter=lfs diff=lfs merge=lfs -text
+runs/phase1A/day020_md_confined_water_input_audit/gromacs_dump_tpr.txt filter=lfs diff=lfs merge=lfs -text

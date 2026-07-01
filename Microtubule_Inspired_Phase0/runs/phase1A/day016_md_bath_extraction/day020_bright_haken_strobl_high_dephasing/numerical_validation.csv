@@ -1,0 +1,2 @@
+scipy_version,n_gamma_values,n_frames,n_initial_states,n_time_points,maximum_trace_error,maximum_hermiticity_error,minimum_sampled_density_eigenvalue,minimum_raw_population,maximum_raw_population,gamma0_maximum_population_error_vs_coherent_reference,trace_validation_pass,hermiticity_validation_pass,positivity_validation_pass,gamma0_reference_validation_pass
+1.17.1,13,21,4,2001,2.2959412149250953e-13,1.0909489505356907e-13,-2.8005829371249092e-14,0.0,1.0,5.777600620149315e-13,True,True,True,True

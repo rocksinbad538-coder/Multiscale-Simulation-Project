@@ -1,0 +1,8 @@
+Day020 combined stationary-state repair completed.
+Corrected gamma=0 rows: 126/126
+Previous minimum stationary eigenvalue: -2.590456609232e-08
+Corrected minimum stationary eigenvalue: 1.271163896675e-12
+Overall numerical validation: PASS
+Minimum mean stationary PYR5: 0.241116708 at T=150 K, kappa=10, gamma=100
+Maximum mean stationary PYR5: 0.999977286 at T=150 K, kappa=0.1, gamma=0
+Wrote: runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/STATIONARY_STATE_REPAIR_DAY020.md

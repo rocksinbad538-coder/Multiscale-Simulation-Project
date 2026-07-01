@@ -1,0 +1,9 @@
+Day020 high-dephasing Zeno-scaling audit completed.
+Hamiltonians: 21/21
+Maximum Hamiltonian symmetry error: 0.000e+00 eV
+Maximum classical norm error: 3.997e-15
+Mean predicted PYR2-PYR4 turnover scale: 20.884 ps^-1
+Mean predicted PYR5-pair turnover scale: 469.140 ps^-1
+Mean high-manifold k(100)/k(200): 1.917808
+Mean PYR5-pair k(100)/k(200): 0.566727
+Wrote: runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/zeno_scaling_audit

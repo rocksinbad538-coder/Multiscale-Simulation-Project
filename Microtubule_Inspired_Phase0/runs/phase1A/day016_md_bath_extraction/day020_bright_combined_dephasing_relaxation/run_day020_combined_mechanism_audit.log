@@ -1,0 +1,10 @@
+Day020 combined-mechanism audit completed.
+Numerical validation: PASS
+PYR4 gateway fraction: 0.842996 to 0.914134
+Final PYR5 population range: 0.000160 to 0.110107
+Gamma=100 final PYR5 range: 0.105186 to 0.110107
+Thermal-only steady PYR5 range: 0.999951 to 0.999977
+Nonzero-dephasing steady PYR5 range: 0.241117 to 0.749992
+Maximum temperature effect on final PYR5: 0.004922
+Maximum temperature effect on steady PYR5: 0.042052
+Wrote: runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/combined_mechanism_audit

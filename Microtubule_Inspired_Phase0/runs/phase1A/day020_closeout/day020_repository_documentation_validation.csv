@@ -1,0 +1,2 @@
+date,project_day,daily_note_path,daily_note_exists,daily_note_nonempty,README_path,README_start_marker_count,README_end_marker_count,manifest_start_marker_count,manifest_end_marker_count,canonical_water_count_from_CSV,canonical_reference_water_count,CSV_reconstruction_error,tube_associated_water_count,HBN_segment_count,HBN_gap_count,README_update_idempotent,Git_operations_performed,overall_validation_pass
+2026-07-01,Day020,notes/day_020.md,True,True,README.md,1,1,1,1,5211.768137770948,5211.768138,2.2905260266270489e-07,987.8696615625652,1,0,True,False,True

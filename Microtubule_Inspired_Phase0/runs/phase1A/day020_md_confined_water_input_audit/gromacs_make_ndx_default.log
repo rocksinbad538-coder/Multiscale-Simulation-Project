@@ -1,0 +1,37 @@
+                     :-) GROMACS - gmx make_ndx, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx make_ndx -f runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.tpr -o runs/phase1A/day020_md_confined_water_input_audit/default_from_tpr.ndx
+
+
+Reading structure file
+Reading file runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.tpr, VERSION 2025.4 (single precision)
+Reading file runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.tpr, VERSION 2025.4 (single precision)
+
+GROMACS reminds you: "A little less conversation, a little more action, please." (Elvis Presley)
+
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:     5      Other residues
+There are: 16634      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+  0 System              : 68320 atoms
+  1 Other               :  1784 atoms
+  2 HBN                 :  1680 atoms
+  3 PYR                 :   104 atoms
+  4 Water               : 66536 atoms
+  5 SOL                 : 66536 atoms
+  6 non-Water           :  1784 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 

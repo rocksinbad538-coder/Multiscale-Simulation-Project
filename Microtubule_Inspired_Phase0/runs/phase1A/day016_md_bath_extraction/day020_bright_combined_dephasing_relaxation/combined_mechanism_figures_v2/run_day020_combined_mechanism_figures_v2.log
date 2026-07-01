@@ -1,0 +1,10 @@
+Day020 combined-mechanism publication figures V2 completed.
+Conditions: 24/24
+Numerical validation: PASS
+Summary-statistics cross-check: PASS
+Main figure: 1 PNG + 1 PDF
+Supplementary figure: 1 PNG + 1 PDF
+Final PYR5 range: 0.000160 to 0.110107
+Stationary PYR5 range: 0.241117 to 0.999977
+PYR4 gateway range: 0.842996 to 0.914134
+Wrote: runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/combined_mechanism_figures_v2

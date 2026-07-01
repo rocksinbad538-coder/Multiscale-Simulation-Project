@@ -1,0 +1,21 @@
+Day020 MD/confined-water input audit
+
+Day020 MD/confined-water input audit completed.
+Files discovered: 9
+Trajectories: 1
+TPR files: 1
+GRO files: 1
+MDP files: 1
+NDX files: 0
+TOP/ITP files: 0
+GROMACS executable: /usr/local/gromacs/bin/gmx
+Primary trajectory: runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.xtc
+Primary TPR: runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.tpr
+Primary GRO: runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.gro
+Last trajectory frame: 200
+Last trajectory time: 100.0 ps
+Declared atoms: 68320
+Water residues: 16634
+Ions: 0
+Freeze evidence detected: True
+Wrote: runs/phase1A/day020_md_confined_water_input_audit

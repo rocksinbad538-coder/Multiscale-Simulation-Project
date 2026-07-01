@@ -1,0 +1,14 @@
+Day020 confined-water regional analysis completed.
+Tube half-length: 3.009000 nm
+Mean wall radius: 1.199126 nm
+Interface half-width: 0.250 nm
+Mouth half-width: 0.500 nm
+Canonical cylinder count: 5211.768138
+Interior core: 454.596798 (8.723%)
+Interfacial shell: 448.014331 (8.596%)
+Mouth zones: 108.870100 (2.089%)
+Exterior: 4200.286909 (80.592%)
+Regional conservation error: 9.095e-13
+Sensitivity conditions: 9
+Overall validation: PASS
+Wrote: runs/phase1A/day020_confined_water_axial_radial_density/regional_classification

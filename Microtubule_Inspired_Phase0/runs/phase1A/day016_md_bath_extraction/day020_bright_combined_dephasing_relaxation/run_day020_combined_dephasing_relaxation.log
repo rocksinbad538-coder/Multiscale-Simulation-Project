@@ -1,0 +1,44 @@
+Day020 combined dephasing + detailed-balance relaxation
+Temperatures: 150, 300 K
+Kappa values: 0.1, 1, 10 ps^-1
+Gamma values: 0, 1, 20, 100 ps^-1
+Propagation: 0-100 ps, dt=0.05 ps, 2001 points
+[T=150 K, kappa=0.1, gamma=0] completed 21/21 frames
+[T=150 K, kappa=0.1, gamma=1] completed 21/21 frames
+[T=150 K, kappa=0.1, gamma=20] completed 21/21 frames
+[T=150 K, kappa=0.1, gamma=100] completed 21/21 frames
+[T=150 K, kappa=1, gamma=0] completed 21/21 frames
+[T=150 K, kappa=1, gamma=1] completed 21/21 frames
+[T=150 K, kappa=1, gamma=20] completed 21/21 frames
+[T=150 K, kappa=1, gamma=100] completed 21/21 frames
+[T=150 K, kappa=10, gamma=0] completed 21/21 frames
+[T=150 K, kappa=10, gamma=1] completed 21/21 frames
+[T=150 K, kappa=10, gamma=20] completed 21/21 frames
+[T=150 K, kappa=10, gamma=100] completed 21/21 frames
+[T=300 K, kappa=0.1, gamma=0] completed 21/21 frames
+[T=300 K, kappa=0.1, gamma=1] completed 21/21 frames
+[T=300 K, kappa=0.1, gamma=20] completed 21/21 frames
+[T=300 K, kappa=0.1, gamma=100] completed 21/21 frames
+[T=300 K, kappa=1, gamma=0] completed 21/21 frames
+[T=300 K, kappa=1, gamma=1] completed 21/21 frames
+[T=300 K, kappa=1, gamma=20] completed 21/21 frames
+[T=300 K, kappa=1, gamma=100] completed 21/21 frames
+[T=300 K, kappa=10, gamma=0] completed 21/21 frames
+[T=300 K, kappa=10, gamma=1] completed 21/21 frames
+[T=300 K, kappa=10, gamma=20] completed 21/21 frames
+[T=300 K, kappa=10, gamma=100] completed 21/21 frames
+
+Day020 combined dephasing + relaxation completed.
+Temperatures: 2/2
+Kappa values: 3/3
+Gamma values: 4/4
+Frames per condition: 21/21
+Maximum trace error: 1.830e-12
+Maximum Hermiticity error: 1.151e-13
+Minimum sampled density eigenvalue: 0.000e+00
+Maximum combined stationary residual: 5.460e-13
+Maximum gamma=0 reference error: 0.000e+00
+PYR4 gateway fraction range: 0.842996 to 0.914134
+Mean stationary PYR5 population range: 0.241117 to 0.999977
+Overall numerical validation: FAIL
+Wrote: runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation

@@ -1,0 +1,9 @@
+Day020 relaxation coarse-graining audit completed.
+Hamiltonians: 21/21
+Minimum assigned site weight: 0.57938732
+Maximum generator column-sum error: 6.661e-16
+Maximum detailed-balance error: 4.441e-16
+Minimum internal-mixing/capture rate ratio: 7.072e+01
+Maximum coarse-grained slow-mode error: 9.088e-03
+PYR4 gateway contribution range: 0.831842 to 0.875653
+Wrote: runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation/relaxation_coarse_graining_audit

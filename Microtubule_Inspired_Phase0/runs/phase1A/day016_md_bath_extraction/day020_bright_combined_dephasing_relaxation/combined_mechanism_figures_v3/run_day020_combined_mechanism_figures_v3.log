@@ -1,0 +1,9 @@
+Day020 combined-mechanism publication figures V3 completed.
+Conditions: 24/24
+Numerical validation: PASS
+Summary-statistics cross-check: PASS
+Gateway bootstrap: 5000 replicates per condition
+Overall gateway 95% CI envelope: 0.783755 to 0.936965
+Main figure: 1 PNG + 1 PDF
+Supplementary figure: 1 PNG + 1 PDF
+Wrote: runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/combined_mechanism_figures_v3

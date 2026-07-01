@@ -1,0 +1,2 @@
+segment_id,first_plane_id,last_plane_id,plane_count,atom_count,minimum_atom_z_nm,maximum_atom_z_nm,lower_boundary_nm,upper_boundary_nm,boundary_span_nm,mean_radius_nm,median_radius_nm,p05_radius_nm,p95_radius_nm
+1,1,56,56,1680,-3.00871428571429,3.009285714285711,-3.04521428571429,3.045785714285711,6.091000000000001,1.1991257007481553,1.199110734397998,1.1986694938787432,1.1996007206103714

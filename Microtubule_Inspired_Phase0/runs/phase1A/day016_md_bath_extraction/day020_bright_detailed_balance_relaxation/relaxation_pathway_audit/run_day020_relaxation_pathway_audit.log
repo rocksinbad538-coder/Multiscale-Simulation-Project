@@ -1,0 +1,8 @@
+Day020 relaxation-pathway audit completed.
+Hamiltonians: 21/21
+Minimum assigned site weight: 0.57938732
+Maximum detailed-balance error: 4.441e-16
+PYR5 overlap-weight range: 7.878175e-07 to 4.156523e-05
+PYR5 downward-timescale range at kappa=10 ps^-1: 2405.841 to 126932.953 ps
+Apparent ensemble capture-time range: 7.642 to 623.410 ns
+Wrote: runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation/relaxation_pathway_audit

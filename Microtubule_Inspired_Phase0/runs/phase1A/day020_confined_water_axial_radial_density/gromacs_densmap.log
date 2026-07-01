@@ -1,0 +1,233 @@
+                     :-) GROMACS - gmx densmap, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx densmap -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.xtc -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.tpr -n /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day020_confined_water_axial_radial_density/confined_water_analysis_groups.ndx -od /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day020_confined_water_axial_radial_density/water_oxygen_axial_radial_density.dat -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day020_confined_water_axial_radial_density/water_oxygen_axial_radial_density.xpm -b 0.000000 -e 100.000000 -bin 0.050000 -amax 4.009000 -rmax 2.699126 -unit nm-3 -sums
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.tpr, VERSION 2025.4 (single precision)
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.tpr, VERSION 2025.4 (single precision)
+
+Select two groups to define the axis and an analysis group
+Group     0 (      AxisMinus) has   180 elements
+Group     1 (       AxisPlus) has   180 elements
+Group     2 (        Water_O) has 16634 elements
+Group     3 (            HBN) has  1680 elements
+Group     4 (        PYR_all) has   104 elements
+Group     5 (          PYR_1) has    26 elements
+Group     6 (          PYR_2) has    26 elements
+Group     7 (          PYR_3) has    26 elements
+Group     8 (          PYR_4) has    26 elements
+Group     9 (        Water_H) has 33268 elements
+Group    10 (        Water_M) has 16634 elements
+Select a group: Select a group: Select a group: 
+Reading frame       0 time    0.000   
+Reading frame       1 time    0.500   
+Reading frame       2 time    1.000   
+Reading frame       3 time    1.500   
+Reading frame       4 time    2.000   
+Reading frame       5 time    2.500   
+Reading frame       6 time    3.000   
+Reading frame       7 time    3.500   
+Reading frame       8 time    4.000   
+Reading frame       9 time    4.500   
+Reading frame      10 time    5.000   
+Reading frame      11 time    5.500   
+Reading frame      12 time    6.000   
+Reading frame      13 time    6.500   
+Reading frame      14 time    7.000   
+Reading frame      15 time    7.500   
+Reading frame      16 time    8.000   
+Reading frame      17 time    8.500   
+Reading frame      18 time    9.000   
+Reading frame      19 time    9.500   
+Reading frame      20 time   10.000   
+Reading frame      30 time   15.000   
+Reading frame      40 time   20.000   
+Reading frame      50 time   25.000   
+Reading frame      60 time   30.000   
+Reading frame      70 time   35.000   
+Reading frame      80 time   40.000   
+Reading frame      90 time   45.000   
+Reading frame     100 time   50.000   
+Reading frame     110 time   55.000   
+Reading frame     120 time   60.000   
+Reading frame     130 time   65.000   
+Reading frame     140 time   70.000   
+Reading frame     150 time   75.000   
+Reading frame     160 time   80.000   
+Reading frame     170 time   85.000   
+Reading frame     180 time   90.000   
+Reading frame     190 time   95.000   
+Reading frame     200 time  100.000   
+Last frame        200 time  100.000   
+
+GROMACS reminds you: "I was told I'd never make it to VP rank because I was too outspoken. Maybe so, but I think men will always find an excuse for keeping women in their 'place.' So, let's make that place the executive suite and start more of our own companies." (Jean Bartik, ENIAC developer)
+
+Selected 0: 'AxisMinus'
+Selected 1: 'AxisPlus'
+Selected 2: 'Water_O'
+
+  The maximum density is 88.541573 (nm^-3)
+Density sums:
+1008.48	Density sums:
+1025.52	Density sums:
+1044.04	Density sums:
+1103.35	Density sums:
+998.933	Density sums:
+1046.61	Density sums:
+1058.38	Density sums:
+1054.77	Density sums:
+1069.65	Density sums:
+1050.42	Density sums:
+1088.68	Density sums:
+1088.97	Density sums:
+1120.71	Density sums:
+1136.16	Density sums:
+1166.71	Density sums:
+1052.78	Density sums:
+1053.47	Density sums:
+1089.58	Density sums:
+1073.7	Density sums:
+1181.86	Density sums:
+1098.38	Density sums:
+1108.97	Density sums:
+1116.62	Density sums:
+1160.45	Density sums:
+1215.04	Density sums:
+1154.13	Density sums:
+1184.6	Density sums:
+1203.93	Density sums:
+1178.74	Density sums:
+1260.73	Density sums:
+1274.01	Density sums:
+1286.35	Density sums:
+1279.37	Density sums:
+1308.61	Density sums:
+1300.58	Density sums:
+1304.37	Density sums:
+1346.34	Density sums:
+1404.63	Density sums:
+1413.53	Density sums:
+1396.88	Density sums:
+1483.92	Density sums:
+1436.5	Density sums:
+1493.49	Density sums:
+1538.64	Density sums:
+1646.3	Density sums:
+1783.93	Density sums:
+1849.03	Density sums:
+1749.6	Density sums:
+1778.91	Density sums:
+1709.8	Density sums:
+1772.11	Density sums:
+1797.53	Density sums:
+1756.06	Density sums:
+1761.02	Density sums:
+1726.61	Density sums:
+1760.65	Density sums:
+1716.19	Density sums:
+1781.69	Density sums:
+1704.26	Density sums:
+1763.04	Density sums:
+1788.87	Density sums:
+1796.42	Density sums:
+1719.68	Density sums:
+1675.67	Density sums:
+1745.52	Density sums:
+1788.66	Density sums:
+1905.43	Density sums:
+1728.09	Density sums:
+1772.41	Density sums:
+1722.33	Density sums:
+1738.41	Density sums:
+1732.26	Density sums:
+1813.53	Density sums:
+1735.55	Density sums:
+1810.11	Density sums:
+1757.09	Density sums:
+1738.16	Density sums:
+1750.69	Density sums:
+1734.44	Density sums:
+1739.5	Density sums:
+1772.76	Density sums:
+1677.07	Density sums:
+1767.23	Density sums:
+1755.57	Density sums:
+1845.31	Density sums:
+1787.6	Density sums:
+1779.37	Density sums:
+1840.4	Density sums:
+1758.49	Density sums:
+1682.16	Density sums:
+1725.03	Density sums:
+1725.74	Density sums:
+1810.47	Density sums:
+1870.22	Density sums:
+1799.96	Density sums:
+1725.54	Density sums:
+1717.93	Density sums:
+1780.92	Density sums:
+1847.55	Density sums:
+1738.95	Density sums:
+1741.93	Density sums:
+1767.24	Density sums:
+1747.38	Density sums:
+1744.8	Density sums:
+1720.86	Density sums:
+1784.26	Density sums:
+1876.47	Density sums:
+1812.61	Density sums:
+1781.9	Density sums:
+1782.37	Density sums:
+1729.05	Density sums:
+1630.16	Density sums:
+1727.14	Density sums:
+1840.39	Density sums:
+1881.15	Density sums:
+1724.38	Density sums:
+1628.08	Density sums:
+1490.07	Density sums:
+1523.3	Density sums:
+1412.94	Density sums:
+1398.8	Density sums:
+1431.92	Density sums:
+1399.8	Density sums:
+1531.12	Density sums:
+1381.3	Density sums:
+1364.08	Density sums:
+1360.32	Density sums:
+1328.57	Density sums:
+1299.22	Density sums:
+1316.22	Density sums:
+1349.46	Density sums:
+1268.62	Density sums:
+1298.48	Density sums:
+1222.82	Density sums:
+1236.47	Density sums:
+1295.96	Density sums:
+1222.79	Density sums:
+1194.11	Density sums:
+1179.52	Density sums:
+1235.87	Density sums:
+1226.4	Density sums:
+1218.36	Density sums:
+1203.77	Density sums:
+1183.25	Density sums:
+1167.91	Density sums:
+1146.47	Density sums:
+1117.74	Density sums:
+1159.79	Density sums:
+1166.06	Density sums:
+1117.91	Density sums:
+1191.56	Density sums:
+1124.36	Density sums:
+1090.94	Density sums:
+1088.96	Density sums:
+1092.98	Density sums:
+1093.69	Density sums:
+1085.67	Density sums:
+1106.19	Density sums:
+1084.11	Density sums:
+1059.25	

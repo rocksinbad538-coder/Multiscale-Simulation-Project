@@ -1,0 +1,8 @@
+# Day020 Confined-Water Regional Analysis Manifest
+
+- `runs/phase1A/day020_confined_water_axial_radial_density/regional_classification/confined_water_region_summary.csv`
+- `runs/phase1A/day020_confined_water_axial_radial_density/regional_classification/confined_water_region_sensitivity.csv`
+- `runs/phase1A/day020_confined_water_axial_radial_density/regional_classification/confined_water_regional_classification.npz`
+- `runs/phase1A/day020_confined_water_axial_radial_density/regional_classification/figure_day020_confined_water_density_regions.png`
+- `runs/phase1A/day020_confined_water_axial_radial_density/regional_classification/figure_day020_confined_water_density_regions.pdf`
+- `runs/phase1A/day020_confined_water_axial_radial_density/regional_classification/CONFINED_WATER_REGIONAL_ANALYSIS_DAY020.md`

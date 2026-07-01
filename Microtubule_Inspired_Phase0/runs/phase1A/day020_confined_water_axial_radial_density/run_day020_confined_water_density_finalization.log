@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/finalize_day020_confined_water_axial_radial_density.py", line 547, in <module>
+    main()
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/finalize_day020_confined_water_axial_radial_density.py", line 486, in main
+    ) = validate_dat()
+        ^^^^^^^^^^^^^^
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/finalize_day020_confined_water_axial_radial_density.py", line 196, in validate_dat
+    raise RuntimeError(
+RuntimeError: Density DAT contains negative density values.

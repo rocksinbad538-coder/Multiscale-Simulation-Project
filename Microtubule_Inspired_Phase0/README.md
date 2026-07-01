@@ -1400,3 +1400,35 @@ The Haken–Strobl calculation is a phenomenological sensitivity analysis. It co
 6. Determine whether finer embedded sampling is required for microscopic bath modeling.
 
 **Day019 status: complete and numerically validated.**
+
+<!-- DAY020_STATUS_START -->
+## Current status — Phase 1A through Day020 (2026-07-01)
+
+### Completed
+
+- Four-state bright excitonic Hamiltonians were validated over 21 snapshots.
+- Coherent, Haken–Strobl, detailed-balance, and combined open-system analyses were completed.
+- PYR4 accounts for approximately 84–91% of the mean downward flux into PYR5.
+- Strong dephasing raises the transient PYR5 population to approximately 0.11 at 100 ps.
+- The accepted 100 ps frozen-solute MD trajectory was audited.
+- The HBN scaffold was confirmed to be one continuous segment with 56 axial planes and no detected axial gap.
+- A validated 160 × 54 axial–radial water-density grid was generated and integrated using exact cylindrical cell volumes.
+- The analyzed cylinder contains 5211.768 waters on average; 987.870 waters (18.955%) belong to the effective lumen, HBN-interface, or mouth regions.
+- The radial solvent-depletion minimum occurs at 1.174620 nm, close to the HBN wall.
+
+### Current scientific limitation
+
+The accepted trajectory freezes the HBN scaffold and all PYR molecules. It supports solvent-organization and frozen-geometry electrostatic-disorder analysis, but not solute RMSD/RMSF, thermal-stability, or coupled water–solute conformational claims.
+
+### Next priority
+
+Verify the exact accepted hydrated topology and prepare a controlled restraint-release protocol for a mobile-solute trajectory.
+
+### Detailed records
+
+- [Day020 note](notes/day_020.md)
+- [Day020 technical closeout](runs/phase1A/day020_closeout/DAY020_TECHNICAL_CLOSEOUT.md)
+- [Weekly closeout through Day020](runs/phase1A/day020_closeout/WEEKLY_PROGRESS_CLOSEOUT_THROUGH_DAY020.md)
+- [Profile-guided confined-water analysis](runs/phase1A/day020_confined_water_axial_radial_density/profile_guided_classification/CONFINED_WATER_PROFILE_GUIDED_ANALYSIS_DAY020.md)
+
+<!-- DAY020_STATUS_END -->

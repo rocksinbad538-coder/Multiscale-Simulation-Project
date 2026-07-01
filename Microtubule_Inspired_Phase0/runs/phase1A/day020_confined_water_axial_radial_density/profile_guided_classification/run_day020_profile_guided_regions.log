@@ -1,0 +1,19 @@
+Day020 profile-guided confined-water analysis completed.
+HBN architecture: one continuous segment
+Radial depletion minimum: 1.174620 nm
+Radial boundaries: 0.923345 to 1.453565 nm
+Left mouth transition: -3.112007 to -2.198479 nm
+Right mouth transition: 2.519318 to 3.374122 nm
+Canonical cylinder count: 5211.768138
+Lumen core: 393.289350 (7.546%)
+Interfacial shell: 488.914171 (9.381%)
+Mouth transitions: 105.666141 (2.027%)
+Exterior: 4223.898476 (81.045%)
+Regional conservation error: 0.000e+00
+Sensitivity conditions: 9
+Lumen core sensitivity span: 9.34%
+Interfacial shell sensitivity span: 22.12%
+Mouth transitions sensitivity span: 56.58%
+Exterior sensitivity span: 2.49%
+Overall validation: PASS
+Wrote: runs/phase1A/day020_confined_water_axial_radial_density/profile_guided_classification

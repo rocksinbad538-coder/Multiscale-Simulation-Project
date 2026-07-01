@@ -1,0 +1,15 @@
+Day020 HBN axial-architecture audit completed.
+HBN axial planes: 56
+Typical plane spacing: 0.073000 nm
+Segment-break threshold: 0.350000 nm
+Detected HBN segments: 1
+Segment 1: -3.045214 to 3.045786 nm; 1680 atoms
+Detected HBN gaps: 0
+PYR_1: z=-2.008791 nm, r=1.649167 nm, inside_hbn_segment
+PYR_2: z=-0.669599 nm, r=1.649090 nm, inside_hbn_segment
+PYR_3: z=0.669593 nm, r=1.649295 nm, inside_hbn_segment
+PYR_4: z=2.008786 nm, r=1.768256 nm, inside_hbn_segment
+All HBN atoms segmented: PASS
+Architecture interpretation: continuous HBN segment
+Overall validation: PASS
+Wrote: runs/phase1A/day020_confined_water_axial_radial_density/hbn_architecture_audit

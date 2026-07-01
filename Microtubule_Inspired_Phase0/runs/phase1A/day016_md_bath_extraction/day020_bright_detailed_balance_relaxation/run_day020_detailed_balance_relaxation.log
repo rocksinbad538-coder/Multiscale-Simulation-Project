@@ -1,0 +1,20 @@
+Day020 detailed-balance relaxation sensitivity
+Temperatures: 150, 200, 250, 300 K
+Kappa values: 0.1, 1, 10 ps^-1
+Propagation: 0-100 ps, dt=0.05 ps, 2001 points
+[T=150 K] completed 21/21 frames
+[T=200 K] completed 21/21 frames
+[T=250 K] completed 21/21 frames
+[T=300 K] completed 21/21 frames
+
+Day020 detailed-balance relaxation sensitivity completed.
+Temperatures: 4/4
+Kappa values: 3/3
+Frames per condition: 21/21
+Maximum trace error: 9.208e-13
+Maximum Hermiticity error: 1.262e-13
+Minimum sampled density eigenvalue: 0.000e+00
+Maximum detailed-balance error: 4.441e-16
+Maximum Gibbs-stationarity error: 2.166e-13
+Overall numerical validation: PASS
+Wrote: runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation

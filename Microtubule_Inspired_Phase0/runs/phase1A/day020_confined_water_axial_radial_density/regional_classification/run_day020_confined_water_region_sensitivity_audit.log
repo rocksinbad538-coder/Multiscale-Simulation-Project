@@ -1,0 +1,9 @@
+Day020 confined-water regional sensitivity audit completed.
+Input rows: 36
+Regions: 4
+Interior core: 399.423 to 505.497 waters; relative span 23.33%
+Interfacial shell: 353.302 to 558.421 waters; relative span 45.78%
+Mouth zones: 86.796 to 141.860 waters; relative span 50.58%
+Exterior: 4114.815 to 4266.173 waters; relative span 3.60%
+Overall validation: PASS
+Wrote: runs/phase1A/day020_confined_water_axial_radial_density/regional_classification
