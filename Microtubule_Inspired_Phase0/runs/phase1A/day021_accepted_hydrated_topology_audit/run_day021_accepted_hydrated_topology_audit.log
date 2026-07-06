@@ -1,0 +1,15 @@
+Day021 accepted hydrated-topology audit completed.
+GRO atoms: 68320
+Accepted TPR atoms: 68320
+Candidate topology atoms: 68320
+Rebuilt TPR atoms: 68320
+HBN: 1 molecules, 1680 atoms/molecule, 1680 atoms
+PYR: 4 molecules, 26 atoms/molecule, 104 atoms
+SOL: 16634 molecules, 4 atoms/molecule, 66536 atoms
+Local topology files: 4
+Unresolved includes: 0
+Duplicate molecule types: 0
+Missing molecule types: 0
+grompp return code: 0
+Structural reconstruction: PASS
+Wrote: runs/phase1A/day021_accepted_hydrated_topology_audit

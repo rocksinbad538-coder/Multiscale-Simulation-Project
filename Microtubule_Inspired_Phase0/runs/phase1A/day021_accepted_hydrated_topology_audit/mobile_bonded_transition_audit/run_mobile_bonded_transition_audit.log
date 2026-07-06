@@ -1,0 +1,16 @@
+Day021 mobile bonded-topology transition audit completed.
+Defaults preserved: PASS
+B0 atomtype preserved: PASS
+N0 atomtype preserved: PASS
+Mobile HBN LJ nonzero: PASS
+HBN atom table/order preserved: PASS
+PYR model preserved: PASS
+TIP4P/2005 model preserved: PASS
+Molecular composition preserved: PASS
+Frozen HBN atoms/bonds/angles/dihedrals: 1680/0/0/0
+Mobile HBN atoms/bonds/angles/dihedrals: 1680/2460/4860/1620
+Expected mobile bonded counts: PASS
+grompp reconstruction: PASS
+Rebuilt TPR atoms/types: 68320/902
+Intended model transition validation: PASS
+Wrote: runs/phase1A/day021_accepted_hydrated_topology_audit/mobile_bonded_transition_audit

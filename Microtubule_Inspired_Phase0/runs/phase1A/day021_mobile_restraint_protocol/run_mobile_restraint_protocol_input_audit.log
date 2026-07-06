@@ -1,0 +1,10 @@
+Day021 mobile restraint-protocol input audit completed.
+Relevant files: 31
+Existing position-restraint sections: 14
+Existing MDP files: 1
+Existing NDX files: 0
+Final GRO velocity summary:
+  HBN: 0/1680 nonzero; RMS=0.00000000 nm/ps
+  PYR: 0/104 nonzero; RMS=0.00000000 nm/ps
+  SOL: 66536/66536 nonzero; RMS=1.48292798 nm/ps
+Wrote: runs/phase1A/day021_mobile_restraint_protocol

@@ -1,0 +1,45 @@
+# This file was created Mon Jul  6 11:45:28 2026
+# Created by:
+#                      :-) GROMACS - gmx energy, 2025.4 (-:
+# 
+# Executable:   /usr/local/gromacs/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/03b_nvt_k1000_hold_2ps
+# Command line:
+#   gmx energy -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/03b_nvt_k1000_hold_2ps/03b_nvt_k1000_hold_2ps.edr -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/03b_nvt_k1000_hold_2ps/03b_nvt_k1000_hold_2ps_total_energy.xvg
+# gmx energy is part of G R O M A C S:
+#
+# GROup of MAchos and Cynical Suckers
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(kJ/mol)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Total Energy"
+    0.000000  -639970.500000
+    0.100000  -639639.125000
+    0.200000  -639099.500000
+    0.300000  -638663.500000
+    0.400000  -638145.750000
+    0.500000  -638108.687500
+    0.600000  -638091.937500
+    0.700000  -638237.437500
+    0.800000  -637889.625000
+    0.900000  -637863.187500
+    1.000000  -637506.812500
+    1.100000  -636973.750000
+    1.200000  -636797.750000
+    1.300000  -636715.500000
+    1.400000  -636665.312500
+    1.500000  -636312.312500
+    1.600000  -635875.187500
+    1.700000  -635497.500000
+    1.800000  -635402.500000
+    1.900000  -635521.625000
+    2.000000  -635493.687500

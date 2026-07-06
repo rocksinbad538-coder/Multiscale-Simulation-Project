@@ -1,0 +1,15 @@
+Day021 Stage05 integrated mobile-pilot validation completed.
+Operational decision: PASS
+HBN structural screen: STABLE_CANDIDATE
+PYR molecules analyzed: 4
+PYR maximum aligned RMS / atom residual: 0.02321689/0.05011944 nm
+PYR bond deviation q95/q99/max: 0.00518740/0.00648729/0.00676229 nm
+PYR angle deviation q95/q99/max: 5.4434/6.1673/6.3080 deg
+HBN improper count: 1620
+HBN improper stage-change q95/q99/max: 17.6520/23.1514/28.9562 deg
+Minimum contacts HBN-PYR / PYR-PYR / PYR-waterO: 0.29801510/1.93561773/0.28570264 nm
+Pilot readiness: REVIEW
+Authorized next step: ADDITIONAL_2PS_OR_TARGETED_DIAGNOSTIC
+Long mobile production authorized: NO
+Review reasons: HBN improper q99 change exceeds 20 degrees
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/05_nvt_unrestrained_2ps/STAGE05_INTEGRATED_MOBILE_PILOT_VALIDATION_DAY021.md

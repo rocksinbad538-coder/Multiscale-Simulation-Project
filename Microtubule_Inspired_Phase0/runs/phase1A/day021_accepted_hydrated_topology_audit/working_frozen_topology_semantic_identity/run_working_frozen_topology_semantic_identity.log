@@ -1,0 +1,11 @@
+Day021 working frozen-topology semantic-identity verification completed.
+Raw TOP equality: FAIL
+Comment/whitespace-normalized TOP equality: FAIL
+Raw diff lines: 13
+grompp reconstruction: PASS
+Inputrec identity: PASS
+Processed topology identity: FAIL
+Box identity: PASS
+Working-copy semantic identity: FAIL
+Canonical source: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032.top
+Wrote: runs/phase1A/day021_accepted_hydrated_topology_audit/working_frozen_topology_semantic_identity

@@ -1,0 +1,9 @@
+Day021 Stage03b adaptive hold preparation completed.
+Stage03 scientific status: REVISE
+Stage03 numerical instability: NO
+Stage03 rerun required: NO
+Stage03 HBN atoms above 0.08/0.10 nm: 5/2
+Stage03b MDP: runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/mdp/03b_nvt_k1000_hold_2ps.mdp
+Stage03b static grompp: PASS
+Stage03b position restraints: 1706/1706
+Stage04 authorized: NO

@@ -1,0 +1,13 @@
+Day021 Stage03 release-response diagnostic completed.
+Harmless epsilon-rf matches: 1
+Harmful non-finite matches: 0
+Serious instability signatures: 0
+Non-finite XVG values: 0
+HBN incremental RMS/median/q95/q99/max: 0.01808494/0.01236932/0.03154758/0.05934991/0.10542770 nm
+HBN atoms above 0.05/0.08/0.10 nm: 22/5/2
+HBN rigid translation / aligned RMS/max: 0.00260072/0.01779005/0.10321726 nm
+HBN bond mean start/final: 0.14537096/0.14579309 nm
+HBN bond-change q95/max: 0.00589699/0.01315506 nm
+Stage03 diagnostic decision: REVISE
+Stage04 authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/03_nvt_k1000_2ps/STAGE03_RELEASE_RESPONSE_DIAGNOSTIC_DAY021.md

@@ -1,0 +1,22 @@
+Day021 mobile-release protocol construction completed.
+Accepted source files modified: NO
+Derived topology: runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/topology/hbn_pyrene_mobile_release.top
+Index counts:
+  System: 68320
+  HBN: 1680
+  PYR: 104
+  HBN_PYR: 1784
+  SOL: 66536
+Index validation: PASS
+Static stage validation:
+  00_em_k100000: grompp=PASS, posres=1706/1706
+  01_em_k10000: grompp=PASS, posres=1706/1706
+  02_nvt_k10000_1ps: grompp=PASS, posres=1706/1706
+  03_nvt_k1000_2ps: grompp=PASS, posres=1706/1706
+  04_nvt_k100_2ps: grompp=PASS, posres=1706/1706
+  05_nvt_unrestrained_2ps: grompp=PASS, posres=0/0
+All grompp checks: PASS
+All restraint-count checks: PASS
+Protocol static validation: PASS
+Scientific calculation started: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol

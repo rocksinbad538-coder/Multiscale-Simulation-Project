@@ -1,0 +1,10 @@
+Day021 Stage06 short-validation preparation completed.
+Stage05 scientific decision: PASS
+Stage05 readiness: READY_FOR_SHORT_MOBILE_VALIDATION
+Stage06 MDP: runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/mdp/06_nvt_unrestrained_10ps.mdp
+Stage06 duration: 10 ps
+Stage06 static grompp: PASS
+Stage06 active position restraints: 0/0
+Protocol-manifest files: 20
+Long mobile production authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/05_nvt_unrestrained_2ps/STAGE05_SHORT_MOBILE_VALIDATION_AUTHORIZATION_DAY021.md

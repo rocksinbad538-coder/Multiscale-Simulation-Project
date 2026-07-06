@@ -1,0 +1,45 @@
+# This file was created Mon Jul  6 12:08:58 2026
+# Created by:
+#                      :-) GROMACS - gmx energy, 2025.4 (-:
+# 
+# Executable:   /usr/local/gromacs/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/05_nvt_unrestrained_2ps
+# Command line:
+#   gmx energy -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/05_nvt_unrestrained_2ps/05_nvt_unrestrained_2ps.edr -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/05_nvt_unrestrained_2ps/05_nvt_unrestrained_2ps_temperature.xvg
+# gmx energy is part of G R O M A C S:
+#
+# God Rules Over Mankind, Animals, Cosmos and Such
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(K)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Temperature"
+    0.000000  296.687073
+    0.100000  296.963928
+    0.200000  297.080261
+    0.300000  298.561584
+    0.400000  297.097595
+    0.500000  298.003632
+    0.600000  297.514038
+    0.700000  298.124023
+    0.800000  297.396729
+    0.900000  297.312836
+    1.000000  298.193573
+    1.100000  297.936615
+    1.200000  299.606812
+    1.300000  298.595581
+    1.400000  299.520325
+    1.500000  299.242004
+    1.600000  297.925781
+    1.700000  298.958466
+    1.800000  296.360413
+    1.900000  297.265198
+    2.000000  297.087006

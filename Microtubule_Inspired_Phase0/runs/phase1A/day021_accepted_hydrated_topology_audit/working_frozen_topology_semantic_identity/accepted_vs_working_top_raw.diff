@@ -1,0 +1,13 @@
+--- parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032.top
++++ parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032.top
+@@ -7,8 +7,8 @@
+ 
+ [ atomtypes ]
+ ; name at.num mass charge ptype sigma epsilon
+-B0 5 10.810000 0.000000 A 0.345000 0.020000
+-N0 7 14.007000 0.000000 A 0.325000 0.020000
++B0 5 10.810000 0.000000 A 0.000000 0.000000
++N0 7 14.007000 0.000000 A 0.000000 0.000000
+ 
+ ; GAFF2 atomtypes used by pyrene
+ ca 6 12.010000 0.000000 A 0.33152123 0.4133792

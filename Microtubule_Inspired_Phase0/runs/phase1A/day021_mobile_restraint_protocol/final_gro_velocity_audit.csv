@@ -1,0 +1,4 @@
+residue_name,atom_count,nonzero_velocity_atoms,zero_velocity_atoms,nonzero_fraction,mean_speed_nm_per_ps,rms_speed_nm_per_ps,max_speed_nm_per_ps
+HBN,1680,0,1680,0.0,0.0,0.0,0.0
+PYR,104,0,104,0.0,0.0,0.0,0.0
+SOL,66536,66536,0,1.0,1.1950579115014928,1.4829279849126464,6.74986798759798

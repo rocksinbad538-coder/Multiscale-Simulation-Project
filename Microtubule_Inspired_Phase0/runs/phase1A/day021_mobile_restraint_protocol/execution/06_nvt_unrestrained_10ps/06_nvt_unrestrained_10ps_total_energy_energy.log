@@ -1,0 +1,66 @@
+                      :-) GROMACS - gmx energy, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/06_nvt_unrestrained_10ps
+Command line:
+  gmx energy -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/06_nvt_unrestrained_10ps/06_nvt_unrestrained_10ps.edr -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/06_nvt_unrestrained_10ps/06_nvt_unrestrained_10ps_total_energy.xvg
+
+Opened /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/06_nvt_unrestrained_10ps/06_nvt_unrestrained_10ps.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Improper-Dih. 
+  5  Per.-Imp.-Dih.   6  LJ-14            7  Coulomb-14       8  LJ-(SR)       
+  9  Coulomb-(SR)    10  Coul.-recip.    11  Potential       12  Kinetic-En.   
+ 13  Total-Energy    14  Conserved-En.   15  Temperature     16  Pressure      
+ 17  Vir-XX          18  Vir-XY          19  Vir-XZ          20  Vir-YX        
+ 21  Vir-YY          22  Vir-YZ          23  Vir-ZX          24  Vir-ZY        
+ 25  Vir-ZZ          26  Pres-XX         27  Pres-XY         28  Pres-XZ       
+ 29  Pres-YX         30  Pres-YY         31  Pres-YZ         32  Pres-ZX       
+ 33  Pres-ZY         34  Pres-ZZ         35  #Surf*SurfTen   36  T-System      
+ 37  Lamb-System   
+
+
+Reading energy frame      0 time    0.000         
+Reading energy frame      1 time    0.100         
+Reading energy frame      2 time    0.200         
+Reading energy frame      3 time    0.300         
+Reading energy frame      4 time    0.400         
+Reading energy frame      5 time    0.500         
+Reading energy frame      6 time    0.600         
+Reading energy frame      7 time    0.700         
+Reading energy frame      8 time    0.800         
+Reading energy frame      9 time    0.900         
+Reading energy frame     10 time    1.000         
+Reading energy frame     11 time    1.100         
+Reading energy frame     12 time    1.200         
+Reading energy frame     13 time    1.300         
+Reading energy frame     14 time    1.400         
+Reading energy frame     15 time    1.500         
+Reading energy frame     16 time    1.600         
+Reading energy frame     17 time    1.700         
+Reading energy frame     18 time    1.800         
+Reading energy frame     19 time    1.900         
+Reading energy frame     20 time    2.000         
+Reading energy frame     30 time    3.000         
+Reading energy frame     40 time    4.000         
+Reading energy frame     50 time    5.000         
+Reading energy frame     60 time    6.000         
+Reading energy frame     70 time    7.000         
+Reading energy frame     80 time    8.000         
+Reading energy frame     90 time    9.000         
+Reading energy frame    100 time   10.000         
+Last energy frame read 100 time   10.000         
+
+GROMACS reminds you: "I will not be a lemming and follow the crowd over the cliff and into the C." (John Beidler)
+
+
+Statistics over 20001 steps [ 0.0000 through 10.0000 ps ], 1 data sets
+All statistics are over 201 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Total Energy                -631098        280    680.321    1425.38  (kJ/mol)

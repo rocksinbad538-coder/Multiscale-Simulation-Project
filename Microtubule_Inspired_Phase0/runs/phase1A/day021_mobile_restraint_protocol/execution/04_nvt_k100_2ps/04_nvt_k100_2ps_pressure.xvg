@@ -1,0 +1,45 @@
+# This file was created Mon Jul  6 11:55:28 2026
+# Created by:
+#                      :-) GROMACS - gmx energy, 2025.4 (-:
+# 
+# Executable:   /usr/local/gromacs/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/04_nvt_k100_2ps
+# Command line:
+#   gmx energy -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/04_nvt_k100_2ps/04_nvt_k100_2ps.edr -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/04_nvt_k100_2ps/04_nvt_k100_2ps_pressure.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Giant Rising Ordinary Mutants for A Clerical Setup
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(bar)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Pressure"
+    0.000000  565.566467
+    0.100000  -48.425354
+    0.200000  -378.889618
+    0.300000  -430.746338
+    0.400000   16.291168
+    0.500000  420.270020
+    0.600000  202.802261
+    0.700000  -276.892975
+    0.800000  -348.993408
+    0.900000  -186.125015
+    1.000000  -200.296631
+    1.100000  140.085480
+    1.200000  253.141357
+    1.300000  143.413101
+    1.400000  -250.094406
+    1.500000  -346.802826
+    1.600000  -25.427832
+    1.700000  278.787567
+    1.800000  254.403641
+    1.900000  -68.323792
+    2.000000    1.414183

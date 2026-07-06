@@ -1,0 +1,9 @@
+Day021 Stage02 false-positive reconciliation completed.
+Textual non-finite matches: 1
+Harmless epsilon-rf metadata matches: 1
+Serious instability signatures: 0
+Numeric XVG rows audited: 44
+Non-finite XVG values: 0
+Stage02 reconciled decision: PASS
+Stage02 rerun required: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps/STAGE02_FALSE_POSITIVE_RECONCILIATION_DAY021.md

@@ -1,0 +1,13 @@
+Day021 original frozen-topology identity verification completed.
+Accepted-directory TOP matches working-copy TOP: False
+Accepted-directory HBN ITP matches working-copy HBN ITP: True
+Accepted/rebuilt atoms: 68320/68320
+Inputrec exact equality: PASS
+Differing inputrec parameters: 0
+Topology exact equality: PASS
+Box exact equality: PASS
+First coordinate difference atom index: 1784
+Frozen HBN+PYR coordinate prefix: PASS
+Exact original-topology identity: PASS
+Provenance validation: PASS
+Wrote: runs/phase1A/day021_accepted_hydrated_topology_audit/original_frozen_topology_identity

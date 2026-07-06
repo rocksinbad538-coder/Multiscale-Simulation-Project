@@ -1,0 +1,26 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/00_em_k100000
+Command line:
+  gmx mdrun -deffnm 00_em_k100000
+
+Reading file 00_em_k100000.tpr, VERSION 2025.4 (single precision)
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+03
+   Number of steps    =        50000
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to Fmax < 1000 in 8 steps
+Potential Energy  = -7.8813556e+05
+Maximum force     =  9.7167285e+02 on atom 4569
+Norm of force     =  1.9641823e+02
+
+GROMACS reminds you: "Ramones For Ever" (P.J. Van Maaren)
+

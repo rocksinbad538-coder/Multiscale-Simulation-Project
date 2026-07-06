@@ -1,0 +1,35 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/topology
+Command line:
+  gmx grompp -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/mdp/00_em_k100000.mdp -c /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.gro -r /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.gro -p /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/topology/hbn_pyrene_mobile_release.top -n /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/mobile_release_index.ndx -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/static_validation/00_em_k100000/00_em_k100000.tpr -po /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/static_validation/00_em_k100000/00_em_k100000_mdout.mdp -pp /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/static_validation/00_em_k100000/00_em_k100000_processed.top -maxwarn 0
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 105156.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+GROMACS reminds you: "Your Shopping Techniques are Amazing" (Gogol Bordello)
+
+Setting the LD random seed to -540279953
+
+Generated 28 of the 28 non-bonded parameter combinations
+
+Generated 28 of the 28 1-4 parameter combinations
+
+Excluding 1 bonded neighbours molecule type 'HBN'
+
+Excluding 3 bonded neighbours molecule type 'PYR'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+
+The largest distance between excluded atoms is 0.387 nm between atom 1760 and 1774
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 64x64x84, spacing 0.116 0.116 0.119
+
+Estimate for the relative computational load of the PME mesh part: 0.13
+
+This run will generate roughly 7 Mb of data

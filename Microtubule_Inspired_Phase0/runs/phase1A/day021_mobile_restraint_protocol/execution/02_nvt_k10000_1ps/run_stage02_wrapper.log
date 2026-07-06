@@ -1,0 +1,97 @@
+Day021 NVT stage: 02_nvt_k10000_1ps
+Previous stage authorization: PASS
+Verified protocol-manifest files: 18
+Starting coordinates: runs/phase1A/day021_mobile_restraint_protocol/execution/01_em_k10000/01_em_k10000.gro
+Checkpoint input: NONE
+
+===== GROMPP =====
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/topology
+Command line:
+  gmx grompp -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/mdp/02_nvt_k10000_1ps.mdp -c /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/01_em_k10000/01_em_k10000.gro -r /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.gro -p /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/topology/hbn_pyrene_mobile_release.top -n /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/mobile_release_index.ndx -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps/02_nvt_k10000_1ps.tpr -po /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps/02_nvt_k10000_1ps_mdout.mdp -pp /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps/02_nvt_k10000_1ps_processed.top -maxwarn 0
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 105156.00
+
+GROMACS reminds you: "Go back to the rock from under which you came" (Fiona Apple)
+
+Setting the LD random seed to 1055139819
+
+Generated 28 of the 28 non-bonded parameter combinations
+
+Generated 28 of the 28 1-4 parameter combinations
+
+Excluding 1 bonded neighbours molecule type 'HBN'
+
+Excluding 3 bonded neighbours molecule type 'PYR'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Velocities were taken from a Maxwell distribution at 300 K
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+
+The largest distance between excluded atoms is 0.385 nm between atom 1760 and 1774
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+
+Calculated rlist for 1x1 atom pair-list as 1.205 nm, buffer size 0.005 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 64x64x84, spacing 0.116 0.116 0.119
+
+Estimate for the relative computational load of the PME mesh part: 0.14
+
+This run will generate roughly 9 Mb of data
+
+===== MDRUN =====
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps
+Command line:
+  gmx mdrun -deffnm 02_nvt_k10000_1ps
+
+Reading file 02_nvt_k10000_1ps.tpr, VERSION 2025.4 (single precision)
+Changing nstlist from 20 to 100, rlist from 1.2 to 1.211
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+starting mdrun 'h-BN fixed dummy scaffold + 4 pyrenes + TIP4P/2005 water'
+4000 steps,      1.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:      864.324       72.027     1200.0
+                 (ns/day)    (hour/ns)
+Performance:        1.200       20.003
+
+GROMACS reminds you: "I believe in miracles cause I'm one" (The Ramones)
+
+
+===== NVT ANALYSIS =====
+Temperature mean/std/min/max/last: 282.6792/5.9944/274.2964/299.2997/284.5715 K
+Potential energy first/last: -788090.3125/-773707.8125 kJ/mol
+Pressure mean/min/max: -197.4645/-2069.9495/1734.8065 bar
+HBN incremental RMS/max: 0.00834958/0.03819686 nm
+PYR incremental RMS/max: 0.01067708/0.02215852 nm
+HBN cumulative RMS/max: 0.00845031/0.03915354 nm
+PYR cumulative RMS/max: 0.01100262/0.02249444 nm
+HBN nonzero velocities: 1680/1680 (1.000000)
+PYR nonzero velocities: 104/104 (1.000000)
+SOL nonzero velocities: 66536/66536 (1.000000)
+Instability signatures: ['INFINITE_VALUE:02_nvt_k10000_1ps.log']
+Atom count: 68320/68320
+Finite-coordinate and box checks: PASS
+Stage decision: BLOCKED
+Subsequent stages executed: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps

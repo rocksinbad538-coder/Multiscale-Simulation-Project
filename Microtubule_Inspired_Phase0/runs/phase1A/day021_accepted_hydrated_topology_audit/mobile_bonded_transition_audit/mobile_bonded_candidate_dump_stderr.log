@@ -1,0 +1,13 @@
+                       :-) GROMACS - gmx dump, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx dump -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_accepted_hydrated_topology_audit/mobile_bonded_transition_audit/mobile_bonded_candidate_static_check.tpr
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_accepted_hydrated_topology_audit/mobile_bonded_transition_audit/mobile_bonded_candidate_static_check.tpr, VERSION 2025.4 (single precision)
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_accepted_hydrated_topology_audit/mobile_bonded_transition_audit/mobile_bonded_candidate_static_check.tpr, VERSION 2025.4 (single precision)
+
+GROMACS reminds you: "Everybody is Smashing Things Down" (Offspring)
+

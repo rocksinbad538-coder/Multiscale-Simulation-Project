@@ -1,0 +1,4 @@
+molecule_type,source_file,definition_line,nrexcl,atom_count
+HBN,parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/hbn_bonded_candidate_kang2000_improperGeo100.itp,6,1,1680
+PYR,parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/pyrene.itp,3,3,26
+SOL,parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/tip4p2005.itp,7,2,4

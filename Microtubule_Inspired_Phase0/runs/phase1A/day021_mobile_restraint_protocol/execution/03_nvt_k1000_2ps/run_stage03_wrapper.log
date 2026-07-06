@@ -1,0 +1,107 @@
+Day021 NVT stage: 03_nvt_k1000_2ps
+Previous stage authorization: PASS
+Verified protocol-manifest files: 18
+Starting coordinates: runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps/02_nvt_k10000_1ps.gro
+Checkpoint input: runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps/02_nvt_k10000_1ps.cpt
+
+===== GROMPP =====
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/topology
+Command line:
+  gmx grompp -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/mdp/03_nvt_k1000_2ps.mdp -c /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps/02_nvt_k10000_1ps.gro -r /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.gro -p /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/topology/hbn_pyrene_mobile_release.top -n /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/mobile_release_index.ndx -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/03_nvt_k1000_2ps/03_nvt_k1000_2ps.tpr -po /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/03_nvt_k1000_2ps/03_nvt_k1000_2ps_mdout.mdp -pp /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/03_nvt_k1000_2ps/03_nvt_k1000_2ps_processed.top -maxwarn 0 -t /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps/02_nvt_k10000_1ps.cpt
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 105156.00
+
+Last frame         -1 time    1.000   
+
+GROMACS reminds you: "Fifty years of programming language research, and we end up with C++???" (Richard O'Keefe)
+
+Setting the LD random seed to -542124803
+
+Generated 28 of the 28 non-bonded parameter combinations
+
+Generated 28 of the 28 1-4 parameter combinations
+
+Excluding 1 bonded neighbours molecule type 'HBN'
+
+Excluding 3 bonded neighbours molecule type 'PYR'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Taking velocities from '/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps/02_nvt_k10000_1ps.gro'
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+
+The largest distance between excluded atoms is 0.382 nm between atom 1764 and 1769
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+
+Calculated rlist for 1x1 atom pair-list as 1.205 nm, buffer size 0.005 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+
+Reading Coordinates, Velocities and Box size from old trajectory
+
+Will read whole trajectory
+
+Using frame at t = 1 ps
+
+Starting time for run is 0 ps
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 64x64x84, spacing 0.116 0.116 0.119
+
+Estimate for the relative computational load of the PME mesh part: 0.14
+
+This run will generate roughly 12 Mb of data
+
+===== MDRUN =====
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/03_nvt_k1000_2ps
+Command line:
+  gmx mdrun -deffnm 03_nvt_k1000_2ps
+
+Reading file 03_nvt_k1000_2ps.tpr, VERSION 2025.4 (single precision)
+Changing nstlist from 20 to 100, rlist from 1.2 to 1.211
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+starting mdrun 'h-BN fixed dummy scaffold + 4 pyrenes + TIP4P/2005 water'
+8000 steps,      2.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     1719.321      143.277     1200.0
+                 (ns/day)    (hour/ns)
+Performance:        1.206       19.897
+
+GROMACS reminds you: "Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to build bigger and better idiots. So far, the universe is winning." (Rick Cook)
+
+
+===== NVT ANALYSIS =====
+Temperature mean/std/min/max/last: 290.1313/2.3888/284.5715/294.3952/294.3952 K
+Potential energy first/last: -774302.0/-768667.6875 kJ/mol
+Pressure mean/min/max: 44.3280/-1158.5507/1180.7948 bar
+HBN incremental RMS/max: 0.01808494/0.10542770 nm
+PYR incremental RMS/max: 0.03076602/0.06522270 nm
+HBN cumulative RMS/max: 0.01841234/0.11042645 nm
+PYR cumulative RMS/max: 0.03029264/0.06512296 nm
+HBN nonzero velocities: 1680/1680 (1.000000)
+PYR nonzero velocities: 104/104 (1.000000)
+SOL nonzero velocities: 66536/66536 (1.000000)
+Instability signatures: ['NONFINITE_VALUE:03_nvt_k1000_2ps.log:194']
+Atom count: 68320/68320
+Finite-coordinate and box checks: PASS
+Stage decision: BLOCKED
+Subsequent stages executed: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/03_nvt_k1000_2ps

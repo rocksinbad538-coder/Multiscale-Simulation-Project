@@ -1,0 +1,47 @@
+Day021 hydrated-topology candidate inventory completed.
+TOP files inspected: 21
+Exact composition candidates: 10
+HBN definitions recorded: 10
+Likely original frozen-HBN candidates: 2
+Candidate 1: parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_hydrated_baseline/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded_kang2000_improperGeo100.top
+  HBN source: parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_hydrated_baseline/hbn_bonded_candidate_kang2000_improperGeo100.itp
+  HBN atoms/bonds/angles/dihedrals: 1680/2460/4860/1620
+  likely original frozen HBN: False
+Candidate 2: parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded_kang2000_improperGeo100.top
+  HBN source: parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/hbn_bonded_candidate_kang2000_improperGeo100.itp
+  HBN atoms/bonds/angles/dihedrals: 1680/2460/4860/1620
+  likely original frozen HBN: False
+Candidate 3: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032.top
+  HBN source: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_fixed_dummy.itp
+  HBN atoms/bonds/angles/dihedrals: 1680/0/0/0
+  likely original frozen HBN: True
+Candidate 4: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded.top
+  HBN source: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_bonded_candidate.itp
+  HBN atoms/bonds/angles/dihedrals: 1680/2460/4860/0
+  likely original frozen HBN: False
+Candidate 5: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded_kang2000.top
+  HBN source: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_bonded_candidate_kang2000.itp
+  HBN atoms/bonds/angles/dihedrals: 1680/2460/4860/0
+  likely original frozen HBN: False
+Candidate 6: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded_kang2000_improper100.top
+  HBN source: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_bonded_candidate_kang2000_improper100.itp
+  HBN atoms/bonds/angles/dihedrals: 1680/2460/4860/1620
+  likely original frozen HBN: False
+Candidate 7: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded_kang2000_improperGeo100.top
+  HBN source: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_bonded_candidate_kang2000_improperGeo100.itp
+  HBN atoms/bonds/angles/dihedrals: 1680/2460/4860/1620
+  likely original frozen HBN: False
+Candidate 8: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded_kang2000_improperGeo150.top
+  HBN source: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_bonded_candidate_kang2000_improperGeo150.itp
+  HBN atoms/bonds/angles/dihedrals: 1680/2460/4860/1620
+  likely original frozen HBN: False
+Candidate 9: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded_kang2000_improperGeo200.top
+  HBN source: parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_bonded_candidate_kang2000_improperGeo200.itp
+  HBN atoms/bonds/angles/dihedrals: 1680/2460/4860/1620
+  likely original frozen HBN: False
+Candidate 10: parameters/phase1A/hybrid_hydrated_gromacs/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032.top
+  HBN source: parameters/phase1A/hybrid_hydrated_gromacs/hbn_fixed_dummy.itp
+  HBN atoms/bonds/angles/dihedrals: 1680/0/0/0
+  likely original frozen HBN: True
+Wrote: runs/phase1A/day021_accepted_hydrated_topology_audit/hydrated_topology_candidate_inventory.csv
+Wrote: runs/phase1A/day021_accepted_hydrated_topology_audit/HYDRATED_TOPOLOGY_CANDIDATE_INVENTORY_DAY021.md
