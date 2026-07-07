@@ -1,0 +1,13 @@
+Day022 water-depletion provenance audit completed.
+Existing frozen window relative to branch: -100 to 0 ps
+Stage08 mobile window relative to branch: 44 to 144 ps
+Accepted frozen endpoint / frozen last-frame occupancy: 23/23
+Stage07 endpoint / Stage08 first-frame occupancy: 0/0
+Stage08 endpoint / Stage08 last-frame occupancy: 0/0
+Geometry/count consistency: PASS
+Direct mobility attribution: NOT_SUPPORTED
+Matched frozen continuation required: YES
+Recommended matched frozen duration: 144 ps
+Matched comparison window: frozen 44-144 ps versus mobile Stage08 0-100 ps
+Electronic snapshot selection authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/mobile_vs_frozen_water/WATER_DEPLETION_PROVENANCE_AUDIT_DAY022.md

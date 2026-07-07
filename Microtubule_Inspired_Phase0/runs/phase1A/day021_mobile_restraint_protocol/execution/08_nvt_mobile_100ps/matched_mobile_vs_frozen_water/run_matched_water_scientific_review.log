@@ -1,0 +1,17 @@
+Day022 matched-water scientific review completed.
+Matched frames / blocks: 201 / 10
+Mobile / matched-frozen occupancy mean: 1.905473/0.457711
+Absolute occupancy difference: 1.447761 waters
+Occupancy block-bootstrap 95% CI: [0.515714, 2.650000]
+Occupancy exact sign-flip p-value: 0.00585938
+Positive occupancy-difference block fraction: 0.900000
+Mobile/frozen zero-occupancy fractions: 0.318408/0.716418
+Mobile/frozen positive episode counts: 20/18
+Mobile/frozen longest positive episode: 18.500/5.000 ps
+Supported PYR hydration metrics: NONE
+Screening interpretation: MOBILITY_ASSOCIATED_TRANSIENT_REHYDRATION_SUPPORTED
+Publication-level causal claim authorized: NO
+Electronic recalculation authorized: NO
+Longer mobile production authorized: NO
+Authorized next step: REVIEW_21_MATCHED_SNAPSHOT_PAIRS_FOR_LIMITED_MOBILE_QM_PILOT
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/matched_mobile_vs_frozen_water/MATCHED_WATER_SCIENTIFIC_REVIEW_DAY022.md

@@ -1,0 +1,13 @@
+Day021 HBN stage-transition diagnostic completed.
+Stage: 08_nvt_mobile_100ps
+Serious instability signatures: 0
+Harmful non-finite values: 0
+Non-finite XVG values: 0
+HBN incremental RMS/q95/q99/max: 0.19898046/0.27936007/0.30654047/0.40706511 nm
+HBN aligned RMS/max: 0.06252412/0.27894884 nm
+HBN bond length mean/min/max: 0.14688834/0.13822446/0.15543809 nm
+HBN bond deviation q95/q99/max: 0.00658216/0.00859412/0.01087809 nm
+HBN angle deviation q95/q99/max: 2.4350/3.1915/4.3133 deg
+Structural screen: STABLE_CANDIDATE
+Stage05 authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/08_NVT_MOBILE_100PS_STRUCTURAL_DIAGNOSTIC_DAY021.md

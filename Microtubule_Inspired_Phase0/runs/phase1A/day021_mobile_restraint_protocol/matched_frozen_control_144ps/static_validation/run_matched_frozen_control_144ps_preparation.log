@@ -1,0 +1,26 @@
+Robust TPR vector parser:
+  positions parsed: 68320/68320
+  velocities parsed: 68320/68320
+  box rows parsed: 3/3
+  finite-value validation: PASS
+Robust TPR vector parser:
+  positions parsed: 68320/68320
+  velocities parsed: 68320/68320
+  box rows parsed: 3/3
+  finite-value validation: PASS
+Day022 matched frozen-control 144ps preparation completed.
+Control duration / steps / dt: 144.0 ps / 288000 / 0.0005 ps
+Expected compressed trajectory frames: 289
+Static grompp return code: 0
+Active position restraints: 0/0
+Processed freezegrps / freezedim: HBN_PYR / Y Y Y
+Initial coordinate exact match: True
+Initial coordinate maximum difference: 0.000000000000 nm
+Stage02 water velocity SHA256: d11ac84fa2d4a2a9a594a91ac0a6e0714dc3caa9da33f0ed12617371feff722d
+Control water velocity SHA256: d11ac84fa2d4a2a9a594a91ac0a6e0714dc3caa9da33f0ed12617371feff722d
+Water velocity exact match: True
+Water velocity maximum difference: 0.000000000000 nm/ps
+Stage02/control water nonzero fractions: 0.750000/0.750000
+Static decision: PASS
+Matched frozen-control execution authorized: YES
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/MATCHED_FROZEN_CONTROL_144PS_STATIC_AUTHORIZATION_DAY022.md

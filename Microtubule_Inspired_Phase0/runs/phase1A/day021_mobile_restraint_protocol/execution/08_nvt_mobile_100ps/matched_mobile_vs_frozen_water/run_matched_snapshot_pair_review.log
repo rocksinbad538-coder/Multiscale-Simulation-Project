@@ -1,0 +1,16 @@
+Day022 matched snapshot-pair review completed.
+Representative pairs audited: 21/21
+Detected local hydration metrics: 8
+Strong local / strong lumen / control-like pairs: 21/14/0
+Selected pilot-pair count: 5
+Selected relative times: 43.000 ps | 53.500 ps | 65.500 ps | 79.000 ps | 100.000 ps
+Selected local/informative/control counts: 5/5/0
+Selected temporal quartiles / span: 3/4 / 57.000 ps
+Failed pilot gates: at_least_2_control_like_pairs | at_least_1_selected_control
+Decision: LIMITED_PAIRED_QM_PILOT_NOT_JUSTIFIED
+Limited mobile-vs-frozen QM pilot authorized: NO
+Full electronic recalculation authorized: NO
+Longer mobile production authorized: NO
+Publication-level causal claim authorized: NO
+Authorized next step: RETAIN_FROZEN_QM_BASELINE_AND_DOCUMENT_MOBILITY_ASSOCIATED_SOLVENT_KINETICS
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/matched_mobile_vs_frozen_water/MATCHED_SNAPSHOT_PAIR_REVIEW_DAY022.md

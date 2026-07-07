@@ -1,0 +1,12 @@
+Day022 Stage08 mobile-100ps reconciliation completed.
+Trajectory frames / duration: 201 / 100.0 ps
+Operational decision: PASS
+Structural screen: STABLE_CANDIDATE
+Time-resolved decision: PASS_WITH_MONITORING
+RMSF/tube comparison: PASS_WITH_MONITORING
+Final scientific decision: PASS_WITH_MONITORING
+Mobile validation at 300 K closed: YES
+Authorized next step: MOBILE_VS_FROZEN_WATER_AND_SOLVENT_DISORDER_COMPARISON
+Longer mobile production authorized: NO
+Multitemperature production authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/STAGE08_MOBILE_100PS_ACCEPTANCE_DAY022.md

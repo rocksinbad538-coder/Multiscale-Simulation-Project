@@ -1,0 +1,33 @@
+Matched frozen extraction:
+  frames: 201
+  absolute time window: 44.000-144.000 ps
+  coordinate interval: 0.500 ps
+Day022 mobile-vs-frozen water comparison completed.
+Mobile / frozen frames: 201 / 201
+Mobile lumen occupancy mean/std: 1.9055/2.2341
+Frozen lumen occupancy mean/std: 0.4577/0.8342
+Occupancy difference mobile vs frozen: 316.3043 %
+Mobile/frozen lumen density mean: 0.068249/0.016829 nm^-3
+Radial / axial JS divergence: 0.06134384/0.02234335
+Mobile/frozen occupancy slopes: 0.00815132/0.00627457 water/ps
+Maximum absolute PYR hydration difference: 32.8102 %
+Screening interpretation: MOBILITY_DEPENDENT_REORGANIZATION_CANDIDATE
+Screening flags: mean lumen occupancy differs by more than 5% | radial Jensen-Shannon divergence exceeds 0.02 | axial Jensen-Shannon divergence exceeds 0.02 | local PYR hydration differs by more than 10%
+Representative matched snapshot pairs: 21
+Electronic recalculation authorized: NO
+Longer mobile production authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/matched_mobile_vs_frozen_water/MATCHED_MOBILE_VS_FROZEN_WATER_COMPARISON_DAY022.md
+
+===== MATCHED PAIRED WATER AUDIT =====
+Matched windows: frozen 44-144 ps vs mobile Stage08 0-100 ps
+Frames per dataset / exact time match: 201 / YES
+Mobile / matched-frozen lumen occupancy mean: 1.905473/0.457711
+Paired occupancy difference mean/std/MAE: 1.447761/2.391633/1.855721
+Paired mobile lower/equal/higher fractions: 0.134328/0.278607/0.587065
+Radial / axial JS divergence: 0.06134384/0.02234335
+Maximum absolute PYR hydration difference: 32.8102 %
+Matched comparison status: COMPLETE
+Causal interpretation status: REQUIRES_SCIENTIFIC_REVIEW
+Electronic recalculation authorized: NO
+Longer mobile production authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/matched_mobile_vs_frozen_water/MATCHED_PAIRED_WATER_AUDIT_DAY022.md

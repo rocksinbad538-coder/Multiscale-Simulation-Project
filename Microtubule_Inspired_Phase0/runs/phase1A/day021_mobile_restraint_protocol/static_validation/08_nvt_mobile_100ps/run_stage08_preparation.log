@@ -1,0 +1,13 @@
+Day022 Stage08 mobile-production preparation completed.
+Stage07 time-resolved decision: PASS_WITH_MONITORING
+Stage08: 08_nvt_mobile_100ps
+Duration / steps / dt: 100 ps / 200000 / 0.0005 ps
+Coordinate sampling interval: 0.5 ps
+Expected compressed trajectory frames: 201
+Stage08 static grompp: PASS
+Stage08 active position restraints: 0/0
+Stage08 master static-registration rows: 1
+Stage08 execution authorization: PASS
+Production longer than 100 ps authorized: NO
+Multitemperature production authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/static_validation/08_nvt_mobile_100ps/STAGE08_100PS_MOBILE_PRODUCTION_AUTHORIZATION_DAY022.md

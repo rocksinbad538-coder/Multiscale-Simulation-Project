@@ -1,0 +1,3 @@
+dataset,frames,zero_occupancy_fraction,positive_occupancy_fraction,mean_occupancy,conditional_mean_when_positive,maximum_occupancy,positive_episode_count,mean_positive_episode_duration_ps,maximum_positive_episode_duration_ps,sampled_positive_time_ps,lag1_autocorrelation
+mobile,201,0.31840796019900497,0.681592039800995,1.9054726368159205,2.795620437956204,11.0,20,3.425,18.5,68.5,0.7348820225000121
+matched_frozen,201,0.7164179104477612,0.2835820895522388,0.4577114427860697,1.6140350877192982,3.0,18,1.5833333333333333,5.0,28.5,0.6168830291990116

@@ -1,0 +1,22 @@
+Table-based XTC parser:
+  atoms parsed: 68320/68320
+  frames parsed: 289
+  coordinate interval parsed: 0.500000 ps
+  initial time parsed: 0.000000 ps
+  final time derived from table: 144.000000 ps
+  Step/Time/Coords/Box consistency: PASS
+  observed progress-frame consistency: PASS
+
+===== MATCHED FROZEN CONTROL RECOVERED VALIDATION =====
+Existing MD reused / new mdrun executed: YES / NO
+Trajectory frames / duration / interval: 289 / 144.000 ps / 0.500 ps
+Temperature mean/std/min/max/last: 299.8455/1.9971/279.4220/305.1766/300.8547 K
+Potential energy first/last: -788092.2500/-769609.7500 kJ/mol
+Pressure mean/min/max: 1461.0132/27.8158/1732.4004 bar
+Frozen HBN/PYR RMS/max displacement: 0.000000000000/0.000000000000 nm
+Water atom RMS displacement: 1.405231 nm
+Instability signatures: 0
+Execution decision: PASS
+Matched 44-144 ps comparison authorized: YES
+Electronic recalculation authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/execution/MATCHED_FROZEN_CONTROL_144PS_EXECUTION_DAY022.md

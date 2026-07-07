@@ -1,0 +1,10 @@
+Day022 Stage07 preparation completed.
+Stage06 authorization: PASS_WITH_MONITORING
+Stage07: 07_nvt_unrestrained_25ps
+Stage07 duration / steps / dt: 25 ps / 50000 / 0.0005 ps
+Coordinate sampling interval: 0.5 ps
+Stage07 static grompp: PASS
+Stage07 active position restraints: 0/0
+Stage07 preparation decision: PASS
+Long mobile production authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/static_validation/07_nvt_unrestrained_25ps/STAGE07_PREPARATION_DAY022.md

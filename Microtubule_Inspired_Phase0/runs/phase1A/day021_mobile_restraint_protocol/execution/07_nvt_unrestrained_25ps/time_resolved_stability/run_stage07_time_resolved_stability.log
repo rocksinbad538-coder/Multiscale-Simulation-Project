@@ -1,0 +1,14 @@
+Day022 Stage07 time-resolved stability analysis completed.
+Frames / duration: 51 / 25.000 ps
+Temperature mean/min/max: 300.1532/297.0708/303.1963 K
+HBN planarity q99 slope / first-last block change: 0.024167 deg/ps / 0.5209 deg
+HBN calibrated-equilibrium q99 slope / first-last block change: 0.011550 deg/ps / 0.0684 deg
+HBN aligned RMS slope / first-last block change: 0.00057159 nm/ps / 0.016636 nm
+Persistent impropers above 20 deg in >=50% / >=80% frames: 0/0
+Top 1% overlap mean consecutive frames / blocks: 0.320/0.000
+Maximum PYR aligned RMS: 0.026203 nm
+Minimum intergroup contact: 0.271076 nm
+Time-resolved decision: PASS_WITH_MONITORING
+Authorized next step: 100PS_MOBILE_PRODUCTION_CANDIDATE
+Long mobile production authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/07_nvt_unrestrained_25ps/time_resolved_stability/STAGE07_TIME_RESOLVED_STABILITY_DAY022.md

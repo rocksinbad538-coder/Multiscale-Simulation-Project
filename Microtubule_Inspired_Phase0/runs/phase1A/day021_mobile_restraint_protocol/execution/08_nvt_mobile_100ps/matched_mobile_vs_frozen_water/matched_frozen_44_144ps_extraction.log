@@ -1,0 +1,103 @@
+                     :-) GROMACS - gmx trjconv, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/execution
+Command line:
+  gmx trjconv -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/execution/matched_frozen_control_144ps.xtc -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/execution/matched_frozen_control_144ps.tpr -n /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/matched_mobile_vs_frozen_water/hbn_pyr_waterO.ndx -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/matched_mobile_vs_frozen_water/matched_frozen_44_144ps_frames/matched_frozen_frame.gro -b 44.0 -e 144.0 -sep -pbc atom
+
+Will write gro: Coordinate file in Gromos-87 format
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/execution/matched_frozen_control_144ps.tpr, VERSION 2025.4 (single precision)
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/execution/matched_frozen_control_144ps.tpr, VERSION 2025.4 (single precision)
+Group     0 ( HBN_PYR_WATERO) has 18418 elements
+There is one group in the index
+
+Reading frame       0 time    0.000   
+Reading frame       0 time   44.000   
+Precision of /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/execution/matched_frozen_control_144ps.xtc is 0.001 (nm)
+
+Reading frame       1 time   44.500    ->  frame      0 time   44.000      
+
+Reading frame       2 time   45.000    ->  frame      1 time   44.500      
+
+Reading frame       3 time   45.500    ->  frame      2 time   45.000      
+
+Reading frame       4 time   46.000    ->  frame      3 time   45.500      
+
+Reading frame       5 time   46.500    ->  frame      4 time   46.000      
+
+Reading frame       6 time   47.000    ->  frame      5 time   46.500      
+
+Reading frame       7 time   47.500    ->  frame      6 time   47.000      
+
+Reading frame       8 time   48.000    ->  frame      7 time   47.500      
+
+Reading frame       9 time   48.500    ->  frame      8 time   48.000      
+
+Reading frame      10 time   49.000    ->  frame      9 time   48.500      
+
+Reading frame      11 time   49.500    ->  frame     10 time   49.000      
+
+Reading frame      12 time   50.000    ->  frame     11 time   49.500      
+
+Reading frame      13 time   50.500    ->  frame     12 time   50.000      
+
+Reading frame      14 time   51.000    ->  frame     13 time   50.500      
+
+Reading frame      15 time   51.500    ->  frame     14 time   51.000      
+
+Reading frame      16 time   52.000    ->  frame     15 time   51.500      
+
+Reading frame      17 time   52.500    ->  frame     16 time   52.000      
+
+Reading frame      18 time   53.000    ->  frame     17 time   52.500      
+
+Reading frame      19 time   53.500    ->  frame     18 time   53.000      
+
+Reading frame      20 time   54.000    ->  frame     19 time   53.500      
+
+Reading frame      30 time   59.000    ->  frame     29 time   58.500      
+
+Reading frame      40 time   64.000    ->  frame     39 time   63.500      
+
+Reading frame      50 time   69.000    ->  frame     49 time   68.500      
+
+Reading frame      60 time   74.000    ->  frame     59 time   73.500      
+
+Reading frame      70 time   79.000    ->  frame     69 time   78.500      
+
+Reading frame      80 time   84.000    ->  frame     79 time   83.500      
+
+Reading frame      90 time   89.000    ->  frame     89 time   88.500      
+
+Reading frame     100 time   94.000    ->  frame     99 time   93.500      
+
+Reading frame     110 time   99.000    ->  frame    109 time   98.500      
+
+Reading frame     120 time  104.000    ->  frame    119 time  103.500      
+
+Reading frame     130 time  109.000    ->  frame    129 time  108.500      
+
+Reading frame     140 time  114.000    ->  frame    139 time  113.500      
+
+Reading frame     150 time  119.000    ->  frame    149 time  118.500      
+
+Reading frame     160 time  124.000    ->  frame    159 time  123.500      
+
+Reading frame     170 time  129.000    ->  frame    169 time  128.500      
+
+Reading frame     180 time  134.000    ->  frame    179 time  133.500      
+
+Reading frame     190 time  139.000    ->  frame    189 time  138.500      
+
+Reading frame     200 time  144.000    ->  frame    199 time  143.500      
+
+Last frame        200 time  144.000   
+ ->  frame    200 time  144.000      
+Last written: frame    200 time  144.000
+
+
+GROMACS reminds you: "For a research worker the unforgotten moments of his life are those rare ones which come after years of plodding work, when the veil over natures secret seems suddenly to lift & when what was dark & chaotic appears in a clear & beautiful light & pattern." (Gerty Cori)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output

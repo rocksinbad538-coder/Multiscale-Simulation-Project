@@ -1,0 +1,27 @@
+/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/analyze_day022_mobile_vs_frozen_water.py:817: RuntimeWarning: invalid value encountered in divide
+  first / midpoint
+/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/analyze_day022_mobile_vs_frozen_water.py:826: RuntimeWarning: invalid value encountered in divide
+  second / midpoint
+/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/analyze_day022_mobile_vs_frozen_water.py:825: RuntimeWarning: divide by zero encountered in log
+  * np.log(
+/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/analyze_day022_mobile_vs_frozen_water.py:824: RuntimeWarning: invalid value encountered in multiply
+  second
+/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/analyze_day022_mobile_vs_frozen_water.py:816: RuntimeWarning: divide by zero encountered in log
+  * np.log(
+/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/analyze_day022_mobile_vs_frozen_water.py:815: RuntimeWarning: invalid value encountered in multiply
+  first
+Day022 mobile-vs-frozen water comparison completed.
+Mobile / frozen frames: 201 / 201
+Mobile lumen occupancy mean/std: 1.9055/2.2341
+Frozen lumen occupancy mean/std: 281.9005/128.7457
+Occupancy difference mobile vs frozen: -99.3241 %
+Mobile/frozen lumen density mean: 0.068249/10.369915 nm^-3
+Radial / axial JS divergence: 0.01471366/0.46555245
+Mobile/frozen occupancy slopes: 0.00815132/-4.31993202 water/ps
+Maximum absolute PYR hydration difference: 15.5134 %
+Screening interpretation: MOBILITY_DEPENDENT_REORGANIZATION_CANDIDATE
+Screening flags: mean lumen occupancy differs by more than 5% | axial Jensen-Shannon divergence exceeds 0.02 | local PYR hydration differs by more than 10%
+Representative matched snapshot pairs: 21
+Electronic recalculation authorized: NO
+Longer mobile production authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/mobile_vs_frozen_water/MOBILE_VS_FROZEN_WATER_COMPARISON_DAY022.md

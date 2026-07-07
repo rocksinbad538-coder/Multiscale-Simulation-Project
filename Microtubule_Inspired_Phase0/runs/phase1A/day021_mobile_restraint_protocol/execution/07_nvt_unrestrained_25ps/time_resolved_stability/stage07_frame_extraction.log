@@ -1,0 +1,72 @@
+                     :-) GROMACS - gmx trjconv, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/07_nvt_unrestrained_25ps
+Command line:
+  gmx trjconv -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/07_nvt_unrestrained_25ps/07_nvt_unrestrained_25ps.xtc -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/07_nvt_unrestrained_25ps/07_nvt_unrestrained_25ps.tpr -n /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/07_nvt_unrestrained_25ps/time_resolved_stability/hbn_pyr_waterO.ndx -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/07_nvt_unrestrained_25ps/time_resolved_stability/solute_waterO_frames/stage07_frame.gro -sep -pbc atom
+
+Will write gro: Coordinate file in Gromos-87 format
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/07_nvt_unrestrained_25ps/07_nvt_unrestrained_25ps.tpr, VERSION 2025.4 (single precision)
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/07_nvt_unrestrained_25ps/07_nvt_unrestrained_25ps.tpr, VERSION 2025.4 (single precision)
+Group     0 ( HBN_PYR_WATERO) has 18418 elements
+There is one group in the index
+
+Reading frame       0 time    0.000   
+Precision of /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/07_nvt_unrestrained_25ps/07_nvt_unrestrained_25ps.xtc is 0.001 (nm)
+
+Reading frame       1 time    0.500    ->  frame      0 time    0.000      
+
+Reading frame       2 time    1.000    ->  frame      1 time    0.500      
+
+Reading frame       3 time    1.500    ->  frame      2 time    1.000      
+
+Reading frame       4 time    2.000    ->  frame      3 time    1.500      
+
+Reading frame       5 time    2.500    ->  frame      4 time    2.000      
+
+Reading frame       6 time    3.000    ->  frame      5 time    2.500      
+
+Reading frame       7 time    3.500    ->  frame      6 time    3.000      
+
+Reading frame       8 time    4.000    ->  frame      7 time    3.500      
+
+Reading frame       9 time    4.500    ->  frame      8 time    4.000      
+
+Reading frame      10 time    5.000    ->  frame      9 time    4.500      
+
+Reading frame      11 time    5.500    ->  frame     10 time    5.000      
+
+Reading frame      12 time    6.000    ->  frame     11 time    5.500      
+
+Reading frame      13 time    6.500    ->  frame     12 time    6.000      
+
+Reading frame      14 time    7.000    ->  frame     13 time    6.500      
+
+Reading frame      15 time    7.500    ->  frame     14 time    7.000      
+
+Reading frame      16 time    8.000    ->  frame     15 time    7.500      
+
+Reading frame      17 time    8.500    ->  frame     16 time    8.000      
+
+Reading frame      18 time    9.000    ->  frame     17 time    8.500      
+
+Reading frame      19 time    9.500    ->  frame     18 time    9.000      
+
+Reading frame      20 time   10.000    ->  frame     19 time    9.500      
+
+Reading frame      30 time   15.000    ->  frame     29 time   14.500      
+
+Reading frame      40 time   20.000    ->  frame     39 time   19.500      
+
+Reading frame      50 time   25.000    ->  frame     49 time   24.500      
+
+Last frame         50 time   25.000   
+ ->  frame     50 time   25.000      
+Last written: frame     50 time   25.000
+
+
+GROMACS reminds you: "You Leave Me Dry" (P.J. Harvey)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output

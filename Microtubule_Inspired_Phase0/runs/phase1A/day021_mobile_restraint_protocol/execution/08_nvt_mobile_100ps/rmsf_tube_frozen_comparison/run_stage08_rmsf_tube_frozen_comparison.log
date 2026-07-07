@@ -1,0 +1,15 @@
+Day022 Stage08 RMSF/tube/frozen comparison completed.
+Mobile / frozen frames: 201 / 201
+Mobile HBN RMSF mean/q95/max: 0.038322/0.056610/0.083378 nm
+Frozen HBN RMSF maximum: 0.000000 nm
+Mobile/frozen tube radius: 1.210748/1.199126 nm
+Tube-radius difference: 0.9693 %
+Mobile/frozen p98 tube length: 6.058695/6.018000 nm
+Tube-length difference: 0.6762 %
+Mobile tube ellipticity mean/max: 1.028715/1.072623
+Mobile radius/length slopes: 0.00000164/0.00002005 nm/ps
+Maximum mobile PYR internal RMSF: 0.018523 nm
+Comparison decision: PASS_WITH_MONITORING
+Authorized next step: MOBILE_VS_FROZEN_WATER_AND_SOLVENT_DISORDER_COMPARISON
+Longer mobile production authorized: NO
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/rmsf_tube_frozen_comparison/STAGE08_RMSF_TUBE_FROZEN_COMPARISON_DAY022.md

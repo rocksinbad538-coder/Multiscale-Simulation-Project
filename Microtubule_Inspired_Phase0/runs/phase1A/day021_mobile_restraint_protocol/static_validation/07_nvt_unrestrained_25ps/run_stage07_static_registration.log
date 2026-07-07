@@ -1,0 +1,7 @@
+Day022 Stage07 static-validation registration completed.
+Stage: 07_nvt_unrestrained_25ps
+Matching master-validation rows: 1
+Static grompp: PASS
+Active position restraints: 0/0
+TPR: runs/phase1A/day021_mobile_restraint_protocol/static_validation/07_nvt_unrestrained_25ps/07_nvt_unrestrained_25ps.tpr
+Stage07 execution authorization: PASS

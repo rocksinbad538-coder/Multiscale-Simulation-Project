@@ -1,0 +1,23 @@
+gmx dump stream separation:
+  numeric stdout: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/input_audit/stage02_initial_state_tpr_dump.txt
+  GROMACS stderr: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/input_audit/stage02_initial_state_gmx_dump_stderr.txt
+  stdout/stderr separation: PASS
+Robust TPR vector parser:
+  positions parsed: 68320/68320
+  velocities parsed: 68320/68320
+  box rows parsed: 3/3
+  finite-value validation: PASS
+Day022 matched frozen-control input audit completed.
+Stage02 initial atoms: 68320/68320
+Stage02 MDP gen-vel / gen-seed / continuation: yes / 20260706 / no
+Stage02 tc-grps: System
+Stage02 freezegrps / freezedim: MISSING / MISSING
+Initial HBN/PYR/water nonzero velocity fractions: 1.000000/1.000000/0.750000
+Initial water speed mean/std/min/max: 1.41348138/1.35258344/0.00000000/7.35234799 nm/ps
+Initial water velocity SHA256: d11ac84fa2d4a2a9a594a91ac0a6e0714dc3caa9da33f0ed12617371feff722d
+Best GRO coordinate match: runs/phase1A/day021_mobile_restraint_protocol/execution/01_em_k10000/01_em_k10000.gro
+Best GRO RMS/max difference: 0.00000000/0.00000000 nm
+Available index groups: System | HBN | PYR | HBN_PYR | SOL
+Matched frozen-control execution authorized: NO
+Required next step: BUILD_CONTROL_TPR_AND_VERIFY_INITIAL_WATER_VELOCITY_HASH
+Wrote: runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/input_audit/MATCHED_FROZEN_CONTROL_INPUT_AUDIT_DAY022.md
