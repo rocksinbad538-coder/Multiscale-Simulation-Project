@@ -1,0 +1,13 @@
+                       :-) GROMACS - gmx dump, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT
+Command line:
+  gmx dump -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT/cap_ow_pure_r12.tpr
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT/cap_ow_pure_r12.tpr, VERSION 2025.4 (single precision)
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT/cap_ow_pure_r12.tpr, VERSION 2025.4 (single precision)
+
+GROMACS reminds you: "Louis Pasteur's theory of germs is ridiculous fiction." (Pierre Pachet, Professor of Physiology at Toulouse, 1872)
+

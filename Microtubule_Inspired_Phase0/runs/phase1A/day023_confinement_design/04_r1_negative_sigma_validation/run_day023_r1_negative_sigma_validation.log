@@ -1,0 +1,19 @@
+Day023 R1 negative-sigma pure-r12 validation completed.
+Baseline OW sigma / epsilon: 0.3158900000 nm / 0.7749000000 kJ/mol
+Negative pair sigma: -0.170000 nm
+Candidates tested / passed: 4/4
+Candidate 5 kBT: epsilon=3.11792348 kJ/mol; C12=7.266286217927e-09; max relative error=3.063927e-06; PASS
+Candidate 10 kBT: epsilon=6.23584696 kJ/mol; C12=1.453257243585e-08; max relative error=3.063927e-06; PASS
+Candidate 20 kBT: epsilon=12.47169393 kJ/mol; C12=2.906514487171e-08; max relative error=3.063927e-06; PASS
+Candidate 40 kBT: epsilon=24.94338785 kJ/mol; C12=5.813028974342e-08; max relative error=3.063927e-06; PASS
+Decision: PURE_R12_NEGATIVE_SIGMA_OVERRIDE_VALIDATED
+Pure r^-12 standard override feasible: YES
+Tabulated interaction required: NO
+Full R1 topology built: NO
+Energy minimization authorized: NO
+MD execution authorized: NO
+Required next step: BUILD_FULL_R1_TOPOLOGY_CANDIDATES_AND_RUN_STATIC_CAP_WATER_ENERGY_SCAN
+Wrote: runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/r1_negative_sigma_pure_r12_validation.csv
+Wrote: runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/r1_negative_sigma_candidate_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/r1_cap_nonbonded_model_contract_corrected.json
+Wrote: runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/R1_NEGATIVE_SIGMA_PURE_R12_VALIDATION_DAY023.md

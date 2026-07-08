@@ -1,0 +1,23 @@
+Day023 R1 steric-cap prototype generation completed.
+Candidates evaluated / passing: 9/9
+Selected candidate: offset_0.20_spacing_0.20
+Selected offset / spacing / disk radius: 0.200/0.200/1.359616 nm
+Cap beads per end / total: 163/326
+Coverage hole / axial steric overlap: 0.114878/0.140000 nm
+Minimum cap-HBN / cap-PYR distance: 0.200001/0.959497 nm
+Initial / removed / retained waters: 16634/83/16551
+Initial / removed / retained lumen waters: 428/0/428
+Retained lumen fraction: 1.000000
+Derived system atoms: 68314
+Geometry prototype accepted: YES
+Topology generation authorized: YES
+MD execution authorized: NO
+Required next step: DEFINE_R1_CAP_NONBONDED_MODEL_AND_BUILD_TOPOLOGY
+Wrote: runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/r1_steric_cap_candidate_scan.csv
+Wrote: runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/r1_selected_steric_caps_only.gro
+Wrote: runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/r1_t0_hydrated_with_steric_caps_geometry_only.gro
+Wrote: runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/r1_removed_water_molecules_due_to_cap_overlap.csv
+Wrote: runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/r1_selected_cap_atom_coordinates.csv
+Wrote: runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/r1_selected_steric_cap_definition.json
+Wrote: runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/r1_steric_cap_prototype_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/R1_STERIC_CAP_PROTOTYPE_DAY023.md

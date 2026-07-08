@@ -1,0 +1,38 @@
+                      :-) GROMACS - gmx energy, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT
+Command line:
+  gmx energy -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT/rerun.edr -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT/cap_ow_lj_energy.xvg -xvg none -dp
+
+Opened /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT/rerun.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  LJ-(SR)                              2  Coulomb-(SR)                      
+  3  Potential                            4  Coul-SR:CAP-CAP                   
+  5  LJ-SR:CAP-CAP    6  Coul-SR:CAP-OW   7  LJ-SR:CAP-OW     8  Coul-SR:OW-OW 
+  9  LJ-SR:OW-OW   
+
+
+Reading energy frame      0 time    0.000         
+Reading energy frame      1 time    1.000         
+Reading energy frame      2 time    2.000         
+Reading energy frame      3 time    3.000         
+Reading energy frame      4 time    4.000         
+Reading energy frame      5 time    5.000         
+Reading energy frame      6 time    6.000         
+Last energy frame read 6 time    6.000         
+
+GROMACS reminds you: "I don't fear death because I don't fear anything I don't understand." (Hedy Lamarr)
+
+
+Statistics over 7 steps [ 0.0000 through 6.0000 ps ], 1 data sets
+All statistics are over 7 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+LJ-SR:CAP-OW                10.1358         --    19.1845   -41.6956  (kJ/mol)

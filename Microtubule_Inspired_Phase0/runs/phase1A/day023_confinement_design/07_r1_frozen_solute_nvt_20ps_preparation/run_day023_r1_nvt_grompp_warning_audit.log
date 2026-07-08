@@ -1,0 +1,13 @@
+Day023 R1 NVT grompp-warning audit completed.
+Warning count / expected warning: 1 / YES
+Fatal error present: NO
+T-coupling groups: SOL HBN_PYR CAPS
+tau-t values: 0.1 -1.0 -1.0 ps
+Degrees of freedom SOL/HBN_PYR/CAPS: 99303.0/0.0/0.0
+Decision: R1_NVT_GROMPP_WARNING_AUTHORIZED
+Failed gates: NONE
+NVT execution authorized: YES
+Required next step: RUN_R1_FROZEN_SOLUTE_NVT_20PS
+Wrote: runs/phase1A/day023_confinement_design/07_r1_frozen_solute_nvt_20ps_preparation/r1_nvt_grompp_warning_authorization_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/07_r1_frozen_solute_nvt_20ps_preparation/r1_nvt_grompp_warning_authorization_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/07_r1_frozen_solute_nvt_20ps_preparation/R1_NVT_GROMPP_WARNING_AUTHORIZATION_DAY023.md

@@ -1,0 +1,37 @@
+Day023 R2 checkpoint continuation to 50 ps preparation completed.
+Convert-tpr / source dump / extended dump / checkpoint dump return codes: 0/0/0/0
+Source / extended atoms: 68332/68332
+Source / extended nsteps: 40000/100000
+Source / target time: 20.000000/50.000000 ps
+Checkpoint step / time: 40000/20.000000 ps
+Remaining steps / time: 60000/30.000000 ps
+XTC stride / expected continuation frames: 1000/61
+Checkpoint coordinate / velocity entries: 204996/204996
+TPR differences beyond nsteps: 8
+Checkpoint bitwise copy: YES
+Decision: R2_CHECKPOINT_CONTINUATION_PREPARATION_REQUIRES_REVIEW
+Failed gates: TPRs_differ_only_by_nsteps
+Checkpoint-continuation execution authorized: NO
+Velocity regeneration authorized: NO
+Source 0-to-20 ps rerun authorized: NO
+Long mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: REVIEW_R2_CHECKPOINT_CONTINUATION_PREPARATION_FAILURES
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_frozen_solute_nvt_to_50ps.tpr
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_20ps_source_checkpoint.cpt
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_20ps_source_tpr_dump.txt
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_50ps_extended_tpr_dump.txt
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_20ps_checkpoint_dump.txt
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_source_vs_extended_tpr_physical_diff.txt
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_50ps_continuation_checksums.csv
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_50ps_continuation_preparation_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_50ps_continuation_preparation_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_50ps_continuation_run_contract.json
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/R2_CHECKPOINT_CONTINUATION_TO_50PS_PREPARATION_DAY023.md
+Traceback (most recent call last):
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/prepare_day023_r2_nvt_checkpoint_continuation_to_50ps.py", line 1569, in <module>
+    main()
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/prepare_day023_r2_nvt_checkpoint_continuation_to_50ps.py", line 1562, in main
+    raise RuntimeError(
+RuntimeError: R2 checkpoint-continuation preparation requires review.

@@ -1,0 +1,26 @@
+Day023 R1 frozen-solute NVT 20 ps preparation completed.
+Grompp / TPR dump return codes: 0/0
+GRO / TPR atoms: 68314/68314
+Protocol dt / steps / duration: 0.0005000 ps / 40000 / 20.0 ps
+Trajectory interval / expected frames: 0.5 ps / 41
+Freeze groups / dimensions: HBN_PYR CAPS / Y Y Y Y Y Y
+T-coupling groups / reference temperatures / seed: SOL HBN_PYR CAPS / 300.0 300.0 300.0 K / 20260708
+Velocity group HBN: nonzero=1.000000; RMS=0.775970 nm/ps; max=1.819376 nm/ps
+Velocity group PYR: nonzero=1.000000; RMS=1.569049 nm/ps; max=4.373571 nm/ps
+Velocity group SOL: nonzero=0.750000; RMS=1.956395 nm/ps; max=7.519569 nm/ps
+Velocity group CAPS: nonzero=1.000000; RMS=0.804803 nm/ps; max=1.820271 nm/ps
+Active position-restraint sections: 0
+Processed SOL/CAPL/CAPU counts: 16551/1/1
+CAP-OW override count / valid: 1 / YES
+EM potential-energy points / energy-change interpretable: 1 / NO
+Decision: R1_FROZEN_SOLUTE_NVT_20PS_PREPARED
+Failed gates: NONE
+NVT execution authorized: YES
+Required next step: RUN_R1_FROZEN_SOLUTE_NVT_20PS
+Wrote: runs/phase1A/day023_confinement_design/07_r1_frozen_solute_nvt_20ps_preparation/r1_frozen_solute_nvt_20ps.mdp
+Wrote: runs/phase1A/day023_confinement_design/07_r1_frozen_solute_nvt_20ps_preparation/r1_frozen_solute_nvt_20ps.tpr
+Wrote: runs/phase1A/day023_confinement_design/07_r1_frozen_solute_nvt_20ps_preparation/r1_frozen_solute_nvt_20ps_processed.top
+Wrote: runs/phase1A/day023_confinement_design/07_r1_frozen_solute_nvt_20ps_preparation/r1_frozen_solute_nvt_20ps_velocity_audit.csv
+Wrote: runs/phase1A/day023_confinement_design/07_r1_frozen_solute_nvt_20ps_preparation/r1_frozen_solute_nvt_20ps_preparation_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/07_r1_frozen_solute_nvt_20ps_preparation/r1_frozen_solute_nvt_20ps_preparation_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/07_r1_frozen_solute_nvt_20ps_preparation/R1_FROZEN_SOLUTE_NVT_20PS_PREPARATION_DAY023.md

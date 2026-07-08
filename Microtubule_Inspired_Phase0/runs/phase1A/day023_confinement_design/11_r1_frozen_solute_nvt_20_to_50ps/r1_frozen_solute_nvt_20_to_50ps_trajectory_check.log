@@ -1,0 +1,52 @@
+                      :-) GROMACS - gmx check, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps
+Command line:
+  gmx check -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_20_to_50ps.part0002.xtc
+
+
+Reading frame       0 time   20.000   
+# Atoms  68314
+Precision 0.001 (nm)
+
+Reading frame       1 time   20.500   
+Reading frame       2 time   21.000   
+Reading frame       3 time   21.500   
+Reading frame       4 time   22.000   
+Reading frame       5 time   22.500   
+Reading frame       6 time   23.000   
+Reading frame       7 time   23.500   
+Reading frame       8 time   24.000   
+Reading frame       9 time   24.500   
+Reading frame      10 time   25.000   
+Reading frame      11 time   25.500   
+Reading frame      12 time   26.000   
+Reading frame      13 time   26.500   
+Reading frame      14 time   27.000   
+Reading frame      15 time   27.500   
+Reading frame      16 time   28.000   
+Reading frame      17 time   28.500   
+Reading frame      18 time   29.000   
+Reading frame      19 time   29.500   
+Reading frame      20 time   30.000   
+Reading frame      30 time   35.000   
+Reading frame      40 time   40.000   
+Reading frame      50 time   45.000   
+Reading frame      60 time   50.000   
+Last frame         60 time   50.000   
+
+
+Item        #frames Timestep (ps)
+Step            61    0.5
+Time            61    0.5
+Lambda           0
+Coords          61    0.5
+Velocities       0
+Forces           0
+Box             61    0.5
+
+GROMACS reminds you: "Therefore, things must be learned only to be unlearned again or, more likely, to be corrected." (Richard Feynman)
+
+Checking file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_20_to_50ps.part0002.xtc

@@ -1,0 +1,28 @@
+Day023 R2 frozen-solute NVT 20 ps preparation completed.
+Atoms / waters / CAPL / CAPU: 68332/16565/144/144
+Grompp probe / final return codes: 1/0
+Grompp warnings / controlled maxwarn used: 1/YES
+TPR dt / nsteps / duration: 0.0005000 ps / 40000 / 20.000 ps
+XTC stride / interval / expected frames: 1000/0.500 ps/41
+SOL / HBN_PYR / CAPS degrees of freedom: 99387.000/0.000/0.000
+OW RMS / maximum generated speed: 0.684687/1.865740 nm/ps
+Decision: R2_FROZEN_SOLUTE_NVT_20PS_PREPARED
+Failed gates: NONE
+NVT execution authorized: YES
+Velocity regeneration during mdrun authorized: NO
+Long mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: RUN_R2_FROZEN_SOLUTE_NVT_20PS
+Wrote: runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps_input.gro
+Wrote: runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps.top
+Wrote: runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps.ndx
+Wrote: runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps.mdp
+Wrote: runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps_processed.mdp
+Wrote: runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps.tpr
+Wrote: runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps_tpr_dump.txt
+Wrote: runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps_checksums.csv
+Wrote: runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps_preparation_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps_preparation_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps_run_contract.json
+Wrote: runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/R2_FROZEN_SOLUTE_NVT_20PS_PREPARATION_DAY023.md

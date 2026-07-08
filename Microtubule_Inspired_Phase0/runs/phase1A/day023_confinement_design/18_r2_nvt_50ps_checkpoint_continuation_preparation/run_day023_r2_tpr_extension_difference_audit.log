@@ -1,0 +1,14 @@
+Day023 R2 TPR-extension difference audit completed.
+Unified diff total / removed / added lines: 8/1/1
+Semantic mismatches after nsteps normalization: 1
+Coordinate / velocity / box-state mismatches: 0/0/0
+Scalar-parameter mismatches: 0
+Changed parameters: NONE
+MISMATCH line=1 family=other parameter=
+  SOURCE:   /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps.tpr:
+  EXTENDED: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_frozen_solute_nvt_to_50ps.tpr:
+Checkpoint-continuation execution authorized: NO
+Required next step: CLASSIFY_TPR_EXTENSION_RESIDUAL_DIFFERENCES
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_source_vs_extended_tpr_mismatch_records.csv
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_source_vs_extended_tpr_difference_audit.json
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/R2_SOURCE_VS_EXTENDED_TPR_DIFFERENCE_AUDIT_DAY023.md

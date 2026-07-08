@@ -1,0 +1,11 @@
+                       :-) GROMACS - gmx dump, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps
+Command line:
+  gmx dump -cp /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps.cpt
+
+
+GROMACS reminds you: "A weed scientist goes into a shop. He asks: 'Hey, you got any of that inhibitor of 3-phosphoshikimate-carboxyvinyl transferase?' Shopkeeper: 'You mean Roundup?' Scientist: 'Yeah, that's it. I can never remember that dang name!'" (John Pickett)
+

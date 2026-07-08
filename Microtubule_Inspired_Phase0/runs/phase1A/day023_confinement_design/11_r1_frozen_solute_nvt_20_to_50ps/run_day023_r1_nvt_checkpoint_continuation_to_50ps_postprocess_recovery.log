@@ -1,0 +1,39 @@
+Reusing the completed R1 checkpoint continuation.
+No molecular-dynamics steps will be repeated.
+Proceeding directly to trajectory, energy, and confinement validation.
+
+Day023 R1 checkpoint continuation to 50 ps execution and validation completed.
+Mdrun / trajectory-check return codes: 0/0
+Finished / checkpoint reference / instabilities: YES / YES / NONE
+Continuation frames / time range: 61 / 20.000-50.000 ps
+Combined unique frames / time range: 101 / 0.000-50.000 ps
+Continuation temperature mean/std/min/max/slope: 299.9643/1.3557/296.5693/303.7985/-0.013563 K / K / K / K / K ps^-1
+Last-15ps temperature mean/std/min/max/slope: 299.7803/1.2221/296.5693/303.4604/-0.020140 K / K / K / K / K ps^-1
+Potential initial/final/change: -765130.250000/-762399.375000/2730.875000 kJ/mol
+CAP-SOL LJ initial/final/maximum: 15.390732/15.371712/36.945129 kJ/mol
+HBN final RMS/max displacement: 0.000000000000/0.000000000000 nm
+PYR final RMS/max displacement: 0.000000000000/0.000000000000 nm
+CAPS final RMS/max displacement: 0.000000000000/0.000000000000 nm
+Maximum continuation displacement HBN/PYR/CAPS: 0.000000/0.000000/0.000000 nm
+Water-O final RMS/max displacement: 0.826790/2.521529 nm
+Combined lumen occupancy initial/mean/min/max/endpoint: 428/427.9109/426/428/428
+Endpoint initial-lumen retention: 428/428 (1.000000)
+Combined second-half occupancy slope: 0.004706 waters/ps
+Minimum CAP-OW distance over 0-50 ps: 0.170798 nm
+Decision: R1_FROZEN_SOLUTE_50PS_POSITIVE_CONTROL_VALIDATED
+Failed gates: NONE
+R2 partial-cap static design authorized: YES
+Long mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: BEGIN_R2_PARTIAL_CAP_DESIGN_AND_STATIC_GATE
+Wrote: runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_20_to_50ps.part0002.gro
+Wrote: runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_20_to_50ps.part0002.xtc
+Wrote: runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_20_to_50ps.part0002.edr
+Wrote: runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_20_to_50ps.cpt
+Wrote: runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_20_to_50ps_lumen_occupancy.csv
+Wrote: runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_0_to_50ps_combined_occupancy.csv
+Wrote: runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_20_to_50ps_energy_series.csv
+Wrote: runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_50ps_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_50ps_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/R1_FROZEN_SOLUTE_NVT_50PS_VALIDATION_DAY023.md

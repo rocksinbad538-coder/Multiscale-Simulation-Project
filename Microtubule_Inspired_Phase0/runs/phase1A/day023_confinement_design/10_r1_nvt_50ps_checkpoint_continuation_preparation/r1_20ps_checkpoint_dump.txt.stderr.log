@@ -1,0 +1,11 @@
+                       :-) GROMACS - gmx dump, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation
+Command line:
+  gmx dump -cp /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_20ps_source_checkpoint.cpt
+
+
+GROMACS reminds you: "Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to build bigger and better idiots. So far, the universe is winning." (Rick Cook)
+

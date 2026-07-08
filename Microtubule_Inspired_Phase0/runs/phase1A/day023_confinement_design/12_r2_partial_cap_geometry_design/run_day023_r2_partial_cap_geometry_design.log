@@ -1,0 +1,27 @@
+Day023 R2 partial-cap geometry design and static validation completed.
+Candidates evaluated / passing: 10/4
+Selected candidate / removal radius: remove_r0p45 / 0.450000 nm
+Selected lower/upper/total cap beads: 144/144/288
+Removed cap beads: 38
+Effective aperture radius/diameter at 5 kBT: 0.358819/0.717638 nm
+Conservative aperture radius/diameter: 0.308819/0.617638 nm
+Open-area fraction: 0.142928
+Removed / retained waters: 69/16565
+Retained lumen waters / fraction: 428/428 / 1.000000
+Minimum CAP-HBN / CAP-PYR / CAP-OW distances: 0.200002/0.959393/0.220189 nm
+Selected R2 atom count: 68332
+Decision: R2_PARTIAL_CAP_GEOMETRY_STATIC_GATE_PASSED
+Failed gates: NONE
+Topology generation authorized: YES
+Energy minimization authorized: NO
+MD execution authorized: NO
+Required next step: BUILD_R2_TOPOLOGY_AND_RUN_STATIC_CAP_WATER_SCAN
+Wrote: runs/phase1A/day023_confinement_design/12_r2_partial_cap_geometry_design/r2_partial_cap_candidate_scan.csv
+Wrote: runs/phase1A/day023_confinement_design/12_r2_partial_cap_geometry_design/selected/r2_selected_partial_cap_coordinates.csv
+Wrote: runs/phase1A/day023_confinement_design/12_r2_partial_cap_geometry_design/selected/r2_selected_removed_water_molecules.csv
+Wrote: runs/phase1A/day023_confinement_design/12_r2_partial_cap_geometry_design/selected/r2_selected_partial_caps_only.gro
+Wrote: runs/phase1A/day023_confinement_design/12_r2_partial_cap_geometry_design/selected/r2_selected_partial_cap_geometry_only.gro
+Wrote: runs/phase1A/day023_confinement_design/12_r2_partial_cap_geometry_design/selected/r2_selected_partial_cap_definition.json
+Wrote: runs/phase1A/day023_confinement_design/12_r2_partial_cap_geometry_design/r2_partial_cap_geometry_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/12_r2_partial_cap_geometry_design/r2_partial_cap_geometry_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/12_r2_partial_cap_geometry_design/R2_PARTIAL_CAP_GEOMETRY_DESIGN_DAY023.md

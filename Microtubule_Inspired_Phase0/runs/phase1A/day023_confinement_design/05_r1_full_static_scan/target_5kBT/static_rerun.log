@@ -1,0 +1,31 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/05_r1_full_static_scan/target_5kBT
+Command line:
+  gmx mdrun -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/05_r1_full_static_scan/target_5kBT/r1_static.tpr -rerun /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/r1_t0_hydrated_with_steric_caps_geometry_only.gro -deffnm static -ntmpi 1 -ntomp 1
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/05_r1_full_static_scan/target_5kBT/r1_static.tpr, VERSION 2025.4 (single precision)
+
+
+Using 1 MPI thread
+Using 1 OpenMP thread 
+
+starting md rerun 'h-BN fixed dummy scaffold + 4 pyrenes + TIP4P/2005 water', reading coordinates from input trajectory '/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/r1_t0_hydrated_with_steric_caps_geometry_only.gro'
+
+Reading frames from gro file 'R1 geometry-only prototype derived from accepted R0 t=0; no force field assigned', 68314 atoms.
+
+Reading frame       0 time    0.000   
+Last frame          0 time    0.000   
+
+NOTE: 15 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.821        0.821      100.0
+                 (ns/day)    (hour/ns)
+Performance:        0.105      227.949
+
+GROMACS reminds you: "I couldn't claim that I was smarter than sixty-five other guys - but the average of sixty-five other guys, certainly!" (Richard Feynman)
+

@@ -1,0 +1,14 @@
+Day023 confinement-design input audit completed.
+Git branch / HEAD: main / b3af4af0568279876523a8316bda56b6056b09b5
+Accepted R0 directory: PASS
+Accepted R0 GRO/TPR/XTC/CPT counts: 1/1/1/1
+Accepted GRO files with 68320 atoms: 1
+Validated topology / Stage02 start / Stage08 trajectory: PASS/PASS/PASS
+Existing reusable script candidates: 27
+Existing cap-related scripts: 0
+Authoritative hydrated R1 start state resolved: YES
+Accepted XTC metadata: 201 frames / 0.5 ps / 100.0 ps / 68320 atoms
+Required next step: EXTRACT_AND_AUDIT_ACCEPTED_R0_T0_HYDRATED_STATE
+Wrote: runs/phase1A/day023_confinement_design/00_input_audit/R1_DESIGN_INPUT_AUDIT_DAY023.md
+Wrote: runs/phase1A/day023_confinement_design/00_input_audit/R1_CONFINEMENT_DESIGN_CONTRACT_DRAFT_DAY023.md
+Wrote: runs/phase1A/day023_confinement_design/00_input_audit/day023_confinement_input_inventory.csv

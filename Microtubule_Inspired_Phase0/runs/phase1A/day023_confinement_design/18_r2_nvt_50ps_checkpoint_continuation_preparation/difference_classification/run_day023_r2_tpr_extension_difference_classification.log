@@ -1,0 +1,21 @@
+Day023 R2 TPR-extension difference classification completed.
+Original preparation decision: R2_CHECKPOINT_CONTINUATION_PREPARATION_REQUIRES_REVIEW
+Original failed gates: TPRs_differ_only_by_nsteps
+Semantic mismatch count: 1
+Difference classification: BENIGN_GMX_DUMP_FILENAME_HEADER
+Residual TPR-body mismatches after header and nsteps normalization: 0
+Source / extended nsteps: 40000/100000
+Source / extended atoms: 68332/68332
+Decision: R2_CHECKPOINT_CONTINUATION_TO_50PS_AUTHORIZED
+Failed classification gates: NONE
+Checkpoint-continuation execution authorized: YES
+Velocity regeneration authorized: NO
+Source 0-to-20 ps rerun authorized: NO
+Long mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: RUN_R2_20_TO_50PS_CHECKPOINT_CONTINUATION
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/difference_classification/r2_tpr_extension_difference_classification_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/difference_classification/r2_tpr_extension_difference_classification_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/difference_classification/r2_50ps_continuation_authorized_run_contract.json
+Wrote: runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/difference_classification/R2_TPR_EXTENSION_DIFFERENCE_CLASSIFICATION_DAY023.md

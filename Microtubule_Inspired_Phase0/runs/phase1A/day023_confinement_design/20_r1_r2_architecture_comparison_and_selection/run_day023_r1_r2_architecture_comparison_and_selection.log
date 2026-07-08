@@ -1,0 +1,35 @@
+Day023 R1-R2 architecture comparison and selection completed.
+R1 summary source: runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_50ps_summary.csv
+R1 occupancy source: runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_0_to_50ps_combined_occupancy.csv
+R2 summary source: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_50ps_validation_summary.csv
+R2 static source: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_topology_static_scan_summary.csv
+R2 geometry source: runs/phase1A/day023_confinement_design/12_r2_partial_cap_geometry_design/r2_partial_cap_geometry_summary.csv
+R1 initial/mean/min/endpoint: 428/427.9109/426/428
+R2 initial/mean/min/endpoint: 428/416.6337/409/411
+R1 / R2 endpoint fractions: 1.000000/0.960280
+R2 endpoint relative to R1 / retention penalty: 0.960280/3.9720 percentage points
+R1 stationarity slope: 0.005226 waters/ps
+R2 final-20/final-15/final-10 slopes: -0.173868/0.025806/0.064935 waters/ps
+R2 final-10 change: +0 waters
+R2 endpoint retained initial identities: 409/428 (0.955607)
+R2 endpoint / maximum noninitial lumen waters: 2/4
+R2 effective aperture diameter / open-area fraction: 0.839406/0.142928
+R2 minimum CAP-OW distance: 0.166949 nm
+R2 continuation OpenMP threads: 12
+Decision: R2_SELECTED_AS_PRIMARY_PARTIAL_CAP_SCREENING_ARCHITECTURE
+Failed gates: NONE
+R1 status: RETAIN_AS_CLOSED_STERIC_POSITIVE_CONTROL
+R2 status: PRIMARY_PARTIAL_CAP_SCREENING_ARCHITECTURE
+R3 / R4 status: DEFERRED_NOT_REQUIRED_AT_THIS_GATE
+Chemical-realization static design authorized: YES
+New MD execution authorized: NO
+Short mobile MD authorized: NO
+Long mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: BEGIN_R2_CHEMICALLY_REALIZABLE_END_RIM_DESIGN_GATE
+Wrote: runs/phase1A/day023_confinement_design/20_r1_r2_architecture_comparison_and_selection/r1_r2_architecture_comparison.csv
+Wrote: runs/phase1A/day023_confinement_design/20_r1_r2_architecture_comparison_and_selection/r1_r2_architecture_selection_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/20_r1_r2_architecture_comparison_and_selection/r1_r2_architecture_selection_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/20_r1_r2_architecture_comparison_and_selection/r1_r2_architecture_source_manifest.csv
+Wrote: runs/phase1A/day023_confinement_design/20_r1_r2_architecture_comparison_and_selection/R1_R2_ARCHITECTURE_COMPARISON_AND_SELECTION_DAY023.md

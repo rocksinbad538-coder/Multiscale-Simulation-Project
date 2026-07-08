@@ -1,0 +1,13 @@
+                       :-) GROMACS - gmx dump, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan
+Command line:
+  gmx dump -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/selected/r2_static_single_point.tpr
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/selected/r2_static_single_point.tpr, VERSION 2025.4 (single precision)
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/selected/r2_static_single_point.tpr, VERSION 2025.4 (single precision)
+
+GROMACS reminds you: "Computer dating is fine, if you are a computer." (Rita May Brown)
+

@@ -1,0 +1,31 @@
+Input file:
+  Run start step                                     0     
+  Run start time                                     0 ps  
+  Step to be made during run                     40000     
+  Runtime for the run                               20 ps  
+  Run end step                                   40000     
+  Run end time                                      20 ps  
+
+Extending remaining runtime by 30 ps
+
+Output file:
+  Run start step                                     0     
+  Run start time                                     0 ps  
+  Step to be made during run                    100000     
+  Runtime for the run                               50 ps  
+  Run end step                                  100000     
+  Run end time                                      50 ps  
+
+
+                   :-) GROMACS - gmx convert-tpr, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation
+Command line:
+  gmx convert-tpr -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps.tpr -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_frozen_solute_nvt_to_50ps.tpr -extend 30.000000
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps.tpr, VERSION 2025.4 (single precision)
+
+GROMACS reminds you: "Why would I pay GitHub $100/year for an AI to tell me what code to write when men do it for free?" (Safia Abdalla)
+

@@ -1,0 +1,23 @@
+Day023 R1 NVT 20 ps thermal-transient review completed.
+Energy points / time range: 401 / 0.000-20.000 ps
+First / second temperature: 300.0562/179.0396 K
+Temperature full mean/std: 298.4674/10.9928 K
+Temperature std without first point / theoretical canonical std: 11.0063/1.3463 K
+Post-5ps temperature mean/std/min/max/slope: 300.1487/1.3613/296.0628/303.4521/-0.007659 K/ps
+Last-10ps temperature mean/std/min/max/slope: 300.1393/1.3364/296.0628/303.2159/-0.026557 K/ps
+Post-5ps potential change/slope: -1629.562/-58.403 kJ mol^-1 / kJ mol^-1 ps^-1
+Last-10ps potential change/slope: -2303.438/64.025 kJ mol^-1 / kJ mol^-1 ps^-1
+Post-5ps occupancy min / initial-water retention min / endpoint: 427/427/428
+Post-5ps minimum CAP-OW distance: 0.170798 nm
+Decision: R1_INITIAL_THERMALIZATION_TRANSIENT_CONFIRMED
+Failed gates: NONE
+Checkpoint continuation preparation authorized: YES
+Long mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: PREPARE_R1_30PS_CHECKPOINT_CONTINUATION_TO_50PS
+Wrote: runs/phase1A/day023_confinement_design/09_r1_nvt_20ps_thermal_review/r1_nvt_20ps_thermal_window_statistics.csv
+Wrote: runs/phase1A/day023_confinement_design/09_r1_nvt_20ps_thermal_review/r1_nvt_20ps_initial_temperature_samples.csv
+Wrote: runs/phase1A/day023_confinement_design/09_r1_nvt_20ps_thermal_review/r1_nvt_20ps_thermal_review_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/09_r1_nvt_20ps_thermal_review/r1_nvt_20ps_thermal_review_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/09_r1_nvt_20ps_thermal_review/R1_NVT_20PS_THERMAL_TRANSIENT_REVIEW_DAY023.md

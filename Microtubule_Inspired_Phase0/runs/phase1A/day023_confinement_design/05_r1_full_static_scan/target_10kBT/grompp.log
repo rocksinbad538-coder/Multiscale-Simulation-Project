@@ -1,0 +1,67 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/05_r1_full_static_scan/target_10kBT
+Command line:
+  gmx grompp -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/05_r1_full_static_scan/target_10kBT/static_rerun.mdp -c /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/r1_t0_hydrated_with_steric_caps_geometry_only.gro -p /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/05_r1_full_static_scan/target_10kBT/r1_full_system.top -n /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/05_r1_full_static_scan/r1_static_groups.ndx -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/05_r1_full_static_scan/target_10kBT/r1_static.tpr -po /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/05_r1_full_static_scan/target_10kBT/mdout.mdp -pp /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/05_r1_full_static_scan/target_10kBT/r1_static_processed.top -maxwarn 0
+
+
+NOTE 1 [file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/05_r1_full_static_scan/target_10kBT/static_rerun.mdp]:
+  With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+  that with the Verlet scheme, nstlist has no effect on the accuracy of
+  your simulation.
+
+Generating 1-4 interactions: fudge = 0.5
+
+NOTE 2 [file r1_full_system.top, line 11346]:
+  In moleculetype 'CAPL' 163 atoms are not bound by a potential or
+  constraint to any other atom in the same moleculetype. Although
+  technically this might not cause issues in a simulation, this often means
+  that the user forgot to add a bond/potential/constraint or put multiple
+  molecules in the same moleculetype definition by mistake. Run with -v to
+  get information for each atom.
+
+
+NOTE 3 [file r1_full_system.top, line 11346]:
+  In moleculetype 'CAPU' 163 atoms are not bound by a potential or
+  constraint to any other atom in the same moleculetype. Although
+  technically this might not cause issues in a simulation, this often means
+  that the user forgot to add a bond/potential/constraint or put multiple
+  molecules in the same moleculetype definition by mistake. Run with -v to
+  get information for each atom.
+
+Number of degrees of freedom in T-Coupling group rest is 105636.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 4 [file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/05_r1_full_static_scan/target_10kBT/static_rerun.mdp]:
+  You are using a plain Coulomb cut-off, which might produce artifacts.
+  You might want to consider using PME electrostatics.
+
+
+
+There were 4 NOTEs
+
+GROMACS reminds you: "I Can't Shake It" (Dinosaur Jr)
+
+Setting the LD random seed to -377618597
+
+Generated 35 of the 36 non-bonded parameter combinations
+
+Generated 36 of the 36 1-4 parameter combinations
+
+Excluding 1 bonded neighbours molecule type 'HBN'
+
+Excluding 3 bonded neighbours molecule type 'PYR'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Excluding 0 bonded neighbours molecule type 'CAPL'
+
+Excluding 0 bonded neighbours molecule type 'CAPU'
+
+Taking velocities from '/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/r1_t0_hydrated_with_steric_caps_geometry_only.gro', all velocities are zero
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+
+This run will generate roughly 5 Mb of data

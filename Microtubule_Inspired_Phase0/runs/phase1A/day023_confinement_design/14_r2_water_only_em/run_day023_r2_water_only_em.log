@@ -1,0 +1,62 @@
+Starting R2 water-only energy minimization.
+HBN, all PYR molecules, and both partial caps are frozen in all dimensions.
+Only the 16565 TIP4P/2005 water molecules are allowed to minimize.
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/14_r2_water_only_em
+Command line:
+  gmx mdrun -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/14_r2_water_only_em/selected/r2_water_only_em.tpr -deffnm /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/14_r2_water_only_em/r2_water_only_em -ntmpi 1 -ntomp 4
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/14_r2_water_only_em/selected/r2_water_only_em.tpr, VERSION 2025.4 (single precision)
+Multiple energy groups is not implemented for GPUs, falling back to the CPU. For better performance, run on the GPU without energy groups and then do gmx mdrun -rerun option on the trajectory with an energy group .tpr file.
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Using 1 MPI thread
+Using 4 OpenMP threads 
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  5.00000e+02
+   Number of steps    =         5000
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to Fmax < 500 in 1 steps
+Potential Energy  = -9.0458531e+05
+Maximum force     =  3.8290878e+02 on atom 44727
+Norm of force     =  1.6557585e+01
+
+GROMACS reminds you: "As we all know, blinking lights means science." (Joss Whedon)
+
+
+Day023 R2 water-only energy minimization and validation completed.
+Grompp / mdrun return codes: 0/0
+Grompp warnings / instability signatures: 0/NONE
+EM converged / steps: YES / 1
+Maximum force / norm: 382.908780/16.557585 kJ mol^-1 nm^-1
+HBN RMS/max displacement: 0.000000000000/0.000000000000 nm
+PYR RMS/max displacement: 0.000000000000/0.000000000000 nm
+CAPS RMS/max displacement: 0.000000000000/0.000000000000 nm
+Water-O RMS/max displacement: 0.000029404/0.000530000 nm
+Lumen occupancy initial/final/retained: 428/428/428
+Initial/final minimum CAP-OW distance: 0.220189/0.220189 nm
+Potential initial/final/change: -904585.312500/-904585.312500/0.000000 kJ/mol
+CAP-SOL LJ initial/final/maximum: 14.033027/14.033027/14.033027 kJ/mol
+Decision: R2_WATER_ONLY_ENERGY_MINIMIZATION_VALIDATED
+Failed gates: NONE
+Short frozen-solute NVT preparation authorized: YES
+Short frozen-solute NVT execution authorized: NO
+Long mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: PREPARE_R2_FROZEN_SOLUTE_NVT_20PS
+Wrote: runs/phase1A/day023_confinement_design/14_r2_water_only_em/r2_water_only_em.gro
+Wrote: runs/phase1A/day023_confinement_design/14_r2_water_only_em/r2_water_only_em.edr
+Wrote: runs/phase1A/day023_confinement_design/14_r2_water_only_em/r2_water_only_em.log
+Wrote: runs/phase1A/day023_confinement_design/14_r2_water_only_em/r2_water_only_em_energy_series.csv
+Wrote: runs/phase1A/day023_confinement_design/14_r2_water_only_em/r2_water_only_em_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/14_r2_water_only_em/r2_water_only_em_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/14_r2_water_only_em/R2_WATER_ONLY_ENERGY_MINIMIZATION_DAY023.md

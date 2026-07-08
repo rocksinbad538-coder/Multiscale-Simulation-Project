@@ -1,0 +1,30 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan
+Command line:
+  gmx mdrun -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/selected/r2_static_single_point.tpr -deffnm /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_static_single_point -ntmpi 1 -ntomp 4
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/selected/r2_static_single_point.tpr, VERSION 2025.4 (single precision)
+Multiple energy groups is not implemented for GPUs, falling back to the CPU. For better performance, run on the GPU without energy groups and then do gmx mdrun -rerun option on the trajectory with an energy group .tpr file.
+Can not increase nstlist because an NVE ensemble is used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Using 1 MPI thread
+Using 4 OpenMP threads 
+
+starting mdrun 'h-BN fixed dummy scaffold + 4 pyrenes + TIP4P/2005 water'
+0 steps,      0.0 ps.
+
+NOTE: 44 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.491        0.124      395.7
+                 (ns/day)    (hour/ns)
+Performance:        0.348       68.909
+
+GROMACS reminds you: "Developing the AI requires the work of a data scientist, and most of them understand neither data nor science." (Scott LeGrand)
+

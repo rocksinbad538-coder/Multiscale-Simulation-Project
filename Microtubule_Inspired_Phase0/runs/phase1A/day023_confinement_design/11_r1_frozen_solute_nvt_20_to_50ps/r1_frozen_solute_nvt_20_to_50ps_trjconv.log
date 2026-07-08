@@ -1,0 +1,81 @@
+                     :-) GROMACS - gmx trjconv, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /private/tmp/r1_continuation_frames_skonu1m8
+Command line:
+  gmx trjconv -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_frozen_solute_nvt_to_50ps.tpr -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_20_to_50ps.part0002.xtc -n /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_20_to_50ps.ndx -o /tmp/r1_continuation_frames_skonu1m8/frame.gro -sep
+
+Will write gro: Coordinate file in Gromos-87 format
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_frozen_solute_nvt_to_50ps.tpr, VERSION 2025.4 (single precision)
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_frozen_solute_nvt_to_50ps.tpr, VERSION 2025.4 (single precision)
+Group     0 (            HBN) has  1680 elements
+Group     1 (            PYR) has   104 elements
+Group     2 (        HBN_PYR) has  1784 elements
+Group     3 (            SOL) has 66204 elements
+Group     4 (           CAPL) has   163 elements
+Group     5 (           CAPU) has   163 elements
+Group     6 (           CAPS) has   326 elements
+Group     7 (         System) has 68314 elements
+Select a group: 
+Reading frame       0 time   20.000   
+Precision of /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/11_r1_frozen_solute_nvt_20_to_50ps/r1_frozen_solute_nvt_20_to_50ps.part0002.xtc is 0.001 (nm)
+
+Reading frame       1 time   20.500    ->  frame      0 time   20.000      
+
+Reading frame       2 time   21.000    ->  frame      1 time   20.500      
+
+Reading frame       3 time   21.500    ->  frame      2 time   21.000      
+
+Reading frame       4 time   22.000    ->  frame      3 time   21.500      
+
+Reading frame       5 time   22.500    ->  frame      4 time   22.000      
+
+Reading frame       6 time   23.000    ->  frame      5 time   22.500      
+
+Reading frame       7 time   23.500    ->  frame      6 time   23.000      
+
+Reading frame       8 time   24.000    ->  frame      7 time   23.500      
+
+Reading frame       9 time   24.500    ->  frame      8 time   24.000      
+
+Reading frame      10 time   25.000    ->  frame      9 time   24.500      
+
+Reading frame      11 time   25.500    ->  frame     10 time   25.000      
+
+Reading frame      12 time   26.000    ->  frame     11 time   25.500      
+
+Reading frame      13 time   26.500    ->  frame     12 time   26.000      
+
+Reading frame      14 time   27.000    ->  frame     13 time   26.500      
+
+Reading frame      15 time   27.500    ->  frame     14 time   27.000      
+
+Reading frame      16 time   28.000    ->  frame     15 time   27.500      
+
+Reading frame      17 time   28.500    ->  frame     16 time   28.000      
+
+Reading frame      18 time   29.000    ->  frame     17 time   28.500      
+
+Reading frame      19 time   29.500    ->  frame     18 time   29.000      
+
+Reading frame      20 time   30.000    ->  frame     19 time   29.500      
+
+Reading frame      30 time   35.000    ->  frame     29 time   34.500      
+
+Reading frame      40 time   40.000    ->  frame     39 time   39.500      
+
+Reading frame      50 time   45.000    ->  frame     49 time   44.500      
+
+Reading frame      60 time   50.000    ->  frame     59 time   49.500      
+
+Last frame         60 time   50.000   
+ ->  frame     60 time   50.000      
+Last written: frame     60 time   50.000
+
+
+GROMACS reminds you: "We are perhaps not far removed from the time when we shall be able to submit the bulk of chemical phenomena to calculation." (Joseph Gay-Lussac, 1808)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 7: 'System'

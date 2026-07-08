@@ -1,0 +1,37 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT
+Command line:
+  gmx grompp -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/rerun.mdp -c /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/first_frame.gro -p /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/cap_ow_pure_r12.top -n /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/cap_ow.ndx -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/cap_ow_pure_r12.tpr -po /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/mdout.mdp -pp /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/processed.top -maxwarn 0
+
+
+NOTE 1 [file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/rerun.mdp]:
+  With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+  that with the Verlet scheme, nstlist has no effect on the accuracy of
+  your simulation.
+
+Number of degrees of freedom in T-Coupling group rest is 6.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 2 [file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/rerun.mdp]:
+  NVE simulation with an initial temperature of zero: will use a Verlet
+  buffer of 10%. Check your energy drift!
+
+
+There were 2 NOTEs
+
+GROMACS reminds you: "I don't fear death because I don't fear anything I don't understand." (Hedy Lamarr)
+
+Setting the LD random seed to 2134376191
+
+Generated 2 of the 3 non-bonded parameter combinations
+
+Excluding 0 bonded neighbours molecule type 'CAPM'
+
+Excluding 0 bonded neighbours molecule type 'OWM'
+
+Taking velocities from '/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/first_frame.gro', all velocities are zero
+
+This run will generate roughly 0 Mb of data

@@ -1,0 +1,35 @@
+[ defaults ]
+; nbfunc  comb-rule  gen-pairs  fudgeLJ  fudgeQQ
+1         2          no         1.0      1.0
+
+[ atomtypes ]
+; name  at.num  mass       charge  ptype  sigma       epsilon
+CAP     0       12.011000  0.0000  A      0.00000000  0.00000000
+OWT     8       15.999400  0.0000  A      3.158900000000e-01  7.749000000000e-01
+
+[ nonbond_params ]
+; i    j    funct  sigma                    epsilon
+CAP    OWT  1      -1.700000000000e-01     6.235846963615e+00
+
+[ moleculetype ]
+; name  nrexcl
+CAPM    0
+
+[ atoms ]
+; nr  type  resnr  residue  atom  cgnr  charge  mass
+1     CAP   1      CAP      CAP   1     0.0     12.011
+
+[ moleculetype ]
+; name  nrexcl
+OWM     0
+
+[ atoms ]
+; nr  type  resnr  residue  atom  cgnr  charge  mass
+1     OWT   1      OWM      OW    1     0.0     15.9994
+
+[ system ]
+R1 negative-sigma pure-r12 CAP-OW validation
+
+[ molecules ]
+CAPM    1
+OWM     1

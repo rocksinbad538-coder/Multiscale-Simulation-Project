@@ -1,0 +1,35 @@
+Day023 R2 20 ps occupancy-transient audit completed.
+Source decision: R2_FROZEN_SOLUTE_NVT_20PS_REQUIRES_REVIEW
+Source gates / failed: 32/1
+Failed source gates: second_half_occupancy_slope_is_acceptable
+Initial / minimum / endpoint occupancy: 428/414/416
+Endpoint occupancy fraction: 0.971963
+Endpoint retained initial identities: 414/428 (0.967290)
+Endpoint / maximum noninitial luminal waters: 2/4
+Second-half slope / limit / excess: -0.509091/0.500000/0.009091 waters/ps
+Window 0.0-20.0 ps | mean/min/max=420.8537/414/429 | change=-12 | slope=-0.767247 waters/ps
+Window 5.0-20.0 ps | mean/min/max=418.8065/414/426 | change=-10 | slope=-0.722581 waters/ps
+Window 10.0-20.0 ps | mean/min/max=416.7619/414/422 | change=-5 | slope=-0.509091 waters/ps
+Window 12.5-20.0 ps | mean/min/max=415.8125/414/417 | change=-1 | slope=-0.150000 waters/ps
+Window 15.0-20.0 ps | mean/min/max=415.6364/414/417 | change=+0 | slope=-0.163636 waters/ps
+Block 0.0-5.0 ps | mean=427.2000 | change=-1 | slope=-0.121212 waters/ps | noninitial max=4
+Block 5.0-10.0 ps | mean=423.1000 | change=-4 | slope=-0.836364 waters/ps | noninitial max=4
+Block 10.0-15.0 ps | mean=418.0000 | change=-4 | slope=-1.381818 waters/ps | noninitial max=2
+Block 15.0-20.0 ps | mean=415.6364 | change=+0 | slope=-0.163636 waters/ps | noninitial max=2
+Minimum CAP-OW distance: 0.169759 nm
+Post-5ps temperature mean/std/slope: 299.7600/1.2273/-0.046683 K / K / K ps^-1
+Decision: R2_OCCUPANCY_TRANSIENT_CHECKPOINT_EXTENSION_JUSTIFIED
+Failed audit gates: NONE
+R2 20 ps validation status: NOT VALIDATED - NONSTATIONARY
+MD rerun required: NO
+Checkpoint-continuation preparation authorized: YES
+Checkpoint-continuation execution authorized: NO
+Long mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: PREPARE_R2_30PS_CHECKPOINT_CONTINUATION_TO_50PS
+Wrote: runs/phase1A/day023_confinement_design/17_r2_nvt_20ps_occupancy_transient_audit/r2_nvt_20ps_occupancy_window_metrics.csv
+Wrote: runs/phase1A/day023_confinement_design/17_r2_nvt_20ps_occupancy_transient_audit/r2_nvt_20ps_occupancy_block_metrics.csv
+Wrote: runs/phase1A/day023_confinement_design/17_r2_nvt_20ps_occupancy_transient_audit/r2_nvt_20ps_occupancy_transient_audit_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/17_r2_nvt_20ps_occupancy_transient_audit/r2_nvt_20ps_occupancy_transient_audit_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/17_r2_nvt_20ps_occupancy_transient_audit/R2_NVT_20PS_OCCUPANCY_TRANSIENT_AUDIT_DAY023.md

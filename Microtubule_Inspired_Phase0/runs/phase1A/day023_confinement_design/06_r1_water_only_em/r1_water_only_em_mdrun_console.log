@@ -1,0 +1,28 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em
+Command line:
+  gmx mdrun -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em.tpr -deffnm /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em -ntmpi 1 -ntomp 4
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em.tpr, VERSION 2025.4 (single precision)
+Multiple energy groups is not implemented for GPUs, falling back to the CPU. For better performance, run on the GPU without energy groups and then do gmx mdrun -rerun option on the trajectory with an energy group .tpr file.
+
+Using 1 MPI thread
+Using 4 OpenMP threads 
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  5.00000e+02
+   Number of steps    =        50000
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to Fmax < 500 in 1 steps
+Potential Energy  = -8.9982869e+05
+Maximum force     =  4.8943253e+02 on atom 27181
+Norm of force     =  1.6747300e+01
+
+GROMACS reminds you: "You Hear Footsteps Coming From Behind" (Colossal Cave)
+

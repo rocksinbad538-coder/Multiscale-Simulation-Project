@@ -1,0 +1,24 @@
+Day023 R0 t=0 hydrated-state audit completed.
+Accepted R0 XTC/TPR/GRO: nvt_100ps_frozenSolute.xtc / nvt_100ps_frozenSolute.tpr / nvt_100ps_frozenSolute.gro
+Extracted t=0 atoms / time: 68320/68320 / 0.000 ps
+HBN/PYR/water atoms/waters: 1680/104/66536/16634
+Water residue-chunk consistency: PASS
+Solute RMS/max difference vs accepted GRO: 0.000000000000/0.000000000000 nm
+Tube axis: 0.00000000 0.00000000 1.00000000
+Tube robust axial planes / p98 length: -3.008714/3.009286 / 6.018000 nm
+Wall radius mean/median/q01/q99: 1.199126/1.199111/1.198667/1.199602 nm
+Authoritative t0/max/endpoint lumen occupancy: 428/437/23
+Authoritative t0 fraction of maximum: 0.979405
+Independent provisional lumen count: 428
+Lower end ring / inside water / outside water / minimum distance: 60 / 22 / 31 / 0.333138 nm
+Upper end ring / inside water / outside water / minimum distance: 60 / 22 / 24 / 0.313480 nm
+Audit decision: PASS
+Authoritative R1 start accepted: YES
+Failed gates: NONE
+Required next step: DEFINE_AND_GENERATE_R1_STERIC_CAP_PROTOTYPE
+Wrote: runs/phase1A/day023_confinement_design/01_r0_t0_reference/r0_accepted_t0_hydrated_system.gro
+Wrote: runs/phase1A/day023_confinement_design/01_r0_t0_reference/r0_t0_geometry_and_hydration_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/01_r0_t0_reference/r0_t0_end_zone_water_counts.csv
+Wrote: runs/phase1A/day023_confinement_design/01_r0_t0_reference/r0_t0_composition_audit.csv
+Wrote: runs/phase1A/day023_confinement_design/01_r0_t0_reference/R0_T0_HYDRATED_REFERENCE_AUDIT_DAY023.md
+Wrote: runs/phase1A/day023_confinement_design/01_r0_t0_reference/R1_AUTHORITATIVE_START_STATE_DAY023.md

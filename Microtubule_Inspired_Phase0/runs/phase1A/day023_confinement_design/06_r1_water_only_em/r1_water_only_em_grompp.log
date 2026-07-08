@@ -1,0 +1,59 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em
+Command line:
+  gmx grompp -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em.mdp -c /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em_input.gro -r /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em_input.gro -p /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em.top -n /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em.ndx -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em.tpr -po /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em_mdout.mdp -pp /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em_processed.top -maxwarn 0
+
+Generating 1-4 interactions: fudge = 0.5
+
+NOTE 1 [file r1_water_only_em.top, line 11346]:
+  In moleculetype 'CAPL' 163 atoms are not bound by a potential or
+  constraint to any other atom in the same moleculetype. Although
+  technically this might not cause issues in a simulation, this often means
+  that the user forgot to add a bond/potential/constraint or put multiple
+  molecules in the same moleculetype definition by mistake. Run with -v to
+  get information for each atom.
+
+
+NOTE 2 [file r1_water_only_em.top, line 11346]:
+  In moleculetype 'CAPU' 163 atoms are not bound by a potential or
+  constraint to any other atom in the same moleculetype. Although
+  technically this might not cause issues in a simulation, this often means
+  that the user forgot to add a bond/potential/constraint or put multiple
+  molecules in the same moleculetype definition by mistake. Run with -v to
+  get information for each atom.
+
+Number of degrees of freedom in T-Coupling group System is 99306.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+There were 2 NOTEs
+
+GROMACS reminds you: "During my undergraduate work I concluded that electrostatics is unlikely to be important [for enzymes]" (Arieh Warshel, Nobel lecture 2013)
+
+Setting the LD random seed to -10883361
+
+Generated 35 of the 36 non-bonded parameter combinations
+
+Generated 36 of the 36 1-4 parameter combinations
+
+Excluding 1 bonded neighbours molecule type 'HBN'
+
+Excluding 3 bonded neighbours molecule type 'PYR'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Excluding 0 bonded neighbours molecule type 'CAPL'
+
+Excluding 0 bonded neighbours molecule type 'CAPU'
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+
+The largest distance between excluded atoms is 0.387 nm between atom 1760 and 1774
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 64x64x84, spacing 0.116 0.116 0.119
+
+Estimate for the relative computational load of the PME mesh part: 0.13
+
+This run will generate roughly 25 Mb of data

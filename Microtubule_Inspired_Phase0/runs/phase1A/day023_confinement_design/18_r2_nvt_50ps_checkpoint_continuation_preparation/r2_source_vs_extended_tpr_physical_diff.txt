@@ -1,0 +1,8 @@
+--- source_20ps_tpr
++++ extended_50ps_tpr
+@@ -1,4 +1,4 @@
+-/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps.tpr:
++/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_frozen_solute_nvt_to_50ps.tpr:
+ inputrec:
+    integrator                     = md
+    tinit                          = 0

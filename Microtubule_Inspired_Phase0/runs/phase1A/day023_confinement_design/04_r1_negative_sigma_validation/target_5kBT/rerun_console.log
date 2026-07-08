@@ -1,0 +1,37 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT
+Command line:
+  gmx mdrun -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT/cap_ow_pure_r12.tpr -rerun /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT/distance_scan.gro -deffnm rerun -ntmpi 1 -ntomp 1
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT/cap_ow_pure_r12.tpr, VERSION 2025.4 (single precision)
+
+
+Using 1 MPI thread
+Using 1 OpenMP thread 
+
+starting md rerun 'R1 negative-sigma pure-r12 CAP-OW validation', reading coordinates from input trajectory '/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_5kBT/distance_scan.gro'
+
+Reading frames from gro file 'CAP-OW distance scan t=0.000', 2 atoms.
+
+Reading frame       0 time    0.000   
+Reading frame       1 time    1.000   
+Reading frame       2 time    2.000   
+Reading frame       3 time    3.000   
+Reading frame       4 time    4.000   
+Reading frame       5 time    5.000   
+Reading frame       6 time    6.000   
+Last frame          6 time    6.000   
+
+NOTE: 17 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.002        0.002       97.4
+                 (ns/day)    (hour/ns)
+Performance:      300.737        0.080
+
+GROMACS reminds you: "Louis Pasteur's theory of germs is ridiculous fiction." (Pierre Pachet, Professor of Physiology at Toulouse, 1872)
+

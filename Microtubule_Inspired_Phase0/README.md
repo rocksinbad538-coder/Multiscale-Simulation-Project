@@ -1432,3 +1432,65 @@ Verify the exact accepted hydrated topology and prepare a controlled restraint-r
 - [Profile-guided confined-water analysis](runs/phase1A/day020_confined_water_axial_radial_density/profile_guided_classification/CONFINED_WATER_PROFILE_GUIDED_ANALYSIS_DAY020.md)
 
 <!-- DAY020_STATUS_END -->
+
+<!-- DAY023_R2_PARTIAL_CAP_SELECTION_START -->
+## Day023 — R2 partial-cap architecture selected
+
+The frozen-solute confinement screen for the symmetric R2 partial-cap
+architecture has been completed through 50 ps using an exact checkpoint
+continuation from 20 ps.
+
+### Validated results
+
+- R1 closed positive control:
+  428 initial waters, 428 endpoint waters.
+- R2 partial-cap architecture:
+  428 initial waters, 411 endpoint waters.
+- R2 endpoint hydration:
+  96.0280% of the initial population.
+- R2 endpoint retained initial identities:
+  409/428, or 95.5607%.
+- R2 final-20 ps occupancy slope:
+  -0.173868 waters/ps.
+- R2 final-15 ps occupancy slope:
+  +0.025806 waters/ps.
+- R2 final-10 ps occupancy slope:
+  +0.064935 waters/ps.
+- R2 final-10 ps net occupancy change:
+  0 waters.
+- Potential-defined aperture diameter:
+  0.839406 nm.
+- Open-area fraction:
+  0.142928.
+- Minimum CAP–OW distance:
+  0.166949 nm.
+- HBN, PYR, and cap displacement:
+  exactly zero under the frozen-solute protocol.
+- Numerical-instability signatures:
+  none.
+
+### Architecture decision
+
+`R2_SELECTED_AS_PRIMARY_PARTIAL_CAP_SCREENING_ARCHITECTURE`
+
+- R1 is retained as the closed neutral steric positive control.
+- R2 is the primary partial-cap screening architecture.
+- R3 and R4 are deferred at this gate.
+- New MD, mobile MD, multitemperature MD, and QM recalculation remain
+  blocked.
+
+The current R2 cap remains an ideal neutral frozen steric model and does
+not establish chemical realizability.
+
+### Next gate
+
+`BEGIN_R2_CHEMICALLY_REALIZABLE_END_RIM_DESIGN_GATE`
+
+The next stage will define and statically validate a chemically
+defensible terminal-ring or end-rim realization that preserves the
+validated R2 aperture and confinement envelope.
+
+Detailed record:
+
+`notes/2026-07-08_day023_r2_partial_cap_selection_and_closure.md`
+<!-- DAY023_R2_PARTIAL_CAP_SELECTION_END -->

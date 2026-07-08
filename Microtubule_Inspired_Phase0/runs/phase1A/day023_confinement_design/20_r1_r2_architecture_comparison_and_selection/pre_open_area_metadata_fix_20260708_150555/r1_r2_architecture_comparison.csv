@@ -1,0 +1,18 @@
+metric,R1,R2,interpretation
+architectural_role,closed neutral frozen steric positive control,symmetric partial-cap neutral frozen steric screening architecture,R1 is the closed-methodology control; R2 is the partially open candidate.
+initial_lumen_occupancy,428,428,Matched initial hydration.
+mean_lumen_occupancy_0_to_50ps,427.91089108910893,416.63366336633663,R2 exchanges and releases a small fraction of lumen water.
+minimum_lumen_occupancy,426,409,R2 remains highly hydrated throughout.
+endpoint_lumen_occupancy,428,411,R2 endpoint is approximately 96% of the initial and R1 endpoint occupancy.
+endpoint_occupancy_fraction,1.0,0.9602803738317757,R2 retention penalty relative to the closed control is modest.
+net_occupancy_change,0,-17,R2 reaches a lower but stable hydration plateau.
+final20_occupancy_slope_water_ps,0.005226480836235017,-0.1738675958188161,Both satisfy the predefined stationarity limit.
+final15_occupancy_slope_water_ps,,0.025806451612906418,R2 final 15 ps is effectively stationary.
+final10_occupancy_slope_water_ps,,0.06493506493506922,R2 final 10 ps is effectively stationary.
+final10_net_occupancy_change,,0,No net water loss in the final 10 ps.
+endpoint_initial_identity_fraction,1.0,0.955607476635514,R2 retains most original lumen waters while allowing exchange.
+maximum_noninitial_lumen_waters,0.0,4.0,Noninitial lumen waters demonstrate exchange through the R2 apertures.
+minimum_CAP_OW_distance_nm,,0.166949158747368,Both remain above the predefined safety threshold.
+effective_aperture_diameter_nm,0.0,0.8394062099300137,R1 is closed; R2 provides a central exchange aperture.
+open_area_fraction,0.0,,R2 introduces controlled partial openness.
+chemical_realizability,not established,not established,Both use ideal neutral frozen steric beads; R2 requires a chemically realizable end-rim design.

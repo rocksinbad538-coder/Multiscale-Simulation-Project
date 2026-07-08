@@ -1,0 +1,24 @@
+Day023 R1 water-only energy minimization and validation completed.
+Grompp / mdrun return codes: 0/0
+Finished / explicit convergence: YES / YES
+Final maximum force / norm: 489.43253 / 16.7473 kJ mol^-1 nm^-1
+Potential initial / final / change: -899828.687500/-899828.687500/0.000000 kJ/mol
+CAP-SOL LJ initial / final: 14.324902/14.324902 kJ/mol
+HBN RMS/max displacement: 0.000000000000/0.000000000000 nm
+PYR RMS/max displacement: 0.000000000000/0.000000000000 nm
+Caps RMS/max displacement: 0.000000000000/0.000000000000 nm
+Water-O RMS/max displacement: 0.000009/0.001000 nm
+Minimum CAP-OW initial/final: 0.220189/0.220189 nm
+Lumen occupancy initial/final/change: 428/428/0
+Instability signatures: NONE
+Decision: R1_WATER_ONLY_EM_VALIDATED
+Failed gates: NONE
+Short frozen-solute NVT preparation authorized: YES
+MD execution authorized: NO
+Required next step: PREPARE_R1_FROZEN_SOLUTE_SHORT_NVT_SCREENING
+Wrote: runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em.mdp
+Wrote: runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em.tpr
+Wrote: runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em.gro
+Wrote: runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/06_r1_water_only_em/r1_water_only_em_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/06_r1_water_only_em/R1_WATER_ONLY_EM_VALIDATION_DAY023.md

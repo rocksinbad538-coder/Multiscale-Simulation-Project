@@ -1,0 +1,63 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan
+Command line:
+  gmx mdrun -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/selected/r2_static_single_point.tpr -deffnm /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_static_single_point -ntmpi 1 -ntomp 4
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/selected/r2_static_single_point.tpr, VERSION 2025.4 (single precision)
+Multiple energy groups is not implemented for GPUs, falling back to the CPU. For better performance, run on the GPU without energy groups and then do gmx mdrun -rerun option on the trajectory with an energy group .tpr file.
+Can not increase nstlist because an NVE ensemble is used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Using 1 MPI thread
+Using 4 OpenMP threads 
+
+starting mdrun 'h-BN fixed dummy scaffold + 4 pyrenes + TIP4P/2005 water'
+0 steps,      0.0 ps.
+
+NOTE: 46 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.494        0.124      398.3
+                 (ns/day)    (hour/ns)
+Performance:        0.349       68.852
+
+GROMACS reminds you: "We'll celebrate a woman for anything, as long as it's not her talent." (Colleen McCullough)
+
+
+Day023 R2 topology construction and static CAP-water scan completed.
+Grompp / TPR dump / static mdrun return codes: 0/0/0
+System atoms / waters / CAPL / CAPU: 68332/16565/144/144
+CAP-OW sigma / epsilon / C12: -0.170000000000 nm / 3.117923481807 kJ/mol / 7.266286217926e-09 kJ mol^-1 nm^12
+Minimum CAP-OW distance: 0.220189 nm
+Analytic / GROMACS CAP-SOL LJ: 14.024857060/14.024806976 kJ/mol
+Absolute / relative energy difference: 5.008329091e-05/3.571037530e-06
+Maximum water force from CAPS: 34.234493 kJ mol^-1 nm^-1
+CAP-SOL Coulomb / CAP-HBNPYR LJ / CAP-HBNPYR Coulomb: 0.000000000/0.000000000/0.000000000 kJ/mol
+Actual lower/upper 5kBT aperture radius: 0.419703/0.419703 nm
+Actual mean 5kBT aperture diameter: 0.839406 nm
+Lower/upper centerline maximum barrier: 0.000084/0.000084 kBT
+Decision: R2_TOPOLOGY_AND_STATIC_CAP_WATER_MODEL_VALIDATED
+Failed gates: NONE
+Water-only energy minimization authorized: YES
+Short frozen-solute NVT authorized: NO
+Long mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: RUN_R2_WATER_ONLY_ENERGY_MINIMIZATION
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/selected/r2_selected_cap_model.top
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/selected/r2_static_single_point.mdp
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/selected/r2_static_energy_groups.ndx
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/selected/r2_static_single_point.tpr
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_static_gromacs_energy.csv
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_cap_water_strength_scan.csv
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_selected_5kBT_aperture_radial_profile.csv
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_selected_5kBT_aperture_axial_profile.csv
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_topology_audit.csv
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_topology_static_scan_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_topology_static_scan_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/R2_TOPOLOGY_STATIC_CAP_WATER_SCAN_DAY023.md

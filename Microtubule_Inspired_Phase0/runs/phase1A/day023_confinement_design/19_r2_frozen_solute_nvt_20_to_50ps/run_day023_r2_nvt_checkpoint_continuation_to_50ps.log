@@ -1,0 +1,80 @@
+Starting exact R2 checkpoint continuation from 20 to 50 ps.
+Source checkpoint: step 40000 / 20.0 ps.
+Target: step 100000 / 50.0 ps.
+Only the remaining 60000 steps will be run.
+Velocity and thermostat-state regeneration: DISABLED.
+Source 0-to-20 ps rerun: DISABLED.
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps
+Command line:
+  gmx mdrun -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_frozen_solute_nvt_to_50ps.tpr -cpi /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_20ps_source_checkpoint.cpt -deffnm /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps -noappend -ntmpi 1 -ntomp 12
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/18_r2_nvt_50ps_checkpoint_continuation_preparation/r2_frozen_solute_nvt_to_50ps.tpr, VERSION 2025.4 (single precision)
+Multiple energy groups is not implemented for GPUs, falling back to the CPU. For better performance, run on the GPU without energy groups and then do gmx mdrun -rerun option on the trajectory with an energy group .tpr file.
+Changing nstlist from 20 to 100, rlist from 1.2 to 1.252
+
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+starting mdrun 'h-BN fixed dummy scaffold + 4 pyrenes + TIP4P/2005 water'
+100000 steps,     50.0 ps (continuing from step 40000,     20.0 ps).
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    14003.158     1166.930     1200.0
+                 (ns/day)    (hour/ns)
+Performance:        2.221       10.805
+
+GROMACS reminds you: "Right Between the Eyes" (F. Zappa)
+
+
+Day023 R2 checkpoint continuation and combined 50 ps validation completed.
+Mdrun / trajectory-check / checkpoint-dump return codes: 0/0/0
+Completion / checkpoint continuation / instabilities: YES / YES / NONE
+Final checkpoint step / time: 100000/50.000000 ps
+Source / continuation / combined-unique frames: 41/61/101
+Continuation time range: 20.000-50.000 ps
+Combined time range / interval: 0.000-50.000 ps / 0.500000 ps
+Continuation temperature mean/std/min/max/slope: 299.8727/1.3326/295.8250/303.3355/-0.013063 K / K / K / K / K ps^-1
+Final-15ps temperature mean/std/slope: 299.8449/1.3533/-0.044881 K / K / K ps^-1
+Maximum HBN/PYR/CAPS displacement: 0.000000000000/0.000000000000/0.000000000000 nm
+Water-O final RMS/max displacement: 0.840909/3.275839 nm
+Combined lumen occupancy initial/mean/min/max/endpoint: 428/416.6337/409/429/411
+Endpoint initial-lumen identity retention: 409/428 (0.955607)
+Final-20ps occupancy mean/slope: 412.4390/-0.173868 waters / waters ps^-1
+Final-15ps occupancy mean/slope: 411.6452/0.025806 waters / waters ps^-1
+Final-10ps occupancy mean/change/slope: 411.7143/+0/0.064935 waters / waters / waters ps^-1
+Minimum CAP-OW distance: 0.166949 nm
+Continuation potential initial/final/change: -767635.250000/-768991.062500/-1355.812500 kJ/mol
+Continuation CAP-SOL LJ initial/final/maximum: 30.687618/25.050507/49.542679 kJ/mol
+Block 0.0-10.0 ps | mean/min/max=425.1500/421/429 | change=-6 | slope=-0.735338 waters/ps
+Block 10.0-20.0 ps | mean/min/max=416.8000/414/422 | change=-5 | slope=-0.565414 waters/ps
+Block 20.0-30.0 ps | mean/min/max=416.5500/414/420 | change=+0 | slope=-0.218045 waters/ps
+Block 30.0-40.0 ps | mean/min/max=413.2000/409/417 | change=-7 | slope=-0.637594 waters/ps
+Block 40.0-50.0 ps | mean/min/max=411.7143/409/415 | change=+0 | slope=0.064935 waters/ps
+Decision: R2_FROZEN_SOLUTE_NVT_50PS_VALIDATED
+Failed gates: NONE
+R2-versus-R1 comparison authorized: YES
+Long mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: COMPARE_R2_WITH_R1_AND_DECIDE_NEXT_ARCHITECTURE_GATE
+Wrote: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps.part0002.gro
+Wrote: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps.part0002.xtc
+Wrote: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps.part0002.edr
+Wrote: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps.cpt
+Wrote: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_combined_0_to_50ps_occupancy.csv
+Wrote: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_50ps_occupancy_windows.csv
+Wrote: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_50ps_occupancy_blocks.csv
+Wrote: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps_energy_series.csv
+Wrote: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps_output_manifest.json
+Wrote: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_50ps_validation_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_50ps_validation_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/R2_FROZEN_SOLUTE_NVT_50PS_VALIDATION_DAY023.md

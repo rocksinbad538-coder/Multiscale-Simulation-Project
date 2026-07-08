@@ -1,0 +1,13 @@
+                       :-) GROMACS - gmx dump, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT
+Command line:
+  gmx dump -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/cap_ow_pure_r12.tpr
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/cap_ow_pure_r12.tpr, VERSION 2025.4 (single precision)
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/04_r1_negative_sigma_validation/target_10kBT/cap_ow_pure_r12.tpr, VERSION 2025.4 (single precision)
+
+GROMACS reminds you: "I don't fear death because I don't fear anything I don't understand." (Hedy Lamarr)
+

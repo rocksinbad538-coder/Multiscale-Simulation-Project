@@ -1,0 +1,77 @@
+                     :-) GROMACS - gmx trjconv, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /private/tmp/r1_nvt20_frames_e0j8i80q
+Command line:
+  gmx trjconv -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/08_r1_frozen_solute_nvt_20ps/r1_frozen_solute_nvt_20ps.tpr -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/08_r1_frozen_solute_nvt_20ps/r1_frozen_solute_nvt_20ps.xtc -n /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/08_r1_frozen_solute_nvt_20ps/r1_frozen_solute_nvt_20ps.ndx -o /tmp/r1_nvt20_frames_e0j8i80q/frame.gro -sep -pbc atom
+
+Will write gro: Coordinate file in Gromos-87 format
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/08_r1_frozen_solute_nvt_20ps/r1_frozen_solute_nvt_20ps.tpr, VERSION 2025.4 (single precision)
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/08_r1_frozen_solute_nvt_20ps/r1_frozen_solute_nvt_20ps.tpr, VERSION 2025.4 (single precision)
+Group     0 (            HBN) has  1680 elements
+Group     1 (            PYR) has   104 elements
+Group     2 (        HBN_PYR) has  1784 elements
+Group     3 (            SOL) has 66204 elements
+Group     4 (           CAPL) has   163 elements
+Group     5 (           CAPU) has   163 elements
+Group     6 (           CAPS) has   326 elements
+Group     7 (         System) has 68314 elements
+Select a group: 
+Reading frame       0 time    0.000   
+Precision of /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/08_r1_frozen_solute_nvt_20ps/r1_frozen_solute_nvt_20ps.xtc is 0.001 (nm)
+
+Reading frame       1 time    0.500    ->  frame      0 time    0.000      
+
+Reading frame       2 time    1.000    ->  frame      1 time    0.500      
+
+Reading frame       3 time    1.500    ->  frame      2 time    1.000      
+
+Reading frame       4 time    2.000    ->  frame      3 time    1.500      
+
+Reading frame       5 time    2.500    ->  frame      4 time    2.000      
+
+Reading frame       6 time    3.000    ->  frame      5 time    2.500      
+
+Reading frame       7 time    3.500    ->  frame      6 time    3.000      
+
+Reading frame       8 time    4.000    ->  frame      7 time    3.500      
+
+Reading frame       9 time    4.500    ->  frame      8 time    4.000      
+
+Reading frame      10 time    5.000    ->  frame      9 time    4.500      
+
+Reading frame      11 time    5.500    ->  frame     10 time    5.000      
+
+Reading frame      12 time    6.000    ->  frame     11 time    5.500      
+
+Reading frame      13 time    6.500    ->  frame     12 time    6.000      
+
+Reading frame      14 time    7.000    ->  frame     13 time    6.500      
+
+Reading frame      15 time    7.500    ->  frame     14 time    7.000      
+
+Reading frame      16 time    8.000    ->  frame     15 time    7.500      
+
+Reading frame      17 time    8.500    ->  frame     16 time    8.000      
+
+Reading frame      18 time    9.000    ->  frame     17 time    8.500      
+
+Reading frame      19 time    9.500    ->  frame     18 time    9.000      
+
+Reading frame      20 time   10.000    ->  frame     19 time    9.500      
+
+Reading frame      30 time   15.000    ->  frame     29 time   14.500      
+
+Reading frame      40 time   20.000    ->  frame     39 time   19.500      
+
+Last frame         40 time   20.000   
+ ->  frame     40 time   20.000      
+Last written: frame     40 time   20.000
+
+
+GROMACS reminds you: "Computer dating is fine, if you are a computer." (Rita May Brown)
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Select group for output
+Selected 7: 'System'

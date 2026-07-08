@@ -1,0 +1,30 @@
+Day023 R1 checkpoint continuation to 50 ps preparation completed.
+convert-tpr / source dump / extended dump / checkpoint dump return codes: 0/0/0/0
+Source / extended atoms: 68314/68314
+Source / extended nsteps: 40000/100000
+Source / target total time: 20.000000/50.000000 ps
+Checkpoint step / time: 40000 / 20.000000 ps
+Remaining steps / duration: 60000 / 30.000000 ps
+Trajectory stride / expected continuation frames: 1000 / 61
+Checkpoint coordinates / velocities represented in dump: 204942/204942
+TPR differences beyond nsteps: 0
+Checkpoint copy bitwise identical: YES
+Decision: R1_CHECKPOINT_CONTINUATION_TO_50PS_PREPARED
+Failed gates: NONE
+Checkpoint continuation execution authorized: YES
+Velocity regeneration authorized: NO
+Long mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: RUN_R1_20_TO_50PS_CHECKPOINT_CONTINUATION
+Wrote: runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_frozen_solute_nvt_to_50ps.tpr
+Wrote: runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_20ps_source_checkpoint.cpt
+Wrote: runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_20ps_source_tpr_dump.txt
+Wrote: runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_50ps_extended_tpr_dump.txt
+Wrote: runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_20ps_checkpoint_dump.txt
+Wrote: runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_source_vs_extended_tpr_dump.diff
+Wrote: runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_continuation_source_checksums.csv
+Wrote: runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_50ps_continuation_preparation_gates.csv
+Wrote: runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_50ps_continuation_preparation_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_50ps_continuation_run_contract.json
+Wrote: runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/R1_NVT_50PS_CHECKPOINT_CONTINUATION_PREPARATION_DAY023.md

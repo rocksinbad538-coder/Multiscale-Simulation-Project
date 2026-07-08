@@ -1,0 +1,37 @@
+integrator               = md
+dt                       = 0.001
+nsteps                   = 1
+continuation             = no
+
+cutoff-scheme            = Verlet
+nstlist                  = 1
+verlet-buffer-tolerance  = -1
+rlist                    = 1.000
+
+coulombtype              = Cut-off
+coulomb-modifier         = None
+rcoulomb                 = 1.000
+
+vdwtype                  = Cut-off
+vdw-modifier             = None
+rvdw                     = 1.000
+DispCorr                 = no
+
+constraints              = none
+pbc                      = xyz
+periodic-molecules       = no
+
+tcoupl                   = no
+pcoupl                   = no
+gen-vel                  = no
+comm-mode                = none
+
+nstcalcenergy            = 1
+nstenergy                = 1
+nstlog                   = 1
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstxout-compressed       = 0
+
+energygrps               = CAPS SOL HBN_PYR

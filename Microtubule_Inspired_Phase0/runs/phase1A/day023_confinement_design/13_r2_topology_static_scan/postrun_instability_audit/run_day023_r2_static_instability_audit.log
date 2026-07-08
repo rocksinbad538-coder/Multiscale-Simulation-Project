@@ -1,0 +1,18 @@
+Day023 R2 static instability-signature audit completed.
+Core Gate 2B decision: R2_TOPOLOGY_AND_STATIC_CAP_WATER_MODEL_VALIDATED
+Core gates / all passed: 29 / YES
+Legacy broad-pattern matches: 1
+Strict instability matches: 0
+Broad-pattern false positives: 1
+MATCH: BROAD_PATTERN_FALSE_POSITIVE | r2_static_single_point.log:230 |    lincs-warnangle                = 30
+Decision: R2_STATIC_INSTABILITY_SCAN_CONFIRMED_CLEAN
+Static or MD rerun required: NO
+Water-only energy minimization authorized: YES
+Short frozen-solute NVT authorized: NO
+Long mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: RUN_R2_WATER_ONLY_ENERGY_MINIMIZATION
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/postrun_instability_audit/r2_static_instability_pattern_matches.csv
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/postrun_instability_audit/r2_static_instability_audit_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/postrun_instability_audit/R2_STATIC_INSTABILITY_SIGNATURE_AUDIT_DAY023.md

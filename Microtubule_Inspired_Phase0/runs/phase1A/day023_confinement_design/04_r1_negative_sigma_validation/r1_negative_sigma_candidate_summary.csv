@@ -1,0 +1,5 @@
+candidate,target_energy_kBT_at_0p17nm,pair_sigma_nm,pair_epsilon_kJ_mol,C6_kJ_mol_nm6,C12_kJ_mol_nm12,grompp_return_code,rerun_return_code,selected_energy_term,all_measured_energies_positive,maximum_absolute_error_kJ_mol,maximum_relative_error_for_energy_ge_0p1,dump_contains_negative_sigma_text,dump_contains_nonbond_data,candidate_pass
+target_5kBT,5.0,-0.17,3.1179234818074653,0.0,7.266286217927493e-09,0,0,LJ-SR:CAP-OW,True,7.388465882485207e-05,3.0639267899627377e-06,False,True,True
+target_10kBT,10.0,-0.17,6.2358469636149305,0.0,1.4532572435854985e-08,0,0,LJ-SR:CAP-OW,True,0.00014776931764970413,3.063926829985871e-06,False,True,True
+target_20kBT,20.0,-0.17,12.471693927229861,0.0,2.906514487170997e-08,0,0,LJ-SR:CAP-OW,True,0.00029553863430464844,3.063926829985871e-06,False,True,True
+target_40kBT,40.0,-0.17,24.943387854459722,0.0,5.813028974341994e-08,0,0,LJ-SR:CAP-OW,True,0.0005910772686092969,3.063926820015696e-06,False,True,True

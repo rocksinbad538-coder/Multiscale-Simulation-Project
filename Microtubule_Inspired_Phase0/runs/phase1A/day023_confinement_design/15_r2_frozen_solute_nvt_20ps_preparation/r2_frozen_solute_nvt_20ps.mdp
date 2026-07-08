@@ -1,0 +1,54 @@
+integrator               = md
+dt                       = 0.0005000
+nsteps                   = 40000
+continuation             = no
+
+cutoff-scheme            = Verlet
+nstlist                  = 20
+rlist                    = 1.20
+
+coulombtype              = PME
+rcoulomb                 = 1.20
+fourierspacing           = 0.12
+pme-order                = 4
+ewald-rtol               = 1e-5
+
+vdwtype                  = Cut-off
+rvdw                     = 1.20
+vdw-modifier             = Potential-shift
+DispCorr                 = EnerPres
+
+constraints              = h-bonds
+constraint-algorithm     = lincs
+lincs-iter               = 1
+lincs-order              = 4
+
+pbc                      = xyz
+
+tcoupl                   = V-rescale
+tc-grps                  = SOL HBN_PYR CAPS
+tau-t                    = 0.100 -1 -1
+ref-t                    = 300.0 300.0 300.0
+
+pcoupl                   = no
+
+comm-mode                = Linear
+nstcomm                  = 100
+comm-grps                = SOL
+
+freezegrps               = HBN_PYR CAPS
+freezedim                = Y Y Y Y Y Y
+
+gen-vel                  = yes
+gen-temp                 = 300.0
+gen-seed                 = 20260708
+
+nstlog                   = 100
+nstenergy                = 100
+nstxout                   = 0
+nstvout                  = 0
+nstfout                  = 0
+nstxout-compressed       = 1000
+compressed-x-precision   = 1000
+
+energygrps               = HBN_PYR CAPS SOL

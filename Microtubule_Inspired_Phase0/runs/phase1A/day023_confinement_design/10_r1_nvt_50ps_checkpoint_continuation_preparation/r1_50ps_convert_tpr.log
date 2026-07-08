@@ -1,0 +1,30 @@
+                   :-) GROMACS - gmx convert-tpr, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation
+Command line:
+  gmx convert-tpr -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_20ps_source.tpr -extend 30.000000 -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_frozen_solute_nvt_to_50ps.tpr
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/10_r1_nvt_50ps_checkpoint_continuation_preparation/r1_20ps_source.tpr, VERSION 2025.4 (single precision)
+
+GROMACS reminds you: "Religion is a culture of faith; science is a culture of doubt." (Richard Feynman)
+
+Input file:
+  Run start step                                     0     
+  Run start time                                     0 ps  
+  Step to be made during run                     40000     
+  Runtime for the run                               20 ps  
+  Run end step                                   40000     
+  Run end time                                      20 ps  
+
+Extending remaining runtime by 30 ps
+
+Output file:
+  Run start step                                     0     
+  Run start time                                     0 ps  
+  Step to be made during run                    100000     
+  Runtime for the run                               50 ps  
+  Run end step                                  100000     
+  Run end time                                      50 ps  
+

@@ -1,0 +1,4 @@
+molecule,count,atoms_per_molecule,atom_contribution,molecule_charge_e,nrexcl,is_identified_water
+HBN,1,1680,1680,0.0,1,False
+PYR,4,26,104,-1.999999999960367e-06,3,False
+SOL,16634,4,66536,0.0,2,True

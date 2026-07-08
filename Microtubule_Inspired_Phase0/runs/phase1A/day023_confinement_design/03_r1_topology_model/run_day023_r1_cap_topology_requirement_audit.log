@@ -1,0 +1,23 @@
+Day023 R1 cap-topology requirement audit completed.
+Baseline nbfunc / comb-rule / semantics: 1 / 2 / SIGMA_EPSILON
+Baseline moleculetypes / system entries / active atomtypes / nonbond overrides: 3/3/7/0
+Baseline total atoms: 68320/68320
+Water molecule / sites / oxygen atom / type: SOL / 4 / OW / OW
+Water oxygen charge: 0.00000000 e
+R1 GRO / proposed topology atoms: 68314/68314
+Retained waters / cap beads per end / total: 16551/163/326
+R1 water ordering / cap residue ordering: PASS / PASS
+Topology contract valid: YES
+Pure r^-12 standard override feasible: NO
+Failed gates: NONE
+Decision: TOPOLOGY_CONTRACT_VALID_BUT_PURE_R12_REQUIRES_ALTERNATIVE_IMPLEMENTATION
+Energy minimization authorized: NO
+MD execution authorized: NO
+Required next step: SELECT_TABULATED_OR_VALIDATED_ALTERNATIVE_CAP_INTERACTION
+Wrote: runs/phase1A/day023_confinement_design/03_r1_topology_model/r1_baseline_topology_inventory.csv
+Wrote: runs/phase1A/day023_confinement_design/03_r1_topology_model/r1_active_atomtype_inventory.csv
+Wrote: runs/phase1A/day023_confinement_design/03_r1_topology_model/r1_proposed_molecule_counts.csv
+Wrote: runs/phase1A/day023_confinement_design/03_r1_topology_model/r1_cap_water_repulsion_calibration.csv
+Wrote: runs/phase1A/day023_confinement_design/03_r1_topology_model/r1_cap_topology_requirement_summary.csv
+Wrote: runs/phase1A/day023_confinement_design/03_r1_topology_model/r1_cap_nonbonded_model_contract.json
+Wrote: runs/phase1A/day023_confinement_design/03_r1_topology_model/R1_CAP_TOPOLOGY_REQUIREMENTS_DAY023.md
