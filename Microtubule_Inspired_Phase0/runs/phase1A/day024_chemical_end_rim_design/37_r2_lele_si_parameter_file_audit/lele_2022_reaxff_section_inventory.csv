@@ -1,0 +1,8 @@
+section,expected_count,actual_count,count_match,header_line
+GENERAL_PARAMETERS,39,39,True,6
+ATOMS,6,6,True,46
+BONDS,21,21,True,74
+OFF_DIAGONAL,15,15,True,118
+ANGLES,105,105,True,134
+TORSIONS,58,58,True,240
+HYDROGEN_BONDS,4,4,True,299

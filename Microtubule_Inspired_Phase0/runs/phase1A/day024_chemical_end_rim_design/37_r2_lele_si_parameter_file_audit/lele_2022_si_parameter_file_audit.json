@@ -1,0 +1,166 @@
+{
+  "BNH_section_counts": {
+    "ANGLES": 89,
+    "BONDS": 15,
+    "HYDROGEN_BONDS": 4,
+    "OFF_DIAGONAL": 12,
+    "TORSIONS": 46
+  },
+  "SI_category_counts": {
+    "BORAZINE_SNAPSHOT": 6,
+    "PARAMETER_TABLE": 0,
+    "QUALITY_FACTOR": 8,
+    "WATER": 0
+  },
+  "article_findings": {
+    "B3LYP_method_present": true,
+    "DOI_present": true,
+    "R2_bridge_validation_present": false,
+    "basis_6311_present": true,
+    "gas_phase_scope_present": true,
+    "water_validation_present": false
+  },
+  "domain_assessment": [
+    {
+      "R2_coverage": "NOT_ESTABLISHED",
+      "domain": "B_N_H_REACTIVE_ELEMENTAL_DOMAIN",
+      "evidence": "CONFIRMED",
+      "interpretation": "The parameter file contains B, N and H, but elemental presence does not establish transferability to R2."
+    },
+    {
+      "R2_coverage": "NOT_ESTABLISHED",
+      "domain": "B_N_BONDED_REACTIVE_CHEMISTRY",
+      "evidence": "PARAMETER_RECORDS_PRESENT",
+      "interpretation": "The model was trained for gas-phase reactions and nanostructure synthesis, not equilibrium R2 mechanics."
+    },
+    {
+      "R2_coverage": "NOT_ESTABLISHED",
+      "domain": "B_H_REACTIVE_CHEMISTRY",
+      "evidence": "PARAMETER_RECORDS_PRESENT",
+      "interpretation": "B-H chemistry is represented, but R2 annulus and bridge-edge environments were not directly validated."
+    },
+    {
+      "R2_coverage": "NOT_ESTABLISHED",
+      "domain": "N_H_REACTIVE_CHEMISTRY",
+      "evidence": "PARAMETER_RECORDS_PRESENT",
+      "interpretation": "N-H chemistry is represented, but R2 termination transferability remains unverified."
+    },
+    {
+      "R2_coverage": "NOT_ESTABLISHED",
+      "domain": "CURVED_BNNT_EQUILIBRIUM_MECHANICS",
+      "evidence": "NOT_DIRECTLY_VALIDATED",
+      "interpretation": "Formation of curved or closed BN structures does not constitute validation of equilibrium mechanics at the R2 radius."
+    },
+    {
+      "R2_coverage": "NOT_ESTABLISHED",
+      "domain": "FOUR_ATOM_B_N_B_N_BRIDGE",
+      "evidence": "NO_DIRECT_REFERENCE_CONFIGURATION",
+      "interpretation": "The selected bridge and attachment environments remain outside the demonstrated validation set."
+    },
+    {
+      "R2_coverage": "NOT_ESTABLISHED",
+      "domain": "WATER_AND_AQUEOUS_INTERFACE",
+      "evidence": "NO_VALIDATION_IDENTIFIED",
+      "interpretation": "The force field was developed for gas-phase synthesis and cannot be assumed compatible with confined water."
+    },
+    {
+      "R2_coverage": "NOT_ESTABLISHED",
+      "domain": "ANISOTROPIC_POLARIZATION",
+      "evidence": "EEM_CHARGE_EQUILIBRATION_ONLY",
+      "interpretation": "ReaxFF EEM charges are not equivalent to an independently validated polarizable h-BN/water model."
+    }
+  ],
+  "elements_found": [
+    "C",
+    "H",
+    "O",
+    "N",
+    "B",
+    "Al"
+  ],
+  "gates": {
+    "BNH_terms_are_present": true,
+    "SI_has_two_pages": true,
+    "SI_is_valid_PDF": true,
+    "all_R2_domains_remain_unvalidated": true,
+    "all_ReaxFF_section_counts_match": true,
+    "all_artifact_hashes_match": true,
+    "all_artifact_sizes_match": true,
+    "article_is_valid_PDF": true,
+    "element_order_matches_C_H_O_N_B_Al": true,
+    "no_parameter_adoption_topology_MD_or_QM_generated": true,
+    "parameter_file_is_valid_text": true,
+    "previous_article_audit_is_accepted": true
+  },
+  "integrity_results": {
+    "runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/raw/jp1c09648.pdf": {
+      "actual_sha256": "3f997ca60f0242bfc85cd54d8d6bc5a9453ec2b2180fee603e6aaeb6defbeb45",
+      "actual_size": 8390448,
+      "expected_sha256": "3f997ca60f0242bfc85cd54d8d6bc5a9453ec2b2180fee603e6aaeb6defbeb45",
+      "expected_size": 8390448,
+      "hash_match": true,
+      "size_match": true
+    },
+    "runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/raw/jp1c09648_si_001.pdf": {
+      "actual_sha256": "6fa080473219004e8ed753788943243ac6ffa27597063d24716b7eb36195d040",
+      "actual_size": 199670,
+      "expected_sha256": "6fa080473219004e8ed753788943243ac6ffa27597063d24716b7eb36195d040",
+      "expected_size": 199670,
+      "hash_match": true,
+      "size_match": true
+    },
+    "runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/raw/jp1c09648_si_002.txt": {
+      "actual_sha256": "5c5f0826e0dd7b1b7bc6d843437b1325f3d4fa6931046c015ab1ecbd904f47ae",
+      "actual_size": 21491,
+      "expected_sha256": "5c5f0826e0dd7b1b7bc6d843437b1325f3d4fa6931046c015ab1ecbd904f47ae",
+      "expected_size": 21491,
+      "hash_match": true,
+      "size_match": true
+    }
+  },
+  "limitations": [
+    "The SI PDF contains quality-factor methodology and an additional borazine snapshot, not an expanded parameter-validation data set.",
+    "The ReaxFF file is a composite C/H/O/N/B/Al set, not an R2-specific B/N/H parameterization.",
+    "Presence of B-N, B-H and N-H records does not establish transferability to the R2 annulus, bridge, water or polarization domains.",
+    "No parameter file is copied to an accepted force-field directory."
+  ],
+  "section_counts": {
+    "ANGLES": 105,
+    "ATOMS": 6,
+    "BONDS": 21,
+    "GENERAL_PARAMETERS": 39,
+    "HYDROGEN_BONDS": 4,
+    "OFF_DIAGONAL": 15,
+    "TORSIONS": 58
+  },
+  "summary": {
+    "BNH_records_by_section": "ANGLES:89 | BONDS:15 | HYDROGEN_BONDS:4 | OFF_DIAGONAL:12 | TORSIONS:46",
+    "BNH_relevant_parameter_records": 166,
+    "MD_authorized": false,
+    "QM_calculation_authorized": false,
+    "R2_force_field_coverage_established": false,
+    "SI_evidence_rows": 14,
+    "SI_extracted_characters": 2365,
+    "SI_pages": 2,
+    "SI_parameter_table_hits": 0,
+    "SI_water_hits": 0,
+    "angles": 105,
+    "article_pages": 15,
+    "atoms": 6,
+    "bonds": 21,
+    "decision": "R2_LELE_2022_SI_AND_REAXFF_PARAMETER_FILE_AUDITED_NOT_AUTHORIZED_FOR_R2",
+    "element_order": "C | H | O | N | B | Al",
+    "energy_minimization_authorized": false,
+    "failed_gates": "",
+    "force_field_parameterization_authorized": false,
+    "formal_charge_assignment_authorized": false,
+    "general_parameters": 39,
+    "hydrogen_bonds": 4,
+    "off_diagonal_terms": 15,
+    "parameter_adoption_authorized": false,
+    "parameter_file_lines": 303,
+    "required_next_step": "COMPARE_LELE_REAXFF_DOMAIN_WITH_FUNCTIONALIZED_HBN_FIXED_TOPOLOGY_AND_QM_REFERENCE_ROUTES",
+    "topology_generation_authorized": false,
+    "torsions": 58
+  }
+}

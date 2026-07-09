@@ -1,0 +1,24 @@
+Day024 R2 primary-source provenance correction completed.
+Corrected sources / corrections: 10/2
+Coverage rows / prioritized artifacts / P1 artifacts: 110/29/12
+2005 hydrogen-BNNT source classified as force field: NO
+2022 gas-phase hBN B/N/H ReaxFF source added: YES
+Models authorized for adoption: 0
+Decision: R2_PRIMARY_SOURCE_PROVENANCE_CORRECTED_ARTIFACT_RETRIEVAL_PRIORITIZED
+Failed gates: NONE
+Force-field coverage established: NO
+Topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM calculation authorized: NO
+Required next step: RETRIEVE_P1_PRIMARY_ARTICLES_SUPPORTING_INFORMATION_AND_PARAMETER_FILES
+Wrote: runs/phase1A/day024_chemical_end_rim_design/34_r2_primary_source_provenance_correction/r2_corrected_primary_source_ledger.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/34_r2_primary_source_provenance_correction/r2_corrected_candidate_model_domain_coverage.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/34_r2_primary_source_provenance_correction/r2_prioritized_source_artifact_retrieval.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/34_r2_primary_source_provenance_correction/r2_primary_source_corrections.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/34_r2_primary_source_provenance_correction/r2_corrected_preliminary_model_decisions.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/34_r2_primary_source_provenance_correction/r2_primary_source_provenance_correction_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/34_r2_primary_source_provenance_correction/r2_primary_source_provenance_correction.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/34_r2_primary_source_provenance_correction/R2_PRIMARY_SOURCE_PROVENANCE_CORRECTION_DAY024.md

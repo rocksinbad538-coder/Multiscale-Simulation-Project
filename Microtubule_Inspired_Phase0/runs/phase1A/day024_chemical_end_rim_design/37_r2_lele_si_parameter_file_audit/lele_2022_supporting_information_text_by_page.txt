@@ -1,0 +1,54 @@
+
+===== PAGE 0001 =====
+S1
+ReaxFF Force Field Development for Gas Phase hBN Nanostructure 
+Synthesis
+Aditya Lele a, Predrag Krsticb, Adri C.T. van Duin a,*
+a Department of Mechanical Engineering, The Pennsylvania State University, University 
+Park, PA 16802, USA
+b Institute for Advanced Computational Science, Stony Brook University, Stony Brook, NY 
+11794, USA
+Corresponding author*: acv13@psu.edu
+S1: Calculating quality factor of boron nitride nanostructures
+Along with the size of BNNS, it is also important to determine its quality. We consider 
+that any discontinuity in the continuous form of ring structures, non-6-membered rings and 
+defects degrade the quality of the BNNS. All these factors typically result in reducing the 
+number of 6-membered rings in the structure. Hence, to determine the quality factor, we 
+compare the optimal number of 6-membered rings possible with the actual number of 6-
+membered rings in the structure. 
+Figure A.1 briefly explains the calculation of optimal number of 6-membered rings for a given 
+set of molecules. As color coded in the figure, the 1st hexagon needs 6 particles or in our case 
+3 B and 3 N atoms to form. The formation of 2nd hexagon in any direction attached to the 1st 
+hexagon will need additional 4 particles. The 3rd hexagon can be added to this structure by 
+using either 3 or 4 more particles. However, new hexagons can be added to the structure of first 
+two rings infinitely by using 3 more particles for each additional hexagon.
+
+===== PAGE 0002 =====
+S2
+Figure S.1 Rationale behind quality factor calculations
+Hence, for n number of particles, the optimal number of 6-membered rings formed can be 
+calculated as
+Maximum number of hexagons for n particles 
+            
+Equation S.1
+=
+(𝑛― 10)
+3
++2
+Therefore, the quality factor can be defined using a simple expression
+Quality Factor (QF) 
+            
+Equation S.2
+=
+𝐴𝑐𝑡𝑢𝑎𝑙 𝑛𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 ℎ𝑒𝑥𝑎𝑔𝑜𝑛𝑠
+𝑀𝑎𝑥𝑖𝑚𝑢𝑚 # 𝑜𝑓 ℎ𝑒𝑥𝑎𝑔𝑜𝑛𝑠
+This can be extended to calculate the quality of an entire simulations frame by mass averaging 
+the quality factor of all the species present in the simulations. 
+Overall Quality Factor (QF) 
+            
+Equation S.3
+= ∑𝑎𝑙𝑙 𝑠𝑝𝑒𝑐𝑖𝑒𝑠𝑚𝑎𝑠𝑠 𝑓𝑟𝑎𝑐𝑡𝑖𝑜𝑛∗𝑄𝐹
+S2: 4 ns simulation snapshot of the borazine precursor simulation at 2000 K.
+ 
+Figure S.2 Simulation screenshot of the hBN structure formed at the end of the borazine 
+precursor simulation at 2000 K and 4 ns simulation time.

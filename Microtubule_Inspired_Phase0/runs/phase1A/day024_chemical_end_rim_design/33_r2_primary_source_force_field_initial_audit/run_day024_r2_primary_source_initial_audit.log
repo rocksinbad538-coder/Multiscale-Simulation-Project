@@ -1,0 +1,23 @@
+Day024 R2 primary-source force-field initial audit completed.
+Primary sources / model families: 9/9
+Coverage-domain rows / identified gaps: 99/6
+Required source artifacts / retrieved: 27/0
+Models authorized for adoption: 0
+Single complete R2 force field identified: False
+Decision: R2_PRIMARY_SOURCE_FORCE_FIELD_INITIAL_AUDIT_COMPLETED
+Force-field coverage established: NO
+Topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM calculation authorized: NO
+Required next step: RETRIEVE_AND_AUDIT_PRIMARY_SOURCE_SUPPORTING_INFORMATION_AND_PARAMETER_FILES
+Wrote: runs/phase1A/day024_chemical_end_rim_design/33_r2_primary_source_force_field_initial_audit/r2_curated_primary_source_ledger.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/33_r2_primary_source_force_field_initial_audit/r2_candidate_model_domain_coverage.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/33_r2_primary_source_force_field_initial_audit/r2_candidate_model_gap_analysis.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/33_r2_primary_source_force_field_initial_audit/r2_required_source_artifact_retrieval.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/33_r2_primary_source_force_field_initial_audit/r2_preliminary_model_decisions.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/33_r2_primary_source_force_field_initial_audit/r2_primary_source_initial_audit_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/33_r2_primary_source_force_field_initial_audit/r2_primary_source_initial_audit.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/33_r2_primary_source_force_field_initial_audit/R2_PRIMARY_SOURCE_FORCE_FIELD_INITIAL_AUDIT_DAY024.md

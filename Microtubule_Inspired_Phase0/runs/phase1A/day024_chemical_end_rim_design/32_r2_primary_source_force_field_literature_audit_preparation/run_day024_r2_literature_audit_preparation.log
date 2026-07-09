@@ -1,0 +1,21 @@
+Day024 R2 primary-source force-field literature-audit preparation completed.
+Required bond/angle/torsion classes: 22/50/76
+Improper-planarity centers / coverage rows: 2112/149
+Search queries / QM fragment classes: 6/7
+Local physical force-field candidates: 0
+Decision: R2_PRIMARY_SOURCE_FORCE_FIELD_LITERATURE_AUDIT_PREPARED
+Force-field coverage established: NO
+Topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM calculation authorized: NO
+Required next step: EXECUTE_PRIMARY_SOURCE_BN_H_FORCE_FIELD_LITERATURE_AUDIT
+Wrote: runs/phase1A/day024_chemical_end_rim_design/32_r2_primary_source_force_field_literature_audit_preparation/r2_primary_source_candidate_ledger.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/32_r2_primary_source_force_field_literature_audit_preparation/r2_force_field_requirement_coverage_matrix.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/32_r2_primary_source_force_field_literature_audit_preparation/r2_primary_source_search_matrix.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/32_r2_primary_source_force_field_literature_audit_preparation/r2_qm_fragment_decision_matrix.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/32_r2_primary_source_force_field_literature_audit_preparation/r2_literature_audit_preparation_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/32_r2_primary_source_force_field_literature_audit_preparation/r2_literature_audit_preparation.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/32_r2_primary_source_force_field_literature_audit_preparation/R2_PRIMARY_SOURCE_FORCE_FIELD_LITERATURE_AUDIT_PREPARATION_DAY024.md

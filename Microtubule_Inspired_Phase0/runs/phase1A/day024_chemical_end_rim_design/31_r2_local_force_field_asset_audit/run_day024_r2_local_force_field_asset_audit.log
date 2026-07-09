@@ -1,0 +1,24 @@
+Day024 R2 local force-field asset audit completed.
+Files processed / dummy-topology-only assets: 65/31
+Physical candidates referenced/unreferenced/total: 0/0/0
+Explicit BN-H parameter lines all/non-dummy: 34/0
+Parameter section counts: atomtypes:34
+Classification counts: DUMMY_OR_TOPOLOGY_ONLY:31 | INSTANCE_TOPOLOGY_ONLY:4 | MANIFEST_OR_CHECKSUM:6 | NO_USABLE_BN_H_PARAMETER_CONTENT:24
+Audit outcome: NO_LOCAL_PHYSICAL_BN_H_FORCE_FIELD_CANDIDATE_IDENTIFIED
+Force-field coverage established: NO
+Topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM calculation authorized: NO
+Required next step: PERFORM_PRIMARY_SOURCE_BN_H_FORCE_FIELD_LITERATURE_AUDIT
+Wrote: runs/phase1A/day024_chemical_end_rim_design/31_r2_local_force_field_asset_audit/r2_local_force_field_asset_classification.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/31_r2_local_force_field_asset_audit/r2_local_force_field_section_inventory.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/31_r2_local_force_field_asset_audit/r2_local_bn_h_parameter_lines.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/31_r2_local_force_field_asset_audit/r2_local_physical_force_field_candidates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/31_r2_local_force_field_asset_audit/r2_local_force_field_rejected_assets.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/31_r2_local_force_field_asset_audit/r2_local_force_field_asset_audit_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/31_r2_local_force_field_asset_audit/r2_local_force_field_asset_audit.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/31_r2_local_force_field_asset_audit/r2_local_force_field_asset_audit_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/31_r2_local_force_field_asset_audit/R2_LOCAL_FORCE_FIELD_ASSET_AUDIT_DAY024.md

@@ -1,0 +1,3 @@
+correction_id,affected_DOI,original_classification,corrected_classification,reason
+CORR_001,10.1063/1.1999628,REAXFF_HBN reactive force-field candidate,"Theoretical hydrogen–BNNT reference, not an accepted force-field development source",Primary-source verification did not support the ReaxFF attribution.
+CORR_002,10.1021/acs.jpca.1c09648,ABSENT,B/N/H ReaxFF candidate for gas-phase hBN nanostructure synthesis,Primary article explicitly reports ReaxFF development and an SI parameter file.

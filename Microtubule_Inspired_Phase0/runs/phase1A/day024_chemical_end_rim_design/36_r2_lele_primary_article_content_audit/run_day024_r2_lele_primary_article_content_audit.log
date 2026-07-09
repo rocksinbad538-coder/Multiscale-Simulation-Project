@@ -1,0 +1,27 @@
+Day024 R2 Lele 2022 primary-article content audit completed.
+PDF pages / extraction method / characters: 15/PYMUPDF/60146
+DOI / ReaxFF / Supporting Information mentioned: True/True/True
+Evidence rows / categories with hits: 374/9
+Training / parameter / water / BNNT / edge evidence counts: 57/3/0/28/1
+Supporting Information retrieved: NO
+ReaxFF parameter file retrieved: NO
+Decision: R2_LELE_PRIMARY_ARTICLE_CONTENT_AUDITED_SI_AND_PARAMETER_FILES_STILL_REQUIRED
+Failed gates: NONE
+R2 force-field coverage established: NO
+Parameter adoption authorized: NO
+Topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM calculation authorized: NO
+Required next step: RETRIEVE_AND_AUDIT_LELE_2022_SI_AND_REAXFF_PARAMETER_FILE
+Wrote: runs/phase1A/day024_chemical_end_rim_design/36_r2_lele_primary_article_content_audit/lele_2022_article_text_by_page.txt
+Wrote: runs/phase1A/day024_chemical_end_rim_design/36_r2_lele_primary_article_content_audit/lele_2022_article_evidence.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/36_r2_lele_primary_article_content_audit/lele_2022_R2_domain_assessment.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/36_r2_lele_primary_article_content_audit/lele_2022_required_followup_artifacts.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/36_r2_lele_primary_article_content_audit/lele_2022_primary_article_content_audit_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/36_r2_lele_primary_article_content_audit/lele_2022_primary_article_content_audit_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/36_r2_lele_primary_article_content_audit/lele_2022_primary_article_content_audit.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/36_r2_lele_primary_article_content_audit/lele_2022_primary_article_content_audit_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/36_r2_lele_primary_article_content_audit/LELE_2022_PRIMARY_ARTICLE_CONTENT_AUDIT_DAY024.md

@@ -1,0 +1,29 @@
+Day024 R2 Lele 2022 SI and ReaxFF parameter-file audit completed.
+Article pages / SI pages / SI characters: 15/2/2365
+SI quality-factor / borazine / parameter-table / water hits: 8/6/0/0
+ReaxFF general/atoms/bonds/offdiag/angles/torsions/hbonds: 39/6/21/15/105/58/4
+Element order: C | H | O | N | B | Al
+B/N/H-relevant parameter records: 166
+B/N/H records by section: ANGLES:89 | BONDS:15 | HYDROGEN_BONDS:4 | OFF_DIAGONAL:12 | TORSIONS:46
+Decision: R2_LELE_2022_SI_AND_REAXFF_PARAMETER_FILE_AUDITED_NOT_AUTHORIZED_FOR_R2
+Failed gates: NONE
+R2 force-field coverage established: NO
+Parameter adoption authorized: NO
+Topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM calculation authorized: NO
+Required next step: COMPARE_LELE_REAXFF_DOMAIN_WITH_FUNCTIONALIZED_HBN_FIXED_TOPOLOGY_AND_QM_REFERENCE_ROUTES
+Wrote: runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/lele_2022_supporting_information_text_by_page.txt
+Wrote: runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/lele_2022_supporting_information_evidence.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/lele_2022_reaxff_section_inventory.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/lele_2022_reaxff_element_inventory.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/lele_2022_reaxff_bnh_term_inventory.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/lele_2022_R2_domain_assessment.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/lele_2022_si_parameter_file_audit_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/lele_2022_si_parameter_file_audit_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/lele_2022_si_parameter_file_audit_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/lele_2022_si_parameter_file_audit.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/LELE_2022_SI_PARAMETER_FILE_AUDIT_DAY024.md

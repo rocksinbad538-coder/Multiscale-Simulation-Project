@@ -1,0 +1,26 @@
+Day024 R2 force-field coverage preflight completed.
+Required bond / angle / torsion classes: 22/50/76
+Three-coordinate heavy improper/planarity centers: 2112
+Local force-field files / BN-H text hits: 65/28603
+Unique local environments / critical centers: 40/468
+Preliminary QM fragment classes: 7
+Decision: R2_FORCE_FIELD_COVERAGE_PREFLIGHT_COMPLETED
+Force-field coverage established: NO
+Topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM calculation authorized: NO
+Required next step: REVIEW_LOCAL_FORCE_FIELD_HITS_AND_PERFORM_PRIMARY_SOURCE_FORCE_FIELD_LITERATURE_AUDIT
+Wrote: runs/phase1A/day024_chemical_end_rim_design/30_r2_force_field_coverage_preflight/r2_required_bond_terms.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/30_r2_force_field_coverage_preflight/r2_required_angle_terms.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/30_r2_force_field_coverage_preflight/r2_required_torsion_terms.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/30_r2_force_field_coverage_preflight/r2_required_improper_centers.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/30_r2_force_field_coverage_preflight/r2_local_force_field_file_inventory.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/30_r2_force_field_coverage_preflight/r2_local_force_field_bn_h_text_hits.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/30_r2_force_field_coverage_preflight/r2_preliminary_qm_fragment_classes.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/30_r2_force_field_coverage_preflight/r2_force_field_coverage_preflight_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/30_r2_force_field_coverage_preflight/r2_force_field_coverage_preflight.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/30_r2_force_field_coverage_preflight/r2_force_field_coverage_preflight_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/30_r2_force_field_coverage_preflight/R2_FORCE_FIELD_COVERAGE_PREFLIGHT_DAY024.md

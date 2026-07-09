@@ -1,0 +1,29 @@
+Day024 R2 priority-1 source artifact retrieval completed.
+Artifacts attempted / binary-text retrieved / landing-access / failed: 8/1/3/4
+Archives extracted / archive members: 0/0
+Models with binary artifacts: LELE_GAS_PHASE_HBN_REAXFF
+GHORAI_ARTICLE_LANDING status/kind/http/bytes: FAILED/HTML/403/5774
+LELE_REAXFF_PARAMETERS status/kind/http/bytes: LANDING_OR_ACCESS_PAGE_RETRIEVED/HTML/403/5750
+LELE_SI_PDF status/kind/http/bytes: LANDING_OR_ACCESS_PAGE_RETRIEVED/HTML/403/5750
+LELE_ARTICLE_OPEN_COPY status/kind/http/bytes: RETRIEVED/PDF/200/7950775
+IFFR_BNNT_DATASET status/kind/http/bytes: FAILED/EMPTY_OR_MISSING/202/0
+IFFR_BNNT_ARTICLE_COPY status/kind/http/bytes: FAILED/EMPTY_OR_MISSING/202/0
+RAJAN_SI status/kind/http/bytes: LANDING_OR_ACCESS_PAGE_RETRIEVED/HTML/403/5759
+RAJAN_ARTICLE_METADATA status/kind/http/bytes: FAILED/HTML/403/5581
+Decision: R2_P1_SOURCE_ARTIFACT_RETRIEVAL_AUDITED
+Failed gates: NONE
+Force-field coverage established: NO
+Parameter adoption authorized: NO
+Topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM calculation authorized: NO
+Required next step: AUDIT_RETRIEVED_P1_ARTIFACT_CONTENT_AND_PARAMETER_PROVENANCE
+Wrote: runs/phase1A/day024_chemical_end_rim_design/35_r2_p1_source_artifact_retrieval/r2_p1_artifact_retrieval_ledger.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/35_r2_p1_source_artifact_retrieval/r2_p1_retrieved_file_inventory.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/35_r2_p1_source_artifact_retrieval/r2_p1_archive_member_inventory.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/35_r2_p1_source_artifact_retrieval/r2_p1_artifact_retrieval_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/35_r2_p1_source_artifact_retrieval/r2_p1_artifact_retrieval.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/35_r2_p1_source_artifact_retrieval/R2_P1_SOURCE_ARTIFACT_RETRIEVAL_DAY024.md
