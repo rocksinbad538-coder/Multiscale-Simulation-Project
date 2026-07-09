@@ -1,0 +1,36 @@
+Day024 R2 complete end-symmetry correspondence audit completed.
+Heavy pairs / seed-heavy pairs: 216/30
+Heavy element relations same/sublattice-swap: 0/216
+H pairs / seed-H pairs / inner-H pairs: 102/15/12
+ALL_END_HEAVY PROPER_ROTATION_ONLY det/RMSD/max: 1.000000/3.009299227340e-01/1.042387923012e+00
+ALL_END_HEAVY ORTHOGONAL_REFLECTION_ALLOWED det/RMSD/max: -1.000000/2.662866243847e-01/1.041179193167e+00
+RIGID_RIM_HEAVY PROPER_ROTATION_ONLY det/RMSD/max: 1.000000/2.290270549693e-01/4.488905673313e-01
+RIGID_RIM_HEAVY ORTHOGONAL_REFLECTION_ALLOWED det/RMSD/max: -1.000000/1.815919844246e-01/3.455694579138e-01
+ANNULUS_HEAVY PROPER_ROTATION_ONLY det/RMSD/max: 1.000000/5.688217534143e-15/6.466036496704e-15
+ANNULUS_HEAVY ORTHOGONAL_REFLECTION_ALLOWED det/RMSD/max: -1.000000/2.666883902359e-15/4.070144838902e-15
+INNER_BOUNDARY_HEAVY PROPER_ROTATION_ONLY det/RMSD/max: 1.000000/1.905793032954e-15/2.035072419451e-15
+INNER_BOUNDARY_HEAVY ORTHOGONAL_REFLECTION_ALLOWED det/RMSD/max: -1.000000/1.905793032954e-15/2.035072419451e-15
+SEED_HEAVY PROPER_ROTATION_ONLY det/RMSD/max: 1.000000/6.858855589371e-04/1.242621274189e-03
+SEED_HEAVY ORTHOGONAL_REFLECTION_ALLOWED det/RMSD/max: -1.000000/6.580852468392e-04/1.121191285701e-03
+FOUR_ATOM_BRIDGE_HEAVY PROPER_ROTATION_ONLY det/RMSD/max: 1.000000/3.190158074630e-01/8.318395985537e-01
+FOUR_ATOM_BRIDGE_HEAVY ORTHOGONAL_REFLECTION_ALLOWED det/RMSD/max: -1.000000/2.920967229912e-01/8.319616047124e-01
+Selected subset / transform type: INNER_BOUNDARY_HEAVY/ORTHOGONAL_REFLECTION_ALLOWED
+Selected transform determinant / RMSD / maximum: -1.000000000000/1.905793032954e-15/2.035072419451e-15 nm
+Existing inner-H symmetry RMSD / maximum: 2.160444102433e-01/2.181886234714e-01 nm
+Decision: R2_COMPLETE_END_SYMMETRY_CORRESPONDENCE_VALIDATED
+Failed gates: NONE
+Coordinates modified: NO
+Molecular topology generated: NO
+Energy minimization performed: NO
+MD performed: NO
+QM performed: NO
+Required next step: REFINE_R2_HYDROGEN_ORIENTATIONS_WITH_VALIDATED_END_SYMMETRY_TRANSFORM
+Wrote: runs/phase1A/day024_chemical_end_rim_design/26_r2_complete_end_symmetry_correspondence/r2_complete_lower_upper_heavy_pairs.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/26_r2_complete_end_symmetry_correspondence/r2_complete_lower_upper_hydrogen_pairs.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/26_r2_complete_end_symmetry_correspondence/r2_end_symmetry_transform_comparison.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/26_r2_complete_end_symmetry_correspondence/r2_selected_annulus_symmetry_transform.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/26_r2_complete_end_symmetry_correspondence/r2_symmetry_deviation_by_node_type.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/26_r2_complete_end_symmetry_correspondence/r2_complete_end_symmetry_correspondence_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/26_r2_complete_end_symmetry_correspondence/r2_complete_end_symmetry_correspondence_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/26_r2_complete_end_symmetry_correspondence/r2_complete_end_symmetry_correspondence.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/26_r2_complete_end_symmetry_correspondence/R2_COMPLETE_END_SYMMETRY_CORRESPONDENCE_DAY024.md

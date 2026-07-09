@@ -1,0 +1,34 @@
+Day024 R2 inner-H reflected-direction refinement completed.
+Selected scenario applied: UPPER_DRIVES_LOWER
+Coordinate nodes heavy/H/total: 2112/204/2316
+Modified lower inner-H / unchanged remaining H: 12/192
+Heavy coordinates unchanged: True
+Unmodified H coordinates unchanged: True
+B-H / N-H bond counts: 102/102
+Maximum X-H deviation: 8.881784197001e-16 nm
+H angle minimum / maximum / violations: 70.026550401/170.273738102/0
+Minimum H-heavy / H-H distances: 0.154841883/0.230044781 nm
+Global H-heavy / H-H clashes: 0/0
+Inner-H aperture proxy lower/upper/asymmetry: 1.028648811/1.031124689/0.002475879 nm
+Decision: R2_SELECTED_FOUR_ATOM_BN_BRIDGE_HYDROGEN_COORDINATES_VALIDATED_AFTER_SYMMETRY_REFINEMENT
+Failed gates: NONE
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: AUDIT_R2_SELECTED_FOUR_ATOM_BN_BRIDGE_CHEMICAL_REALIZABILITY_AND_PARAMETERIZATION_SCOPE
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_selected_four_atom_refined_full_coordinates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_inner_h_modified_coordinates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_refined_hydrogen_bond_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_refined_hydrogen_angle_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_refined_hydrogen_contact_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_refined_hydrogen_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_inner_h_refinement_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_inner_h_refinement_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_inner_h_refinement.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_inner_h_refinement_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_selected_four_atom_refined_full_embedding.xyz
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_selected_four_atom_refined_full_embedding.pdb
+Wrote: runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/R2_INNER_H_REFLECTED_DIRECTION_REFINEMENT_DAY024.md

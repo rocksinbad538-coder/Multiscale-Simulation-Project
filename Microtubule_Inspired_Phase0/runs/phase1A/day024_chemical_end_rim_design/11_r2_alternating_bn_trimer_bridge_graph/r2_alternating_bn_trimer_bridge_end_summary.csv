@@ -1,0 +1,3 @@
+end,seed_element,bridge_sequence,annulus_endpoint_element,selected_seed_sites,selected_annulus_sites,bridge_paths,bridge_atoms,bridge_heavy_edges,selected_gap_nm,feasible_gap_minimum_nm,feasible_gap_maximum_nm,mapping_seed_parity,mapping_orientation,mapping_rotation,mapping_chirality,bridge_B_atoms,bridge_N_atoms,seed_H_passivants,outer_H_passivants,inner_H_passivants,bridge_H_passivants,total_H_passivants,total_added_heavy_atoms,shortest_bridge_containing_cycle,longest_bridge_containing_cycle
+LOWER,N,B-N-B,N,15,15,15,45,60,0.17709999999999998,0.05,0.3041,1,-1,14,-1,30,15,15,15,12,45,87,201,14,14
+UPPER,B,N-B-N,B,15,15,15,45,60,0.17709999999999998,0.05,0.3041,1,-1,0,-1,15,30,15,15,12,45,87,201,14,14

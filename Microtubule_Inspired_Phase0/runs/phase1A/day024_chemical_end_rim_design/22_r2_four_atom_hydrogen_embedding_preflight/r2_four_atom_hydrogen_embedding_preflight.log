@@ -1,0 +1,2158 @@
+======================================================================
+R2 FOUR-ATOM HYDROGEN EMBEDDING PREFLIGHT
+======================================================================
+Thu Jul  9 15:25:23 CDT 2026
+
+------------------------------------------------------------------
+GATE 3K SOURCE AND HASH
+------------------------------------------------------------------
+FILE=scripts/phase1A/refine_day024_r2_trimer_bridge_conformers_and_h_orientations.py
+    4826 scripts/phase1A/refine_day024_r2_trimer_bridge_conformers_and_h_orientations.py
+46d6553fefb4d210396b501dfdf7de3cd848909ce6f4dfd1bda972b8f54a0d7f  scripts/phase1A/refine_day024_r2_trimer_bridge_conformers_and_h_orientations.py
+
+------------------------------------------------------------------
+HYDROGEN-RELATED CONSTANTS
+------------------------------------------------------------------
+15:ROOT = Path(__file__).resolve().parents[2]
+16:BASE = ROOT / "runs/phase1A/day024_chemical_end_rim_design"
+18:G3A = BASE / "01_r2_parent_rim_chemical_audit"
+19:G3I = BASE / "11_r2_alternating_bn_trimer_bridge_graph"
+20:G3J = BASE / "12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding"
+22:OUT = (
+27:PARENT_SUMMARY = (
+32:GRAPH_NODES = (
+37:GRAPH_EDGES = (
+42:BRIDGE_PATHS = (
+47:GRAPH_SUMMARY = (
+52:GRAPH_GATES = (
+57:SOURCE_COORDINATES = (
+62:SOURCE_EMBEDDING_SUMMARY = (
+67:REFINED_COORDINATES = (
+72:REFINED_CONFORMERS = (
+77:REFINED_HYDROGENS = (
+82:BOND_LENGTHS = (
+87:BOND_SUMMARY = (
+92:ANGLE_SUMMARY = (
+97:CONTACT_SUMMARY = (
+102:END_SUMMARY = (
+107:SUMMARY = (
+112:GATES = (
+117:JSON_OUT = (
+122:MANIFEST = (
+127:XYZ_OUT = (
+132:PDB_OUT = (
+137:REPORT = (
+139:    / "R2_TRIMER_BRIDGE_CONFORMER_AND_H_REFINEMENT_DAY024.md"
+142:EXPECTED_PARENT_DECISION = (
+146:EXPECTED_GRAPH_DECISION = (
+147:    "R2_ALTERNATING_BN_TRIMER_BRIDGE_GRAPH_VALIDATED"
+150:EXPECTED_SOURCE_DECISION = (
+155:PASS_DECISION = (
+157:    "AND_H_REFINEMENT_VALIDATED"
+160:HEAVY_REVIEW_DECISION = (
+165:H_REVIEW_DECISION = (
+167:    "REQUIRES_SECONDARY_H_ORIENTATION_OPTIMIZATION"
+170:N_PARENT = 1680
+171:N_HEAVY = 2082
+172:N_H = 174
+173:N_TOTAL = 2256
+174:N_BRIDGES = 30
+176:BN = 0.144973
+177:BH = 0.119
+178:NH = 0.101
+180:LIBRARY_ANGLE_MIN = 105.0
+181:LIBRARY_ANGLE_MAX = 135.0
+182:LIBRARY_ANGLE_STEP = 1.0
+183:LIBRARY_TORSION_STEP = 10.0
+185:BASE_CONFORMERS_PER_BRIDGE = 80
+186:AZIMUTH_STEP = 10.0
+187:BRIDGE_POOL_SIZE = 96
+188:BRIDGE_GLOBAL_SWEEPS = 12
+190:H_DIRECTION_COUNT = 362
+191:H_POOL_SIZE = 48
+192:H_GLOBAL_SWEEPS = 10
+194:LOCAL_FIXED_RADIUS_NM = 0.80
+196:MAX_LIBRARY_DISTANCE_ERROR_NM = 0.0005
+197:MAX_BN_DEVIATION_NM = 0.003
+198:MAX_XH_DEVIATION_NM = 0.002
+200:MIN_CRITICAL_ANGLE_DEG = 70.0
+201:MAX_CRITICAL_ANGLE_DEG = 175.0
+202:MAX_CRITICAL_RMS_DEVIATION_DEG = 30.0
+204:MIN_NONBONDED_HEAVY_HEAVY_NM = 0.120
+205:MIN_NONBONDED_H_HEAVY_NM = 0.070
+206:MIN_NONBONDED_H_H_NM = 0.060
+208:SOFT_HEAVY_CLEARANCE_NM = 0.140
+209:SOFT_H_HEAVY_CLEARANCE_NM = 0.090
+210:SOFT_H_H_CLEARANCE_NM = 0.080
+212:MAX_APERTURE_ERROR = 0.10
+213:MAX_OUTER_RADIUS_ERROR = 0.15
+214:MAX_END_ASYMMETRY_NM = 0.010
+216:CRITICAL_NODE_TYPES = {
+1098:        SOFT_HEAVY_CLEARANCE_NM,
+1214:            SOFT_HEAVY_CLEARANCE_NM,
+1496:            < MIN_NONBONDED_H_HEAVY_NM
+1502:        SOFT_H_HEAVY_CLEARANCE_NM,
+1605:                < MIN_NONBONDED_H_H_NM
+1611:            SOFT_H_H_CLEARANCE_NM,
+1757:        GRAPH_NODES,
+1758:        GRAPH_EDGES,
+1760:        GRAPH_SUMMARY,
+1761:        GRAPH_GATES,
+1772:        GRAPH_SUMMARY
+1780:        GRAPH_GATES
+1784:        GRAPH_NODES
+1788:        GRAPH_EDGES
+1808:    ) != EXPECTED_GRAPH_DECISION:
+1997:        len(heavy_ids) != N_HEAVY
+1998:        or len(hydrogen_ids) != N_H
+2286:                    AZIMUTH_STEP,
+2372:        BRIDGE_GLOBAL_SWEEPS
+2468:            f"{BRIDGE_GLOBAL_SWEEPS}: "
+2712:        H_DIRECTION_COUNT
+2875:            :H_POOL_SIZE
+2880:            or hydrogen_index == N_H
+2887:                f"  H pools {hydrogen_index}/{N_H}; "
+2908:        H_GLOBAL_SWEEPS
+2988:            f"{H_GLOBAL_SWEEPS}: "
+3082:        REFINED_HYDROGENS,
+3149:                    "GLOBAL_DISCRETE_CONFORMER_AND_H_REFINEMENT"
+3318:    maximum_XH_deviation = max(
+3510:        "H_HEAVY": (
+3511:            MIN_NONBONDED_H_HEAVY_NM
+3513:        "H_H": (
+3514:            MIN_NONBONDED_H_H_NM
+3590:                category = "H_H"
+3593:                category = "H_HEAVY"
+3648:            "H_HEAVY",
+3649:            "H_H",
+3978:        maximum_XH_deviation
+3979:        <= MAX_XH_DEVIATION_NM
+3981:            "H_HEAVY"
+3985:            "H_H"
+4001:            == EXPECTED_GRAPH_DECISION
+4041:        "174_H_orientations_were_globally_refined": (
+4045:            == N_H
+4059:        "all_XH_bonds_are_within_0p002nm": (
+4060:            maximum_XH_deviation
+4061:            <= MAX_XH_DEVIATION_NM
+4081:        "no_nonbonded_H_heavy_clashes": (
+4083:                "H_HEAVY"
+4087:        "no_nonbonded_H_H_clashes": (
+4089:                "H_H"
+4153:            H_REVIEW_DECISION
+4157:            "RUN_R2_SECONDARY_H_ORIENTATION_AND_"
+4173:        "H_orientations_refined": (
+4192:        "maximum_XH_bond_deviation_nm": (
+4193:            maximum_XH_deviation
+4212:        "minimum_nonbonded_H_heavy_nm": (
+4214:                "H_HEAVY"
+4217:        "minimum_nonbonded_H_H_nm": (
+4219:                "H_H"
+4227:        "H_heavy_clash_count": (
+4229:                "H_HEAVY"
+4232:        "H_H_clash_count": (
+4234:                "H_H"
+4310:                        AZIMUTH_STEP
+4316:                        BRIDGE_GLOBAL_SWEEPS
+4318:                    "H_direction_count": (
+4319:                        H_DIRECTION_COUNT
+4321:                    "H_pool_size": (
+4322:                        H_POOL_SIZE
+4324:                    "H_global_sweeps": (
+4325:                        H_GLOBAL_SWEEPS
+4375:                GRAPH_NODES
+4378:                GRAPH_NODES
+4386:                GRAPH_EDGES
+4389:                GRAPH_EDGES
+4408:                GRAPH_SUMMARY
+4411:                GRAPH_SUMMARY
+4616:  **{maximum_XH_deviation:.6f} nm**
+4635:  **{minimum_distances['H_HEAVY']:.6f}/
+4636:  {clash_counts['H_HEAVY']}**
+4638:  **{minimum_distances['H_H']:.6f}/
+4639:  {clash_counts['H_H']}**
+4698:        "Maximum library / BN / bridge-BN / XH deviations: "
+4702:        f"{maximum_XH_deviation:.6f} nm"
+4716:        f"{minimum_distances['H_HEAVY']:.6f}/"
+4717:        f"{minimum_distances['H_H']:.6f} nm"
+4723:        f"{clash_counts['H_HEAVY']}/"
+4724:        f"{clash_counts['H_H']}"
+4806:        REFINED_HYDROGENS,
+
+------------------------------------------------------------------
+FUNCTION DEFINITIONS
+------------------------------------------------------------------
+224:def relative(path: Path) -> str:
+230:def require_file(path: Path) -> None:
+240:def sha256(path: Path) -> str:
+253:def read_rows(
+272:def read_one(
+285:def write_rows(
+322:def parse_bool(value: Any) -> bool:
+331:def parse_float(
+354:def parse_int(
+370:def normalized(
+398:def determine_axis(
+436:def rotation_about_axis(
+512:def rotation_from_vectors(
+596:def place_next(
+686:def canonical_chain(
+758:def build_conformer_library() -> dict[str, np.ndarray]:
+828:def map_chain(
+890:def angle_degrees(
+917:def xh_target(
+931:def clearance_penalty(
+950:def candidate_local_metrics(
+1142:def bridge_local_score(
+1184:def global_bridge_score(
+1277:def fibonacci_directions(
+1331:def preferred_h_direction(
+1433:def hydrogen_local_metrics(
+1550:def hydrogen_local_score(
+1587:def hydrogen_global_score(
+1667:def summarize_bond_types(
+1749:def main() -> None:
+
+------------------------------------------------------------------
+HYDROGEN IMPLEMENTATION REFERENCES
+------------------------------------------------------------------
+77:REFINED_HYDROGENS = (
+79:    / "r2_trimer_bridge_refined_hydrogen_orientations.csv"
+167:    "REQUIRES_SECONDARY_H_ORIENTATION_OPTIMIZATION"
+191:H_POOL_SIZE = 48
+198:MAX_XH_DEVIATION_NM = 0.002
+917:def xh_target(
+927:        f"Unexpected X-H parent element: {element}"
+1332:    hydrogen_row: dict[str, str],
+1365:    end = hydrogen_row[
+1369:    node_type = hydrogen_row[
+1410:    if node_type == "ANNULUS_INNER_PASSIVANT_H":
+1413:    elif node_type == "ANNULUS_OUTER_PASSIVANT_H":
+1416:    elif node_type == "SEED_PASSIVANT_H":
+1433:def hydrogen_local_metrics(
+1550:def hydrogen_local_score(
+1587:def hydrogen_global_score(
+1970:    hydrogen_ids = [
+1998:        or len(hydrogen_ids) != N_H
+2715:    hydrogen_candidate_pools: dict[
+2721:        "Generating hydrogen-orientation candidate pools..."
+2724:    for hydrogen_index, hydrogen_id in enumerate(
+2726:            hydrogen_ids
+2731:            hydrogen_id
+2735:            "attached_to",
+2745:                f"{hydrogen_id}: invalid attached_to node."
+2763:                f"{hydrogen_id}: attached heavy atom has "
+2822:        bond_length = xh_target(
+2841:            metrics = hydrogen_local_metrics(
+2869:            key=hydrogen_local_score
+2872:        hydrogen_candidate_pools[
+2873:            hydrogen_id
+2875:            :H_POOL_SIZE
+2879:            hydrogen_index % 25 == 0
+2880:            or hydrogen_index == N_H
+2882:            best = hydrogen_candidate_pools[
+2883:                hydrogen_id
+2887:                f"  H pools {hydrogen_index}/{N_H}; "
+2895:        hydrogen_id: 0
+2896:        for hydrogen_id in hydrogen_ids
+2900:        "Running global hydrogen-orientation coordinate descent..."
+2903:    sorted_hydrogen_ids = sorted(
+2904:        hydrogen_ids
+2912:        ordered_hydrogens = (
+2913:            sorted_hydrogen_ids
+2917:                    sorted_hydrogen_ids
+2922:        for hydrogen_id in ordered_hydrogens:
+2924:                hydrogen_candidate_pools[
+2934:                in sorted_hydrogen_ids
+2936:                != hydrogen_id
+2953:            pool = hydrogen_candidate_pools[
+2954:                hydrogen_id
+2958:                hydrogen_global_score(
+2977:                    hydrogen_id
+2981:                    hydrogen_id
+2995:    refined_hydrogen_rows = []
+2997:    for hydrogen_id in sorted_hydrogen_ids:
+2999:            hydrogen_candidate_pools[
+3000:                hydrogen_id
+3003:                    hydrogen_id
+3009:            hydrogen_id
+3017:        refined_hydrogen_rows.append(
+3019:                "hydrogen_node": (
+3020:                    hydrogen_id
+3023:                    hydrogen_id
+3027:                "hydrogen_role": nodes[
+3028:                    hydrogen_id
+3033:                    hydrogen_id
+3035:                    "attached_to",
+3082:        REFINED_HYDROGENS,
+3083:        refined_hydrogen_rows,
+3202:            target = xh_target(
+3318:    maximum_XH_deviation = max(
+3713:                == "ANNULUS_INNER_PASSIVANT_H"
+3977:    hydrogen_geometry_pass = (
+3978:        maximum_XH_deviation
+3979:        <= MAX_XH_DEVIATION_NM
+4041:        "174_H_orientations_were_globally_refined": (
+4043:                refined_hydrogen_rows
+4059:        "all_XH_bonds_are_within_0p002nm": (
+4060:            maximum_XH_deviation
+4061:            <= MAX_XH_DEVIATION_NM
+4157:            "RUN_R2_SECONDARY_H_ORIENTATION_AND_"
+4173:        "H_orientations_refined": (
+4175:                refined_hydrogen_rows
+4192:        "maximum_XH_bond_deviation_nm": (
+4193:            maximum_XH_deviation
+4256:        "hydrogen_geometry_pass": (
+4257:            hydrogen_geometry_pass
+4321:                    "H_pool_size": (
+4322:                        H_POOL_SIZE
+4588:bridges and the orientations of all 174 H passivants.
+4602:- H orientations:
+4603:  **{len(refined_hydrogen_rows)}**
+4615:- Maximum X-H deviation:
+4616:  **{maximum_XH_deviation:.6f} nm**
+4661:- Hydrogen geometry pass:
+4662:  **{hydrogen_geometry_pass}**
+4685:        "Coordinate nodes / bridge conformers / H orientations: "
+4688:        f"{len(refined_hydrogen_rows)}"
+4698:        "Maximum library / BN / bridge-BN / XH deviations: "
+4702:        f"{maximum_XH_deviation:.6f} nm"
+4767:        "Hydrogen geometry pass: "
+4768:        f"{hydrogen_geometry_pass}"
+4806:        REFINED_HYDROGENS,
+
+------------------------------------------------------------------
+SOURCE BLOCKS AROUND HYDROGEN POOL GENERATION
+------------------------------------------------------------------
+----- LINES 52-141 -----
+000052: GRAPH_GATES = (
+000053:     G3I
+000054:     / "r2_alternating_bn_trimer_bridge_graph_gates.csv"
+000055: )
+000056: 
+000057: SOURCE_COORDINATES = (
+000058:     G3J
+000059:     / "r2_trimer_bridge_static_coordinates.csv"
+000060: )
+000061: 
+000062: SOURCE_EMBEDDING_SUMMARY = (
+000063:     G3J
+000064:     / "r2_trimer_bridge_static_embedding_summary.csv"
+000065: )
+000066: 
+000067: REFINED_COORDINATES = (
+000068:     OUT
+000069:     / "r2_trimer_bridge_refined_coordinates.csv"
+000070: )
+000071: 
+000072: REFINED_CONFORMERS = (
+000073:     OUT
+000074:     / "r2_trimer_bridge_refined_conformers.csv"
+000075: )
+000076: 
+000077: REFINED_HYDROGENS = (
+000078:     OUT
+000079:     / "r2_trimer_bridge_refined_hydrogen_orientations.csv"
+000080: )
+000081: 
+000082: BOND_LENGTHS = (
+000083:     OUT
+000084:     / "r2_trimer_bridge_refined_bond_lengths.csv"
+000085: )
+000086: 
+000087: BOND_SUMMARY = (
+000088:     OUT
+000089:     / "r2_trimer_bridge_refined_bond_type_summary.csv"
+000090: )
+000091: 
+000092: ANGLE_SUMMARY = (
+000093:     OUT
+000094:     / "r2_trimer_bridge_refined_angle_summary.csv"
+000095: )
+000096: 
+000097: CONTACT_SUMMARY = (
+000098:     OUT
+000099:     / "r2_trimer_bridge_refined_nonbonded_contact_summary.csv"
+000100: )
+000101: 
+000102: END_SUMMARY = (
+000103:     OUT
+000104:     / "r2_trimer_bridge_refined_end_summary.csv"
+000105: )
+000106: 
+000107: SUMMARY = (
+000108:     OUT
+000109:     / "r2_trimer_bridge_refinement_summary.csv"
+000110: )
+000111: 
+000112: GATES = (
+000113:     OUT
+000114:     / "r2_trimer_bridge_refinement_gates.csv"
+000115: )
+000116: 
+000117: JSON_OUT = (
+000118:     OUT
+000119:     / "r2_trimer_bridge_refinement.json"
+000120: )
+000121: 
+000122: MANIFEST = (
+000123:     OUT
+000124:     / "r2_trimer_bridge_refinement_source_manifest.csv"
+000125: )
+000126: 
+000127: XYZ_OUT = (
+000128:     OUT
+000129:     / "r2_trimer_bridge_refined_embedding.xyz"
+000130: )
+000131: 
+000132: PDB_OUT = (
+000133:     OUT
+000134:     / "r2_trimer_bridge_refined_embedding.pdb"
+000135: )
+000136: 
+000137: REPORT = (
+000138:     OUT
+000139:     / "R2_TRIMER_BRIDGE_CONFORMER_AND_H_REFINEMENT_DAY024.md"
+000140: )
+000141: 
+----- LINES 166-255 -----
+000166:     "R2_ALTERNATING_BN_TRIMER_BRIDGE_REFINEMENT_"
+000167:     "REQUIRES_SECONDARY_H_ORIENTATION_OPTIMIZATION"
+000168: )
+000169: 
+000170: N_PARENT = 1680
+000171: N_HEAVY = 2082
+000172: N_H = 174
+000173: N_TOTAL = 2256
+000174: N_BRIDGES = 30
+000175: 
+000176: BN = 0.144973
+000177: BH = 0.119
+000178: NH = 0.101
+000179: 
+000180: LIBRARY_ANGLE_MIN = 105.0
+000181: LIBRARY_ANGLE_MAX = 135.0
+000182: LIBRARY_ANGLE_STEP = 1.0
+000183: LIBRARY_TORSION_STEP = 10.0
+000184: 
+000185: BASE_CONFORMERS_PER_BRIDGE = 80
+000186: AZIMUTH_STEP = 10.0
+000187: BRIDGE_POOL_SIZE = 96
+000188: BRIDGE_GLOBAL_SWEEPS = 12
+000189: 
+000190: H_DIRECTION_COUNT = 362
+000191: H_POOL_SIZE = 48
+000192: H_GLOBAL_SWEEPS = 10
+000193: 
+000194: LOCAL_FIXED_RADIUS_NM = 0.80
+000195: 
+000196: MAX_LIBRARY_DISTANCE_ERROR_NM = 0.0005
+000197: MAX_BN_DEVIATION_NM = 0.003
+000198: MAX_XH_DEVIATION_NM = 0.002
+000199: 
+000200: MIN_CRITICAL_ANGLE_DEG = 70.0
+000201: MAX_CRITICAL_ANGLE_DEG = 175.0
+000202: MAX_CRITICAL_RMS_DEVIATION_DEG = 30.0
+000203: 
+000204: MIN_NONBONDED_HEAVY_HEAVY_NM = 0.120
+000205: MIN_NONBONDED_H_HEAVY_NM = 0.070
+000206: MIN_NONBONDED_H_H_NM = 0.060
+000207: 
+000208: SOFT_HEAVY_CLEARANCE_NM = 0.140
+000209: SOFT_H_HEAVY_CLEARANCE_NM = 0.090
+000210: SOFT_H_H_CLEARANCE_NM = 0.080
+000211: 
+000212: MAX_APERTURE_ERROR = 0.10
+000213: MAX_OUTER_RADIUS_ERROR = 0.15
+000214: MAX_END_ASYMMETRY_NM = 0.010
+000215: 
+000216: CRITICAL_NODE_TYPES = {
+000217:     "HEXAGONAL_EDGE_COMPLETION_SEED",
+000218:     "ALTERNATING_BN_TRIMER_BRIDGE",
+000219:     "ANNULUS_OUTER_BOUNDARY",
+000220:     "ANNULUS_INNER_BOUNDARY",
+000221: }
+000222: 
+000223: 
+000224: def relative(path: Path) -> str:
+000225:     return str(
+000226:         path.resolve().relative_to(ROOT)
+000227:     )
+000228: 
+000229: 
+000230: def require_file(path: Path) -> None:
+000231:     if (
+000232:         not path.is_file()
+000233:         or path.stat().st_size == 0
+000234:     ):
+000235:         raise RuntimeError(
+000236:             f"Missing or empty required file: {path}"
+000237:         )
+000238: 
+000239: 
+000240: def sha256(path: Path) -> str:
+000241:     digest = hashlib.sha256()
+000242: 
+000243:     with path.open("rb") as handle:
+000244:         for chunk in iter(
+000245:             lambda: handle.read(1024 * 1024),
+000246:             b"",
+000247:         ):
+000248:             digest.update(chunk)
+000249: 
+000250:     return digest.hexdigest()
+000251: 
+000252: 
+000253: def read_rows(
+000254:     path: Path,
+000255: ) -> list[dict[str, str]]:
+----- LINES 892-981 -----
+000892:     center: np.ndarray,
+000893:     second: np.ndarray,
+000894: ) -> float:
+000895:     cosine = float(
+000896:         np.clip(
+000897:             np.dot(
+000898:                 normalized(
+000899:                     first
+000900:                     - center
+000901:                 ),
+000902:                 normalized(
+000903:                     second
+000904:                     - center
+000905:                 ),
+000906:             ),
+000907:             -1.0,
+000908:             1.0,
+000909:         )
+000910:     )
+000911: 
+000912:     return math.degrees(
+000913:         math.acos(cosine)
+000914:     )
+000915: 
+000916: 
+000917: def xh_target(
+000918:     element: str,
+000919: ) -> float:
+000920:     if element == "B":
+000921:         return BH
+000922: 
+000923:     if element == "N":
+000924:         return NH
+000925: 
+000926:     raise RuntimeError(
+000927:         f"Unexpected X-H parent element: {element}"
+000928:     )
+000929: 
+000930: 
+000931: def clearance_penalty(
+000932:     distances: np.ndarray,
+000933:     soft_threshold: float,
+000934: ) -> float:
+000935:     if distances.size == 0:
+000936:         return 0.0
+000937: 
+000938:     return float(
+000939:         np.sum(
+000940:             np.maximum(
+000941:                 soft_threshold
+000942:                 - distances,
+000943:                 0.0,
+000944:             )
+000945:             ** 2
+000946:         )
+000947:     )
+000948: 
+000949: 
+000950: def candidate_local_metrics(
+000951:     chain: np.ndarray,
+000952:     start_existing_neighbors: list[np.ndarray],
+000953:     finish_existing_neighbors: list[np.ndarray],
+000954:     local_fixed_positions: np.ndarray,
+000955: ) -> dict[str, Any]:
+000956:     bond_lengths = np.linalg.norm(
+000957:         np.diff(
+000958:             chain,
+000959:             axis=0,
+000960:         ),
+000961:         axis=1,
+000962:     )
+000963: 
+000964:     bond_deviations = np.abs(
+000965:         bond_lengths
+000966:         - BN
+000967:     )
+000968: 
+000969:     internal_angles = [
+000970:         angle_degrees(
+000971:             chain[index - 1],
+000972:             chain[index],
+000973:             chain[index + 1],
+000974:         )
+000975:         for index in (
+000976:             1,
+000977:             2,
+000978:             3,
+000979:         )
+000980:     ]
+000981: 
+----- LINES 1307-1396 -----
+001307:             )
+001308:         )
+001309: 
+001310:         theta = (
+001311:             golden_angle
+001312:             * index
+001313:         )
+001314: 
+001315:         directions.append(
+001316:             [
+001317:                 radius
+001318:                 * math.cos(theta),
+001319:                 radius
+001320:                 * math.sin(theta),
+001321:                 z_value,
+001322:             ]
+001323:         )
+001324: 
+001325:     return np.asarray(
+001326:         directions,
+001327:         dtype=float,
+001328:     )
+001329: 
+001330: 
+001331: def preferred_h_direction(
+001332:     hydrogen_row: dict[str, str],
+001333:     heavy_position: np.ndarray,
+001334:     heavy_neighbor_positions: list[np.ndarray],
+001335:     tube_center: np.ndarray,
+001336:     tube_axis: np.ndarray,
+001337:     annulus_center_by_end: dict[
+001338:         str,
+001339:         np.ndarray,
+001340:     ],
+001341: ) -> np.ndarray:
+001342:     vector_sum = np.zeros(
+001343:         3,
+001344:         dtype=float,
+001345:     )
+001346: 
+001347:     for neighbor_position in heavy_neighbor_positions:
+001348:         vector_sum += normalized(
+001349:             neighbor_position
+001350:             - heavy_position
+001351:         )
+001352: 
+001353:     opposite_bisector = normalized(
+001354:         -vector_sum,
+001355:         np.asarray(
+001356:             [
+001357:                 1.0,
+001358:                 0.0,
+001359:                 0.0,
+001360:             ],
+001361:             dtype=float,
+001362:         ),
+001363:     )
+001364: 
+001365:     end = hydrogen_row[
+001366:         "end"
+001367:     ]
+001368: 
+001369:     node_type = hydrogen_row[
+001370:         "node_type"
+001371:     ]
+001372: 
+001373:     outward = (
+001374:         -tube_axis
+001375:         if end == "LOWER"
+001376:         else tube_axis
+001377:     )
+001378: 
+001379:     annulus_center = (
+001380:         annulus_center_by_end[
+001381:             end
+001382:         ]
+001383:     )
+001384: 
+001385:     radial = (
+001386:         heavy_position
+001387:         - annulus_center
+001388:     )
+001389: 
+001390:     radial -= (
+001391:         np.dot(
+001392:             radial,
+001393:             tube_axis,
+001394:         )
+001395:         * tube_axis
+001396:     )
+----- LINES 1408-1497 -----
+001408:     )
+001409: 
+001410:     if node_type == "ANNULUS_INNER_PASSIVANT_H":
+001411:         role_direction = -radial
+001412: 
+001413:     elif node_type == "ANNULUS_OUTER_PASSIVANT_H":
+001414:         role_direction = radial
+001415: 
+001416:     elif node_type == "SEED_PASSIVANT_H":
+001417:         role_direction = outward
+001418: 
+001419:     else:
+001420:         role_direction = radial
+001421: 
+001422:     return normalized(
+001423:         (
+001424:             0.80
+001425:             * opposite_bisector
+001426:             + 0.20
+001427:             * role_direction
+001428:         ),
+001429:         opposite_bisector,
+001430:     )
+001431: 
+001432: 
+001433: def hydrogen_local_metrics(
+001434:     point: np.ndarray,
+001435:     center: np.ndarray,
+001436:     heavy_neighbor_positions: list[np.ndarray],
+001437:     all_heavy_positions: np.ndarray,
+001438:     attached_heavy_index: int,
+001439:     preferred_direction: np.ndarray,
+001440: ) -> dict[str, Any]:
+001441:     direction = normalized(
+001442:         point
+001443:         - center
+001444:     )
+001445: 
+001446:     angles = np.asarray(
+001447:         [
+001448:             angle_degrees(
+001449:                 neighbor,
+001450:                 center,
+001451:                 point,
+001452:             )
+001453:             for neighbor
+001454:             in heavy_neighbor_positions
+001455:         ],
+001456:         dtype=float,
+001457:     )
+001458: 
+001459:     angle_violations = int(
+001460:         np.sum(
+001461:             (
+001462:                 angles
+001463:                 < MIN_CRITICAL_ANGLE_DEG
+001464:             )
+001465:             | (
+001466:                 angles
+001467:                 > MAX_CRITICAL_ANGLE_DEG
+001468:             )
+001469:         )
+001470:     )
+001471: 
+001472:     angle_penalty = float(
+001473:         np.sum(
+001474:             (
+001475:                 angles
+001476:                 - 120.0
+001477:             )
+001478:             ** 2
+001479:         )
+001480:     )
+001481: 
+001482:     distances = np.linalg.norm(
+001483:         all_heavy_positions
+001484:         - point,
+001485:         axis=1,
+001486:     )
+001487: 
+001488:     distances = np.delete(
+001489:         distances,
+001490:         attached_heavy_index,
+001491:     )
+001492: 
+001493:     heavy_clashes = int(
+001494:         np.sum(
+001495:             distances
+001496:             < MIN_NONBONDED_H_HEAVY_NM
+001497:         )
+----- LINES 1525-1614 -----
+001525:     return {
+001526:         "angles": (
+001527:             angles
+001528:         ),
+001529:         "angle_violations": (
+001530:             angle_violations
+001531:         ),
+001532:         "angle_penalty": (
+001533:             angle_penalty
+001534:         ),
+001535:         "heavy_clashes": (
+001536:             heavy_clashes
+001537:         ),
+001538:         "heavy_penalty": (
+001539:             heavy_penalty
+001540:         ),
+001541:         "minimum_heavy_clearance_nm": (
+001542:             minimum_heavy_clearance
+001543:         ),
+001544:         "directional_penalty": (
+001545:             directional_penalty
+001546:         ),
+001547:     }
+001548: 
+001549: 
+001550: def hydrogen_local_score(
+001551:     candidate: dict[str, Any],
+001552: ) -> tuple[Any, ...]:
+001553:     return (
+001554:         int(
+001555:             candidate[
+001556:                 "angle_violations"
+001557:             ]
+001558:         ),
+001559:         int(
+001560:             candidate[
+001561:                 "heavy_clashes"
+001562:             ]
+001563:         ),
+001564:         float(
+001565:             candidate[
+001566:                 "heavy_penalty"
+001567:             ]
+001568:         ),
+001569:         float(
+001570:             candidate[
+001571:                 "angle_penalty"
+001572:             ]
+001573:         ),
+001574:         float(
+001575:             candidate[
+001576:                 "directional_penalty"
+001577:             ]
+001578:         ),
+001579:         -float(
+001580:             candidate[
+001581:                 "minimum_heavy_clearance_nm"
+001582:             ]
+001583:         ),
+001584:     )
+001585: 
+001586: 
+001587: def hydrogen_global_score(
+001588:     candidate: dict[str, Any],
+001589:     other_h_positions: np.ndarray,
+001590: ) -> tuple[Any, ...]:
+001591:     point = candidate[
+001592:         "point"
+001593:     ]
+001594: 
+001595:     if other_h_positions.size:
+001596:         distances = np.linalg.norm(
+001597:             other_h_positions
+001598:             - point,
+001599:             axis=1,
+001600:         )
+001601: 
+001602:         hh_clashes = int(
+001603:             np.sum(
+001604:                 distances
+001605:                 < MIN_NONBONDED_H_H_NM
+001606:             )
+001607:         )
+001608: 
+001609:         hh_penalty = clearance_penalty(
+001610:             distances,
+001611:             SOFT_H_H_CLEARANCE_NM,
+001612:         )
+001613: 
+001614:         hh_minimum = float(
+----- LINES 1945-2034 -----
+001945:             ]
+001946:             == "PARENT_HBN"
+001947:         ),
+001948:         key=lambda node_id: int(
+001949:             node_id.split(
+001950:                 ":"
+001951:             )[1]
+001952:         ),
+001953:     )
+001954: 
+001955:     if len(parent_ids) != N_PARENT:
+001956:         raise RuntimeError(
+001957:             "Unexpected parent population."
+001958:         )
+001959: 
+001960:     heavy_ids = [
+001961:         node_id
+001962:         for node_id, row
+001963:         in nodes.items()
+001964:         if row[
+001965:             "element"
+001966:         ]
+001967:         != "H"
+001968:     ]
+001969: 
+001970:     hydrogen_ids = [
+001971:         node_id
+001972:         for node_id, row
+001973:         in nodes.items()
+001974:         if row[
+001975:             "element"
+001976:         ]
+001977:         == "H"
+001978:     ]
+001979: 
+001980:     bridge_ids = {
+001981:         node_id
+001982:         for node_id, row
+001983:         in nodes.items()
+001984:         if row[
+001985:             "node_type"
+001986:         ]
+001987:         == "ALTERNATING_BN_TRIMER_BRIDGE"
+001988:     }
+001989: 
+001990:     fixed_heavy_ids = [
+001991:         node_id
+001992:         for node_id in heavy_ids
+001993:         if node_id not in bridge_ids
+001994:     ]
+001995: 
+001996:     if (
+001997:         len(heavy_ids) != N_HEAVY
+001998:         or len(hydrogen_ids) != N_H
+001999:         or len(bridge_ids) != 90
+002000:     ):
+002001:         raise RuntimeError(
+002002:             "Unexpected heavy, H, or bridge populations."
+002003:         )
+002004: 
+002005:     positions: dict[
+002006:         str,
+002007:         np.ndarray
+002008:     ] = {
+002009:         node_id: np.array(
+002010:             source_coordinates[
+002011:                 node_id
+002012:             ],
+002013:             dtype=float,
+002014:             copy=True,
+002015:         )
+002016:         for node_id in fixed_heavy_ids
+002017:     }
+002018: 
+002019:     parent_positions = np.asarray(
+002020:         [
+002021:             positions[
+002022:                 node_id
+002023:             ]
+002024:             for node_id in parent_ids
+002025:         ],
+002026:         dtype=float,
+002027:     )
+002028: 
+002029:     tube_center, tube_axis = determine_axis(
+002030:         parent_positions
+002031:     )
+002032: 
+002033:     target_aperture_diameter_nm = parse_float(
+002034:         parent_summary,
+----- LINES 2690-2779 -----
+002690:     )
+002691: 
+002692:     heavy_index = {
+002693:         node_id: index
+002694:         for index, node_id
+002695:         in enumerate(
+002696:             heavy_ids_sorted
+002697:         )
+002698:     }
+002699: 
+002700:     all_heavy_positions = np.asarray(
+002701:         [
+002702:             positions[
+002703:                 node_id
+002704:             ]
+002705:             for node_id
+002706:             in heavy_ids_sorted
+002707:         ],
+002708:         dtype=float,
+002709:     )
+002710: 
+002711:     base_directions = fibonacci_directions(
+002712:         H_DIRECTION_COUNT
+002713:     )
+002714: 
+002715:     hydrogen_candidate_pools: dict[
+002716:         str,
+002717:         list[dict[str, Any]]
+002718:     ] = {}
+002719: 
+002720:     print(
+002721:         "Generating hydrogen-orientation candidate pools..."
+002722:     )
+002723: 
+002724:     for hydrogen_index, hydrogen_id in enumerate(
+002725:         sorted(
+002726:             hydrogen_ids
+002727:         ),
+002728:         start=1,
+002729:     ):
+002730:         row = nodes[
+002731:             hydrogen_id
+002732:         ]
+002733: 
+002734:         heavy_id = row.get(
+002735:             "attached_to",
+002736:             "",
+002737:         )
+002738: 
+002739:         if (
+002740:             not heavy_id
+002741:             or heavy_id
+002742:             not in positions
+002743:         ):
+002744:             raise RuntimeError(
+002745:                 f"{hydrogen_id}: invalid attached_to node."
+002746:             )
+002747: 
+002748:         heavy_neighbor_ids = [
+002749:             neighbor
+002750:             for neighbor in adjacency[
+002751:                 heavy_id
+002752:             ]
+002753:             if nodes[
+002754:                 neighbor
+002755:             ][
+002756:                 "element"
+002757:             ]
+002758:             != "H"
+002759:         ]
+002760: 
+002761:         if len(heavy_neighbor_ids) != 2:
+002762:             raise RuntimeError(
+002763:                 f"{hydrogen_id}: attached heavy atom has "
+002764:                 f"{len(heavy_neighbor_ids)} heavy neighbors."
+002765:             )
+002766: 
+002767:         center = positions[
+002768:             heavy_id
+002769:         ]
+002770: 
+002771:         heavy_neighbor_positions = [
+002772:             positions[
+002773:                 neighbor
+002774:             ]
+002775:             for neighbor
+002776:             in heavy_neighbor_ids
+002777:         ]
+002778: 
+002779:         preferred_direction = preferred_h_direction(
+----- LINES 2797-2886 -----
+002797:                 ),
+002798:                 np.zeros(
+002799:                     3,
+002800:                     dtype=float,
+002801:                 ),
+002802:             ),
+002803:             preferred_direction,
+002804:         )
+002805: 
+002806:         candidate_directions = np.vstack(
+002807:             (
+002808:                 base_directions,
+002809:                 preferred_direction[
+002810:                     None,
+002811:                     :,
+002812:                 ],
+002813:                 opposite_bisector[
+002814:                     None,
+002815:                     :,
+002816:                 ],
+002817:             )
+002818:         )
+002819: 
+002820:         candidates = []
+002821: 
+002822:         bond_length = xh_target(
+002823:             nodes[
+002824:                 heavy_id
+002825:             ][
+002826:                 "element"
+002827:             ]
+002828:         )
+002829: 
+002830:         for direction in candidate_directions:
+002831:             direction = normalized(
+002832:                 direction
+002833:             )
+002834: 
+002835:             point = (
+002836:                 center
+002837:                 + bond_length
+002838:                 * direction
+002839:             )
+002840: 
+002841:             metrics = hydrogen_local_metrics(
+002842:                 point,
+002843:                 center,
+002844:                 heavy_neighbor_positions,
+002845:                 all_heavy_positions,
+002846:                 heavy_index[
+002847:                     heavy_id
+002848:                 ],
+002849:                 preferred_direction,
+002850:             )
+002851: 
+002852:             candidates.append(
+002853:                 {
+002854:                     "point": point,
+002855:                     "direction_x": float(
+002856:                         direction[0]
+002857:                     ),
+002858:                     "direction_y": float(
+002859:                         direction[1]
+002860:                     ),
+002861:                     "direction_z": float(
+002862:                         direction[2]
+002863:                     ),
+002864:                     **metrics,
+002865:                 }
+002866:             )
+002867: 
+002868:         candidates.sort(
+002869:             key=hydrogen_local_score
+002870:         )
+002871: 
+002872:         hydrogen_candidate_pools[
+002873:             hydrogen_id
+002874:         ] = candidates[
+002875:             :H_POOL_SIZE
+002876:         ]
+002877: 
+002878:         if (
+002879:             hydrogen_index % 25 == 0
+002880:             or hydrogen_index == N_H
+002881:         ):
+002882:             best = hydrogen_candidate_pools[
+002883:                 hydrogen_id
+002884:             ][0]
+002885: 
+002886:             print(
+----- LINES 2888-2977 -----
+002888:                 f"latest best angle violations/"
+002889:                 f"heavy clashes="
+002890:                 f"{best['angle_violations']}/"
+002891:                 f"{best['heavy_clashes']}"
+002892:             )
+002893: 
+002894:     selected_h_index = {
+002895:         hydrogen_id: 0
+002896:         for hydrogen_id in hydrogen_ids
+002897:     }
+002898: 
+002899:     print(
+002900:         "Running global hydrogen-orientation coordinate descent..."
+002901:     )
+002902: 
+002903:     sorted_hydrogen_ids = sorted(
+002904:         hydrogen_ids
+002905:     )
+002906: 
+002907:     for sweep in range(
+002908:         H_GLOBAL_SWEEPS
+002909:     ):
+002910:         changed = 0
+002911: 
+002912:         ordered_hydrogens = (
+002913:             sorted_hydrogen_ids
+002914:             if sweep % 2 == 0
+002915:             else list(
+002916:                 reversed(
+002917:                     sorted_hydrogen_ids
+002918:                 )
+002919:             )
+002920:         )
+002921: 
+002922:         for hydrogen_id in ordered_hydrogens:
+002923:             other_points = [
+002924:                 hydrogen_candidate_pools[
+002925:                     other_id
+002926:                 ][
+002927:                     selected_h_index[
+002928:                         other_id
+002929:                     ]
+002930:                 ][
+002931:                     "point"
+002932:                 ]
+002933:                 for other_id
+002934:                 in sorted_hydrogen_ids
+002935:                 if other_id
+002936:                 != hydrogen_id
+002937:             ]
+002938: 
+002939:             if other_points:
+002940:                 other_array = np.asarray(
+002941:                     other_points,
+002942:                     dtype=float,
+002943:                 )
+002944:             else:
+002945:                 other_array = np.empty(
+002946:                     (
+002947:                         0,
+002948:                         3,
+002949:                     ),
+002950:                     dtype=float,
+002951:                 )
+002952: 
+002953:             pool = hydrogen_candidate_pools[
+002954:                 hydrogen_id
+002955:             ]
+002956: 
+002957:             scores = [
+002958:                 hydrogen_global_score(
+002959:                     candidate,
+002960:                     other_array,
+002961:                 )
+002962:                 for candidate in pool
+002963:             ]
+002964: 
+002965:             best_index = min(
+002966:                 range(
+002967:                     len(pool)
+002968:                 ),
+002969:                 key=lambda index: scores[
+002970:                     index
+002971:                 ],
+002972:             )
+002973: 
+002974:             if (
+002975:                 best_index
+002976:                 != selected_h_index[
+002977:                     hydrogen_id
+----- LINES 2984-3073 -----
+002984:                 changed += 1
+002985: 
+002986:         print(
+002987:             f"  H sweep {sweep + 1}/"
+002988:             f"{H_GLOBAL_SWEEPS}: "
+002989:             f"changed={changed}"
+002990:         )
+002991: 
+002992:         if changed == 0:
+002993:             break
+002994: 
+002995:     refined_hydrogen_rows = []
+002996: 
+002997:     for hydrogen_id in sorted_hydrogen_ids:
+002998:         candidate = (
+002999:             hydrogen_candidate_pools[
+003000:                 hydrogen_id
+003001:             ][
+003002:                 selected_h_index[
+003003:                     hydrogen_id
+003004:                 ]
+003005:             ]
+003006:         )
+003007: 
+003008:         positions[
+003009:             hydrogen_id
+003010:         ] = np.asarray(
+003011:             candidate[
+003012:                 "point"
+003013:             ],
+003014:             dtype=float,
+003015:         )
+003016: 
+003017:         refined_hydrogen_rows.append(
+003018:             {
+003019:                 "hydrogen_node": (
+003020:                     hydrogen_id
+003021:                 ),
+003022:                 "end": nodes[
+003023:                     hydrogen_id
+003024:                 ][
+003025:                     "end"
+003026:                 ],
+003027:                 "hydrogen_role": nodes[
+003028:                     hydrogen_id
+003029:                 ][
+003030:                     "node_type"
+003031:                 ],
+003032:                 "attached_heavy_node": nodes[
+003033:                     hydrogen_id
+003034:                 ].get(
+003035:                     "attached_to",
+003036:                     "",
+003037:                 ),
+003038:                 "direction_x": (
+003039:                     candidate[
+003040:                         "direction_x"
+003041:                     ]
+003042:                 ),
+003043:                 "direction_y": (
+003044:                     candidate[
+003045:                         "direction_y"
+003046:                     ]
+003047:                 ),
+003048:                 "direction_z": (
+003049:                     candidate[
+003050:                         "direction_z"
+003051:                     ]
+003052:                 ),
+003053:                 "local_angle_violations": (
+003054:                     candidate[
+003055:                         "angle_violations"
+003056:                     ]
+003057:                 ),
+003058:                 "local_heavy_clashes": (
+003059:                     candidate[
+003060:                         "heavy_clashes"
+003061:                     ]
+003062:                 ),
+003063:                 "minimum_heavy_clearance_nm": (
+003064:                     candidate[
+003065:                         "minimum_heavy_clearance_nm"
+003066:                     ]
+003067:                 ),
+003068:                 "heavy_neighbor_angle_1_deg": float(
+003069:                     candidate[
+003070:                         "angles"
+003071:                     ][0]
+003072:                 ),
+003073:                 "heavy_neighbor_angle_2_deg": float(
+----- LINES 3177-3266 -----
+003177:                 - positions[
+003178:                     second
+003179:                 ]
+003180:             )
+003181:         )
+003182: 
+003183:         if parse_bool(
+003184:             row[
+003185:                 "heavy_atom_edge"
+003186:             ]
+003187:         ):
+003188:             target = BN
+003189: 
+003190:         else:
+003191:             heavy_node = (
+003192:                 first
+003193:                 if nodes[
+003194:                     first
+003195:                 ][
+003196:                     "element"
+003197:                 ]
+003198:                 != "H"
+003199:                 else second
+003200:             )
+003201: 
+003202:             target = xh_target(
+003203:                 nodes[
+003204:                     heavy_node
+003205:                 ][
+003206:                     "element"
+003207:                 ]
+003208:             )
+003209: 
+003210:         bond_rows.append(
+003211:             {
+003212:                 "edge_id": row[
+003213:                     "edge_id"
+003214:                 ],
+003215:                 "end": row[
+003216:                     "end"
+003217:                 ],
+003218:                 "edge_type": row[
+003219:                     "edge_type"
+003220:                 ],
+003221:                 "source_node": first,
+003222:                 "target_node": second,
+003223:                 "source_element": nodes[
+003224:                     first
+003225:                 ][
+003226:                     "element"
+003227:                 ],
+003228:                 "target_element": nodes[
+003229:                     second
+003230:                 ][
+003231:                     "element"
+003232:                 ],
+003233:                 "length_nm": length,
+003234:                 "target_length_nm": (
+003235:                     target
+003236:                 ),
+003237:                 "deviation_nm": (
+003238:                     length
+003239:                     - target
+003240:                 ),
+003241:                 "absolute_deviation_nm": abs(
+003242:                     length
+003243:                     - target
+003244:                 ),
+003245:             }
+003246:         )
+003247: 
+003248:     write_rows(
+003249:         BOND_LENGTHS,
+003250:         bond_rows,
+003251:     )
+003252: 
+003253:     bond_summary_rows = summarize_bond_types(
+003254:         bond_rows
+003255:     )
+003256: 
+003257:     write_rows(
+003258:         BOND_SUMMARY,
+003259:         bond_summary_rows,
+003260:     )
+003261: 
+003262:     heavy_bond_rows = [
+003263:         row
+003264:         for row in bond_rows
+003265:         if (
+003266:             nodes[
+----- LINES 3293-3382 -----
+003293: 
+003294:     h_bond_rows = [
+003295:         row
+003296:         for row in bond_rows
+003297:         if row not in heavy_bond_rows
+003298:     ]
+003299: 
+003300:     maximum_BN_deviation = max(
+003301:         float(
+003302:             row[
+003303:                 "absolute_deviation_nm"
+003304:             ]
+003305:         )
+003306:         for row in heavy_bond_rows
+003307:     )
+003308: 
+003309:     maximum_bridge_BN_deviation = max(
+003310:         float(
+003311:             row[
+003312:                 "absolute_deviation_nm"
+003313:             ]
+003314:         )
+003315:         for row in bridge_bond_rows
+003316:     )
+003317: 
+003318:     maximum_XH_deviation = max(
+003319:         float(
+003320:             row[
+003321:                 "absolute_deviation_nm"
+003322:             ]
+003323:         )
+003324:         for row in h_bond_rows
+003325:     )
+003326: 
+003327:     angle_values_by_type: dict[
+003328:         str,
+003329:         list[float]
+003330:     ] = defaultdict(list)
+003331: 
+003332:     critical_angles = []
+003333: 
+003334:     for center_id, row in nodes.items():
+003335:         if row[
+003336:             "element"
+003337:         ] == "H":
+003338:             continue
+003339: 
+003340:         neighbors = sorted(
+003341:             adjacency[
+003342:                 center_id
+003343:             ]
+003344:         )
+003345: 
+003346:         if len(neighbors) != 3:
+003347:             raise RuntimeError(
+003348:                 f"Heavy node {center_id} has "
+003349:                 f"{len(neighbors)} neighbors."
+003350:             )
+003351: 
+003352:         for first_index in range(3):
+003353:             for second_index in range(
+003354:                 first_index + 1,
+003355:                 3,
+003356:             ):
+003357:                 value = angle_degrees(
+003358:                     positions[
+003359:                         neighbors[
+003360:                             first_index
+003361:                         ]
+003362:                     ],
+003363:                     positions[
+003364:                         center_id
+003365:                     ],
+003366:                     positions[
+003367:                         neighbors[
+003368:                             second_index
+003369:                         ]
+003370:                     ],
+003371:                 )
+003372: 
+003373:                 angle_values_by_type[
+003374:                     row[
+003375:                         "node_type"
+003376:                     ]
+003377:                 ].append(value)
+003378: 
+003379:                 if row[
+003380:                     "node_type"
+003381:                 ] in CRITICAL_NODE_TYPES:
+003382:                     critical_angles.append(
+----- LINES 3688-3777 -----
+003688: 
+003689:         annulus_center = np.mean(
+003690:             np.asarray(
+003691:                 [
+003692:                     positions[
+003693:                         node_id
+003694:                     ]
+003695:                     for node_id in annulus_ids
+003696:                 ],
+003697:                 dtype=float,
+003698:             ),
+003699:             axis=0,
+003700:         )
+003701: 
+003702:         inner_h_ids = [
+003703:             node_id
+003704:             for node_id, row in nodes.items()
+003705:             if (
+003706:                 row[
+003707:                     "end"
+003708:                 ]
+003709:                 == end
+003710:                 and row[
+003711:                     "node_type"
+003712:                 ]
+003713:                 == "ANNULUS_INNER_PASSIVANT_H"
+003714:             )
+003715:         ]
+003716: 
+003717:         outer_annulus_ids = [
+003718:             node_id
+003719:             for node_id, row in nodes.items()
+003720:             if (
+003721:                 row[
+003722:                     "end"
+003723:                 ]
+003724:                 == end
+003725:                 and row[
+003726:                     "node_type"
+003727:                 ]
+003728:                 == "ANNULUS_OUTER_BOUNDARY"
+003729:             )
+003730:         ]
+003731: 
+003732:         inner_radii = []
+003733: 
+003734:         for node_id in inner_h_ids:
+003735:             displacement = (
+003736:                 positions[
+003737:                     node_id
+003738:                 ]
+003739:                 - annulus_center
+003740:             )
+003741: 
+003742:             displacement -= (
+003743:                 np.dot(
+003744:                     displacement,
+003745:                     outward,
+003746:                 )
+003747:                 * outward
+003748:             )
+003749: 
+003750:             inner_radii.append(
+003751:                 float(
+003752:                     np.linalg.norm(
+003753:                         displacement
+003754:                     )
+003755:                 )
+003756:             )
+003757: 
+003758:         outer_radii = []
+003759: 
+003760:         for node_id in outer_annulus_ids:
+003761:             displacement = (
+003762:                 positions[
+003763:                     node_id
+003764:                 ]
+003765:                 - annulus_center
+003766:             )
+003767: 
+003768:             displacement -= (
+003769:                 np.dot(
+003770:                     displacement,
+003771:                     outward,
+003772:                 )
+003773:                 * outward
+003774:             )
+003775: 
+003776:             outer_radii.append(
+003777:                 float(
+----- LINES 3952-4041 -----
+003952:         float(
+003953:             row[
+003954:                 "library_distance_error_nm"
+003955:             ]
+003956:         )
+003957:         for row in refined_conformer_rows
+003958:     )
+003959: 
+003960:     heavy_geometry_pass = (
+003961:         maximum_BN_deviation
+003962:         <= MAX_BN_DEVIATION_NM
+003963:         and maximum_bridge_BN_deviation
+003964:         <= MAX_BN_DEVIATION_NM
+003965:         and critical_minimum
+003966:         >= MIN_CRITICAL_ANGLE_DEG
+003967:         and critical_maximum
+003968:         <= MAX_CRITICAL_ANGLE_DEG
+003969:         and critical_rms
+003970:         <= MAX_CRITICAL_RMS_DEVIATION_DEG
+003971:         and clash_counts[
+003972:             "HEAVY_HEAVY"
+003973:         ]
+003974:         == 0
+003975:     )
+003976: 
+003977:     hydrogen_geometry_pass = (
+003978:         maximum_XH_deviation
+003979:         <= MAX_XH_DEVIATION_NM
+003980:         and clash_counts[
+003981:             "H_HEAVY"
+003982:         ]
+003983:         == 0
+003984:         and clash_counts[
+003985:             "H_H"
+003986:         ]
+003987:         == 0
+003988:     )
+003989: 
+003990:     gates = {
+003991:         "Gate3A_parent_audit_is_accepted": (
+003992:             parent_summary.get(
+003993:                 "decision"
+003994:             )
+003995:             == EXPECTED_PARENT_DECISION
+003996:         ),
+003997:         "Gate3I_trimer_bridge_graph_is_accepted": (
+003998:             graph_summary.get(
+003999:                 "decision"
+004000:             )
+004001:             == EXPECTED_GRAPH_DECISION
+004002:         ),
+004003:         "Gate3I_has_no_failed_gates": (
+004004:             len(
+004005:                 failed_graph_gates
+004006:             )
+004007:             == 0
+004008:         ),
+004009:         "Gate3J_requires_conformer_refinement": (
+004010:             source_summary.get(
+004011:                 "decision"
+004012:             )
+004013:             == EXPECTED_SOURCE_DECISION
+004014:         ),
+004015:         "all_2256_nodes_received_finite_coordinates": (
+004016:             len(
+004017:                 positions
+004018:             )
+004019:             == N_TOTAL
+004020:             and all(
+004021:                 np.all(
+004022:                     np.isfinite(
+004023:                         point
+004024:                     )
+004025:                 )
+004026:                 for point in positions.values()
+004027:             )
+004028:         ),
+004029:         "parent_coordinates_are_unchanged": (
+004030:             parent_coordinates_unchanged
+004031:         ),
+004032:         "seed_and_annulus_coordinates_are_unchanged": (
+004033:             fixed_heavy_coordinates_unchanged
+004034:         ),
+004035:         "30_bridge_conformers_were_globally_refined": (
+004036:             len(
+004037:                 refined_conformer_rows
+004038:             )
+004039:             == N_BRIDGES
+004040:         ),
+004041:         "174_H_orientations_were_globally_refined": (
+----- LINES 4132-4221 -----
+004132:         decision = (
+004133:             PASS_DECISION
+004134:         )
+004135: 
+004136:         required_next_step = (
+004137:             "AUDIT_R2_ALTERNATING_BN_TRIMER_BRIDGE_"
+004138:             "CHEMICAL_REALIZABILITY_AND_PARAMETERIZATION_SCOPE"
+004139:         )
+004140: 
+004141:     elif not heavy_geometry_pass:
+004142:         decision = (
+004143:             HEAVY_REVIEW_DECISION
+004144:         )
+004145: 
+004146:         required_next_step = (
+004147:             "EVALUATE_R2_LONGER_OR_TOPOLOGICALLY_REVISED_"
+004148:             "BRIDGE_ARCHITECTURE"
+004149:         )
+004150: 
+004151:     else:
+004152:         decision = (
+004153:             H_REVIEW_DECISION
+004154:         )
+004155: 
+004156:         required_next_step = (
+004157:             "RUN_R2_SECONDARY_H_ORIENTATION_AND_"
+004158:             "PROTONATION_PATTERN_REFINEMENT"
+004159:         )
+004160: 
+004161:     summary = {
+004162:         "decision": decision,
+004163:         "coordinate_nodes": (
+004164:             len(
+004165:                 positions
+004166:             )
+004167:         ),
+004168:         "bridge_conformers_refined": (
+004169:             len(
+004170:                 refined_conformer_rows
+004171:             )
+004172:         ),
+004173:         "H_orientations_refined": (
+004174:             len(
+004175:                 refined_hydrogen_rows
+004176:             )
+004177:         ),
+004178:         "conformer_library_size": int(
+004179:             library[
+004180:                 "distance"
+004181:             ].size
+004182:         ),
+004183:         "maximum_library_distance_error_nm": (
+004184:             maximum_library_error
+004185:         ),
+004186:         "maximum_BN_bond_deviation_nm": (
+004187:             maximum_BN_deviation
+004188:         ),
+004189:         "maximum_bridge_BN_bond_deviation_nm": (
+004190:             maximum_bridge_BN_deviation
+004191:         ),
+004192:         "maximum_XH_bond_deviation_nm": (
+004193:             maximum_XH_deviation
+004194:         ),
+004195:         "critical_angle_minimum_deg": (
+004196:             critical_minimum
+004197:         ),
+004198:         "critical_angle_mean_deg": (
+004199:             critical_mean
+004200:         ),
+004201:         "critical_angle_maximum_deg": (
+004202:             critical_maximum
+004203:         ),
+004204:         "critical_angle_RMS_deviation_deg": (
+004205:             critical_rms
+004206:         ),
+004207:         "minimum_nonbonded_heavy_heavy_nm": (
+004208:             minimum_distances[
+004209:                 "HEAVY_HEAVY"
+004210:             ]
+004211:         ),
+004212:         "minimum_nonbonded_H_heavy_nm": (
+004213:             minimum_distances[
+004214:                 "H_HEAVY"
+004215:             ]
+004216:         ),
+004217:         "minimum_nonbonded_H_H_nm": (
+004218:             minimum_distances[
+004219:                 "H_H"
+004220:             ]
+004221:         ),
+----- LINES 4231-4320 -----
+004231:         ),
+004232:         "H_H_clash_count": (
+004233:             clash_counts[
+004234:                 "H_H"
+004235:             ]
+004236:         ),
+004237:         "lower_nuclear_aperture_diameter_nm": (
+004238:             lower[
+004239:                 "nuclear_aperture_diameter_nm"
+004240:             ]
+004241:         ),
+004242:         "upper_nuclear_aperture_diameter_nm": (
+004243:             upper[
+004244:                 "nuclear_aperture_diameter_nm"
+004245:             ]
+004246:         ),
+004247:         "target_aperture_diameter_nm": (
+004248:             target_aperture_diameter_nm
+004249:         ),
+004250:         "maximum_lower_upper_asymmetry_nm": (
+004251:             end_asymmetry
+004252:         ),
+004253:         "heavy_geometry_pass": (
+004254:             heavy_geometry_pass
+004255:         ),
+004256:         "hydrogen_geometry_pass": (
+004257:             hydrogen_geometry_pass
+004258:         ),
+004259:         "candidate_is_final_chemistry": False,
+004260:         "molecular_topology_generation_authorized": False,
+004261:         "formal_charge_assignment_authorized": False,
+004262:         "force_field_parameterization_authorized": False,
+004263:         "energy_minimization_authorized": False,
+004264:         "MD_authorized": False,
+004265:         "mobile_MD_authorized": False,
+004266:         "multitemperature_MD_authorized": False,
+004267:         "QM_authorized": False,
+004268:         "failed_gates": (
+004269:             " | ".join(
+004270:                 failed_gates
+004271:             )
+004272:         ),
+004273:         "required_next_step": (
+004274:             required_next_step
+004275:         ),
+004276:     }
+004277: 
+004278:     write_rows(
+004279:         SUMMARY,
+004280:         [
+004281:             summary
+004282:         ],
+004283:     )
+004284: 
+004285:     write_rows(
+004286:         GATES,
+004287:         [
+004288:             {
+004289:                 "gate": name,
+004290:                 "pass": passed,
+004291:             }
+004292:             for name, passed
+004293:             in gates.items()
+004294:         ],
+004295:     )
+004296: 
+004297:     JSON_OUT.write_text(
+004298:         json.dumps(
+004299:             {
+004300:                 "summary": summary,
+004301:                 "end_summaries": (
+004302:                     end_rows
+004303:                 ),
+004304:                 "gates": gates,
+004305:                 "refinement_parameters": {
+004306:                     "base_conformers_per_bridge": (
+004307:                         BASE_CONFORMERS_PER_BRIDGE
+004308:                     ),
+004309:                     "bridge_azimuth_step_deg": (
+004310:                         AZIMUTH_STEP
+004311:                     ),
+004312:                     "bridge_pool_size": (
+004313:                         BRIDGE_POOL_SIZE
+004314:                     ),
+004315:                     "bridge_global_sweeps": (
+004316:                         BRIDGE_GLOBAL_SWEEPS
+004317:                     ),
+004318:                     "H_direction_count": (
+004319:                         H_DIRECTION_COUNT
+004320:                     ),
+----- LINES 4563-4652 -----
+004563:     )
+004564: 
+004565:     PDB_OUT.write_text(
+004566:         "\n".join(
+004567:             pdb_lines
+004568:         )
+004569:         + "\n",
+004570:         encoding="utf-8",
+004571:     )
+004572: 
+004573:     gate_lines = "\n".join(
+004574:         (
+004575:             f"- `{name}`: "
+004576:             f"**{'PASS' if passed else 'FAIL'}**"
+004577:         )
+004578:         for name, passed
+004579:         in gates.items()
+004580:     )
+004581: 
+004582:     REPORT.write_text(
+004583:         f"""# R2 Trimer-Bridge Conformer and H Refinement
+004584: 
+004585: ## Scope
+004586: 
+004587: This gate globally refines the discrete conformers of all 30 BN trimer
+004588: bridges and the orientations of all 174 H passivants.
+004589: 
+004590: The validated graph and the parent, seed and annulus coordinates were
+004591: not changed.
+004592: 
+004593: No topology, formal charges, force-field parameters, minimization, MD
+004594: or QM calculation was generated.
+004595: 
+004596: ## Refined inventory
+004597: 
+004598: - Coordinate nodes:
+004599:   **{len(positions)}**
+004600: - Bridge conformers:
+004601:   **{len(refined_conformer_rows)}**
+004602: - H orientations:
+004603:   **{len(refined_hydrogen_rows)}**
+004604: - Parent coordinates unchanged:
+004605:   **{parent_coordinates_unchanged}**
+004606: - Seed and annulus coordinates unchanged:
+004607:   **{fixed_heavy_coordinates_unchanged}**
+004608: 
+004609: ## Bond geometry
+004610: 
+004611: - Maximum B-N deviation:
+004612:   **{maximum_BN_deviation:.6f} nm**
+004613: - Maximum bridge B-N deviation:
+004614:   **{maximum_bridge_BN_deviation:.6f} nm**
+004615: - Maximum X-H deviation:
+004616:   **{maximum_XH_deviation:.6f} nm**
+004617: - Maximum library endpoint mismatch:
+004618:   **{maximum_library_error:.6f} nm**
+004619: 
+004620: ## Critical angles
+004621: 
+004622: - Minimum/mean/maximum:
+004623:   **{critical_minimum:.3f}/
+004624:   {critical_mean:.3f}/
+004625:   {critical_maximum:.3f} degrees**
+004626: - RMS deviation from 120 degrees:
+004627:   **{critical_rms:.3f} degrees**
+004628: 
+004629: ## Nonbonded contacts
+004630: 
+004631: - Heavy-heavy minimum/clashes:
+004632:   **{minimum_distances['HEAVY_HEAVY']:.6f}/
+004633:   {clash_counts['HEAVY_HEAVY']}**
+004634: - H-heavy minimum/clashes:
+004635:   **{minimum_distances['H_HEAVY']:.6f}/
+004636:   {clash_counts['H_HEAVY']}**
+004637: - H-H minimum/clashes:
+004638:   **{minimum_distances['H_H']:.6f}/
+004639:   {clash_counts['H_H']}**
+004640: 
+004641: ## Aperture
+004642: 
+004643: - Target diameter:
+004644:   **{target_aperture_diameter_nm:.6f} nm**
+004645: - Lower/upper refined diameter:
+004646:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+004647:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+004648: 
+004649: ## Gates
+004650: 
+004651: {gate_lines}
+004652: 
+----- LINES 4660-4749 -----
+004660:   **{heavy_geometry_pass}**
+004661: - Hydrogen geometry pass:
+004662:   **{hydrogen_geometry_pass}**
+004663: - Candidate is final chemistry:
+004664:   **NO**
+004665: - Molecular topology generation authorized:
+004666:   **NO**
+004667: - Energy minimization authorized:
+004668:   **NO**
+004669: - MD authorized:
+004670:   **NO**
+004671: - QM authorized:
+004672:   **NO**
+004673: - Required next step:
+004674:   `{required_next_step}`
+004675: """,
+004676:         encoding="utf-8",
+004677:     )
+004678: 
+004679:     print(
+004680:         "Day024 R2 trimer-bridge conformer and H "
+004681:         "refinement completed."
+004682:     )
+004683: 
+004684:     print(
+004685:         "Coordinate nodes / bridge conformers / H orientations: "
+004686:         f"{len(positions)}/"
+004687:         f"{len(refined_conformer_rows)}/"
+004688:         f"{len(refined_hydrogen_rows)}"
+004689:     )
+004690: 
+004691:     print(
+004692:         "Parent / seed-annulus coordinates unchanged: "
+004693:         f"{parent_coordinates_unchanged}/"
+004694:         f"{fixed_heavy_coordinates_unchanged}"
+004695:     )
+004696: 
+004697:     print(
+004698:         "Maximum library / BN / bridge-BN / XH deviations: "
+004699:         f"{maximum_library_error:.6f}/"
+004700:         f"{maximum_BN_deviation:.6f}/"
+004701:         f"{maximum_bridge_BN_deviation:.6f}/"
+004702:         f"{maximum_XH_deviation:.6f} nm"
+004703:     )
+004704: 
+004705:     print(
+004706:         "Critical angles min/mean/max/RMSdev120: "
+004707:         f"{critical_minimum:.3f}/"
+004708:         f"{critical_mean:.3f}/"
+004709:         f"{critical_maximum:.3f}/"
+004710:         f"{critical_rms:.3f} deg"
+004711:     )
+004712: 
+004713:     print(
+004714:         "Minimum nonbonded heavy-heavy / H-heavy / H-H: "
+004715:         f"{minimum_distances['HEAVY_HEAVY']:.6f}/"
+004716:         f"{minimum_distances['H_HEAVY']:.6f}/"
+004717:         f"{minimum_distances['H_H']:.6f} nm"
+004718:     )
+004719: 
+004720:     print(
+004721:         "Clash counts heavy-heavy / H-heavy / H-H: "
+004722:         f"{clash_counts['HEAVY_HEAVY']}/"
+004723:         f"{clash_counts['H_HEAVY']}/"
+004724:         f"{clash_counts['H_H']}"
+004725:     )
+004726: 
+004727:     for row in end_rows:
+004728:         print(
+004729:             f"{row['end']} local-angle-fail conformers / "
+004730:             "local-clash conformers / min-clearance / "
+004731:             "aperture/error / outer-radius/error: "
+004732:             f"{row['conformers_with_local_angle_violations']}/"
+004733:             f"{row['conformers_with_local_heavy_clashes']}/"
+004734:             f"{float(row['minimum_local_bridge_clearance_nm']):.6f}/"
+004735:             f"{float(row['nuclear_aperture_diameter_nm']):.6f}/"
+004736:             f"{float(row['nuclear_aperture_relative_error']):.6f}/"
+004737:             f"{float(row['outer_annulus_radius_mean_nm']):.6f}/"
+004738:             f"{float(row['outer_annulus_radius_relative_error']):.6f}"
+004739:         )
+004740: 
+004741:     print(
+004742:         "Maximum lower-upper asymmetry: "
+004743:         f"{end_asymmetry:.6f} nm"
+004744:     )
+004745: 
+004746:     print(
+004747:         f"Decision: {decision}"
+004748:     )
+004749: 
+----- LINES 4781-4826 -----
+004781:     )
+004782: 
+004783:     print(
+004784:         "Force-field parameterization authorized: NO"
+004785:     )
+004786: 
+004787:     print(
+004788:         "Energy minimization authorized: NO"
+004789:     )
+004790: 
+004791:     print(
+004792:         "MD authorized: NO"
+004793:     )
+004794: 
+004795:     print(
+004796:         "QM authorized: NO"
+004797:     )
+004798: 
+004799:     print(
+004800:         f"Required next step: {required_next_step}"
+004801:     )
+004802: 
+004803:     for path in (
+004804:         REFINED_COORDINATES,
+004805:         REFINED_CONFORMERS,
+004806:         REFINED_HYDROGENS,
+004807:         BOND_LENGTHS,
+004808:         BOND_SUMMARY,
+004809:         ANGLE_SUMMARY,
+004810:         CONTACT_SUMMARY,
+004811:         END_SUMMARY,
+004812:         SUMMARY,
+004813:         GATES,
+004814:         JSON_OUT,
+004815:         MANIFEST,
+004816:         XYZ_OUT,
+004817:         PDB_OUT,
+004818:         REPORT,
+004819:     ):
+004820:         print(
+004821:             f"Wrote: {relative(path)}"
+004822:         )
+004823: 
+004824: 
+004825: if __name__ == "__main__":
+004826:     main()
+
+------------------------------------------------------------------
+NEW GRAPH HYDROGEN INVENTORY
+------------------------------------------------------------------
+TOTAL_GRAPH_NODES=2316
+TOTAL_GRAPH_H=204
+H_BY_NODE_TYPE:
+  ANNULUS_INNER_PASSIVANT_H=24
+  ANNULUS_OUTER_PASSIVANT_H=30
+  BRIDGE_PASSIVANT_H=120
+  SEED_PASSIVANT_H=30
+H_BY_END:
+  LOWER=102
+  UPPER=102
+H_ATTACHMENT_EDGES=204
+UNIQUE_H_IDS=204
+ATTACHED_HEAVY_TYPES:
+  ALTERNATING_BN_FOUR_ATOM_BRIDGE=120
+  ANNULUS_INNER_BOUNDARY=24
+  ANNULUS_OUTER_BOUNDARY=30
+  HEXAGONAL_EDGE_COMPLETION_SEED=30
+ATTACHED_HEAVY_ELEMENTS:
+  B=102
+  N=102
+
+------------------------------------------------------------------
+HEAVY COORDINATE INVENTORY
+------------------------------------------------------------------
+ROWS=2112
+ELEMENTS:
+  B=1056
+  N=1056
+NODE_TYPES:
+  ALTERNATING_BN_FOUR_ATOM_BRIDGE=120
+  ANNULUS_INNER_BOUNDARY=24
+  ANNULUS_INTERIOR=168
+  ANNULUS_OUTER_BOUNDARY=60
+  HEXAGONAL_EDGE_COMPLETION_SEED=60
+  PARENT_HBN=1680
+
+------------------------------------------------------------------
+SEMANTICS DECISION
+------------------------------------------------------------------
+decision,target_quantity,target_effective_aperture_radius_5kBT_nm,target_effective_aperture_diameter_5kBT_nm,source_CAP_water_5kBT_distance_nm,heavy_nuclear_aperture_lower_nm,heavy_nuclear_aperture_upper_nm,implied_exclusion_per_side_lower_nm,implied_exclusion_per_side_upper_nm,heavy_coordinate_embedding_validated,heavy_nuclear_aperture_used_as_functional_5kBT_gate,inner_H_aperture_proxy_pending,effective_5kBT_aperture_validation_pending_nonbonded_model,hydrogen_coordinate_generation_authorized,molecular_topology_generation_authorized,formal_charge_assignment_authorized,force_field_parameterization_authorized,energy_minimization_authorized,MD_authorized,QM_authorized,failed_gates,required_next_step
+R2_HEAVY_COORDINATE_EMBEDDING_VALIDATED_APERTURE_FUNCTIONAL_GATE_DEFERRED,EFFECTIVE_WATER_ACCESSIBLE_APERTURE_AT_5KBT,0.41970310496500685,0.8394062099300137,0.17,1.045415170115679,1.045415170115679,0.1030044800928327,0.1030044800928327,True,False,True,True,True,False,False,False,False,False,False,,GENERATE_AND_VALIDATE_R2_SELECTED_FOUR_ATOM_BN_BRIDGE_HYDROGEN_COORDINATES
+
+------------------------------------------------------------------
+SOURCE HASHES
+------------------------------------------------------------------
+46d6553fefb4d210396b501dfdf7de3cd848909ce6f4dfd1bda972b8f54a0d7f  scripts/phase1A/refine_day024_r2_trimer_bridge_conformers_and_h_orientations.py
+d18efafd9fad33bba1098bc1821103b9bec80011160922c9283ae5f674e3c1cc  runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_graph_nodes.csv
+5a140de57b2a89e8c46af68db19c14677ed220e6a6d105f7528a3ad97de9f93e  runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_graph_edges.csv
+1d5434c0b74195906161dfd2fbe50a755daf7d7fddc0420894b01a51c225019c  runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_coordinates.csv
+5b901702702ed11012ddf67f2b5c2e749b1e0ac1e093d2eec6a0935c698d4951  runs/phase1A/day024_chemical_end_rim_design/21_r2_aperture_target_semantics_resolution/r2_aperture_target_semantics_resolution_summary.csv
+
+R2 four-atom hydrogen embedding preflight: COMPLETE

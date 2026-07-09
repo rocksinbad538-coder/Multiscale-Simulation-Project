@@ -1,0 +1,8 @@
+gate,pass
+Gate3I_graph_is_accepted,True
+Gate3K_has_expected_topology_review_decision,True
+all_Gate3K_angle_failed_paths_were_identified,True
+independent_angle_library_is_nonempty,True
+every_failed_path_received_expanded_search,True
+all_reported_search_metrics_are_finite,True
+candidate_coordinates_are_search_only,True

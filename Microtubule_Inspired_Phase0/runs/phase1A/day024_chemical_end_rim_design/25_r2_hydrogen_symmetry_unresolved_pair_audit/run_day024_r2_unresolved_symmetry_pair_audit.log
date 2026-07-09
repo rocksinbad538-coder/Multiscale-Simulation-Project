@@ -1,0 +1,19 @@
+Day024 R2 unresolved symmetry-pair audit completed.
+Unresolved heavy count: 30
+Unresolved heavy types: HEXAGONAL_EDGE_COMPLETION_SEED:30
+Unresolved H count: 15
+Unresolved H roles: SEED_PASSIVANT_H:15
+Unresolved H attached-heavy types: HEXAGONAL_EDGE_COMPLETION_SEED:15
+Bridge paths lower/upper: 15/15
+Path-based correspondence required: False
+Coordinates modified: NO
+Molecular topology generated: NO
+Energy minimization performed: NO
+MD performed: NO
+Required next step: BUILD_TOPOLOGY_AWARE_LOWER_UPPER_CORRESPONDENCE
+Wrote: runs/phase1A/day024_chemical_end_rim_design/25_r2_hydrogen_symmetry_unresolved_pair_audit/r2_unresolved_heavy_pair_metadata.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/25_r2_hydrogen_symmetry_unresolved_pair_audit/r2_unresolved_hydrogen_pair_metadata.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/25_r2_hydrogen_symmetry_unresolved_pair_audit/r2_bridge_path_pairing_metadata.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/25_r2_hydrogen_symmetry_unresolved_pair_audit/r2_unresolved_symmetry_pair_audit_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/25_r2_hydrogen_symmetry_unresolved_pair_audit/r2_unresolved_symmetry_pair_audit.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/25_r2_hydrogen_symmetry_unresolved_pair_audit/R2_UNRESOLVED_SYMMETRY_PAIR_AUDIT_DAY024.md

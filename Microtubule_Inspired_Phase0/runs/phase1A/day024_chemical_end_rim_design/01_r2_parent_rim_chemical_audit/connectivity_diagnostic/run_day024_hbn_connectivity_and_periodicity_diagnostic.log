@@ -1,0 +1,35 @@
+Day024 HBN connectivity and periodicity diagnostic completed.
+System box: 7.394530/7.394530/10.017500 nm
+HBN coordinate span: 2.398000/2.398000/6.018000 nm
+PCA tube axis: 0.00000000/0.00000000/1.00000000
+Tube axial span / projected box extent: 6.018000/10.017500 nm
+Original 0.115-0.175 nm band raw/PBC bond counts: 2460/2460
+At cutoff <=0.175 nm, RAW bonds and d0/d1/d2/d3/d4+: 2460 | 0/60/0/1620/0
+At cutoff <=0.175 nm, PBC bonds and d0/d1/d2/d3/d4+: 2460 | 0/60/0/1620/0
+Potential PBC-created pairs below 0.175 nm: 0
+B-N pairs below 0.100 nm RAW/PBC: 0/0
+RAW_NO_PBC B first-opposite-neighbor min/median/max: 0.143778/0.144810/0.145000 nm
+RAW_NO_PBC N first-opposite-neighbor min/median/max: 0.143778/0.144810/0.145000 nm
+MINIMUM_IMAGE_XYZ B first-opposite-neighbor min/median/max: 0.143778/0.144810/0.145000 nm
+MINIMUM_IMAGE_XYZ N first-opposite-neighbor min/median/max: 0.143778/0.144810/0.145000 nm
+Exact expected graph matches: 0
+Best graph candidates:
+  RAW_NO_PBC | cutoff=0.1475 nm | score=480 | bonds=2460 | d0/d1/d2/d3/d4+=0/60/0/1620/0
+  MINIMUM_IMAGE_XYZ | cutoff=0.1475 nm | score=480 | bonds=2460 | d0/d1/d2/d3/d4+=0/60/0/1620/0
+  RAW_NO_PBC | cutoff=0.1500 nm | score=480 | bonds=2460 | d0/d1/d2/d3/d4+=0/60/0/1620/0
+  MINIMUM_IMAGE_XYZ | cutoff=0.1500 nm | score=480 | bonds=2460 | d0/d1/d2/d3/d4+=0/60/0/1620/0
+  RAW_NO_PBC | cutoff=0.1525 nm | score=480 | bonds=2460 | d0/d1/d2/d3/d4+=0/60/0/1620/0
+  MINIMUM_IMAGE_XYZ | cutoff=0.1525 nm | score=480 | bonds=2460 | d0/d1/d2/d3/d4+=0/60/0/1620/0
+  RAW_NO_PBC | cutoff=0.1550 nm | score=480 | bonds=2460 | d0/d1/d2/d3/d4+=0/60/0/1620/0
+  MINIMUM_IMAGE_XYZ | cutoff=0.1550 nm | score=480 | bonds=2460 | d0/d1/d2/d3/d4+=0/60/0/1620/0
+  RAW_NO_PBC | cutoff=0.1575 nm | score=480 | bonds=2460 | d0/d1/d2/d3/d4+=0/60/0/1620/0
+  MINIMUM_IMAGE_XYZ | cutoff=0.1575 nm | score=480 | bonds=2460 | d0/d1/d2/d3/d4+=0/60/0/1620/0
+Auditor repair authorized: NO
+MD executed: NO
+QM executed: NO
+Required next step: CLASSIFY_CONNECTIVITY_FAILURE_AND_REPAIR_AUDITOR
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/connectivity_diagnostic/hbn_connectivity_cutoff_sweep.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/connectivity_diagnostic/hbn_opposite_element_neighbor_ranks.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/connectivity_diagnostic/hbn_connectivity_best_candidates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/connectivity_diagnostic/hbn_connectivity_diagnostic_summary.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/connectivity_diagnostic/HBN_CONNECTIVITY_AND_PERIODICITY_DIAGNOSTIC_DAY024.md

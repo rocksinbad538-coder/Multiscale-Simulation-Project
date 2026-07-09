@@ -1,0 +1,46 @@
+Day024 R2 reconstruction versus partial-attachment contingency audit completed.
+Simple full-shell reconstruction candidates: 0
+LOWER reconstruction frontier depth:B/N/d2:
+  0:30/0/0
+  1:0/30/30
+  2:30/0/0
+  3:0/30/30
+  4:30/0/0
+UPPER reconstruction frontier depth:B/N/d2:
+  0:0/30/0
+  1:30/0/30
+  2:0/30/0
+  3:30/0/30
+  4:0/30/0
+Selected annulus n/m / annulus atoms / total heavy atoms per end: 5/2/126/156
+Target heavy atoms per end / relative error: 145.133/0.074877
+LOWER attached seed / H-seed / H-outer / H-inner / total H: 15/15/15/12/42
+LOWER mapping parity/orientation/rotation/angular residual/min cycle: 0/1/3/0.060196/8
+UPPER attached seed / H-seed / H-outer / H-inner / total H: 15/15/15/12/42
+UPPER mapping parity/orientation/rotation/angular residual/min cycle: 0/1/3/0.060196/8
+Combined added heavy / H atoms: 312/84
+B/N coordination failures / H failures / nonheteropolar heavy edges: 0/0/0
+Heavy graph components / bipartite / girth / four-cycles: 1/True/6/0
+Outer radius / target / relative error: 1.074041/1.199126/0.104313
+Inner radius / target / relative error: 0.522709/0.419703/0.245426
+Decision: R2_PARTIAL_HETEROPOLAR_ANNULUS_ATTACHMENT_AND_COMPLEMENTARY_PASSIVATION_GRAPH_VALIDATED
+Failed gates: NONE
+Candidate is final chemistry: NO
+Static coordinate embedding authorized: YES
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: BUILD_AND_VALIDATE_R2_PARTIAL_ATTACHMENT_ANNULUS_STATIC_COORDINATE_EMBEDDING
+Wrote: runs/phase1A/day024_chemical_end_rim_design/07_r2_reconstruction_vs_partial_attachment_contingency/r2_parent_full_shell_reconstruction_screen.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/07_r2_reconstruction_vs_partial_attachment_contingency/r2_partial_attachment_mapping_search.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/07_r2_reconstruction_vs_partial_attachment_contingency/r2_partial_attachment_passivated_annulus_nodes.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/07_r2_reconstruction_vs_partial_attachment_contingency/r2_partial_attachment_passivated_annulus_edges.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/07_r2_reconstruction_vs_partial_attachment_contingency/r2_partial_attachment_passivated_annulus_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/07_r2_reconstruction_vs_partial_attachment_contingency/r2_reconstruction_vs_partial_attachment_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/07_r2_reconstruction_vs_partial_attachment_contingency/r2_reconstruction_vs_partial_attachment_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/07_r2_reconstruction_vs_partial_attachment_contingency/r2_partial_attachment_passivated_annulus_design.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/07_r2_reconstruction_vs_partial_attachment_contingency/r2_reconstruction_vs_partial_attachment_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/07_r2_reconstruction_vs_partial_attachment_contingency/R2_RECONSTRUCTION_VS_PARTIAL_ATTACHMENT_CONTINGENCY_DAY024.md

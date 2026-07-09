@@ -1,0 +1,35 @@
+Day024 R2 parent-rim and chemical-constraint audit completed.
+System / HBN / PYR / water / cap atoms: 68332/1680/104/66260/288
+HBN B / N / zero-charge atoms: 840/840/1680
+Geometry-derived BN bonds / expected: 2460/2460
+BN bond mean/median/min/max: 0.144973/0.145000/0.143778/0.146034 nm
+Degree-1 terminal / degree-2 / degree-3 interior / anomalous atoms: 60/0/1620/0
+Lower rim atoms / B / N / radius / axial std / dominant / purity: 30/30/0/1.199126/0.000000/B/1.000000
+Upper rim atoms / B / N / radius / axial std / dominant / purity: 30/0/30/1.199126/0.000000/N/1.000000
+Lower / upper cap-plane offsets: 0.200000/0.200000 nm
+Target aperture diameter / radius / open-area fraction: 0.839406/0.419703/0.142928
+Parent rim radius / required radial occlusion: 1.199126/0.779423 nm
+Annulus area / estimated hBN atoms / validated beads per end: 3.963910 nm^2 / 145.133 / 144
+Current parent rim chemically passivated: NO
+Current parent rim is final chemistry: NO
+Decision: R2_PARENT_RIM_AND_CHEMICAL_CONSTRAINTS_AUDITED
+Failed gates: NONE
+Static candidate-design work authorized: YES
+Explicit geometry generation authorized: NO
+Energy minimization authorized: NO
+New MD authorized: NO
+Mobile MD authorized: NO
+Multitemperature MD authorized: NO
+QM recalculation authorized: NO
+Required next step: DEFINE_AND_RANK_R2_POLAR_END_SPECIFIC_VALENCE_COMPLETION_CANDIDATES
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/r2_parent_system_tpr_dump.txt
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/r2_parent_hbn_atoms.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/r2_parent_hbn_geometry_derived_bonds.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/r2_parent_terminal_rim_atoms.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/r2_parent_terminal_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/r2_chemical_end_rim_design_constraints.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/r2_preliminary_chemical_candidate_classes.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/r2_parent_rim_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/r2_parent_rim_chemical_audit_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/r2_parent_rim_chemical_audit_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/R2_PARENT_RIM_AND_CHEMICAL_CONSTRAINTS_AUDIT_DAY024.md

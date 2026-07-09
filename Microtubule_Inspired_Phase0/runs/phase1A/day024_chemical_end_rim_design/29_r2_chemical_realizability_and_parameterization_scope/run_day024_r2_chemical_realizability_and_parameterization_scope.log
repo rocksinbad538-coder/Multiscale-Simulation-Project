@@ -1,0 +1,31 @@
+Day024 R2 chemical realizability and parameterization-scope audit completed.
+Nodes heavy/H/total and B/N: 2112/204/2316 and 1056/1056
+B-N / B-H / N-H bond counts: 3066/102/102
+Maximum B-N / B-H / N-H deviations: 0.001195394/8.881784197001e-16/8.604228440845e-16 nm
+Heavy/H valence failures: 0/0
+Nonheteropolar heavy edges / invalid H edges: 0/0
+Unique local environments / critical centers: 40/468
+Static chemical graph realizable: True
+Decision: R2_STATIC_CHEMICAL_REALIZABILITY_VALIDATED_PARAMETERIZATION_SCOPE_DEFINED
+Failed gates: NONE
+Existing force-field coverage established: NO
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Force-field and QM-reference audit authorized: YES
+Required next step: AUDIT_BN_H_FORCE_FIELD_COVERAGE_AND_DEFINE_QM_REFERENCE_FRAGMENT_SET
+Wrote: runs/phase1A/day024_chemical_end_rim_design/29_r2_chemical_realizability_and_parameterization_scope/r2_chemical_atom_inventory.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/29_r2_chemical_realizability_and_parameterization_scope/r2_chemical_bond_inventory.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/29_r2_chemical_realizability_and_parameterization_scope/r2_chemical_bond_statistics.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/29_r2_chemical_realizability_and_parameterization_scope/r2_local_chemical_environment_inventory.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/29_r2_chemical_realizability_and_parameterization_scope/r2_node_chemical_environment_assignments.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/29_r2_chemical_realizability_and_parameterization_scope/r2_parameterization_scope.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/29_r2_chemical_realizability_and_parameterization_scope/r2_parameterization_critical_centers.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/29_r2_chemical_realizability_and_parameterization_scope/r2_chemical_realizability_and_parameterization_scope_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/29_r2_chemical_realizability_and_parameterization_scope/r2_chemical_realizability_and_parameterization_scope_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/29_r2_chemical_realizability_and_parameterization_scope/r2_chemical_realizability_and_parameterization_scope.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/29_r2_chemical_realizability_and_parameterization_scope/r2_chemical_realizability_and_parameterization_scope_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/29_r2_chemical_realizability_and_parameterization_scope/R2_CHEMICAL_REALIZABILITY_AND_PARAMETERIZATION_SCOPE_DAY024.md

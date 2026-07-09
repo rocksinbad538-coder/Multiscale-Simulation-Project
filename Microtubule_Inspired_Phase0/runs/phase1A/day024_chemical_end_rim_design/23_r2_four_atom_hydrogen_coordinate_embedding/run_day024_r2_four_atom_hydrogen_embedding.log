@@ -1,0 +1,55 @@
+Generating hydrogen-orientation candidate pools...
+  H pools 25/204; latest best angle violations/heavy clashes=0/0
+  H pools 50/204; latest best angle violations/heavy clashes=0/0
+  H pools 75/204; latest best angle violations/heavy clashes=0/0
+  H pools 100/204; latest best angle violations/heavy clashes=0/0
+  H pools 125/204; latest best angle violations/heavy clashes=0/0
+  H pools 150/204; latest best angle violations/heavy clashes=0/0
+  H pools 175/204; latest best angle violations/heavy clashes=0/0
+  H pools 200/204; latest best angle violations/heavy clashes=0/0
+  H pools 204/204; latest best angle violations/heavy clashes=0/0
+Running global hydrogen-orientation coordinate descent...
+  H sweep 1/10: changed=196
+  H sweep 2/10: changed=113
+  H sweep 3/10: changed=70
+  H sweep 4/10: changed=41
+  H sweep 5/10: changed=23
+  H sweep 6/10: changed=7
+  H sweep 7/10: changed=2
+  H sweep 8/10: changed=0
+Day024 R2 four-atom hydrogen coordinate embedding completed.
+Coordinate nodes heavy/H/total: 2112/204/2316
+H lower/upper and B-H/N-H: 102/102 and 102/102
+Heavy coordinates unchanged: True
+Maximum X-H deviation: 0.000000000 nm
+Local H angle violations / local heavy clashes: 0/0
+Minimum H-heavy / H-H distances: 0.154841883/0.230044781 nm
+Global H-heavy / H-H clashes: 0/0
+Inner-H aperture proxy lower/upper/asymmetry: 1.008734672/1.031124689/0.022390018 nm
+Decision: R2_SELECTED_FOUR_ATOM_BN_BRIDGE_HYDROGEN_COORDINATES_REQUIRE_REVIEW
+Failed gates: inner_H_aperture_is_lower_upper_symmetric
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: REFINE_R2_SELECTED_FOUR_ATOM_HYDROGEN_ORIENTATIONS
+Wrote: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_full_coordinates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_hydrogen_orientations.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_hydrogen_bond_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_hydrogen_contact_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_hydrogen_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_hydrogen_embedding_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_hydrogen_embedding_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_hydrogen_embedding.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_hydrogen_embedding_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_full_embedding.xyz
+Wrote: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_full_embedding.pdb
+Wrote: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/R2_SELECTED_FOUR_ATOM_HYDROGEN_COORDINATE_EMBEDDING_DAY024.md
+Traceback (most recent call last):
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/generate_and_validate_day024_r2_selected_four_atom_hydrogen_coordinates.py", line 2438, in <module>
+    main()
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/generate_and_validate_day024_r2_selected_four_atom_hydrogen_coordinates.py", line 2432, in main
+    raise RuntimeError(
+RuntimeError: Hydrogen coordinate embedding requires review.

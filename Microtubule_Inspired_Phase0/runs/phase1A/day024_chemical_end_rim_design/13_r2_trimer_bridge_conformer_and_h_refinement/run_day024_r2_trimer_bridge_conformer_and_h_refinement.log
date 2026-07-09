@@ -1,0 +1,81 @@
+Generating bridge conformer candidate pools...
+  01/30 LOWER:BRIDGE:00: pool=96; best angle violations/clashes=0/0
+  02/30 LOWER:BRIDGE:01: pool=96; best angle violations/clashes=1/0
+  03/30 LOWER:BRIDGE:02: pool=96; best angle violations/clashes=1/0
+  04/30 LOWER:BRIDGE:03: pool=96; best angle violations/clashes=0/0
+  05/30 LOWER:BRIDGE:04: pool=96; best angle violations/clashes=0/0
+  06/30 LOWER:BRIDGE:05: pool=96; best angle violations/clashes=0/0
+  07/30 LOWER:BRIDGE:06: pool=96; best angle violations/clashes=1/0
+  08/30 LOWER:BRIDGE:07: pool=96; best angle violations/clashes=1/0
+  09/30 LOWER:BRIDGE:08: pool=96; best angle violations/clashes=0/0
+  10/30 LOWER:BRIDGE:09: pool=96; best angle violations/clashes=0/0
+  11/30 LOWER:BRIDGE:10: pool=96; best angle violations/clashes=0/0
+  12/30 LOWER:BRIDGE:11: pool=96; best angle violations/clashes=1/0
+  13/30 LOWER:BRIDGE:12: pool=96; best angle violations/clashes=1/0
+  14/30 LOWER:BRIDGE:13: pool=96; best angle violations/clashes=0/0
+  15/30 LOWER:BRIDGE:14: pool=96; best angle violations/clashes=0/0
+  16/30 UPPER:BRIDGE:00: pool=96; best angle violations/clashes=0/0
+  17/30 UPPER:BRIDGE:01: pool=96; best angle violations/clashes=0/0
+  18/30 UPPER:BRIDGE:02: pool=96; best angle violations/clashes=1/0
+  19/30 UPPER:BRIDGE:03: pool=96; best angle violations/clashes=1/0
+  20/30 UPPER:BRIDGE:04: pool=96; best angle violations/clashes=0/0
+  21/30 UPPER:BRIDGE:05: pool=96; best angle violations/clashes=0/0
+  22/30 UPPER:BRIDGE:06: pool=96; best angle violations/clashes=0/0
+  23/30 UPPER:BRIDGE:07: pool=96; best angle violations/clashes=1/0
+  24/30 UPPER:BRIDGE:08: pool=96; best angle violations/clashes=1/0
+  25/30 UPPER:BRIDGE:09: pool=96; best angle violations/clashes=0/0
+  26/30 UPPER:BRIDGE:10: pool=96; best angle violations/clashes=0/0
+  27/30 UPPER:BRIDGE:11: pool=96; best angle violations/clashes=0/0
+  28/30 UPPER:BRIDGE:12: pool=96; best angle violations/clashes=1/0
+  29/30 UPPER:BRIDGE:13: pool=96; best angle violations/clashes=1/0
+  30/30 UPPER:BRIDGE:14: pool=96; best angle violations/clashes=0/0
+Running global bridge conformer coordinate descent...
+  bridge sweep 1/12: changed=0
+Generating hydrogen-orientation candidate pools...
+  H pools 25/174; latest best angle violations/heavy clashes=0/0
+  H pools 50/174; latest best angle violations/heavy clashes=0/0
+  H pools 75/174; latest best angle violations/heavy clashes=0/0
+  H pools 100/174; latest best angle violations/heavy clashes=0/0
+  H pools 125/174; latest best angle violations/heavy clashes=0/0
+  H pools 150/174; latest best angle violations/heavy clashes=0/0
+  H pools 174/174; latest best angle violations/heavy clashes=0/0
+Running global hydrogen-orientation coordinate descent...
+  H sweep 1/10: changed=8
+  H sweep 2/10: changed=0
+Day024 R2 trimer-bridge conformer and H refinement completed.
+Coordinate nodes / bridge conformers / H orientations: 2256/30/174
+Parent / seed-annulus coordinates unchanged: True/True
+Maximum library / BN / bridge-BN / XH deviations: 0.000922/0.001195/0.000199/0.000000 nm
+Critical angles min/mean/max/RMSdev120: 57.220/117.222/154.795/12.206 deg
+Minimum nonbonded heavy-heavy / H-heavy / H-H: 0.137562/0.090154/0.081619 nm
+Clash counts heavy-heavy / H-heavy / H-H: 0/0/0
+LOWER local-angle-fail conformers / local-clash conformers / min-clearance / aperture/error / outer-radius/error: 6/0/0.137562/0.816386/0.027424/1.074038/0.104315
+UPPER local-angle-fail conformers / local-clash conformers / min-clearance / aperture/error / outer-radius/error: 6/0/0.138356/0.816386/0.027424/1.074038/0.104315
+Maximum lower-upper asymmetry: 0.000794 nm
+Decision: R2_ALTERNATING_BN_TRIMER_BRIDGE_REFINEMENT_REQUIRES_BRIDGE_TOPOLOGY_REDESIGN
+Failed gates: library_endpoint_errors_are_within_0p0005nm | critical_angle_minimum_is_at_least70deg
+Heavy geometry pass: False
+Hydrogen geometry pass: True
+Candidate is final chemistry: NO
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: EVALUATE_R2_LONGER_OR_TOPOLOGICALLY_REVISED_BRIDGE_ARCHITECTURE
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_coordinates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_conformers.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_hydrogen_orientations.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_bond_lengths.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_bond_type_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_angle_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_nonbonded_contact_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refinement_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refinement_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refinement.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refinement_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_embedding.xyz
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_embedding.pdb
+Wrote: runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/R2_TRIMER_BRIDGE_CONFORMER_AND_H_REFINEMENT_DAY024.md

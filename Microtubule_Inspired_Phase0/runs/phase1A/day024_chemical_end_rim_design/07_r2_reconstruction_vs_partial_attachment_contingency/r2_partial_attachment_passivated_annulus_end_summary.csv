@@ -1,0 +1,3 @@
+end,seed_element,annulus_attachment_element,seed_sites,covalently_attached_seed_sites,H_passivated_seed_sites,annulus_heavy_atoms,annulus_outer_boundary_atoms,annulus_inner_boundary_atoms,covalently_attached_outer_sites,H_passivated_outer_sites,H_passivated_inner_sites,total_H_passivants,total_added_heavy_atoms,mapping_seed_parity,mapping_orientation,mapping_rotation,mapping_maximum_angular_residual_turns,minimum_attachment_created_cycle_length,outer_radius_mean_nm,inner_radius_mean_nm
+LOWER,N,B,30,15,15,126,30,12,15,15,12,42,156,0,1,3,0.06019582363420861,8,1.0740412851132826,0.5227089898747374
+UPPER,B,N,30,15,15,126,30,12,15,15,12,42,156,0,1,3,0.06019582363420861,8,1.0740412851132826,0.5227089898747374

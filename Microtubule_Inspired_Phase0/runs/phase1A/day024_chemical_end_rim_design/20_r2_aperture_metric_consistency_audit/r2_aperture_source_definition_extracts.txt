@@ -1,0 +1,2147 @@
+======================================================================
+SOURCE=scripts/phase1A/build_and_validate_day024_r2_alternating_bn_trimer_bridge_static_coordinate_embedding.py
+======================================================================
+000182: MAX_CRITICAL_ANGLE = 175.0
+000183: MAX_CRITICAL_RMS = 30.0
+000184: 
+000185: MIN_HH = 0.120
+000186: MIN_HX = 0.070
+000187: MIN_HYD_HYD = 0.060
+000188: 
+000189: MAX_CENTER_OFFSET = 0.050
+000190: MAX_APERTURE_ERROR = 0.10
+000191: MAX_OUTER_RADIUS_ERROR = 0.15
+000192: MAX_END_ASYMMETRY = 0.010
+000193: 
+000194: CRITICAL_TYPES = {
+000195:     "HEXAGONAL_EDGE_COMPLETION_SEED",
+000196:     "ALTERNATING_BN_TRIMER_BRIDGE",
+000197:     "ANNULUS_OUTER_BOUNDARY",
+000198:     "ANNULUS_INNER_BOUNDARY",
+000199: }
+000200: 
+000201: 
+000202: def rel(path: Path) -> str:
+000203:     return str(
+
+001417:         ],
+001418:         dtype=float,
+001419:     )
+001420: 
+001421:     tube_center, tube_axis = determine_axis(
+001422:         parent_positions
+001423:     )
+001424: 
+001425:     target_aperture = as_float(
+001426:         parent_summary,
+001427:         "target_aperture_diameter_nm",
+001428:     )
+001429: 
+001430:     target_outer_radius = as_float(
+001431:         parent_summary,
+001432:         "parent_rim_mean_radius_nm",
+001433:     )
+001434: 
+001435:     library = conformer_library()
+001436: 
+001437:     end_geometry: dict[
+001438:         str,
+
+001419:     )
+001420: 
+001421:     tube_center, tube_axis = determine_axis(
+001422:         parent_positions
+001423:     )
+001424: 
+001425:     target_aperture = as_float(
+001426:         parent_summary,
+001427:         "target_aperture_diameter_nm",
+001428:     )
+001429: 
+001430:     target_outer_radius = as_float(
+001431:         parent_summary,
+001432:         "parent_rim_mean_radius_nm",
+001433:     )
+001434: 
+001435:     library = conformer_library()
+001436: 
+001437:     end_geometry: dict[
+001438:         str,
+001439:         dict[str, Any]
+001440:     ] = {}
+
+002954:             ]
+002955:             == end
+002956:             and row[
+002957:                 "node_type"
+002958:             ]
+002959:             == "ANNULUS_OUTER_BOUNDARY"
+002960:         ]
+002961: 
+002962:         inner_radii = []
+002963:         outer_radii = []
+002964: 
+002965:         for node_id in inner_h_ids:
+002966:             displacement = (
+002967:                 positions[
+002968:                     node_id
+002969:                 ]
+002970:                 - center
+002971:             )
+002972: 
+002973:             displacement -= (
+002974:                 np.dot(
+002975:                     displacement,
+
+002973:             displacement -= (
+002974:                 np.dot(
+002975:                     displacement,
+002976:                     outward,
+002977:                 )
+002978:                 * outward
+002979:             )
+002980: 
+002981:             inner_radii.append(
+002982:                 float(
+002983:                     np.linalg.norm(
+002984:                         displacement
+002985:                     )
+002986:                 )
+002987:             )
+002988: 
+002989:         for node_id in outer_ids:
+002990:             displacement = (
+002991:                 positions[
+002992:                     node_id
+002993:                 ]
+002994:                 - center
+
+003049:                     )
+003050:                 )
+003051:                 for row
+003052:                 in end_conformers
+003053:             ],
+003054:             dtype=float,
+003055:         )
+003056: 
+003057:         aperture = (
+003058:             2.0
+003059:             * min(
+003060:                 inner_radii
+003061:             )
+003062:         )
+003063: 
+003064:         outer_radius = float(
+003065:             np.mean(
+003066:                 outer_radii
+003067:             )
+003068:         )
+003069: 
+003070:         end_rows.append(
+
+003052:                 in end_conformers
+003053:             ],
+003054:             dtype=float,
+003055:         )
+003056: 
+003057:         aperture = (
+003058:             2.0
+003059:             * min(
+003060:                 inner_radii
+003061:             )
+003062:         )
+003063: 
+003064:         outer_radius = float(
+003065:             np.mean(
+003066:                 outer_radii
+003067:             )
+003068:         )
+003069: 
+003070:         end_rows.append(
+003071:             {
+003072:                 "end": end,
+003073:                 "bridge_paths": (
+
+003129:                     for row
+003130:                     in end_conformers
+003131:                 ),
+003132:                 "inner_H_atoms": (
+003133:                     len(
+003134:                         inner_h_ids
+003135:                     )
+003136:                 ),
+003137:                 "nuclear_aperture_diameter_nm": (
+003138:                     aperture
+003139:                 ),
+003140:                 "nuclear_aperture_relative_error": abs(
+003141:                     aperture
+003142:                     - target_aperture
+003143:                 ) / target_aperture,
+003144:                 "outer_annulus_radius_mean_nm": (
+003145:                     outer_radius
+003146:                 ),
+003147:                 "outer_annulus_radius_relative_error": abs(
+003148:                     outer_radius
+003149:                     - target_outer_radius
+003150:                 ) / target_outer_radius,
+
+003130:                     in end_conformers
+003131:                 ),
+003132:                 "inner_H_atoms": (
+003133:                     len(
+003134:                         inner_h_ids
+003135:                     )
+003136:                 ),
+003137:                 "nuclear_aperture_diameter_nm": (
+003138:                     aperture
+003139:                 ),
+003140:                 "nuclear_aperture_relative_error": abs(
+003141:                     aperture
+003142:                     - target_aperture
+003143:                 ) / target_aperture,
+003144:                 "outer_annulus_radius_mean_nm": (
+003145:                     outer_radius
+003146:                 ),
+003147:                 "outer_annulus_radius_relative_error": abs(
+003148:                     outer_radius
+003149:                     - target_outer_radius
+003150:                 ) / target_outer_radius,
+003151:             }
+
+003132:                 "inner_H_atoms": (
+003133:                     len(
+003134:                         inner_h_ids
+003135:                     )
+003136:                 ),
+003137:                 "nuclear_aperture_diameter_nm": (
+003138:                     aperture
+003139:                 ),
+003140:                 "nuclear_aperture_relative_error": abs(
+003141:                     aperture
+003142:                     - target_aperture
+003143:                 ) / target_aperture,
+003144:                 "outer_annulus_radius_mean_nm": (
+003145:                     outer_radius
+003146:                 ),
+003147:                 "outer_annulus_radius_relative_error": abs(
+003148:                     outer_radius
+003149:                     - target_outer_radius
+003150:                 ) / target_outer_radius,
+003151:             }
+003152:         )
+003153: 
+
+003133:                     len(
+003134:                         inner_h_ids
+003135:                     )
+003136:                 ),
+003137:                 "nuclear_aperture_diameter_nm": (
+003138:                     aperture
+003139:                 ),
+003140:                 "nuclear_aperture_relative_error": abs(
+003141:                     aperture
+003142:                     - target_aperture
+003143:                 ) / target_aperture,
+003144:                 "outer_annulus_radius_mean_nm": (
+003145:                     outer_radius
+003146:                 ),
+003147:                 "outer_annulus_radius_relative_error": abs(
+003148:                     outer_radius
+003149:                     - target_outer_radius
+003150:                 ) / target_outer_radius,
+003151:             }
+003152:         )
+003153: 
+003154:     write_rows(
+
+003134:                         inner_h_ids
+003135:                     )
+003136:                 ),
+003137:                 "nuclear_aperture_diameter_nm": (
+003138:                     aperture
+003139:                 ),
+003140:                 "nuclear_aperture_relative_error": abs(
+003141:                     aperture
+003142:                     - target_aperture
+003143:                 ) / target_aperture,
+003144:                 "outer_annulus_radius_mean_nm": (
+003145:                     outer_radius
+003146:                 ),
+003147:                 "outer_annulus_radius_relative_error": abs(
+003148:                     outer_radius
+003149:                     - target_outer_radius
+003150:                 ) / target_outer_radius,
+003151:             }
+003152:         )
+003153: 
+003154:     write_rows(
+003155:         END_SUMMARY_OUT,
+
+003135:                     )
+003136:                 ),
+003137:                 "nuclear_aperture_diameter_nm": (
+003138:                     aperture
+003139:                 ),
+003140:                 "nuclear_aperture_relative_error": abs(
+003141:                     aperture
+003142:                     - target_aperture
+003143:                 ) / target_aperture,
+003144:                 "outer_annulus_radius_mean_nm": (
+003145:                     outer_radius
+003146:                 ),
+003147:                 "outer_annulus_radius_relative_error": abs(
+003148:                     outer_radius
+003149:                     - target_outer_radius
+003150:                 ) / target_outer_radius,
+003151:             }
+003152:         )
+003153: 
+003154:     write_rows(
+003155:         END_SUMMARY_OUT,
+003156:         end_rows,
+
+003185:                 upper[
+003186:                     "endpoint_distance_mean_nm"
+003187:                 ]
+003188:             )
+003189:         ),
+003190:         abs(
+003191:             float(
+003192:                 lower[
+003193:                     "nuclear_aperture_diameter_nm"
+003194:                 ]
+003195:             )
+003196:             - float(
+003197:                 upper[
+003198:                     "nuclear_aperture_diameter_nm"
+003199:                 ]
+003200:             )
+003201:         ),
+003202:         abs(
+003203:             float(
+003204:                 lower[
+003205:                     "outer_annulus_radius_mean_nm"
+003206:                 ]
+
+003190:         abs(
+003191:             float(
+003192:                 lower[
+003193:                     "nuclear_aperture_diameter_nm"
+003194:                 ]
+003195:             )
+003196:             - float(
+003197:                 upper[
+003198:                     "nuclear_aperture_diameter_nm"
+003199:                 ]
+003200:             )
+003201:         ),
+003202:         abs(
+003203:             float(
+003204:                 lower[
+003205:                     "outer_annulus_radius_mean_nm"
+003206:                 ]
+003207:             )
+003208:             - float(
+003209:                 upper[
+003210:                     "outer_annulus_radius_mean_nm"
+003211:                 ]
+
+003329:                 row[
+003330:                     "annulus_center_offset_nm"
+003331:                 ]
+003332:             )
+003333:             <= MAX_CENTER_OFFSET
+003334:             for row
+003335:             in end_rows
+003336:         ),
+003337:         "aperture_errors_are_within10percent": all(
+003338:             float(
+003339:                 row[
+003340:                     "nuclear_aperture_relative_error"
+003341:                 ]
+003342:             )
+003343:             <= MAX_APERTURE_ERROR
+003344:             for row
+003345:             in end_rows
+003346:         ),
+003347:         "outer_radius_errors_are_within15percent": all(
+003348:             float(
+003349:                 row[
+003350:                     "outer_annulus_radius_relative_error"
+
+003332:             )
+003333:             <= MAX_CENTER_OFFSET
+003334:             for row
+003335:             in end_rows
+003336:         ),
+003337:         "aperture_errors_are_within10percent": all(
+003338:             float(
+003339:                 row[
+003340:                     "nuclear_aperture_relative_error"
+003341:                 ]
+003342:             )
+003343:             <= MAX_APERTURE_ERROR
+003344:             for row
+003345:             in end_rows
+003346:         ),
+003347:         "outer_radius_errors_are_within15percent": all(
+003348:             float(
+003349:                 row[
+003350:                     "outer_annulus_radius_relative_error"
+003351:                 ]
+003352:             )
+003353:             <= MAX_OUTER_RADIUS_ERROR
+
+003335:             in end_rows
+003336:         ),
+003337:         "aperture_errors_are_within10percent": all(
+003338:             float(
+003339:                 row[
+003340:                     "nuclear_aperture_relative_error"
+003341:                 ]
+003342:             )
+003343:             <= MAX_APERTURE_ERROR
+003344:             for row
+003345:             in end_rows
+003346:         ),
+003347:         "outer_radius_errors_are_within15percent": all(
+003348:             float(
+003349:                 row[
+003350:                     "outer_annulus_radius_relative_error"
+003351:                 ]
+003352:             )
+003353:             <= MAX_OUTER_RADIUS_ERROR
+003354:             for row
+003355:             in end_rows
+003356:         ),
+
+003478:                 "H_HEAVY"
+003479:             ]
+003480:         ),
+003481:         "H_H_clash_count": (
+003482:             clash_counts[
+003483:                 "H_H"
+003484:             ]
+003485:         ),
+003486:         "lower_nuclear_aperture_diameter_nm": (
+003487:             lower[
+003488:                 "nuclear_aperture_diameter_nm"
+003489:             ]
+003490:         ),
+003491:         "upper_nuclear_aperture_diameter_nm": (
+003492:             upper[
+003493:                 "nuclear_aperture_diameter_nm"
+003494:             ]
+003495:         ),
+003496:         "target_aperture_diameter_nm": (
+003497:             target_aperture
+003498:         ),
+003499:         "maximum_lower_upper_asymmetry_nm": (
+
+003480:         ),
+003481:         "H_H_clash_count": (
+003482:             clash_counts[
+003483:                 "H_H"
+003484:             ]
+003485:         ),
+003486:         "lower_nuclear_aperture_diameter_nm": (
+003487:             lower[
+003488:                 "nuclear_aperture_diameter_nm"
+003489:             ]
+003490:         ),
+003491:         "upper_nuclear_aperture_diameter_nm": (
+003492:             upper[
+003493:                 "nuclear_aperture_diameter_nm"
+003494:             ]
+003495:         ),
+003496:         "target_aperture_diameter_nm": (
+003497:             target_aperture
+003498:         ),
+003499:         "maximum_lower_upper_asymmetry_nm": (
+003500:             asymmetry
+003501:         ),
+
+003483:                 "H_H"
+003484:             ]
+003485:         ),
+003486:         "lower_nuclear_aperture_diameter_nm": (
+003487:             lower[
+003488:                 "nuclear_aperture_diameter_nm"
+003489:             ]
+003490:         ),
+003491:         "upper_nuclear_aperture_diameter_nm": (
+003492:             upper[
+003493:                 "nuclear_aperture_diameter_nm"
+003494:             ]
+003495:         ),
+003496:         "target_aperture_diameter_nm": (
+003497:             target_aperture
+003498:         ),
+003499:         "maximum_lower_upper_asymmetry_nm": (
+003500:             asymmetry
+003501:         ),
+003502:         "candidate_is_final_chemistry": False,
+003503:         "molecular_topology_generation_authorized": False,
+003504:         "formal_charge_assignment_authorized": False,
+
+003485:         ),
+003486:         "lower_nuclear_aperture_diameter_nm": (
+003487:             lower[
+003488:                 "nuclear_aperture_diameter_nm"
+003489:             ]
+003490:         ),
+003491:         "upper_nuclear_aperture_diameter_nm": (
+003492:             upper[
+003493:                 "nuclear_aperture_diameter_nm"
+003494:             ]
+003495:         ),
+003496:         "target_aperture_diameter_nm": (
+003497:             target_aperture
+003498:         ),
+003499:         "maximum_lower_upper_asymmetry_nm": (
+003500:             asymmetry
+003501:         ),
+003502:         "candidate_is_final_chemistry": False,
+003503:         "molecular_topology_generation_authorized": False,
+003504:         "formal_charge_assignment_authorized": False,
+003505:         "force_field_parameterization_authorized": False,
+003506:         "energy_minimization_authorized": False,
+
+003488:                 "nuclear_aperture_diameter_nm"
+003489:             ]
+003490:         ),
+003491:         "upper_nuclear_aperture_diameter_nm": (
+003492:             upper[
+003493:                 "nuclear_aperture_diameter_nm"
+003494:             ]
+003495:         ),
+003496:         "target_aperture_diameter_nm": (
+003497:             target_aperture
+003498:         ),
+003499:         "maximum_lower_upper_asymmetry_nm": (
+003500:             asymmetry
+003501:         ),
+003502:         "candidate_is_final_chemistry": False,
+003503:         "molecular_topology_generation_authorized": False,
+003504:         "formal_charge_assignment_authorized": False,
+003505:         "force_field_parameterization_authorized": False,
+003506:         "energy_minimization_authorized": False,
+003507:         "MD_authorized": False,
+003508:         "mobile_MD_authorized": False,
+003509:         "multitemperature_MD_authorized": False,
+
+003489:             ]
+003490:         ),
+003491:         "upper_nuclear_aperture_diameter_nm": (
+003492:             upper[
+003493:                 "nuclear_aperture_diameter_nm"
+003494:             ]
+003495:         ),
+003496:         "target_aperture_diameter_nm": (
+003497:             target_aperture
+003498:         ),
+003499:         "maximum_lower_upper_asymmetry_nm": (
+003500:             asymmetry
+003501:         ),
+003502:         "candidate_is_final_chemistry": False,
+003503:         "molecular_topology_generation_authorized": False,
+003504:         "formal_charge_assignment_authorized": False,
+003505:         "force_field_parameterization_authorized": False,
+003506:         "energy_minimization_authorized": False,
+003507:         "MD_authorized": False,
+003508:         "mobile_MD_authorized": False,
+003509:         "multitemperature_MD_authorized": False,
+003510:         "QM_authorized": False,
+
+003854: 
+003855: - Heavy-heavy minimum/clashes:
+003856:   **{minima['HEAVY_HEAVY']:.6f}/{clash_counts['HEAVY_HEAVY']}**
+003857: - H-heavy minimum/clashes:
+003858:   **{minima['H_HEAVY']:.6f}/{clash_counts['H_HEAVY']}**
+003859: - H-H minimum/clashes:
+003860:   **{minima['H_H']:.6f}/{clash_counts['H_H']}**
+003861: 
+003862: ## Aperture
+003863: 
+003864: - Target diameter:
+003865:   **{target_aperture:.6f} nm**
+003866: - Lower/upper H-defined diameter:
+003867:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+003868:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+003869: 
+003870: ## Gates
+003871: 
+003872: {gate_lines}
+003873: 
+003874: ## Decision
+003875: 
+
+003856:   **{minima['HEAVY_HEAVY']:.6f}/{clash_counts['HEAVY_HEAVY']}**
+003857: - H-heavy minimum/clashes:
+003858:   **{minima['H_HEAVY']:.6f}/{clash_counts['H_HEAVY']}**
+003859: - H-H minimum/clashes:
+003860:   **{minima['H_H']:.6f}/{clash_counts['H_H']}**
+003861: 
+003862: ## Aperture
+003863: 
+003864: - Target diameter:
+003865:   **{target_aperture:.6f} nm**
+003866: - Lower/upper H-defined diameter:
+003867:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+003868:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+003869: 
+003870: ## Gates
+003871: 
+003872: {gate_lines}
+003873: 
+003874: ## Decision
+003875: 
+003876: - Decision:
+003877:   **{decision}**
+
+003857: - H-heavy minimum/clashes:
+003858:   **{minima['H_HEAVY']:.6f}/{clash_counts['H_HEAVY']}**
+003859: - H-H minimum/clashes:
+003860:   **{minima['H_H']:.6f}/{clash_counts['H_H']}**
+003861: 
+003862: ## Aperture
+003863: 
+003864: - Target diameter:
+003865:   **{target_aperture:.6f} nm**
+003866: - Lower/upper H-defined diameter:
+003867:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+003868:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+003869: 
+003870: ## Gates
+003871: 
+003872: {gate_lines}
+003873: 
+003874: ## Decision
+003875: 
+003876: - Decision:
+003877:   **{decision}**
+003878: - Failed gates:
+
+003858:   **{minima['H_HEAVY']:.6f}/{clash_counts['H_HEAVY']}**
+003859: - H-H minimum/clashes:
+003860:   **{minima['H_H']:.6f}/{clash_counts['H_H']}**
+003861: 
+003862: ## Aperture
+003863: 
+003864: - Target diameter:
+003865:   **{target_aperture:.6f} nm**
+003866: - Lower/upper H-defined diameter:
+003867:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+003868:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+003869: 
+003870: ## Gates
+003871: 
+003872: {gate_lines}
+003873: 
+003874: ## Decision
+003875: 
+003876: - Decision:
+003877:   **{decision}**
+003878: - Failed gates:
+003879:   **{'NONE' if not failed else ' | '.join(failed)}**
+
+003859: - H-H minimum/clashes:
+003860:   **{minima['H_H']:.6f}/{clash_counts['H_H']}**
+003861: 
+003862: ## Aperture
+003863: 
+003864: - Target diameter:
+003865:   **{target_aperture:.6f} nm**
+003866: - Lower/upper H-defined diameter:
+003867:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+003868:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+003869: 
+003870: ## Gates
+003871: 
+003872: {gate_lines}
+003873: 
+003874: ## Decision
+003875: 
+003876: - Decision:
+003877:   **{decision}**
+003878: - Failed gates:
+003879:   **{'NONE' if not failed else ' | '.join(failed)}**
+003880: - Candidate is final chemistry:
+
+003860:   **{minima['H_H']:.6f}/{clash_counts['H_H']}**
+003861: 
+003862: ## Aperture
+003863: 
+003864: - Target diameter:
+003865:   **{target_aperture:.6f} nm**
+003866: - Lower/upper H-defined diameter:
+003867:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+003868:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+003869: 
+003870: ## Gates
+003871: 
+003872: {gate_lines}
+003873: 
+003874: ## Decision
+003875: 
+003876: - Decision:
+003877:   **{decision}**
+003878: - Failed gates:
+003879:   **{'NONE' if not failed else ' | '.join(failed)}**
+003880: - Candidate is final chemistry:
+003881:   **NO**
+
+003939:         f"{critical_max:.3f}/"
+003940:         f"{critical_rms:.3f} deg"
+003941:     )
+003942: 
+003943:     for row in end_rows:
+003944:         print(
+003945:             f"{row['end']} gap/center-offset/"
+003946:             "endpoint-fit-RMS/endpoint-distance-min-max/"
+003947:             "aperture/error/outer-radius/error: "
+003948:             f"{float(row['selected_gap_nm']):.6f}/"
+003949:             f"{float(row['annulus_center_offset_nm']):.6f}/"
+003950:             f"{float(row['annulus_endpoint_fit_RMS_nm']):.6f}/"
+003951:             f"{float(row['endpoint_distance_minimum_nm']):.6f}-"
+003952:             f"{float(row['endpoint_distance_maximum_nm']):.6f}/"
+003953:             f"{float(row['nuclear_aperture_diameter_nm']):.6f}/"
+003954:             f"{float(row['nuclear_aperture_relative_error']):.6f}/"
+003955:             f"{float(row['outer_annulus_radius_mean_nm']):.6f}/"
+003956:             f"{float(row['outer_annulus_radius_relative_error']):.6f}"
+003957:         )
+003958: 
+003959:         print(
+003960:             f"{row['end']} conformers with preexisting "
+
+003945:             f"{row['end']} gap/center-offset/"
+003946:             "endpoint-fit-RMS/endpoint-distance-min-max/"
+003947:             "aperture/error/outer-radius/error: "
+003948:             f"{float(row['selected_gap_nm']):.6f}/"
+003949:             f"{float(row['annulus_center_offset_nm']):.6f}/"
+003950:             f"{float(row['annulus_endpoint_fit_RMS_nm']):.6f}/"
+003951:             f"{float(row['endpoint_distance_minimum_nm']):.6f}-"
+003952:             f"{float(row['endpoint_distance_maximum_nm']):.6f}/"
+003953:             f"{float(row['nuclear_aperture_diameter_nm']):.6f}/"
+003954:             f"{float(row['nuclear_aperture_relative_error']):.6f}/"
+003955:             f"{float(row['outer_annulus_radius_mean_nm']):.6f}/"
+003956:             f"{float(row['outer_annulus_radius_relative_error']):.6f}"
+003957:         )
+003958: 
+003959:         print(
+003960:             f"{row['end']} conformers with preexisting "
+003961:             "heavy clashes / minimum selected clearance: "
+003962:             f"{row['conformers_with_preexisting_heavy_clashes']}/"
+003963:             f"{float(row['minimum_selected_conformer_clearance_nm']):.6f} nm"
+003964:         )
+003965: 
+003966:     print(
+
+003946:             "endpoint-fit-RMS/endpoint-distance-min-max/"
+003947:             "aperture/error/outer-radius/error: "
+003948:             f"{float(row['selected_gap_nm']):.6f}/"
+003949:             f"{float(row['annulus_center_offset_nm']):.6f}/"
+003950:             f"{float(row['annulus_endpoint_fit_RMS_nm']):.6f}/"
+003951:             f"{float(row['endpoint_distance_minimum_nm']):.6f}-"
+003952:             f"{float(row['endpoint_distance_maximum_nm']):.6f}/"
+003953:             f"{float(row['nuclear_aperture_diameter_nm']):.6f}/"
+003954:             f"{float(row['nuclear_aperture_relative_error']):.6f}/"
+003955:             f"{float(row['outer_annulus_radius_mean_nm']):.6f}/"
+003956:             f"{float(row['outer_annulus_radius_relative_error']):.6f}"
+003957:         )
+003958: 
+003959:         print(
+003960:             f"{row['end']} conformers with preexisting "
+003961:             "heavy clashes / minimum selected clearance: "
+003962:             f"{row['conformers_with_preexisting_heavy_clashes']}/"
+003963:             f"{float(row['minimum_selected_conformer_clearance_nm']):.6f} nm"
+003964:         )
+003965: 
+003966:     print(
+003967:         "Minimum nonbonded heavy-heavy / H-heavy / H-H: "
+
+======================================================================
+SOURCE=scripts/phase1A/refine_day024_r2_trimer_bridge_conformers_and_h_orientations.py
+======================================================================
+000204: MIN_NONBONDED_HEAVY_HEAVY_NM = 0.120
+000205: MIN_NONBONDED_H_HEAVY_NM = 0.070
+000206: MIN_NONBONDED_H_H_NM = 0.060
+000207: 
+000208: SOFT_HEAVY_CLEARANCE_NM = 0.140
+000209: SOFT_H_HEAVY_CLEARANCE_NM = 0.090
+000210: SOFT_H_H_CLEARANCE_NM = 0.080
+000211: 
+000212: MAX_APERTURE_ERROR = 0.10
+000213: MAX_OUTER_RADIUS_ERROR = 0.15
+000214: MAX_END_ASYMMETRY_NM = 0.010
+000215: 
+000216: CRITICAL_NODE_TYPES = {
+000217:     "HEXAGONAL_EDGE_COMPLETION_SEED",
+000218:     "ALTERNATING_BN_TRIMER_BRIDGE",
+000219:     "ANNULUS_OUTER_BOUNDARY",
+000220:     "ANNULUS_INNER_BOUNDARY",
+000221: }
+000222: 
+000223: 
+000224: def relative(path: Path) -> str:
+000225:     return str(
+
+002025:         ],
+002026:         dtype=float,
+002027:     )
+002028: 
+002029:     tube_center, tube_axis = determine_axis(
+002030:         parent_positions
+002031:     )
+002032: 
+002033:     target_aperture_diameter_nm = parse_float(
+002034:         parent_summary,
+002035:         "target_aperture_diameter_nm",
+002036:     )
+002037: 
+002038:     target_outer_radius_nm = parse_float(
+002039:         parent_summary,
+002040:         "parent_rim_mean_radius_nm",
+002041:     )
+002042: 
+002043:     library = build_conformer_library()
+002044: 
+002045:     bridge_paths = sorted(
+002046:         bridge_path_rows,
+
+002027:     )
+002028: 
+002029:     tube_center, tube_axis = determine_axis(
+002030:         parent_positions
+002031:     )
+002032: 
+002033:     target_aperture_diameter_nm = parse_float(
+002034:         parent_summary,
+002035:         "target_aperture_diameter_nm",
+002036:     )
+002037: 
+002038:     target_outer_radius_nm = parse_float(
+002039:         parent_summary,
+002040:         "parent_rim_mean_radius_nm",
+002041:     )
+002042: 
+002043:     library = build_conformer_library()
+002044: 
+002045:     bridge_paths = sorted(
+002046:         bridge_path_rows,
+002047:         key=lambda row: (
+002048:             row[
+
+003724:                 == end
+003725:                 and row[
+003726:                     "node_type"
+003727:                 ]
+003728:                 == "ANNULUS_OUTER_BOUNDARY"
+003729:             )
+003730:         ]
+003731: 
+003732:         inner_radii = []
+003733: 
+003734:         for node_id in inner_h_ids:
+003735:             displacement = (
+003736:                 positions[
+003737:                     node_id
+003738:                 ]
+003739:                 - annulus_center
+003740:             )
+003741: 
+003742:             displacement -= (
+003743:                 np.dot(
+003744:                     displacement,
+003745:                     outward,
+
+003742:             displacement -= (
+003743:                 np.dot(
+003744:                     displacement,
+003745:                     outward,
+003746:                 )
+003747:                 * outward
+003748:             )
+003749: 
+003750:             inner_radii.append(
+003751:                 float(
+003752:                     np.linalg.norm(
+003753:                         displacement
+003754:                     )
+003755:                 )
+003756:             )
+003757: 
+003758:         outer_radii = []
+003759: 
+003760:         for node_id in outer_annulus_ids:
+003761:             displacement = (
+003762:                 positions[
+003763:                     node_id
+
+003785:             row
+003786:             for row in refined_conformer_rows
+003787:             if row[
+003788:                 "end"
+003789:             ]
+003790:             == end
+003791:         ]
+003792: 
+003793:         nuclear_aperture = (
+003794:             2.0
+003795:             * min(
+003796:                 inner_radii
+003797:             )
+003798:         )
+003799: 
+003800:         outer_radius = float(
+003801:             np.mean(
+003802:                 outer_radii
+003803:             )
+003804:         )
+003805: 
+003806:         end_rows.append(
+
+003788:                 "end"
+003789:             ]
+003790:             == end
+003791:         ]
+003792: 
+003793:         nuclear_aperture = (
+003794:             2.0
+003795:             * min(
+003796:                 inner_radii
+003797:             )
+003798:         )
+003799: 
+003800:         outer_radius = float(
+003801:             np.mean(
+003802:                 outer_radii
+003803:             )
+003804:         )
+003805: 
+003806:         end_rows.append(
+003807:             {
+003808:                 "end": end,
+003809:                 "bridge_conformers": (
+
+003840:                 "maximum_library_distance_error_nm": max(
+003841:                     float(
+003842:                         row[
+003843:                             "library_distance_error_nm"
+003844:                         ]
+003845:                     )
+003846:                     for row in end_conformer_rows
+003847:                 ),
+003848:                 "nuclear_aperture_diameter_nm": (
+003849:                     nuclear_aperture
+003850:                 ),
+003851:                 "nuclear_aperture_relative_error": abs(
+003852:                     nuclear_aperture
+003853:                     - target_aperture_diameter_nm
+003854:                 ) / target_aperture_diameter_nm,
+003855:                 "outer_annulus_radius_mean_nm": (
+003856:                     outer_radius
+003857:                 ),
+003858:                 "outer_annulus_radius_relative_error": abs(
+003859:                     outer_radius
+003860:                     - target_outer_radius_nm
+003861:                 ) / target_outer_radius_nm,
+
+003841:                     float(
+003842:                         row[
+003843:                             "library_distance_error_nm"
+003844:                         ]
+003845:                     )
+003846:                     for row in end_conformer_rows
+003847:                 ),
+003848:                 "nuclear_aperture_diameter_nm": (
+003849:                     nuclear_aperture
+003850:                 ),
+003851:                 "nuclear_aperture_relative_error": abs(
+003852:                     nuclear_aperture
+003853:                     - target_aperture_diameter_nm
+003854:                 ) / target_aperture_diameter_nm,
+003855:                 "outer_annulus_radius_mean_nm": (
+003856:                     outer_radius
+003857:                 ),
+003858:                 "outer_annulus_radius_relative_error": abs(
+003859:                     outer_radius
+003860:                     - target_outer_radius_nm
+003861:                 ) / target_outer_radius_nm,
+003862:             }
+
+003843:                             "library_distance_error_nm"
+003844:                         ]
+003845:                     )
+003846:                     for row in end_conformer_rows
+003847:                 ),
+003848:                 "nuclear_aperture_diameter_nm": (
+003849:                     nuclear_aperture
+003850:                 ),
+003851:                 "nuclear_aperture_relative_error": abs(
+003852:                     nuclear_aperture
+003853:                     - target_aperture_diameter_nm
+003854:                 ) / target_aperture_diameter_nm,
+003855:                 "outer_annulus_radius_mean_nm": (
+003856:                     outer_radius
+003857:                 ),
+003858:                 "outer_annulus_radius_relative_error": abs(
+003859:                     outer_radius
+003860:                     - target_outer_radius_nm
+003861:                 ) / target_outer_radius_nm,
+003862:             }
+003863:         )
+003864: 
+
+003844:                         ]
+003845:                     )
+003846:                     for row in end_conformer_rows
+003847:                 ),
+003848:                 "nuclear_aperture_diameter_nm": (
+003849:                     nuclear_aperture
+003850:                 ),
+003851:                 "nuclear_aperture_relative_error": abs(
+003852:                     nuclear_aperture
+003853:                     - target_aperture_diameter_nm
+003854:                 ) / target_aperture_diameter_nm,
+003855:                 "outer_annulus_radius_mean_nm": (
+003856:                     outer_radius
+003857:                 ),
+003858:                 "outer_annulus_radius_relative_error": abs(
+003859:                     outer_radius
+003860:                     - target_outer_radius_nm
+003861:                 ) / target_outer_radius_nm,
+003862:             }
+003863:         )
+003864: 
+003865:     write_rows(
+
+003845:                     )
+003846:                     for row in end_conformer_rows
+003847:                 ),
+003848:                 "nuclear_aperture_diameter_nm": (
+003849:                     nuclear_aperture
+003850:                 ),
+003851:                 "nuclear_aperture_relative_error": abs(
+003852:                     nuclear_aperture
+003853:                     - target_aperture_diameter_nm
+003854:                 ) / target_aperture_diameter_nm,
+003855:                 "outer_annulus_radius_mean_nm": (
+003856:                     outer_radius
+003857:                 ),
+003858:                 "outer_annulus_radius_relative_error": abs(
+003859:                     outer_radius
+003860:                     - target_outer_radius_nm
+003861:                 ) / target_outer_radius_nm,
+003862:             }
+003863:         )
+003864: 
+003865:     write_rows(
+003866:         END_SUMMARY,
+
+003846:                     for row in end_conformer_rows
+003847:                 ),
+003848:                 "nuclear_aperture_diameter_nm": (
+003849:                     nuclear_aperture
+003850:                 ),
+003851:                 "nuclear_aperture_relative_error": abs(
+003852:                     nuclear_aperture
+003853:                     - target_aperture_diameter_nm
+003854:                 ) / target_aperture_diameter_nm,
+003855:                 "outer_annulus_radius_mean_nm": (
+003856:                     outer_radius
+003857:                 ),
+003858:                 "outer_annulus_radius_relative_error": abs(
+003859:                     outer_radius
+003860:                     - target_outer_radius_nm
+003861:                 ) / target_outer_radius_nm,
+003862:             }
+003863:         )
+003864: 
+003865:     write_rows(
+003866:         END_SUMMARY,
+003867:         end_rows,
+
+003884:         ]
+003885:         == "UPPER"
+003886:     )
+003887: 
+003888:     end_asymmetry = max(
+003889:         abs(
+003890:             float(
+003891:                 lower[
+003892:                     "nuclear_aperture_diameter_nm"
+003893:                 ]
+003894:             )
+003895:             - float(
+003896:                 upper[
+003897:                     "nuclear_aperture_diameter_nm"
+003898:                 ]
+003899:             )
+003900:         ),
+003901:         abs(
+003902:             float(
+003903:                 lower[
+003904:                     "outer_annulus_radius_mean_nm"
+003905:                 ]
+
+003889:         abs(
+003890:             float(
+003891:                 lower[
+003892:                     "nuclear_aperture_diameter_nm"
+003893:                 ]
+003894:             )
+003895:             - float(
+003896:                 upper[
+003897:                     "nuclear_aperture_diameter_nm"
+003898:                 ]
+003899:             )
+003900:         ),
+003901:         abs(
+003902:             float(
+003903:                 lower[
+003904:                     "outer_annulus_radius_mean_nm"
+003905:                 ]
+003906:             )
+003907:             - float(
+003908:                 upper[
+003909:                     "outer_annulus_radius_mean_nm"
+003910:                 ]
+
+004085:             == 0
+004086:         ),
+004087:         "no_nonbonded_H_H_clashes": (
+004088:             clash_counts[
+004089:                 "H_H"
+004090:             ]
+004091:             == 0
+004092:         ),
+004093:         "aperture_errors_are_within10percent": all(
+004094:             float(
+004095:                 row[
+004096:                     "nuclear_aperture_relative_error"
+004097:                 ]
+004098:             )
+004099:             <= MAX_APERTURE_ERROR
+004100:             for row in end_rows
+004101:         ),
+004102:         "outer_radius_errors_are_within15percent": all(
+004103:             float(
+004104:                 row[
+004105:                     "outer_annulus_radius_relative_error"
+004106:                 ]
+
+004088:             clash_counts[
+004089:                 "H_H"
+004090:             ]
+004091:             == 0
+004092:         ),
+004093:         "aperture_errors_are_within10percent": all(
+004094:             float(
+004095:                 row[
+004096:                     "nuclear_aperture_relative_error"
+004097:                 ]
+004098:             )
+004099:             <= MAX_APERTURE_ERROR
+004100:             for row in end_rows
+004101:         ),
+004102:         "outer_radius_errors_are_within15percent": all(
+004103:             float(
+004104:                 row[
+004105:                     "outer_annulus_radius_relative_error"
+004106:                 ]
+004107:             )
+004108:             <= MAX_OUTER_RADIUS_ERROR
+004109:             for row in end_rows
+
+004091:             == 0
+004092:         ),
+004093:         "aperture_errors_are_within10percent": all(
+004094:             float(
+004095:                 row[
+004096:                     "nuclear_aperture_relative_error"
+004097:                 ]
+004098:             )
+004099:             <= MAX_APERTURE_ERROR
+004100:             for row in end_rows
+004101:         ),
+004102:         "outer_radius_errors_are_within15percent": all(
+004103:             float(
+004104:                 row[
+004105:                     "outer_annulus_radius_relative_error"
+004106:                 ]
+004107:             )
+004108:             <= MAX_OUTER_RADIUS_ERROR
+004109:             for row in end_rows
+004110:         ),
+004111:         "lower_upper_asymmetry_is_within0p010nm": (
+004112:             end_asymmetry
+
+004229:                 "H_HEAVY"
+004230:             ]
+004231:         ),
+004232:         "H_H_clash_count": (
+004233:             clash_counts[
+004234:                 "H_H"
+004235:             ]
+004236:         ),
+004237:         "lower_nuclear_aperture_diameter_nm": (
+004238:             lower[
+004239:                 "nuclear_aperture_diameter_nm"
+004240:             ]
+004241:         ),
+004242:         "upper_nuclear_aperture_diameter_nm": (
+004243:             upper[
+004244:                 "nuclear_aperture_diameter_nm"
+004245:             ]
+004246:         ),
+004247:         "target_aperture_diameter_nm": (
+004248:             target_aperture_diameter_nm
+004249:         ),
+004250:         "maximum_lower_upper_asymmetry_nm": (
+
+004231:         ),
+004232:         "H_H_clash_count": (
+004233:             clash_counts[
+004234:                 "H_H"
+004235:             ]
+004236:         ),
+004237:         "lower_nuclear_aperture_diameter_nm": (
+004238:             lower[
+004239:                 "nuclear_aperture_diameter_nm"
+004240:             ]
+004241:         ),
+004242:         "upper_nuclear_aperture_diameter_nm": (
+004243:             upper[
+004244:                 "nuclear_aperture_diameter_nm"
+004245:             ]
+004246:         ),
+004247:         "target_aperture_diameter_nm": (
+004248:             target_aperture_diameter_nm
+004249:         ),
+004250:         "maximum_lower_upper_asymmetry_nm": (
+004251:             end_asymmetry
+004252:         ),
+
+004234:                 "H_H"
+004235:             ]
+004236:         ),
+004237:         "lower_nuclear_aperture_diameter_nm": (
+004238:             lower[
+004239:                 "nuclear_aperture_diameter_nm"
+004240:             ]
+004241:         ),
+004242:         "upper_nuclear_aperture_diameter_nm": (
+004243:             upper[
+004244:                 "nuclear_aperture_diameter_nm"
+004245:             ]
+004246:         ),
+004247:         "target_aperture_diameter_nm": (
+004248:             target_aperture_diameter_nm
+004249:         ),
+004250:         "maximum_lower_upper_asymmetry_nm": (
+004251:             end_asymmetry
+004252:         ),
+004253:         "heavy_geometry_pass": (
+004254:             heavy_geometry_pass
+004255:         ),
+
+004236:         ),
+004237:         "lower_nuclear_aperture_diameter_nm": (
+004238:             lower[
+004239:                 "nuclear_aperture_diameter_nm"
+004240:             ]
+004241:         ),
+004242:         "upper_nuclear_aperture_diameter_nm": (
+004243:             upper[
+004244:                 "nuclear_aperture_diameter_nm"
+004245:             ]
+004246:         ),
+004247:         "target_aperture_diameter_nm": (
+004248:             target_aperture_diameter_nm
+004249:         ),
+004250:         "maximum_lower_upper_asymmetry_nm": (
+004251:             end_asymmetry
+004252:         ),
+004253:         "heavy_geometry_pass": (
+004254:             heavy_geometry_pass
+004255:         ),
+004256:         "hydrogen_geometry_pass": (
+004257:             hydrogen_geometry_pass
+
+004239:                 "nuclear_aperture_diameter_nm"
+004240:             ]
+004241:         ),
+004242:         "upper_nuclear_aperture_diameter_nm": (
+004243:             upper[
+004244:                 "nuclear_aperture_diameter_nm"
+004245:             ]
+004246:         ),
+004247:         "target_aperture_diameter_nm": (
+004248:             target_aperture_diameter_nm
+004249:         ),
+004250:         "maximum_lower_upper_asymmetry_nm": (
+004251:             end_asymmetry
+004252:         ),
+004253:         "heavy_geometry_pass": (
+004254:             heavy_geometry_pass
+004255:         ),
+004256:         "hydrogen_geometry_pass": (
+004257:             hydrogen_geometry_pass
+004258:         ),
+004259:         "candidate_is_final_chemistry": False,
+004260:         "molecular_topology_generation_authorized": False,
+
+004240:             ]
+004241:         ),
+004242:         "upper_nuclear_aperture_diameter_nm": (
+004243:             upper[
+004244:                 "nuclear_aperture_diameter_nm"
+004245:             ]
+004246:         ),
+004247:         "target_aperture_diameter_nm": (
+004248:             target_aperture_diameter_nm
+004249:         ),
+004250:         "maximum_lower_upper_asymmetry_nm": (
+004251:             end_asymmetry
+004252:         ),
+004253:         "heavy_geometry_pass": (
+004254:             heavy_geometry_pass
+004255:         ),
+004256:         "hydrogen_geometry_pass": (
+004257:             hydrogen_geometry_pass
+004258:         ),
+004259:         "candidate_is_final_chemistry": False,
+004260:         "molecular_topology_generation_authorized": False,
+004261:         "formal_charge_assignment_authorized": False,
+
+004633:   {clash_counts['HEAVY_HEAVY']}**
+004634: - H-heavy minimum/clashes:
+004635:   **{minimum_distances['H_HEAVY']:.6f}/
+004636:   {clash_counts['H_HEAVY']}**
+004637: - H-H minimum/clashes:
+004638:   **{minimum_distances['H_H']:.6f}/
+004639:   {clash_counts['H_H']}**
+004640: 
+004641: ## Aperture
+004642: 
+004643: - Target diameter:
+004644:   **{target_aperture_diameter_nm:.6f} nm**
+004645: - Lower/upper refined diameter:
+004646:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+004647:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+004648: 
+004649: ## Gates
+004650: 
+004651: {gate_lines}
+004652: 
+004653: ## Decision
+004654: 
+
+004635:   **{minimum_distances['H_HEAVY']:.6f}/
+004636:   {clash_counts['H_HEAVY']}**
+004637: - H-H minimum/clashes:
+004638:   **{minimum_distances['H_H']:.6f}/
+004639:   {clash_counts['H_H']}**
+004640: 
+004641: ## Aperture
+004642: 
+004643: - Target diameter:
+004644:   **{target_aperture_diameter_nm:.6f} nm**
+004645: - Lower/upper refined diameter:
+004646:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+004647:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+004648: 
+004649: ## Gates
+004650: 
+004651: {gate_lines}
+004652: 
+004653: ## Decision
+004654: 
+004655: - Decision:
+004656:   **{decision}**
+
+004636:   {clash_counts['H_HEAVY']}**
+004637: - H-H minimum/clashes:
+004638:   **{minimum_distances['H_H']:.6f}/
+004639:   {clash_counts['H_H']}**
+004640: 
+004641: ## Aperture
+004642: 
+004643: - Target diameter:
+004644:   **{target_aperture_diameter_nm:.6f} nm**
+004645: - Lower/upper refined diameter:
+004646:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+004647:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+004648: 
+004649: ## Gates
+004650: 
+004651: {gate_lines}
+004652: 
+004653: ## Decision
+004654: 
+004655: - Decision:
+004656:   **{decision}**
+004657: - Failed gates:
+
+004637: - H-H minimum/clashes:
+004638:   **{minimum_distances['H_H']:.6f}/
+004639:   {clash_counts['H_H']}**
+004640: 
+004641: ## Aperture
+004642: 
+004643: - Target diameter:
+004644:   **{target_aperture_diameter_nm:.6f} nm**
+004645: - Lower/upper refined diameter:
+004646:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+004647:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+004648: 
+004649: ## Gates
+004650: 
+004651: {gate_lines}
+004652: 
+004653: ## Decision
+004654: 
+004655: - Decision:
+004656:   **{decision}**
+004657: - Failed gates:
+004658:   **{'NONE' if not failed_gates else ' | '.join(failed_gates)}**
+
+004638:   **{minimum_distances['H_H']:.6f}/
+004639:   {clash_counts['H_H']}**
+004640: 
+004641: ## Aperture
+004642: 
+004643: - Target diameter:
+004644:   **{target_aperture_diameter_nm:.6f} nm**
+004645: - Lower/upper refined diameter:
+004646:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+004647:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+004648: 
+004649: ## Gates
+004650: 
+004651: {gate_lines}
+004652: 
+004653: ## Decision
+004654: 
+004655: - Decision:
+004656:   **{decision}**
+004657: - Failed gates:
+004658:   **{'NONE' if not failed_gates else ' | '.join(failed_gates)}**
+004659: - Heavy geometry pass:
+
+004639:   {clash_counts['H_H']}**
+004640: 
+004641: ## Aperture
+004642: 
+004643: - Target diameter:
+004644:   **{target_aperture_diameter_nm:.6f} nm**
+004645: - Lower/upper refined diameter:
+004646:   **{float(lower['nuclear_aperture_diameter_nm']):.6f}/
+004647:   {float(upper['nuclear_aperture_diameter_nm']):.6f} nm**
+004648: 
+004649: ## Gates
+004650: 
+004651: {gate_lines}
+004652: 
+004653: ## Decision
+004654: 
+004655: - Decision:
+004656:   **{decision}**
+004657: - Failed gates:
+004658:   **{'NONE' if not failed_gates else ' | '.join(failed_gates)}**
+004659: - Heavy geometry pass:
+004660:   **{heavy_geometry_pass}**
+
+004723:         f"{clash_counts['H_HEAVY']}/"
+004724:         f"{clash_counts['H_H']}"
+004725:     )
+004726: 
+004727:     for row in end_rows:
+004728:         print(
+004729:             f"{row['end']} local-angle-fail conformers / "
+004730:             "local-clash conformers / min-clearance / "
+004731:             "aperture/error / outer-radius/error: "
+004732:             f"{row['conformers_with_local_angle_violations']}/"
+004733:             f"{row['conformers_with_local_heavy_clashes']}/"
+004734:             f"{float(row['minimum_local_bridge_clearance_nm']):.6f}/"
+004735:             f"{float(row['nuclear_aperture_diameter_nm']):.6f}/"
+004736:             f"{float(row['nuclear_aperture_relative_error']):.6f}/"
+004737:             f"{float(row['outer_annulus_radius_mean_nm']):.6f}/"
+004738:             f"{float(row['outer_annulus_radius_relative_error']):.6f}"
+004739:         )
+004740: 
+004741:     print(
+004742:         "Maximum lower-upper asymmetry: "
+004743:         f"{end_asymmetry:.6f} nm"
+004744:     )
+
+004727:     for row in end_rows:
+004728:         print(
+004729:             f"{row['end']} local-angle-fail conformers / "
+004730:             "local-clash conformers / min-clearance / "
+004731:             "aperture/error / outer-radius/error: "
+004732:             f"{row['conformers_with_local_angle_violations']}/"
+004733:             f"{row['conformers_with_local_heavy_clashes']}/"
+004734:             f"{float(row['minimum_local_bridge_clearance_nm']):.6f}/"
+004735:             f"{float(row['nuclear_aperture_diameter_nm']):.6f}/"
+004736:             f"{float(row['nuclear_aperture_relative_error']):.6f}/"
+004737:             f"{float(row['outer_annulus_radius_mean_nm']):.6f}/"
+004738:             f"{float(row['outer_annulus_radius_relative_error']):.6f}"
+004739:         )
+004740: 
+004741:     print(
+004742:         "Maximum lower-upper asymmetry: "
+004743:         f"{end_asymmetry:.6f} nm"
+004744:     )
+004745: 
+004746:     print(
+004747:         f"Decision: {decision}"
+004748:     )
+
+004728:         print(
+004729:             f"{row['end']} local-angle-fail conformers / "
+004730:             "local-clash conformers / min-clearance / "
+004731:             "aperture/error / outer-radius/error: "
+004732:             f"{row['conformers_with_local_angle_violations']}/"
+004733:             f"{row['conformers_with_local_heavy_clashes']}/"
+004734:             f"{float(row['minimum_local_bridge_clearance_nm']):.6f}/"
+004735:             f"{float(row['nuclear_aperture_diameter_nm']):.6f}/"
+004736:             f"{float(row['nuclear_aperture_relative_error']):.6f}/"
+004737:             f"{float(row['outer_annulus_radius_mean_nm']):.6f}/"
+004738:             f"{float(row['outer_annulus_radius_relative_error']):.6f}"
+004739:         )
+004740: 
+004741:     print(
+004742:         "Maximum lower-upper asymmetry: "
+004743:         f"{end_asymmetry:.6f} nm"
+004744:     )
+004745: 
+004746:     print(
+004747:         f"Decision: {decision}"
+004748:     )
+004749: 
+
+======================================================================
+SOURCE=scripts/phase1A/build_and_validate_day024_r2_selected_four_atom_heavy_coordinate_embedding.py
+======================================================================
+000140: MAX_BN_DEVIATION_NM = 0.003
+000141: 
+000142: MIN_ANGLE_DEG = 70.0
+000143: MAX_ANGLE_DEG = 175.0
+000144: MAX_ANGLE_RMS_DEVIATION_DEG = 30.0
+000145: 
+000146: MIN_NONBONDED_HEAVY_DISTANCE_NM = 0.120
+000147: 
+000148: TARGET_APERTURE_DIAMETER_NM = 0.839406
+000149: TARGET_OUTER_RADIUS_NM = 1.199126
+000150: 
+000151: MAX_APERTURE_RELATIVE_ERROR = 0.10
+000152: MAX_OUTER_RADIUS_RELATIVE_ERROR = 0.15
+000153: MAX_END_ASYMMETRY_NM = 0.010
+000154: 
+000155: CRITICAL_NODE_TYPES = {
+000156:     "HEXAGONAL_EDGE_COMPLETION_SEED",
+000157:     "ALTERNATING_BN_FOUR_ATOM_BRIDGE",
+000158:     "ANNULUS_OUTER_BOUNDARY",
+000159:     "ANNULUS_INNER_BOUNDARY",
+000160: }
+000161: 
+
+000143: MAX_ANGLE_DEG = 175.0
+000144: MAX_ANGLE_RMS_DEVIATION_DEG = 30.0
+000145: 
+000146: MIN_NONBONDED_HEAVY_DISTANCE_NM = 0.120
+000147: 
+000148: TARGET_APERTURE_DIAMETER_NM = 0.839406
+000149: TARGET_OUTER_RADIUS_NM = 1.199126
+000150: 
+000151: MAX_APERTURE_RELATIVE_ERROR = 0.10
+000152: MAX_OUTER_RADIUS_RELATIVE_ERROR = 0.15
+000153: MAX_END_ASYMMETRY_NM = 0.010
+000154: 
+000155: CRITICAL_NODE_TYPES = {
+000156:     "HEXAGONAL_EDGE_COMPLETION_SEED",
+000157:     "ALTERNATING_BN_FOUR_ATOM_BRIDGE",
+000158:     "ANNULUS_OUTER_BOUNDARY",
+000159:     "ANNULUS_INNER_BOUNDARY",
+000160: }
+000161: 
+000162: 
+000163: def require_file(path: Path) -> None:
+000164:     if not path.is_file() or path.stat().st_size == 0:
+
+000933:                     coordinates[node_id]
+000934:                     for node_id in annulus_ids
+000935:                 ],
+000936:                 dtype=float,
+000937:             ),
+000938:             axis=0,
+000939:         )
+000940: 
+000941:         inner_radii = [
+000942:             radial_distance(
+000943:                 coordinates[node_id],
+000944:                 annulus_center,
+000945:                 tube_axis,
+000946:             )
+000947:             for node_id in inner_ids
+000948:         ]
+000949: 
+000950:         outer_radii = [
+000951:             radial_distance(
+000952:                 coordinates[node_id],
+000953:                 annulus_center,
+000954:                 tube_axis,
+
+000951:             radial_distance(
+000952:                 coordinates[node_id],
+000953:                 annulus_center,
+000954:                 tube_axis,
+000955:             )
+000956:             for node_id in outer_ids
+000957:         ]
+000958: 
+000959:         nuclear_aperture = (
+000960:             2.0
+000961:             * min(inner_radii)
+000962:         )
+000963: 
+000964:         mean_outer_radius = float(
+000965:             np.mean(outer_radii)
+000966:         )
+000967: 
+000968:         bridge_ids_end = [
+000969:             node_id
+000970:             for node_id in bridge_nodes
+000971:             if heavy_nodes[node_id]["end"] == end
+000972:         ]
+
+000953:                 annulus_center,
+000954:                 tube_axis,
+000955:             )
+000956:             for node_id in outer_ids
+000957:         ]
+000958: 
+000959:         nuclear_aperture = (
+000960:             2.0
+000961:             * min(inner_radii)
+000962:         )
+000963: 
+000964:         mean_outer_radius = float(
+000965:             np.mean(outer_radii)
+000966:         )
+000967: 
+000968:         bridge_ids_end = [
+000969:             node_id
+000970:             for node_id in bridge_nodes
+000971:             if heavy_nodes[node_id]["end"] == end
+000972:         ]
+000973: 
+000974:         end_rows.append(
+
+000972:         ]
+000973: 
+000974:         end_rows.append(
+000975:             {
+000976:                 "end": end,
+000977:                 "bridge_atoms": len(
+000978:                     bridge_ids_end
+000979:                 ),
+000980:                 "nuclear_aperture_diameter_nm": (
+000981:                     nuclear_aperture
+000982:                 ),
+000983:                 "nuclear_aperture_relative_error": abs(
+000984:                     nuclear_aperture
+000985:                     - TARGET_APERTURE_DIAMETER_NM
+000986:                 ) / TARGET_APERTURE_DIAMETER_NM,
+000987:                 "outer_annulus_radius_mean_nm": (
+000988:                     mean_outer_radius
+000989:                 ),
+000990:                 "outer_annulus_radius_relative_error": abs(
+000991:                     mean_outer_radius
+000992:                     - TARGET_OUTER_RADIUS_NM
+000993:                 ) / TARGET_OUTER_RADIUS_NM,
+
+000973: 
+000974:         end_rows.append(
+000975:             {
+000976:                 "end": end,
+000977:                 "bridge_atoms": len(
+000978:                     bridge_ids_end
+000979:                 ),
+000980:                 "nuclear_aperture_diameter_nm": (
+000981:                     nuclear_aperture
+000982:                 ),
+000983:                 "nuclear_aperture_relative_error": abs(
+000984:                     nuclear_aperture
+000985:                     - TARGET_APERTURE_DIAMETER_NM
+000986:                 ) / TARGET_APERTURE_DIAMETER_NM,
+000987:                 "outer_annulus_radius_mean_nm": (
+000988:                     mean_outer_radius
+000989:                 ),
+000990:                 "outer_annulus_radius_relative_error": abs(
+000991:                     mean_outer_radius
+000992:                     - TARGET_OUTER_RADIUS_NM
+000993:                 ) / TARGET_OUTER_RADIUS_NM,
+000994:             }
+
+000975:             {
+000976:                 "end": end,
+000977:                 "bridge_atoms": len(
+000978:                     bridge_ids_end
+000979:                 ),
+000980:                 "nuclear_aperture_diameter_nm": (
+000981:                     nuclear_aperture
+000982:                 ),
+000983:                 "nuclear_aperture_relative_error": abs(
+000984:                     nuclear_aperture
+000985:                     - TARGET_APERTURE_DIAMETER_NM
+000986:                 ) / TARGET_APERTURE_DIAMETER_NM,
+000987:                 "outer_annulus_radius_mean_nm": (
+000988:                     mean_outer_radius
+000989:                 ),
+000990:                 "outer_annulus_radius_relative_error": abs(
+000991:                     mean_outer_radius
+000992:                     - TARGET_OUTER_RADIUS_NM
+000993:                 ) / TARGET_OUTER_RADIUS_NM,
+000994:             }
+000995:         )
+000996: 
+
+000976:                 "end": end,
+000977:                 "bridge_atoms": len(
+000978:                     bridge_ids_end
+000979:                 ),
+000980:                 "nuclear_aperture_diameter_nm": (
+000981:                     nuclear_aperture
+000982:                 ),
+000983:                 "nuclear_aperture_relative_error": abs(
+000984:                     nuclear_aperture
+000985:                     - TARGET_APERTURE_DIAMETER_NM
+000986:                 ) / TARGET_APERTURE_DIAMETER_NM,
+000987:                 "outer_annulus_radius_mean_nm": (
+000988:                     mean_outer_radius
+000989:                 ),
+000990:                 "outer_annulus_radius_relative_error": abs(
+000991:                     mean_outer_radius
+000992:                     - TARGET_OUTER_RADIUS_NM
+000993:                 ) / TARGET_OUTER_RADIUS_NM,
+000994:             }
+000995:         )
+000996: 
+000997:     write_rows(
+
+000977:                 "bridge_atoms": len(
+000978:                     bridge_ids_end
+000979:                 ),
+000980:                 "nuclear_aperture_diameter_nm": (
+000981:                     nuclear_aperture
+000982:                 ),
+000983:                 "nuclear_aperture_relative_error": abs(
+000984:                     nuclear_aperture
+000985:                     - TARGET_APERTURE_DIAMETER_NM
+000986:                 ) / TARGET_APERTURE_DIAMETER_NM,
+000987:                 "outer_annulus_radius_mean_nm": (
+000988:                     mean_outer_radius
+000989:                 ),
+000990:                 "outer_annulus_radius_relative_error": abs(
+000991:                     mean_outer_radius
+000992:                     - TARGET_OUTER_RADIUS_NM
+000993:                 ) / TARGET_OUTER_RADIUS_NM,
+000994:             }
+000995:         )
+000996: 
+000997:     write_rows(
+000998:         END_SUMMARY,
+
+000978:                     bridge_ids_end
+000979:                 ),
+000980:                 "nuclear_aperture_diameter_nm": (
+000981:                     nuclear_aperture
+000982:                 ),
+000983:                 "nuclear_aperture_relative_error": abs(
+000984:                     nuclear_aperture
+000985:                     - TARGET_APERTURE_DIAMETER_NM
+000986:                 ) / TARGET_APERTURE_DIAMETER_NM,
+000987:                 "outer_annulus_radius_mean_nm": (
+000988:                     mean_outer_radius
+000989:                 ),
+000990:                 "outer_annulus_radius_relative_error": abs(
+000991:                     mean_outer_radius
+000992:                     - TARGET_OUTER_RADIUS_NM
+000993:                 ) / TARGET_OUTER_RADIUS_NM,
+000994:             }
+000995:         )
+000996: 
+000997:     write_rows(
+000998:         END_SUMMARY,
+000999:         end_rows,
+
+001010:         for row in end_rows
+001011:         if row["end"] == "UPPER"
+001012:     )
+001013: 
+001014:     end_asymmetry = max(
+001015:         abs(
+001016:             float(
+001017:                 lower[
+001018:                     "nuclear_aperture_diameter_nm"
+001019:                 ]
+001020:             )
+001021:             - float(
+001022:                 upper[
+001023:                     "nuclear_aperture_diameter_nm"
+001024:                 ]
+001025:             )
+001026:         ),
+001027:         abs(
+001028:             float(
+001029:                 lower[
+001030:                     "outer_annulus_radius_mean_nm"
+001031:                 ]
+
+001015:         abs(
+001016:             float(
+001017:                 lower[
+001018:                     "nuclear_aperture_diameter_nm"
+001019:                 ]
+001020:             )
+001021:             - float(
+001022:                 upper[
+001023:                     "nuclear_aperture_diameter_nm"
+001024:                 ]
+001025:             )
+001026:         ),
+001027:         abs(
+001028:             float(
+001029:                 lower[
+001030:                     "outer_annulus_radius_mean_nm"
+001031:                 ]
+001032:             )
+001033:             - float(
+001034:                 upper[
+001035:                     "outer_annulus_radius_mean_nm"
+001036:                 ]
+
+001145:         ),
+001146:         "critical_angle_RMS_deviation_is_at_most30deg": (
+001147:             critical_rms
+001148:             <= MAX_ANGLE_RMS_DEVIATION_DEG
+001149:         ),
+001150:         "no_nonbonded_heavy_heavy_clashes": (
+001151:             clash_count == 0
+001152:         ),
+001153:         "aperture_errors_are_within10percent": all(
+001154:             float(
+001155:                 row[
+001156:                     "nuclear_aperture_relative_error"
+001157:                 ]
+001158:             )
+001159:             <= MAX_APERTURE_RELATIVE_ERROR
+001160:             for row in end_rows
+001161:         ),
+001162:         "outer_radius_errors_are_within15percent": all(
+001163:             float(
+001164:                 row[
+001165:                     "outer_annulus_radius_relative_error"
+001166:                 ]
+
+001148:             <= MAX_ANGLE_RMS_DEVIATION_DEG
+001149:         ),
+001150:         "no_nonbonded_heavy_heavy_clashes": (
+001151:             clash_count == 0
+001152:         ),
+001153:         "aperture_errors_are_within10percent": all(
+001154:             float(
+001155:                 row[
+001156:                     "nuclear_aperture_relative_error"
+001157:                 ]
+001158:             )
+001159:             <= MAX_APERTURE_RELATIVE_ERROR
+001160:             for row in end_rows
+001161:         ),
+001162:         "outer_radius_errors_are_within15percent": all(
+001163:             float(
+001164:                 row[
+001165:                     "outer_annulus_radius_relative_error"
+001166:                 ]
+001167:             )
+001168:             <= MAX_OUTER_RADIUS_RELATIVE_ERROR
+001169:             for row in end_rows
+
+001151:             clash_count == 0
+001152:         ),
+001153:         "aperture_errors_are_within10percent": all(
+001154:             float(
+001155:                 row[
+001156:                     "nuclear_aperture_relative_error"
+001157:                 ]
+001158:             )
+001159:             <= MAX_APERTURE_RELATIVE_ERROR
+001160:             for row in end_rows
+001161:         ),
+001162:         "outer_radius_errors_are_within15percent": all(
+001163:             float(
+001164:                 row[
+001165:                     "outer_annulus_radius_relative_error"
+001166:                 ]
+001167:             )
+001168:             <= MAX_OUTER_RADIUS_RELATIVE_ERROR
+001169:             for row in end_rows
+001170:         ),
+001171:         "lower_upper_asymmetry_is_within0p010nm": (
+001172:             end_asymmetry
+
+001237:             critical_rms
+001238:         ),
+001239:         "minimum_nonbonded_heavy_heavy_nm": (
+001240:             minimum_nonbonded_distance
+001241:         ),
+001242:         "heavy_heavy_clash_count": (
+001243:             clash_count
+001244:         ),
+001245:         "lower_aperture_diameter_nm": (
+001246:             lower[
+001247:                 "nuclear_aperture_diameter_nm"
+001248:             ]
+001249:         ),
+001250:         "upper_aperture_diameter_nm": (
+001251:             upper[
+001252:                 "nuclear_aperture_diameter_nm"
+001253:             ]
+001254:         ),
+001255:         "maximum_lower_upper_asymmetry_nm": (
+001256:             end_asymmetry
+001257:         ),
+001258:         "fixed_coordinates_unchanged": (
+
+001239:         "minimum_nonbonded_heavy_heavy_nm": (
+001240:             minimum_nonbonded_distance
+001241:         ),
+001242:         "heavy_heavy_clash_count": (
+001243:             clash_count
+001244:         ),
+001245:         "lower_aperture_diameter_nm": (
+001246:             lower[
+001247:                 "nuclear_aperture_diameter_nm"
+001248:             ]
+001249:         ),
+001250:         "upper_aperture_diameter_nm": (
+001251:             upper[
+001252:                 "nuclear_aperture_diameter_nm"
+001253:             ]
+001254:         ),
+001255:         "maximum_lower_upper_asymmetry_nm": (
+001256:             end_asymmetry
+001257:         ),
+001258:         "fixed_coordinates_unchanged": (
+001259:             fixed_coordinates_unchanged
+001260:         ),
+
+001242:         "heavy_heavy_clash_count": (
+001243:             clash_count
+001244:         ),
+001245:         "lower_aperture_diameter_nm": (
+001246:             lower[
+001247:                 "nuclear_aperture_diameter_nm"
+001248:             ]
+001249:         ),
+001250:         "upper_aperture_diameter_nm": (
+001251:             upper[
+001252:                 "nuclear_aperture_diameter_nm"
+001253:             ]
+001254:         ),
+001255:         "maximum_lower_upper_asymmetry_nm": (
+001256:             end_asymmetry
+001257:         ),
+001258:         "fixed_coordinates_unchanged": (
+001259:             fixed_coordinates_unchanged
+001260:         ),
+001261:         "hydrogen_coordinates_generated": False,
+001262:         "candidate_is_final_chemistry": False,
+001263:         "molecular_topology_generation_authorized": False,
+
+001244:         ),
+001245:         "lower_aperture_diameter_nm": (
+001246:             lower[
+001247:                 "nuclear_aperture_diameter_nm"
+001248:             ]
+001249:         ),
+001250:         "upper_aperture_diameter_nm": (
+001251:             upper[
+001252:                 "nuclear_aperture_diameter_nm"
+001253:             ]
+001254:         ),
+001255:         "maximum_lower_upper_asymmetry_nm": (
+001256:             end_asymmetry
+001257:         ),
+001258:         "fixed_coordinates_unchanged": (
+001259:             fixed_coordinates_unchanged
+001260:         ),
+001261:         "hydrogen_coordinates_generated": False,
+001262:         "candidate_is_final_chemistry": False,
+001263:         "molecular_topology_generation_authorized": False,
+001264:         "formal_charge_assignment_authorized": False,
+001265:         "force_field_parameterization_authorized": False,
+
+001532: 
+001533: ## Heavy-atom clearance
+001534: 
+001535: - Minimum nonbonded heavy-heavy distance:
+001536:   **{minimum_nonbonded_distance:.9f} nm**
+001537: - Heavy-heavy clashes:
+001538:   **{clash_count}**
+001539: 
+001540: ## Aperture and symmetry
+001541: 
+001542: - Lower/upper aperture:
+001543:   **{float(lower['nuclear_aperture_diameter_nm']):.9f}/
+001544:   {float(upper['nuclear_aperture_diameter_nm']):.9f} nm**
+001545: - Maximum lower-upper asymmetry:
+001546:   **{end_asymmetry:.9f} nm**
+001547: 
+001548: ## Gates
+001549: 
+001550: {gate_lines}
+001551: 
+001552: ## Decision
+001553: 
+
+001534: 
+001535: - Minimum nonbonded heavy-heavy distance:
+001536:   **{minimum_nonbonded_distance:.9f} nm**
+001537: - Heavy-heavy clashes:
+001538:   **{clash_count}**
+001539: 
+001540: ## Aperture and symmetry
+001541: 
+001542: - Lower/upper aperture:
+001543:   **{float(lower['nuclear_aperture_diameter_nm']):.9f}/
+001544:   {float(upper['nuclear_aperture_diameter_nm']):.9f} nm**
+001545: - Maximum lower-upper asymmetry:
+001546:   **{end_asymmetry:.9f} nm**
+001547: 
+001548: ## Gates
+001549: 
+001550: {gate_lines}
+001551: 
+001552: ## Decision
+001553: 
+001554: - Decision: **{decision}**
+001555: - Failed gates:
+
+001535: - Minimum nonbonded heavy-heavy distance:
+001536:   **{minimum_nonbonded_distance:.9f} nm**
+001537: - Heavy-heavy clashes:
+001538:   **{clash_count}**
+001539: 
+001540: ## Aperture and symmetry
+001541: 
+001542: - Lower/upper aperture:
+001543:   **{float(lower['nuclear_aperture_diameter_nm']):.9f}/
+001544:   {float(upper['nuclear_aperture_diameter_nm']):.9f} nm**
+001545: - Maximum lower-upper asymmetry:
+001546:   **{end_asymmetry:.9f} nm**
+001547: 
+001548: ## Gates
+001549: 
+001550: {gate_lines}
+001551: 
+001552: ## Decision
+001553: 
+001554: - Decision: **{decision}**
+001555: - Failed gates:
+001556:   **{'NONE' if not failed_gates else ' | '.join(failed_gates)}**
+
+001536:   **{minimum_nonbonded_distance:.9f} nm**
+001537: - Heavy-heavy clashes:
+001538:   **{clash_count}**
+001539: 
+001540: ## Aperture and symmetry
+001541: 
+001542: - Lower/upper aperture:
+001543:   **{float(lower['nuclear_aperture_diameter_nm']):.9f}/
+001544:   {float(upper['nuclear_aperture_diameter_nm']):.9f} nm**
+001545: - Maximum lower-upper asymmetry:
+001546:   **{end_asymmetry:.9f} nm**
+001547: 
+001548: ## Gates
+001549: 
+001550: {gate_lines}
+001551: 
+001552: ## Decision
+001553: 
+001554: - Decision: **{decision}**
+001555: - Failed gates:
+001556:   **{'NONE' if not failed_gates else ' | '.join(failed_gates)}**
+001557: - Hydrogen coordinates generated: **NO**
+
+001606:     print(
+001607:         "Minimum nonbonded heavy-heavy / clash count: "
+001608:         f"{minimum_nonbonded_distance:.9f}/"
+001609:         f"{clash_count}"
+001610:     )
+001611: 
+001612:     for row in end_rows:
+001613:         print(
+001614:             f"{row['end']} bridge atoms / aperture/error / "
+001615:             "outer-radius/error: "
+001616:             f"{row['bridge_atoms']}/"
+001617:             f"{float(row['nuclear_aperture_diameter_nm']):.9f}/"
+001618:             f"{float(row['nuclear_aperture_relative_error']):.9f}/"
+001619:             f"{float(row['outer_annulus_radius_mean_nm']):.9f}/"
+001620:             f"{float(row['outer_annulus_radius_relative_error']):.9f}"
+001621:         )
+001622: 
+001623:     print(
+001624:         "Maximum lower-upper asymmetry: "
+001625:         f"{end_asymmetry:.9f} nm"
+001626:     )
+001627: 
+
+001609:         f"{clash_count}"
+001610:     )
+001611: 
+001612:     for row in end_rows:
+001613:         print(
+001614:             f"{row['end']} bridge atoms / aperture/error / "
+001615:             "outer-radius/error: "
+001616:             f"{row['bridge_atoms']}/"
+001617:             f"{float(row['nuclear_aperture_diameter_nm']):.9f}/"
+001618:             f"{float(row['nuclear_aperture_relative_error']):.9f}/"
+001619:             f"{float(row['outer_annulus_radius_mean_nm']):.9f}/"
+001620:             f"{float(row['outer_annulus_radius_relative_error']):.9f}"
+001621:         )
+001622: 
+001623:     print(
+001624:         "Maximum lower-upper asymmetry: "
+001625:         f"{end_asymmetry:.9f} nm"
+001626:     )
+001627: 
+001628:     print(
+001629:         f"Decision: {decision}"
+001630:     )
+
+001610:     )
+001611: 
+001612:     for row in end_rows:
+001613:         print(
+001614:             f"{row['end']} bridge atoms / aperture/error / "
+001615:             "outer-radius/error: "
+001616:             f"{row['bridge_atoms']}/"
+001617:             f"{float(row['nuclear_aperture_diameter_nm']):.9f}/"
+001618:             f"{float(row['nuclear_aperture_relative_error']):.9f}/"
+001619:             f"{float(row['outer_annulus_radius_mean_nm']):.9f}/"
+001620:             f"{float(row['outer_annulus_radius_relative_error']):.9f}"
+001621:         )
+001622: 
+001623:     print(
+001624:         "Maximum lower-upper asymmetry: "
+001625:         f"{end_asymmetry:.9f} nm"
+001626:     )
+001627: 
+001628:     print(
+001629:         f"Decision: {decision}"
+001630:     )
+001631: 

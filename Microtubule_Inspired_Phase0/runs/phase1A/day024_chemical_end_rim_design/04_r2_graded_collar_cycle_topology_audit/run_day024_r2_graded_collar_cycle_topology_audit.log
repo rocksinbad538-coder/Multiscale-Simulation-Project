@@ -1,0 +1,27 @@
+Day024 R2 graded-collar cycle-topology audit completed.
+LOWER heavy nodes/edges/components/bipartite: 174/240/1/True
+LOWER girth and cycles L3/L4/L5/L6/L7/L8: 4 | 0/39/0/77/0/32
+LOWER added BN nodes in four-member cycles: 98
+LOWER parent-collar edges in four-member cycles: 60
+UPPER heavy nodes/edges/components/bipartite: 174/240/1/True
+UPPER girth and cycles L3/L4/L5/L6/L7/L8: 4 | 0/39/0/77/0/32
+UPPER added BN nodes in four-member cycles: 98
+UPPER parent-collar edges in four-member cycles: 60
+Decision: R2_GRADED_HETEROPOLAR_BN_COLLAR_REQUIRES_HEXAGONAL_GRAPH_REDESIGN
+Failed gates: LOWER_added_BN_degree_is_three | LOWER_contains_no_four_member_cycles | LOWER_girth_is_at_least_six | LOWER_added_BN_nodes_avoid_four_cycles | LOWER_parent_collar_edges_avoid_four_cycles | UPPER_added_BN_degree_is_three | UPPER_contains_no_four_member_cycles | UPPER_girth_is_at_least_six | UPPER_added_BN_nodes_avoid_four_cycles | UPPER_parent_collar_edges_avoid_four_cycles
+Previous coordinate-embedding authorization superseded: YES
+Static coordinate embedding authorized: NO
+Molecular topology generation authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: REDESIGN_R2_COLLAR_GRAPH_USING_HEXAGONAL_LATTICE_TEMPLATE_AND_REAUDIT
+Wrote: runs/phase1A/day024_chemical_end_rim_design/04_r2_graded_collar_cycle_topology_audit/r2_collar_simple_cycles_up_to_length10.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/04_r2_graded_collar_cycle_topology_audit/r2_collar_node_cycle_participation.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/04_r2_graded_collar_cycle_topology_audit/r2_collar_edge_cycle_participation.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/04_r2_graded_collar_cycle_topology_audit/r2_collar_cycle_topology_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/04_r2_graded_collar_cycle_topology_audit/r2_collar_cycle_topology_audit_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/04_r2_graded_collar_cycle_topology_audit/r2_collar_cycle_topology_audit_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/04_r2_graded_collar_cycle_topology_audit/r2_collar_cycle_topology_audit.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/04_r2_graded_collar_cycle_topology_audit/r2_collar_cycle_topology_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/04_r2_graded_collar_cycle_topology_audit/R2_GRADED_COLLAR_CYCLE_TOPOLOGY_AUDIT_DAY024.md

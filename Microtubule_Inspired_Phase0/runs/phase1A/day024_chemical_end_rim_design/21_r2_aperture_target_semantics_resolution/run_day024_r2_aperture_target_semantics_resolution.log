@@ -1,0 +1,22 @@
+Day024 R2 aperture target semantics resolution completed.
+Resolved target quantity: EFFECTIVE_WATER_ACCESSIBLE_APERTURE_AT_5KBT
+Effective target radius / diameter: 0.419703105/0.839406210 nm
+Heavy nuclear aperture lower / upper: 1.045415170/1.045415170 nm
+Implied per-side reduction to effective target (diagnostic only): 0.103004480/0.103004480 nm
+Heavy nuclear aperture used as 5kBT functional gate: NO
+Heavy coordinate embedding validated: True
+Decision: R2_HEAVY_COORDINATE_EMBEDDING_VALIDATED_APERTURE_FUNCTIONAL_GATE_DEFERRED
+Failed gates: NONE
+Hydrogen coordinate generation authorized: YES
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: GENERATE_AND_VALIDATE_R2_SELECTED_FOUR_ATOM_BN_BRIDGE_HYDROGEN_COORDINATES
+Wrote: runs/phase1A/day024_chemical_end_rim_design/21_r2_aperture_target_semantics_resolution/r2_aperture_target_semantics_resolution_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/21_r2_aperture_target_semantics_resolution/r2_aperture_target_semantics_resolution_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/21_r2_aperture_target_semantics_resolution/r2_aperture_target_semantics_resolution.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/21_r2_aperture_target_semantics_resolution/r2_aperture_target_semantics_resolution_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/21_r2_aperture_target_semantics_resolution/R2_APERTURE_TARGET_SEMANTICS_RESOLUTION_DAY024.md

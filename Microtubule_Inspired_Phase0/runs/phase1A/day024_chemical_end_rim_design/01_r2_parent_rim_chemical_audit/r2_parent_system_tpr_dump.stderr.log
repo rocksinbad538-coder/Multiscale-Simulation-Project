@@ -1,0 +1,13 @@
+                       :-) GROMACS - gmx dump, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit
+Command line:
+  gmx dump -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps.tpr
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps.tpr, VERSION 2025.4 (single precision)
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/15_r2_frozen_solute_nvt_20ps_preparation/r2_frozen_solute_nvt_20ps.tpr, VERSION 2025.4 (single precision)
+
+GROMACS reminds you: "I Used To Care, But Things Have Changed" (Bob Dylan)
+

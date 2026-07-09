@@ -1,0 +1,87 @@
+{
+  "end_summaries": [
+    {
+      "end": "LOWER",
+      "inner_H_count": 12,
+      "inner_H_nuclear_aperture_diameter_nm": 1.0087346715556498,
+      "inner_H_radius_maximum_nm": 0.5482527477071499,
+      "inner_H_radius_mean_nm": 0.5313184760605484,
+      "inner_H_radius_minimum_nm": 0.5043673357778249,
+      "total_H": 102
+    },
+    {
+      "end": "UPPER",
+      "inner_H_count": 12,
+      "inner_H_nuclear_aperture_diameter_nm": 1.0311246894571224,
+      "inner_H_radius_maximum_nm": 0.5518092801463081,
+      "inner_H_radius_mean_nm": 0.5357692102052275,
+      "inner_H_radius_minimum_nm": 0.5155623447285612,
+      "total_H": 102
+    }
+  ],
+  "gates": {
+    "102_BH_and_102_NH_bonds_are_present": true,
+    "102_H_were_generated_per_end": true,
+    "120_bridge_H_were_generated": true,
+    "204_H_coordinates_were_generated": true,
+    "2112_heavy_coordinates_are_unchanged": true,
+    "2316_nodes_received_coordinates": true,
+    "24_inner_H_were_generated": true,
+    "30_outer_H_were_generated": true,
+    "30_seed_H_were_generated": true,
+    "Gate3M_graph_is_accepted": true,
+    "Gate3O2_semantics_resolution_is_accepted": true,
+    "all_XH_bonds_are_within_0p002nm": true,
+    "all_local_H_angles_are_within70to175deg": true,
+    "all_local_H_heavy_clearance_checks_pass": true,
+    "inner_H_aperture_is_lower_upper_symmetric": false,
+    "inner_H_aperture_is_recorded_as_geometric_proxy_only": true,
+    "no_energy_minimization_or_MD_was_performed": true,
+    "no_global_H_H_clashes": true,
+    "no_global_H_heavy_clashes": true
+  },
+  "limitations": [
+    "Hydrogen placement is a deterministic static geometric search, not an energy optimization.",
+    "The inner-H nuclear aperture is a geometric proxy only and is not the effective 5 kBT water-accessible aperture.",
+    "No molecular topology, charges, force-field parameters, minimization, MD or QM calculation was generated."
+  ],
+  "parameters": {
+    "B_H_target_nm": 0.119,
+    "H_direction_count": 362,
+    "H_global_sweeps": 10,
+    "H_pool_size": 48,
+    "N_H_target_nm": 0.101,
+    "minimum_H_H_nm": 0.06,
+    "minimum_H_heavy_nm": 0.07
+  },
+  "summary": {
+    "B_H_bonds": 102,
+    "H_H_clash_count": 0,
+    "H_coordinates_generated": 204,
+    "H_heavy_clash_count": 0,
+    "H_lower": 102,
+    "H_upper": 102,
+    "MD_authorized": false,
+    "N_H_bonds": 102,
+    "QM_authorized": false,
+    "candidate_is_final_chemistry": false,
+    "coordinate_nodes": 2316,
+    "decision": "R2_SELECTED_FOUR_ATOM_BN_BRIDGE_HYDROGEN_COORDINATES_REQUIRE_REVIEW",
+    "energy_minimization_authorized": false,
+    "failed_gates": "inner_H_aperture_is_lower_upper_symmetric",
+    "force_field_parameterization_authorized": false,
+    "formal_charge_assignment_authorized": false,
+    "heavy_coordinates_preserved": true,
+    "inner_H_aperture_asymmetry_nm": 0.02239001790147266,
+    "inner_H_aperture_is_functional_5kBT_result": false,
+    "local_H_angle_violations": 0,
+    "local_H_heavy_clashes": 0,
+    "lower_inner_H_nuclear_aperture_nm": 1.0087346715556498,
+    "maximum_XH_deviation_nm": 8.881784197001252e-16,
+    "minimum_H_H_nm": 0.2300447810025276,
+    "minimum_H_heavy_nm": 0.15484188310796013,
+    "molecular_topology_generation_authorized": false,
+    "required_next_step": "REFINE_R2_SELECTED_FOUR_ATOM_HYDROGEN_ORIENTATIONS",
+    "upper_inner_H_nuclear_aperture_nm": 1.0311246894571224
+  }
+}

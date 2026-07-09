@@ -1,0 +1,39 @@
+Failed trimer paths identified: 12
+  01/12 LOWER:BRIDGE:01: tested=86400; passing=0; best angles=67.169-142.270; clashes=0; bond-dev=0.000206
+  02/12 LOWER:BRIDGE:02: tested=86400; passing=0; best angles=67.231-142.391; clashes=0; bond-dev=0.000233
+  03/12 LOWER:BRIDGE:06: tested=86400; passing=0; best angles=66.295-142.967; clashes=0; bond-dev=0.000120
+  04/12 LOWER:BRIDGE:07: tested=86400; passing=0; best angles=66.791-142.648; clashes=0; bond-dev=0.000188
+  05/12 LOWER:BRIDGE:11: tested=86400; passing=0; best angles=66.614-142.663; clashes=0; bond-dev=0.000100
+  06/12 LOWER:BRIDGE:12: tested=86400; passing=0; best angles=66.158-143.133; clashes=0; bond-dev=0.000138
+  07/12 UPPER:BRIDGE:02: tested=86400; passing=0; best angles=66.439-142.886; clashes=0; bond-dev=0.000188
+  08/12 UPPER:BRIDGE:03: tested=86400; passing=0; best angles=66.765-142.650; clashes=0; bond-dev=0.000120
+  09/12 UPPER:BRIDGE:07: tested=86400; passing=0; best angles=67.703-141.929; clashes=0; bond-dev=0.000233
+  10/12 UPPER:BRIDGE:08: tested=86400; passing=0; best angles=67.264-142.178; clashes=0; bond-dev=0.000206
+  11/12 UPPER:BRIDGE:12: tested=86400; passing=0; best angles=66.413-142.963; clashes=0; bond-dev=0.000138
+  12/12 UPPER:BRIDGE:13: tested=86400; passing=0; best angles=66.270-142.896; clashes=0; bond-dev=0.000100
+Day024 R2 trimer-bridge search-completeness audit completed.
+Independent-angle library conformers: 49392
+Original failed paths lower/upper/total: 6/6/12
+Locally solved paths lower/upper/total: 0/0/0
+Locally unsolved paths: 12
+Best global minimum angle / max bond deviation / minimum clearance: 66.158/0.000233/0.134346
+Decision: R2_TRIMER_BRIDGE_TOPOLOGY_REDESIGN_CONFIRMED_BY_EXPANDED_CONFORMER_SEARCH
+Failed audit-integrity gates: NONE
+Current trimer graph retained: NO
+Global coordinate refinement authorized: NO
+Candidate coordinates applied: NO
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: SCREEN_R2_SPARSE_AND_LONGER_BRIDGE_TOPOLOGIES
+Wrote: runs/phase1A/day024_chemical_end_rim_design/14_r2_trimer_bridge_search_completeness_audit/r2_trimer_independent_angle_library_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/14_r2_trimer_bridge_search_completeness_audit/r2_trimer_expanded_search_path_results.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/14_r2_trimer_bridge_search_completeness_audit/r2_trimer_expanded_search_best_candidate_coordinates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/14_r2_trimer_bridge_search_completeness_audit/r2_trimer_search_completeness_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/14_r2_trimer_bridge_search_completeness_audit/r2_trimer_search_completeness_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/14_r2_trimer_bridge_search_completeness_audit/r2_trimer_search_completeness.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/14_r2_trimer_bridge_search_completeness_audit/r2_trimer_search_completeness_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/14_r2_trimer_bridge_search_completeness_audit/R2_TRIMER_BRIDGE_SEARCH_COMPLETENESS_AUDIT_DAY024.md

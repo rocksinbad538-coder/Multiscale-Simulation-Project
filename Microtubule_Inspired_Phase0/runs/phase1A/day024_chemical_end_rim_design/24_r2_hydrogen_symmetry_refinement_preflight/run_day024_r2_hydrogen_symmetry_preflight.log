@@ -1,0 +1,18 @@
+Day024 R2 hydrogen symmetry correspondence preflight completed.
+Heavy lower/upper/resolved/unresolved: 216/216/186/30
+Heavy symmetry RMSD / maximum deviation: 2.825220831467e-01/1.085400373292e+00 nm
+H lower/upper/resolved/unresolved: 102/102/87/15
+Resolved inner-H pairs: 12
+All-H symmetry RMSD / maximum: 0.4194653378692497/1.1941240433013858 nm
+Inner-H symmetry RMSD / maximum: 0.11454835411897697/0.1356856324756856 nm
+Symmetry-constrained refinement ready: False
+Coordinates modified: NO
+Molecular topology generated: NO
+Energy minimization performed: NO
+MD performed: NO
+Wrote: runs/phase1A/day024_chemical_end_rim_design/24_r2_hydrogen_symmetry_refinement_preflight/r2_heavy_lower_upper_pair_candidates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/24_r2_hydrogen_symmetry_refinement_preflight/r2_hydrogen_lower_upper_pair_candidates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/24_r2_hydrogen_symmetry_refinement_preflight/r2_lower_to_upper_symmetry_transform.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/24_r2_hydrogen_symmetry_refinement_preflight/r2_hydrogen_symmetry_preflight_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/24_r2_hydrogen_symmetry_refinement_preflight/r2_hydrogen_symmetry_preflight.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/24_r2_hydrogen_symmetry_refinement_preflight/R2_HYDROGEN_SYMMETRY_REFINEMENT_PREFLIGHT_DAY024.md

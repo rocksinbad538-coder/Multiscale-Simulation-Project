@@ -1,0 +1,38 @@
+Day024 R2 selected four-atom heavy coordinate embedding completed.
+Heavy coordinates fixed/bridge/total: 1992/120/2112
+Bridge paths / heavy edges: 30/3066
+Fixed heavy coordinates unchanged: True
+Maximum BN / bridge-BN bond deviations: 0.001195394/0.000044107 nm
+Critical angles min/mean/max/RMSdev120: 70.899840/117.353534/168.181473/16.110536 deg
+Minimum nonbonded heavy-heavy / clash count: 0.159747397/0
+LOWER bridge atoms / aperture/error / outer-radius/error: 60/1.045415170/0.245422561/1.074038399/0.104315644
+UPPER bridge atoms / aperture/error / outer-radius/error: 60/1.045415170/0.245422561/1.074038399/0.104315644
+Maximum lower-upper asymmetry: 0.000000000 nm
+Decision: R2_SELECTED_FOUR_ATOM_BN_BRIDGE_HEAVY_COORDINATE_EMBEDDING_REQUIRES_REVIEW
+Failed gates: aperture_errors_are_within10percent
+Hydrogen coordinates generated: NO
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: REVIEW_R2_SELECTED_FOUR_ATOM_HEAVY_COORDINATE_EMBEDDING_FAILURES
+Wrote: runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_coordinates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_bond_lengths.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_angle_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_contact_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_embedding_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_embedding_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_embedding.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_embedding_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_embedding.xyz
+Wrote: runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_embedding.pdb
+Wrote: runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/R2_SELECTED_FOUR_ATOM_HEAVY_COORDINATE_EMBEDDING_DAY024.md
+Traceback (most recent call last):
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/build_and_validate_day024_r2_selected_four_atom_heavy_coordinate_embedding.py", line 1698, in <module>
+    main()
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/build_and_validate_day024_r2_selected_four_atom_heavy_coordinate_embedding.py", line 1692, in main
+    raise RuntimeError(
+RuntimeError: Heavy coordinate embedding requires review.

@@ -1,0 +1,2 @@
+library_conformers,independent_internal_angle_values,angle_values_deg,torsion_values,torsion_step_deg,minimum_endpoint_distance_nm,maximum_endpoint_distance_nm,base_conformers_retained_per_path,azimuth_values_per_mirror,mirrors_screened
+49392,7,105.0 | 110.0 | 115.0 | 120.0 | 125.0 | 130.0 | 135.0,12,30,0.1190720971235542,0.5357503498670351,600,72,2

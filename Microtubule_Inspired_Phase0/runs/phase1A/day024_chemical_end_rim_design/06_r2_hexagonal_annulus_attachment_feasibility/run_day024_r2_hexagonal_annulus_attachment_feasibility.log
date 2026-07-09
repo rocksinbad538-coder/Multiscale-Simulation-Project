@@ -1,0 +1,28 @@
+Day024 R2 hexagonal-annulus attachment feasibility audit completed.
+Templates screened / attachment-capable / fully feasible: 45/9/0
+Targets bond / outer radius / aperture radius / heavy atoms per end: 0.144973/1.199126/0.419703/145.133
+Best geometry template n/m / annulus atoms / total atoms with seed: 5/2/126/156
+Best geometry outer boundary color0/color1 / maximum heteropolar attachments / required homopolar attachments: 15/15/15/15
+Best geometry outer/inner radius: 1.074041/0.522709 nm
+Best geometry heavy/outer/inner relative errors: 0.074877/0.104313/0.245426
+Best 30-site attachment-capable template n/m / outer radius / inner radius / total atoms: 10/2/2.220059/0.522709/606
+Best attachment-capable heavy/outer/inner relative errors: 3.175483/0.851398/0.245426
+Decision: R2_PURE_HEXAGONAL_BN_ANNULUS_DIRECT_ATTACHMENT_NOT_FEASIBLE_WITH_CURRENT_HOMOPOLAR_DEGREE2_RIM
+Failed audit-integrity gates: NONE
+Direct pure-BN annulus attachment feasible: NO
+Current hexagonal edge-completion seed retained: YES
+Coordinate generation authorized: NO
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: EVALUATE_C3_PARENT_RIM_RECONSTRUCTION_AND_HYBRID_LINKER_CONTINGENCIES
+Wrote: runs/phase1A/day024_chemical_end_rim_design/06_r2_hexagonal_annulus_attachment_feasibility/r2_hexagonal_annulus_template_screen.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/06_r2_hexagonal_annulus_attachment_feasibility/r2_hexagonal_annulus_best_candidates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/06_r2_hexagonal_annulus_attachment_feasibility/r2_hexagonal_annulus_attachment_feasibility_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/06_r2_hexagonal_annulus_attachment_feasibility/r2_hexagonal_annulus_attachment_audit_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/06_r2_hexagonal_annulus_attachment_feasibility/r2_hexagonal_annulus_attachment_feasibility.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/06_r2_hexagonal_annulus_attachment_feasibility/r2_hexagonal_annulus_attachment_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/06_r2_hexagonal_annulus_attachment_feasibility/R2_HEXAGONAL_ANNULUS_ATTACHMENT_FEASIBILITY_DAY024.md

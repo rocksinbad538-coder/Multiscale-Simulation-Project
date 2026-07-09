@@ -1,0 +1,63 @@
+{
+  "gates": {
+    "12_inner_H_pairs_were_tested": true,
+    "all_rebuilt_XH_lengths_use_receiver_element_targets": true,
+    "at_least_one_direct_reflected_direction_scenario_passes": true,
+    "both_directional_reconstruction_scenarios_were_tested": true,
+    "coordinates_are_not_applied_to_Gate3P_structure": true,
+    "no_topology_minimization_MD_or_QM_is_generated": true,
+    "validated_reflection_was_loaded": true
+  },
+  "limitations": [
+    "This is a diagnostic reconstruction of the 24 inner-rim hydrogens only.",
+    "No coordinates are applied to the accepted Gate 3P structure.",
+    "No topology, charges, parameterization, minimization, MD or QM calculation is generated."
+  ],
+  "scenario_summaries": [
+    {
+      "H_H_clash_count": 0,
+      "H_angle_violation_count": 0,
+      "H_heavy_clash_count": 0,
+      "aperture_asymmetry_nm": 0.0061730051371187145,
+      "lower_inner_H_aperture_nm": 1.0087346715556498,
+      "maximum_H_angle_deg": 109.14751386350636,
+      "maximum_XH_deviation_nm": 7.494005416219807e-16,
+      "minimum_H_H_nm": 0.2300447810025276,
+      "minimum_H_angle_deg": 76.4953537568538,
+      "minimum_H_heavy_nm": 0.15484188310796013,
+      "passes_all_static_gates": true,
+      "scenario": "LOWER_DRIVES_UPPER",
+      "upper_inner_H_aperture_nm": 1.002561666418531
+    },
+    {
+      "H_H_clash_count": 0,
+      "H_angle_violation_count": 0,
+      "H_heavy_clash_count": 0,
+      "aperture_asymmetry_nm": 0.002475878603539483,
+      "lower_inner_H_aperture_nm": 1.028648810853583,
+      "maximum_H_angle_deg": 100.37083235629046,
+      "maximum_XH_deviation_nm": 8.604228440844963e-16,
+      "minimum_H_H_nm": 0.2300447810025276,
+      "minimum_H_angle_deg": 74.77203927741904,
+      "minimum_H_heavy_nm": 0.15484188310796013,
+      "passes_all_static_gates": true,
+      "scenario": "UPPER_DRIVES_LOWER",
+      "upper_inner_H_aperture_nm": 1.0311246894571224
+    }
+  ],
+  "summary": {
+    "MD_performed": false,
+    "QM_performed": false,
+    "coordinates_modified": false,
+    "decision": "R2_INNER_H_REFLECTED_DIRECTION_REFINEMENT_PATH_IDENTIFIED",
+    "energy_minimized": false,
+    "failed_gates": "",
+    "force_field_parameters_assigned": false,
+    "formal_charges_assigned": false,
+    "inner_H_pairs_tested": 12,
+    "molecular_topology_generated": false,
+    "passing_scenario_count": 2,
+    "required_next_step": "APPLY_AND_VALIDATE_SELECTED_INNER_H_REFLECTED_DIRECTION_SCENARIO",
+    "selected_scenario": "UPPER_DRIVES_LOWER"
+  }
+}

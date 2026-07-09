@@ -1,0 +1,35 @@
+Day024 R2 partial-attachment annulus static coordinate embedding completed.
+Coordinate nodes parent/added-heavy/H/total: 1680/312/84/2076
+Parent coordinates unchanged: YES
+Parent-seed bond RMS/max deviation: 0.000000/0.000000 nm
+Annulus BN bond RMS/max deviation: 0.000000/0.000000 nm
+Seed-annulus bond mean/min/max: 0.310185/0.177563/0.441245 nm
+Seed-annulus RMS/max target deviation: 0.198283/0.296272 nm
+Junction angles min/mean/max/RMSdev120: 0.519/113.338/167.746/28.811 deg
+LOWER center-offset/gap/nuclear-aperture/error/outer-radius/error: 0.000000/0.000000/0.807415/0.038112/1.074038/0.104315
+UPPER center-offset/gap/nuclear-aperture/error/outer-radius/error: 0.000000/0.000020/0.807415/0.038112/1.074038/0.104315
+Minimum nonbonded heavy-heavy / H-heavy / H-H: 0.076175/0.047737/0.118919 nm
+Clash counts heavy-heavy / H-heavy / H-H: 24/21/0
+Maximum lower-upper asymmetry: 0.000171928624 nm
+Decision: R2_PARTIAL_ATTACHMENT_ANNULUS_STATIC_COORDINATE_EMBEDDING_REQUIRES_CONSTRAINED_GEOMETRIC_OPTIMIZATION
+Failed gates: seed_annulus_attachment_RMS_deviation_within_0p020nm | seed_annulus_attachment_max_deviation_within_0p035nm | junction_angle_minimum_is_at_least_70deg | attachment_plane_gap_is_positive_and_at_most_0p250nm | no_nonbonded_heavy_heavy_clashes | no_nonbonded_H_heavy_clashes | lower_and_upper_embeddings_are_symmetric
+Candidate is final chemistry: NO
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: OPTIMIZE_R2_PARTIAL_ATTACHMENT_STATIC_EMBEDDING_WITH_CONSTRAINED_GEOMETRY
+Wrote: runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/r2_partial_attachment_static_coordinates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/r2_partial_attachment_static_bond_lengths.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/r2_partial_attachment_static_bond_type_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/r2_partial_attachment_static_junction_angles.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/r2_partial_attachment_static_embedding_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/r2_partial_attachment_static_embedding_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/r2_partial_attachment_static_embedding_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/r2_partial_attachment_static_embedding.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/r2_partial_attachment_static_embedding_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/r2_partial_attachment_static_embedding.xyz
+Wrote: runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/r2_partial_attachment_static_embedding.pdb
+Wrote: runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/R2_PARTIAL_ATTACHMENT_STATIC_COORDINATE_EMBEDDING_DAY024.md

@@ -1,0 +1,67 @@
+Instrumented replay compilation: PASS
+Generating deterministic full-density longer-bridge libraries...
+  m=4: samples=40000; span=0.037351-0.658605 nm
+  m=5: samples=40000; span=0.031466-0.777002 nm
+  m=6: samples=40000; span=0.012913-0.905957 nm
+Screening 15-attachment longer-bridge mappings...
+  m=4, LOWER: feasible mappings=1/60
+  m=4, UPPER: feasible mappings=1/60
+  m=5, LOWER: feasible mappings=1/60
+  m=5, UPPER: feasible mappings=1/60
+  m=6, LOWER: feasible mappings=3/60
+  m=6, UPPER: feasible mappings=3/60
+Day024 R2 full-density longer BN bridge screen completed.
+Bridge classes / endpoint pairs / mappings screened: 3/398/360
+Bridge atoms / lower feasible / upper feasible / class feasible / minimum angle / minimum clearance: 4/1/1/True/70.89983978777892/0.15974739665991966
+Bridge atoms / lower feasible / upper feasible / class feasible / minimum angle / minimum clearance: 5/1/1/True/78.39152277407291/0.1623175344592471
+Bridge atoms / lower feasible / upper feasible / class feasible / minimum angle / minimum clearance: 6/3/3/True/78.49067978421664/0.17955359428726847
+Selected bridge atoms / attachments per end / minimum angle / minimum clearance / maximum bond deviation: 4/15/70.89983978777892/0.15974739665991966/4.410696145812354e-05
+Selected graph components/bipartite/four-cycles/nonheteropolar/degree>3/degree<2: 1/True/0/0/0/0
+Selected paths without cycle / cycle min-max / H required: 0/16-16/204
+Decision: R2_FULL_DENSITY_LONGER_BN_BRIDGE_CLASS_IDENTIFIED
+Failed audit-integrity gates: NONE
+Selected graph generation authorized: YES
+Coordinate generation authorized: NO
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: BUILD_AND_VALIDATE_R2_SELECTED_FULL_DENSITY_LONGER_BN_BRIDGE_GRAPH
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_full_density_longer_bridge_library_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_full_density_longer_bridge_pair_screen.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_full_density_longer_bridge_mapping_screen.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_full_density_longer_bridge_class_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_full_density_longer_bridge_screen_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_full_density_longer_bridge_screen_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_full_density_longer_bridge_screen.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_full_density_longer_bridge_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/R2_FULL_DENSITY_LONGER_BN_BRIDGE_SCREEN_DAY024.md
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_full_density_longer_bridge_selected_candidate.csv
+Day024 R2 selected four-atom exact conformer replay completed.
+Library random seed: 35004
+Selected conformers lower/upper/total: 15/15/30
+Recovered bridge coordinates lower/upper/total: 60/60/120
+Selected mapping rows match original Gate3L: True
+Minimum angle / local clearance / maximum bond deviation / maximum library mismatch: 70.899839788/0.159747397/4.410696146e-05/2.318709098e-04
+Local clashes / angle violations: 0/0
+Decision: R2_SELECTED_FOUR_ATOM_BN_BRIDGE_EXACT_CONFORMERS_RECOVERED
+Failed gates: NONE
+Coordinates applied to complete structure: NO
+Hydrogen coordinates generated: NO
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: BUILD_AND_VALIDATE_R2_SELECTED_FOUR_ATOM_BN_BRIDGE_STATIC_COORDINATE_EMBEDDING
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/screen_day024_r2_four_atom_instrumented_replay.py
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_selected_four_atom_exact_conformers.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_selected_four_atom_exact_bridge_coordinates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_selected_four_atom_exact_conformer_replay_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_selected_four_atom_exact_conformer_replay_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_selected_four_atom_exact_conformer_replay.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_selected_four_atom_exact_conformer_replay_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/R2_SELECTED_FOUR_ATOM_EXACT_CONFORMER_REPLAY_DAY024.md

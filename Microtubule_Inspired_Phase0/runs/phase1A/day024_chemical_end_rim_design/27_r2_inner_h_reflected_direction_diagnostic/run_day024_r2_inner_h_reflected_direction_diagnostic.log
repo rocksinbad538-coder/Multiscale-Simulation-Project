@@ -1,0 +1,19 @@
+Day024 R2 inner-H reflected-direction diagnostic completed.
+Inner-H pairs tested: 12
+LOWER_DRIVES_UPPER XHdev/angles/H-heavy/H-H/aperture-L/U/asym/pass: 7.494005416220e-16/0/0/0/1.008734672/1.002561666/0.006173005/True
+UPPER_DRIVES_LOWER XHdev/angles/H-heavy/H-H/aperture-L/U/asym/pass: 8.604228440845e-16/0/0/0/1.028648811/1.031124689/0.002475879/True
+Passing scenarios / selected scenario: 2/UPPER_DRIVES_LOWER
+Decision: R2_INNER_H_REFLECTED_DIRECTION_REFINEMENT_PATH_IDENTIFIED
+Failed gates: NONE
+Coordinates modified: NO
+Molecular topology generated: NO
+Energy minimization performed: NO
+MD performed: NO
+QM performed: NO
+Required next step: APPLY_AND_VALIDATE_SELECTED_INNER_H_REFLECTED_DIRECTION_SCENARIO
+Wrote: runs/phase1A/day024_chemical_end_rim_design/27_r2_inner_h_reflected_direction_diagnostic/r2_inner_h_reflected_direction_candidates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/27_r2_inner_h_reflected_direction_diagnostic/r2_inner_h_reflected_direction_scenario_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/27_r2_inner_h_reflected_direction_diagnostic/r2_inner_h_reflected_direction_diagnostic_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/27_r2_inner_h_reflected_direction_diagnostic/r2_inner_h_reflected_direction_diagnostic_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/27_r2_inner_h_reflected_direction_diagnostic/r2_inner_h_reflected_direction_diagnostic.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/27_r2_inner_h_reflected_direction_diagnostic/R2_INNER_H_REFLECTED_DIRECTION_DIAGNOSTIC_DAY024.md

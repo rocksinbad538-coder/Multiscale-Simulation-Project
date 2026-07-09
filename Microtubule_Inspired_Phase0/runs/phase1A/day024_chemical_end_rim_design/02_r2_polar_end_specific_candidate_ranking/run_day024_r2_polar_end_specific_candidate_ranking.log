@@ -1,0 +1,34 @@
+Day024 R2 polar end-specific candidate ranking completed.
+Terminal coordination d1/d2/d3: 60/0/1620
+Lower end atoms / B / N: 30/30/0
+Upper end atoms / B / N: 30/0/30
+Required new parent bonds lower/upper/total: 60/60/120
+Target aperture diameter / open-area fraction: 0.839406/0.142928
+Candidate ranking:
+  Rank 1 | C2_GRADED_HETEROPOLAR_BN_COLLAR_ANNULUS | base=92.20 | penalty=14.50 | final=77.70 | ADVANCE_TO_CONNECTIVITY_BLUEPRINT_GATE
+  Rank 2 | C3_RECONSTRUCTED_EDGE_PLUS_GRADED_BN_ANNULUS | base=87.20 | penalty=18.50 | final=68.70 | RETAIN_AS_PARENT_RECONSTRUCTION_CONTINGENCY
+  Rank 3 | C1_DIRECT_PLANAR_BN_ANNULUS_DUAL_LINK | base=86.80 | penalty=20.00 | final=66.80 | DEFER_DIRECT_SEAM_HIGH_STRAIN
+  Rank 4 | C4_END_SPECIFIC_ORGANIC_MACROCYCLE | base=69.00 | penalty=21.50 | final=47.50 | FALLBACK_AFTER_INORGANIC_CANDIDATE_FAILURE
+  Rank 5 | C6_METAL_OR_SPIN_ACTIVE_COORDINATED_CAP | base=64.20 | penalty=23.50 | final=40.70 | REJECT_AT_CURRENT_GATE
+  Rank 6 | C0_SMALL_GROUP_PASSIVATION_ONLY | base=47.60 | penalty=12.50 | final=35.10 | REJECT_AS_R2_CAP_REPLACEMENT
+  Rank 7 | C5_INWARD_FLEXIBLE_TETHER_CORONA | base=49.00 | penalty=22.00 | final=27.00 | DEFER_PORE_NOT_STRUCTURALLY_FIXED
+Primary candidate: C2_GRADED_HETEROPOLAR_BN_COLLAR_ANNULUS
+Primary candidate is final chemistry: NO
+Contingency candidate: C3_RECONSTRUCTED_EDGE_PLUS_GRADED_BN_ANNULUS
+Decision: R2_POLAR_END_SPECIFIC_VALENCE_COMPLETION_CANDIDATES_RANKED
+Failed gates: NONE
+Connectivity-blueprint gate authorized: YES
+Explicit geometry generation authorized: NO
+Topology generation authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: BUILD_AND_VALIDATE_R2_GRADED_HETEROPOLAR_COLLAR_CONNECTIVITY_BLUEPRINT
+Wrote: runs/phase1A/day024_chemical_end_rim_design/02_r2_polar_end_specific_candidate_ranking/r2_polar_end_valence_completion_requirements.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/02_r2_polar_end_specific_candidate_ranking/r2_polar_end_specific_candidate_matrix.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/02_r2_polar_end_specific_candidate_ranking/r2_polar_end_specific_candidate_ranking.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/02_r2_polar_end_specific_candidate_ranking/r2_polar_end_specific_candidate_selection_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/02_r2_polar_end_specific_candidate_ranking/r2_polar_end_specific_candidate_ranking_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/02_r2_polar_end_specific_candidate_ranking/r2_primary_graded_bn_collar_design_contract.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/02_r2_polar_end_specific_candidate_ranking/r2_candidate_ranking_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/02_r2_polar_end_specific_candidate_ranking/R2_POLAR_END_SPECIFIC_VALENCE_COMPLETION_RANKING_DAY024.md

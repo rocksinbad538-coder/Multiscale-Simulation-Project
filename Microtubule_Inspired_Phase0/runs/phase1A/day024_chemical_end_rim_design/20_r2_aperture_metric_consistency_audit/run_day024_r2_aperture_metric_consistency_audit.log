@@ -1,0 +1,31 @@
+Day024 R2 aperture metric consistency audit completed.
+Maximum fixed-coordinate difference Gate3K/Gate3O: 0.000000000000e+00 nm
+LOWER TWO_TIMES_MINIMUM_RADIAL_DISTANCE / diameter / relative error / pass: 1.045415170/0.245422561/False
+LOWER MINIMUM_OPPOSITE_PAIR_DISTANCE / diameter / relative error / pass: 1.045415170/0.245422561/False
+LOWER MEAN_OPPOSITE_PAIR_DISTANCE / diameter / relative error / pass: 1.045415170/0.245422561/False
+LOWER MINIMUM_PROJECTED_WIDTH / diameter / relative error / pass: 1.004403541/0.196564644/False
+UPPER TWO_TIMES_MINIMUM_RADIAL_DISTANCE / diameter / relative error / pass: 1.045415170/0.245422561/False
+UPPER MINIMUM_OPPOSITE_PAIR_DISTANCE / diameter / relative error / pass: 1.045415170/0.245422561/False
+UPPER MEAN_OPPOSITE_PAIR_DISTANCE / diameter / relative error / pass: 1.045415170/0.245422561/False
+UPPER MINIMUM_PROJECTED_WIDTH / diameter / relative error / pass: 1.004403541/0.196564644/False
+Preferred aperture metric: NONE
+Aperture metric inconsistency identified: False
+Heavy coordinate embedding retained: False
+Decision: R2_APERTURE_METRIC_AUDIT_REQUIRES_FURTHER_REVIEW
+Failed gates: at_least_one_geometric_free_aperture_metric_passes_both_ends
+Hydrogen coordinate generation authorized: NO
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: REVIEW_R2_APERTURE_METRIC_DEFINITION_AND_TARGET
+Wrote: runs/phase1A/day024_chemical_end_rim_design/20_r2_aperture_metric_consistency_audit/r2_aperture_metric_comparison.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/20_r2_aperture_metric_consistency_audit/r2_aperture_opposite_pair_details.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/20_r2_aperture_metric_consistency_audit/r2_aperture_source_definition_extracts.txt
+Wrote: runs/phase1A/day024_chemical_end_rim_design/20_r2_aperture_metric_consistency_audit/r2_aperture_metric_consistency_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/20_r2_aperture_metric_consistency_audit/r2_aperture_metric_consistency_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/20_r2_aperture_metric_consistency_audit/r2_aperture_metric_consistency.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/20_r2_aperture_metric_consistency_audit/r2_aperture_metric_consistency_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/20_r2_aperture_metric_consistency_audit/R2_APERTURE_METRIC_CONSISTENCY_AUDIT_DAY024.md

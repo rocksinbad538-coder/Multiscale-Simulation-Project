@@ -1,0 +1,66 @@
+{
+  "gates": {
+    "102_lower_H_nodes_are_paired": true,
+    "102_upper_H_nodes_are_used_once": true,
+    "12_inner_H_pairs_are_resolved": true,
+    "15_seed_H_pairs_are_resolved_through_seed_correspondence": true,
+    "216_lower_heavy_nodes_are_paired": true,
+    "216_upper_heavy_nodes_are_used_once": true,
+    "30_seed_pairs_are_resolved_by_circumferential_index": true,
+    "coordinates_are_not_modified": true,
+    "no_topology_minimization_MD_or_QM_is_generated": true,
+    "selected_rigid_rim_transform_is_exact": true
+  },
+  "limitations": [
+    "This gate resolves correspondence and audits symmetry only.",
+    "No heavy or hydrogen coordinates are modified.",
+    "Bridge conformers are evaluated separately from the rigid annulus/seed reference.",
+    "No topology, charges, parameterization, minimization, MD or QM calculation is generated."
+  ],
+  "selected_rotation": [
+    [
+      0.8660293167397111,
+      -0.49999322250141487,
+      -9.62413207695205e-31
+    ],
+    [
+      0.49999322250141487,
+      0.866029316739711,
+      3.6090495288570194e-31
+    ],
+    [
+      -6.5302802227150846e-31,
+      7.93754350849031e-31,
+      -1.0
+    ]
+  ],
+  "selected_translation_nm": [
+    2.3439758809029394,
+    -1.3533073350875227,
+    10.017999999999999
+  ],
+  "summary": {
+    "B_N_sublattice_swap_heavy_pairs": 216,
+    "H_pairs": 102,
+    "MD_performed": false,
+    "QM_performed": false,
+    "coordinates_modified": false,
+    "decision": "R2_COMPLETE_END_SYMMETRY_CORRESPONDENCE_VALIDATED",
+    "energy_minimized": false,
+    "failed_gates": "",
+    "heavy_pairs": 216,
+    "inner_H_existing_symmetry_RMSD_nm": 0.21604441024330015,
+    "inner_H_existing_symmetry_maximum_nm": 0.21818862347140544,
+    "inner_H_pairs": 12,
+    "molecular_topology_generated": false,
+    "required_next_step": "REFINE_R2_HYDROGEN_ORIENTATIONS_WITH_VALIDATED_END_SYMMETRY_TRANSFORM",
+    "same_element_heavy_pairs": 0,
+    "seed_H_pairs": 15,
+    "seed_heavy_pairs": 30,
+    "selected_subset": "INNER_BOUNDARY_HEAVY",
+    "selected_transform_RMSD_nm": 1.905793032953756e-15,
+    "selected_transform_determinant": -1.0,
+    "selected_transform_maximum_deviation_nm": 2.0350724194510405e-15,
+    "selected_transform_type": "ORTHOGONAL_REFLECTION_ALLOWED"
+  }
+}

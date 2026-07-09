@@ -1,0 +1,35 @@
+Day024 R2 alternating BN oligomer-bridge feasibility audit completed.
+Bridge atoms / bonds / samples / end-to-end min/max: 1/2/7/0.230030/0.267875 nm
+Bridge atoms / bonds / samples / end-to-end min/max: 2/3/588/0.220017/0.405625 nm
+Bridge atoms / bonds / samples / end-to-end min/max: 3/4/49392/0.119072/0.535750 nm
+Mapping fits screened: 720
+Bridge class atoms / lower feasible / upper feasible / heavy atoms per end / H per end / feasible: 1/0/0/171/57/False
+Bridge class atoms / lower feasible / upper feasible / heavy atoms per end / H per end / feasible: 2/0/0/186/72/False
+Bridge class atoms / lower feasible / upper feasible / heavy atoms per end / H per end / feasible: 3/60/60/201/87/True
+Feasible bridge classes: 3
+Selected shortest bridge atoms per attachment: 3
+Selected lower / upper bridge sequences: B-N-B/N-B-N
+LOWER selected mapping parity/orientation/rotation/chirality/gap-range/selected-gap: 1/-1/14/-1/0.050000-0.304100/0.177100 nm
+LOWER selected endpoint distance min/max and center offset: 0.250719/0.475343/0.000000 nm
+UPPER selected mapping parity/orientation/rotation/chirality/gap-range/selected-gap: 1/-1/0/-1/0.050000-0.304100/0.177100 nm
+UPPER selected endpoint distance min/max and center offset: 0.250719/0.475343/0.000000 nm
+Decision: R2_SHORTEST_ALTERNATING_BN_OLIGOMER_BRIDGE_CLASS_IDENTIFIED
+Failed audit-integrity gates: NONE
+Bridge-graph generation authorized: YES
+Coordinate generation authorized: NO
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: BUILD_AND_VALIDATE_R2_ALTERNATING_BN_OLIGOMER_BRIDGE_GRAPH
+Wrote: runs/phase1A/day024_chemical_end_rim_design/10_r2_alternating_bn_oligomer_bridge_feasibility/r2_bn_oligomer_bridge_conformer_envelopes.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/10_r2_alternating_bn_oligomer_bridge_feasibility/r2_bn_oligomer_bridge_mapping_screen.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/10_r2_alternating_bn_oligomer_bridge_feasibility/r2_bn_oligomer_bridge_class_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/10_r2_alternating_bn_oligomer_bridge_feasibility/r2_bn_oligomer_bridge_feasibility_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/10_r2_alternating_bn_oligomer_bridge_feasibility/r2_bn_oligomer_bridge_feasibility_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/10_r2_alternating_bn_oligomer_bridge_feasibility/r2_bn_oligomer_bridge_feasibility.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/10_r2_alternating_bn_oligomer_bridge_feasibility/r2_bn_oligomer_bridge_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/10_r2_alternating_bn_oligomer_bridge_feasibility/R2_ALTERNATING_BN_OLIGOMER_BRIDGE_FEASIBILITY_DAY024.md
+Wrote: runs/phase1A/day024_chemical_end_rim_design/10_r2_alternating_bn_oligomer_bridge_feasibility/r2_bn_oligomer_bridge_selected_candidate.csv

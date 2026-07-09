@@ -1,0 +1,581 @@
+======================================================================
+R2 FOUR-ATOM EXACT CONFORMER SELECTOR SOURCE
+======================================================================
+SCRIPT=scripts/phase1A/screen_day024_r2_full_density_longer_bn_bridge_classes.py
+bc1d0a080c11e0a3136f94329481e0029d79fac9197e007911ec98afdcd66fca  scripts/phase1A/screen_day024_r2_full_density_longer_bn_bridge_classes.py
+
+------------------------------------------------------------------
+LIBRARY AND GENERIC MAPPING IMPLEMENTATION: LINES 138-235
+------------------------------------------------------------------
+   138	def normalized_batch(vectors: np.ndarray) -> np.ndarray:
+   139	    norms = np.linalg.norm(vectors, axis=1)
+   140	    if np.any(norms <= 1.0e-12):
+   141	        raise RuntimeError("Zero vector in batch normalization.")
+   142	    return vectors / norms[:, None]
+   143	
+   144	
+   145	def place_next_batch(
+   146	    first: np.ndarray,
+   147	    second: np.ndarray,
+   148	    third: np.ndarray,
+   149	    angle_rad: np.ndarray,
+   150	    torsion_rad: np.ndarray,
+   151	) -> np.ndarray:
+   152	    previous = normalized_batch(third - second)
+   153	    normal = np.cross(second - first, previous)
+   154	    bad = np.linalg.norm(normal, axis=1) <= 1.0e-12
+   155	    if np.any(bad):
+   156	        reference = np.tile(np.asarray([0.0, 0.0, 1.0]), (int(np.sum(bad)), 1))
+   157	        previous_bad = previous[bad]
+   158	        parallel = np.abs(np.sum(previous_bad * reference, axis=1)) > 0.90
+   159	        reference[parallel] = np.asarray([0.0, 1.0, 0.0])
+   160	        normal[bad] = np.cross(previous_bad, reference)
+   161	    normal = normalized_batch(normal)
+   162	    in_plane = normalized_batch(np.cross(normal, previous))
+   163	    direction = (
+   164	        -np.cos(angle_rad)[:, None] * previous
+   165	        + np.sin(angle_rad)[:, None]
+   166	        * (
+   167	            np.cos(torsion_rad)[:, None] * in_plane
+   168	            + np.sin(torsion_rad)[:, None] * normal
+   169	        )
+   170	    )
+   171	    return third + BN * direction
+   172	
+   173	
+   174	def build_library(bridge_atoms: int) -> dict[str, np.ndarray]:
+   175	    rng = np.random.default_rng(35000 + bridge_atoms)
+   176	    angles = np.deg2rad(
+   177	        rng.uniform(
+   178	            ANGLE_MIN_LIBRARY_DEG,
+   179	            ANGLE_MAX_LIBRARY_DEG,
+   180	            size=(LIBRARY_SAMPLES, bridge_atoms),
+   181	        )
+   182	    )
+   183	    torsions = rng.uniform(
+   184	        0.0,
+   185	        2.0 * math.pi,
+   186	        size=(LIBRARY_SAMPLES, bridge_atoms - 1),
+   187	    )
+   188	    p0 = np.zeros((LIBRARY_SAMPLES, 3), dtype=float)
+   189	    p1 = np.tile(np.asarray([BN, 0.0, 0.0]), (LIBRARY_SAMPLES, 1))
+   190	    p2 = p1 + BN * np.column_stack(
+   191	        (-np.cos(angles[:, 0]), np.sin(angles[:, 0]), np.zeros(LIBRARY_SAMPLES))
+   192	    )
+   193	    points = [p0, p1, p2]
+   194	    for index in range(1, bridge_atoms):
+   195	        points.append(
+   196	            place_next_batch(
+   197	                points[-3],
+   198	                points[-2],
+   199	                points[-1],
+   200	                angles[:, index],
+   201	                torsions[:, index - 1],
+   202	            )
+   203	        )
+   204	    chains = np.stack(points, axis=1)
+   205	    distances = np.linalg.norm(chains[:, -1] - chains[:, 0], axis=1)
+   206	    return {"chains": chains, "distances": distances}
+   207	
+   208	
+   209	
+   210	
+   211	def map_chain_generic(
+   212	    chain: np.ndarray,
+   213	    start: np.ndarray,
+   214	    finish: np.ndarray,
+   215	    azimuth_deg: float,
+   216	    mirror: bool,
+   217	    geometry,
+   218	) -> np.ndarray:
+   219	    working = np.array(chain, dtype=float, copy=True)
+   220	    if mirror:
+   221	        working[:, 2] *= -1.0
+   222	    target = finish - start
+   223	    alignment = geometry.rotation_from_vectors(working[-1] - working[0], target)
+   224	    mapped = (working - working[0]) @ alignment.T
+   225	    mapped = mapped @ geometry.rotation_about_axis(
+   226	        geometry.normalized(target),
+   227	        math.radians(azimuth_deg),
+   228	    ).T
+   229	    correction = target - mapped[-1]
+   230	    denominator = mapped.shape[0] - 1
+   231	    for index in range(1, mapped.shape[0]):
+   232	        mapped[index] += (index / denominator) * correction
+   233	    mapped += start
+   234	    return mapped
+   235	
+
+------------------------------------------------------------------
+CHAIN EVALUATION AND LOCAL SCORE: LINES 257-335
+------------------------------------------------------------------
+   257	def soft_penalty(distances: np.ndarray) -> float:
+   258	    return float(
+   259	        np.sum(np.maximum(SOFT_HEAVY_CLEARANCE_NM - distances, 0.0) ** 2)
+   260	    )
+   261	
+   262	
+   263	def evaluate_chain(
+   264	    chain: np.ndarray,
+   265	    start_neighbors: list[np.ndarray],
+   266	    finish_neighbors: list[np.ndarray],
+   267	    local_fixed: np.ndarray,
+   268	    geometry,
+   269	) -> dict[str, Any]:
+   270	    bonds = np.linalg.norm(np.diff(chain, axis=0), axis=1)
+   271	    max_bond_deviation = float(np.max(np.abs(bonds - BN)))
+   272	    angles = [
+   273	        geometry.angle_degrees(chain[index - 1], chain[index], chain[index + 1])
+   274	        for index in range(1, chain.shape[0] - 1)
+   275	    ]
+   276	    angles.extend(
+   277	        geometry.angle_degrees(neighbor, chain[0], chain[1])
+   278	        for neighbor in start_neighbors
+   279	    )
+   280	    angles.extend(
+   281	        geometry.angle_degrees(neighbor, chain[-1], chain[-2])
+   282	        for neighbor in finish_neighbors
+   283	    )
+   284	    angle_values = np.asarray(angles, dtype=float)
+   285	    angle_violations = int(
+   286	        np.sum(
+   287	            (angle_values < ANGLE_MIN_GATE_DEG)
+   288	            | (angle_values > ANGLE_MAX_GATE_DEG)
+   289	        )
+   290	    )
+   291	    self_distances = []
+   292	    for first in range(chain.shape[0]):
+   293	        for second in range(first + 2, chain.shape[0]):
+   294	            self_distances.append(float(np.linalg.norm(chain[first] - chain[second])))
+   295	    internal = chain[1:-1]
+   296	    fixed_distances = (
+   297	        np.linalg.norm(
+   298	            internal[:, None, :] - local_fixed[None, :, :],
+   299	            axis=2,
+   300	        ).reshape(-1)
+   301	        if local_fixed.size
+   302	        else np.asarray([], dtype=float)
+   303	    )
+   304	    nonbonded = np.concatenate((np.asarray(self_distances), fixed_distances))
+   305	    clashes = int(np.sum(nonbonded < MIN_HEAVY_CLEARANCE_NM))
+   306	    minimum_clearance = float(np.min(nonbonded))
+   307	    passes = (
+   308	        angle_violations == 0
+   309	        and clashes == 0
+   310	        and max_bond_deviation <= MAX_BOND_DEVIATION_NM
+   311	    )
+   312	    return {
+   313	        "passes": passes,
+   314	        "angle_violations": angle_violations,
+   315	        "minimum_angle_deg": float(np.min(angle_values)),
+   316	        "maximum_angle_deg": float(np.max(angle_values)),
+   317	        "maximum_bond_deviation_nm": max_bond_deviation,
+   318	        "clash_count": clashes,
+   319	        "minimum_clearance_nm": minimum_clearance,
+   320	        "clearance_penalty": soft_penalty(nonbonded),
+   321	    }
+   322	
+   323	
+   324	def local_score(candidate: dict[str, Any]) -> tuple[Any, ...]:
+   325	    return (
+   326	        int(candidate["clash_count"]),
+   327	        int(candidate["angle_violations"]),
+   328	        float(candidate["clearance_penalty"]),
+   329	        -float(candidate["minimum_angle_deg"]),
+   330	        -float(candidate["minimum_clearance_nm"]),
+   331	        float(candidate["maximum_bond_deviation_nm"]),
+   332	        float(candidate["library_distance_error_nm"]),
+   333	    )
+   334	
+   335	
+
+------------------------------------------------------------------
+BASE GRAPH AND FIXED COORDINATES: LINES 336-424
+------------------------------------------------------------------
+   336	def main() -> None:
+   337	    OUT.mkdir(parents=True, exist_ok=True)
+   338	    for required in (
+   339	        HELPER_GEOMETRY,
+   340	        HELPER_GRAPH,
+   341	        GRAPH_NODES,
+   342	        GRAPH_EDGES,
+   343	        GRAPH_SUMMARY,
+   344	        FIXED_COORDINATES,
+   345	        REDESIGN_SUMMARY,
+   346	    ):
+   347	        require_file(required)
+   348	
+   349	    geometry = load_module(HELPER_GEOMETRY, "day024_geometry_helper")
+   350	    graph_tools = load_module(HELPER_GRAPH, "day024_graph_helper")
+   351	
+   352	    graph_summary = read_one(GRAPH_SUMMARY)
+   353	    redesign_summary = read_one(REDESIGN_SUMMARY)
+   354	    node_rows = read_rows(GRAPH_NODES)
+   355	    edge_rows = read_rows(GRAPH_EDGES)
+   356	    coordinate_rows = read_rows(FIXED_COORDINATES)
+   357	
+   358	    if graph_summary.get("decision") != EXPECTED_GRAPH_DECISION:
+   359	        raise RuntimeError("Gate 3I graph is not accepted.")
+   360	    if redesign_summary.get("decision") != EXPECTED_REDESIGN_DECISION:
+   361	        raise RuntimeError("Gate 3K.1 does not contain the expected redesign decision.")
+   362	
+   363	    nodes = {row["node_id"]: row for row in node_rows}
+   364	    coordinates = {
+   365	        row["node_id"]: np.asarray(
+   366	            [parse_float(row, "x_nm"), parse_float(row, "y_nm"), parse_float(row, "z_nm")],
+   367	            dtype=float,
+   368	        )
+   369	        for row in coordinate_rows
+   370	    }
+   371	    if set(nodes) != set(coordinates):
+   372	        raise RuntimeError("Gate 3I nodes and Gate 3K coordinates disagree.")
+   373	
+   374	    current_adjacency = {node_id: set() for node_id in nodes}
+   375	    for row in edge_rows:
+   376	        current_adjacency[row["source_node"]].add(row["target_node"])
+   377	        current_adjacency[row["target_node"]].add(row["source_node"])
+   378	
+   379	    old_bridge_ids = {
+   380	        node_id
+   381	        for node_id, row in nodes.items()
+   382	        if row["node_type"] == "ALTERNATING_BN_TRIMER_BRIDGE"
+   383	    }
+   384	    fixed_heavy_ids = [
+   385	        node_id
+   386	        for node_id, row in nodes.items()
+   387	        if row["element"] != "H" and node_id not in old_bridge_ids
+   388	    ]
+   389	    fixed_heavy_set = set(fixed_heavy_ids)
+   390	    base_adjacency = {node_id: set() for node_id in fixed_heavy_ids}
+   391	    for row in edge_rows:
+   392	        first = row["source_node"]
+   393	        second = row["target_node"]
+   394	        if first in fixed_heavy_set and second in fixed_heavy_set:
+   395	            base_adjacency[first].add(second)
+   396	            base_adjacency[second].add(first)
+   397	
+   398	    libraries: dict[int, dict[str, np.ndarray]] = {}
+   399	    library_rows = []
+   400	    print("Generating deterministic full-density longer-bridge libraries...")
+   401	    for bridge_atoms in BRIDGE_CLASSES:
+   402	        library = build_library(bridge_atoms)
+   403	        libraries[bridge_atoms] = library
+   404	        library_rows.append(
+   405	            {
+   406	                "bridge_atoms_per_attachment": bridge_atoms,
+   407	                "bonds_per_path": bridge_atoms + 1,
+   408	                "sample_count": int(library["chains"].shape[0]),
+   409	                "minimum_endpoint_distance_nm": float(np.min(library["distances"])),
+   410	                "median_endpoint_distance_nm": float(np.median(library["distances"])),
+   411	                "maximum_endpoint_distance_nm": float(np.max(library["distances"])),
+   412	                "contour_length_nm": (bridge_atoms + 1) * BN,
+   413	                "random_seed": 35000 + bridge_atoms,
+   414	            }
+   415	        )
+   416	        print(
+   417	            f"  m={bridge_atoms}: samples={LIBRARY_SAMPLES}; "
+   418	            f"span={np.min(library['distances']):.6f}-{np.max(library['distances']):.6f} nm"
+   419	        )
+   420	    write_rows(LIBRARY_CSV, library_rows)
+   421	
+   422	    pair_cache: dict[tuple[str, int, str, str], dict[str, Any]] = {}
+   423	    pair_rows: list[dict[str, Any]] = []
+   424	
+
+------------------------------------------------------------------
+PAIR SCREEN IMPLEMENTATION: LINES 425-521
+------------------------------------------------------------------
+   425	    def screen_pair(end: str, bridge_atoms: int, seed_id: str, annulus_id: str) -> dict[str, Any]:
+   426	        key = (end, bridge_atoms, seed_id, annulus_id)
+   427	        if key in pair_cache:
+   428	            return pair_cache[key]
+   429	        start = coordinates[seed_id]
+   430	        finish = coordinates[annulus_id]
+   431	        start_neighbors = [coordinates[node_id] for node_id in base_adjacency[seed_id]]
+   432	        finish_neighbors = [coordinates[node_id] for node_id in base_adjacency[annulus_id]]
+   433	        if len(start_neighbors) != 2 or len(finish_neighbors) != 2:
+   434	            raise RuntimeError(f"{key}: endpoint base-heavy neighbors are not 2/2.")
+   435	        midpoint = 0.5 * (start + finish)
+   436	        local_ids = [
+   437	            node_id
+   438	            for node_id in fixed_heavy_ids
+   439	            if node_id not in {seed_id, annulus_id}
+   440	            and float(np.linalg.norm(coordinates[node_id] - midpoint)) <= LOCAL_RADIUS_NM
+   441	        ]
+   442	        local_fixed = (
+   443	            np.asarray([coordinates[node_id] for node_id in local_ids], dtype=float)
+   444	            if local_ids
+   445	            else np.empty((0, 3), dtype=float)
+   446	        )
+   447	        library = libraries[bridge_atoms]
+   448	        target_distance = float(np.linalg.norm(finish - start))
+   449	        errors = np.abs(library["distances"] - target_distance)
+   450	        count = min(NEAREST_CONFORMERS, errors.size)
+   451	        indices = np.argpartition(errors, count - 1)[:count]
+   452	        indices = indices[np.argsort(errors[indices])]
+   453	        feasible: list[dict[str, Any]] = []
+   454	        best_failed: dict[str, Any] | None = None
+   455	        tested = 0
+   456	        for library_index in indices:
+   457	            base_chain = library["chains"][int(library_index)]
+   458	            for mirror in (False, True):
+   459	                for azimuth in AZIMUTHS_DEG:
+   460	                    tested += 1
+   461	                    mapped = map_chain_generic(
+   462	                        base_chain,
+   463	                        start,
+   464	                        finish,
+   465	                        azimuth,
+   466	                        mirror,
+   467	                        geometry,
+   468	                    )
+   469	                    metrics = evaluate_chain(
+   470	                        mapped,
+   471	                        start_neighbors,
+   472	                        finish_neighbors,
+   473	                        local_fixed,
+   474	                        geometry,
+   475	                    )
+   476	                    candidate = {
+   477	                        "chain": mapped,
+   478	                        "library_index": int(library_index),
+   479	                        "library_distance_error_nm": float(errors[int(library_index)]),
+   480	                        "mirror": mirror,
+   481	                        "azimuth_deg": azimuth,
+   482	                        **metrics,
+   483	                    }
+   484	                    if metrics["passes"]:
+   485	                        feasible.append(candidate)
+   486	                        if len(feasible) >= PAIR_PASS_TARGET:
+   487	                            break
+   488	                    elif best_failed is None or local_score(candidate) < local_score(best_failed):
+   489	                        best_failed = candidate
+   490	                if len(feasible) >= PAIR_PASS_TARGET:
+   491	                    break
+   492	            if len(feasible) >= PAIR_PASS_TARGET:
+   493	                break
+   494	        feasible.sort(key=local_score)
+   495	        feasible = feasible[:PAIR_POOL_SIZE]
+   496	        best = feasible[0] if feasible else best_failed
+   497	        if best is None:
+   498	            raise RuntimeError(f"No candidates tested for {key}")
+   499	        result = {
+   500	            "end": end,
+   501	            "bridge_atoms": bridge_atoms,
+   502	            "seed_node": seed_id,
+   503	            "annulus_node": annulus_id,
+   504	            "target_distance_nm": target_distance,
+   505	            "local_fixed_heavy_atoms": len(local_ids),
+   506	            "candidates_tested": tested,
+   507	            "pair_feasible": bool(feasible),
+   508	            "retained_feasible_candidates": len(feasible),
+   509	            "best_library_distance_error_nm": float(best["library_distance_error_nm"]),
+   510	            "best_minimum_angle_deg": float(best["minimum_angle_deg"]),
+   511	            "best_maximum_angle_deg": float(best["maximum_angle_deg"]),
+   512	            "best_maximum_bond_deviation_nm": float(best["maximum_bond_deviation_nm"]),
+   513	            "best_minimum_clearance_nm": float(best["minimum_clearance_nm"]),
+   514	            "best_angle_violations": int(best["angle_violations"]),
+   515	            "best_clash_count": int(best["clash_count"]),
+   516	            "pool": feasible,
+   517	        }
+   518	        pair_cache[key] = result
+   519	        pair_rows.append({key: value for key, value in result.items() if key != "pool"})
+   520	        return result
+   521	
+
+------------------------------------------------------------------
+GLOBAL MAPPING REFINEMENT: LINES 522-589
+------------------------------------------------------------------
+   522	    def refine_mapping(pair_results: list[dict[str, Any]]) -> dict[str, Any]:
+   523	        if any(not result["pair_feasible"] for result in pair_results):
+   524	            return {
+   525	                "feasible": False,
+   526	                "interbridge_clashes": -1,
+   527	                "minimum_interbridge_clearance_nm": 0.0,
+   528	                "minimum_angle_deg": min(float(result["best_minimum_angle_deg"]) for result in pair_results),
+   529	                "maximum_bond_deviation_nm": max(float(result["best_maximum_bond_deviation_nm"]) for result in pair_results),
+   530	                "minimum_local_clearance_nm": min(float(result["best_minimum_clearance_nm"]) for result in pair_results),
+   531	                "indices": [],
+   532	            }
+   533	        indices = [0] * len(pair_results)
+   534	        for sweep in range(GLOBAL_SWEEPS):
+   535	            changed = 0
+   536	            order = range(len(pair_results)) if sweep % 2 == 0 else reversed(range(len(pair_results)))
+   537	            for path_index in order:
+   538	                other_points = []
+   539	                for other_index, result in enumerate(pair_results):
+   540	                    if other_index != path_index:
+   541	                        other_points.extend(result["pool"][indices[other_index]]["chain"][1:-1])
+   542	                other_array = np.asarray(other_points, dtype=float)
+   543	                scores = []
+   544	                for candidate in pair_results[path_index]["pool"]:
+   545	                    internal = candidate["chain"][1:-1]
+   546	                    distances = np.linalg.norm(
+   547	                        internal[:, None, :] - other_array[None, :, :],
+   548	                        axis=2,
+   549	                    ).reshape(-1)
+   550	                    scores.append(
+   551	                        (
+   552	                            int(np.sum(distances < MIN_HEAVY_CLEARANCE_NM)),
+   553	                            soft_penalty(distances),
+   554	                            -min(float(candidate["minimum_clearance_nm"]), float(np.min(distances))),
+   555	                            -float(candidate["minimum_angle_deg"]),
+   556	                            float(candidate["maximum_bond_deviation_nm"]),
+   557	                        )
+   558	                    )
+   559	                best_index = min(range(len(scores)), key=lambda index: scores[index])
+   560	                if best_index != indices[path_index]:
+   561	                    indices[path_index] = best_index
+   562	                    changed += 1
+   563	            if changed == 0:
+   564	                break
+   565	        inter_distances = []
+   566	        for first in range(len(pair_results)):
+   567	            first_points = pair_results[first]["pool"][indices[first]]["chain"][1:-1]
+   568	            for second in range(first + 1, len(pair_results)):
+   569	                second_points = pair_results[second]["pool"][indices[second]]["chain"][1:-1]
+   570	                inter_distances.extend(
+   571	                    np.linalg.norm(
+   572	                        first_points[:, None, :] - second_points[None, :, :],
+   573	                        axis=2,
+   574	                    ).reshape(-1)
+   575	                )
+   576	        inter_values = np.asarray(inter_distances, dtype=float)
+   577	        clashes = int(np.sum(inter_values < MIN_HEAVY_CLEARANCE_NM))
+   578	        selected = [result["pool"][indices[index]] for index, result in enumerate(pair_results)]
+   579	        return {
+   580	            "feasible": clashes == 0,
+   581	            "interbridge_clashes": clashes,
+   582	            "minimum_interbridge_clearance_nm": float(np.min(inter_values)),
+   583	            "minimum_angle_deg": min(float(candidate["minimum_angle_deg"]) for candidate in selected),
+   584	            "maximum_bond_deviation_nm": max(float(candidate["maximum_bond_deviation_nm"]) for candidate in selected),
+   585	            "minimum_local_clearance_nm": min(float(candidate["minimum_clearance_nm"]) for candidate in selected),
+   586	            "indices": indices,
+   587	        }
+   588	
+   589	    mapping_rows: list[dict[str, Any]] = []
+
+------------------------------------------------------------------
+MAPPING OBJECT CONSTRUCTION AND SELECTION: LINES 590-708
+------------------------------------------------------------------
+   590	    mapping_objects: dict[str, dict[str, Any]] = {}
+   591	    class_rows: list[dict[str, Any]] = []
+   592	    best_by_class_end: dict[tuple[int, str], dict[str, Any]] = {}
+   593	
+   594	    print("Screening 15-attachment longer-bridge mappings...")
+   595	    for bridge_atoms in BRIDGE_CLASSES:
+   596	        feasible_counts: dict[str, int] = {}
+   597	        for end in ("LOWER", "UPPER"):
+   598	            seeds = sorted(
+   599	                [
+   600	                    row
+   601	                    for row in node_rows
+   602	                    if row["end"] == end
+   603	                    and row["node_type"] == "HEXAGONAL_EDGE_COMPLETION_SEED"
+   604	                ],
+   605	                key=lambda row: parse_int(row, "circumferential_index"),
+   606	            )
+   607	            seed_element = seeds[0]["element"]
+   608	            if len(seeds) != 30 or any(row["element"] != seed_element for row in seeds):
+   609	                raise RuntimeError(f"{end}: invalid seed population.")
+   610	            annulus_element = required_annulus_element(seed_element, bridge_atoms)
+   611	            outer = sorted(
+   612	                [
+   613	                    row
+   614	                    for row in node_rows
+   615	                    if row["end"] == end
+   616	                    and row["node_type"] == "ANNULUS_OUTER_BOUNDARY"
+   617	                    and row["element"] == annulus_element
+   618	                ],
+   619	                key=lambda row: parse_float(row, "angle_turns"),
+   620	            )
+   621	            if len(outer) != 15:
+   622	                raise RuntimeError(f"{end}: invalid outer-annulus endpoint population.")
+   623	            feasible_mappings = []
+   624	            for parity in (0, 1):
+   625	                selected_seeds = [
+   626	                    row
+   627	                    for row in seeds
+   628	                    if parse_int(row, "circumferential_index") % 2 == parity
+   629	                ]
+   630	                for orientation in (1, -1):
+   631	                    for rotation in range(15):
+   632	                        mapped_outer = [
+   633	                            outer[(orientation * index + rotation) % 15]
+   634	                            for index in range(15)
+   635	                        ]
+   636	                        pair_results = []
+   637	                        for seed_row, outer_row in zip(selected_seeds, mapped_outer):
+   638	                            pair_results.append(
+   639	                                screen_pair(
+   640	                                    end,
+   641	                                    bridge_atoms,
+   642	                                    seed_row["node_id"],
+   643	                                    outer_row["node_id"],
+   644	                                )
+   645	                            )
+   646	                            if not pair_results[-1]["pair_feasible"]:
+   647	                                break
+   648	                        result = (
+   649	                            refine_mapping(pair_results)
+   650	                            if len(pair_results) == 15
+   651	                            else {
+   652	                                "feasible": False,
+   653	                                "interbridge_clashes": -1,
+   654	                                "minimum_interbridge_clearance_nm": 0.0,
+   655	                                "minimum_angle_deg": min(float(item["best_minimum_angle_deg"]) for item in pair_results),
+   656	                                "maximum_bond_deviation_nm": max(float(item["best_maximum_bond_deviation_nm"]) for item in pair_results),
+   657	                                "minimum_local_clearance_nm": min(float(item["best_minimum_clearance_nm"]) for item in pair_results),
+   658	                                "indices": [],
+   659	                            }
+   660	                        )
+   661	                        mapping_id = f"M{bridge_atoms}:{end}:P{parity}:O{orientation}:R{rotation}"
+   662	                        row = {
+   663	                            "mapping_id": mapping_id,
+   664	                            "bridge_atoms_per_attachment": bridge_atoms,
+   665	                            "attachments_per_end": 15,
+   666	                            "end": end,
+   667	                            "seed_element": seed_element,
+   668	                            "bridge_element_sequence": "-".join(bridge_sequence(seed_element, bridge_atoms)),
+   669	                            "annulus_endpoint_element": annulus_element,
+   670	                            "seed_parity": parity,
+   671	                            "orientation": orientation,
+   672	                            "rotation": rotation,
+   673	                            "endpoint_pairs_evaluated": len(pair_results),
+   674	                            "all_endpoint_pairs_locally_feasible": len(pair_results) == 15 and all(item["pair_feasible"] for item in pair_results),
+   675	                            "mapping_geometrically_feasible": bool(result["feasible"]),
+   676	                            "interbridge_clashes": int(result["interbridge_clashes"]),
+   677	                            "minimum_interbridge_clearance_nm": float(result["minimum_interbridge_clearance_nm"]),
+   678	                            "minimum_angle_deg": float(result["minimum_angle_deg"]),
+   679	                            "maximum_bond_deviation_nm": float(result["maximum_bond_deviation_nm"]),
+   680	                            "minimum_local_clearance_nm": float(result["minimum_local_clearance_nm"]),
+   681	                            "seed_nodes": " | ".join(item["node_id"] for item in selected_seeds),
+   682	                            "annulus_nodes": " | ".join(item["node_id"] for item in mapped_outer),
+   683	                        }
+   684	                        mapping_rows.append(row)
+   685	                        mapping_object = {
+   686	                            "row": row,
+   687	                            "seeds": selected_seeds,
+   688	                            "outer": mapped_outer,
+   689	                            "pair_results": pair_results,
+   690	                            "indices": result["indices"],
+   691	                        }
+   692	                        mapping_objects[mapping_id] = mapping_object
+   693	                        if result["feasible"]:
+   694	                            feasible_mappings.append(mapping_object)
+   695	            feasible_counts[end] = len(feasible_mappings)
+   696	            if feasible_mappings:
+   697	                feasible_mappings.sort(
+   698	                    key=lambda item: (
+   699	                        -float(item["row"]["minimum_angle_deg"]),
+   700	                        -min(
+   701	                            float(item["row"]["minimum_local_clearance_nm"]),
+   702	                            float(item["row"]["minimum_interbridge_clearance_nm"]),
+   703	                        ),
+   704	                        float(item["row"]["maximum_bond_deviation_nm"]),
+   705	                    )
+   706	                )
+   707	                best_by_class_end[(bridge_atoms, end)] = feasible_mappings[0]
+   708	            print(f"  m={bridge_atoms}, {end}: feasible mappings={len(feasible_mappings)}/60")
+
+R2 four-atom exact conformer selector source: COMPLETE

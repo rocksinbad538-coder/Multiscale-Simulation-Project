@@ -1,0 +1,31 @@
+Day024 R2 selected full-density four-atom BN bridge graph completed.
+Removed old trimer heavy edges / old H edges: 120/174
+Bridge paths lower/upper/total: 15/15/30
+Bridge atoms lower/upper/total: 60/60/120
+LOWER mapping / sequence / bridge B-N / H seed-outer-inner-bridge-other-total: M4:LOWER:P0:O-1:R14/B-N-B-N/30-30/15-15-12-60-0-102
+UPPER mapping / sequence / bridge B-N / H seed-outer-inner-bridge-other-total: M4:UPPER:P0:O-1:R0/N-B-N-B/30-30/15-15-12-60-0-102
+Total heavy / H / all nodes: 2112/204/2316
+Heavy / H edges: 3066/204
+Heavy total-degree / H-degree failures: 0/0
+Nonheteropolar heavy edges: 0
+Full/heavy components / bipartite / four-cycles: 1/1/True/0
+Paths without cycle / bridge-cycle min-max: 0/16/16
+Decision: R2_SELECTED_FULL_DENSITY_FOUR_ATOM_BN_BRIDGE_GRAPH_VALIDATED
+Failed gates: NONE
+Static coordinate embedding authorized: YES
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: BUILD_AND_VALIDATE_R2_SELECTED_FOUR_ATOM_BN_BRIDGE_STATIC_COORDINATE_EMBEDDING
+Wrote: runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_graph_nodes.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_graph_edges.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_paths.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_graph_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_graph_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_graph.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/R2_SELECTED_FULL_DENSITY_LONGER_BN_BRIDGE_GRAPH_DAY024.md

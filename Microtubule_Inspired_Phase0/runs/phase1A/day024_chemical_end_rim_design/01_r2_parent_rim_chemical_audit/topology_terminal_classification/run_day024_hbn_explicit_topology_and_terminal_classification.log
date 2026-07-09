@@ -1,0 +1,27 @@
+Day024 HBN explicit-topology and terminal-site classification completed.
+Selected topology: parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded_kang2000_improperGeo100.top
+Topology include files / HBN atom records: 4/1680
+Explicit / geometry bonds: 2460/2460
+Explicit-only / geometry-only bonds: 0/0
+Explicit degree counts d0/d1/d2/d3/d4+: 0/60/0/1620/0
+Geometry degree counts d0/d1/d2/d3/d4+: 0/60/0/1620/0
+Terminal B / N atoms total: 30/30
+Lower terminal atoms / B / N / axial mean / axial std / radius: 30/30/0/-3.008714/0.000000/1.199126
+Upper terminal atoms / B / N / axial mean / axial std / radius: 30/0/30/3.009286/0.000000/1.199126
+Explicit bond mean/median/min/max: 0.144973/0.145000/0.143778/0.146034 nm
+Decision: HBN_EXPLICIT_TOPOLOGY_AND_TERMINAL_COORDINATION_CLASSIFIED
+Failed gates: NONE
+Parent-rim auditor repair authorized: YES
+Explicit geometry generation authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: REPAIR_R2_PARENT_RIM_AUDITOR_FOR_EXPLICIT_DEGREE1_TERMINI
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/topology_terminal_classification/hbn_explicit_topology_terminal_atoms.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/topology_terminal_classification/hbn_explicit_topology_terminal_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/topology_terminal_classification/hbn_explicit_vs_geometry_bond_comparison.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/topology_terminal_classification/hbn_topology_include_sources.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/topology_terminal_classification/hbn_terminal_coordination_classification_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/topology_terminal_classification/hbn_terminal_coordination_classification_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/topology_terminal_classification/hbn_terminal_coordination_classification.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/01_r2_parent_rim_chemical_audit/topology_terminal_classification/HBN_EXPLICIT_TOPOLOGY_AND_TERMINAL_CLASSIFICATION_DAY024.md

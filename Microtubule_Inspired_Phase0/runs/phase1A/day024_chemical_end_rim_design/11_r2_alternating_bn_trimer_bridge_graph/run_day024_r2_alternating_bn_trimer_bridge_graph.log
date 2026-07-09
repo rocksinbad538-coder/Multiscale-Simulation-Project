@@ -1,0 +1,35 @@
+Day024 R2 alternating BN trimer-bridge graph completed.
+Rejected direct seed-annulus edges removed / remaining: 30/0
+Bridge paths lower/upper/total: 15/15/30
+Bridge atoms lower/upper/total: 45/45/90
+Bridge heavy edges total: 120
+LOWER sequence / bridge B/N / H seed/outer/inner/bridge/total: B-N-B/30/15/15/15/12/45/87
+LOWER gap range / selected / bridge-cycle min-max: 0.050000-0.304100/0.177100/14-14
+UPPER sequence / bridge B/N / H seed/outer/inner/bridge/total: N-B-N/15/30/15/15/12/45/87
+UPPER gap range / selected / bridge-cycle min-max: 0.050000-0.304100/0.177100/14-14
+Total heavy / H / all nodes: 2082/174/2256
+Heavy / H edges: 3036/174
+Heavy / bridge-heavy / H degree failures: 0/0/0
+Nonheteropolar heavy edges: 0
+Full/heavy components / bipartite / girth / four-cycles: 1/1/True/6/0
+Bridge paths without cycle / bridge-cycle min-max: 0/14/14
+Decision: R2_ALTERNATING_BN_TRIMER_BRIDGE_GRAPH_VALIDATED
+Failed gates: NONE
+Candidate is final chemistry: NO
+Static coordinate embedding authorized: YES
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: BUILD_AND_VALIDATE_R2_ALTERNATING_BN_TRIMER_BRIDGE_STATIC_COORDINATE_EMBEDDING
+Wrote: runs/phase1A/day024_chemical_end_rim_design/11_r2_alternating_bn_trimer_bridge_graph/r2_alternating_bn_trimer_bridge_graph_nodes.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/11_r2_alternating_bn_trimer_bridge_graph/r2_alternating_bn_trimer_bridge_graph_edges.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/11_r2_alternating_bn_trimer_bridge_graph/r2_alternating_bn_trimer_bridge_paths.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/11_r2_alternating_bn_trimer_bridge_graph/r2_alternating_bn_trimer_bridge_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/11_r2_alternating_bn_trimer_bridge_graph/r2_alternating_bn_trimer_bridge_graph_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/11_r2_alternating_bn_trimer_bridge_graph/r2_alternating_bn_trimer_bridge_graph_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/11_r2_alternating_bn_trimer_bridge_graph/r2_alternating_bn_trimer_bridge_graph.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/11_r2_alternating_bn_trimer_bridge_graph/r2_alternating_bn_trimer_bridge_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/11_r2_alternating_bn_trimer_bridge_graph/R2_ALTERNATING_BN_TRIMER_BRIDGE_GRAPH_DAY024.md

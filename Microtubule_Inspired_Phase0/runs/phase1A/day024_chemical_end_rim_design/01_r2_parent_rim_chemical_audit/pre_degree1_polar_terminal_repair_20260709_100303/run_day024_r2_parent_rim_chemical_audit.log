@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/audit_day024_r2_parent_rim_and_chemical_constraints.py", line 3172, in <module>
+    main()
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/audit_day024_r2_parent_rim_and_chemical_constraints.py", line 1580, in main
+    end_geometry_metrics(
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/audit_day024_r2_parent_rim_and_chemical_constraints.py", line 945, in end_geometry_metrics
+    raise RuntimeError(
+RuntimeError: No atoms found for LOWER.

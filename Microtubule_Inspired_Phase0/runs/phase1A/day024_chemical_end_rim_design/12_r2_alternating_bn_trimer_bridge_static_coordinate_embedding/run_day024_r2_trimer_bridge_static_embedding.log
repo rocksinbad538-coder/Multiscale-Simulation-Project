@@ -1,0 +1,37 @@
+Day024 R2 alternating BN trimer-bridge static coordinate embedding completed.
+Coordinate nodes parent/heavy/H/total: 1680/2082/174/2256
+Parent coordinates unchanged: YES
+Conformer library / selected bridges / maximum endpoint mismatch: 40176/30/0.000134 nm
+Maximum BN / bridge-BN / XH bond deviations: 0.001195/0.000029/0.000000 nm
+Critical angles min/mean/max/RMSdev120: 23.689/117.331/171.568/15.628 deg
+LOWER gap/center-offset/endpoint-fit-RMS/endpoint-distance-min-max/aperture/error/outer-radius/error: 0.177100/0.000000/0.328908/0.250719-0.475343/0.816386/0.027424/1.074038/0.104315
+LOWER conformers with preexisting heavy clashes / minimum selected clearance: 3/0.059513 nm
+UPPER gap/center-offset/endpoint-fit-RMS/endpoint-distance-min-max/aperture/error/outer-radius/error: 0.177100/0.000000/0.328908/0.250719-0.475343/0.816386/0.027424/1.074038/0.104315
+UPPER conformers with preexisting heavy clashes / minimum selected clearance: 3/0.079171 nm
+Minimum nonbonded heavy-heavy / H-heavy / H-H: 0.059513/0.029396/0.060473 nm
+Clash counts heavy-heavy / H-heavy / H-H: 6/19/0
+Maximum lower-upper asymmetry: 0.000000 nm
+Decision: R2_ALTERNATING_BN_TRIMER_BRIDGE_STATIC_COORDINATE_EMBEDDING_REQUIRES_CONFORMER_REFINEMENT
+Failed gates: critical_valence_angle_minimum_is_at_least_70deg | no_nonbonded_heavy_heavy_clashes | no_nonbonded_H_heavy_clashes
+Candidate is final chemistry: NO
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: REFINE_R2_TRIMER_BRIDGE_CONFORMERS_AND_H_PASSIVANT_ORIENTATIONS
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_coordinates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_selected_conformers.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_bond_lengths.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_bond_type_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_angle_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_nonbonded_contact_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_embedding_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_embedding_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_embedding_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_embedding.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_embedding_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_embedding.xyz
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_embedding.pdb
+Wrote: runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/R2_ALTERNATING_BN_TRIMER_BRIDGE_STATIC_EMBEDDING_DAY024.md

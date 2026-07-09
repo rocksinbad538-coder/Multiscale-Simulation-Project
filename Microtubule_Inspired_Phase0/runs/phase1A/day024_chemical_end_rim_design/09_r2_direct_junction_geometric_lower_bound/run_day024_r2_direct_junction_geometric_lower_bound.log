@@ -1,0 +1,32 @@
+Day024 R2 direct-junction geometric lower-bound audit completed.
+Mapping/transform fits screened total: 600
+LOWER fits / local-pass count: 300/0
+LOWER best rigid RMS/max/gap: 0.198197/0.296148/0.000020 nm
+LOWER best similarity RMS/max/strain/annulus-bond-maxdev: 0.199928/0.307035/0.068369/0.009912
+LOWER best affine RMS/max/strain/anisotropy: 0.199928/0.307033/0.068395/1.000049
+LOWER local constrained optimization feasible: False
+UPPER fits / local-pass count: 300/0
+UPPER best rigid RMS/max/gap: 0.198197/0.296148/0.000020 nm
+UPPER best similarity RMS/max/strain/annulus-bond-maxdev: 0.199928/0.307035/0.068369/0.009912
+UPPER best affine RMS/max/strain/anisotropy: 0.199928/0.307033/0.068395/1.000049
+UPPER local constrained optimization feasible: False
+Decision: R2_PARTIAL_ATTACHMENT_DIRECT_BN_JUNCTION_GEOMETRIC_LOWER_BOUND_FAILED
+Failed audit-integrity gates: NONE
+Local constrained optimization authorized: NO
+Current direct B-N attachment graph retained: NO
+Coordinate update authorized: NO
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: REDESIGN_R2_ANNULUS_JUNCTION_WITH_EXPLICIT_BRIDGING_LINKER_OR_REVISED_ATTACHMENT_TOPOLOGY
+Wrote: runs/phase1A/day024_chemical_end_rim_design/09_r2_direct_junction_geometric_lower_bound/r2_direct_junction_all_mapping_fits.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/09_r2_direct_junction_geometric_lower_bound/r2_direct_junction_best_fits.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/09_r2_direct_junction_geometric_lower_bound/r2_direct_junction_geometric_lower_bound_end_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/09_r2_direct_junction_geometric_lower_bound/r2_direct_junction_geometric_lower_bound_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/09_r2_direct_junction_geometric_lower_bound/r2_direct_junction_geometric_lower_bound_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/09_r2_direct_junction_geometric_lower_bound/r2_direct_junction_geometric_lower_bound.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/09_r2_direct_junction_geometric_lower_bound/r2_direct_junction_geometric_lower_bound_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/09_r2_direct_junction_geometric_lower_bound/R2_DIRECT_JUNCTION_GEOMETRIC_LOWER_BOUND_DAY024.md

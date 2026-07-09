@@ -1,0 +1,1198 @@
+======================================================================
+R2 FOUR-ATOM BRIDGE STATIC EMBEDDING PREFLIGHT
+======================================================================
+Thu Jul  9 14:17:56 CDT 2026
+
+------------------------------------------------------------------
+SCREEN SCRIPT
+------------------------------------------------------------------
+FILE=scripts/phase1A/screen_day024_r2_full_density_longer_bn_bridge_classes.py
+    1055 scripts/phase1A/screen_day024_r2_full_density_longer_bn_bridge_classes.py
+bc1d0a080c11e0a3136f94329481e0029d79fac9197e007911ec98afdcd66fca  scripts/phase1A/screen_day024_r2_full_density_longer_bn_bridge_classes.py
+
+------------------------------------------------------------------
+TOP-LEVEL CONSTANTS RELEVANT TO CONFORMER GENERATION
+------------------------------------------------------------------
+14:ROOT = Path(__file__).resolve().parents[2]
+15:BASE = ROOT / "runs/phase1A/day024_chemical_end_rim_design"
+16:SCRIPTS = ROOT / "scripts/phase1A"
+17:G3I = BASE / "11_r2_alternating_bn_trimer_bridge_graph"
+18:G3K = BASE / "13_r2_trimer_bridge_conformer_and_h_refinement"
+19:G3K1 = BASE / "14_r2_trimer_bridge_search_completeness_audit"
+20:OUT = BASE / "15_r2_full_density_longer_bn_bridge_screen"
+22:HELPER_GEOMETRY = SCRIPTS / "audit_day024_r2_trimer_bridge_search_completeness.py"
+23:HELPER_GRAPH = SCRIPTS / "build_and_validate_day024_r2_alternating_bn_trimer_bridge_graph.py"
+24:GRAPH_NODES = G3I / "r2_alternating_bn_trimer_bridge_graph_nodes.csv"
+25:GRAPH_EDGES = G3I / "r2_alternating_bn_trimer_bridge_graph_edges.csv"
+26:GRAPH_SUMMARY = G3I / "r2_alternating_bn_trimer_bridge_graph_summary.csv"
+27:FIXED_COORDINATES = G3K / "r2_trimer_bridge_refined_coordinates.csv"
+28:REDESIGN_SUMMARY = G3K1 / "r2_trimer_search_completeness_summary.csv"
+30:LIBRARY_CSV = OUT / "r2_full_density_longer_bridge_library_summary.csv"
+31:PAIR_CSV = OUT / "r2_full_density_longer_bridge_pair_screen.csv"
+32:MAPPING_CSV = OUT / "r2_full_density_longer_bridge_mapping_screen.csv"
+33:CLASS_CSV = OUT / "r2_full_density_longer_bridge_class_summary.csv"
+34:SELECTED_CSV = OUT / "r2_full_density_longer_bridge_selected_candidate.csv"
+35:SUMMARY_CSV = OUT / "r2_full_density_longer_bridge_screen_summary.csv"
+36:GATES_CSV = OUT / "r2_full_density_longer_bridge_screen_gates.csv"
+37:JSON_OUT = OUT / "r2_full_density_longer_bridge_screen.json"
+38:MANIFEST_CSV = OUT / "r2_full_density_longer_bridge_source_manifest.csv"
+39:REPORT_MD = OUT / "R2_FULL_DENSITY_LONGER_BN_BRIDGE_SCREEN_DAY024.md"
+41:EXPECTED_GRAPH_DECISION = "R2_ALTERNATING_BN_TRIMER_BRIDGE_GRAPH_VALIDATED"
+42:EXPECTED_REDESIGN_DECISION = (
+43:    "R2_TRIMER_BRIDGE_TOPOLOGY_REDESIGN_CONFIRMED_"
+44:    "BY_EXPANDED_CONFORMER_SEARCH"
+46:PASS_DECISION = "R2_FULL_DENSITY_LONGER_BN_BRIDGE_CLASS_IDENTIFIED"
+47:SPARSE_DECISION = "R2_FULL_DENSITY_LONGER_BN_BRIDGES_REQUIRE_SPARSE_ATTACHMENT_SCREEN"
+49:BN = 0.144973
+50:BRIDGE_CLASSES = (4, 5, 6)
+51:ATTACHMENTS_PER_END = 15
+52:LIBRARY_SAMPLES = 40000
+53:NEAREST_CONFORMERS = 100
+54:AZIMUTHS_DEG = tuple(float(value) for value in range(0, 360, 15))
+55:PAIR_POOL_SIZE = 12
+56:PAIR_PASS_TARGET = 36
+57:GLOBAL_SWEEPS = 8
+58:LOCAL_RADIUS_NM = 0.95
+59:ANGLE_MIN_LIBRARY_DEG = 105.0
+60:ANGLE_MAX_LIBRARY_DEG = 135.0
+61:ANGLE_MIN_GATE_DEG = 70.0
+62:ANGLE_MAX_GATE_DEG = 175.0
+63:MAX_BOND_DEVIATION_NM = 0.003
+64:MIN_HEAVY_CLEARANCE_NM = 0.120
+65:SOFT_HEAVY_CLEARANCE_NM = 0.140
+175:    rng = np.random.default_rng(35000 + bridge_atoms)
+177:        rng.uniform(
+178:            ANGLE_MIN_LIBRARY_DEG,
+179:            ANGLE_MAX_LIBRARY_DEG,
+180:            size=(LIBRARY_SAMPLES, bridge_atoms),
+183:    torsions = rng.uniform(
+186:        size=(LIBRARY_SAMPLES, bridge_atoms - 1),
+188:    p0 = np.zeros((LIBRARY_SAMPLES, 3), dtype=float)
+189:    p1 = np.tile(np.asarray([BN, 0.0, 0.0]), (LIBRARY_SAMPLES, 1))
+191:        (-np.cos(angles[:, 0]), np.sin(angles[:, 0]), np.zeros(LIBRARY_SAMPLES))
+244:def required_annulus_element(seed_element: str, bridge_atoms: int) -> str:
+245:    return seed_element if (bridge_atoms + 1) % 2 == 0 else opposite(seed_element)
+248:def bridge_sequence(seed_element: str, bridge_atoms: int) -> list[str]:
+250:    current = seed_element
+259:        np.sum(np.maximum(SOFT_HEAVY_CLEARANCE_NM - distances, 0.0) ** 2)
+287:            (angle_values < ANGLE_MIN_GATE_DEG)
+288:            | (angle_values > ANGLE_MAX_GATE_DEG)
+305:    clashes = int(np.sum(nonbonded < MIN_HEAVY_CLEARANCE_NM))
+310:        and max_bond_deviation <= MAX_BOND_DEVIATION_NM
+382:        if row["node_type"] == "ALTERNATING_BN_TRIMER_BRIDGE"
+401:    for bridge_atoms in BRIDGE_CLASSES:
+413:                "random_seed": 35000 + bridge_atoms,
+417:            f"  m={bridge_atoms}: samples={LIBRARY_SAMPLES}; "
+420:    write_rows(LIBRARY_CSV, library_rows)
+425:    def screen_pair(end: str, bridge_atoms: int, seed_id: str, annulus_id: str) -> dict[str, Any]:
+426:        key = (end, bridge_atoms, seed_id, annulus_id)
+429:        start = coordinates[seed_id]
+431:        start_neighbors = [coordinates[node_id] for node_id in base_adjacency[seed_id]]
+439:            if node_id not in {seed_id, annulus_id}
+450:        count = min(NEAREST_CONFORMERS, errors.size)
+459:                for azimuth in AZIMUTHS_DEG:
+502:            "seed_node": seed_id,
+552:                            int(np.sum(distances < MIN_HEAVY_CLEARANCE_NM)),
+577:        clashes = int(np.sum(inter_values < MIN_HEAVY_CLEARANCE_NM))
+595:    for bridge_atoms in BRIDGE_CLASSES:
+598:            seeds = sorted(
+607:            seed_element = seeds[0]["element"]
+608:            if len(seeds) != 30 or any(row["element"] != seed_element for row in seeds):
+609:                raise RuntimeError(f"{end}: invalid seed population.")
+610:            annulus_element = required_annulus_element(seed_element, bridge_atoms)
+625:                selected_seeds = [
+627:                    for row in seeds
+637:                        for seed_row, outer_row in zip(selected_seeds, mapped_outer):
+642:                                    seed_row["node_id"],
+667:                            "seed_element": seed_element,
+668:                            "bridge_element_sequence": "-".join(bridge_sequence(seed_element, bridge_atoms)),
+670:                            "seed_parity": parity,
+681:                            "seed_nodes": " | ".join(item["node_id"] for item in selected_seeds),
+687:                            "seeds": selected_seeds,
+772:            for path_index, (seed_row, outer_row) in enumerate(zip(mapping["seeds"], mapping["outer"])):
+773:                sequence = bridge_sequence(seed_row["element"], selected_m)
+780:                path_nodes = [seed_row["node_id"], *bridge_ids, outer_row["node_id"]]
+790:                        "seed": seed_row["node_id"],
+810:                path["seed"],
+871:        "BUILD_AND_VALIDATE_R2_SELECTED_FULL_DENSITY_LONGER_BN_BRIDGE_GRAPH"
+873:        else "SCREEN_R2_SPARSE_LONGER_BN_BRIDGE_TOPOLOGIES"
+1039:        LIBRARY_CSV,
+
+------------------------------------------------------------------
+FUNCTION DEFINITIONS
+------------------------------------------------------------------
+68:def load_module(path: Path, name: str):
+79:def require_file(path: Path) -> None:
+84:def read_rows(path: Path) -> list[dict[str, str]]:
+93:def read_one(path: Path) -> dict[str, str]:
+100:def write_rows(path: Path, rows: list[dict[str, Any]]) -> None:
+115:def parse_float(row: dict[str, str], key: str) -> float:
+122:def parse_int(row: dict[str, str], key: str) -> int:
+126:def sha256(path: Path) -> str:
+134:def relative(path: Path) -> str:
+138:def normalized_batch(vectors: np.ndarray) -> np.ndarray:
+145:def place_next_batch(
+174:def build_library(bridge_atoms: int) -> dict[str, np.ndarray]:
+211:def map_chain_generic(
+236:def opposite(element: str) -> str:
+244:def required_annulus_element(seed_element: str, bridge_atoms: int) -> str:
+248:def bridge_sequence(seed_element: str, bridge_atoms: int) -> list[str]:
+257:def soft_penalty(distances: np.ndarray) -> float:
+263:def evaluate_chain(
+324:def local_score(candidate: dict[str, Any]) -> tuple[Any, ...]:
+336:def main() -> None:
+
+------------------------------------------------------------------
+CANDIDATE / CONFORMER / MAPPING CODE REFERENCES
+------------------------------------------------------------------
+18:G3K = BASE / "13_r2_trimer_bridge_conformer_and_h_refinement"
+30:LIBRARY_CSV = OUT / "r2_full_density_longer_bridge_library_summary.csv"
+32:MAPPING_CSV = OUT / "r2_full_density_longer_bridge_mapping_screen.csv"
+34:SELECTED_CSV = OUT / "r2_full_density_longer_bridge_selected_candidate.csv"
+145:def place_next_batch(
+149:    angle_rad: np.ndarray,
+150:    torsion_rad: np.ndarray,
+164:        -np.cos(angle_rad)[:, None] * previous
+165:        + np.sin(angle_rad)[:, None]
+167:            np.cos(torsion_rad)[:, None] * in_plane
+168:            + np.sin(torsion_rad)[:, None] * normal
+174:def build_library(bridge_atoms: int) -> dict[str, np.ndarray]:
+176:    angles = np.deg2rad(
+183:    torsions = rng.uniform(
+191:        (-np.cos(angles[:, 0]), np.sin(angles[:, 0]), np.zeros(LIBRARY_SAMPLES))
+196:            place_next_batch(
+200:                angles[:, index],
+201:                torsions[:, index - 1],
+211:def map_chain_generic(
+215:    azimuth_deg: float,
+216:    mirror: bool,
+220:    if mirror:
+227:        math.radians(azimuth_deg),
+271:    max_bond_deviation = float(np.max(np.abs(bonds - BN)))
+272:    angles = [
+273:        geometry.angle_degrees(chain[index - 1], chain[index], chain[index + 1])
+276:    angles.extend(
+277:        geometry.angle_degrees(neighbor, chain[0], chain[1])
+280:    angles.extend(
+281:        geometry.angle_degrees(neighbor, chain[-1], chain[-2])
+284:    angle_values = np.asarray(angles, dtype=float)
+285:    angle_violations = int(
+287:            (angle_values < ANGLE_MIN_GATE_DEG)
+288:            | (angle_values > ANGLE_MAX_GATE_DEG)
+306:    minimum_clearance = float(np.min(nonbonded))
+308:        angle_violations == 0
+310:        and max_bond_deviation <= MAX_BOND_DEVIATION_NM
+314:        "angle_violations": angle_violations,
+315:        "minimum_angle_deg": float(np.min(angle_values)),
+316:        "maximum_angle_deg": float(np.max(angle_values)),
+317:        "maximum_bond_deviation_nm": max_bond_deviation,
+319:        "minimum_clearance_nm": minimum_clearance,
+320:        "clearance_penalty": soft_penalty(nonbonded),
+324:def local_score(candidate: dict[str, Any]) -> tuple[Any, ...]:
+326:        int(candidate["clash_count"]),
+327:        int(candidate["angle_violations"]),
+328:        float(candidate["clearance_penalty"]),
+329:        -float(candidate["minimum_angle_deg"]),
+330:        -float(candidate["minimum_clearance_nm"]),
+331:        float(candidate["maximum_bond_deviation_nm"]),
+332:        float(candidate["library_distance_error_nm"]),
+399:    library_rows = []
+402:        library = build_library(bridge_atoms)
+403:        libraries[bridge_atoms] = library
+404:        library_rows.append(
+408:                "sample_count": int(library["chains"].shape[0]),
+409:                "minimum_endpoint_distance_nm": float(np.min(library["distances"])),
+410:                "median_endpoint_distance_nm": float(np.median(library["distances"])),
+411:                "maximum_endpoint_distance_nm": float(np.max(library["distances"])),
+418:            f"span={np.min(library['distances']):.6f}-{np.max(library['distances']):.6f} nm"
+420:    write_rows(LIBRARY_CSV, library_rows)
+434:            raise RuntimeError(f"{key}: endpoint base-heavy neighbors are not 2/2.")
+447:        library = libraries[bridge_atoms]
+449:        errors = np.abs(library["distances"] - target_distance)
+456:        for library_index in indices:
+457:            base_chain = library["chains"][int(library_index)]
+458:            for mirror in (False, True):
+459:                for azimuth in AZIMUTHS_DEG:
+461:                    mapped = map_chain_generic(
+465:                        azimuth,
+466:                        mirror,
+476:                    candidate = {
+478:                        "library_index": int(library_index),
+479:                        "library_distance_error_nm": float(errors[int(library_index)]),
+480:                        "mirror": mirror,
+481:                        "azimuth_deg": azimuth,
+485:                        feasible.append(candidate)
+488:                    elif best_failed is None or local_score(candidate) < local_score(best_failed):
+489:                        best_failed = candidate
+498:            raise RuntimeError(f"No candidates tested for {key}")
+506:            "candidates_tested": tested,
+508:            "retained_feasible_candidates": len(feasible),
+509:            "best_library_distance_error_nm": float(best["library_distance_error_nm"]),
+510:            "best_minimum_angle_deg": float(best["minimum_angle_deg"]),
+511:            "best_maximum_angle_deg": float(best["maximum_angle_deg"]),
+512:            "best_maximum_bond_deviation_nm": float(best["maximum_bond_deviation_nm"]),
+513:            "best_minimum_clearance_nm": float(best["minimum_clearance_nm"]),
+514:            "best_angle_violations": int(best["angle_violations"]),
+522:    def refine_mapping(pair_results: list[dict[str, Any]]) -> dict[str, Any]:
+527:                "minimum_interbridge_clearance_nm": 0.0,
+528:                "minimum_angle_deg": min(float(result["best_minimum_angle_deg"]) for result in pair_results),
+529:                "maximum_bond_deviation_nm": max(float(result["best_maximum_bond_deviation_nm"]) for result in pair_results),
+530:                "minimum_local_clearance_nm": min(float(result["best_minimum_clearance_nm"]) for result in pair_results),
+544:                for candidate in pair_results[path_index]["pool"]:
+545:                    internal = candidate["chain"][1:-1]
+554:                            -min(float(candidate["minimum_clearance_nm"]), float(np.min(distances))),
+555:                            -float(candidate["minimum_angle_deg"]),
+556:                            float(candidate["maximum_bond_deviation_nm"]),
+578:        selected = [result["pool"][indices[index]] for index, result in enumerate(pair_results)]
+582:            "minimum_interbridge_clearance_nm": float(np.min(inter_values)),
+583:            "minimum_angle_deg": min(float(candidate["minimum_angle_deg"]) for candidate in selected),
+584:            "maximum_bond_deviation_nm": max(float(candidate["maximum_bond_deviation_nm"]) for candidate in selected),
+585:            "minimum_local_clearance_nm": min(float(candidate["minimum_clearance_nm"]) for candidate in selected),
+589:    mapping_rows: list[dict[str, Any]] = []
+590:    mapping_objects: dict[str, dict[str, Any]] = {}
+594:    print("Screening 15-attachment longer-bridge mappings...")
+619:                key=lambda row: parse_float(row, "angle_turns"),
+622:                raise RuntimeError(f"{end}: invalid outer-annulus endpoint population.")
+623:            feasible_mappings = []
+625:                selected_seeds = [
+637:                        for seed_row, outer_row in zip(selected_seeds, mapped_outer):
+649:                            refine_mapping(pair_results)
+654:                                "minimum_interbridge_clearance_nm": 0.0,
+655:                                "minimum_angle_deg": min(float(item["best_minimum_angle_deg"]) for item in pair_results),
+656:                                "maximum_bond_deviation_nm": max(float(item["best_maximum_bond_deviation_nm"]) for item in pair_results),
+657:                                "minimum_local_clearance_nm": min(float(item["best_minimum_clearance_nm"]) for item in pair_results),
+661:                        mapping_id = f"M{bridge_atoms}:{end}:P{parity}:O{orientation}:R{rotation}"
+663:                            "mapping_id": mapping_id,
+669:                            "annulus_endpoint_element": annulus_element,
+673:                            "endpoint_pairs_evaluated": len(pair_results),
+674:                            "all_endpoint_pairs_locally_feasible": len(pair_results) == 15 and all(item["pair_feasible"] for item in pair_results),
+675:                            "mapping_geometrically_feasible": bool(result["feasible"]),
+677:                            "minimum_interbridge_clearance_nm": float(result["minimum_interbridge_clearance_nm"]),
+678:                            "minimum_angle_deg": float(result["minimum_angle_deg"]),
+679:                            "maximum_bond_deviation_nm": float(result["maximum_bond_deviation_nm"]),
+680:                            "minimum_local_clearance_nm": float(result["minimum_local_clearance_nm"]),
+681:                            "seed_nodes": " | ".join(item["node_id"] for item in selected_seeds),
+684:                        mapping_rows.append(row)
+685:                        mapping_object = {
+687:                            "seeds": selected_seeds,
+692:                        mapping_objects[mapping_id] = mapping_object
+694:                            feasible_mappings.append(mapping_object)
+695:            feasible_counts[end] = len(feasible_mappings)
+696:            if feasible_mappings:
+697:                feasible_mappings.sort(
+699:                        -float(item["row"]["minimum_angle_deg"]),
+701:                            float(item["row"]["minimum_local_clearance_nm"]),
+702:                            float(item["row"]["minimum_interbridge_clearance_nm"]),
+704:                        float(item["row"]["maximum_bond_deviation_nm"]),
+707:                best_by_class_end[(bridge_atoms, end)] = feasible_mappings[0]
+708:            print(f"  m={bridge_atoms}, {end}: feasible mappings={len(feasible_mappings)}/60")
+713:            minimum_angle = min(float(lower["minimum_angle_deg"]), float(upper["minimum_angle_deg"]))
+714:            minimum_clearance = min(
+715:                float(lower["minimum_local_clearance_nm"]),
+716:                float(lower["minimum_interbridge_clearance_nm"]),
+717:                float(upper["minimum_local_clearance_nm"]),
+718:                float(upper["minimum_interbridge_clearance_nm"]),
+720:            maximum_bond_deviation = max(
+721:                float(lower["maximum_bond_deviation_nm"]),
+722:                float(upper["maximum_bond_deviation_nm"]),
+725:            minimum_angle = 0.0
+726:            minimum_clearance = 0.0
+727:            maximum_bond_deviation = math.inf
+733:                "lower_feasible_mapping_count": feasible_counts["LOWER"],
+734:                "upper_feasible_mapping_count": feasible_counts["UPPER"],
+736:                "class_minimum_angle_deg": minimum_angle,
+737:                "class_minimum_clearance_nm": minimum_clearance,
+738:                "class_maximum_bond_deviation_nm": maximum_bond_deviation,
+742:                "candidate_is_final_chemistry": False,
+747:    write_rows(MAPPING_CSV, mapping_rows)
+751:    selected_class = None
+752:    selected_rows: list[dict[str, Any]] = []
+758:                -float(row["class_minimum_angle_deg"]),
+759:                -float(row["class_minimum_clearance_nm"]),
+762:        selected_class = feasible_classes[0]
+763:        selected_m = int(selected_class["bridge_atoms_per_attachment"])
+764:        selected_objects = [best_by_class_end[(selected_m, end)] for end in ("LOWER", "UPPER")]
+766:        candidate_adjacency = {node_id: set(neighbors) for node_id, neighbors in base_adjacency.items()}
+767:        candidate_elements = {node_id: nodes[node_id]["element"] for node_id in fixed_heavy_ids}
+768:        candidate_paths = []
+769:        for mapping in selected_objects:
+770:            end = mapping["row"]["end"]
+771:            selected_rows.append({"classification": "SELECTED_END_MAPPING", **mapping["row"]})
+772:            for path_index, (seed_row, outer_row) in enumerate(zip(mapping["seeds"], mapping["outer"])):
+773:                sequence = bridge_sequence(seed_row["element"], selected_m)
+777:                    candidate_adjacency[node_id] = set()
+778:                    candidate_elements[node_id] = element
+785:                    candidate_adjacency[first].add(second)
+786:                    candidate_adjacency[second].add(first)
+788:                candidate_paths.append(
+793:                        "edge_count": selected_m + 1,
+798:        for first, neighbors in candidate_adjacency.items():
+800:                if first < second and {candidate_elements[first], candidate_elements[second]} != {"B", "N"}:
+802:        components = graph_tools.connected_components(candidate_adjacency)
+803:        is_bipartite, _ = graph_tools.bipartite_coloring(candidate_adjacency)
+804:        four_cycles = graph_tools.count_four_cycles(candidate_adjacency)
+807:        for path in candidate_paths:
+809:                candidate_adjacency,
+819:            "selected_heavy_nodes": len(candidate_adjacency),
+820:            "selected_components": len(components),
+821:            "selected_bipartite": is_bipartite,
+822:            "selected_four_cycles": four_cycles,
+823:            "selected_nonheteropolar_edges": nonheteropolar,
+824:            "selected_degree_over3": sum(len(neighbors) > 3 for neighbors in candidate_adjacency.values()),
+825:            "selected_degree_below2": sum(len(neighbors) < 2 for neighbors in candidate_adjacency.values()),
+826:            "selected_H_required": sum(max(0, 3 - len(neighbors)) for neighbors in candidate_adjacency.values()),
+827:            "selected_paths_without_cycle": paths_without_cycle,
+828:            "selected_cycle_minimum": min(cycle_lengths) if cycle_lengths else 0,
+829:            "selected_cycle_maximum": max(cycle_lengths) if cycle_lengths else 0,
+831:        selected_rows.append({"classification": "SELECTED_CLASS", **selected_class, **topology_metrics})
+832:        write_rows(SELECTED_CSV, selected_rows)
+838:        "60_mappings_per_end_and_class_were_screened": len(mapping_rows) == 3 * 2 * 60,
+844:                    "best_library_distance_error_nm",
+845:                    "best_minimum_angle_deg",
+846:                    "best_maximum_angle_deg",
+847:                    "best_maximum_bond_deviation_nm",
+848:                    "best_minimum_clearance_nm",
+857:    if selected_class is not None:
+859:            topology_metrics["selected_components"] == 1
+860:            and topology_metrics["selected_bipartite"]
+861:            and topology_metrics["selected_four_cycles"] == 0
+862:            and topology_metrics["selected_nonheteropolar_edges"] == 0
+863:            and topology_metrics["selected_degree_over3"] == 0
+864:            and topology_metrics["selected_degree_below2"] == 0
+865:            and topology_metrics["selected_paths_without_cycle"] == 0
+866:            and topology_metrics["selected_cycle_minimum"] >= 6
+868:    accepted = integrity_pass and selected_class is not None and topology_pass
+879:        "endpoint_pairs_screened": len(pair_rows),
+880:        "mappings_screened": len(mapping_rows),
+882:        "selected_bridge_atoms_per_attachment": "" if selected_class is None else selected_class["bridge_atoms_per_attachment"],
+883:        "selected_attachments_per_end": "" if selected_class is None else 15,
+884:        "selected_minimum_angle_deg": "" if selected_class is None else selected_class["class_minimum_angle_deg"],
+885:        "selected_minimum_clearance_nm": "" if selected_class is None else selected_class["class_minimum_clearance_nm"],
+886:        "selected_maximum_bond_deviation_nm": "" if selected_class is None else selected_class["class_maximum_bond_deviation_nm"],
+889:        "selected_topology_graph_checks_pass": topology_pass,
+890:        "candidate_is_final_chemistry": False,
+891:        "selected_graph_generation_authorized": accepted,
+909:                "selected_rows": selected_rows,
+913:                    "Diagnostic bridge conformers are not applied to the accepted structure.",
+914:                    "A selected class must still be rebuilt and validated as a complete graph.",
+938:        f"- m={row['bridge_atoms_per_attachment']}: lower/upper feasible mappings="
+939:        f"{row['lower_feasible_mapping_count']}/{row['upper_feasible_mapping_count']}; "
+965:- Selected bridge atoms per attachment: **{summary['selected_bridge_atoms_per_attachment'] or 'NONE'}**
+966:- Selected attachments per end: **{summary['selected_attachments_per_end'] or 'NONE'}**
+967:- Selected minimum angle: **{summary['selected_minimum_angle_deg'] or 'N/A'}**
+968:- Selected minimum clearance: **{summary['selected_minimum_clearance_nm'] or 'N/A'}**
+991:    print(f"Bridge classes / endpoint pairs / mappings screened: {len(class_rows)}/{len(pair_rows)}/{len(mapping_rows)}")
+994:            "Bridge atoms / lower feasible / upper feasible / class feasible / minimum angle / minimum clearance: "
+996:            f"{row['lower_feasible_mapping_count']}/"
+997:            f"{row['upper_feasible_mapping_count']}/"
+999:            f"{row['class_minimum_angle_deg']}/"
+1000:            f"{row['class_minimum_clearance_nm']}"
+1003:        "Selected bridge atoms / attachments per end / minimum angle / minimum clearance / maximum bond deviation: "
+1004:        f"{summary['selected_bridge_atoms_per_attachment'] or 'NONE'}/"
+1005:        f"{summary['selected_attachments_per_end'] or 'NONE'}/"
+1006:        f"{summary['selected_minimum_angle_deg'] or 'N/A'}/"
+1007:        f"{summary['selected_minimum_clearance_nm'] or 'N/A'}/"
+1008:        f"{summary['selected_maximum_bond_deviation_nm'] or 'N/A'}"
+1013:            f"{topology_metrics['selected_components']}/"
+1014:            f"{topology_metrics['selected_bipartite']}/"
+1015:            f"{topology_metrics['selected_four_cycles']}/"
+1016:            f"{topology_metrics['selected_nonheteropolar_edges']}/"
+1017:            f"{topology_metrics['selected_degree_over3']}/"
+1018:            f"{topology_metrics['selected_degree_below2']}"
+1022:            f"{topology_metrics['selected_paths_without_cycle']}/"
+1023:            f"{topology_metrics['selected_cycle_minimum']}-"
+1024:            f"{topology_metrics['selected_cycle_maximum']}/"
+1025:            f"{topology_metrics['selected_H_required']}"
+1050:    if selected_class is not None:
+
+------------------------------------------------------------------
+OUTPUT-FILE DEFINITIONS
+------------------------------------------------------------------
+30:LIBRARY_CSV = OUT / "r2_full_density_longer_bridge_library_summary.csv"
+31:PAIR_CSV = OUT / "r2_full_density_longer_bridge_pair_screen.csv"
+32:MAPPING_CSV = OUT / "r2_full_density_longer_bridge_mapping_screen.csv"
+33:CLASS_CSV = OUT / "r2_full_density_longer_bridge_class_summary.csv"
+34:SELECTED_CSV = OUT / "r2_full_density_longer_bridge_selected_candidate.csv"
+35:SUMMARY_CSV = OUT / "r2_full_density_longer_bridge_screen_summary.csv"
+36:GATES_CSV = OUT / "r2_full_density_longer_bridge_screen_gates.csv"
+37:JSON_OUT = OUT / "r2_full_density_longer_bridge_screen.json"
+38:MANIFEST_CSV = OUT / "r2_full_density_longer_bridge_source_manifest.csv"
+39:REPORT_MD = OUT / "R2_FULL_DENSITY_LONGER_BN_BRIDGE_SCREEN_DAY024.md"
+86:    with path.open(newline="", encoding="utf-8") as handle:
+100:def write_rows(path: Path, rows: list[dict[str, Any]]) -> None:
+108:    with path.open("w", newline="", encoding="utf-8") as handle:
+128:    with path.open("rb") as handle:
+420:    write_rows(LIBRARY_CSV, library_rows)
+746:    write_rows(PAIR_CSV, pair_rows)
+747:    write_rows(MAPPING_CSV, mapping_rows)
+748:    write_rows(CLASS_CSV, class_rows)
+832:        write_rows(SELECTED_CSV, selected_rows)
+902:    write_rows(SUMMARY_CSV, [summary])
+903:    write_rows(GATES_CSV, [{"gate": name, "pass": passed} for name, passed in audit_gates.items()])
+904:    JSON_OUT.write_text(
+924:    write_rows(
+925:        MANIFEST_CSV,
+947:    REPORT_MD.write_text(
+1039:        LIBRARY_CSV,
+1040:        PAIR_CSV,
+1041:        MAPPING_CSV,
+1042:        CLASS_CSV,
+1043:        SUMMARY_CSV,
+1044:        GATES_CSV,
+1045:        JSON_OUT,
+1046:        MANIFEST_CSV,
+1047:        REPORT_MD,
+1049:        print(f"Wrote: {relative(path)}")
+1051:        print(f"Wrote: {relative(SELECTED_CSV)}")
+
+------------------------------------------------------------------
+SELECTED-CANDIDATE WRITE SECTION
+------------------------------------------------------------------
+----- LINES 1-113 -----
+000001: #!/usr/bin/env python3
+000002: from __future__ import annotations
+000003: 
+000004: import csv
+000005: import hashlib
+000006: import importlib.util
+000007: import json
+000008: import math
+000009: from pathlib import Path
+000010: from typing import Any
+000011: 
+000012: import numpy as np
+000013: 
+000014: ROOT = Path(__file__).resolve().parents[2]
+000015: BASE = ROOT / "runs/phase1A/day024_chemical_end_rim_design"
+000016: SCRIPTS = ROOT / "scripts/phase1A"
+000017: G3I = BASE / "11_r2_alternating_bn_trimer_bridge_graph"
+000018: G3K = BASE / "13_r2_trimer_bridge_conformer_and_h_refinement"
+000019: G3K1 = BASE / "14_r2_trimer_bridge_search_completeness_audit"
+000020: OUT = BASE / "15_r2_full_density_longer_bn_bridge_screen"
+000021: 
+000022: HELPER_GEOMETRY = SCRIPTS / "audit_day024_r2_trimer_bridge_search_completeness.py"
+000023: HELPER_GRAPH = SCRIPTS / "build_and_validate_day024_r2_alternating_bn_trimer_bridge_graph.py"
+000024: GRAPH_NODES = G3I / "r2_alternating_bn_trimer_bridge_graph_nodes.csv"
+000025: GRAPH_EDGES = G3I / "r2_alternating_bn_trimer_bridge_graph_edges.csv"
+000026: GRAPH_SUMMARY = G3I / "r2_alternating_bn_trimer_bridge_graph_summary.csv"
+000027: FIXED_COORDINATES = G3K / "r2_trimer_bridge_refined_coordinates.csv"
+000028: REDESIGN_SUMMARY = G3K1 / "r2_trimer_search_completeness_summary.csv"
+000029: 
+000030: LIBRARY_CSV = OUT / "r2_full_density_longer_bridge_library_summary.csv"
+000031: PAIR_CSV = OUT / "r2_full_density_longer_bridge_pair_screen.csv"
+000032: MAPPING_CSV = OUT / "r2_full_density_longer_bridge_mapping_screen.csv"
+000033: CLASS_CSV = OUT / "r2_full_density_longer_bridge_class_summary.csv"
+000034: SELECTED_CSV = OUT / "r2_full_density_longer_bridge_selected_candidate.csv"
+000035: SUMMARY_CSV = OUT / "r2_full_density_longer_bridge_screen_summary.csv"
+000036: GATES_CSV = OUT / "r2_full_density_longer_bridge_screen_gates.csv"
+000037: JSON_OUT = OUT / "r2_full_density_longer_bridge_screen.json"
+000038: MANIFEST_CSV = OUT / "r2_full_density_longer_bridge_source_manifest.csv"
+000039: REPORT_MD = OUT / "R2_FULL_DENSITY_LONGER_BN_BRIDGE_SCREEN_DAY024.md"
+000040: 
+000041: EXPECTED_GRAPH_DECISION = "R2_ALTERNATING_BN_TRIMER_BRIDGE_GRAPH_VALIDATED"
+000042: EXPECTED_REDESIGN_DECISION = (
+000043:     "R2_TRIMER_BRIDGE_TOPOLOGY_REDESIGN_CONFIRMED_"
+000044:     "BY_EXPANDED_CONFORMER_SEARCH"
+000045: )
+000046: PASS_DECISION = "R2_FULL_DENSITY_LONGER_BN_BRIDGE_CLASS_IDENTIFIED"
+000047: SPARSE_DECISION = "R2_FULL_DENSITY_LONGER_BN_BRIDGES_REQUIRE_SPARSE_ATTACHMENT_SCREEN"
+000048: 
+000049: BN = 0.144973
+000050: BRIDGE_CLASSES = (4, 5, 6)
+000051: ATTACHMENTS_PER_END = 15
+000052: LIBRARY_SAMPLES = 40000
+000053: NEAREST_CONFORMERS = 100
+000054: AZIMUTHS_DEG = tuple(float(value) for value in range(0, 360, 15))
+000055: PAIR_POOL_SIZE = 12
+000056: PAIR_PASS_TARGET = 36
+000057: GLOBAL_SWEEPS = 8
+000058: LOCAL_RADIUS_NM = 0.95
+000059: ANGLE_MIN_LIBRARY_DEG = 105.0
+000060: ANGLE_MAX_LIBRARY_DEG = 135.0
+000061: ANGLE_MIN_GATE_DEG = 70.0
+000062: ANGLE_MAX_GATE_DEG = 175.0
+000063: MAX_BOND_DEVIATION_NM = 0.003
+000064: MIN_HEAVY_CLEARANCE_NM = 0.120
+000065: SOFT_HEAVY_CLEARANCE_NM = 0.140
+000066: 
+000067: 
+000068: def load_module(path: Path, name: str):
+000069:     if not path.is_file():
+000070:         raise RuntimeError(f"Missing helper module: {path}")
+000071:     spec = importlib.util.spec_from_file_location(name, path)
+000072:     if spec is None or spec.loader is None:
+000073:         raise RuntimeError(f"Could not load helper module: {path}")
+000074:     module = importlib.util.module_from_spec(spec)
+000075:     spec.loader.exec_module(module)
+000076:     return module
+000077: 
+000078: 
+000079: def require_file(path: Path) -> None:
+000080:     if not path.is_file() or path.stat().st_size == 0:
+000081:         raise RuntimeError(f"Missing or empty required file: {path}")
+000082: 
+000083: 
+000084: def read_rows(path: Path) -> list[dict[str, str]]:
+000085:     require_file(path)
+000086:     with path.open(newline="", encoding="utf-8") as handle:
+000087:         rows = list(csv.DictReader(handle))
+000088:     if not rows:
+000089:         raise RuntimeError(f"No rows found in {path}")
+000090:     return rows
+000091: 
+000092: 
+000093: def read_one(path: Path) -> dict[str, str]:
+000094:     rows = read_rows(path)
+000095:     if len(rows) != 1:
+000096:         raise RuntimeError(f"Expected one row in {path}; found {len(rows)}")
+000097:     return rows[0]
+000098: 
+000099: 
+000100: def write_rows(path: Path, rows: list[dict[str, Any]]) -> None:
+000101:     if not rows:
+000102:         raise RuntimeError(f"No rows available for {path}")
+000103:     fields: list[str] = []
+000104:     for row in rows:
+000105:         for key in row:
+000106:             if key not in fields:
+000107:                 fields.append(key)
+000108:     with path.open("w", newline="", encoding="utf-8") as handle:
+000109:         writer = csv.DictWriter(handle, fieldnames=fields)
+000110:         writer.writeheader()
+000111:         for row in rows:
+000112:             writer.writerow({field: row.get(field, "") for field in fields})
+000113: 
+----- LINES 717-831 -----
+000717:                 float(upper["minimum_local_clearance_nm"]),
+000718:                 float(upper["minimum_interbridge_clearance_nm"]),
+000719:             )
+000720:             maximum_bond_deviation = max(
+000721:                 float(lower["maximum_bond_deviation_nm"]),
+000722:                 float(upper["maximum_bond_deviation_nm"]),
+000723:             )
+000724:         else:
+000725:             minimum_angle = 0.0
+000726:             minimum_clearance = 0.0
+000727:             maximum_bond_deviation = math.inf
+000728:         class_rows.append(
+000729:             {
+000730:                 "bridge_atoms_per_attachment": bridge_atoms,
+000731:                 "bonds_per_path": bridge_atoms + 1,
+000732:                 "attachments_per_end": 15,
+000733:                 "lower_feasible_mapping_count": feasible_counts["LOWER"],
+000734:                 "upper_feasible_mapping_count": feasible_counts["UPPER"],
+000735:                 "uniform_class_feasible": class_feasible,
+000736:                 "class_minimum_angle_deg": minimum_angle,
+000737:                 "class_minimum_clearance_nm": minimum_clearance,
+000738:                 "class_maximum_bond_deviation_nm": maximum_bond_deviation,
+000739:                 "added_bridge_heavy_atoms_per_end": 15 * bridge_atoms,
+000740:                 "total_added_heavy_atoms_per_end": 156 + 15 * bridge_atoms,
+000741:                 "total_H_atoms_per_end": 72 + 15 * (bridge_atoms - 2),
+000742:                 "candidate_is_final_chemistry": False,
+000743:             }
+000744:         )
+000745: 
+000746:     write_rows(PAIR_CSV, pair_rows)
+000747:     write_rows(MAPPING_CSV, mapping_rows)
+000748:     write_rows(CLASS_CSV, class_rows)
+000749: 
+000750:     feasible_classes = [row for row in class_rows if row["uniform_class_feasible"]]
+000751:     selected_class = None
+000752:     selected_rows: list[dict[str, Any]] = []
+000753:     topology_metrics: dict[str, Any] = {}
+000754:     if feasible_classes:
+000755:         feasible_classes.sort(
+000756:             key=lambda row: (
+000757:                 int(row["bridge_atoms_per_attachment"]),
+000758:                 -float(row["class_minimum_angle_deg"]),
+000759:                 -float(row["class_minimum_clearance_nm"]),
+000760:             )
+000761:         )
+000762:         selected_class = feasible_classes[0]
+000763:         selected_m = int(selected_class["bridge_atoms_per_attachment"])
+000764:         selected_objects = [best_by_class_end[(selected_m, end)] for end in ("LOWER", "UPPER")]
+000765: 
+000766:         candidate_adjacency = {node_id: set(neighbors) for node_id, neighbors in base_adjacency.items()}
+000767:         candidate_elements = {node_id: nodes[node_id]["element"] for node_id in fixed_heavy_ids}
+000768:         candidate_paths = []
+000769:         for mapping in selected_objects:
+000770:             end = mapping["row"]["end"]
+000771:             selected_rows.append({"classification": "SELECTED_END_MAPPING", **mapping["row"]})
+000772:             for path_index, (seed_row, outer_row) in enumerate(zip(mapping["seeds"], mapping["outer"])):
+000773:                 sequence = bridge_sequence(seed_row["element"], selected_m)
+000774:                 bridge_ids = []
+000775:                 for position, element in enumerate(sequence, start=1):
+000776:                     node_id = f"CAND:{end}:{path_index:02d}:{position}"
+000777:                     candidate_adjacency[node_id] = set()
+000778:                     candidate_elements[node_id] = element
+000779:                     bridge_ids.append(node_id)
+000780:                 path_nodes = [seed_row["node_id"], *bridge_ids, outer_row["node_id"]]
+000781:                 path_edges = set()
+000782:                 for index in range(len(path_nodes) - 1):
+000783:                     first = path_nodes[index]
+000784:                     second = path_nodes[index + 1]
+000785:                     candidate_adjacency[first].add(second)
+000786:                     candidate_adjacency[second].add(first)
+000787:                     path_edges.add(tuple(sorted((first, second))))
+000788:                 candidate_paths.append(
+000789:                     {
+000790:                         "seed": seed_row["node_id"],
+000791:                         "outer": outer_row["node_id"],
+000792:                         "edges": path_edges,
+000793:                         "edge_count": selected_m + 1,
+000794:                     }
+000795:                 )
+000796: 
+000797:         nonheteropolar = 0
+000798:         for first, neighbors in candidate_adjacency.items():
+000799:             for second in neighbors:
+000800:                 if first < second and {candidate_elements[first], candidate_elements[second]} != {"B", "N"}:
+000801:                     nonheteropolar += 1
+000802:         components = graph_tools.connected_components(candidate_adjacency)
+000803:         is_bipartite, _ = graph_tools.bipartite_coloring(candidate_adjacency)
+000804:         four_cycles = graph_tools.count_four_cycles(candidate_adjacency)
+000805:         paths_without_cycle = 0
+000806:         cycle_lengths = []
+000807:         for path in candidate_paths:
+000808:             alternative = graph_tools.shortest_path_length(
+000809:                 candidate_adjacency,
+000810:                 path["seed"],
+000811:                 path["outer"],
+000812:                 path["edges"],
+000813:             )
+000814:             if alternative is None:
+000815:                 paths_without_cycle += 1
+000816:             else:
+000817:                 cycle_lengths.append(alternative + path["edge_count"])
+000818:         topology_metrics = {
+000819:             "selected_heavy_nodes": len(candidate_adjacency),
+000820:             "selected_components": len(components),
+000821:             "selected_bipartite": is_bipartite,
+000822:             "selected_four_cycles": four_cycles,
+000823:             "selected_nonheteropolar_edges": nonheteropolar,
+000824:             "selected_degree_over3": sum(len(neighbors) > 3 for neighbors in candidate_adjacency.values()),
+000825:             "selected_degree_below2": sum(len(neighbors) < 2 for neighbors in candidate_adjacency.values()),
+000826:             "selected_H_required": sum(max(0, 3 - len(neighbors)) for neighbors in candidate_adjacency.values()),
+000827:             "selected_paths_without_cycle": paths_without_cycle,
+000828:             "selected_cycle_minimum": min(cycle_lengths) if cycle_lengths else 0,
+000829:             "selected_cycle_maximum": max(cycle_lengths) if cycle_lengths else 0,
+000830:         }
+000831:         selected_rows.append({"classification": "SELECTED_CLASS", **selected_class, **topology_metrics})
+----- LINES 736-850 -----
+000736:                 "class_minimum_angle_deg": minimum_angle,
+000737:                 "class_minimum_clearance_nm": minimum_clearance,
+000738:                 "class_maximum_bond_deviation_nm": maximum_bond_deviation,
+000739:                 "added_bridge_heavy_atoms_per_end": 15 * bridge_atoms,
+000740:                 "total_added_heavy_atoms_per_end": 156 + 15 * bridge_atoms,
+000741:                 "total_H_atoms_per_end": 72 + 15 * (bridge_atoms - 2),
+000742:                 "candidate_is_final_chemistry": False,
+000743:             }
+000744:         )
+000745: 
+000746:     write_rows(PAIR_CSV, pair_rows)
+000747:     write_rows(MAPPING_CSV, mapping_rows)
+000748:     write_rows(CLASS_CSV, class_rows)
+000749: 
+000750:     feasible_classes = [row for row in class_rows if row["uniform_class_feasible"]]
+000751:     selected_class = None
+000752:     selected_rows: list[dict[str, Any]] = []
+000753:     topology_metrics: dict[str, Any] = {}
+000754:     if feasible_classes:
+000755:         feasible_classes.sort(
+000756:             key=lambda row: (
+000757:                 int(row["bridge_atoms_per_attachment"]),
+000758:                 -float(row["class_minimum_angle_deg"]),
+000759:                 -float(row["class_minimum_clearance_nm"]),
+000760:             )
+000761:         )
+000762:         selected_class = feasible_classes[0]
+000763:         selected_m = int(selected_class["bridge_atoms_per_attachment"])
+000764:         selected_objects = [best_by_class_end[(selected_m, end)] for end in ("LOWER", "UPPER")]
+000765: 
+000766:         candidate_adjacency = {node_id: set(neighbors) for node_id, neighbors in base_adjacency.items()}
+000767:         candidate_elements = {node_id: nodes[node_id]["element"] for node_id in fixed_heavy_ids}
+000768:         candidate_paths = []
+000769:         for mapping in selected_objects:
+000770:             end = mapping["row"]["end"]
+000771:             selected_rows.append({"classification": "SELECTED_END_MAPPING", **mapping["row"]})
+000772:             for path_index, (seed_row, outer_row) in enumerate(zip(mapping["seeds"], mapping["outer"])):
+000773:                 sequence = bridge_sequence(seed_row["element"], selected_m)
+000774:                 bridge_ids = []
+000775:                 for position, element in enumerate(sequence, start=1):
+000776:                     node_id = f"CAND:{end}:{path_index:02d}:{position}"
+000777:                     candidate_adjacency[node_id] = set()
+000778:                     candidate_elements[node_id] = element
+000779:                     bridge_ids.append(node_id)
+000780:                 path_nodes = [seed_row["node_id"], *bridge_ids, outer_row["node_id"]]
+000781:                 path_edges = set()
+000782:                 for index in range(len(path_nodes) - 1):
+000783:                     first = path_nodes[index]
+000784:                     second = path_nodes[index + 1]
+000785:                     candidate_adjacency[first].add(second)
+000786:                     candidate_adjacency[second].add(first)
+000787:                     path_edges.add(tuple(sorted((first, second))))
+000788:                 candidate_paths.append(
+000789:                     {
+000790:                         "seed": seed_row["node_id"],
+000791:                         "outer": outer_row["node_id"],
+000792:                         "edges": path_edges,
+000793:                         "edge_count": selected_m + 1,
+000794:                     }
+000795:                 )
+000796: 
+000797:         nonheteropolar = 0
+000798:         for first, neighbors in candidate_adjacency.items():
+000799:             for second in neighbors:
+000800:                 if first < second and {candidate_elements[first], candidate_elements[second]} != {"B", "N"}:
+000801:                     nonheteropolar += 1
+000802:         components = graph_tools.connected_components(candidate_adjacency)
+000803:         is_bipartite, _ = graph_tools.bipartite_coloring(candidate_adjacency)
+000804:         four_cycles = graph_tools.count_four_cycles(candidate_adjacency)
+000805:         paths_without_cycle = 0
+000806:         cycle_lengths = []
+000807:         for path in candidate_paths:
+000808:             alternative = graph_tools.shortest_path_length(
+000809:                 candidate_adjacency,
+000810:                 path["seed"],
+000811:                 path["outer"],
+000812:                 path["edges"],
+000813:             )
+000814:             if alternative is None:
+000815:                 paths_without_cycle += 1
+000816:             else:
+000817:                 cycle_lengths.append(alternative + path["edge_count"])
+000818:         topology_metrics = {
+000819:             "selected_heavy_nodes": len(candidate_adjacency),
+000820:             "selected_components": len(components),
+000821:             "selected_bipartite": is_bipartite,
+000822:             "selected_four_cycles": four_cycles,
+000823:             "selected_nonheteropolar_edges": nonheteropolar,
+000824:             "selected_degree_over3": sum(len(neighbors) > 3 for neighbors in candidate_adjacency.values()),
+000825:             "selected_degree_below2": sum(len(neighbors) < 2 for neighbors in candidate_adjacency.values()),
+000826:             "selected_H_required": sum(max(0, 3 - len(neighbors)) for neighbors in candidate_adjacency.values()),
+000827:             "selected_paths_without_cycle": paths_without_cycle,
+000828:             "selected_cycle_minimum": min(cycle_lengths) if cycle_lengths else 0,
+000829:             "selected_cycle_maximum": max(cycle_lengths) if cycle_lengths else 0,
+000830:         }
+000831:         selected_rows.append({"classification": "SELECTED_CLASS", **selected_class, **topology_metrics})
+000832:         write_rows(SELECTED_CSV, selected_rows)
+000833: 
+000834:     audit_gates = {
+000835:         "Gate3I_graph_is_accepted": graph_summary.get("decision") == EXPECTED_GRAPH_DECISION,
+000836:         "Gate3K1_trimer_redesign_is_confirmed": redesign_summary.get("decision") == EXPECTED_REDESIGN_DECISION,
+000837:         "bridge_classes_4_5_6_were_screened": len(class_rows) == 3,
+000838:         "60_mappings_per_end_and_class_were_screened": len(mapping_rows) == 3 * 2 * 60,
+000839:         "all_pair_metrics_are_finite": all(
+000840:             all(
+000841:                 math.isfinite(float(row[field]))
+000842:                 for field in (
+000843:                     "target_distance_nm",
+000844:                     "best_library_distance_error_nm",
+000845:                     "best_minimum_angle_deg",
+000846:                     "best_maximum_angle_deg",
+000847:                     "best_maximum_bond_deviation_nm",
+000848:                     "best_minimum_clearance_nm",
+000849:                 )
+000850:             )
+----- LINES 796-910 -----
+000796: 
+000797:         nonheteropolar = 0
+000798:         for first, neighbors in candidate_adjacency.items():
+000799:             for second in neighbors:
+000800:                 if first < second and {candidate_elements[first], candidate_elements[second]} != {"B", "N"}:
+000801:                     nonheteropolar += 1
+000802:         components = graph_tools.connected_components(candidate_adjacency)
+000803:         is_bipartite, _ = graph_tools.bipartite_coloring(candidate_adjacency)
+000804:         four_cycles = graph_tools.count_four_cycles(candidate_adjacency)
+000805:         paths_without_cycle = 0
+000806:         cycle_lengths = []
+000807:         for path in candidate_paths:
+000808:             alternative = graph_tools.shortest_path_length(
+000809:                 candidate_adjacency,
+000810:                 path["seed"],
+000811:                 path["outer"],
+000812:                 path["edges"],
+000813:             )
+000814:             if alternative is None:
+000815:                 paths_without_cycle += 1
+000816:             else:
+000817:                 cycle_lengths.append(alternative + path["edge_count"])
+000818:         topology_metrics = {
+000819:             "selected_heavy_nodes": len(candidate_adjacency),
+000820:             "selected_components": len(components),
+000821:             "selected_bipartite": is_bipartite,
+000822:             "selected_four_cycles": four_cycles,
+000823:             "selected_nonheteropolar_edges": nonheteropolar,
+000824:             "selected_degree_over3": sum(len(neighbors) > 3 for neighbors in candidate_adjacency.values()),
+000825:             "selected_degree_below2": sum(len(neighbors) < 2 for neighbors in candidate_adjacency.values()),
+000826:             "selected_H_required": sum(max(0, 3 - len(neighbors)) for neighbors in candidate_adjacency.values()),
+000827:             "selected_paths_without_cycle": paths_without_cycle,
+000828:             "selected_cycle_minimum": min(cycle_lengths) if cycle_lengths else 0,
+000829:             "selected_cycle_maximum": max(cycle_lengths) if cycle_lengths else 0,
+000830:         }
+000831:         selected_rows.append({"classification": "SELECTED_CLASS", **selected_class, **topology_metrics})
+000832:         write_rows(SELECTED_CSV, selected_rows)
+000833: 
+000834:     audit_gates = {
+000835:         "Gate3I_graph_is_accepted": graph_summary.get("decision") == EXPECTED_GRAPH_DECISION,
+000836:         "Gate3K1_trimer_redesign_is_confirmed": redesign_summary.get("decision") == EXPECTED_REDESIGN_DECISION,
+000837:         "bridge_classes_4_5_6_were_screened": len(class_rows) == 3,
+000838:         "60_mappings_per_end_and_class_were_screened": len(mapping_rows) == 3 * 2 * 60,
+000839:         "all_pair_metrics_are_finite": all(
+000840:             all(
+000841:                 math.isfinite(float(row[field]))
+000842:                 for field in (
+000843:                     "target_distance_nm",
+000844:                     "best_library_distance_error_nm",
+000845:                     "best_minimum_angle_deg",
+000846:                     "best_maximum_angle_deg",
+000847:                     "best_maximum_bond_deviation_nm",
+000848:                     "best_minimum_clearance_nm",
+000849:                 )
+000850:             )
+000851:             for row in pair_rows
+000852:         ),
+000853:     }
+000854:     failed_audit_gates = [name for name, passed in audit_gates.items() if not passed]
+000855:     integrity_pass = not failed_audit_gates
+000856:     topology_pass = False
+000857:     if selected_class is not None:
+000858:         topology_pass = (
+000859:             topology_metrics["selected_components"] == 1
+000860:             and topology_metrics["selected_bipartite"]
+000861:             and topology_metrics["selected_four_cycles"] == 0
+000862:             and topology_metrics["selected_nonheteropolar_edges"] == 0
+000863:             and topology_metrics["selected_degree_over3"] == 0
+000864:             and topology_metrics["selected_degree_below2"] == 0
+000865:             and topology_metrics["selected_paths_without_cycle"] == 0
+000866:             and topology_metrics["selected_cycle_minimum"] >= 6
+000867:         )
+000868:     accepted = integrity_pass and selected_class is not None and topology_pass
+000869:     decision = PASS_DECISION if accepted else SPARSE_DECISION
+000870:     next_step = (
+000871:         "BUILD_AND_VALIDATE_R2_SELECTED_FULL_DENSITY_LONGER_BN_BRIDGE_GRAPH"
+000872:         if accepted
+000873:         else "SCREEN_R2_SPARSE_LONGER_BN_BRIDGE_TOPOLOGIES"
+000874:     )
+000875: 
+000876:     summary = {
+000877:         "decision": decision,
+000878:         "bridge_classes_screened": len(class_rows),
+000879:         "endpoint_pairs_screened": len(pair_rows),
+000880:         "mappings_screened": len(mapping_rows),
+000881:         "feasible_class_count": len(feasible_classes),
+000882:         "selected_bridge_atoms_per_attachment": "" if selected_class is None else selected_class["bridge_atoms_per_attachment"],
+000883:         "selected_attachments_per_end": "" if selected_class is None else 15,
+000884:         "selected_minimum_angle_deg": "" if selected_class is None else selected_class["class_minimum_angle_deg"],
+000885:         "selected_minimum_clearance_nm": "" if selected_class is None else selected_class["class_minimum_clearance_nm"],
+000886:         "selected_maximum_bond_deviation_nm": "" if selected_class is None else selected_class["class_maximum_bond_deviation_nm"],
+000887:         **topology_metrics,
+000888:         "audit_integrity_pass": integrity_pass,
+000889:         "selected_topology_graph_checks_pass": topology_pass,
+000890:         "candidate_is_final_chemistry": False,
+000891:         "selected_graph_generation_authorized": accepted,
+000892:         "coordinate_generation_authorized": False,
+000893:         "molecular_topology_generation_authorized": False,
+000894:         "formal_charge_assignment_authorized": False,
+000895:         "force_field_parameterization_authorized": False,
+000896:         "energy_minimization_authorized": False,
+000897:         "MD_authorized": False,
+000898:         "QM_authorized": False,
+000899:         "failed_audit_gates": " | ".join(failed_audit_gates),
+000900:         "required_next_step": next_step,
+000901:     }
+000902:     write_rows(SUMMARY_CSV, [summary])
+000903:     write_rows(GATES_CSV, [{"gate": name, "pass": passed} for name, passed in audit_gates.items()])
+000904:     JSON_OUT.write_text(
+000905:         json.dumps(
+000906:             {
+000907:                 "summary": summary,
+000908:                 "class_summaries": class_rows,
+000909:                 "selected_rows": selected_rows,
+000910:                 "audit_gates": audit_gates,
+----- LINES 797-911 -----
+000797:         nonheteropolar = 0
+000798:         for first, neighbors in candidate_adjacency.items():
+000799:             for second in neighbors:
+000800:                 if first < second and {candidate_elements[first], candidate_elements[second]} != {"B", "N"}:
+000801:                     nonheteropolar += 1
+000802:         components = graph_tools.connected_components(candidate_adjacency)
+000803:         is_bipartite, _ = graph_tools.bipartite_coloring(candidate_adjacency)
+000804:         four_cycles = graph_tools.count_four_cycles(candidate_adjacency)
+000805:         paths_without_cycle = 0
+000806:         cycle_lengths = []
+000807:         for path in candidate_paths:
+000808:             alternative = graph_tools.shortest_path_length(
+000809:                 candidate_adjacency,
+000810:                 path["seed"],
+000811:                 path["outer"],
+000812:                 path["edges"],
+000813:             )
+000814:             if alternative is None:
+000815:                 paths_without_cycle += 1
+000816:             else:
+000817:                 cycle_lengths.append(alternative + path["edge_count"])
+000818:         topology_metrics = {
+000819:             "selected_heavy_nodes": len(candidate_adjacency),
+000820:             "selected_components": len(components),
+000821:             "selected_bipartite": is_bipartite,
+000822:             "selected_four_cycles": four_cycles,
+000823:             "selected_nonheteropolar_edges": nonheteropolar,
+000824:             "selected_degree_over3": sum(len(neighbors) > 3 for neighbors in candidate_adjacency.values()),
+000825:             "selected_degree_below2": sum(len(neighbors) < 2 for neighbors in candidate_adjacency.values()),
+000826:             "selected_H_required": sum(max(0, 3 - len(neighbors)) for neighbors in candidate_adjacency.values()),
+000827:             "selected_paths_without_cycle": paths_without_cycle,
+000828:             "selected_cycle_minimum": min(cycle_lengths) if cycle_lengths else 0,
+000829:             "selected_cycle_maximum": max(cycle_lengths) if cycle_lengths else 0,
+000830:         }
+000831:         selected_rows.append({"classification": "SELECTED_CLASS", **selected_class, **topology_metrics})
+000832:         write_rows(SELECTED_CSV, selected_rows)
+000833: 
+000834:     audit_gates = {
+000835:         "Gate3I_graph_is_accepted": graph_summary.get("decision") == EXPECTED_GRAPH_DECISION,
+000836:         "Gate3K1_trimer_redesign_is_confirmed": redesign_summary.get("decision") == EXPECTED_REDESIGN_DECISION,
+000837:         "bridge_classes_4_5_6_were_screened": len(class_rows) == 3,
+000838:         "60_mappings_per_end_and_class_were_screened": len(mapping_rows) == 3 * 2 * 60,
+000839:         "all_pair_metrics_are_finite": all(
+000840:             all(
+000841:                 math.isfinite(float(row[field]))
+000842:                 for field in (
+000843:                     "target_distance_nm",
+000844:                     "best_library_distance_error_nm",
+000845:                     "best_minimum_angle_deg",
+000846:                     "best_maximum_angle_deg",
+000847:                     "best_maximum_bond_deviation_nm",
+000848:                     "best_minimum_clearance_nm",
+000849:                 )
+000850:             )
+000851:             for row in pair_rows
+000852:         ),
+000853:     }
+000854:     failed_audit_gates = [name for name, passed in audit_gates.items() if not passed]
+000855:     integrity_pass = not failed_audit_gates
+000856:     topology_pass = False
+000857:     if selected_class is not None:
+000858:         topology_pass = (
+000859:             topology_metrics["selected_components"] == 1
+000860:             and topology_metrics["selected_bipartite"]
+000861:             and topology_metrics["selected_four_cycles"] == 0
+000862:             and topology_metrics["selected_nonheteropolar_edges"] == 0
+000863:             and topology_metrics["selected_degree_over3"] == 0
+000864:             and topology_metrics["selected_degree_below2"] == 0
+000865:             and topology_metrics["selected_paths_without_cycle"] == 0
+000866:             and topology_metrics["selected_cycle_minimum"] >= 6
+000867:         )
+000868:     accepted = integrity_pass and selected_class is not None and topology_pass
+000869:     decision = PASS_DECISION if accepted else SPARSE_DECISION
+000870:     next_step = (
+000871:         "BUILD_AND_VALIDATE_R2_SELECTED_FULL_DENSITY_LONGER_BN_BRIDGE_GRAPH"
+000872:         if accepted
+000873:         else "SCREEN_R2_SPARSE_LONGER_BN_BRIDGE_TOPOLOGIES"
+000874:     )
+000875: 
+000876:     summary = {
+000877:         "decision": decision,
+000878:         "bridge_classes_screened": len(class_rows),
+000879:         "endpoint_pairs_screened": len(pair_rows),
+000880:         "mappings_screened": len(mapping_rows),
+000881:         "feasible_class_count": len(feasible_classes),
+000882:         "selected_bridge_atoms_per_attachment": "" if selected_class is None else selected_class["bridge_atoms_per_attachment"],
+000883:         "selected_attachments_per_end": "" if selected_class is None else 15,
+000884:         "selected_minimum_angle_deg": "" if selected_class is None else selected_class["class_minimum_angle_deg"],
+000885:         "selected_minimum_clearance_nm": "" if selected_class is None else selected_class["class_minimum_clearance_nm"],
+000886:         "selected_maximum_bond_deviation_nm": "" if selected_class is None else selected_class["class_maximum_bond_deviation_nm"],
+000887:         **topology_metrics,
+000888:         "audit_integrity_pass": integrity_pass,
+000889:         "selected_topology_graph_checks_pass": topology_pass,
+000890:         "candidate_is_final_chemistry": False,
+000891:         "selected_graph_generation_authorized": accepted,
+000892:         "coordinate_generation_authorized": False,
+000893:         "molecular_topology_generation_authorized": False,
+000894:         "formal_charge_assignment_authorized": False,
+000895:         "force_field_parameterization_authorized": False,
+000896:         "energy_minimization_authorized": False,
+000897:         "MD_authorized": False,
+000898:         "QM_authorized": False,
+000899:         "failed_audit_gates": " | ".join(failed_audit_gates),
+000900:         "required_next_step": next_step,
+000901:     }
+000902:     write_rows(SUMMARY_CSV, [summary])
+000903:     write_rows(GATES_CSV, [{"gate": name, "pass": passed} for name, passed in audit_gates.items()])
+000904:     JSON_OUT.write_text(
+000905:         json.dumps(
+000906:             {
+000907:                 "summary": summary,
+000908:                 "class_summaries": class_rows,
+000909:                 "selected_rows": selected_rows,
+000910:                 "audit_gates": audit_gates,
+000911:                 "limitations": [
+----- LINES 874-988 -----
+000874:     )
+000875: 
+000876:     summary = {
+000877:         "decision": decision,
+000878:         "bridge_classes_screened": len(class_rows),
+000879:         "endpoint_pairs_screened": len(pair_rows),
+000880:         "mappings_screened": len(mapping_rows),
+000881:         "feasible_class_count": len(feasible_classes),
+000882:         "selected_bridge_atoms_per_attachment": "" if selected_class is None else selected_class["bridge_atoms_per_attachment"],
+000883:         "selected_attachments_per_end": "" if selected_class is None else 15,
+000884:         "selected_minimum_angle_deg": "" if selected_class is None else selected_class["class_minimum_angle_deg"],
+000885:         "selected_minimum_clearance_nm": "" if selected_class is None else selected_class["class_minimum_clearance_nm"],
+000886:         "selected_maximum_bond_deviation_nm": "" if selected_class is None else selected_class["class_maximum_bond_deviation_nm"],
+000887:         **topology_metrics,
+000888:         "audit_integrity_pass": integrity_pass,
+000889:         "selected_topology_graph_checks_pass": topology_pass,
+000890:         "candidate_is_final_chemistry": False,
+000891:         "selected_graph_generation_authorized": accepted,
+000892:         "coordinate_generation_authorized": False,
+000893:         "molecular_topology_generation_authorized": False,
+000894:         "formal_charge_assignment_authorized": False,
+000895:         "force_field_parameterization_authorized": False,
+000896:         "energy_minimization_authorized": False,
+000897:         "MD_authorized": False,
+000898:         "QM_authorized": False,
+000899:         "failed_audit_gates": " | ".join(failed_audit_gates),
+000900:         "required_next_step": next_step,
+000901:     }
+000902:     write_rows(SUMMARY_CSV, [summary])
+000903:     write_rows(GATES_CSV, [{"gate": name, "pass": passed} for name, passed in audit_gates.items()])
+000904:     JSON_OUT.write_text(
+000905:         json.dumps(
+000906:             {
+000907:                 "summary": summary,
+000908:                 "class_summaries": class_rows,
+000909:                 "selected_rows": selected_rows,
+000910:                 "audit_gates": audit_gates,
+000911:                 "limitations": [
+000912:                     "This is a deterministic geometric screen, not an energy calculation.",
+000913:                     "Diagnostic bridge conformers are not applied to the accepted structure.",
+000914:                     "A selected class must still be rebuilt and validated as a complete graph.",
+000915:                     "No molecular topology, formal charges, force-field parameters, minimization, MD, or QM calculation was generated.",
+000916:                 ],
+000917:             },
+000918:             indent=2,
+000919:             sort_keys=True,
+000920:         )
+000921:         + "\n",
+000922:         encoding="utf-8",
+000923:     )
+000924:     write_rows(
+000925:         MANIFEST_CSV,
+000926:         [
+000927:             {"role": "geometry_helper", "file": relative(HELPER_GEOMETRY), "sha256": sha256(HELPER_GEOMETRY)},
+000928:             {"role": "graph_helper", "file": relative(HELPER_GRAPH), "sha256": sha256(HELPER_GRAPH)},
+000929:             {"role": "Gate3I_graph_nodes", "file": relative(GRAPH_NODES), "sha256": sha256(GRAPH_NODES)},
+000930:             {"role": "Gate3I_graph_edges", "file": relative(GRAPH_EDGES), "sha256": sha256(GRAPH_EDGES)},
+000931:             {"role": "Gate3I_graph_summary", "file": relative(GRAPH_SUMMARY), "sha256": sha256(GRAPH_SUMMARY)},
+000932:             {"role": "Gate3K_fixed_coordinates", "file": relative(FIXED_COORDINATES), "sha256": sha256(FIXED_COORDINATES)},
+000933:             {"role": "Gate3K1_redesign_summary", "file": relative(REDESIGN_SUMMARY), "sha256": sha256(REDESIGN_SUMMARY)},
+000934:         ],
+000935:     )
+000936: 
+000937:     class_lines = "\n".join(
+000938:         f"- m={row['bridge_atoms_per_attachment']}: lower/upper feasible mappings="
+000939:         f"{row['lower_feasible_mapping_count']}/{row['upper_feasible_mapping_count']}; "
+000940:         f"feasible={row['uniform_class_feasible']}"
+000941:         for row in class_rows
+000942:     )
+000943:     gate_lines = "\n".join(
+000944:         f"- `{name}`: **{'PASS' if passed else 'FAIL'}**"
+000945:         for name, passed in audit_gates.items()
+000946:     )
+000947:     REPORT_MD.write_text(
+000948:         f"""# R2 Full-Density Longer BN Bridge Screen
+000949: 
+000950: ## Scope
+000951: 
+000952: This gate screens alternating BN bridges containing four, five or six
+000953: heavy atoms while retaining 15 attachments per end.
+000954: 
+000955: No accepted coordinates were replaced. No molecular topology, formal
+000956: charges, force-field parameters, minimization, MD or QM calculation was
+000957: generated.
+000958: 
+000959: ## Results
+000960: 
+000961: {class_lines}
+000962: 
+000963: ## Selection
+000964: 
+000965: - Selected bridge atoms per attachment: **{summary['selected_bridge_atoms_per_attachment'] or 'NONE'}**
+000966: - Selected attachments per end: **{summary['selected_attachments_per_end'] or 'NONE'}**
+000967: - Selected minimum angle: **{summary['selected_minimum_angle_deg'] or 'N/A'}**
+000968: - Selected minimum clearance: **{summary['selected_minimum_clearance_nm'] or 'N/A'}**
+000969: - Selected graph checks pass: **{topology_pass}**
+000970: 
+000971: ## Audit gates
+000972: 
+000973: {gate_lines}
+000974: 
+000975: ## Decision
+000976: 
+000977: - Decision: **{decision}**
+000978: - Failed audit-integrity gates: **{'NONE' if not failed_audit_gates else ' | '.join(failed_audit_gates)}**
+000979: - Selected graph generation authorized: **{'YES' if accepted else 'NO'}**
+000980: - Coordinate generation authorized: **NO**
+000981: - Molecular topology generation authorized: **NO**
+000982: - Energy minimization authorized: **NO**
+000983: - MD authorized: **NO**
+000984: - QM authorized: **NO**
+000985: - Required next step: `{next_step}`
+000986: """,
+000987:         encoding="utf-8",
+000988:     )
+
+------------------------------------------------------------------
+AVAILABLE COORDINATE SOURCES
+------------------------------------------------------------------
+FOUND=runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_coordinates.csv
+c16c0476415f5f411dc91f2d6243cfe24a01d38a90d6fe6392d62faa776f6b84  runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_coordinates.csv
+ROWS=2256
+FIELDS=node_id | element | node_type | end | x_nm | y_nm | z_nm | coordinates_generated_by | energy_minimized | MD_relaxed
+NODE_TYPES:
+  ALTERNATING_BN_TRIMER_BRIDGE=90
+  ANNULUS_INNER_BOUNDARY=24
+  ANNULUS_INNER_PASSIVANT_H=24
+  ANNULUS_INTERIOR=168
+  ANNULUS_OUTER_BOUNDARY=60
+  ANNULUS_OUTER_PASSIVANT_H=30
+  BRIDGE_PASSIVANT_H=90
+  HEXAGONAL_EDGE_COMPLETION_SEED=60
+  PARENT_HBN=1680
+  SEED_PASSIVANT_H=30
+ELEMENTS:
+  B=1041
+  H=174
+  N=1041
+
+FOUND=runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_coordinates.csv
+1ba5ccf9be7f1118b08829885b17ddd5ebddd2a66b80f1ae8418f7bc4ef3aa14  runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_coordinates.csv
+ROWS=2256
+FIELDS=node_id | element | node_type | end | x_nm | y_nm | z_nm | coordinates_generated_by | energy_minimized | MD_relaxed
+NODE_TYPES:
+  ALTERNATING_BN_TRIMER_BRIDGE=90
+  ANNULUS_INNER_BOUNDARY=24
+  ANNULUS_INNER_PASSIVANT_H=24
+  ANNULUS_INTERIOR=168
+  ANNULUS_OUTER_BOUNDARY=60
+  ANNULUS_OUTER_PASSIVANT_H=30
+  BRIDGE_PASSIVANT_H=90
+  HEXAGONAL_EDGE_COMPLETION_SEED=60
+  PARENT_HBN=1680
+  SEED_PASSIVANT_H=30
+ELEMENTS:
+  B=1041
+  H=174
+  N=1041
+
+------------------------------------------------------------------
+SELECTED GRAPH AND CANDIDATE HASHES
+------------------------------------------------------------------
+083a8fbdcc876e7c2c7c0fe01e8cf7321e3f7a9e58def30d1bb6c789ffd4799b  runs/phase1A/day024_chemical_end_rim_design/15_r2_full_density_longer_bn_bridge_screen/r2_full_density_longer_bridge_selected_candidate.csv
+e3e3973923c6d9eddfd0b07d003f66c45fa1c72a2b0227de729af7b162230dc7  runs/phase1A/day024_chemical_end_rim_design/15_r2_full_density_longer_bn_bridge_screen/r2_full_density_longer_bridge_screen_summary.csv
+d18efafd9fad33bba1098bc1821103b9bec80011160922c9283ae5f674e3c1cc  runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_graph_nodes.csv
+5a140de57b2a89e8c46af68db19c14677ed220e6a6d105f7528a3ad97de9f93e  runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_graph_edges.csv
+5ad1b2b1a08fa039bc1e2adc86b3defbaa77a32912b4d686a2ec0f4c00382e76  runs/phase1A/day024_chemical_end_rim_design/16_r2_selected_full_density_longer_bn_bridge_graph/r2_selected_longer_bn_bridge_paths.csv
+
+R2 selected four-atom embedding preflight: COMPLETE

@@ -1,0 +1,3 @@
+end,bridge_atoms,nuclear_aperture_diameter_nm,nuclear_aperture_relative_error,outer_annulus_radius_mean_nm,outer_annulus_radius_relative_error
+LOWER,60,1.045415170115679,0.24542256085336428,1.0740383985523587,0.10431564443406381
+UPPER,60,1.045415170115679,0.24542256085336428,1.0740383985523587,0.10431564443406381

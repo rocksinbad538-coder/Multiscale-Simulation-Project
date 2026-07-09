@@ -1,0 +1,3 @@
+end,heavy_nodes,heavy_edges,connected_components,cycle_rank,bipartite,girth,cycles_length3,cycles_length4,cycles_length5,cycles_length6,cycles_length7,cycles_length8,cycles_length9,cycles_length10,enumerated_four_cycles,common_neighbor_four_cycles,added_BN_nodes_in_four_cycles,parent_collar_edges_in_four_cycles,parent_degree_failures,added_BN_degree_failures,self_edges,duplicate_edges,maximum_enumerated_cycle_length
+LOWER,174,240,1,67,True,4,0,39,0,77,0,32,0,42,39,39,98,60,0,12,0,0,10
+UPPER,174,240,1,67,True,4,0,39,0,77,0,32,0,42,39,39,98,60,0,12,0,0,10

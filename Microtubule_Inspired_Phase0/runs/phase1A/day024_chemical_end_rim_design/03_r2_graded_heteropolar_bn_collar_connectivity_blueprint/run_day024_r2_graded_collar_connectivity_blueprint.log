@@ -1,0 +1,34 @@
+Day024 R2 graded heteropolar BN collar connectivity blueprint completed.
+Feasible population sequences retained: 24451
+Selected sequence rank / populations / score: 1/30-30-30-22-20-12/93.602645
+Selected layers / added heavy atoms per end: 6/144
+Target / selected heavy atoms per end / relative error: 145.133/144/0.007806
+Inner population / parent spacing / inner spacing / relative error: 12/0.251144/0.219756/0.124981
+Lower parent / first layer / added B/N/H: B/N/64/80/12
+Upper parent / first layer / added B/N/H: N/B/80/64/12
+Combined added B/N/H: 144/144/24
+Parent-to-collar bonds lower/upper/total: 60/60/120
+Coordination failures: 0
+Same-element heavy edges: 0
+Lower / upper connected: True/True
+Maximum interface angular span: 0.066667 turns
+Decision: R2_GRADED_HETEROPOLAR_BN_COLLAR_CONNECTIVITY_BLUEPRINT_VALIDATED
+Failed gates: NONE
+Candidate is final chemistry: NO
+Static coordinate embedding authorized: YES
+Molecular topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM authorized: NO
+Required next step: BUILD_AND_VALIDATE_R2_GRADED_HETEROPOLAR_COLLAR_STATIC_COORDINATE_EMBEDDING
+Wrote: runs/phase1A/day024_chemical_end_rim_design/03_r2_graded_heteropolar_bn_collar_connectivity_blueprint/r2_feasible_collar_ring_population_sequences.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/03_r2_graded_heteropolar_bn_collar_connectivity_blueprint/r2_selected_collar_connectivity_nodes.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/03_r2_graded_heteropolar_bn_collar_connectivity_blueprint/r2_selected_collar_connectivity_edges.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/03_r2_graded_heteropolar_bn_collar_connectivity_blueprint/r2_selected_collar_interface_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/03_r2_graded_heteropolar_bn_collar_connectivity_blueprint/r2_graded_collar_connectivity_blueprint_summary.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/03_r2_graded_heteropolar_bn_collar_connectivity_blueprint/r2_graded_collar_connectivity_blueprint_gates.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/03_r2_graded_heteropolar_bn_collar_connectivity_blueprint/r2_graded_collar_connectivity_blueprint.json
+Wrote: runs/phase1A/day024_chemical_end_rim_design/03_r2_graded_heteropolar_bn_collar_connectivity_blueprint/r2_graded_collar_connectivity_source_manifest.csv
+Wrote: runs/phase1A/day024_chemical_end_rim_design/03_r2_graded_heteropolar_bn_collar_connectivity_blueprint/R2_GRADED_HETEROPOLAR_BN_COLLAR_CONNECTIVITY_BLUEPRINT_DAY024.md
