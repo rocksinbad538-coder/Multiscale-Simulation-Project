@@ -1,10 +1,3 @@
-metric,value
-source_gro,runs/phase1A/hybrid_hydrated_gromacs_min/min_gap45_pyr5shift_clean032_hbnSoftLJ_posresPYR50k.gro
-natoms,68320
-water_molecules,16634
-min_OW_solute_nm,0.26646
-min_OW_solute_pair,42405:SOL:OW - 1781:PYR:H6
-min_WATERATOM_solute_nm,0.24123
-min_WATERATOM_solute_pair,29931:SOL:HW2 - 1033:HBN:B1033
-min_PYR_HBN_nm,0.44153
-min_PYR_HBN_pair,1683:PYR:C2 - 355:HBN:B0355
+version https://git-lfs.github.com/spec/v1
+oid sha256:08ebe364cfd6ed83f9128f00b00ef7c48c5612b41f45e4f43ff27b85fc5c2b49
+size 394

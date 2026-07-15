@@ -1,7 +1,3 @@
-search_id,priority,topic,query,required_evidence,exclusion_criteria
-SEARCH_01,HIGHEST,Flexible h-BN force fields,"""hexagonal boron nitride"" flexible force field molecular dynamics B N bond angle dihedral",Primary article plus complete parameter table or repository,"Rigid sheets, dummy atoms, topology-only models"
-SEARCH_02,HIGHEST,Boron nitride nanotube force fields,"""boron nitride nanotube"" force field molecular dynamics bond angle torsion parameters",Curvature validation and explicit bonded/nonbonded terms,Models validated only for flat h-BN without curvature analysis
-SEARCH_03,HIGHEST,Hydrogen-terminated BN edges,"""hydrogen terminated"" boron nitride edge B-H N-H force field molecular dynamics",Explicit B-H and N-H charges and bonded terms,Pure electronic-structure studies without reusable parameters
-SEARCH_04,HIGH,h-BN water interfaces,"""h-BN water interface"" molecular dynamics force field partial charges wettability","Water compatibility, electrostatics and interfacial validation",Contact-angle fits without published parameter definitions
-SEARCH_05,HIGH,Reactive BN potentials,boron nitrogen hydrogen reactive force field ReaxFF B N H parameterization,B/N/H training set and validation for bonds and edge chemistry,Parameter sets without B-H or N-H validation
-SEARCH_06,HIGH,BN edge and defect parameterization,boron nitride edge defect force field parameterization B-H N-H,"Edge, defect or reconstructed-site transferability",Bulk-only harmonic models
+version https://git-lfs.github.com/spec/v1
+oid sha256:88fd0834679d6b26f2ab01a03df10437b6e5ea2a63af5cf9130e79bf8c638412
+size 1488

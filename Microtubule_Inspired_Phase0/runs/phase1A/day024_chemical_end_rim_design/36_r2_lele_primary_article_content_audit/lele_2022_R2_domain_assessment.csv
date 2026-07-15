@@ -1,8 +1,3 @@
-R2_domain,article_evidence,direct_R2_transferability,parameter_file_required,additional_validation_required,assessment
-B_N_REACTIVE_CHEMISTRY,PRESENT,NOT_ESTABLISHED,True,True,"Article establishes a B/N/H ReaxFF development context, not direct R2 coverage."
-B_H_AND_N_H_CHEMISTRY,TEXTUAL_CHEMICAL_DOMAIN_ONLY,NOT_ESTABLISHED,True,True,Presence of B/N/H chemistry does not prove accurate edge-passivant parameters for R2.
-FOUR_ATOM_BN_BRIDGE,NO_DIRECT_VALIDATION_IDENTIFIED,NOT_ESTABLISHED,True,True,Dedicated bridge and attachment validation remains required.
-CURVED_BNNT,MENTION_FOUND,NOT_ESTABLISHED,True,True,Gas-phase synthesis validation is not equivalent to equilibrium mechanics of the selected R2 BNNT.
-WATER_AND_AQUEOUS_INTERFACE,NO_AQUEOUS_VALIDATION_IDENTIFIED,NOT_ESTABLISHED,True,True,No water compatibility can be inferred from a gas-phase ReaxFF training domain.
-EDGE_AND_TERMINATION_ENVIRONMENTS,MENTION_FOUND_NOT_R2_VALIDATION,NOT_ESTABLISHED,True,True,"R2 annulus, seed and passivated edge environments require explicit validation."
-CHARGE_MODEL,REAXFF_CHARGE_MODEL_CONTEXT,NOT_ESTABLISHED,True,True,ReaxFF charge equilibration must not be treated as an independently validated aqueous polarization model.
+version https://git-lfs.github.com/spec/v1
+oid sha256:80a10969867adfdf1ddc6fc85b1a66126d59a18d2cdfc063433d69f1fc58beb0
+size 1232

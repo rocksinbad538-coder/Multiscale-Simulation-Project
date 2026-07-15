@@ -1,5 +1,3 @@
-site,n_frames,n_atoms,n_carbon_atoms,maximum_atom_displacement_A,maximum_carbon_centroid_shift_A,frozen_geometry_pass
-PYR2,21,26,16,0.0,0.0,True
-PYR3,21,26,16,0.0,0.0,True
-PYR4,21,26,16,0.0,0.0,True
-PYR5,21,26,16,0.0,0.0,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:9940e03c92819709c046f7b0c608bc79f05ee0db0a191ad186a183361fc0aba9
+size 231

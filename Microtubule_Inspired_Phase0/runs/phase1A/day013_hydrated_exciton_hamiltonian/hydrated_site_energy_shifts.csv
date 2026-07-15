@@ -1,5 +1,3 @@
-site,vacuum_S1_eV,hydrated_S1_eV,shift_meV
-PYR2,3.779000,3.754000,-25.000
-PYR3,3.774000,3.765000,-9.000
-PYR4,3.782000,3.779000,-3.000
-PYR5,3.767000,3.746000,-21.000
+version https://git-lfs.github.com/spec/v1
+oid sha256:81bf9dc49d2f1f80078adc75189400d4c3e5e1324b3b07fc3dbe14e8f23891d6
+size 170

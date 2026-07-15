@@ -1,8 +1,3 @@
-metric,value
-gro_exists,True
-top_exists,True
-tpr_exists,True
-natoms_gro,1784
-fatal_or_error_detected,False
-note_count,2
-warning_count,0
+version https://git-lfs.github.com/spec/v1
+oid sha256:15c5b88cf6f2d417a5400ede51a26bc7381a5f5ba35f4097ab0423a7fe9819bb
+size 144

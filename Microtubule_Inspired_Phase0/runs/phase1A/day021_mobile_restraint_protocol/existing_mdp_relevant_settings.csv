@@ -1,2 +1,3 @@
-path,integrator,dt,nsteps,continuation,gen-vel,gen-temp,gen-seed,ld-seed,define,freezegrps,freezedim,constraints,constraint-algorithm,tcoupl,tc-grps,tau-t,ref-t,pcoupl,ref-p,tau-p,nstxout-compressed,nstenergy,nstlog,emtol,emstep
-runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.mdp,md,0.0005,200000,,yes,300,61631,,,HBN PYR,Y Y Y Y Y Y,none,,V-rescale,System,1.0,300,no,,,1000,500,500,,
+version https://git-lfs.github.com/spec/v1
+oid sha256:274b4065bf9ad828961da43b96f5ec2724948ed37ee6aba2626c1bf36dc49009
+size 449

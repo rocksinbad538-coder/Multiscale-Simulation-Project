@@ -1,7 +1,3 @@
-element,expected_index,present,observed_index,order_match
-C,1,True,1,True
-H,2,True,2,True
-O,3,True,3,True
-N,4,True,4,True
-B,5,True,5,True
-Al,6,True,6,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:73b5942e911cd06fef71e0e9a6b1fda34c35a33f5fffb8512b71650d5c550646
+size 162

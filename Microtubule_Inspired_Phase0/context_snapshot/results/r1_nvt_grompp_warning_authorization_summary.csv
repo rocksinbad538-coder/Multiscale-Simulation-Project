@@ -1,2 +1,3 @@
-decision,grompp_warning_count,expected_warning_present,fatal_error_present,maxwarn_one_present,SOL_degrees_of_freedom,HBN_PYR_degrees_of_freedom,CAPS_degrees_of_freedom,temperature_groups,tau_t_ps,reference_temperatures_K,freeze_groups,freeze_dimensions,failed_gates,NVT_execution_authorized,required_next_step
-R1_NVT_GROMPP_WARNING_AUTHORIZED,1,True,False,True,99303.0,0.0,0.0,SOL HBN_PYR CAPS,0.1 -1.0 -1.0,300.0 300.0 300.0,HBN_PYR CAPS,Y Y Y Y Y Y,,True,RUN_R1_FROZEN_SOLUTE_NVT_20PS
+version https://git-lfs.github.com/spec/v1
+oid sha256:3d86bc94a212aabc275d480e4959b00ab51e51928a5adb26cb12d7bd66404e7e
+size 490

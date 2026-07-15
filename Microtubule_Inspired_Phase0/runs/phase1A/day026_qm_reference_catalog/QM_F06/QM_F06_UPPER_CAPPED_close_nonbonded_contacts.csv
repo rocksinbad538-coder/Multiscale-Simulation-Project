@@ -1,2 +1,3 @@
-fragment,atom_1,element_1,atom_2,element_2,distance_angstrom,clash_threshold_angstrom,steric_clash
-QM_F06_UPPER_CAPPED,H4:UPPER:0047:0,H,HCAP:UPPER:07,H,1.3890460006,0.7,False
+version https://git-lfs.github.com/spec/v1
+oid sha256:e37cf018ae1e3a9ef6b273ae3d5a6622d3fec5be3f58fbd337974a4475633f5e
+size 178

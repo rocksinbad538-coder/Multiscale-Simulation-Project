@@ -1,5 +1,3 @@
-site,PYR2,PYR3,PYR4,PYR5
-PYR2,3.500,6.500,2.500,8.500
-PYR3,6.500,-1.500,10.500,1.000
-PYR4,2.500,10.500,6.500,11.000
-PYR5,8.500,1.000,11.000,-8.500
+version https://git-lfs.github.com/spec/v1
+oid sha256:34b217406ec068a8bb7135ec5bd10f1bb3063e9f23841bf2aff1f2ae3595aab8
+size 152

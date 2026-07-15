@@ -1,6 +1,3 @@
-gate,pass
-Gate3I_graph_is_accepted,True
-Gate3K1_trimer_redesign_is_confirmed,True
-bridge_classes_4_5_6_were_screened,True
-60_mappings_per_end_and_class_were_screened,True
-all_pair_metrics_are_finite,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:410ad3a7e6572882be3647d33b7bf3a6f85711acf3d24c2f057613ad9a12fd02
+size 210

@@ -1,5 +1,3 @@
-source_gro,pyrene_resnr,atom_count,min_pyr_hbn_nm,pyr_atom,hbn_atom,contacts_lt_0p30,contacts_lt_0p35,contacts_lt_0p40,contacts_lt_0p45
-runs/phase1A/hybrid_hbnBonded_kang2000_improperGeo100_nvt100ps/nvt_100ps_100K.gro,2,26,0.38235,1685:C4,415:B0415,0,0,6,69
-runs/phase1A/hybrid_hbnBonded_kang2000_improperGeo100_nvt100ps/nvt_100ps_100K.gro,3,26,0.32135,1731:H8,547:B0547,0,27,108,214
-runs/phase1A/hybrid_hbnBonded_kang2000_improperGeo100_nvt100ps/nvt_100ps_100K.gro,4,26,0.42663,1758:H9,916:N0916,0,0,0,12
-runs/phase1A/hybrid_hbnBonded_kang2000_improperGeo100_nvt100ps/nvt_100ps_100K.gro,5,26,0.70072,1771:C12,1344:N1344,0,0,0,0
+version https://git-lfs.github.com/spec/v1
+oid sha256:0014b2c0e31c6ae620515ad6e664e89b4525f6b0a2975a4bb54ea75675bf666c
+size 634

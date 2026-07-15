@@ -1,7 +1,3 @@
-gate,pass
-Gate3F_graph_design_is_accepted,True
-Gate3G_embedding_has_expected_review_decision,True
-600_mapping_and_transform_fits_were_screened,True
-300_fits_were_screened_per_end,True
-all_required_fit_modes_are_present,True
-all_core_fit_metrics_are_finite,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:a22e0355e59f22109c8186fb3d45d97b67e60c67f035a709d94de72fda41beec
+size 268

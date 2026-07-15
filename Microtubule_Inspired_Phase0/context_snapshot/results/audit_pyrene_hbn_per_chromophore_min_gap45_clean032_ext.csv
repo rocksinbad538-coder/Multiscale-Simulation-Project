@@ -1,5 +1,3 @@
-source_gro,pyrene_resnr,atom_count,min_pyr_hbn_nm,pyr_atom,hbn_atom,contacts_lt_0p30,contacts_lt_0p35,contacts_lt_0p40,contacts_lt_0p45
-runs/phase1A/accepted/hybrid_hydrated_gap45_clean032_min/min_gap45_clean032_ext.gro,2,26,0.50217,1705:H8,237:B0237,0,0,0,0
-runs/phase1A/accepted/hybrid_hydrated_gap45_clean032_min/min_gap45_clean032_ext.gro,3,26,0.50086,1726:H3,725:B0725,0,0,0,0
-runs/phase1A/accepted/hybrid_hydrated_gap45_clean032_min/min_gap45_clean032_ext.gro,4,26,0.55901,1747:C14,976:N0976,0,0,0,0
-runs/phase1A/accepted/hybrid_hydrated_gap45_clean032_min/min_gap45_clean032_ext.gro,5,26,0.45680,1783:H8,1286:N1286,0,0,0,0
+version https://git-lfs.github.com/spec/v1
+oid sha256:fed85145da3b0264d3839fc86d938165d84a8e1aa56ea149a07691817f034e51
+size 635

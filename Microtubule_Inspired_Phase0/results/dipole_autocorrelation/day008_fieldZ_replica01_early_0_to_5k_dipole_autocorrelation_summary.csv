@@ -1,2 +1,3 @@
-label,n_frames,n_water,first_timestep,last_timestep,saved_step_spacing,frame_spacing_fs,total_sampled_window_fs,initial_C1_connected,final_C1_raw,final_C2_raw,final_C1_connected,positive_window_integral_C1_ps,positive_window_limit_C1_ps,positive_window_integral_C2_ps,positive_window_limit_C2_ps,positive_window_integral_connected_C1_ps,positive_window_limit_connected_C1_ps,mean_collective_dipole_magnitude,initial_collective_z,final_collective_z
-day008_fieldZ_replica01_early_0_to_5k,6,29987,0,5000,1000,50.0,250.0,1.0,0.726356177380406,0.4550112003743068,0.7595438653897941,0.20945487622531467,0.25,0.15933418353374856,0.25,0.21106883628691678,0.25,0.18795750116373547,0.0019968443766812884,0.2964498153263325
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc6d819aa20265cf5d750d004e112be27ae8493b3eb36c1abb07423a6014859c
+size 713

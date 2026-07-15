@@ -1,10 +1,3 @@
-metric,value
-hBN_atoms,1680
-pyrene_count,4
-pyrene_atoms_total,104
-total_atoms,1784
-hBN_radius_A,11.991403
-radial_gap_requested_A,3.400000
-zmin_A,0.000000
-zmax_A,60.175000
-intercomponent_overlap_count,0
+version https://git-lfs.github.com/spec/v1
+oid sha256:0674318a50db34b1d172837c74418c06d71d066e1e4251b2a79d44a466d41297
+size 212

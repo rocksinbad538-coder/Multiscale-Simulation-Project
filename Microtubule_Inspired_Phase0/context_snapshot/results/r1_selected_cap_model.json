@@ -1,27 +1,3 @@
-{
-  "C12_kJ_mol_nm12": 7.266286217927493e-09,
-  "C6_kJ_mol_nm6": 0.0,
-  "MD_execution_authorized": false,
-  "R1_atom_count": 68314,
-  "R1_geometry": "runs/phase1A/day023_confinement_design/02_r1_steric_cap_prototype/r1_t0_hydrated_with_steric_caps_geometry_only.gro",
-  "barrier_at_coverage_hole_kBT": 551.48880447242,
-  "cap_beads_per_end": 163,
-  "caps_must_remain_frozen": true,
-  "decision": "FULL_R1_STATIC_CAP_WATER_MODEL_VALIDATED",
-  "energy_at_pruning_cutoff_kBT": 0.22661303694428284,
-  "energy_minimization_authorized": true,
-  "initial_cap_water_energy_kJ_mol": 14.302773475647,
-  "maximum_water_force_kJ_mol_nm": 52.26347887360545,
-  "minimum_cap_water_distance_nm": 0.2201885555609106,
-  "pair_epsilon_kJ_mol": 3.1179234818074653,
-  "pair_sigma_nm": -0.17,
-  "required_next_step": "PREPARE_AND_RUN_R1_FROZEN_SOLUTE_ENERGY_MINIMIZATION",
-  "retained_water_molecules": 16551,
-  "screening_solute_must_remain_frozen": true,
-  "selected_candidate": "target_5kBT",
-  "selected_index": "runs/phase1A/day023_confinement_design/05_r1_full_static_scan/selected/r1_selected_groups.ndx",
-  "selected_static_TPR": "runs/phase1A/day023_confinement_design/05_r1_full_static_scan/selected/r1_selected_static_validation.tpr",
-  "selected_topology": "runs/phase1A/day023_confinement_design/05_r1_full_static_scan/selected/r1_selected_cap_model.top",
-  "selection_principle": "WEAKEST_VALIDATED_REPULSION_WITH_COVERAGE_HOLE_BARRIER_AT_LEAST_100_KBT",
-  "target_energy_kBT_at_0p17nm": 5.0
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:562cd705dcbe1b4abdd731b869eeefe8edf8e9a66ddf2531a21ca8140db2ddd1
+size 1486

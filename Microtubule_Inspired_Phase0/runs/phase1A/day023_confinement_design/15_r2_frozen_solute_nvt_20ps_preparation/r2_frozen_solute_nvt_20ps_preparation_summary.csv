@@ -1,2 +1,3 @@
-decision,atoms,waters,CAPL_atoms,CAPU_atoms,dt_ps,nsteps,total_time_ps,nstxout_compressed,trajectory_interval_ps,expected_XTC_frames,nstenergy,nstlog,temperature_K,tau_t_SOL_ps,generation_seed,grompp_probe_return_code,grompp_final_return_code,grompp_warning_count,controlled_maxwarn_used,SOL_degrees_of_freedom,expected_SOL_degrees_of_freedom,HBN_PYR_degrees_of_freedom,CAPS_degrees_of_freedom,water_O_RMS_speed_nm_ps,water_O_max_speed_nm_ps,HBN_PYR_RMS_input_speed_nm_ps,CAPS_RMS_input_speed_nm_ps,failed_gates,NVT_execution_authorized,velocity_regeneration_during_mdrun_authorized,long_mobile_MD_authorized,multitemperature_MD_authorized,QM_recalculation_authorized,required_next_step
-R2_FROZEN_SOLUTE_NVT_20PS_PREPARED,68332,16565,144,144,0.0005,40000,20.0,1000,0.5,41,100,100,300.0,0.1,20260708,1,0,1,True,99387.0,99387,0.0,0.0,0.6846865744791115,1.8657402221895738,0.8429839308053773,0.7988705323255822,,True,False,False,False,False,RUN_R2_FROZEN_SOLUTE_NVT_20PS
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c869a7f2a83f384c870cc8123ca13ebf465f40b22a277121e3da772a0a327fa
+size 970

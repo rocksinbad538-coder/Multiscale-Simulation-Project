@@ -1,11 +1,3 @@
-gate,pass
-216_lower_heavy_nodes_are_paired,True
-216_upper_heavy_nodes_are_used_once,True
-30_seed_pairs_are_resolved_by_circumferential_index,True
-102_lower_H_nodes_are_paired,True
-102_upper_H_nodes_are_used_once,True
-15_seed_H_pairs_are_resolved_through_seed_correspondence,True
-12_inner_H_pairs_are_resolved,True
-selected_rigid_rim_transform_is_exact,True
-coordinates_are_not_modified,True
-no_topology_minimization_MD_or_QM_is_generated,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:3addaddd5cda455c2282025211b2b88900ce0c156843fce57f2621354e77a2c8
+size 454

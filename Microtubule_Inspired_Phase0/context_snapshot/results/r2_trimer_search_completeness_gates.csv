@@ -1,8 +1,3 @@
-gate,pass
-Gate3I_graph_is_accepted,True
-Gate3K_has_expected_topology_review_decision,True
-all_Gate3K_angle_failed_paths_were_identified,True
-independent_angle_library_is_nonempty,True
-every_failed_path_received_expanded_search,True
-all_reported_search_metrics_are_finite,True
-candidate_coordinates_are_search_only,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc32db7d94c9bc7c349f050509028f82e3d2ca34377576e284f6a7078b85e14e
+size 327

@@ -1,2 +1,3 @@
-category,minimum_distance_nm,minimum_pair,threshold_nm,pairs_below_threshold
-HEAVY_HEAVY,0.15974739665991966,A:LOWER:1:-9 | BR4:LOWER:03:2,0.12,0
+version https://git-lfs.github.com/spec/v1
+oid sha256:fabd411c448ecbd6185d62ef9ebd3db2b1974eca0c55ec95975da0e762ab8134
+size 148

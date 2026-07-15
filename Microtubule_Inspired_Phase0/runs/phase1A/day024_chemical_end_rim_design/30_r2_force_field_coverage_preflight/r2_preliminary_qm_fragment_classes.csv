@@ -1,8 +1,3 @@
-fragment_class,priority,target_environment,purpose,minimum_content,geometry_source,calculation_authorized
-QM_F01_PARENT_BULK_HBN,MEDIUM,PARENT_HBN_BULK_LIKE,"Reference B-N equilibrium geometry, curvature response, charges and nonbonded behavior for the parent scaffold.",Hydrogen-terminated h-BN patch or short nanotube segment.,Extract representative parent-scaffold environment.,False
-QM_F02_PARENT_SEED_JUNCTION,HIGH,PARENT_SEED_ATTACHMENT,"Validate reconstructed junction bonds, angles, charge redistribution and planarity.","Seed atom plus parent first and second coordination shells, hydrogen terminated.",Extract representative junction from each B/N sublattice.,False
-QM_F03_ANNULUS_INNER_EDGE_BH,HIGH,ANNULUS_INNER_BOUNDARY_WITH_B_H,"Validate inner-rim B-H bond, angles, partial charge and water-facing electrostatics.",Inner annulus B-H center with two coordination shells.,Extract representative lower/upper inner-rim environment.,False
-QM_F04_ANNULUS_INNER_EDGE_NH,HIGH,ANNULUS_INNER_BOUNDARY_WITH_N_H,"Validate inner-rim N-H bond, angles, partial charge and water-facing electrostatics.",Inner annulus N-H center with two coordination shells.,Extract representative lower/upper inner-rim environment.,False
-QM_F05_ANNULUS_OUTER_EDGE,HIGH,ANNULUS_OUTER_BOUNDARY,Validate outer-rim B-H/N-H environments and local edge stiffness.,Representative outer-edge B-H and N-H fragments.,Extract one representative of each elemental environment.,False
-QM_F06_FOUR_ATOM_BRIDGE,HIGHEST,ALTERNATING_BN_FOUR_ATOM_BRIDGE,"Validate bridge bond, angle, torsional and charge terms.",Full B-N-B-N bridge plus both attachment centers and their first coordination shells.,Extract representative lower and upper bridge conformers.,False
-QM_F07_BRIDGE_ATTACHMENT,HIGHEST,ANNULUS_BRIDGE_ATTACHMENT_AND_SEED_BRIDGE_ATTACHMENT,Resolve coupling between bridge parameters and attachment center parameters.,"Bridge endpoint, attached rim/seed atom and two shells.",Extract both chemically distinct bridge endpoints.,False
+version https://git-lfs.github.com/spec/v1
+oid sha256:9962190a69c3e010eb256584af40c9ad8b86d79cbef73edf13a5deae8cae4d8a
+size 2012

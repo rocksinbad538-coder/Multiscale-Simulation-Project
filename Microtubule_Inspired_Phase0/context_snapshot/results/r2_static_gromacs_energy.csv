@@ -1,6 +1,3 @@
-label,term_name,term_number,value_kJ_mol
-Potential,Potential,12,-904859.5
-LJ_CAPS_SOL,LJ-SR:CAPS-SOL,55,14.024806976318
-Coul_CAPS_SOL,Coul-SR:CAPS-SOL,54,0.0
-LJ_HBNPYR_CAPS,LJ-SR:HBN_PYR-CAPS,43,0.0
-Coul_HBNPYR_CAPS,Coul-SR:HBN_PYR-CAPS,42,0.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:6ac6c27924d5136ea710d42a39d38725a40e375396166ed93df84ee0d6592a9f
+size 250

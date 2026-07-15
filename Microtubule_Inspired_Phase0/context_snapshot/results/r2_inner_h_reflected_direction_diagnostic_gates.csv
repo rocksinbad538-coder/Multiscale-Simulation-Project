@@ -1,8 +1,3 @@
-gate,pass
-validated_reflection_was_loaded,True
-12_inner_H_pairs_were_tested,True
-both_directional_reconstruction_scenarios_were_tested,True
-all_rebuilt_XH_lengths_use_receiver_element_targets,True
-at_least_one_direct_reflected_direction_scenario_passes,True
-coordinates_are_not_applied_to_Gate3P_structure,True
-no_topology_minimization_MD_or_QM_is_generated,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:ad2577024ae8115eaf9fd3984fe7346e02e395fe158c52e6c28e3349aee90f0c
+size 371

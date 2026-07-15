@@ -1,7 +1,3 @@
-gate,pass
-Gate3O_has_expected_aperture_only_review_decision,True
-fixed_annulus_coordinates_are_unchanged_from_Gate3K,True
-Gate3O_radial_metric_fails_both_ends,True
-at_least_one_geometric_free_aperture_metric_passes_both_ends,False
-all_aperture_metrics_are_lower_upper_symmetric,True
-heavy_geometry_other_than_aperture_remains_accepted,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:689376e39e9c591385ad75c86f7555ab6eba35aa4ffcbe42719703d9339d956f
+size 347

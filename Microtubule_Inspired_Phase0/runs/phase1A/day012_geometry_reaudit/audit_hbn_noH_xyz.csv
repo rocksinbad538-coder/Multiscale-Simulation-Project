@@ -1,8 +1,3 @@
-metric,value
-source,structures/phase1A/accepted/hbn_noH/hbn_nt_initial_noH.xyz
-natoms,1680
-element_counts,"{'B': 840, 'N': 840}"
-B-N_min_mean_max_count,"('1.44950', '1.44967', '1.45000', '2460')"
-B-H_min_mean_max_count,"('NA', 'NA', 'NA', '0')"
-N-H_min_mean_max_count,"('NA', 'NA', 'NA', '0')"
-overlaps_lt_0p50A_count,0
+version https://git-lfs.github.com/spec/v1
+oid sha256:78df7fa4b50604b4ca0092cac4641f39214f20b04576eb98bce660574d6d36c5
+size 328

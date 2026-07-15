@@ -1,2 +1,3 @@
-source_file,line_number,classification,broad_pattern_match,strict_patterns,line_text
-r2_static_single_point.log,230,BROAD_PATTERN_FALSE_POSITIVE,nan,,   lincs-warnangle                = 30
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b53f51fffc1330190bd6a7bb9f868efaf25e9eb49a8ec56fb6cd77eb479ba25
+size 191

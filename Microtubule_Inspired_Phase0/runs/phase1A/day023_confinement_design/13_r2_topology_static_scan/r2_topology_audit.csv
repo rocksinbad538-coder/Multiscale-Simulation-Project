@@ -1,11 +1,3 @@
-item,observed,expected
-HBN_molecules,1,1
-PYR_molecules,4,4
-SOL_molecules,16565,16565
-CAPL_molecules,1,1
-CAPU_molecules,1,1
-CAPL_atoms,144,144
-CAPU_atoms,144,144
-CAP_OW_sigma_nm,-0.17,-0.17
-CAP_OW_epsilon_kJ_mol,3.117923481807,3.1179234818
-TPR_atoms,68332,68332
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c8c15cf09a8be16c9b99922d4a7ea30a768c1277110a75712efe86d11ef8f0b
+size 272

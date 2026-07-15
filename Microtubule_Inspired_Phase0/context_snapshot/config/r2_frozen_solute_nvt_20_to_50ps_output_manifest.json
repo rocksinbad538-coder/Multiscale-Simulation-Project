@@ -1,10 +1,3 @@
-{
-  "continuation_EDR": "runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps.part0002.edr",
-  "continuation_EDR_sha256": "7256529eeade4dca770b8f78f7ec4d73a7ce3692c6f0d95aa5ab45a0100c9b34",
-  "continuation_LOG": "runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps.part0002.log",
-  "continuation_XTC": "runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps.part0002.xtc",
-  "continuation_XTC_sha256": "38f12c09de6acec45d866fe703ca3b9a969d77a1f72c7f248fc03881e2ab9aa1",
-  "continuation_checkpoint_sha256": "01538fbe7533bcb5be0b6858a410655992304557b3da6b3df617681437c327bc",
-  "continuation_final_GRO": "runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps.part0002.gro",
-  "continuation_final_checkpoint": "runs/phase1A/day023_confinement_design/19_r2_frozen_solute_nvt_20_to_50ps/r2_frozen_solute_nvt_20_to_50ps.cpt"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:75f81174368352ba8cd5f596343c74dbfd41c180a8d3689687683d0de46ee05a
+size 1031

@@ -1,9 +1,3 @@
-domain,evidence,R2_coverage,interpretation
-B_N_H_REACTIVE_ELEMENTAL_DOMAIN,CONFIRMED,NOT_ESTABLISHED,"The parameter file contains B, N and H, but elemental presence does not establish transferability to R2."
-B_N_BONDED_REACTIVE_CHEMISTRY,PARAMETER_RECORDS_PRESENT,NOT_ESTABLISHED,"The model was trained for gas-phase reactions and nanostructure synthesis, not equilibrium R2 mechanics."
-B_H_REACTIVE_CHEMISTRY,PARAMETER_RECORDS_PRESENT,NOT_ESTABLISHED,"B-H chemistry is represented, but R2 annulus and bridge-edge environments were not directly validated."
-N_H_REACTIVE_CHEMISTRY,PARAMETER_RECORDS_PRESENT,NOT_ESTABLISHED,"N-H chemistry is represented, but R2 termination transferability remains unverified."
-CURVED_BNNT_EQUILIBRIUM_MECHANICS,NOT_DIRECTLY_VALIDATED,NOT_ESTABLISHED,Formation of curved or closed BN structures does not constitute validation of equilibrium mechanics at the R2 radius.
-FOUR_ATOM_B_N_B_N_BRIDGE,NO_DIRECT_REFERENCE_CONFIGURATION,NOT_ESTABLISHED,The selected bridge and attachment environments remain outside the demonstrated validation set.
-WATER_AND_AQUEOUS_INTERFACE,NO_VALIDATION_IDENTIFIED,NOT_ESTABLISHED,The force field was developed for gas-phase synthesis and cannot be assumed compatible with confined water.
-ANISOTROPIC_POLARIZATION,EEM_CHARGE_EQUILIBRATION_ONLY,NOT_ESTABLISHED,ReaxFF EEM charges are not equivalent to an independently validated polarizable h-BN/water model.
+version https://git-lfs.github.com/spec/v1
+oid sha256:09fbd2cdeca38511691a585e2e23be904d483890d743debd993d1cfd2797c8e4
+size 1426

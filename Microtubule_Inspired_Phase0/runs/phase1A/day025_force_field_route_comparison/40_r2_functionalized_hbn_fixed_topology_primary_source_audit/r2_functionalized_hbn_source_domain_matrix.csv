@@ -1,16 +1,3 @@
-source_id,short_name,doi,domain,evidence_class,R2_coverage_status,interpretation,matched_R2_environment_classes,matched_R2_bonded_term_classes,direct_R2_validation_established,parameter_assignment_authorized
-GHORAI_2025_FUNCTIONALIZED_HBN_NANOPORE,Ghorai 2025,10.1063/5.0242541,PARENT_HBN_BULK_LIKE,SECONDARY_SUPPORT_ONLY,NOT_ESTABLISHED,The source is prioritized for functionalized nanopore environments rather than general BNNT bulk mechanics.,20,34,False,False
-GHORAI_2025_FUNCTIONALIZED_HBN_NANOPORE,Ghorai 2025,10.1063/5.0242541,CURVED_BNNT_MECHANICS,NO_DIRECT_EVIDENCE_YET,NOT_ESTABLISHED,Curved BNNT equilibrium mechanics must not be inferred from nanopore functionalization.,8,34,False,False
-GHORAI_2025_FUNCTIONALIZED_HBN_NANOPORE,Ghorai 2025,10.1063/5.0242541,HYDROGENATED_OR_FUNCTIONALIZED_EDGE,PRIMARY_RELEVANCE,SOURCE_ARTIFACT_AUDIT_REQUIRED,This is the most relevant candidate for H/OH-functionalized h-BN local environments.,38,140,False,False
-GHORAI_2025_FUNCTIONALIZED_HBN_NANOPORE,Ghorai 2025,10.1063/5.0242541,WATER_AND_ION_INTERFACE,PRIMARY_RELEVANCE,SOURCE_ARTIFACT_AUDIT_REQUIRED,This source is prioritized for aqueous and ion-interaction parameters.,40,148,False,False
-GHORAI_2025_FUNCTIONALIZED_HBN_NANOPORE,Ghorai 2025,10.1063/5.0242541,R2_FOUR_ATOM_BN_BRIDGE_AND_JUNCTION,NO_DIRECT_REFERENCE_CONFIGURATION,NOT_ESTABLISHED,The R2 B-N-B-N bridge and its attachment junctions are not assumed to be covered.,14,61,False,False
-BAMANE_2023_IFF_R_BNNT,Bamane/IFF-R 2023,10.1021/acsanm.2c05285,PARENT_HBN_BULK_LIKE,PRIMARY_RELEVANCE,SOURCE_ARTIFACT_AUDIT_REQUIRED,The source is prioritized as a transferable BNNT structural-mechanics candidate.,20,34,False,False
-BAMANE_2023_IFF_R_BNNT,Bamane/IFF-R 2023,10.1021/acsanm.2c05285,CURVED_BNNT_MECHANICS,PRIMARY_RELEVANCE,SOURCE_ARTIFACT_AUDIT_REQUIRED,This is the most relevant candidate for curved BNNT equilibrium mechanics.,8,34,False,False
-BAMANE_2023_IFF_R_BNNT,Bamane/IFF-R 2023,10.1021/acsanm.2c05285,HYDROGENATED_OR_FUNCTIONALIZED_EDGE,POSSIBLE_PARTIAL_RELEVANCE,NOT_ESTABLISHED,Exact edge termination coverage must be demonstrated from the parameter artifacts.,38,140,False,False
-BAMANE_2023_IFF_R_BNNT,Bamane/IFF-R 2023,10.1021/acsanm.2c05285,WATER_AND_ION_INTERFACE,POSSIBLE_NONBONDED_RELEVANCE,NOT_ESTABLISHED,Water compatibility cannot be inferred without explicit source validation.,40,148,False,False
-BAMANE_2023_IFF_R_BNNT,Bamane/IFF-R 2023,10.1021/acsanm.2c05285,R2_FOUR_ATOM_BN_BRIDGE_AND_JUNCTION,NO_DIRECT_REFERENCE_CONFIGURATION,NOT_ESTABLISHED,Standard BNNT parameters are not assumed to cover the reconstructed bridge.,14,61,False,False
-RAJAN_2018_HBN_FORCE_FIELD,Rajan 2018,10.1021/acs.jpclett.7b03443,PARENT_HBN_BULK_LIKE,PRIMARY_RELEVANCE,SOURCE_ARTIFACT_AUDIT_REQUIRED,This source is prioritized as a baseline fixed-topology h-BN model.,20,34,False,False
-RAJAN_2018_HBN_FORCE_FIELD,Rajan 2018,10.1021/acs.jpclett.7b03443,CURVED_BNNT_MECHANICS,POSSIBLE_TRANSFERABILITY,SOURCE_ARTIFACT_AUDIT_REQUIRED,Curvature applicability must be verified from the article and validation set.,8,34,False,False
-RAJAN_2018_HBN_FORCE_FIELD,Rajan 2018,10.1021/acs.jpclett.7b03443,HYDROGENATED_OR_FUNCTIONALIZED_EDGE,NO_DIRECT_EVIDENCE_YET,NOT_ESTABLISHED,Hydrogenated edge terms must not be inferred without explicit parameter evidence.,38,140,False,False
-RAJAN_2018_HBN_FORCE_FIELD,Rajan 2018,10.1021/acs.jpclett.7b03443,WATER_AND_ION_INTERFACE,NO_DIRECT_EVIDENCE_YET,NOT_ESTABLISHED,Aqueous compatibility has not yet been established.,40,148,False,False
-RAJAN_2018_HBN_FORCE_FIELD,Rajan 2018,10.1021/acs.jpclett.7b03443,R2_FOUR_ATOM_BN_BRIDGE_AND_JUNCTION,NO_DIRECT_REFERENCE_CONFIGURATION,NOT_ESTABLISHED,No direct R2 bridge analogue is assumed.,14,61,False,False
+version https://git-lfs.github.com/spec/v1
+oid sha256:a6f2271bdf3720a99d3b251a3aace01347f0333ef0e6019f71067793dd0a842f
+size 3754

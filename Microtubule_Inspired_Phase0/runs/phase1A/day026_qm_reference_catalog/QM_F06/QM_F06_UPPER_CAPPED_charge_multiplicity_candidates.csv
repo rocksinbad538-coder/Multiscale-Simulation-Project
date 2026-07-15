@@ -1,6 +1,3 @@
-fragment,candidate_charge,valence_electron_count,electron_parity,minimum_spin_multiplicity,recommended_initial_state
-QM_F06_UPPER_CAPPED,-2,54,EVEN,1,False
-QM_F06_UPPER_CAPPED,-1,53,ODD,2,False
-QM_F06_UPPER_CAPPED,0,52,EVEN,1,True
-QM_F06_UPPER_CAPPED,1,51,ODD,2,False
-QM_F06_UPPER_CAPPED,2,50,EVEN,1,False
+version https://git-lfs.github.com/spec/v1
+oid sha256:efb18df4daa63e24c736acac4d375184a9ce0c766c436cb8ff32b2e5e5f7d7fe
+size 312

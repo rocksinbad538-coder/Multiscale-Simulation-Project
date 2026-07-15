@@ -1,11 +1,3 @@
-model_name,preliminary_decision,adoption_authorized,reason
-RAJAN_HBN_CLASSICAL_FF,RETAIN_FOR_BN_BONDED_AUDIT,False,Relevant classical hBN bonded baseline; H-edge and R2 bridge coverage absent.
-WU_HBN_WATER,RETAIN_FOR_WATER_NONBONDED_AUDIT,False,High-level water-hBN reference; curvature transferability unresolved.
-HYDROGEN_BNNT_THEORETICAL_STUDY,RETAIN_AS_QM_REFERENCE_NOT_FORCE_FIELD,False,The 2005 paper is not accepted as a ReaxFF development or parameter source.
-GHORAI_FUNCTIONALIZED_HBN,HIGHEST_PRIORITY_FOR_EDGE_BH_NH_AUDIT,False,Directly targets H/OH-functionalized hBN nanopores in aqueous media.
-HBN_GAP,RETAIN_FOR_CURVED_BN_REFERENCE,False,"Strong B/N and nanotube domain, but no H or water."
-FENG_ANISOTROPIC_HBN_WATER,RETAIN_FOR_ANISOTROPIC_INTERFACE_COMPARISON,False,Interfacial nonbonded model only.
-Luo_DRUDE_HBN_WATER,RETAIN_FOR_POLARIZATION_REFERENCE,False,"Relevant to water-induced polarization, not bonded edge chemistry."
-IFF_R_BNNT,RETAIN_FOR_CURVED_BNNT_INTERFACE_AUDIT,False,Curved BNNT model; H edges and water unconfirmed.
-BNNT_TERSOFF_FORCE_MATCHED,REFERENCE_ONLY_FOR_BNNT_MECHANICS,False,B/N mechanical potential with no H/water domain.
-LELE_GAS_PHASE_HBN_REAXFF,RETAIN_FOR_REACTIVE_BNH_PARAMETER_FILE_AUDIT,False,"Includes B/N/H reactive chemistry and reports an SI parameter file, but was developed for gas-phase hBN synthesis rather than aqueous R2."
+version https://git-lfs.github.com/spec/v1
+oid sha256:f168735a5e8229b327f18f575a8725d41d32c41c41f7ca8498ac90900e1347a7
+size 1395

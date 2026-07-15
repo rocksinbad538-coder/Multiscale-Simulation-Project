@@ -1,11 +1,3 @@
-gate,pass
-Gate3A_parent_audit_is_accepted,True
-Gate3C1_hexagonal_redesign_path_is_active,True
-Gate3D_edge_completion_seed_is_accepted,True
-Gate3D_has_no_failed_gates,True
-template_family_contains_45_annuli,True
-all_templates_are_connected,True
-all_templates_are_bipartite,True
-all_templates_have_no_four_member_cycles,True
-all_templates_have_only_degree2_or_degree3_atoms,True
-screening_metrics_are_finite,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1cc876c7b2beb7eb3ed178e160070b757dc43563132cd1e202d76e8b139ae87
+size 422

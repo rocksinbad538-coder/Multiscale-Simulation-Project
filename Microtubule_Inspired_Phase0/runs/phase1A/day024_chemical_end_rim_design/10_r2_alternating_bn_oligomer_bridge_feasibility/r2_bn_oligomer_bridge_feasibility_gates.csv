@@ -1,8 +1,3 @@
-gate,pass
-Gate3F_graph_design_is_accepted,True
-Gate3G_static_embedding_has_expected_review_decision,True
-Gate3G1_direct_junction_is_rejected,True
-three_bridge_classes_were_screened,True
-720_mapping_fits_were_screened,True
-all_mapping_metrics_are_finite,True
-chain_conformer_envelopes_are_ordered_and_nonempty,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:6eb9b7967b1bc19d832f7e2054bca52bd2234c35b9818ae356c1787fc3fc4415
+size 322

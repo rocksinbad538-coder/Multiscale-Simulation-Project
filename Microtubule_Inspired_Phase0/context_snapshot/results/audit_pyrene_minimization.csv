@@ -1,7 +1,3 @@
-metric,value
-min_output_exists,True
-restart_exists,True
-minimized_pdb_exists,True
-completed_detected,True
-error_detected,True
-final_energy_raw,NA
+version https://git-lfs.github.com/spec/v1
+oid sha256:95611eaeb8f4e25ea9153db6714ee59fe8ef8b97aba0167b7b634b73d2ef4124
+size 153

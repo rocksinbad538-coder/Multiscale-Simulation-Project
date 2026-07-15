@@ -1,5 +1,3 @@
-metric,value
-internal_ow_count,423
-nn_min_nm,0.26757
-nn_mean_nm,0.27392
-nn_max_nm,0.28157
+version https://git-lfs.github.com/spec/v1
+oid sha256:50f12de5e29d6463aa9084ba42cb8dce9a653ad7aab1d59fbbb3b9d93dcb2267
+size 95

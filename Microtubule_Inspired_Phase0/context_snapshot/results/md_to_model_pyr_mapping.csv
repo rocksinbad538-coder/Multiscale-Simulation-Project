@@ -1,5 +1,3 @@
-md_label,md_resid,atom_start,atom_end,model_label
-MD_PYR1,2,1681,1706,PYR2
-MD_PYR2,3,1707,1732,PYR3
-MD_PYR3,4,1733,1758,PYR4
-MD_PYR4,5,1759,1784,PYR5
+version https://git-lfs.github.com/spec/v1
+oid sha256:3efbfd5c44796464783c016ad11d9f537115a9650f2a0715d41cf773bbea0837
+size 150

@@ -1,2 +1,3 @@
-stage,decision,grompp_return_code,mdrun_return_code,atom_count,atom_count_pass,coordinates_finite,box_finite_positive,converged,convergence_message,minimization_steps,potential_energy_kj_mol,maximum_force_kj_mol_nm,maximum_force_atom,norm_force_kj_mol_nm,emtol_kj_mol_nm,force_pass,HBN_rms_displacement_nm,HBN_max_displacement_nm,HBN_max_displacement_atom,PYR_rms_displacement_nm,PYR_max_displacement_nm,PYR_max_displacement_atom,restrained_displacement_pass,revise_reasons,blocked_reasons
-00_em_k100000,PASS,0,0,68320,True,True,True,True,Steepest Descents converged to Fmax < 1000 in 8 steps,8,-788135.56,971.67285,4569,196.41823,1000.0,True,0.00042747876583296146,0.0017320508075691994,9,0.0008320502943378342,0.003162277660168523,1759,True,,
+version https://git-lfs.github.com/spec/v1
+oid sha256:48e08e7e4d39e882ac61602bf4c7e5cb92c0b8b1c1123fdb0b7f1a2c04e0c288
+size 747

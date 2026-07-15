@@ -1,10 +1,3 @@
-gate,pass
-preflight_decision_is_accepted,True
-all_40_environments_classified,True
-all_148_bonded_term_classes_classified,True
-all_2112_improper_centers_grouped,True
-all_7_QM_fragment_classes_preserved,True
-three_routes_compared,True
-lele_direct_R2_validation_not_inferred,True
-fixed_topology_validation_not_inferred,True
-no_parameter_adoption_or_simulation_performed,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:71c704fb27b35f0065fa55292c2a907c0d0c56c2c0020eef4913809e5ae5b994
+size 382

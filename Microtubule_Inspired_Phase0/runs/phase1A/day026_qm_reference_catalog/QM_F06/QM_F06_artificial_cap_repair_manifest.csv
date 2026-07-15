@@ -1,3 +1,3 @@
-fragment,cap_id,parent_atom,old_x_angstrom,old_y_angstrom,old_z_angstrom,new_x_angstrom,new_y_angstrom,new_z_angstrom,bond_length_angstrom,angular_change_deg,search_cone_angle_deg,search_azimuth_deg,minimum_post_repair_vdw_ratio,minimum_post_repair_partner,target_minimum_ratio,cap_repair_gate_pass
-QM_F06_LOWER_CAPPED,HCAP:LOWER:03,P:48,41.6198646645,25.9886296759,19.4020839465,41.2212132281,26.3116794112,20.7570336140,1.1900000000,75.000000,75.000000,205.000000,0.9649587030,BR4:LOWER:00:1,0.8,True
-QM_F06_UPPER_CAPPED,HCAP:UPPER:04,P:1641,38.5991481862,25.1494314114,80.6835021839,38.7700380399,25.6271981896,79.5633714113,1.0100000000,75.000000,75.000000,335.000000,0.9834166718,BR4:UPPER:00:2,0.8,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:99642e5dd878db5ee335ed5b1e8077b25545c5971cab90194cdb689460421519
+size 712

@@ -1,10 +1,3 @@
-metric,value
-source_gro,runs/phase1A/hybrid_hydrated_gap45_pyr5shift_clean032_nvt/nvt_100ps.gro
-natoms,68320
-water_molecules,16634
-min_OW_solute_nm,0.00332
-min_OW_solute_pair,29917:SOL:OW - 1203:HBN:B1203
-min_WATERATOM_solute_nm,0.00332
-min_WATERATOM_solute_pair,29917:SOL:OW - 1203:HBN:B1203
-min_PYR_HBN_nm,0.40102
-min_PYR_HBN_pair,1693:PYR:C12 - 238:HBN:N0238
+version https://git-lfs.github.com/spec/v1
+oid sha256:43b08a73cbf3a94941c203c4d3b56c9b1fb30421e1b75bcf00f61cae1671b7f3
+size 372

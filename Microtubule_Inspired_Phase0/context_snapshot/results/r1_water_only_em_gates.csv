@@ -1,18 +1,3 @@
-gate,pass
-grompp_return_code_zero,True
-mdrun_return_code_zero,True
-mdrun_finished,True
-no_instability_signatures,True
-final_atom_count_is_68314,True
-box_is_unchanged,True
-HBN_is_frozen,True
-PYR_is_frozen,True
-caps_are_frozen,True
-energy_is_finite,True
-potential_did_not_increase,True
-force_convergence,True
-final_cap_water_distance,True
-lumen_water_retention,True
-water_displacement_is_finite,True
-water_displacement_is_local,True
-cap_water_energy_did_not_increase,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:40699a9aca94b6dcc0cd3d6cd84a3ab94ad551322096ad1c2515930546566d44
+size 488

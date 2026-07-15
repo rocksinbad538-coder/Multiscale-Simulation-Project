@@ -1,2 +1,3 @@
-stage,decision,grompp_return_code,mdrun_return_code,atom_count,atom_count_pass,finite_coordinate_box_pass,converged,convergence_message,minimization_steps,potential_energy_kj_mol,maximum_force_kj_mol_nm,maximum_force_atom,maximum_force_group,norm_force_kj_mol_nm,emtol_kj_mol_nm,force_pass,HBN_incremental_rms_nm,HBN_incremental_max_nm,PYR_incremental_rms_nm,PYR_incremental_max_nm,HBN_cumulative_rms_nm,HBN_cumulative_max_nm,PYR_cumulative_rms_nm,PYR_cumulative_max_nm,incremental_displacement_pass,cumulative_displacement_pass,maximum_box_change_nm,revise_reasons,blocked_reasons
-01_em_k10000,PASS,0,0,68320,True,True,True,Steepest Descents converged to Fmax < 1000 in 2 steps,2,-789200.81,972.70825,4569,SOL,194.55432,1000.0,True,0.0,0.0,0.0,0.0,0.00042747876583296146,0.0017320508075691994,0.0008320502943378342,0.003162277660168523,True,True,0.0,,
+version https://git-lfs.github.com/spec/v1
+oid sha256:809b572b70bea3593a6af911e3841b23a7df9b77d2c948343a59e3fe9e95ae25
+size 855

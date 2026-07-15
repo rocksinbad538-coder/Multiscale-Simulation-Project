@@ -1,1 +1,3 @@
-BondedTermID,TermType,ChemicalPattern,EnvironmentID,EnvironmentType,AssignedQMFragment,LiteratureSupport,ExpectedParameterSource,Status,Comments
+version https://git-lfs.github.com/spec/v1
+oid sha256:3149b2309b69efd69c905ea29b9460aefa0af62d8facfe855a12b894f06c41e2
+size 145

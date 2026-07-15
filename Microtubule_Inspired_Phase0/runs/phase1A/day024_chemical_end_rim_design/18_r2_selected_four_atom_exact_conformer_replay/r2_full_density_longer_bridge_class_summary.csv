@@ -1,4 +1,3 @@
-bridge_atoms_per_attachment,bonds_per_path,attachments_per_end,lower_feasible_mapping_count,upper_feasible_mapping_count,uniform_class_feasible,class_minimum_angle_deg,class_minimum_clearance_nm,class_maximum_bond_deviation_nm,added_bridge_heavy_atoms_per_end,total_added_heavy_atoms_per_end,total_H_atoms_per_end,candidate_is_final_chemistry
-4,5,15,1,1,True,70.89983978777892,0.15974739665991966,4.410696145812354e-05,60,216,102,False
-5,6,15,1,1,True,78.39152277407291,0.1623175344592471,3.2951759770333267e-05,75,231,117,False
-6,7,15,3,3,True,78.49067978421664,0.17955359428726847,2.9756683552789598e-05,90,246,132,False
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7ffdd660fb7319f7f61d2fb577088c308653196163d5d531fb60b8fa9875367
+size 627

@@ -1,27 +1,3 @@
-gate,pass
-grompp_return_code_zero,True
-TPR_dump_return_code_zero,True
-input_GRO_atom_count_is_68314,True
-TPR_atom_count_is_68314,True
-all_TPR_velocities_parsed,True
-all_TPR_velocities_are_finite,True
-water_velocity_fraction_is_TIP4P_consistent,True
-integrator_is_md,True
-dt_is_0p0005_ps,True
-nsteps_is_40000,True
-continuation_is_no,True
-generation_temperature_is_300K,True
-generation_seed_is_fixed,True
-freeze_groups_are_HBN_PYR_and_CAPS,True
-all_freeze_dimensions_are_enabled,True
-temperature_groups_partition_mobile_and_frozen_atoms,True
-mobile_group_tau_t_is_0p1_ps,True
-frozen_groups_are_not_thermostatted,True
-reference_temperatures_have_three_300K_entries,True
-pressure_coupling_is_disabled,True
-trajectory_interval_is_0p5ps,True
-no_active_position_restraints,True
-SOL_count_is_16551,True
-CAPL_count_is_one,True
-CAPU_count_is_one,True
-selected_CAP_OW_override_is_preserved,True
+version https://git-lfs.github.com/spec/v1
+oid sha256:974414180512ed1724fb52ca8501ef25ff509acce59a097f49a063cabc1b10ab
+size 911

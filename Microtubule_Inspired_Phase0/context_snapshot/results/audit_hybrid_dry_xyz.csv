@@ -1,8 +1,3 @@
-metric,value
-source,structures/phase1A/accepted/hybrid_dry/hbn_pyrene_4_dry.xyz
-natoms,1784
-element_counts,"{'B': 840, 'N': 840, 'C': 64, 'H': 40}"
-B-N_min_mean_max_count,"('1.44950', '1.44967', '1.45000', '2460')"
-B-H_min_mean_max_count,"('NA', 'NA', 'NA', '0')"
-N-H_min_mean_max_count,"('NA', 'NA', 'NA', '0')"
-overlaps_lt_0p50A_count,0
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ccc7944a903f8221caa91e287cd68b4a7f4d3262832f5335754bb4d2bbbffcf
+size 347

@@ -1,11 +1,3 @@
-metric,value
-input_atoms,70680
-output_atoms,68320
-input_water_molecules,17224
-removed_water_molecules,590
-kept_water_molecules,16634
-cutoff_nm,0.32
-pre_min_water_solute_nm,0.18122
-post_min_water_solute_nm,0.32050
-pre_min_pair,30002:SOL:HW1 - 23:HBN:B0023
-post_min_pair,44030:SOL:HW1 - 1781:PYR:H6
+version https://git-lfs.github.com/spec/v1
+oid sha256:7327fae120c5a5fbe91aaea23cf025fed0158251019647c9232367ca1f50947b
+size 308

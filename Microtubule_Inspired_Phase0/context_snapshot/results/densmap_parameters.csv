@@ -1,9 +1,3 @@
-parameter,value
-begin_time_ps,0.0
-end_time_ps,100.0
-bin_width_nm,0.05
-axial_half_range_nm,4.009
-radial_maximum_nm,2.699125700748155
-axis_endpoint_fraction,0.1
-density_unit,nm^-3
-water_position,one oxygen site per SOL residue
+version https://git-lfs.github.com/spec/v1
+oid sha256:3d691380cb9d0a8b91de4e6ba15ac326828dc8f97620cad9f48795716048543e
+size 234

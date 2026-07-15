@@ -1,8 +1,3 @@
-Fragment,Bonds,Angles,Torsions,Improper,RESP_Charges,Nonbonded,Curvature,EdgeChemistry,BridgeChemistry,WaterInterface,Status,Comments
-QM_F01_PARENT_BULK_HBN,,,,,,,,,,,,
-QM_F02_PARENT_SEED_JUNCTION,,,,,,,,,,,,
-QM_F03_ANNULUS_INNER_EDGE_BH,,,,,,,,,,,,
-QM_F04_ANNULUS_INNER_EDGE_NH,,,,,,,,,,,,
-QM_F05_ANNULUS_OUTER_EDGE,,,,,,,,,,,,
-QM_F06_FOUR_ATOM_BRIDGE,,,,,,,,,,,,
-QM_F07_BRIDGE_ATTACHMENT,,,,,,,,,,,,
+version https://git-lfs.github.com/spec/v1
+oid sha256:32b8de05458f9e480d21b3e305940c635bffee6fa915b2ad85e79015b3be832e
+size 402

@@ -1,2 +1,3 @@
-energy_record,step_or_time,potential_kJ_mol,CAP_SOL_LJ_kJ_mol,CAP_SOL_Coulomb_kJ_mol
-0,0.0,-904585.3125,14.033026695251,0.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:579d68811dceac42d8fdec89b2a1b2a47ba626617b4f31bbeb2929e2bb64bef5
+size 126

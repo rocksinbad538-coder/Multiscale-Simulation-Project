@@ -1,2 +1,3 @@
-stage,duration_ps,dt_ps,nsteps,coordinate_interval_ps,expected_xtc_frames,continued_from,grompp_return_code,grompp_pass,active_position_restraints,preparation_decision,mobile_100ps_authorized,longer_mobile_production_authorized,multitemperature_production_authorized,mdp,tpr,grompp_log
-08_nvt_mobile_100ps,100.0,0.0005,200000,0.5,201,07_nvt_unrestrained_25ps,0,True,0,PASS,True,False,False,runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/mdp/08_nvt_mobile_100ps.mdp,runs/phase1A/day021_mobile_restraint_protocol/static_validation/08_nvt_mobile_100ps/08_nvt_mobile_100ps.tpr,runs/phase1A/day021_mobile_restraint_protocol/static_validation/08_nvt_mobile_100ps/08_nvt_mobile_100ps_grompp.log
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc9ad9d00bca5f75ac02a1b57a807e899fc2cd032a9177e75239cae957d47935
+size 705
