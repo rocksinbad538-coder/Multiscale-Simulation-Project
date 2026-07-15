@@ -1,0 +1,6 @@
+gate,pass
+Gate3I_graph_is_accepted,True
+Gate3K1_trimer_redesign_is_confirmed,True
+bridge_classes_4_5_6_were_screened,True
+60_mappings_per_end_and_class_were_screened,True
+all_pair_metrics_are_finite,True

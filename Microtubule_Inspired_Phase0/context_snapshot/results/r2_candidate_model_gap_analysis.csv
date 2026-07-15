@@ -1,0 +1,7 @@
+gap_id,gap,severity,resolution_required
+GAP_01,No single accepted model covers all R2 domains.,CRITICAL,"Evaluate hybrid, reactive and custom-reference routes without mixing models prematurely."
+GAP_02,Four-atom alternating B-N-B-N bridges have no identified direct validation set.,CRITICAL,Retain dedicated bridge and attachment QM fragments.
+GAP_03,Curvature dependence of hBN-water parameters is not established for the selected R2 radius.,HIGH,Compare flat-interface and curved-cluster water interaction reference energies.
+GAP_04,B-H and N-H edge parameters may be environment-specific.,HIGH,Audit 2025 functionalized-hBN supplementary data and preserve separate B-H/N-H fragment classes.
+GAP_05,No source has yet been mapped against all 22/50/76 R2 term classes.,CRITICAL,Retrieve complete parameter files and perform term-by-term coverage mapping.
+GAP_06,Polarizable water-hBN models do not automatically cover bonded edge chemistry.,HIGH,Keep bonded and interfacial polarization coverage as separate audit dimensions.

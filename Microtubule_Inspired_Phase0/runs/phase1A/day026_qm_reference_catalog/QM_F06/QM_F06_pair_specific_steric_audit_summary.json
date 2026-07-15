@@ -1,0 +1,7 @@
+{
+  "decision": "QM_F06_CAPPED_FRAGMENTS_REQUIRE_CAP_GEOMETRY_REPAIR",
+  "pair_specific_steric_gate_pass": false,
+  "qm_input_preparation_authorized": false,
+  "qm_calculation_executed": false,
+  "required_next_step": "REPAIR_ARTIFICIAL_CAP_GEOMETRIES"
+}

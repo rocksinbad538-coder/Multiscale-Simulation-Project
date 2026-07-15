@@ -1,0 +1,5 @@
+site,n_frames,n_atoms,n_carbon_atoms,maximum_atom_displacement_A,maximum_carbon_centroid_shift_A,frozen_geometry_pass
+PYR2,21,26,16,0.0,0.0,True
+PYR3,21,26,16,0.0,0.0,True
+PYR4,21,26,16,0.0,0.0,True
+PYR5,21,26,16,0.0,0.0,True

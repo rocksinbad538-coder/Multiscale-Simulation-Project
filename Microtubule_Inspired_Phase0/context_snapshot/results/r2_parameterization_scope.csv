@@ -1,0 +1,6 @@
+scope_region,node_count,chemical_description,expected_parameterization_route,novel_parameterization_expected,QM_reference_priority,force_field_assignment_authorized
+PARENT_HBN_BULK_LIKE,1620,Three-coordinate curved h-BN parent scaffold away from reconstructed ends.,Audit transferable bulk/curved h-BN bonded and nonbonded parameters against published references.,POSSIBLY_NO_FOR_BULK_INTERIOR,MEDIUM,False
+PARENT_AND_ANNULUS_ATTACHMENTS,60,Parent/seed and annulus/bridge junction atoms.,Explicit local bonded-environment comparison and small-cluster QM validation.,LIKELY,HIGH,False
+ANNULUS_AND_SEED_EDGE,312,"Reconstructed end annulus, inner/outer edge and hexagonal completion seed.","Audit edge-specific B/N/H types, equilibrium angles, torsions and nonbonded terms.",LIKELY,HIGH,False
+FOUR_ATOM_BRIDGE,120,Alternating B-N-B-N four-atom bridge paths.,"Dedicated constrained-cluster QM scans or optimized reference fragments for bonds, angles and torsions.",YES,HIGHEST,False
+HYDROGEN_PASSIVANTS,204,B-H and N-H passivation at bridge and reconstructed end environments.,"Audit B-H/N-H bonded terms, partial charges and water-interaction behavior for each local environment.",LIKELY,HIGH,False

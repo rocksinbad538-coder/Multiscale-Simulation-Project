@@ -1,0 +1,7 @@
+{
+  "decision": "QM_F06_ARTIFICIAL_CAP_GEOMETRY_REPAIR_COMPLETED",
+  "all_cap_repair_gates_pass": true,
+  "original_r2_atoms_moved": 0,
+  "qm_calculation_executed": false,
+  "required_next_step": "REPEAT_TOPOLOGY_AWARE_AUDIT_ON_REPAIRED_GEOMETRIES"
+}

@@ -1,0 +1,7 @@
+metric,value
+min_output_exists,True
+restart_exists,True
+minimized_pdb_exists,True
+completed_detected,True
+error_detected,True
+final_energy_raw,NA

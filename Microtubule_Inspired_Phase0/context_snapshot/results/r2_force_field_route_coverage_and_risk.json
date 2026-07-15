@@ -1,0 +1,97 @@
+{
+  "gates": {
+    "all_148_bonded_term_classes_classified": true,
+    "all_2112_improper_centers_grouped": true,
+    "all_40_environments_classified": true,
+    "all_7_QM_fragment_classes_preserved": true,
+    "fixed_topology_validation_not_inferred": true,
+    "lele_direct_R2_validation_not_inferred": true,
+    "no_parameter_adoption_or_simulation_performed": true,
+    "preflight_decision_is_accepted": true,
+    "three_routes_compared": true
+  },
+  "risk_counts": {
+    "bonded_terms": {
+      "HIGH": 118,
+      "MEDIUM": 18,
+      "MEDIUM_HIGH": 12
+    },
+    "environment": {
+      "HIGH": 20,
+      "MEDIUM": 4,
+      "MEDIUM_HIGH": 16
+    }
+  },
+  "route_comparison": [
+    {
+      "current_decision": "REFERENCE_CANDIDATE_NOT_AUTHORIZED",
+      "current_risk": "HIGH",
+      "curved_equilibrium_BNNT_validation": "NOT ESTABLISHED",
+      "direct_R2_environment_validation": "NONE IDENTIFIED",
+      "elemental_scope_for_R2": "B/N/H PRESENT",
+      "four_atom_bridge_validation": "NONE",
+      "main_advantage": "Reactive B-N, B-H and N-H chemistry is represented.",
+      "main_limitation": "Training and validation domain does not match equilibrium solvated R2.",
+      "model_type": "Reactive bond-order force field",
+      "primary_demonstrated_domain": "Gas-phase B/N/H chemistry and high-temperature BN nanostructure formation",
+      "route": "LELE_2022_REAXFF",
+      "water_validation": "NONE IDENTIFIED"
+    },
+    {
+      "current_decision": "PRIORITY_SOURCE_AUDIT_REQUIRED",
+      "current_risk": "UNRESOLVED",
+      "curved_equilibrium_BNNT_validation": "PENDING",
+      "direct_R2_environment_validation": "PENDING",
+      "elemental_scope_for_R2": "SOURCE AUDIT PENDING",
+      "four_atom_bridge_validation": "UNLIKELY WITHOUT CUSTOM TERMS",
+      "main_advantage": "Closer conceptual match to equilibrium solvated structural MD.",
+      "main_limitation": "Primary parameter artifacts and exact environment coverage not yet audited.",
+      "model_type": "Nonreactive bonded fixed-topology model",
+      "primary_demonstrated_domain": "Potentially equilibrium h-BN and functionalized aqueous interfaces",
+      "route": "FUNCTIONALIZED_HBN_FIXED_TOPOLOGY",
+      "water_validation": "PENDING PRIMARY-SOURCE AUDIT"
+    },
+    {
+      "current_decision": "CONTINGENCY_ROUTE_NOT_YET_AUTHORIZED",
+      "current_risk": "MEDIUM_AFTER_VALIDATION",
+      "curved_equilibrium_BNNT_validation": "CAN BE INCLUDED IN QM REFERENCE SET",
+      "direct_R2_environment_validation": "POSSIBLE AFTER QM DATA GENERATION",
+      "elemental_scope_for_R2": "B/N/H TARGETED",
+      "four_atom_bridge_validation": "CAN BE DIRECTLY TARGETED",
+      "main_advantage": "Highest domain specificity and explicit validation path.",
+      "main_limitation": "Highest development cost; QM calculations are not yet authorized.",
+      "model_type": "Fixed-topology force field with dedicated QM reference fragments",
+      "primary_demonstrated_domain": "Can be constructed specifically for R2 local environments",
+      "route": "CUSTOM_QM_REFERENCED_FIXED_TOPOLOGY",
+      "water_validation": "REQUIRES NONBONDED AND INTERFACE VALIDATION"
+    }
+  ],
+  "summary": {
+    "Lele_directly_validated_R2_environments": 0,
+    "MD_authorized": false,
+    "QM_calculation_authorized": false,
+    "QM_fragment_classes": 7,
+    "bonded_term_classes": 148,
+    "critical_centers": 468,
+    "decision": "R2_FORCE_FIELD_ROUTE_COVERAGE_AND_RISK_MATRIX_BUILT_NO_ROUTE_YET_AUTHORIZED",
+    "energy_minimization_authorized": false,
+    "environment_classes": 40,
+    "failed_gates": "",
+    "fixed_topology_directly_validated_R2_environments": 0,
+    "force_field_parameterization_authorized": false,
+    "force_field_route_selected": false,
+    "formal_charge_assignment_authorized": false,
+    "high_risk_bonded_term_classes": 118,
+    "high_risk_environment_classes": 20,
+    "improper_centers": 2112,
+    "improper_environment_groups": 14,
+    "medium_high_risk_bonded_term_classes": 12,
+    "medium_high_risk_environment_classes": 16,
+    "medium_risk_bonded_term_classes": 18,
+    "medium_risk_environment_classes": 4,
+    "parameter_adoption_authorized": false,
+    "required_next_step": "AUDIT_FUNCTIONALIZED_HBN_FIXED_TOPOLOGY_PRIMARY_SOURCES_AND_PARAMETERS",
+    "routes_compared": 3,
+    "topology_generation_authorized": false
+  }
+}

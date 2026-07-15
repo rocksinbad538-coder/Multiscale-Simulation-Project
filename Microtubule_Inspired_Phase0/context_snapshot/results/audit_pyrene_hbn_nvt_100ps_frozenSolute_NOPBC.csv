@@ -1,0 +1,5 @@
+source_gro,pyrene_resnr,atom_count,min_pyr_hbn_nm,pyr_atom,hbn_atom,contacts_lt_0p30,contacts_lt_0p35,contacts_lt_0p40,contacts_lt_0p45
+runs/phase1A/hybrid_hydrated_gap45_pyr5shift_clean032_nvt/nvt_100ps_frozenSolute.gro,2,26,0.44153,1683:C2,355:B0355,0,0,0,5
+runs/phase1A/hybrid_hydrated_gap45_pyr5shift_clean032_nvt/nvt_100ps_frozenSolute.gro,3,26,0.44466,1725:H2,723:B0723,0,0,0,6
+runs/phase1A/hybrid_hydrated_gap45_pyr5shift_clean032_nvt/nvt_100ps_frozenSolute.gro,4,26,0.44362,1735:C2,1034:N1034,0,0,0,3
+runs/phase1A/hybrid_hydrated_gap45_pyr5shift_clean032_nvt/nvt_100ps_frozenSolute.gro,5,26,0.56126,1777:H2,1462:N1462,0,0,0,0

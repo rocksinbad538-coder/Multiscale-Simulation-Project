@@ -1,0 +1,8 @@
+{
+  "decision": "QM_F06_ORCA_INPUTS_PASS_TECHNICAL_AUDIT",
+  "static_input_audit_pass": true,
+  "stage2_currently_uses_stage1_output": false,
+  "stage3_currently_uses_stage2_output": false,
+  "qm_execution_authorized": false,
+  "required_next_step": "BUILD_SEQUENTIAL_ORCA_WORKFLOW"
+}

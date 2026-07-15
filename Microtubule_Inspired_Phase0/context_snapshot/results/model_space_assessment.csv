@@ -1,0 +1,11 @@
+metric,value,interpretation
+n_jobs,8,Representative NTO calculations analyzed
+n_states,16,S1 and S2 for all representative jobs
+tracked_equals_brightest_fraction,1.0,Tracked root is the brighter S1/S2 root in every case
+tracked_single_pair_fraction,1.0,Tracked roots classified as single-pair dominated
+alternate_two_pair_fraction,1.0,Alternate roots classified as two-pair mixed
+minimum_S1_S2_gap_meV,53.0,Smallest representative low-state separation
+maximum_S1_S2_gap_meV,102.0,Largest representative low-state separation
+mean_tracked_n1,0.86212766125,Mean dominant NTO occupation of tracked roots
+mean_alternate_n1,0.5793102725,Mean dominant NTO occupation of alternate roots
+primary_model_recommendation,8-state,Use the 8-state manifold as the primary low-energy excitonic model because both S1 and S2 remain within 120 meV and have systematically distinct NTO composition. Retain the 4-state tracked-bright manifold as a reduced control model.

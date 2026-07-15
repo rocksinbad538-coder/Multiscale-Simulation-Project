@@ -1,0 +1,2 @@
+  backup/day019-before-lfs-migration-20260630-170541 436b2c1 Complete Day019: Bright-state coupling and dynamics
+* main                                               9d12fe9 [origin/main] Add Day024 R2 chemical reconstruction workflow

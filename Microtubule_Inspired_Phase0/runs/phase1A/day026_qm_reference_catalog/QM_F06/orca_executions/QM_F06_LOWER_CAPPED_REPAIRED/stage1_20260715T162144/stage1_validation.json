@@ -1,0 +1,9 @@
+{
+  "normal_termination": true,
+  "scf_converged": true,
+  "geometry_converged": true,
+  "error_markers": [],
+  "optimized_xyz": "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage1_20260715T162144/stage1.xyz",
+  "stage1_gate_pass": true,
+  "return_code": 0
+}

@@ -1,0 +1,12 @@
+{
+  "decision": "QM_F06_SEQUENTIAL_ORCA_WORKFLOW_PREPARED_EXECUTION_NOT_AUTHORIZED",
+  "fragments": [
+    "QM_F06_LOWER_CAPPED_REPAIRED",
+    "QM_F06_UPPER_CAPPED_REPAIRED"
+  ],
+  "stage1_inputs_ready": true,
+  "stage2_requires_stage1_optimized_xyz": true,
+  "stage3_requires_stage2_optimized_xyz": true,
+  "qm_execution_authorized": false,
+  "required_next_step": "VALIDATE_GEOMETRY_PROMOTION_UTILITY_WITH_DRY_RUN"
+}

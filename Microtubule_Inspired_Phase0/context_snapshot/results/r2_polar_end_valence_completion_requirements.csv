@@ -1,0 +1,3 @@
+end,parent_terminal_element,complementary_first_junction_element,forbidden_primary_same_element_junction,terminal_sites,current_coordination_per_site,target_coordination_per_site,missing_bond_incidences_per_site,required_new_parent_junction_bonds,design_requirement
+LOWER,B,N,B-B,30,1,3,2,60,Resolve every B-terminal site using two additional junction incidences without assuming B-B primary bonding.
+UPPER,N,B,N-N,30,1,3,2,60,Resolve every N-terminal site using two additional junction incidences without assuming N-N primary bonding.

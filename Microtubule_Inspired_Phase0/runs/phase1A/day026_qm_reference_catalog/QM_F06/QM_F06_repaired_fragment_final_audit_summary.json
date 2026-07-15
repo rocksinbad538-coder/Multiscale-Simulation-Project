@@ -1,0 +1,8 @@
+{
+  "decision": "QM_F06_REPAIRED_FRAGMENTS_READY_FOR_QM_INPUT_PREPARATION",
+  "artificial_cap_steric_gate_pass": true,
+  "repaired_xh_distance_gate_pass": true,
+  "qm_input_preparation_authorized": true,
+  "qm_calculation_execution_authorized": false,
+  "required_next_step": "PREPARE_QM_INPUT_FILES"
+}

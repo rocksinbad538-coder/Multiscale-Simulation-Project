@@ -1,0 +1,7 @@
+{
+  "decision": "QM_F06_CAPPED_FRAGMENTS_REQUIRE_TARGETED_GEOMETRY_REPAIR",
+  "topology_aware_steric_gate_pass": false,
+  "qm_input_preparation_authorized": false,
+  "qm_calculation_executed": false,
+  "required_next_step": "REPAIR_ONLY_REMAINING_LONG_RANGE_STERIC_FAILURES"
+}

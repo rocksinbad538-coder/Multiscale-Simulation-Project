@@ -1,0 +1,4 @@
+residue_name,residue_count,atom_count,expected_residue_count,expected_atom_count
+HBN,1,1680,1,1680
+PYR,4,104,4,104
+SOL,16634,66536,16634,66536

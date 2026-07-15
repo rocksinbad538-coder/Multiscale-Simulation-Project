@@ -1,0 +1,10 @@
+# Day019 eight-state basis order
+# index label site family root
+0 PYR2_alternate PYR2 alternate_like S1
+1 PYR2_bright PYR2 bright_like S2
+2 PYR3_alternate PYR3 alternate_like S1
+3 PYR3_bright PYR3 bright_like S2
+4 PYR4_alternate PYR4 alternate_like S1
+5 PYR4_bright PYR4 bright_like S2
+6 PYR5_alternate PYR5 alternate_like S2
+7 PYR5_bright PYR5 bright_like S1

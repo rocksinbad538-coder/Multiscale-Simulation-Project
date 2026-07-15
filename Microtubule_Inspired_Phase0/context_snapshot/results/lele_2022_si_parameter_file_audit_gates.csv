@@ -1,0 +1,13 @@
+gate,pass
+previous_article_audit_is_accepted,True
+all_artifact_hashes_match,True
+all_artifact_sizes_match,True
+article_is_valid_PDF,True
+SI_is_valid_PDF,True
+SI_has_two_pages,True
+parameter_file_is_valid_text,True
+all_ReaxFF_section_counts_match,True
+element_order_matches_C_H_O_N_B_Al,True
+BNH_terms_are_present,True
+all_R2_domains_remain_unvalidated,True
+no_parameter_adoption_topology_MD_or_QM_generated,True

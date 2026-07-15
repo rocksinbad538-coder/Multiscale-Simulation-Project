@@ -1,0 +1,12 @@
+{
+  "decision": "QM_F06_CAPPED_GEOMETRIES_BUILT_PRE_QM_VALIDATION_REQUIRED",
+  "ends": [
+    "LOWER",
+    "UPPER"
+  ],
+  "target_bh_angstrom": 1.19,
+  "target_nh_angstrom": 1.01,
+  "geometry_optimized": false,
+  "qm_calculation_executed": false,
+  "required_next_step": "AUDIT_CAPPED_FRAGMENT_VALENCE_CLASHES_CHARGE_AND_MULTIPLICITY"
+}

@@ -1,0 +1,11 @@
+{
+  "decision": "QM_F06_ORCA_INPUTS_PREPARED_EXECUTION_NOT_AUTHORIZED",
+  "orca_detected": true,
+  "orca_path": "/Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca",
+  "method": "PBE0-D4/def2-TZVP",
+  "charge": 0,
+  "multiplicity": 1,
+  "input_preparation_completed": true,
+  "qm_execution_authorized": false,
+  "required_next_step": "TECHNICAL_REVIEW_OF_INPUTS_AND_ORCA_AVAILABILITY"
+}

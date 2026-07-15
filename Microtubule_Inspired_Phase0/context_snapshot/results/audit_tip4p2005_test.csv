@@ -1,0 +1,8 @@
+metric,value
+tip4p2005_itp_exists,True
+tip4p2005_atomtypes_exists,True
+tip4p2005_gro_exists,True
+tpr_exists,True
+fatal_or_error_detected,False
+warning_count,0
+note_count,1

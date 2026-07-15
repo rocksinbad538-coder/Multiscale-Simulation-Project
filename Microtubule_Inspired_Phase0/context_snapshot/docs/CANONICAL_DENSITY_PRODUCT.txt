@@ -1,0 +1,4 @@
+Canonical quantitative density product:
+runs/phase1A/day020_confined_water_axial_radial_density/water_oxygen_axial_radial_density_canonical_v2.npz
+
+The previous canonical NPZ interpreted DAT coordinates as cell centers and is retained only for traceability.

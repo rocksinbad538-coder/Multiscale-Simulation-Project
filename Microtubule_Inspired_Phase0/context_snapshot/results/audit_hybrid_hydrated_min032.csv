@@ -1,0 +1,7 @@
+metric,value
+tpr_exists,True
+gro_exists,True
+fatal_or_nan_detected,False
+minimization_converged_detected,False
+final_potential_energy_kJmol,-8.7492206e+05
+final_max_force_kJmol_nm,8.7081696e+02

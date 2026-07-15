@@ -1,0 +1,22 @@
+! PBE0 D4 def2-TZVP def2/J RIJCOSX TightSCF Opt DefGrid3
+
+%pal
+  nprocs 4
+end
+
+%maxcore 3000
+
+%scf
+  MaxIter 500
+end
+
+%geom
+  Constraints
+    { C 0 C }
+    { C 2 C }
+    { C 11 C }
+    { C 12 C }
+  end
+end
+
+# QM_F06_UPPER_CAPPED_REPAIRED: partial relaxation; all H atoms mobile; peripheral heavy atoms fixed

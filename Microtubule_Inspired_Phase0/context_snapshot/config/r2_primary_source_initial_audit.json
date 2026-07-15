@@ -1,0 +1,285 @@
+{
+  "gaps": [
+    {
+      "gap": "No single accepted model covers all R2 domains.",
+      "gap_id": "GAP_01",
+      "resolution_required": "Evaluate hybrid, reactive and custom-reference routes without mixing models prematurely.",
+      "severity": "CRITICAL"
+    },
+    {
+      "gap": "Four-atom alternating B-N-B-N bridges have no identified direct validation set.",
+      "gap_id": "GAP_02",
+      "resolution_required": "Retain dedicated bridge and attachment QM fragments.",
+      "severity": "CRITICAL"
+    },
+    {
+      "gap": "Curvature dependence of hBN-water parameters is not established for the selected R2 radius.",
+      "gap_id": "GAP_03",
+      "resolution_required": "Compare flat-interface and curved-cluster water interaction reference energies.",
+      "severity": "HIGH"
+    },
+    {
+      "gap": "B-H and N-H edge parameters may be environment-specific.",
+      "gap_id": "GAP_04",
+      "resolution_required": "Audit 2025 functionalized-hBN supplementary data and preserve separate B-H/N-H fragment classes.",
+      "severity": "HIGH"
+    },
+    {
+      "gap": "No source has yet been mapped against all 22/50/76 R2 term classes.",
+      "gap_id": "GAP_05",
+      "resolution_required": "Retrieve complete parameter files and perform term-by-term coverage mapping.",
+      "severity": "CRITICAL"
+    },
+    {
+      "gap": "Polarizable water-hBN models do not automatically cover bonded edge chemistry.",
+      "gap_id": "GAP_06",
+      "resolution_required": "Keep bonded and interfacial polarization coverage as separate audit dimensions.",
+      "severity": "HIGH"
+    }
+  ],
+  "limitations": [
+    "Coverage classifications are preliminary and intentionally conservative.",
+    "No source is accepted until its full article, supplementary information and parameter files have been audited.",
+    "No hybrid combination of models is authorized.",
+    "No topology, charges, parameterization, minimization, MD or QM calculation is generated."
+  ],
+  "preliminary_decisions": [
+    {
+      "adoption_authorized": false,
+      "model_name": "RAJAN_HBN_CLASSICAL_FF",
+      "preliminary_decision": "RETAIN_FOR_BN_BONDED_AUDIT",
+      "reason": "Relevant classical hBN bonded baseline; H-edge and R2 bridge coverage absent."
+    },
+    {
+      "adoption_authorized": false,
+      "model_name": "WU_HBN_WATER",
+      "preliminary_decision": "RETAIN_FOR_WATER_NONBONDED_AUDIT",
+      "reason": "High-level water-hBN reference; curvature transferability unresolved."
+    },
+    {
+      "adoption_authorized": false,
+      "model_name": "REAXFF_HBN",
+      "preliminary_decision": "RETAIN_AS_REACTIVE_BNH_CANDIDATE",
+      "reason": "Broadest B/N/H chemistry; parameter-file provenance and R2/water validation still required."
+    },
+    {
+      "adoption_authorized": false,
+      "model_name": "GHORAI_FUNCTIONALIZED_HBN",
+      "preliminary_decision": "HIGHEST_PRIORITY_FOR_EDGE_BH_NH_AUDIT",
+      "reason": "Directly targets H/OH-functionalized hBN nanopores in aqueous media."
+    },
+    {
+      "adoption_authorized": false,
+      "model_name": "HBN_GAP",
+      "preliminary_decision": "RETAIN_FOR_CURVED_BN_REFERENCE",
+      "reason": "Strong B/N and nanotube domain, but no H or water."
+    },
+    {
+      "adoption_authorized": false,
+      "model_name": "FENG_ANISOTROPIC_HBN_WATER",
+      "preliminary_decision": "RETAIN_FOR_ANISOTROPIC_INTERFACE_COMPARISON",
+      "reason": "Interfacial nonbonded model only."
+    },
+    {
+      "adoption_authorized": false,
+      "model_name": "Luo_DRUDE_HBN_WATER",
+      "preliminary_decision": "RETAIN_FOR_POLARIZATION_REFERENCE",
+      "reason": "Relevant to water-induced polarization, not bonded edge chemistry."
+    },
+    {
+      "adoption_authorized": false,
+      "model_name": "IFF_R_BNNT",
+      "preliminary_decision": "RETAIN_FOR_CURVED_BNNT_INTERFACE_AUDIT",
+      "reason": "Curved BNNT model; H edges and water unconfirmed."
+    },
+    {
+      "adoption_authorized": false,
+      "model_name": "BNNT_TERSOFF_FORCE_MATCHED",
+      "preliminary_decision": "REFERENCE_ONLY_FOR_BNNT_MECHANICS",
+      "reason": "B/N mechanical potential with no H/water domain."
+    }
+  ],
+  "sources": [
+    {
+      "DOI": "10.1021/acs.jpclett.7b03443",
+      "curved_BNNT_validation": "UNCONFIRMED",
+      "explicit_B": true,
+      "explicit_H": false,
+      "explicit_N": true,
+      "journal": "The Journal of Physical Chemistry Letters",
+      "model_family": "FIXED_TOPOLOGY_CLASSICAL",
+      "model_name": "RAJAN_HBN_CLASSICAL_FF",
+      "polarizable": false,
+      "primary_training_or_reference": "DFT-based ab initio MD and lattice dynamics",
+      "reactive": false,
+      "source_id": "SRC_0001",
+      "source_status": "PRIMARY_SOURCE_IDENTIFIED",
+      "title": "Ab Initio Molecular Dynamics and Lattice Dynamics-Based Force Field for Modeling Hexagonal Boron Nitride in Mechanical and Interfacial Applications",
+      "water_validation": "PARTIAL_OR_INTERFACIAL",
+      "year": 2018
+    },
+    {
+      "DOI": "10.1063/1.4947094",
+      "curved_BNNT_validation": "NO",
+      "explicit_B": true,
+      "explicit_H": "WATER_H_ONLY",
+      "explicit_N": true,
+      "journal": "The Journal of Chemical Physics",
+      "model_family": "NONBONDED_HBN_WATER",
+      "model_name": "WU_HBN_WATER",
+      "polarizable": false,
+      "primary_training_or_reference": "DMC-validated RPA water-hBN interaction energies",
+      "reactive": false,
+      "source_id": "SRC_0002",
+      "source_status": "PRIMARY_SOURCE_IDENTIFIED",
+      "title": "Hexagonal boron nitride and water interaction parameters",
+      "water_validation": "YES_CONTACT_ANGLE",
+      "year": 2016
+    },
+    {
+      "DOI": "10.1063/1.1999628",
+      "curved_BNNT_validation": "PARTIAL",
+      "explicit_B": true,
+      "explicit_H": true,
+      "explicit_N": true,
+      "journal": "The Journal of Chemical Physics",
+      "model_family": "REACTIVE_REAXFF",
+      "model_name": "REAXFF_HBN",
+      "polarizable": "CHARGE_EQUILIBRATION",
+      "primary_training_or_reference": "Quantum data for B-H, B-B and B-N bond dissociation and B/N/H angular strain",
+      "reactive": true,
+      "source_id": "SRC_0003",
+      "source_status": "PRIMARY_SOURCE_IDENTIFIED",
+      "title": "The theoretical study on interaction of hydrogen with single-walled boron nitride nanotubes",
+      "water_validation": "NOT_ESTABLISHED",
+      "year": 2005
+    },
+    {
+      "DOI": "10.1063/5.0242541",
+      "curved_BNNT_validation": "NO",
+      "explicit_B": true,
+      "explicit_H": true,
+      "explicit_N": true,
+      "journal": "The Journal of Chemical Physics",
+      "model_family": "DFT_FITTED_FIXED_TOPOLOGY_AQUEOUS_EDGE_FF",
+      "model_name": "GHORAI_FUNCTIONALIZED_HBN",
+      "polarizable": "UNCONFIRMED",
+      "primary_training_or_reference": "DFT/AIMD and potential-energy-surface fitting; borazine reference for H functionalization",
+      "reactive": false,
+      "source_id": "SRC_0004",
+      "source_status": "PRIMARY_SOURCE_IDENTIFIED",
+      "title": "Molecular dynamics simulations of functionalized nanoporous hexagonal boron nitride membranes: Ab initio force field and implications for water desalination",
+      "water_validation": "YES",
+      "year": 2025
+    },
+    {
+      "DOI": "10.1021/acs.jpcc.0c05831",
+      "curved_BNNT_validation": "YES",
+      "explicit_B": true,
+      "explicit_H": false,
+      "explicit_N": true,
+      "journal": "The Journal of Physical Chemistry C",
+      "model_family": "MACHINE_LEARNING_INTERATOMIC",
+      "model_name": "HBN_GAP",
+      "polarizable": false,
+      "primary_training_or_reference": "DFT configuration training set",
+      "reactive": "WITHIN_BN_TRAINING_DOMAIN",
+      "source_id": "SRC_0005",
+      "source_status": "PRIMARY_SOURCE_IDENTIFIED",
+      "title": "Machine Learning Potential for Hexagonal Boron Nitride Applied to Thermally and Mechanically Induced Rippling",
+      "water_validation": "NO",
+      "year": 2020
+    },
+    {
+      "DOI": "10.1021/acs.langmuir.3c01612",
+      "curved_BNNT_validation": "NO",
+      "explicit_B": true,
+      "explicit_H": "WATER_H_ONLY",
+      "explicit_N": true,
+      "journal": "Langmuir",
+      "model_family": "ANISOTROPIC_INTERFACIAL_NONBONDED",
+      "model_name": "FENG_ANISOTROPIC_HBN_WATER",
+      "polarizable": false,
+      "primary_training_or_reference": "SCAN binding curves and sliding energy surfaces",
+      "reactive": false,
+      "source_id": "SRC_0006",
+      "source_status": "PRIMARY_SOURCE_IDENTIFIED",
+      "title": "Anisotropic Interfacial Force Field for Interfaces of Water with Hexagonal Boron Nitride",
+      "water_validation": "YES",
+      "year": 2023
+    },
+    {
+      "DOI": "10.1021/acsnano.3c09811",
+      "curved_BNNT_validation": "NO",
+      "explicit_B": true,
+      "explicit_H": "WATER_H_ONLY",
+      "explicit_N": true,
+      "journal": "ACS Nano",
+      "model_family": "POLARIZABLE_DRUDE_INTERFACIAL",
+      "model_name": "Luo_DRUDE_HBN_WATER",
+      "polarizable": true,
+      "primary_training_or_reference": "Anisotropic hBN polarizability and water-hBN binding reference data",
+      "reactive": false,
+      "source_id": "SRC_0007",
+      "source_status": "PRIMARY_SOURCE_IDENTIFIED",
+      "title": "Water Electric Field Induced Modulation of the Wetting of Hexagonal Boron Nitride: Insights from Multiscale Modeling of Many-Body Polarization",
+      "water_validation": "YES",
+      "year": 2024
+    },
+    {
+      "DOI": "10.1021/acsanm.2c05285",
+      "curved_BNNT_validation": "YES",
+      "explicit_B": true,
+      "explicit_H": "UNCONFIRMED",
+      "explicit_N": true,
+      "journal": "ACS Applied Nano Materials",
+      "model_family": "INTERFACE_FORCE_FIELD_REACTIVE_EXTENSION",
+      "model_name": "IFF_R_BNNT",
+      "polarizable": "VIRTUAL_ELECTRON_FORMALISM",
+      "primary_training_or_reference": "BNNT/interface parameterization and composite interfacial validation",
+      "reactive": "IFF_R_FORMALISM",
+      "source_id": "SRC_0008",
+      "source_status": "PRIMARY_SOURCE_IDENTIFIED",
+      "title": "Boron Nitride Nanotubes: Force Field Parameterization, Epoxy Interactions, and Comparison with Carbon Nanotubes for High-Performance Composite Materials",
+      "water_validation": "NO",
+      "year": 2023
+    },
+    {
+      "DOI": "10.1063/1.3626065",
+      "curved_BNNT_validation": "YES",
+      "explicit_B": true,
+      "explicit_H": false,
+      "explicit_N": true,
+      "journal": "Journal of Applied Physics",
+      "model_family": "TERSOFF_BOND_ORDER",
+      "model_name": "BNNT_TERSOFF_FORCE_MATCHED",
+      "polarizable": false,
+      "primary_training_or_reference": "DFT-assisted force matching for BNNT mechanics",
+      "reactive": "BOND_ORDER_BN_ONLY",
+      "source_id": "SRC_0009",
+      "source_status": "PRIMARY_SOURCE_IDENTIFIED",
+      "title": "Deformation behaviors of an armchair boron-nitride nanotube under axial tensile strains",
+      "water_validation": "NO",
+      "year": 2011
+    }
+  ],
+  "summary": {
+    "MD_authorized": false,
+    "QM_calculation_authorized": false,
+    "coverage_domain_rows": 99,
+    "critical_or_high_gaps": 6,
+    "decision": "R2_PRIMARY_SOURCE_FORCE_FIELD_INITIAL_AUDIT_COMPLETED",
+    "energy_minimization_authorized": false,
+    "force_field_coverage_established": false,
+    "force_field_parameterization_authorized": false,
+    "formal_charge_assignment_authorized": false,
+    "model_families_identified": 9,
+    "models_authorized_for_adoption": 0,
+    "primary_sources_identified": 9,
+    "required_artifacts": 27,
+    "required_artifacts_retrieved": 0,
+    "required_next_step": "RETRIEVE_AND_AUDIT_PRIMARY_SOURCE_SUPPORTING_INFORMATION_AND_PARAMETER_FILES",
+    "single_complete_R2_force_field_identified": false,
+    "topology_generation_authorized": false
+  }
+}

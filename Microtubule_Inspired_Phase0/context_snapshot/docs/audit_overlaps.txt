@@ -1,0 +1,1 @@
+No nonbonded overlaps below 0.90 A

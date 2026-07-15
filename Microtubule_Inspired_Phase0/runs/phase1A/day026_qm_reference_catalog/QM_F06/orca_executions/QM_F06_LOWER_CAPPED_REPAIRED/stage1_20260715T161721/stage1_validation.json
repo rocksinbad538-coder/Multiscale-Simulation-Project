@@ -1,0 +1,9 @@
+{
+  "normal_termination": false,
+  "scf_converged": false,
+  "geometry_converged": false,
+  "error_markers": [],
+  "optimized_xyz": null,
+  "stage1_gate_pass": false,
+  "return_code": 4
+}

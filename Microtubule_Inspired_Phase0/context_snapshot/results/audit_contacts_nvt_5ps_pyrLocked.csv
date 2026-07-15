@@ -1,0 +1,10 @@
+metric,value
+source_gro,runs/phase1A/hybrid_hydrated_gap45_pyr5shift_clean032_nvt/nvt_5ps_pyrLocked.gro
+natoms,68320
+water_molecules,16634
+min_OW_solute_nm,0.21822
+min_OW_solute_pair,29421:SOL:OW - 140:HBN:N0140
+min_WATERATOM_solute_nm,0.15170
+min_WATERATOM_solute_pair,29483:SOL:HW2 - 1174:HBN:N1174
+min_PYR_HBN_nm,0.23170
+min_PYR_HBN_pair,1704:PYR:H7 - 239:HBN:B0239

@@ -1,0 +1,5 @@
+quantity,value_meV
+vacuum_geometry_offset_PYR5_vs_PYR2_PYR4,306.6666666666671
+mean_solvent_contribution_to_PYR5_offset,2.1269841269837166
+mean_embedded_PYR5_offset,308.7936507936497
+decomposition_closure_error,-1.0964562591198046e-12

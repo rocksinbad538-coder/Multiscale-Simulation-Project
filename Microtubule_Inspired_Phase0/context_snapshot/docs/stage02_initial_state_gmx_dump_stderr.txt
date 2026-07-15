@@ -1,0 +1,13 @@
+                       :-) GROMACS - gmx dump, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps
+Command line:
+  gmx dump -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps/02_nvt_k10000_1ps.tpr
+
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps/02_nvt_k10000_1ps.tpr, VERSION 2025.4 (single precision)
+Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/02_nvt_k10000_1ps/02_nvt_k10000_1ps.tpr, VERSION 2025.4 (single precision)
+
+GROMACS reminds you: "You should call it 'entropy'. No one knows what entropy really is, so in a debate you will always have the advantage." (John von Neumann to Claude Shannon, on why he should borrow the term for information theory)
+

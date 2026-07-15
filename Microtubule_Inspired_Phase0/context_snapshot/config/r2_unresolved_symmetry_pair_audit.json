@@ -1,0 +1,30 @@
+{
+  "limitations": [
+    "This audit does not modify coordinates.",
+    "No topology, parameterization, minimization, MD or QM calculation is generated."
+  ],
+  "summary": {
+    "MD_performed": false,
+    "coordinates_modified": false,
+    "energy_minimized": false,
+    "lower_bridge_paths": 15,
+    "molecular_topology_generated": false,
+    "path_based_correspondence_required": false,
+    "required_next_step": "BUILD_TOPOLOGY_AWARE_LOWER_UPPER_CORRESPONDENCE",
+    "unresolved_H_attached_heavy_types": "HEXAGONAL_EDGE_COMPLETION_SEED:15",
+    "unresolved_H_count": 15,
+    "unresolved_H_roles": "SEED_PASSIVANT_H:15",
+    "unresolved_heavy_count": 30,
+    "unresolved_heavy_types": "HEXAGONAL_EDGE_COMPLETION_SEED:30",
+    "upper_bridge_paths": 15
+  },
+  "unresolved_H_parent_type_counts": {
+    "HEXAGONAL_EDGE_COMPLETION_SEED": 15
+  },
+  "unresolved_H_role_counts": {
+    "SEED_PASSIVANT_H": 15
+  },
+  "unresolved_heavy_type_counts": {
+    "HEXAGONAL_EDGE_COMPLETION_SEED": 30
+  }
+}

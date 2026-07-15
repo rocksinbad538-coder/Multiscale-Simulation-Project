@@ -1,0 +1,2 @@
+category,minimum_distance_nm,minimum_pair,threshold_nm,pairs_below_threshold
+HEAVY_HEAVY,0.15974739665991966,A:LOWER:1:-9 | BR4:LOWER:03:2,0.12,0

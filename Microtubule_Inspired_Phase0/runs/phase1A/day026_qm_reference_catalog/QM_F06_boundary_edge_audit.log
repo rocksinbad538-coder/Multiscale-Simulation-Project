@@ -1,0 +1,4 @@
+QM_F06 boundary-edge audit completed.
+Boundary edges audited: 16
+Decision: FRAGMENT_EXPANSION_REQUIRED_BEFORE_CAPPING
+Output: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day026_qm_reference_catalog/QM_F06/QM_F06_boundary_edge_audit_combined.csv

@@ -1,0 +1,101 @@
+{
+  "gates": {
+    "Gate3O_has_expected_aperture_only_review_decision": true,
+    "Gate3O_radial_metric_fails_both_ends": true,
+    "all_aperture_metrics_are_lower_upper_symmetric": true,
+    "at_least_one_geometric_free_aperture_metric_passes_both_ends": false,
+    "fixed_annulus_coordinates_are_unchanged_from_Gate3K": true,
+    "heavy_geometry_other_than_aperture_remains_accepted": true
+  },
+  "limitations": [
+    "This gate audits aperture definitions only.",
+    "No coordinates are changed.",
+    "No hydrogen coordinates, topology, charges, force-field parameters, minimization, MD or QM calculation are generated."
+  ],
+  "metric_rows": [
+    {
+      "diameter_nm": 1.0454151701156797,
+      "end": "LOWER",
+      "metric": "TWO_TIMES_MINIMUM_RADIAL_DISTANCE",
+      "relative_error": 0.24542256085336508,
+      "target_nm": 0.839406,
+      "within10percent": false
+    },
+    {
+      "diameter_nm": 1.0454151701156817,
+      "end": "LOWER",
+      "metric": "MINIMUM_OPPOSITE_PAIR_DISTANCE",
+      "relative_error": 0.24542256085336747,
+      "target_nm": 0.839406,
+      "within10percent": false
+    },
+    {
+      "diameter_nm": 1.045415170115682,
+      "end": "LOWER",
+      "metric": "MEAN_OPPOSITE_PAIR_DISTANCE",
+      "relative_error": 0.24542256085336772,
+      "target_nm": 0.839406,
+      "within10percent": false
+    },
+    {
+      "diameter_nm": 1.0044035414484607,
+      "end": "LOWER",
+      "metric": "MINIMUM_PROJECTED_WIDTH",
+      "relative_error": 0.19656464386537706,
+      "target_nm": 0.839406,
+      "within10percent": false
+    },
+    {
+      "diameter_nm": 1.0454151701156789,
+      "end": "UPPER",
+      "metric": "TWO_TIMES_MINIMUM_RADIAL_DISTANCE",
+      "relative_error": 0.24542256085336403,
+      "target_nm": 0.839406,
+      "within10percent": false
+    },
+    {
+      "diameter_nm": 1.0454151701156817,
+      "end": "UPPER",
+      "metric": "MINIMUM_OPPOSITE_PAIR_DISTANCE",
+      "relative_error": 0.24542256085336747,
+      "target_nm": 0.839406,
+      "within10percent": false
+    },
+    {
+      "diameter_nm": 1.045415170115682,
+      "end": "UPPER",
+      "metric": "MEAN_OPPOSITE_PAIR_DISTANCE",
+      "relative_error": 0.24542256085336772,
+      "target_nm": 0.839406,
+      "within10percent": false
+    },
+    {
+      "diameter_nm": 1.0044035414484607,
+      "end": "UPPER",
+      "metric": "MINIMUM_PROJECTED_WIDTH",
+      "relative_error": 0.19656464386537706,
+      "target_nm": 0.839406,
+      "within10percent": false
+    }
+  ],
+  "summary": {
+    "Gate3O_radial_aperture_lower_nm": 1.0454151701156797,
+    "Gate3O_radial_aperture_upper_nm": 1.0454151701156789,
+    "MD_authorized": false,
+    "QM_authorized": false,
+    "aperture_metric_inconsistency_identified": false,
+    "decision": "R2_APERTURE_METRIC_AUDIT_REQUIRES_FURTHER_REVIEW",
+    "energy_minimization_authorized": false,
+    "failed_gates": "at_least_one_geometric_free_aperture_metric_passes_both_ends",
+    "force_field_parameterization_authorized": false,
+    "formal_charge_assignment_authorized": false,
+    "heavy_coordinate_embedding_retained": false,
+    "hydrogen_coordinate_generation_authorized": false,
+    "lower_preferred_aperture_nm": "",
+    "maximum_fixed_coordinate_difference_nm": 0.0,
+    "molecular_topology_generation_authorized": false,
+    "preferred_aperture_metric": "NONE",
+    "required_next_step": "REVIEW_R2_APERTURE_METRIC_DEFINITION_AND_TARGET",
+    "upper_preferred_aperture_nm": ""
+  }
+}

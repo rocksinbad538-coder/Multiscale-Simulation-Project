@@ -1,0 +1,10 @@
+gate,pass
+preflight_decision_is_accepted,True
+all_40_environments_classified,True
+all_148_bonded_term_classes_classified,True
+all_2112_improper_centers_grouped,True
+all_7_QM_fragment_classes_preserved,True
+three_routes_compared,True
+lele_direct_R2_validation_not_inferred,True
+fixed_topology_validation_not_inferred,True
+no_parameter_adoption_or_simulation_performed,True

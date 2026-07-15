@@ -1,0 +1,10 @@
+gate,pass
+R1_positive_control_is_validated,True
+R1_authorized_R2_static_design,True
+R0_atom_count_is_68320,True
+R1_cap_lattice_has_326_beads,True
+R0_initial_lumen_occupancy_is_428,True
+at_least_one_candidate_passed,True
+selected_candidate_passed_all_static_gates,True
+selected_caps_are_symmetric,True
+selected_system_atom_count_is_consistent,True

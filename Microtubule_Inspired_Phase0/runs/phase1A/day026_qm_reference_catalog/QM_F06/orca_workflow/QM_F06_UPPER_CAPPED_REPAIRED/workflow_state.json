@@ -1,0 +1,12 @@
+{
+  "fragment": "QM_F06_UPPER_CAPPED_REPAIRED",
+  "stage1_input_prepared": true,
+  "stage1_executed": false,
+  "stage1_geometry_promoted": false,
+  "stage2_input_generated": false,
+  "stage2_executed": false,
+  "stage2_geometry_promoted": false,
+  "stage3_input_generated": false,
+  "stage3_executed": false,
+  "qm_execution_authorized": false
+}

@@ -1,0 +1,20 @@
+constraint,value,unit,basis,status
+parent_HBN_atoms,1680,atoms,Accepted R2 parent scaffold,FIXED
+terminal_anchor_atoms_per_end,30,atoms/end,Explicit topology and geometry: degree-1 terminal sites,FIXED
+lower_terminal_B_anchor_atoms,30,atoms/end,Lower end is purely B-terminated,FIXED
+lower_terminal_N_anchor_atoms,0,atoms/end,Lower end is purely B-terminated,FIXED
+upper_terminal_B_anchor_atoms,0,atoms/end,Upper end is purely N-terminated,FIXED
+upper_terminal_N_anchor_atoms,30,atoms/end,Upper end is purely N-terminated,FIXED
+parent_terminal_coordination_deficit_to_degree3,120,missing neighbor incidences,60 degree-1 termini relative to three-coordinate interior sites,REQUIRES_CHEMICAL_RESOLUTION
+target_effective_aperture_diameter,0.8394062099300137,nm,Validated R2 screening geometry,TARGET
+target_effective_aperture_radius,0.41970310496500685,nm,Half of validated aperture diameter,TARGET
+validated_open_area_fraction,0.14292804047662536,dimensionless,Validated R2 screening geometry,TARGET
+parent_rim_mean_radius,1.1991257007481553,nm,Mean of both terminal rims,MEASURED
+required_radial_occlusion,0.7794225957831484,nm,Parent rim radius minus target aperture radius,REQUIRED
+annular_area_to_replace_per_end,3.9639100280691797,nm^2,Geometric annulus between parent rim and target pore,MEASURED
+estimated_hBN_monolayer_atoms_per_end,145.1329066507616,atoms/end,Annulus area divided by h-BN area per atom,SCREENING_ESTIMATE
+validated_steric_beads_per_end,144,beads/end,Accepted R2 screening model,REFERENCE
+minimum_validated_CAP_OW_distance,0.166949158747368,nm,Validated R2 50 ps trajectory,LOWER_REFERENCE
+initial_candidate_total_charge,0,e,Minimal-perturbation first candidate,DESIGN_TARGET
+unpaired_electrons_in_initial_candidate,0,electrons,No radical or spin-active chemistry at this gate,DESIGN_TARGET
+new_MD_or_QM_execution,0,authorized calculations,Static chemical-design gate only,BLOCKED

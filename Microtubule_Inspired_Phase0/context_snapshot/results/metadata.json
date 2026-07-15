@@ -1,0 +1,16 @@
+{
+  "production_day": "018",
+  "description": "Absolute diagonal excitonic Hamiltonian components extracted from embedded TDA-TDDFT calculations.",
+  "units": "eV",
+  "method": "wB97X-D3/def2-SVP TDA-TDDFT electrostatic embedding",
+  "hamiltonian_type": "diagonal_only",
+  "chromophores": [
+    "PYR2",
+    "PYR3",
+    "PYR4",
+    "PYR5"
+  ],
+  "physical_scope": "solvent-induced diagonal disorder under frozen-solute conditions",
+  "off_diagonal_terms": "Not included. J_ij must be parameterized separately.",
+  "source": "runs/phase1A/day016_md_bath_extraction/site_energy_trajectory/site_energy_trajectory.csv"
+}

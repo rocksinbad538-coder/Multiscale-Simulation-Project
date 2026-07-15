@@ -1,0 +1,45 @@
+project:
+  name: Microtubule_Inspired_Phase0
+  phase: Phase 0
+  objective: Compare baseline tubular architectures under controlled conditions.
+
+geometry:
+  shape: tubular
+  outer_diameter_nm: 24.0
+  lumen_diameter_nm: 14.0
+  wall_thickness_nm: 5.0
+  segment_length_nm: 20.0
+  axis: z
+  periodic_axis: z
+
+temperatures_K:
+  - 150
+  - 200
+  - 250
+  - 300
+
+candidate_classes:
+  organic_biomimetic:
+    description: Peptide-like or biomimetic tubular scaffold with polar wall groups.
+    initial_model_level: coarse-grained_or_simplified_atomistic
+  hybrid:
+    description: Inorganic tubular scaffold with organic or polar functional coating.
+    initial_model_level: hybrid_MD
+  inorganic:
+    description: BNNT or CNT-like inorganic tubular scaffold with confined water.
+    initial_model_level: atomistic_MD
+
+controls:
+  dry_empty_tube: Remove confined water to isolate hydration effects.
+  confined_water_unfunctionalized_tube: Separate confinement from wall functionalization.
+  bulk_water: Compare confined water with unconfined water.
+  randomized_wall_pattern: Test ordered versus random polarity when applicable.
+
+analysis_outputs:
+  - geometric_stability
+  - confined_water_density
+  - water_residence
+  - dipole_orientation
+  - dipole_autocorrelation
+  - dielectric_relaxation_proxy
+  - field_induced_response

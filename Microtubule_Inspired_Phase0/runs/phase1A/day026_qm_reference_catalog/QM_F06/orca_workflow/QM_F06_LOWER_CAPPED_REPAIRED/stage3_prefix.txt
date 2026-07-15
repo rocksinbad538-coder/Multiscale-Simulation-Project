@@ -1,0 +1,13 @@
+! PBE0 D4 def2-TZVP def2/J RIJCOSX TightSCF DefGrid3
+
+%pal
+  nprocs 4
+end
+
+%maxcore 3000
+
+%scf
+  MaxIter 500
+end
+
+# QM_F06_LOWER_CAPPED_REPAIRED: single-point template. Replace coordinates with the optimized Stage-2 geometry.

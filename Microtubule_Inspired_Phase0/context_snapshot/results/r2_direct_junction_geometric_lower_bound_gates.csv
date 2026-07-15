@@ -1,0 +1,7 @@
+gate,pass
+Gate3F_graph_design_is_accepted,True
+Gate3G_embedding_has_expected_review_decision,True
+600_mapping_and_transform_fits_were_screened,True
+300_fits_were_screened_per_end,True
+all_required_fit_modes_are_present,True
+all_core_fit_metrics_are_finite,True

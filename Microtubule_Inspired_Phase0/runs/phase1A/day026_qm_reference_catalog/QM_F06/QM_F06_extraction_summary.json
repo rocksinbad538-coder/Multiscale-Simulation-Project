@@ -1,0 +1,11 @@
+{
+  "decision": "QM_F06_REPRESENTATIVE_FRAGMENTS_EXTRACTED_CAP_AUDIT_REQUIRED",
+  "ends_extracted": [
+    "LOWER",
+    "UPPER"
+  ],
+  "artificial_capping_added": false,
+  "geometry_optimized": false,
+  "qm_calculation_executed": false,
+  "required_next_step": "AUDIT_BOUNDARY_EDGES_AND_DEFINE_CHEMICALLY_VALID_CAPPING"
+}

@@ -1,0 +1,8 @@
+{
+  "decision": "QM_F06_CAPPED_FRAGMENTS_PASS_PRE_QM_GATE",
+  "all_fragments_pass": true,
+  "provisional_charge": 0,
+  "provisional_multiplicity": 1,
+  "qm_calculation_executed": false,
+  "required_next_step": "PREPARE_QM_INPUTS"
+}

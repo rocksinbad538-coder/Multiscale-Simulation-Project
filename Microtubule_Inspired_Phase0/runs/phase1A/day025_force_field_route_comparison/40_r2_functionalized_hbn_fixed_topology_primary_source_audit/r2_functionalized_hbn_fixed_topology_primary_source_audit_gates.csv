@@ -1,0 +1,9 @@
+gate,pass
+gate39_decision_is_accepted,True
+three_priority_sources_defined,True
+all_priority_sources_found_in_curated_ledgers,True
+five_domains_assessed_for_each_source,True
+three_required_artifact_classes_defined_per_source,True
+no_direct_R2_validation_inferred,True
+no_fixed_topology_route_selected,True
+no_parameter_adoption_or_simulation_performed,True

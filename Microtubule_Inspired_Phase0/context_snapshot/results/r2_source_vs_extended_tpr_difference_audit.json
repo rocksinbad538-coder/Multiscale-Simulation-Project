@@ -1,0 +1,18 @@
+{
+  "box_state_mismatches": 0,
+  "changed_parameters": [],
+  "continuation_execution_authorized_by_this_audit": false,
+  "coordinate_mismatches": 0,
+  "extended_dump_lines": 224388,
+  "family_counts": {
+    "other": 1
+  },
+  "required_next_step": "CLASSIFY_TPR_EXTENSION_RESIDUAL_DIFFERENCES",
+  "scalar_parameter_mismatches": 0,
+  "semantic_mismatch_records_after_nsteps_normalization": 1,
+  "source_dump_lines": 224388,
+  "unified_diff_added_records": 1,
+  "unified_diff_removed_records": 1,
+  "unified_diff_total_lines": 8,
+  "velocity_mismatches": 0
+}

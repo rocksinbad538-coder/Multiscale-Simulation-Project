@@ -1,0 +1,2 @@
+source_file,line_number,classification,broad_pattern_match,strict_patterns,line_text
+r2_static_single_point.log,230,BROAD_PATTERN_FALSE_POSITIVE,nan,,   lincs-warnangle                = 30

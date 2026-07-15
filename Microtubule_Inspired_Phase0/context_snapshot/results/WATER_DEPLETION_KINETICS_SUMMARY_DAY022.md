@@ -1,0 +1,60 @@
+# Water-Depletion Kinetics Summary
+
+## Endpoint progression
+
+| Stage | Elapsed mobile time (ps) | Lumen water | Density (nm^-3) | Radius (nm) | Length (nm) |
+|---|---:|---:|---:|---:|---:|
+| accepted_frozen_endpoint | 0.0 | 23 | 0.846072 | 1.199111 | 6.018000 |
+| 02_nvt_k10000_1ps | 1.0 | 27 | 0.987959 | 1.201602 | 6.024950 |
+| 03_nvt_k1000_2ps | 3.0 | 16 | 0.582835 | 1.203865 | 6.029335 |
+| 03b_nvt_k1000_hold_2ps | 5.0 | 9 | 0.322431 | 1.211886 | 6.049671 |
+| 04_nvt_k100_2ps | 7.0 | 11 | 0.394026 | 1.210200 | 6.067413 |
+| 05_nvt_unrestrained_2ps | 9.0 | 10 | 0.358188 | 1.210891 | 6.060777 |
+| 06_nvt_unrestrained_10ps | 19.0 | 4 | 0.143189 | 1.211309 | 6.060230 |
+| 07_nvt_unrestrained_25ps | 44.0 | 0 | 0.000000 | 1.207277 | 6.058077 |
+| 08_nvt_mobile_100ps | 144.0 | 0 | 0.000000 | 1.210507 | 6.057319 |
+
+## Endpoint transitions
+
+| From | To | Interval (ps) | Water change | Rate (water/ps) |
+|---|---|---:|---:|---:|
+| accepted_frozen_endpoint | 02_nvt_k10000_1ps | 0.0-1.0 | 4 | 4.000000 |
+| 02_nvt_k10000_1ps | 03_nvt_k1000_2ps | 1.0-3.0 | -11 | -5.500000 |
+| 03_nvt_k1000_2ps | 03b_nvt_k1000_hold_2ps | 3.0-5.0 | -7 | -3.500000 |
+| 03b_nvt_k1000_hold_2ps | 04_nvt_k100_2ps | 5.0-7.0 | 2 | 1.000000 |
+| 04_nvt_k100_2ps | 05_nvt_unrestrained_2ps | 7.0-9.0 | -1 | -0.500000 |
+| 05_nvt_unrestrained_2ps | 06_nvt_unrestrained_10ps | 9.0-19.0 | -6 | -0.600000 |
+| 06_nvt_unrestrained_10ps | 07_nvt_unrestrained_25ps | 19.0-44.0 | -4 | -0.160000 |
+| 07_nvt_unrestrained_25ps | 08_nvt_mobile_100ps | 44.0-144.0 | 0 | 0.000000 |
+
+## Ten-picosecond blocks
+
+| Dataset | Block | Interval (ps) | Mean | Std | Min | Max |
+|---|---:|---:|---:|---:|---:|---:|
+| frozen | 1 | 0-10 | 432.3000 | 2.7586 | 426 | 437 |
+| frozen | 2 | 10-20 | 416.9000 | 11.5365 | 395 | 432 |
+| frozen | 3 | 20-30 | 393.4500 | 2.5976 | 388 | 398 |
+| frozen | 4 | 30-40 | 373.5000 | 11.5737 | 355 | 393 |
+| frozen | 5 | 40-50 | 340.7500 | 10.9310 | 321 | 357 |
+| frozen | 6 | 50-60 | 299.1000 | 13.0035 | 272 | 322 |
+| frozen | 7 | 60-70 | 234.5500 | 18.3942 | 197 | 264 |
+| frozen | 8 | 70-80 | 180.6500 | 16.0321 | 150 | 205 |
+| frozen | 9 | 80-90 | 114.3500 | 18.9744 | 89 | 150 |
+| frozen | 10 | 90-100 | 45.2857 | 15.9587 | 23 | 80 |
+| mobile | 1 | 0-10 | 0.7000 | 1.0050 | 0 | 3 |
+| mobile | 2 | 10-20 | 1.1000 | 0.7681 | 0 | 2 |
+| mobile | 3 | 20-30 | 0.6000 | 0.4899 | 0 | 1 |
+| mobile | 4 | 30-40 | 1.7000 | 1.3454 | 0 | 5 |
+| mobile | 5 | 40-50 | 1.8500 | 1.6210 | 0 | 7 |
+| mobile | 6 | 50-60 | 6.0500 | 2.7106 | 2 | 11 |
+| mobile | 7 | 60-70 | 2.2500 | 1.6394 | 0 | 5 |
+| mobile | 8 | 70-80 | 3.4000 | 1.9079 | 1 | 8 |
+| mobile | 9 | 80-90 | 1.5000 | 1.6882 | 0 | 5 |
+| mobile | 10 | 90-100 | 0.0000 | 0.0000 | 0 | 0 |
+
+## Diagnostic findings
+
+- Largest endpoint loss: `02_nvt_k10000_1ps` → `03_nvt_k1000_2ps`, -11 waters over 2.0 ps.
+- First endpoint with zero lumen waters: **07_nvt_unrestrained_25ps at 44.0 ps**.
+- Existing frozen and mobile windows remain temporally unmatched.
+- No electronic recalculation is authorized from the unmatched comparison.

@@ -1,0 +1,3 @@
+fragment,atom_count,formula,B_atoms,N_atoms,H_atoms,connectivity_edges,valence_failures,bond_distance_failures,minimum_nonbonded_distance_angstrom,minimum_nonbonded_pair,nonbonded_clashes,neutral_valence_electrons,provisional_charge,provisional_multiplicity,pre_qm_gate_pass
+QM_F06_LOWER_CAPPED,22,B5N5H12,5,5,12,21,0,0,1.2186135727,H4:LOWER:0017:0|HCAP:LOWER:07,0,52,0,1,True
+QM_F06_UPPER_CAPPED,22,B5N5H12,5,5,12,21,0,0,1.3890460006,H4:UPPER:0047:0|HCAP:UPPER:07,0,52,0,1,True

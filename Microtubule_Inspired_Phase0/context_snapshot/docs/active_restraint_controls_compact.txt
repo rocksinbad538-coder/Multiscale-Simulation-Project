@@ -1,0 +1,102 @@
+DAY021 ACTIVE RESTRAINT CONTROLS
+========================================================================================
+mobile_topology: parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded_kang2000_improperGeo100.top
+include_closure_files: 4
+unresolved_includes: 0
+
+ACTIVE INCLUDE CLOSURE
+----------------------------------------------------------------------------------------
+
+FILE: parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/hbn_pyrene_4_hydratable_gap45_pyr5shift_clean032_hbnBonded_kang2000_improperGeo100.top
+sha256: a04cb247c1f6a9e8632b97165d7046fe780cac36ae84fac72e845d5297ce89e5
+include_count: 3
+  line 22: #include "hbn_bonded_candidate_kang2000_improperGeo100.itp"
+  line 23: #include "pyrene.itp"
+  line 24: #include "tip4p2005.itp"
+preprocessor_directive_count: 0
+position_restraint_section_count: 0
+
+FILE: parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/hbn_bonded_candidate_kang2000_improperGeo100.itp
+sha256: a2972bc14e6e19e3dd34807f434ee7587a982bb715593a8ab57bdae3bc908db8
+include_count: 0
+preprocessor_directive_count: 2
+  line 10640: #ifdef POSRES_HBN
+  line 12323: #endif
+position_restraint_section_count: 1
+  section 1:
+    start_line: 10641
+    entry_count: 1680
+    atom_index_range: 1-1680
+    unique_force_triplets: 1
+      1000000 1000000 1000000
+    first_entry: 1 1 1000000.0 1000000.0 1000000.0
+    last_entry: 1680 1 1000000.0 1000000.0 1000000.0
+
+FILE: parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/pyrene.itp
+sha256: c3c7fd5bebd159444f9e32dbc79c9f029144cc2a33f334bb0ae2bc9b344b1f74
+include_count: 0
+preprocessor_directive_count: 2
+  line 281: #ifdef POSRES_PYR
+  line 310: #endif
+position_restraint_section_count: 1
+  section 1:
+    start_line: 282
+    entry_count: 26
+    atom_index_range: 1-26
+    unique_force_triplets: 1
+      1000000 1000000 1000000
+    first_entry: 1 1 1000000.0 1000000.0 1000000.0
+    last_entry: 26 1 1000000.0 1000000.0 1000000.0
+
+FILE: parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/tip4p2005.itp
+sha256: fccf2518123db968b7b8317877a3e2f9cf7b15aec3673c93d7ee111c9ff6133b
+include_count: 0
+preprocessor_directive_count: 0
+position_restraint_section_count: 0
+
+GLOBAL RESTRAINT INVENTORY
+----------------------------------------------------------------------------------------
+all_discovered_restraint_sections: 14
+01. parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/hbn_bonded_candidate_kang2000_improperGeo100.itp line=10641 entries=1680
+02. parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/hbn_fixed_dummy.itp line=1692 entries=1680
+03. parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_validated/pyrene.itp line=282 entries=26
+04. parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_hydrated_baseline/hbn_bonded_candidate_kang2000_improperGeo100.itp line=10641 entries=1680
+05. parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_hydrated_baseline/hbn_fixed_dummy.itp line=1692 entries=1680
+06. parameters/phase1A/accepted/hybrid_hbnBonded_kang2000_improperGeo100_hydrated_baseline/pyrene.itp line=282 entries=26
+07. parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_bonded_candidate.itp line=9018 entries=1680
+08. parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_bonded_candidate_kang2000.itp line=9018 entries=1680
+09. parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_bonded_candidate_kang2000_improper100.itp line=10641 entries=1680
+10. parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_bonded_candidate_kang2000_improperGeo100.itp line=10641 entries=1680
+11. parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_bonded_candidate_kang2000_improperGeo150.itp line=10641 entries=1680
+12. parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_bonded_candidate_kang2000_improperGeo200.itp line=10641 entries=1680
+13. parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/hbn_fixed_dummy.itp line=1692 entries=1680
+14. parameters/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032/pyrene.itp line=282 entries=26
+
+EXISTING MDP SETTINGS
+----------------------------------------------------------------------------------------
+mdp_file_count: 1
+
+MDP: runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.mdp
+  integrator: md
+  dt: 0.0005
+  nsteps: 200000
+  gen-vel: yes
+  gen-temp: 300
+  gen-seed: 61631
+  freezegrps: HBN PYR
+  freezedim: Y Y Y Y Y Y
+  constraints: none
+  tcoupl: V-rescale
+  tc-grps: System
+  tau-t: 1.0
+  ref-t: 300
+  pcoupl: no
+  nstxout-compressed: 1000
+  nstenergy: 500
+  nstlog: 500
+
+SUMMARY
+----------------------------------------------------------------------------------------
+active_restraint_sections: 2
+active_restraint_entries: 1706
+active_include_closure_complete: True

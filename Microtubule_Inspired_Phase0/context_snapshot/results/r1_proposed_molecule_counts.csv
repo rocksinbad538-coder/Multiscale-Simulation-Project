@@ -1,0 +1,6 @@
+order,molecule,original_count,proposed_count,atoms_per_molecule,proposed_atom_contribution,action
+1,HBN,1,1,1680,1680,RETAIN
+2,PYR,4,4,26,104,RETAIN
+3,SOL,16634,16551,4,66204,REPLACE_WATER_COUNT
+4,CAPL,0,1,163,163,ADD_FROZEN_CAP
+5,CAPU,0,1,163,163,ADD_FROZEN_CAP

@@ -1,0 +1,13 @@
+========================================================================
+QM_F06 ORCA STAGE-1 PREFLIGHT
+========================================================================
+ORCA: /Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca
+ORCA SHA256: f9043192a31496e4931fa60df69b513f3922c7510c462e3934e3e2dd16d3e5f0
+Execution requested: False
+
+{'end': 'LOWER', 'fragment': 'QM_F06_LOWER_CAPPED_REPAIRED', 'input': 'runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_workflow/QM_F06_LOWER_CAPPED_REPAIRED/stage1.inp', 'input_sha256': 'a0a6897a21ae08d298a148bc30ecff2a9ab8c8c0cd4988fd60021c9cbfe1d0c8', 'atom_count': 22, 'charge': 0, 'multiplicity': 1, 'constraint_count': 11, 'preflight_pass': True}
+
+Preflight decision: PASS
+
+DRY PREFLIGHT COMPLETE — ORCA WAS NOT EXECUTED.
+Use --execute only after explicit authorization.

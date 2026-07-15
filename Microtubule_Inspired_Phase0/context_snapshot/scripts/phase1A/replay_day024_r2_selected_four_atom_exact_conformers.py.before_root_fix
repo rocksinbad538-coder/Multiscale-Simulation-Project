@@ -1,0 +1,1305 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import csv
+import hashlib
+import json
+import runpy
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+from typing import Any
+
+
+ROOT = Path(__file__).resolve().parents[2]
+
+BASE = (
+    ROOT
+    / "runs/phase1A/day024_chemical_end_rim_design"
+)
+
+SOURCE_SCRIPT = (
+    ROOT
+    / "scripts/phase1A/"
+    "screen_day024_r2_full_density_longer_bn_bridge_classes.py"
+)
+
+SOURCE_STAGE = (
+    BASE
+    / "15_r2_full_density_longer_bn_bridge_screen"
+)
+
+SOURCE_SELECTED = (
+    SOURCE_STAGE
+    / "r2_full_density_longer_bridge_selected_candidate.csv"
+)
+
+SOURCE_SUMMARY = (
+    SOURCE_STAGE
+    / "r2_full_density_longer_bridge_screen_summary.csv"
+)
+
+OUTPUT = (
+    BASE
+    / "18_r2_selected_four_atom_exact_conformer_replay"
+)
+
+INSTRUMENTED_SCRIPT = (
+    OUTPUT
+    / "screen_day024_r2_four_atom_instrumented_replay.py"
+)
+
+REPLAY_SELECTED = (
+    OUTPUT
+    / "r2_full_density_longer_bridge_selected_candidate.csv"
+)
+
+REPLAY_SCREEN_SUMMARY = (
+    OUTPUT
+    / "r2_full_density_longer_bridge_screen_summary.csv"
+)
+
+CONFORMERS = (
+    OUTPUT
+    / "r2_selected_four_atom_exact_conformers.csv"
+)
+
+BRIDGE_COORDINATES = (
+    OUTPUT
+    / "r2_selected_four_atom_exact_bridge_coordinates.csv"
+)
+
+REPLAY_SUMMARY = (
+    OUTPUT
+    / "r2_selected_four_atom_exact_conformer_replay_summary.csv"
+)
+
+GATES = (
+    OUTPUT
+    / "r2_selected_four_atom_exact_conformer_replay_gates.csv"
+)
+
+JSON_OUT = (
+    OUTPUT
+    / "r2_selected_four_atom_exact_conformer_replay.json"
+)
+
+MANIFEST = (
+    OUTPUT
+    / "r2_selected_four_atom_exact_conformer_replay_manifest.csv"
+)
+
+REPORT = (
+    OUTPUT
+    / "R2_SELECTED_FOUR_ATOM_EXACT_CONFORMER_REPLAY_DAY024.md"
+)
+
+EXPECTED_SOURCE_SHA256 = (
+    "bc1d0a080c11e0a3136f94329481e002"
+    "9d79fac9197e007911ec98afdcd66fca"
+)
+
+EXPECTED_DECISION = (
+    "R2_FULL_DENSITY_LONGER_BN_BRIDGE_CLASS_IDENTIFIED"
+)
+
+PASS_DECISION = (
+    "R2_SELECTED_FOUR_ATOM_BN_BRIDGE_EXACT_CONFORMERS_RECOVERED"
+)
+
+FAIL_DECISION = (
+    "R2_SELECTED_FOUR_ATOM_BN_BRIDGE_EXACT_CONFORMER_REPLAY_FAILED"
+)
+
+EXPECTED_PATHS = 30
+EXPECTED_INTERNAL_ATOMS_PER_PATH = 4
+EXPECTED_BRIDGE_COORDINATES = 120
+EXPECTED_LIBRARY_SEED = 35004
+
+
+def require_file(path: Path) -> None:
+    if (
+        not path.is_file()
+        or path.stat().st_size == 0
+    ):
+        raise RuntimeError(
+            f"Missing or empty required file: {path}"
+        )
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+
+    with path.open("rb") as handle:
+        for chunk in iter(
+            lambda: handle.read(1024 * 1024),
+            b"",
+        ):
+            digest.update(chunk)
+
+    return digest.hexdigest()
+
+
+def relative(path: Path) -> str:
+    return str(
+        path.resolve().relative_to(ROOT)
+    )
+
+
+def read_rows(
+    path: Path,
+) -> list[dict[str, str]]:
+    require_file(path)
+
+    with path.open(
+        newline="",
+        encoding="utf-8",
+    ) as handle:
+        rows = list(
+            csv.DictReader(handle)
+        )
+
+    if not rows:
+        raise RuntimeError(
+            f"No rows found in {path}"
+        )
+
+    return rows
+
+
+def read_one(
+    path: Path,
+) -> dict[str, str]:
+    rows = read_rows(path)
+
+    if len(rows) != 1:
+        raise RuntimeError(
+            f"Expected one row in {path}; found {len(rows)}"
+        )
+
+    return rows[0]
+
+
+def write_rows(
+    path: Path,
+    rows: list[dict[str, Any]],
+) -> None:
+    if not rows:
+        raise RuntimeError(
+            f"No rows available for {path}"
+        )
+
+    fields: list[str] = []
+
+    for row in rows:
+        for key in row:
+            if key not in fields:
+                fields.append(key)
+
+    with path.open(
+        "w",
+        newline="",
+        encoding="utf-8",
+    ) as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=fields,
+        )
+
+        writer.writeheader()
+
+        for row in rows:
+            writer.writerow(
+                {
+                    field: row.get(
+                        field,
+                        "",
+                    )
+                    for field in fields
+                }
+            )
+
+
+def parse_bool(value: Any) -> bool:
+    return str(value).strip().lower() in {
+        "true",
+        "yes",
+        "1",
+        "pass",
+    }
+
+
+def parse_float(
+    row: dict[str, str],
+    key: str,
+) -> float:
+    try:
+        return float(row[key])
+    except (
+        KeyError,
+        TypeError,
+        ValueError,
+    ) as exc:
+        raise RuntimeError(
+            f"Could not parse numeric field {key!r}"
+        ) from exc
+
+
+def compare_selected_rows(
+    source_rows: list[dict[str, str]],
+    replay_rows: list[dict[str, str]],
+) -> tuple[
+    bool,
+    list[str],
+]:
+    source_mappings = {
+        row["mapping_id"]: row
+        for row in source_rows
+        if row.get(
+            "classification"
+        )
+        == "SELECTED_END_MAPPING"
+    }
+
+    replay_mappings = {
+        row["mapping_id"]: row
+        for row in replay_rows
+        if row.get(
+            "classification"
+        )
+        == "SELECTED_END_MAPPING"
+    }
+
+    differences: list[str] = []
+
+    if set(source_mappings) != set(
+        replay_mappings
+    ):
+        differences.append(
+            "selected_mapping_identifiers_differ"
+        )
+
+        return False, differences
+
+    exact_fields = (
+        "bridge_atoms_per_attachment",
+        "attachments_per_end",
+        "end",
+        "seed_element",
+        "bridge_element_sequence",
+        "annulus_endpoint_element",
+        "seed_parity",
+        "orientation",
+        "rotation",
+        "seed_nodes",
+        "annulus_nodes",
+    )
+
+    numeric_fields = (
+        "minimum_interbridge_clearance_nm",
+        "minimum_angle_deg",
+        "maximum_bond_deviation_nm",
+        "minimum_local_clearance_nm",
+    )
+
+    for mapping_id in sorted(
+        source_mappings
+    ):
+        source = source_mappings[
+            mapping_id
+        ]
+
+        replay = replay_mappings[
+            mapping_id
+        ]
+
+        for field in exact_fields:
+            if source.get(
+                field,
+                ""
+            ) != replay.get(
+                field,
+                ""
+            ):
+                differences.append(
+                    f"{mapping_id}:{field}"
+                )
+
+        for field in numeric_fields:
+            source_value = parse_float(
+                source,
+                field,
+            )
+
+            replay_value = parse_float(
+                replay,
+                field,
+            )
+
+            if abs(
+                source_value
+                - replay_value
+            ) > 1.0e-12:
+                differences.append(
+                    f"{mapping_id}:{field}"
+                )
+
+    return (
+        len(differences) == 0,
+        differences,
+    )
+
+
+def main() -> None:
+    OUTPUT.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    for required in (
+        SOURCE_SCRIPT,
+        SOURCE_SELECTED,
+        SOURCE_SUMMARY,
+    ):
+        require_file(required)
+
+    source_script_sha = sha256(
+        SOURCE_SCRIPT
+    )
+
+    if source_script_sha != EXPECTED_SOURCE_SHA256:
+        raise RuntimeError(
+            "Gate 3L source script checksum changed: "
+            f"{source_script_sha}"
+        )
+
+    source_summary = read_one(
+        SOURCE_SUMMARY
+    )
+
+    if source_summary.get(
+        "decision"
+    ) != EXPECTED_DECISION:
+        raise RuntimeError(
+            "Gate 3L does not contain the expected accepted decision."
+        )
+
+    source_text = SOURCE_SCRIPT.read_text(
+        encoding="utf-8",
+    )
+
+    original_out = (
+        'OUT = BASE / '
+        '"15_r2_full_density_longer_bn_bridge_screen"'
+    )
+
+    replay_out = (
+        'OUT = BASE / '
+        '"18_r2_selected_four_atom_exact_conformer_replay"'
+    )
+
+    if source_text.count(
+        original_out
+    ) != 1:
+        raise RuntimeError(
+            "Could not uniquely replace the Gate 3L output directory."
+        )
+
+    source_text = source_text.replace(
+        original_out,
+        replay_out,
+        1,
+    )
+
+    anchor = (
+        '        selected_objects = '
+        '[best_by_class_end[(selected_m, end)] '
+        'for end in ("LOWER", "UPPER")]\n'
+    )
+
+    if source_text.count(anchor) != 1:
+        raise RuntimeError(
+            "Could not uniquely locate selected_objects assignment."
+        )
+
+    injection = r'''
+        exact_conformer_rows = []
+        exact_coordinate_rows = []
+
+        for selected_mapping in selected_objects:
+            selected_end = selected_mapping["row"]["end"]
+            selected_indices = selected_mapping["indices"]
+
+            if len(selected_indices) != ATTACHMENTS_PER_END:
+                raise RuntimeError(
+                    f"{selected_end}: expected "
+                    f"{ATTACHMENTS_PER_END} selected conformer indices."
+                )
+
+            for path_index, (
+                seed_row,
+                outer_row,
+                pair_result,
+                pool_index,
+            ) in enumerate(
+                zip(
+                    selected_mapping["seeds"],
+                    selected_mapping["outer"],
+                    selected_mapping["pair_results"],
+                    selected_indices,
+                )
+            ):
+                candidate = pair_result["pool"][pool_index]
+                chain = candidate["chain"]
+
+                if chain.shape != (
+                    selected_m + 2,
+                    3,
+                ):
+                    raise RuntimeError(
+                        f"{selected_end}:{path_index}: "
+                        f"unexpected chain shape {chain.shape}"
+                    )
+
+                bridge_path_id = (
+                    f"{selected_end}:BRIDGE4:{path_index:02d}"
+                )
+
+                exact_conformer_rows.append(
+                    {
+                        "bridge_path_id": bridge_path_id,
+                        "end": selected_end,
+                        "bridge_index": path_index,
+                        "mapping_id": selected_mapping["row"]["mapping_id"],
+                        "seed_node": seed_row["node_id"],
+                        "annulus_node": outer_row["node_id"],
+                        "selected_pool_index": int(pool_index),
+                        "library_index": int(candidate["library_index"]),
+                        "library_random_seed": 35000 + selected_m,
+                        "library_distance_error_nm": float(
+                            candidate["library_distance_error_nm"]
+                        ),
+                        "mirror": bool(candidate["mirror"]),
+                        "azimuth_deg": float(candidate["azimuth_deg"]),
+                        "minimum_angle_deg": float(
+                            candidate["minimum_angle_deg"]
+                        ),
+                        "maximum_angle_deg": float(
+                            candidate["maximum_angle_deg"]
+                        ),
+                        "maximum_bond_deviation_nm": float(
+                            candidate["maximum_bond_deviation_nm"]
+                        ),
+                        "minimum_local_clearance_nm": float(
+                            candidate["minimum_clearance_nm"]
+                        ),
+                        "local_clash_count": int(
+                            candidate["clash_count"]
+                        ),
+                        "local_angle_violations": int(
+                            candidate["angle_violations"]
+                        ),
+                        "chain_point_count": int(chain.shape[0]),
+                    }
+                )
+
+                sequence = bridge_sequence(
+                    seed_row["element"],
+                    selected_m,
+                )
+
+                for bridge_position, (
+                    element,
+                    point,
+                ) in enumerate(
+                    zip(
+                        sequence,
+                        chain[1:-1],
+                    ),
+                    start=1,
+                ):
+                    exact_coordinate_rows.append(
+                        {
+                            "bridge_path_id": bridge_path_id,
+                            "end": selected_end,
+                            "bridge_index": path_index,
+                            "bridge_position": bridge_position,
+                            "bridge_node": (
+                                f"BR4:{selected_end}:"
+                                f"{path_index:02d}:"
+                                f"{bridge_position}"
+                            ),
+                            "element": element,
+                            "mapping_id": (
+                                selected_mapping["row"]["mapping_id"]
+                            ),
+                            "seed_node": seed_row["node_id"],
+                            "annulus_node": outer_row["node_id"],
+                            "selected_pool_index": int(pool_index),
+                            "library_index": int(
+                                candidate["library_index"]
+                            ),
+                            "mirror": bool(candidate["mirror"]),
+                            "azimuth_deg": float(
+                                candidate["azimuth_deg"]
+                            ),
+                            "x_nm": float(point[0]),
+                            "y_nm": float(point[1]),
+                            "z_nm": float(point[2]),
+                            "coordinate_status": (
+                                "EXACT_GATE3L_SELECTED_CONFORMER"
+                            ),
+                        }
+                    )
+
+        if len(exact_conformer_rows) != 30:
+            raise RuntimeError(
+                "Expected 30 selected conformer rows; "
+                f"found {len(exact_conformer_rows)}"
+            )
+
+        if len(exact_coordinate_rows) != 120:
+            raise RuntimeError(
+                "Expected 120 selected bridge coordinates; "
+                f"found {len(exact_coordinate_rows)}"
+            )
+
+        write_rows(
+            OUT / "r2_selected_four_atom_exact_conformers.csv",
+            exact_conformer_rows,
+        )
+
+        write_rows(
+            OUT / "r2_selected_four_atom_exact_bridge_coordinates.csv",
+            exact_coordinate_rows,
+        )
+'''
+
+    source_text = source_text.replace(
+        anchor,
+        anchor + injection,
+        1,
+    )
+
+    INSTRUMENTED_SCRIPT.write_text(
+        source_text,
+        encoding="utf-8",
+    )
+
+    compile_result = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "py_compile",
+            str(INSTRUMENTED_SCRIPT),
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    if compile_result.returncode != 0:
+        raise RuntimeError(
+            "Instrumented replay script did not compile:\n"
+            + compile_result.stdout
+            + compile_result.stderr
+        )
+
+    print(
+        "Instrumented replay compilation: PASS"
+    )
+
+    run_result = subprocess.run(
+        [
+            sys.executable,
+            "-u",
+            str(INSTRUMENTED_SCRIPT),
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    print(
+        run_result.stdout,
+        end="",
+    )
+
+    if run_result.returncode != 0:
+        raise RuntimeError(
+            "Instrumented Gate 3L replay failed:\n"
+            + run_result.stderr
+        )
+
+    for generated in (
+        REPLAY_SELECTED,
+        REPLAY_SCREEN_SUMMARY,
+        CONFORMERS,
+        BRIDGE_COORDINATES,
+    ):
+        require_file(generated)
+
+    replay_summary = read_one(
+        REPLAY_SCREEN_SUMMARY
+    )
+
+    source_selected_rows = read_rows(
+        SOURCE_SELECTED
+    )
+
+    replay_selected_rows = read_rows(
+        REPLAY_SELECTED
+    )
+
+    conformer_rows = read_rows(
+        CONFORMERS
+    )
+
+    coordinate_rows = read_rows(
+        BRIDGE_COORDINATES
+    )
+
+    mapping_match, mapping_differences = (
+        compare_selected_rows(
+            source_selected_rows,
+            replay_selected_rows,
+        )
+    )
+
+    conformer_ids = {
+        row[
+            "bridge_path_id"
+        ]
+        for row in conformer_rows
+    }
+
+    coordinate_path_ids = {
+        row[
+            "bridge_path_id"
+        ]
+        for row in coordinate_rows
+    }
+
+    bridge_nodes = {
+        row[
+            "bridge_node"
+        ]
+        for row in coordinate_rows
+    }
+
+    lower_conformers = sum(
+        row[
+            "end"
+        ]
+        == "LOWER"
+        for row in conformer_rows
+    )
+
+    upper_conformers = sum(
+        row[
+            "end"
+        ]
+        == "UPPER"
+        for row in conformer_rows
+    )
+
+    lower_coordinates = sum(
+        row[
+            "end"
+        ]
+        == "LOWER"
+        for row in coordinate_rows
+    )
+
+    upper_coordinates = sum(
+        row[
+            "end"
+        ]
+        == "UPPER"
+        for row in coordinate_rows
+    )
+
+    maximum_bond_deviation = max(
+        parse_float(
+            row,
+            "maximum_bond_deviation_nm",
+        )
+        for row in conformer_rows
+    )
+
+    minimum_angle = min(
+        parse_float(
+            row,
+            "minimum_angle_deg",
+        )
+        for row in conformer_rows
+    )
+
+    minimum_local_clearance = min(
+        parse_float(
+            row,
+            "minimum_local_clearance_nm",
+        )
+        for row in conformer_rows
+    )
+
+    maximum_library_distance_error = max(
+        parse_float(
+            row,
+            "library_distance_error_nm",
+        )
+        for row in conformer_rows
+    )
+
+    local_clashes = sum(
+        int(
+            float(
+                row[
+                    "local_clash_count"
+                ]
+            )
+        )
+        for row in conformer_rows
+    )
+
+    local_angle_violations = sum(
+        int(
+            float(
+                row[
+                    "local_angle_violations"
+                ]
+            )
+        )
+        for row in conformer_rows
+    )
+
+    gates = {
+        "Gate3L_source_script_checksum_matches": (
+            source_script_sha
+            == EXPECTED_SOURCE_SHA256
+        ),
+        "Gate3L_source_decision_is_accepted": (
+            source_summary.get(
+                "decision"
+            )
+            == EXPECTED_DECISION
+        ),
+        "instrumented_replay_decision_is_accepted": (
+            replay_summary.get(
+                "decision"
+            )
+            == EXPECTED_DECISION
+        ),
+        "selected_mapping_rows_match_original_Gate3L": (
+            mapping_match
+        ),
+        "30_selected_conformers_were_recovered": (
+            len(
+                conformer_rows
+            )
+            == EXPECTED_PATHS
+        ),
+        "15_selected_conformers_were_recovered_per_end": (
+            lower_conformers == 15
+            and upper_conformers == 15
+        ),
+        "120_internal_bridge_coordinates_were_recovered": (
+            len(
+                coordinate_rows
+            )
+            == EXPECTED_BRIDGE_COORDINATES
+        ),
+        "60_internal_bridge_coordinates_were_recovered_per_end": (
+            lower_coordinates == 60
+            and upper_coordinates == 60
+        ),
+        "all_bridge_path_identifiers_are_unique": (
+            len(
+                conformer_ids
+            )
+            == EXPECTED_PATHS
+        ),
+        "coordinate_paths_match_selected_conformer_paths": (
+            coordinate_path_ids
+            == conformer_ids
+        ),
+        "all_bridge_node_identifiers_are_unique": (
+            len(
+                bridge_nodes
+            )
+            == EXPECTED_BRIDGE_COORDINATES
+        ),
+        "all_selected_candidates_have_zero_local_clashes": (
+            local_clashes == 0
+        ),
+        "all_selected_candidates_have_zero_angle_violations": (
+            local_angle_violations == 0
+        ),
+        "minimum_selected_angle_is_at_least70deg": (
+            minimum_angle >= 70.0
+        ),
+        "minimum_selected_local_clearance_is_at_least0p120nm": (
+            minimum_local_clearance >= 0.120
+        ),
+        "maximum_selected_bond_deviation_is_at_most0p003nm": (
+            maximum_bond_deviation <= 0.003
+        ),
+        "library_seed_is_35004_for_every_selected_conformer": all(
+            int(
+                float(
+                    row[
+                        "library_random_seed"
+                    ]
+                )
+            )
+            == EXPECTED_LIBRARY_SEED
+            for row in conformer_rows
+        ),
+        "coordinates_are_marked_as_exact_Gate3L_selection": all(
+            row[
+                "coordinate_status"
+            ]
+            == "EXACT_GATE3L_SELECTED_CONFORMER"
+            for row in coordinate_rows
+        ),
+    }
+
+    failed_gates = [
+        name
+        for name, passed
+        in gates.items()
+        if not passed
+    ]
+
+    accepted = (
+        len(
+            failed_gates
+        )
+        == 0
+    )
+
+    decision = (
+        PASS_DECISION
+        if accepted
+        else FAIL_DECISION
+    )
+
+    required_next_step = (
+        "BUILD_AND_VALIDATE_R2_SELECTED_FOUR_ATOM_BN_"
+        "BRIDGE_STATIC_COORDINATE_EMBEDDING"
+        if accepted
+        else
+        "REVIEW_R2_SELECTED_FOUR_ATOM_EXACT_CONFORMER_REPLAY"
+    )
+
+    summary = {
+        "decision": decision,
+        "source_script_sha256": (
+            source_script_sha
+        ),
+        "library_random_seed": (
+            EXPECTED_LIBRARY_SEED
+        ),
+        "selected_conformers": (
+            len(
+                conformer_rows
+            )
+        ),
+        "selected_conformers_lower": (
+            lower_conformers
+        ),
+        "selected_conformers_upper": (
+            upper_conformers
+        ),
+        "recovered_bridge_coordinates": (
+            len(
+                coordinate_rows
+            )
+        ),
+        "recovered_bridge_coordinates_lower": (
+            lower_coordinates
+        ),
+        "recovered_bridge_coordinates_upper": (
+            upper_coordinates
+        ),
+        "minimum_selected_angle_deg": (
+            minimum_angle
+        ),
+        "minimum_selected_local_clearance_nm": (
+            minimum_local_clearance
+        ),
+        "maximum_selected_bond_deviation_nm": (
+            maximum_bond_deviation
+        ),
+        "maximum_library_distance_error_nm": (
+            maximum_library_distance_error
+        ),
+        "local_clash_count": (
+            local_clashes
+        ),
+        "local_angle_violation_count": (
+            local_angle_violations
+        ),
+        "selected_mapping_rows_match_original": (
+            mapping_match
+        ),
+        "selected_mapping_differences": (
+            " | ".join(
+                mapping_differences
+            )
+        ),
+        "candidate_coordinates_applied_to_complete_structure": False,
+        "hydrogen_coordinates_generated": False,
+        "molecular_topology_generation_authorized": False,
+        "formal_charge_assignment_authorized": False,
+        "force_field_parameterization_authorized": False,
+        "energy_minimization_authorized": False,
+        "MD_authorized": False,
+        "QM_authorized": False,
+        "failed_gates": (
+            " | ".join(
+                failed_gates
+            )
+        ),
+        "required_next_step": (
+            required_next_step
+        ),
+    }
+
+    write_rows(
+        REPLAY_SUMMARY,
+        [
+            summary
+        ],
+    )
+
+    write_rows(
+        GATES,
+        [
+            {
+                "gate": name,
+                "pass": passed,
+            }
+            for name, passed
+            in gates.items()
+        ],
+    )
+
+    JSON_OUT.write_text(
+        json.dumps(
+            {
+                "summary": summary,
+                "gates": gates,
+                "limitations": [
+                    (
+                        "This gate replays the exact deterministic "
+                        "Gate 3L conformer-selection workflow."
+                    ),
+                    (
+                        "The recovered coordinates include only the "
+                        "120 selected internal bridge atoms."
+                    ),
+                    (
+                        "The coordinates have not yet been merged with "
+                        "the complete 2316-node graph."
+                    ),
+                    (
+                        "Hydrogen coordinates have not yet been generated."
+                    ),
+                    (
+                        "No topology, charges, force-field parameters, "
+                        "minimization, MD or QM calculation was generated."
+                    ),
+                ],
+            },
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+    manifest_rows = [
+        {
+            "role": (
+                "Gate3L_source_script"
+            ),
+            "file": relative(
+                SOURCE_SCRIPT
+            ),
+            "sha256": sha256(
+                SOURCE_SCRIPT
+            ),
+        },
+        {
+            "role": (
+                "Gate3L_source_selected_candidate"
+            ),
+            "file": relative(
+                SOURCE_SELECTED
+            ),
+            "sha256": sha256(
+                SOURCE_SELECTED
+            ),
+        },
+        {
+            "role": (
+                "Gate3L_source_summary"
+            ),
+            "file": relative(
+                SOURCE_SUMMARY
+            ),
+            "sha256": sha256(
+                SOURCE_SUMMARY
+            ),
+        },
+        {
+            "role": (
+                "instrumented_replay_script"
+            ),
+            "file": relative(
+                INSTRUMENTED_SCRIPT
+            ),
+            "sha256": sha256(
+                INSTRUMENTED_SCRIPT
+            ),
+        },
+        {
+            "role": (
+                "replayed_selected_candidate"
+            ),
+            "file": relative(
+                REPLAY_SELECTED
+            ),
+            "sha256": sha256(
+                REPLAY_SELECTED
+            ),
+        },
+        {
+            "role": (
+                "exact_selected_conformers"
+            ),
+            "file": relative(
+                CONFORMERS
+            ),
+            "sha256": sha256(
+                CONFORMERS
+            ),
+        },
+        {
+            "role": (
+                "exact_selected_bridge_coordinates"
+            ),
+            "file": relative(
+                BRIDGE_COORDINATES
+            ),
+            "sha256": sha256(
+                BRIDGE_COORDINATES
+            ),
+        },
+    ]
+
+    write_rows(
+        MANIFEST,
+        manifest_rows,
+    )
+
+    gate_lines = "\n".join(
+        (
+            f"- `{name}`: "
+            f"**{'PASS' if passed else 'FAIL'}**"
+        )
+        for name, passed
+        in gates.items()
+    )
+
+    REPORT.write_text(
+        f"""# R2 Selected Four-Atom BN Bridge Exact Conformer Replay
+
+## Scope
+
+This gate replays the deterministic Gate 3L selection using the original
+source code, random seed, conformer library and global coordinate-descent
+selection.
+
+## Recovered selection
+
+- Random seed: **{EXPECTED_LIBRARY_SEED}**
+- Selected conformers: **{len(conformer_rows)}**
+- Lower/upper conformers:
+  **{lower_conformers}/{upper_conformers}**
+- Internal bridge coordinates:
+  **{len(coordinate_rows)}**
+- Lower/upper internal coordinates:
+  **{lower_coordinates}/{upper_coordinates}**
+
+## Recovered geometry
+
+- Minimum angle:
+  **{minimum_angle:.9f} degrees**
+- Minimum local clearance:
+  **{minimum_local_clearance:.9f} nm**
+- Maximum bond deviation:
+  **{maximum_bond_deviation:.9e} nm**
+- Maximum library distance error:
+  **{maximum_library_distance_error:.9e} nm**
+- Local clashes:
+  **{local_clashes}**
+- Local angle violations:
+  **{local_angle_violations}**
+
+## Reproducibility
+
+- Selected mappings match original Gate 3L:
+  **{mapping_match}**
+- Differences:
+  **{'NONE' if not mapping_differences else ' | '.join(mapping_differences)}**
+
+## Gates
+
+{gate_lines}
+
+## Decision
+
+- Decision:
+  **{decision}**
+- Failed gates:
+  **{'NONE' if not failed_gates else ' | '.join(failed_gates)}**
+- Coordinates applied to complete structure:
+  **NO**
+- Hydrogen coordinates generated:
+  **NO**
+- Molecular topology generation authorized:
+  **NO**
+- Energy minimization authorized:
+  **NO**
+- MD authorized:
+  **NO**
+- QM authorized:
+  **NO**
+- Required next step:
+  `{required_next_step}`
+""",
+        encoding="utf-8",
+    )
+
+    print(
+        "Day024 R2 selected four-atom exact "
+        "conformer replay completed."
+    )
+
+    print(
+        "Library random seed: "
+        f"{EXPECTED_LIBRARY_SEED}"
+    )
+
+    print(
+        "Selected conformers lower/upper/total: "
+        f"{lower_conformers}/"
+        f"{upper_conformers}/"
+        f"{len(conformer_rows)}"
+    )
+
+    print(
+        "Recovered bridge coordinates lower/upper/total: "
+        f"{lower_coordinates}/"
+        f"{upper_coordinates}/"
+        f"{len(coordinate_rows)}"
+    )
+
+    print(
+        "Selected mapping rows match original Gate3L: "
+        f"{mapping_match}"
+    )
+
+    print(
+        "Minimum angle / local clearance / "
+        "maximum bond deviation / maximum library mismatch: "
+        f"{minimum_angle:.9f}/"
+        f"{minimum_local_clearance:.9f}/"
+        f"{maximum_bond_deviation:.9e}/"
+        f"{maximum_library_distance_error:.9e}"
+    )
+
+    print(
+        "Local clashes / angle violations: "
+        f"{local_clashes}/"
+        f"{local_angle_violations}"
+    )
+
+    print(
+        f"Decision: {decision}"
+    )
+
+    print(
+        "Failed gates: "
+        + (
+            "NONE"
+            if not failed_gates
+            else " | ".join(
+                failed_gates
+            )
+        )
+    )
+
+    print(
+        "Coordinates applied to complete structure: NO"
+    )
+
+    print(
+        "Hydrogen coordinates generated: NO"
+    )
+
+    print(
+        "Molecular topology generation authorized: NO"
+    )
+
+    print(
+        "Formal charge assignment authorized: NO"
+    )
+
+    print(
+        "Force-field parameterization authorized: NO"
+    )
+
+    print(
+        "Energy minimization authorized: NO"
+    )
+
+    print(
+        "MD authorized: NO"
+    )
+
+    print(
+        "QM authorized: NO"
+    )
+
+    print(
+        f"Required next step: {required_next_step}"
+    )
+
+    for path in (
+        INSTRUMENTED_SCRIPT,
+        CONFORMERS,
+        BRIDGE_COORDINATES,
+        REPLAY_SUMMARY,
+        GATES,
+        JSON_OUT,
+        MANIFEST,
+        REPORT,
+    ):
+        print(
+            f"Wrote: {relative(path)}"
+        )
+
+    if not accepted:
+        raise RuntimeError(
+            "Exact selected-conformer replay failed validation."
+        )
+
+
+if __name__ == "__main__":
+    main()

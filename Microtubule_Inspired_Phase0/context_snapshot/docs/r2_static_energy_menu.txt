@@ -1,0 +1,48 @@
+                      :-) GROMACS - gmx energy, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan
+Command line:
+  gmx energy -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_static_single_point.edr -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_energy_menu_probe.xvg
+
+Opened /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day023_confinement_design/13_r2_topology_static_scan/r2_static_single_point.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Improper-Dih. 
+  5  Per.-Imp.-Dih.   6  LJ-14            7  Coulomb-14       8  LJ-(SR)       
+  9  Disper.-corr.   10  Coulomb-(SR)    11  Coul.-recip.    12  Potential     
+ 13  Kinetic-En.     14  Total-Energy    15  Temperature     16  Pres.-DC      
+ 17  Pressure        18  Constr.-rmsd    19  Vir-XX          20  Vir-XY        
+ 21  Vir-XZ          22  Vir-YX          23  Vir-YY          24  Vir-YZ        
+ 25  Vir-ZX          26  Vir-ZY          27  Vir-ZZ          28  Pres-XX       
+ 29  Pres-XY         30  Pres-XZ         31  Pres-YX         32  Pres-YY       
+ 33  Pres-YZ         34  Pres-ZX         35  Pres-ZY         36  Pres-ZZ       
+ 37  #Surf*SurfTen                       38  Coul-SR:HBN_PYR-HBN_PYR           
+ 39  LJ-SR:HBN_PYR-HBN_PYR               40  Coul-14:HBN_PYR-HBN_PYR           
+ 41  LJ-14:HBN_PYR-HBN_PYR               42  Coul-SR:HBN_PYR-CAPS              
+ 43  LJ-SR:HBN_PYR-CAPS                  44  Coul-14:HBN_PYR-CAPS              
+ 45  LJ-14:HBN_PYR-CAPS                  46  Coul-SR:HBN_PYR-SOL               
+ 47  LJ-SR:HBN_PYR-SOL                   48  Coul-14:HBN_PYR-SOL               
+ 49  LJ-14:HBN_PYR-SOL                   50  Coul-SR:CAPS-CAPS                 
+ 51  LJ-SR:CAPS-CAPS                     52  Coul-14:CAPS-CAPS                 
+ 53  LJ-14:CAPS-CAPS                     54  Coul-SR:CAPS-SOL                  
+ 55  LJ-SR:CAPS-SOL                      56  Coul-14:CAPS-SOL                  
+ 57  LJ-14:CAPS-SOL                      58  Coul-SR:SOL-SOL                   
+ 59  LJ-SR:SOL-SOL                       60  Coul-14:SOL-SOL                   
+ 61  LJ-14:SOL-SOL   62  T-rest        
+
+
+-------------------------------------------------------
+Program:     gmx energy, version 2025.4
+Source file: src/gromacs/gmxana/gmx_energy.cpp (line 314)
+
+Fatal error:
+No energy terms selected
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------

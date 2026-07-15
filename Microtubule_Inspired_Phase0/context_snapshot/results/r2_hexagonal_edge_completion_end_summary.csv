@@ -1,0 +1,3 @@
+end,selected_circumferential_step,parent_terminal_element,added_complementary_element,parent_terminal_atoms,added_edge_completion_atoms,new_parent_to_added_edges,terminal_new_edge_incidence_minimum,terminal_new_edge_incidence_maximum,parent_pair_shortest_path_minimum,parent_pair_shortest_path_maximum,closed_cycle_length_minimum,closed_cycle_length_maximum,length4_parent_paths_per_pair_minimum,length4_parent_paths_per_pair_maximum
+LOWER,1,B,N,30,30,60,2,2,4,4,6,6,1,1
+UPPER,1,N,B,30,30,60,2,2,4,4,6,6,1,1

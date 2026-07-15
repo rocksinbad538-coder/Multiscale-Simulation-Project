@@ -1,0 +1,65 @@
+Day025 R2 force-field route-comparison data-contract preflight completed.
+Gate 29 decision: R2_STATIC_CHEMICAL_REALIZABILITY_VALIDATED_PARAMETERIZATION_SCOPE_DEFINED
+Gate 30 decision: R2_FORCE_FIELD_COVERAGE_PREFLIGHT_COMPLETED
+Gate 37 decision: R2_LELE_2022_SI_AND_REAXFF_PARAMETER_FILE_AUDITED_NOT_AUTHORIZED_FOR_R2
+Environment / assignments / critical centers: 40/2316/468
+Required bonds / angles / torsions / impropers: 22/50/76/2112
+QM fragment classes / Lele BNH records / Lele domain rows: 7/166/8
+Decision: R2_FORCE_FIELD_ROUTE_COMPARISON_DATA_CONTRACT_VALIDATED
+Failed gates: NONE
+Parameter adoption authorized: NO
+Topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM calculation authorized: NO
+Required next step: BUILD_R2_FORCE_FIELD_ROUTE_COVERAGE_AND_RISK_MATRIX
+Wrote: runs/phase1A/day025_force_field_route_comparison/38_r2_force_field_route_comparison_preflight/r2_force_field_route_comparison_input_schema.csv
+Wrote: runs/phase1A/day025_force_field_route_comparison/38_r2_force_field_route_comparison_preflight/r2_force_field_route_comparison_preflight_summary.csv
+Wrote: runs/phase1A/day025_force_field_route_comparison/38_r2_force_field_route_comparison_preflight/r2_force_field_route_comparison_preflight.json
+Wrote: runs/phase1A/day025_force_field_route_comparison/38_r2_force_field_route_comparison_preflight/R2_FORCE_FIELD_ROUTE_COMPARISON_PREFLIGHT_DAY025.md
+
+INPUT SCHEMAS
+- gate29_summary: rows=1 columns=30
+  fields=decision | total_nodes | heavy_nodes | H_nodes | B_nodes | N_nodes | graph_edges | B_N_bonds | B_H_bonds | N_H_bonds | maximum_BN_deviation_nm | maximum_BH_deviation_nm | maximum_NH_deviation_nm | heavy_valence_failure_count | H_valence_failure_count | nonheteropolar_heavy_edge_count | invalid_H_edge_count | unique_local_environment_count | parameterization_critical_center_count | static_chemical_graph_realizable | existing_force_field_coverage_established | molecular_topology_generation_authorized | formal_charge_assignment_authorized | force_field_parameterization_authorized | energy_minimization_authorized | MD_authorized | QM_authorized | force_field_and_QM_reference_audit_authorized | failed_gates | required_next_step
+  first=decision=R2_STATIC_CHEMICAL_REALIZABILITY_VALIDATED_PARAMETERIZATION_SCOPE_DEFINED | total_nodes=2316 | heavy_nodes=2112 | H_nodes=204 | B_nodes=1056 | N_nodes=1056
+- gate29_environment_inventory: rows=40 columns=8
+  fields=environment_id | count | example_node | element | node_type | region | total_degree | environment_signature
+  first=environment_id=ENV_0001 | count=15 | example_node=BR4:UPPER:00:4 | element=B | node_type=ALTERNATING_BN_FOUR_ATOM_BRIDGE | region=FOUR_ATOM_BRIDGE
+- gate29_assignments: rows=2316 columns=10
+  fields=node_id | element | node_type | end | region | total_degree | B_neighbors | N_neighbors | H_neighbors | environment_signature
+  first=node_id=A:LOWER:-10:-2 | element=N | node_type=ANNULUS_INTERIOR | end=LOWER | region=ANNULUS_INTERIOR | total_degree=3
+- gate29_critical_centers: rows=468 columns=8
+  fields=node_id | element | node_type | end | region | reasons | parameterization_status | reference_data_required
+  first=node_id=A:LOWER:-10:-6 | element=N | node_type=ANNULUS_OUTER_BOUNDARY | end=LOWER | region=ANNULUS_EDGE | reasons=EDGE_OR_RIM_CENTER
+- gate29_scope: rows=5 columns=7
+  fields=scope_region | node_count | chemical_description | expected_parameterization_route | novel_parameterization_expected | QM_reference_priority | force_field_assignment_authorized
+  first=scope_region=PARENT_HBN_BULK_LIKE | node_count=1620 | chemical_description=Three-coordinate curved h-BN parent scaffold away from reconstructed ends. | expected_parameterization_route=Audit transferable bulk/curved h-BN bonded and nonbonded parameters against p... | novel_parameterization_expected=POSSIBLY_NO_FOR_BULK_INTERIOR | QM_reference_priority=MEDIUM
+- gate30_summary: rows=1 columns=19
+  fields=decision | required_bond_term_classes | required_angle_term_classes | required_torsion_term_classes | three_coordinate_heavy_improper_centers | local_force_field_files_found | local_BN_H_text_hits | unique_local_chemical_environments | parameterization_critical_centers | preliminary_QM_fragment_classes | force_field_coverage_established | topology_generation_authorized | formal_charge_assignment_authorized | force_field_parameterization_authorized | energy_minimization_authorized | MD_authorized | QM_calculation_authorized | literature_and_force_field_source_review_required | required_next_step
+  first=decision=R2_FORCE_FIELD_COVERAGE_PREFLIGHT_COMPLETED | required_bond_term_classes=22 | required_angle_term_classes=50 | required_torsion_term_classes=76 | three_coordinate_heavy_improper_centers=2112 | local_force_field_files_found=65
+- gate30_bonds: rows=22 columns=10
+  fields=bond_term_id | atom_type_1 | atom_type_2 | count | minimum_nm | mean_nm | maximum_nm | example_node_1 | example_node_2 | coverage_status
+  first=bond_term_id=BOND_0001 | atom_type_1=B|ALTERNATING_BN_FOUR_ATOM_BRIDGE | atom_type_2=H|BRIDGE_PASSIVANT_H | count=60 | minimum_nm=0.1189999999999991 | mean_nm=0.11900000000000004
+- gate30_angles: rows=50 columns=12
+  fields=angle_term_id | atom_type_1 | center_type | atom_type_3 | count | minimum_deg | mean_deg | maximum_deg | example_node_1 | example_center | example_node_3 | coverage_status
+  first=angle_term_id=ANGLE_0001 | atom_type_1=B|ALTERNATING_BN_FOUR_ATOM_BRIDGE | center_type=N|ALTERNATING_BN_FOUR_ATOM_BRIDGE | atom_type_3=B|ALTERNATING_BN_FOUR_ATOM_BRIDGE | count=30 | minimum_deg=106.98138966014777
+- gate30_torsions: rows=76 columns=14
+  fields=torsion_term_id | atom_type_1 | atom_type_2 | atom_type_3 | atom_type_4 | count | minimum_deg | mean_deg | maximum_deg | example_node_1 | example_node_2 | example_node_3 | example_node_4 | coverage_status
+  first=torsion_term_id=TORSION_0001 | atom_type_1=B|ALTERNATING_BN_FOUR_ATOM_BRIDGE | atom_type_2=N|ALTERNATING_BN_FOUR_ATOM_BRIDGE | atom_type_3=B|ALTERNATING_BN_FOUR_ATOM_BRIDGE | atom_type_4=H|BRIDGE_PASSIVANT_H | count=60
+- gate30_impropers: rows=2112 columns=9
+  fields=center_node | center_element | center_type | region | neighbor_1 | neighbor_2 | neighbor_3 | neighbor_elements | improper_or_planarity_term_status
+  first=center_node=A:LOWER:-10:-2 | center_element=N | center_type=ANNULUS_INTERIOR | region=ANNULUS_INTERIOR | neighbor_1=A:LOWER:-11:-1 | neighbor_2=A:LOWER:-11:-3
+- gate30_qm_fragments: rows=7 columns=7
+  fields=fragment_class | priority | target_environment | purpose | minimum_content | geometry_source | calculation_authorized
+  first=fragment_class=QM_F01_PARENT_BULK_HBN | priority=MEDIUM | target_environment=PARENT_HBN_BULK_LIKE | purpose=Reference B-N equilibrium geometry, curvature response, charges and nonbonded... | minimum_content=Hydrogen-terminated h-BN patch or short nanotube segment. | geometry_source=Extract representative parent-scaffold environment.
+- gate37_summary: rows=1 columns=28
+  fields=decision | article_pages | SI_pages | SI_extracted_characters | SI_evidence_rows | SI_parameter_table_hits | SI_water_hits | parameter_file_lines | general_parameters | atoms | bonds | off_diagonal_terms | angles | torsions | hydrogen_bonds | element_order | BNH_relevant_parameter_records | BNH_records_by_section | R2_force_field_coverage_established | parameter_adoption_authorized | topology_generation_authorized | formal_charge_assignment_authorized | force_field_parameterization_authorized | energy_minimization_authorized | MD_authorized | QM_calculation_authorized | failed_gates | required_next_step
+  first=decision=R2_LELE_2022_SI_AND_REAXFF_PARAMETER_FILE_AUDITED_NOT_AUTHORIZED_FOR_R2 | article_pages=15 | SI_pages=2 | SI_extracted_characters=2365 | SI_evidence_rows=14 | SI_parameter_table_hits=0
+- gate37_bnh_terms: rows=166 columns=13
+  fields=line_number | section | atom_indices | elements | contains_H | contains_N | contains_B | contains_B_and_N | contains_B_and_H | contains_N_and_H | numeric_token_count | text | R2_transferability_established
+  first=line_number=78 | section=BONDS | atom_indices=1 2 | elements=C-H | contains_H=True | contains_N=False
+- gate37_domain_assessment: rows=8 columns=4
+  fields=domain | evidence | R2_coverage | interpretation
+  first=domain=B_N_H_REACTIVE_ELEMENTAL_DOMAIN | evidence=CONFIRMED | R2_coverage=NOT_ESTABLISHED | interpretation=The parameter file contains B, N and H, but elemental presence does not estab...

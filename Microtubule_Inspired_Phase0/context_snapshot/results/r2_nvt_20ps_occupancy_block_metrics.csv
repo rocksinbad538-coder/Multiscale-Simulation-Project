@@ -1,0 +1,5 @@
+block_start_ps,block_end_ps,points,occupancy_start,occupancy_end,occupancy_change,occupancy_mean,occupancy_minimum,occupancy_maximum,occupancy_slope_water_ps,retained_initial_start,retained_initial_end,retained_initial_change,noninitial_occupancy_mean,noninitial_occupancy_maximum
+0.0,5.0,10,428,427,-1,427.2,426,429,-0.12121212121213298,428,423,-5,2.9,4
+5.0,10.0,10,426,422,-4,423.1,421,426,-0.8363636363636364,422,420,-2,2.4,4
+10.0,15.0,10,421,417,-4,418.0,415,422,-1.3818181818181787,419,415,-4,2.0,2
+15.0,20.0,11,416,416,0,415.6363636363636,414,417,-0.1636363636363845,414,414,0,2.0,2

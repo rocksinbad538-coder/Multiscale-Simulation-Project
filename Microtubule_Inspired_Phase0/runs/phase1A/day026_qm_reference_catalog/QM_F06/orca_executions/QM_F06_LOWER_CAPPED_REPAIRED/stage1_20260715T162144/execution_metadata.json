@@ -1,0 +1,14 @@
+{
+  "fragment": "QM_F06_LOWER_CAPPED_REPAIRED",
+  "end": "LOWER",
+  "stage": 1,
+  "timestamp": "20260715T162144",
+  "orca_path": "/Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca",
+  "orca_sha256": "f9043192a31496e4931fa60df69b513f3922c7510c462e3934e3e2dd16d3e5f0",
+  "input_sha256": "a0a6897a21ae08d298a148bc30ecff2a9ab8c8c0cd4988fd60021c9cbfe1d0c8",
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:51:19) [Clang 19.1.7 ]",
+  "platform": "macOS-15.7.4-x86_64-i386-64bit",
+  "cwd": "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage1_20260715T162144",
+  "environment_path": "/Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411:/opt/intel/oneapi/vtune_profiler/2023.2.0/Intel VTune Profiler 2023.2.0.app/Contents/MacOS:/opt/intel/oneapi/dev-utilities/2021.10.0/bin:/opt/intel/oneapi/compiler/2023.2.0/mac/bin/intel64:/opt/intel/oneapi/advisor/2023.2.0/Intel Advisor 2023.2.app/Contents/MacOS:/opt/octopus/bin:/opt/qe-7.5/bin:/Users/alejandro/miniforge3/envs/mt_phase0/bin:/Users/alejandro/miniforge3/condabin:/usr/local/gromacs/bin:/Users/alejandro/projects/lammps/src:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Applications/iTerm.app/Contents/Resources/utilities:/Applications/FEBioStudio/FEBioStudio.app/Contents/MacOS:/Applications/FEBioStudio/FEBioStudio.app/Contents/MacOS",
+  "explicit_execute_flag": true
+}

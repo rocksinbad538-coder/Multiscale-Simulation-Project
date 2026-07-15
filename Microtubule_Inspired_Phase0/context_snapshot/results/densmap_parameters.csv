@@ -1,0 +1,9 @@
+parameter,value
+begin_time_ps,0.0
+end_time_ps,100.0
+bin_width_nm,0.05
+axial_half_range_nm,4.009
+radial_maximum_nm,2.699125700748155
+axis_endpoint_fraction,0.1
+density_unit,nm^-3
+water_position,one oxygen site per SOL residue

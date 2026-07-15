@@ -1,0 +1,15 @@
+{
+  "fragment": "QM_F06_LOWER_CAPPED_REPAIRED",
+  "stage1_input_prepared": true,
+  "stage1_executed": true,
+  "stage1_geometry_promoted": false,
+  "stage2_input_generated": false,
+  "stage2_executed": false,
+  "stage2_geometry_promoted": false,
+  "stage3_input_generated": false,
+  "stage3_executed": false,
+  "qm_execution_authorized": false,
+  "stage1_execution_directory": "runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage1_20260715T162144",
+  "stage1_optimized_xyz": "runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage1_20260715T162144/stage1.xyz",
+  "stage1_validation_pass": true
+}

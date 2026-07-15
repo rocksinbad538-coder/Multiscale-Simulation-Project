@@ -1,0 +1,2 @@
+date,project_day,required_products_checked,required_products_pass,region_count,canonical_water_count,tube_associated_water_count,tube_associated_fraction,conservation_error,HBN_segment_count,HBN_gap_count,overall_validation_pass
+2026-07-01,Day020,12,True,4,5211.768137770948,987.8696615625652,0.18954597277711457,2.2905260266270489e-07,1,0,True

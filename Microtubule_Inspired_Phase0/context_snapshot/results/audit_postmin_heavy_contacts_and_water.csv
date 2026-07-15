@@ -1,0 +1,12 @@
+section,metric,value,atom_a,atom_b
+water,internal_ow_inner_plus_0p05_and_hbn_z,423,,
+water,internal_ow_mean_radius_and_hbn_z,423,,
+geometry,hbn_rmin_nm,1.11132,,
+geometry,hbn_rmean_nm,1.21494,,
+geometry,hbn_zmin_nm,1.93600,,
+geometry,hbn_zmax_nm,8.03400,,
+contacts,min_OW_HBN,0.28139,28869:SOL:OW,25:HBN:B0025
+contacts,min_OW_PYR,0.27355,41597:SOL:OW,1699:PYR:H2
+contacts,min_OW_SOLUTE,0.27355,41597:SOL:OW,1699:PYR:H2
+contacts,min_HEAVY_WATER_HEAVY_SOLUTE,0.28139,28869:SOL:OW,25:HBN:B0025
+contacts,min_ALL_WATER_ALL_SOLUTE,0.20752,56507:SOL:HW2,1690:PYR:C9

@@ -1,0 +1,5 @@
+site,S1_vacuum_eV,S1_water0p50_eV,shift_eV,shift_meV,terminated_normally
+PYR2,3.779,3.754,-0.025,-25,YES
+PYR3,3.774,3.765,-0.009,-9,YES
+PYR4,3.782,3.779,-0.003,-3,YES
+PYR5,3.767,3.746,-0.021,-21,YES

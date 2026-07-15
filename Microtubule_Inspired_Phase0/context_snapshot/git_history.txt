@@ -1,0 +1,31 @@
+* 9d12fe9 (HEAD -> main, origin/main, origin/HEAD) Add Day024 R2 chemical reconstruction workflow
+* 4c4602e Audit R2 force-field coverage and Lele 2022 ReaxFF sources
+* 814349c Day023: validate and select R2 partial-cap architecture
+* b3af4af phase1A: close Day022 matched hydration validation
+* b8bce34 Day021 mobile-system validation and analysis
+* 0fa22a2 Complete Day020 exciton and confined-water analyses
+* 672b6bd Track coherent population trajectories with Git LFS
+* 75d539a Track Day019 NPZ trajectories with Git LFS
+* 0246b45 Complete Day019: Bright-state coupling and dynamics
+* 21af1ce Complete Day018 embedded TDDFT production and state-tracked Hamiltonians
+* 7a3bdb5 Day017: scale embedded TDDFT workflow and complete first production batch
+* 52a3545 Complete Day016 QM/MM embedding workflow and diagonal excitonic Hamiltonian generation
+* 96f4290 Day015: validated Lindblad dynamics, bath mapping, and ENAQT disorder analysis
+* 7d3f42b Document Phase 1A Day014 hydrated excitonic Hamiltonian results
+* f27b83d Complete Phase 1A Day014 hydrated excitonic Hamiltonian analysis
+* 6b31e3f Track large ORCA output files with Git LFS
+* c3d6ded Add Phase 1A Day013 exciton Hamiltonian and hydrated dimer TDDFT results_v2
+* c57c519 Add Phase 1A Day013 exciton Hamiltonian and hydrated dimer TDDFT results
+* cbdfc70 Day012: ORCA TDDFT benchmark and first excitonic splitting analysis
+* 5db6ea9 Day 011: Phase 1A scaffold mechanics baseline accepted after 100 ps validation - Final Version
+* 69b4057 Day 011: Phase 1A scaffold mechanics baseline accepted after 100 ps validation
+* c511c68 Day 010: Phase 1A Hydration Stability validation
+* 3d70590 Day 009: close Phase 0 and build Phase 1A atomistic dry and hydrated baselines
+* fd9465e Add Day 008 lead hybrid reproducibility validation
+* d0c2194 Add Day 007 lead hybrid chromophore candidate validation
+* 9acc46f Add Day 006 BN-like stability and field-response extensions
+* defe78f Add Day 005 charge-polarity screening and field-response controls
+* e7895a0 Add Day 004 Phase 0 controls and field-response diagnostics
+* 50c5bce Day 004: add Phase 0 BN-like controls and field-response diagnostics
+* 3419b10 Add Day 003 300 K hold stability and confinement analyses
+* 8b7a1cf Add Phase 0 inorganic BN-like baseline with simulation outputs

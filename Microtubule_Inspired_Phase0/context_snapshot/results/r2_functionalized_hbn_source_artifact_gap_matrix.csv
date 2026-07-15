@@ -1,0 +1,10 @@
+source_id,short_name,doi,artifact_class,required_for,current_overall_artifact_status,verified_local_scientific_artifact_available,content_audit_complete,artifact_requirement_closed
+GHORAI_2025_FUNCTIONALIZED_HBN_NANOPORE,Ghorai 2025,10.1063/5.0242541,PRIMARY_ARTICLE,"Scientific domain, validation protocol and limitations",PARTIAL_OR_AMBIGUOUS_LOCAL_ARTIFACT,PARTIAL,False,False
+GHORAI_2025_FUNCTIONALIZED_HBN_NANOPORE,Ghorai 2025,10.1063/5.0242541,SUPPORTING_INFORMATION,"Detailed force-field form, fitting data and validation",PARTIAL_OR_AMBIGUOUS_LOCAL_ARTIFACT,PARTIAL,False,False
+GHORAI_2025_FUNCTIONALIZED_HBN_NANOPORE,Ghorai 2025,10.1063/5.0242541,PARAMETER_OR_DATASET_FILES,"Exact atom types, bonded terms, charges and nonbonded parameters",PARTIAL_OR_AMBIGUOUS_LOCAL_ARTIFACT,PARTIAL,False,False
+BAMANE_2023_IFF_R_BNNT,Bamane/IFF-R 2023,10.1021/acsanm.2c05285,PRIMARY_ARTICLE,"Scientific domain, validation protocol and limitations",PARTIAL_OR_AMBIGUOUS_LOCAL_ARTIFACT,PARTIAL,False,False
+BAMANE_2023_IFF_R_BNNT,Bamane/IFF-R 2023,10.1021/acsanm.2c05285,SUPPORTING_INFORMATION,"Detailed force-field form, fitting data and validation",PARTIAL_OR_AMBIGUOUS_LOCAL_ARTIFACT,PARTIAL,False,False
+BAMANE_2023_IFF_R_BNNT,Bamane/IFF-R 2023,10.1021/acsanm.2c05285,PARAMETER_OR_DATASET_FILES,"Exact atom types, bonded terms, charges and nonbonded parameters",PARTIAL_OR_AMBIGUOUS_LOCAL_ARTIFACT,PARTIAL,False,False
+RAJAN_2018_HBN_FORCE_FIELD,Rajan 2018,10.1021/acs.jpclett.7b03443,PRIMARY_ARTICLE,"Scientific domain, validation protocol and limitations",PARTIAL_OR_AMBIGUOUS_LOCAL_ARTIFACT,PARTIAL,False,False
+RAJAN_2018_HBN_FORCE_FIELD,Rajan 2018,10.1021/acs.jpclett.7b03443,SUPPORTING_INFORMATION,"Detailed force-field form, fitting data and validation",PARTIAL_OR_AMBIGUOUS_LOCAL_ARTIFACT,PARTIAL,False,False
+RAJAN_2018_HBN_FORCE_FIELD,Rajan 2018,10.1021/acs.jpclett.7b03443,PARAMETER_OR_DATASET_FILES,"Exact atom types, bonded terms, charges and nonbonded parameters",PARTIAL_OR_AMBIGUOUS_LOCAL_ARTIFACT,PARTIAL,False,False

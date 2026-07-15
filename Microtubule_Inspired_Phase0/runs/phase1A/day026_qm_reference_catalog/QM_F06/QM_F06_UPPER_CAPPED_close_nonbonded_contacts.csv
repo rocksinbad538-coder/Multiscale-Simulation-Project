@@ -1,0 +1,2 @@
+fragment,atom_1,element_1,atom_2,element_2,distance_angstrom,clash_threshold_angstrom,steric_clash
+QM_F06_UPPER_CAPPED,H4:UPPER:0047:0,H,HCAP:UPPER:07,H,1.3890460006,0.7,False

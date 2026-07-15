@@ -1,0 +1,4 @@
+pair,J_eff_meV,assignment,notes
+PYR2-PYR3,2.37,weak/mixed Frenkel-like effective coupling,S1 is dark CT-like; bright manifold is mixed; conservative operational estimate from S4/S5 splitting
+PYR3-PYR4,17.00,bright Frenkel-like effective coupling,from hydrated bright-state splitting after orbital localization
+PYR4-PYR5,33.00,bright Frenkel-like effective coupling,S1 is dark inter-chromophore CT-like; J from S2/S5 bright Frenkel-like pair

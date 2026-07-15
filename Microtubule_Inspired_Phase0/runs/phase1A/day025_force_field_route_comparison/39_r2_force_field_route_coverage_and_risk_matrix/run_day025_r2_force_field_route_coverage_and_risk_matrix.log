@@ -1,0 +1,28 @@
+Day025 R2 force-field route coverage and risk matrix completed.
+Environment classes high/medium-high/medium: 20/16/4
+Bonded term classes total/high/medium-high/medium: 148/118/12/18
+Improper groups / centers: 14/2112
+Critical centers / QM fragment classes / routes: 468/7/3
+Lele directly validated R2 environments: 0
+Fixed-topology directly validated R2 environments: 0
+Decision: R2_FORCE_FIELD_ROUTE_COVERAGE_AND_RISK_MATRIX_BUILT_NO_ROUTE_YET_AUTHORIZED
+Failed gates: NONE
+Force-field route selected: NO
+Parameter adoption authorized: NO
+Topology generation authorized: NO
+Formal charge assignment authorized: NO
+Force-field parameterization authorized: NO
+Energy minimization authorized: NO
+MD authorized: NO
+QM calculation authorized: NO
+Required next step: AUDIT_FUNCTIONALIZED_HBN_FIXED_TOPOLOGY_PRIMARY_SOURCES_AND_PARAMETERS
+Wrote: runs/phase1A/day025_force_field_route_comparison/39_r2_force_field_route_coverage_and_risk_matrix/r2_environment_route_coverage_and_risk_matrix.csv
+Wrote: runs/phase1A/day025_force_field_route_comparison/39_r2_force_field_route_coverage_and_risk_matrix/r2_bonded_term_route_coverage_and_risk_matrix.csv
+Wrote: runs/phase1A/day025_force_field_route_comparison/39_r2_force_field_route_coverage_and_risk_matrix/r2_improper_region_route_coverage_matrix.csv
+Wrote: runs/phase1A/day025_force_field_route_comparison/39_r2_force_field_route_coverage_and_risk_matrix/r2_force_field_route_comparison_matrix.csv
+Wrote: runs/phase1A/day025_force_field_route_comparison/39_r2_force_field_route_coverage_and_risk_matrix/r2_qm_reference_requirement_matrix.csv
+Wrote: runs/phase1A/day025_force_field_route_comparison/39_r2_force_field_route_coverage_and_risk_matrix/r2_critical_center_region_summary.csv
+Wrote: runs/phase1A/day025_force_field_route_comparison/39_r2_force_field_route_coverage_and_risk_matrix/r2_force_field_route_coverage_and_risk_summary.csv
+Wrote: runs/phase1A/day025_force_field_route_comparison/39_r2_force_field_route_coverage_and_risk_matrix/r2_force_field_route_coverage_and_risk_gates.csv
+Wrote: runs/phase1A/day025_force_field_route_comparison/39_r2_force_field_route_coverage_and_risk_matrix/r2_force_field_route_coverage_and_risk.json
+Wrote: runs/phase1A/day025_force_field_route_comparison/39_r2_force_field_route_coverage_and_risk_matrix/R2_FORCE_FIELD_ROUTE_COVERAGE_AND_RISK_MATRIX_DAY025.md

@@ -1,0 +1,52 @@
+{
+  "limitations": [
+    "This is a correspondence and symmetry audit only.",
+    "No hydrogen or heavy coordinates are modified.",
+    "No topology, charges, force-field parameters, minimization, MD or QM calculation is generated."
+  ],
+  "rotation": [
+    [
+      0.9522651667953158,
+      -0.3052194907695264,
+      -0.0056669712087130284
+    ],
+    [
+      0.30520154201538424,
+      0.9522801149964156,
+      -0.0038211691725920905
+    ],
+    [
+      0.006562839303317345,
+      0.0019091979480354354,
+      0.9999766417789336
+    ]
+  ],
+  "summary": {
+    "Gate3P_decision": "R2_SELECTED_FOUR_ATOM_BN_BRIDGE_HYDROGEN_COORDINATES_REQUIRE_REVIEW",
+    "MD_performed": false,
+    "all_H_symmetry_RMSD_nm": 0.4194653378692497,
+    "all_H_symmetry_maximum_deviation_nm": 1.1941240433013858,
+    "coordinates_modified": false,
+    "energy_minimized": false,
+    "heavy_symmetry_RMSD_nm": 0.28252208314674504,
+    "heavy_symmetry_maximum_deviation_nm": 1.085400373291693,
+    "inner_H_symmetry_RMSD_nm": 0.11454835411897697,
+    "inner_H_symmetry_maximum_deviation_nm": 0.1356856324756856,
+    "lower_H_nodes": 102,
+    "lower_heavy_nodes": 216,
+    "resolved_H_pairs": 87,
+    "resolved_heavy_pairs": 186,
+    "resolved_inner_H_pairs": 12,
+    "symmetry_constrained_refinement_ready": false,
+    "topology_generated": false,
+    "unresolved_H_pairs": 15,
+    "unresolved_heavy_pairs": 30,
+    "upper_H_nodes": 102,
+    "upper_heavy_nodes": 216
+  },
+  "translation_nm": [
+    1.3124664147524538,
+    -0.9457519233799445,
+    6.487284422004175
+  ]
+}

@@ -1,0 +1,9 @@
+I completed the Day020 and weekly technical work on the excitonic-dynamics and confined-water blocks.
+
+The combined coherent, dephasing, and thermal-relaxation analysis is complete and all numerical checks pass. PYR4 remains the dominant gateway into PYR5, contributing approximately 84–91% of the downward flux. Strong dephasing increases the transient PYR5 population to approximately 0.11 at 100 ps, while the stationary state reflects the competition between the thermal bath and the local non-thermal dephasing channel.
+
+I also completed the confined-water structural analysis for the accepted 100 ps frozen-solute trajectory. The HBN scaffold is one continuous segment composed of 56 axial planes, with no central structural gap. The validated axial–radial density integration contains an average of 5,211.77 water molecules in the analyzed cylinder. The profile-guided partition gives approximately 393.3 lumen waters, 488.9 interfacial waters, 105.7 waters in the mouth transitions, and 4,223.9 exterior waters.
+
+The lumen and exterior populations are comparatively robust. The interfacial value has moderate boundary sensitivity, and the exact mouth population remains descriptive because it is strongly boundary-sensitive. Because the HBN and pyrenes were frozen, this trajectory does not support solute RMSD/RMSF or thermal-stability claims.
+
+The next priority is to verify the exact accepted hydrated topology and prepare a controlled restraint-release protocol for a mobile-solute trajectory. That trajectory is required before evaluating scaffold stability and coupled water–solute dynamics.
