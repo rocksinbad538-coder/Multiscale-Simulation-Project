@@ -1,0 +1,13 @@
+QM_F06 LOWER Boundary V2 pre-QM audit completed.
+Decision: QM_F06_LOWER_BOUNDARY_V2_REPAIRED_PASS_PRE_QM_GATE
+Formula: B6N7H15
+Valence electrons: 68
+Edges: 27
+Valence failures: 0
+Bond failures: 0
+Seam bond failures: 0
+Hard cap contacts: 0
+Bridge-cap hard contacts: 0
+Unintended covalent contacts: 0
+QM execution authorized: False
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/repaired_pre_qm_audit/QM_F06_LOWER_BOUNDARY_V2_PRE_QM_AUDIT.md

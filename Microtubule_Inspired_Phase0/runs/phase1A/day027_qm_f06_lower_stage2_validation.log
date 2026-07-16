@@ -1,0 +1,10 @@
+QM_F06 LOWER Stage-2 validation completed.
+Decision: QM_F06_LOWER_STAGE2_OR_STAGE3_STATIC_GATE_FAILED
+Stage1->Stage2 RMSD: 0.448949 Å
+Bond-range failures: 0
+Cap bond failures: 0
+Both Stage-1 target contacts improved: True
+Stage-2 cap-involving hard contacts: 1
+Stage-3 static input gate: True
+Stage-3 execution authorized: False
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day027_qm_f06_lower_stage2_validation/QM_F06_LOWER_STAGE2_VALIDATION_REPORT.md

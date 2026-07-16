@@ -1,0 +1,9 @@
+QM_F06 LOWER Stage-2 readiness gate completed.
+Decision: QM_F06_LOWER_STAGE1_CHEMICAL_CONNECTIVITY_PRESERVED_STAGE2_EXECUTION_AUTHORIZED
+Bond-range failures: 0
+Artificial-cap hard contacts: 0
+Possible unintended covalent contacts: 0
+Inherited Stage-2 relaxation targets: 2
+Stage-2 execution authorized: True
+Stage-2 calculation executed: False
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day027_qm_f06_lower_stage1_validation/stage2_readiness_gate/QM_F06_LOWER_STAGE1_STAGE2_READINESS_REPORT.md

@@ -1,0 +1,6 @@
+QM_F06 LOWER Boundary V2 construction completed.
+Atoms: 28
+Elements: {'N': 7, 'B': 6, 'H': 15}
+New caps: 3
+QM executed: False
+Output: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/QM_F06_LOWER_BOUNDARY_V2.xyz

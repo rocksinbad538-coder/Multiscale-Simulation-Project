@@ -1,0 +1,36 @@
+==============================================================================
+QM_F06 LOWER BOUNDARY V2-A ORCA PREFLIGHT
+==============================================================================
+ORCA: /Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca
+ORCA SHA256: f9043192a31496e4931fa60df69b513f3922c7510c462e3934e3e2dd16d3e5f0
+Input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_workflow/v2a_boundary_relax.inp
+Input SHA256: ae731f8f3f9b1561c7aef028a7de7c47cfb7b3cacacc1e18baf9123ba0a75e66
+Execution requested: False
+
+Input checks:
+  atom_count_28                       : True
+  charge_zero                         : True
+  multiplicity_one                    : True
+  constraint_count_21                 : True
+  constraint_indices_expected         : True
+  contains_pbe0                       : True
+  contains_d4                         : True
+  contains_def2_tzvp                  : True
+  contains_def2_j                     : True
+  contains_rijcosx                    : True
+  contains_tightscf                   : True
+  contains_opt                        : True
+  contains_defgrid3                   : True
+  no_obsolete_grid                    : True
+
+Workflow-state checks:
+  pre_qm_gate_pass                    : True
+  v2a_input_prepared                  : True
+  fixed_atom_count_21                 : True
+  mobile_atom_count_7                 : True
+  fixed_indices_expected              : True
+  v2a_not_executed                    : True
+
+Preflight decision: PASS
+
+DRY PREFLIGHT COMPLETE — ORCA WAS NOT EXECUTED.

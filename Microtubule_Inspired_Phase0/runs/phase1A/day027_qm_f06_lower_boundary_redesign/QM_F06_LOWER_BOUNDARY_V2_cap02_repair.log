@@ -1,0 +1,8 @@
+Boundary V2 Cap02 repair completed.
+Cap: HCAPV2:LOWER:02
+Bond length: 1.0100000000 Å
+Minimum vdW ratio: 1.1174359501
+Closest partner: HCAPV2:LOWER:03
+Real atoms moved: 0
+QM executed: False
+Output: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/cap02_repair/QM_F06_LOWER_BOUNDARY_V2_REPAIRED.xyz

@@ -1,0 +1,6 @@
+QM_F06 LOWER Boundary V2 ORCA input prepared.
+Input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_workflow/v2a_boundary_relax.inp
+Fixed atoms: 21
+Mobile atoms: 7
+ORCA detected: True
+QM execution authorized: False

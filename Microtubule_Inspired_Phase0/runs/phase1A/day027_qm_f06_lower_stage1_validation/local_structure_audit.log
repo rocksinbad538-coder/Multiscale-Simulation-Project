@@ -1,0 +1,6 @@
+QM_F06 LOWER Stage-1 local-structure audit completed.
+Decision: QM_F06_LOWER_STAGE1_LOCAL_STRUCTURE_FAIL_STAGE2_BLOCKED
+Bond failures: 0
+Hard nonbonded clashes: 2
+Stage-2 execution authorized: False
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day027_qm_f06_lower_stage1_validation/local_structure_audit/QM_F06_LOWER_STAGE1_LOCAL_STRUCTURE_AUDIT.md

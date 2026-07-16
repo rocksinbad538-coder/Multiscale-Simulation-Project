@@ -1,0 +1,49 @@
+TARGET CUT EDGE
+==========================================================================================
+Inside node : A:LOWER:14:-4
+Outside node: A:LOWER:13:-3
+Edge record : {'edge_id': 'E:2740', 'source_node': 'A:LOWER:13:-3', 'target_node': 'A:LOWER:14:-4', 'source_element': 'B', 'target_element': 'N', 'edge_type': 'ANNULUS_BN', 'end': 'LOWER', 'heavy_atom_edge': 'True', 'heteropolar_BN_edge': 'True', 'graph_source': 'GATE3I_RETAINED_NONBRIDGE_HEAVY_EDGE', 'coordinates_assigned': 'False', 'formal_bond_order_assigned': 'False', 'bridge_path_id': '', 'bridge_edge_position': ''}
+Distance Å  : 1.4497300000
+
+==========================================================================================
+A:LOWER:14:-4
+Element   : N
+Node type : ANNULUS_OUTER_BOUNDARY
+End       : LOWER
+Neighbors :
+   A:LOWER:13:-3 element=B type=ANNULUS_INTERIOR distance_A=1.4497300000 edge_type=ANNULUS_BN
+   A:LOWER:13:-5 element=B type=ANNULUS_OUTER_BOUNDARY distance_A=1.4497300000 edge_type=ANNULUS_BN
+   H4:LOWER:0017:0 element=H type=ANNULUS_OUTER_PASSIVANT_H distance_A=1.0100000000 edge_type=ANNULUS_OUTER_PASSIVANT_H_BOND
+
+==========================================================================================
+A:LOWER:13:-3
+Element   : B
+Node type : ANNULUS_INTERIOR
+End       : LOWER
+Neighbors :
+   A:LOWER:11:-3 element=N type=ANNULUS_INTERIOR distance_A=1.4497300000 edge_type=ANNULUS_BN
+   A:LOWER:14:-2 element=N type=ANNULUS_OUTER_BOUNDARY distance_A=1.4497300000 edge_type=ANNULUS_BN
+   A:LOWER:14:-4 element=N type=ANNULUS_OUTER_BOUNDARY distance_A=1.4497300000 edge_type=ANNULUS_BN
+
+==========================================================================================
+BR4:LOWER:00:3
+Element   : B
+Node type : ALTERNATING_BN_FOUR_ATOM_BRIDGE
+End       : LOWER
+Neighbors :
+   BR4:LOWER:00:2 element=N type=ALTERNATING_BN_FOUR_ATOM_BRIDGE distance_A=1.4496504709 edge_type=ALTERNATING_BN_FOUR_ATOM_BRIDGE
+   BR4:LOWER:00:4 element=N type=ALTERNATING_BN_FOUR_ATOM_BRIDGE distance_A=1.4496508559 edge_type=ALTERNATING_BN_FOUR_ATOM_BRIDGE
+   H4:LOWER:0056:0 element=H type=BRIDGE_PASSIVANT_H distance_A=1.1900000000 edge_type=BRIDGE_PASSIVANT_H_BOND
+
+==========================================================================================
+TWO-SHELL NEIGHBORHOOD FROM A:LOWER:13:-3
+shell=0 A:LOWER:13:-3 B ANNULUS_INTERIOR LOWER
+shell=1 A:LOWER:11:-3 N ANNULUS_INTERIOR LOWER
+shell=1 A:LOWER:14:-2 N ANNULUS_OUTER_BOUNDARY LOWER
+shell=1 A:LOWER:14:-4 N ANNULUS_OUTER_BOUNDARY LOWER
+shell=2 A:LOWER:10:-2 B ANNULUS_INTERIOR LOWER
+shell=2 A:LOWER:10:-4 B ANNULUS_INTERIOR LOWER
+shell=2 A:LOWER:13:-1 B ANNULUS_INTERIOR LOWER
+shell=2 A:LOWER:13:-5 B ANNULUS_OUTER_BOUNDARY LOWER
+shell=2 H4:LOWER:0016:0 H ANNULUS_OUTER_PASSIVANT_H LOWER
+shell=2 H4:LOWER:0017:0 H ANNULUS_OUTER_PASSIVANT_H LOWER
