@@ -1,0 +1,39 @@
+================================================================================
+QM_F06 LOWER V2-B ELECTRONIC DIAGNOSTIC PREFLIGHT
+================================================================================
+ORCA: /Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca
+ORCA SHA256: f9043192a31496e4931fa60df69b513f3922c7510c462e3934e3e2dd16d3e5f0
+Input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_lower_boundary_v2b_electronic_diagnostic/QM_F06_LOWER_BOUNDARY_V2B_ELECTRONIC_DIAGNOSTIC.inp
+Input SHA256: 1d4b9ea801892b8cd43492a42809133fc978ef916571290fd2de3de5bad2e757
+Execution requested: False
+
+Input checks:
+  atom_count_28                               : True
+  charge_zero                                 : True
+  multiplicity_one                            : True
+  contains_pbe0                               : True
+  contains_d4                                 : True
+  contains_def2_tzvp                          : True
+  contains_def2_j                             : True
+  contains_rijcosx                            : True
+  contains_tightscf                           : True
+  contains_defgrid3                           : True
+  contains_mayer                              : True
+  contains_hirshfeld                          : True
+  contains_mbis                               : True
+  contains_chelpg                             : True
+  mayer_threshold_present                     : True
+  no_geometry_optimization                    : True
+  no_frequency_calculation                    : True
+
+Scientific-state checks:
+  v2b_executed                                : True
+  v2b_validation_pass                         : True
+  structural_gate_pass                        : True
+  geometry_acceptance_retained                : True
+  electronic_protocol_definition_authorized   : True
+  preparation_execution_flag_false            : True
+
+Preflight decision: PASS
+
+DRY PREFLIGHT COMPLETE — ORCA WAS NOT EXECUTED.

@@ -1,0 +1,10 @@
+QM_F06 UPPER HCAP07 expansion audit completed.
+Cap to remove: HCAP:UPPER:07
+Restored center: A:UPPER:13:3
+Proposed real additions: 3
+Heavy additions: 3
+Existing real H additions: 0
+Candidate new cap edges: 3
+UPPER V2 construction authorized: True
+QM execution authorized: False
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/upper_cap07_expansion_audit/QM_F06_UPPER_CAP07_EXPANSION_AUDIT.md

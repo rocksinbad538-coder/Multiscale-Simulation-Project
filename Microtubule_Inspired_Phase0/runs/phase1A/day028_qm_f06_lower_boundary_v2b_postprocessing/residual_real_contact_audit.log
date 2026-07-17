@@ -1,0 +1,13 @@
+Residual real-contact audit completed.
+Bridge atom: BR4:LOWER:00:3
+Hydrogen: H4:LOWER:0017:0
+Hydrogen parent: A:LOWER:14:-4
+Graph separation: 4
+V2-A distance: 2.2601512789 Å
+V2-B distance: 2.0883493825 Å
+V2-B vdW ratio: 0.6693427508
+Possible unintended covalent contact: False
+Decision: REAL_1_5_INTRAMOLECULAR_COMPRESSION_REQUIRES_ELECTRONIC_AND_COMPARATIVE_VALIDATION
+Electronic-property protocol definition authorized: True
+QM executed: False
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_lower_boundary_v2b_postprocessing/residual_real_contact_audit/QM_F06_LOWER_V2B_RESIDUAL_REAL_CONTACT_AUDIT.md

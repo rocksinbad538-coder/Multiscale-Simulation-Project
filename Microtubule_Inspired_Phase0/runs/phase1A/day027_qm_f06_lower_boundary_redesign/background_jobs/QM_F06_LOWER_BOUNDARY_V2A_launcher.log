@@ -37,3 +37,9 @@ Preflight decision: PASS
 EXECUTING QM_F06 LOWER BOUNDARY V2-A
 ==============================================================================
 Execution directory: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_executions/v2a_20260716T143932
+Return code: 0
+Normal termination: True
+SCF converged: True
+Geometry converged: True
+Optimized XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_executions/v2a_20260716T143932/v2a_boundary_relax.xyz
+V2-A gate: PASS

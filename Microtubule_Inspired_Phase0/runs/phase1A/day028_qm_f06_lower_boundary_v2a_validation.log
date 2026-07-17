@@ -1,0 +1,9 @@
+QM_F06 LOWER Boundary V2-A optimized-geometry audit completed.
+Decision: QM_F06_LOWER_BOUNDARY_V2A_OPTIMIZED_GEOMETRY_FAIL
+Fixed-atom motion failures: 0
+Bond failures: 0
+Hard cap contacts: 1
+Bridge-cap hard contacts: 0
+Unintended covalent contacts: 0
+V2-B preparation authorized: False
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/v2a_postprocessing/QM_F06_LOWER_BOUNDARY_V2A_VALIDATION_REPORT.md

@@ -1,0 +1,14 @@
+QM_F06 UPPER Boundary V2 pre-QM audit completed.
+Decision: QM_F06_UPPER_BOUNDARY_V2_FAIL_PRE_QM_GATE
+Formula: B7N6H15
+Valence electrons: 66
+Edges: 27
+Valence failures: 0
+Bond failures: 0
+Seam bond failures: 0
+Hard cap contacts: 3
+Bridge-cap hard contacts: 0
+Unintended covalent contacts: 1
+ORCA input preparation authorized: False
+QM execution authorized: False
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/QM_F06_UPPER_BOUNDARY_V2/pre_qm_audit/QM_F06_UPPER_BOUNDARY_V2_PRE_QM_AUDIT.md

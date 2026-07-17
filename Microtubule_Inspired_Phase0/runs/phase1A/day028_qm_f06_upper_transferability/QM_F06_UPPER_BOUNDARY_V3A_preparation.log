@@ -1,0 +1,7 @@
+QM_F06 UPPER Boundary V3-A input prepared.
+Input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/QM_F06_UPPER_BOUNDARY_V3/orca_v3_workflow/v3a_boundary_relax.inp
+Fixed atoms: 20
+Mobile atoms: 10
+ORCA nprocs: 8
+Input SHA256: 65b3a46d1be0c58404dddf8dd81b8aa70ed430a01911f4251016061b9b4dda5e
+QM execution authorized: False

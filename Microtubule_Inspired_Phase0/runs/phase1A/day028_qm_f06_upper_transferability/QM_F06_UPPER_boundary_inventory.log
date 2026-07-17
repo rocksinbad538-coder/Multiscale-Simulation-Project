@@ -1,0 +1,8 @@
+QM_F06 UPPER boundary inventory completed.
+Manifest: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day026_qm_reference_catalog/QM_F06/QM_F06_UPPER_CAPPED_REPAIRED_atoms.csv
+Current atoms: 22
+Artificial caps: 7
+Boundary edges: 7
+Expansion candidates: 7
+UPPER construction authorized: False
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/upper_boundary_inventory/QM_F06_UPPER_BOUNDARY_INVENTORY_REPORT.md

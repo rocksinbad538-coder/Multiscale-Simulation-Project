@@ -1,0 +1,11 @@
+QM_F06 LOWER Boundary V2-B validation completed.
+Decision: QM_F06_LOWER_BOUNDARY_V2B_OPTIMIZED_GEOMETRY_PASS
+Fixed-atom motion failures: 0
+Bond failures: 0
+Hard cap contacts: 0
+Bridge-cap hard contacts: 0
+Unintended covalent contacts: 0
+Residual distance: 2.3984333651 Å
+Residual vdW ratio: 0.7687286427
+Final-property input preparation authorized: True
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_lower_boundary_v2b_postprocessing/QM_F06_LOWER_BOUNDARY_V2B_VALIDATION_REPORT.md

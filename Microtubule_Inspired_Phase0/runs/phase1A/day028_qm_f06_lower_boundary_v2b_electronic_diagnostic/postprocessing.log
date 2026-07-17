@@ -1,0 +1,9 @@
+Electronic diagnostic post-processing completed.
+Decision: QM_F06_LOWER_V2B_RESIDUAL_CONTACT_HAS_NO_SIGNIFICANT_COVALENT_CHARACTER_ELECTRONIC_GATE_PASS
+Final energy: -541.318700348194 Eh
+Target Mayer printed: False
+Target Mayer result: <0.01
+Reference B5-H9 Mayer: 0.9964
+Reference N2-H20 Mayer: 0.8695
+Electronic gate pass: True
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_lower_boundary_v2b_electronic_diagnostic/postprocessing/QM_F06_LOWER_V2B_ELECTRONIC_VALIDATION_REPORT.md

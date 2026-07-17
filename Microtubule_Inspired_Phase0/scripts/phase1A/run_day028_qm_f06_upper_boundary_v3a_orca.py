@@ -1,0 +1,514 @@
+#!/usr/bin/env python3
+"""
+Guarded ORCA runner for QM_F06 UPPER Boundary V3-A.
+
+The script performs a dry preflight by default. ORCA is executed only
+when --execute is explicitly supplied.
+
+No ESP/RESP fitting or force-field parameter adoption is performed.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import os
+import platform
+import re
+import shutil
+import subprocess
+import sys
+from datetime import datetime
+from pathlib import Path
+from typing import Any
+
+
+ROOT = Path(__file__).resolve().parents[2]
+
+V3_DIR = ROOT / (
+    "runs/phase1A/day028_qm_f06_upper_transferability/"
+    "QM_F06_UPPER_BOUNDARY_V3"
+)
+
+WORKFLOW_DIR = V3_DIR / "orca_v3_workflow"
+
+INPUT_PATH = WORKFLOW_DIR / "v3a_boundary_relax.inp"
+MAP_PATH = WORKFLOW_DIR / "v3a_atom_role_constraint_map.csv"
+STATE_PATH = WORKFLOW_DIR / "v3_workflow_state.json"
+
+PRE_QM_SUMMARY = V3_DIR / (
+    "pre_qm_audit/"
+    "QM_F06_UPPER_BOUNDARY_V3_pre_qm_summary.json"
+)
+
+EXECUTION_ROOT = ROOT / (
+    "runs/phase1A/"
+    "day028_qm_f06_upper_boundary_v3a_executions"
+)
+
+DEFAULT_ORCA = Path(
+    "/Users/alejandro/projects/"
+    "orca_6_1_1_macosx_intel_openmpi411/orca"
+)
+
+
+def require_file(path: Path) -> None:
+    if not path.is_file() or path.stat().st_size == 0:
+        raise RuntimeError(f"Missing or empty file: {path}")
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+
+    with path.open("rb") as handle:
+        for chunk in iter(
+            lambda: handle.read(1024 * 1024),
+            b"",
+        ):
+            digest.update(chunk)
+
+    return digest.hexdigest()
+
+
+def parse_input(path: Path) -> dict[str, Any]:
+    require_file(path)
+
+    text = path.read_text(encoding="utf-8")
+
+    xyz_match = re.search(
+        r"(?ms)^\s*\*\s+xyz\s+(-?\d+)\s+(\d+)\s*$"
+        r"(.*?)"
+        r"^\s*\*\s*$",
+        text,
+    )
+
+    if not xyz_match:
+        raise RuntimeError("XYZ block not found.")
+
+    atom_lines = [
+        line
+        for line in xyz_match.group(3).splitlines()
+        if line.strip()
+    ]
+
+    constraints = [
+        int(value)
+        for value in re.findall(
+            r"\{\s*C\s+(\d+)\s+C\s*\}",
+            text,
+        )
+    ]
+
+    checks = {
+        "atom_count_30": len(atom_lines) == 30,
+        "charge_zero": int(xyz_match.group(1)) == 0,
+        "multiplicity_one": int(xyz_match.group(2)) == 1,
+        "constraint_count_20": len(constraints) == 20,
+        "constraint_indices_unique": (
+            len(constraints) == len(set(constraints))
+        ),
+        "constraint_indices_in_range": all(
+            0 <= index < 30
+            for index in constraints
+        ),
+        "nprocs_6": bool(
+            re.search(r"(?i)\bnprocs\s+6\b", text)
+        ),
+        "maxcore_2500": "%maxcore 2500" in text,
+        "contains_pbe0": "PBE0" in text,
+        "contains_d4": "D4" in text,
+        "contains_def2_tzvp": "def2-TZVP" in text,
+        "contains_def2_j": "def2/J" in text,
+        "contains_rijcosx": "RIJCOSX" in text,
+        "contains_tightscf": "TightSCF" in text,
+        "contains_opt": bool(
+            re.search(r"(?i)(^|\s)Opt(\s|$)", text)
+        ),
+        "contains_defgrid3": "DefGrid3" in text,
+        "no_obsolete_grid": (
+            "Grid5" not in text
+            and "FinalGrid6" not in text
+        ),
+    }
+
+    return {
+        "text": text,
+        "atom_count": len(atom_lines),
+        "charge": int(xyz_match.group(1)),
+        "multiplicity": int(xyz_match.group(2)),
+        "constraints": constraints,
+        "checks": checks,
+        "gate_pass": all(checks.values()),
+    }
+
+
+def validate_output(
+    output_path: Path,
+    return_code: int,
+) -> dict[str, Any]:
+    require_file(output_path)
+
+    text = output_path.read_text(
+        encoding="utf-8",
+        errors="replace",
+    )
+
+    normal_termination = (
+        "ORCA TERMINATED NORMALLY" in text
+    )
+
+    scf_converged = (
+        "SCF CONVERGED AFTER" in text
+    )
+
+    geometry_converged = (
+        "THE OPTIMIZATION HAS CONVERGED" in text
+    )
+
+    energies = re.findall(
+        r"FINAL SINGLE POINT ENERGY\s+"
+        r"(-?\d+\.\d+)",
+        text,
+    )
+
+    final_energy = (
+        float(energies[-1])
+        if energies
+        else None
+    )
+
+    error_markers = [
+        marker
+        for marker in (
+            "ORCA TERMINATED ABNORMALLY",
+            "SCF NOT CONVERGED",
+            "INPUT ERROR",
+            "UNKNOWN KEYWORD",
+            "ERROR IN INPUT",
+        )
+        if marker in text
+    ]
+
+    optimized_xyz = output_path.with_name(
+        "v3a_boundary_relax.xyz"
+    )
+
+    execution_gate_pass = all(
+        (
+            return_code == 0,
+            normal_termination,
+            scf_converged,
+            geometry_converged,
+            final_energy is not None,
+            optimized_xyz.is_file(),
+            optimized_xyz.stat().st_size > 0
+            if optimized_xyz.is_file()
+            else False,
+            not error_markers,
+        )
+    )
+
+    return {
+        "return_code": return_code,
+        "normal_termination": normal_termination,
+        "scf_converged": scf_converged,
+        "geometry_converged": geometry_converged,
+        "final_single_point_energy_hartree": (
+            final_energy
+        ),
+        "optimized_xyz": (
+            str(optimized_xyz)
+            if optimized_xyz.is_file()
+            else None
+        ),
+        "error_markers": error_markers,
+        "v3a_execution_gate_pass": execution_gate_pass,
+    }
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        "--orca",
+        type=Path,
+        default=DEFAULT_ORCA,
+    )
+
+    parser.add_argument(
+        "--execute",
+        action="store_true",
+    )
+
+    args = parser.parse_args()
+
+    for path in (
+        INPUT_PATH,
+        MAP_PATH,
+        STATE_PATH,
+        PRE_QM_SUMMARY,
+    ):
+        require_file(path)
+
+    orca_path = args.orca.expanduser().resolve()
+
+    if not orca_path.is_file():
+        detected = shutil.which("orca")
+
+        if detected:
+            orca_path = Path(detected).resolve()
+        else:
+            raise RuntimeError(
+                f"ORCA executable not found: {orca_path}"
+            )
+
+    parsed = parse_input(INPUT_PATH)
+
+    state = json.loads(
+        STATE_PATH.read_text(encoding="utf-8")
+    )
+
+    pre_qm = json.loads(
+        PRE_QM_SUMMARY.read_text(encoding="utf-8")
+    )
+
+    state_checks = {
+        "pre_qm_gate_pass": (
+            pre_qm.get("pre_qm_gate_pass") is True
+            and state.get("pre_qm_gate_pass") is True
+        ),
+        "v3a_input_prepared": (
+            state.get("v3a_input_prepared") is True
+        ),
+        "v3a_not_executed": (
+            state.get("v3a_executed") is False
+        ),
+        "fixed_atom_count_20": (
+            state.get("v3a_fixed_atom_count") == 20
+        ),
+        "mobile_atom_count_10": (
+            state.get("v3a_mobile_atom_count") == 10
+        ),
+        "nprocs_6": (
+            state.get("v3a_nprocs") == 6
+        ),
+        "maxcore_2500": (
+            state.get(
+                "v3a_maxcore_mb_per_process"
+            ) == 2500
+        ),
+        "nominal_total_maxcore_15000": (
+            state.get(
+                "v3a_nominal_total_maxcore_mb"
+            ) == 15000
+        ),
+        "input_hash_matches_state": (
+            state.get("v3a_input_sha256")
+            == sha256(INPUT_PATH)
+        ),
+        "memory_gate_pass": (
+            state.get("v3a_memory_gate_pass") is True
+        ),
+    }
+
+    preflight_pass = (
+        parsed["gate_pass"]
+        and all(state_checks.values())
+    )
+
+    print("=" * 78)
+    print("QM_F06 UPPER BOUNDARY V3-A ORCA PREFLIGHT")
+    print("=" * 78)
+    print("ORCA:", orca_path)
+    print("ORCA SHA256:", sha256(orca_path))
+    print("Input:", INPUT_PATH)
+    print("Input SHA256:", sha256(INPUT_PATH))
+    print("Execution requested:", args.execute)
+    print()
+
+    print("Input checks:")
+    for key, value in parsed["checks"].items():
+        print(f"  {key:42s}: {value}")
+
+    print()
+    print("Workflow-state checks:")
+    for key, value in state_checks.items():
+        print(f"  {key:42s}: {value}")
+
+    print()
+    print(
+        "Preflight decision:",
+        "PASS" if preflight_pass else "FAIL",
+    )
+
+    if not preflight_pass:
+        raise RuntimeError(
+            "UPPER V3-A preflight failed. "
+            "Execution blocked."
+        )
+
+    if not args.execute:
+        print()
+        print(
+            "DRY PREFLIGHT COMPLETE — ORCA WAS NOT EXECUTED."
+        )
+        return
+
+    timestamp = datetime.now().strftime(
+        "%Y%m%dT%H%M%S"
+    )
+
+    execution_dir = EXECUTION_ROOT / (
+        f"v3a_{timestamp}"
+    )
+
+    execution_dir.mkdir(
+        parents=True,
+        exist_ok=False,
+    )
+
+    execution_input = (
+        execution_dir / "v3a_boundary_relax.inp"
+    )
+
+    output_path = (
+        execution_dir / "v3a_boundary_relax.out"
+    )
+
+    stderr_path = (
+        execution_dir / "v3a_boundary_relax.stderr"
+    )
+
+    shutil.copy2(
+        INPUT_PATH,
+        execution_input,
+    )
+
+    metadata = {
+        "fragment": "QM_F06_UPPER_BOUNDARY_V3",
+        "stage": "V3A_CONSTRAINED_BOUNDARY_RELAXATION",
+        "timestamp": timestamp,
+        "orca_path": str(orca_path),
+        "orca_sha256": sha256(orca_path),
+        "input_sha256": sha256(execution_input),
+        "nprocs": 6,
+        "maxcore_mb_per_process": 2500,
+        "nominal_total_maxcore_mb": 15000,
+        "python": sys.version,
+        "platform": platform.platform(),
+        "working_directory": str(execution_dir),
+        "environment_path": os.environ.get(
+            "PATH",
+            "",
+        ),
+        "explicit_execute_flag": True,
+        "esp_resp_requested": False,
+        "force_field_fitting_requested": False,
+    }
+
+    (
+        execution_dir / "execution_metadata.json"
+    ).write_text(
+        json.dumps(metadata, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    print()
+    print("=" * 78)
+    print("EXECUTING QM_F06 UPPER BOUNDARY V3-A")
+    print("=" * 78)
+    print("Execution directory:", execution_dir)
+
+    with (
+        output_path.open(
+            "w",
+            encoding="utf-8",
+        ) as stdout,
+        stderr_path.open(
+            "w",
+            encoding="utf-8",
+        ) as stderr,
+    ):
+        completed = subprocess.run(
+            [
+                str(orca_path),
+                execution_input.name,
+            ],
+            cwd=execution_dir,
+            stdout=stdout,
+            stderr=stderr,
+            check=False,
+        )
+
+    validation = validate_output(
+        output_path,
+        completed.returncode,
+    )
+
+    (
+        execution_dir / "v3a_validation.json"
+    ).write_text(
+        json.dumps(validation, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    print("Return code:", completed.returncode)
+    print(
+        "Normal termination:",
+        validation["normal_termination"],
+    )
+    print(
+        "SCF converged:",
+        validation["scf_converged"],
+    )
+    print(
+        "Geometry converged:",
+        validation["geometry_converged"],
+    )
+    print(
+        "Final energy:",
+        validation[
+            "final_single_point_energy_hartree"
+        ],
+    )
+    print(
+        "V3-A execution gate:",
+        (
+            "PASS"
+            if validation["v3a_execution_gate_pass"]
+            else "FAIL"
+        ),
+    )
+
+    if not validation["v3a_execution_gate_pass"]:
+        raise RuntimeError(
+            "UPPER V3-A execution failed validation. "
+            f"Inspect {execution_dir}"
+        )
+
+    state["v3a_executed"] = True
+    state["v3a_validation_pass"] = True
+    state["v3a_execution_directory"] = str(
+        execution_dir.relative_to(ROOT)
+    )
+    state["v3a_optimized_xyz"] = str(
+        Path(
+            validation["optimized_xyz"]
+        ).relative_to(ROOT)
+    )
+    state["v3a_final_energy_hartree"] = (
+        validation[
+            "final_single_point_energy_hartree"
+        ]
+    )
+    state["qm_execution_authorized"] = False
+
+    STATE_PATH.write_text(
+        json.dumps(state, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+if __name__ == "__main__":
+    main()

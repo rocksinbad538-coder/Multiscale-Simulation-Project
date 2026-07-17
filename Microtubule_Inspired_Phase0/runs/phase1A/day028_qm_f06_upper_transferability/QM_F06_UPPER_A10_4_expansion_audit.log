@@ -1,0 +1,11 @@
+QM_F06 UPPER shared A10:4 audit completed.
+Shared atom: A:UPPER:10:4
+Neighbors: ['A:UPPER:11:3', 'A:UPPER:11:5', 'A:UPPER:8:4']
+Third neighbor: A:UPPER:8:4
+Third neighbor already present: False
+Third neighbor is real H: False
+Proposed real additions: ['A:UPPER:10:4', 'A:UPPER:8:4']
+Candidate new cap edges: 2
+Boundary V3 construction authorized: True
+ORCA execution authorized: False
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/upper_shared_a10_4_expansion_audit/QM_F06_UPPER_A10_4_EXPANSION_AUDIT.md

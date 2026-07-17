@@ -1,0 +1,8 @@
+QM_F06 UPPER Boundary V2 construction completed.
+Final atoms: 28
+Element counts: {'B': 7, 'N': 6, 'H': 15}
+Real heavy atoms added: 3
+Real hydrogens added: 1
+New artificial caps: 3
+QM executed: False
+Output: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/QM_F06_UPPER_BOUNDARY_V2/QM_F06_UPPER_BOUNDARY_V2.xyz
