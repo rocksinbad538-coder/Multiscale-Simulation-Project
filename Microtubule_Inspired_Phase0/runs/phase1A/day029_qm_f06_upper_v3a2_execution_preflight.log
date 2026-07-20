@@ -1,0 +1,33 @@
+==============================================================================
+QM_F06 UPPER V3-A2 EXECUTION PREFLIGHT
+==============================================================================
+audit_decision                          : PASS
+audit_overall_pass                      : PASS
+audit_authorization                     : PASS
+input_hash_matches_audit                : PASS
+xyz_hash_matches_audit                  : PASS
+constraint_map_hash_matches_audit       : PASS
+charge                                  : PASS
+multiplicity                            : PASS
+nprocs                                  : PASS
+maxcore                                 : PASS
+fixed_indices                           : PASS
+coordinate_count                        : PASS
+fresh_scf                               : PASS
+orca_available                          : PASS
+
+Charge / multiplicity: 0 1
+nprocs: 4
+maxcore: 2500
+Coordinate count: 30
+Fixed indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 18, 19]
+Forbidden reuse hits: {'moread': False, 'moinp': False, 'gbw_reference': False}
+ORCA executable: /Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca
+
+Decision: QM_F06_UPPER_V3A2_EXECUTION_PREFLIGHT_PASS
+Execution directory: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day029_qm_f06_upper_v3a2_executions/v3a2_20260720T210116Z
+Manifest: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day029_qm_f06_upper_v3a2_executions/v3a2_20260720T210116Z/QM_F06_UPPER_V3A2_EXECUTION_MANIFEST.json
+Launch script: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day029_qm_f06_upper_v3a2_executions/v3a2_20260720T210116Z/launch_v3a2.sh
+
+ORCA execution prepared: True
+ORCA execution started: False

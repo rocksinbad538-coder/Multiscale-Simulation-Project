@@ -1,0 +1,16 @@
+==============================================================================
+QM_F06 UPPER V3-A2 PREPARATION
+==============================================================================
+Center: P:1641 11
+Heavy neighbor index: 13
+Released caps: [14, 17]
+Previous fixed atoms: 20
+V3-A2 fixed atoms: 18
+V3-A2 mobile atoms: 12
+N-H distances: 1.01 1.0100000000000002
+H-H distance: 1.7493713156445663
+H-N-H angle: 119.99999999999999
+XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/QM_F06_UPPER_BOUNDARY_V3/orca_v3a2_workflow/v3a2_start.xyz
+Input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/QM_F06_UPPER_BOUNDARY_V3/orca_v3a2_workflow/v3a2.inp
+Summary: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/QM_F06_UPPER_BOUNDARY_V3/orca_v3a2_workflow/v3a2_preparation_summary.json
+ORCA execution authorized: False

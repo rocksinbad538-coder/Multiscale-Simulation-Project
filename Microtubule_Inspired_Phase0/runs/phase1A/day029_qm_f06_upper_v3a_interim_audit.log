@@ -1,0 +1,19 @@
+==============================================================================
+QM_F06 UPPER V3-A STRUCTURAL AUDIT
+==============================================================================
+Decision: QM_F06_UPPER_V3A_INTERIM_DIAGNOSTIC_ONLY
+Execution: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_boundary_v3a_restart4_executions/restart4_20260720T111123
+Final XYZ source: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_boundary_v3a_restart4_executions/restart4_20260720T111123/restart4.xyz
+Normal termination: False
+Geometry converged: False
+Atoms: 30
+Composition: {'B': 8, 'N': 7, 'H': 15}
+Bonds: 30
+Connected: True
+Valence failures: 0
+Hard contacts: 2
+Fixed displacement failures: 0
+Final energy (Eh): -590.434457024474
+Final structural gate: False
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day029_qm_f06_upper_v3a_final_audit/audit_20260720T180103Z/QM_F06_UPPER_V3A_STRUCTURAL_AUDIT.json
+Manifest: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day029_qm_f06_upper_v3a_final_audit/audit_20260720T180103Z/QM_F06_UPPER_V3A_AUDIT_MANIFEST.json

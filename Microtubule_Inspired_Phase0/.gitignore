@@ -3,3 +3,39 @@ runs/phase1A/day024_chemical_end_rim_design/35_r2_p1_source_artifact_retrieval/e
 runs/phase1A/day024_chemical_end_rim_design/37_r2_lele_si_parameter_file_audit/raw/
 .venv_pdf_audit/
 scripts/phase1A/*.before_*
+
+# ORCA live and binary execution artifacts
+*.gbw
+*.densities
+*.tmp
+*.prop
+*.engrad
+*.opt
+*.hess
+*.ges
+*.uno
+*.uco
+*.cis
+*.qro
+
+# ORCA mutable runtime files
+**/v3a2.out
+**/v3a2.stderr
+**/v3a2.supervisor.log
+**/v3a2.execution_metadata
+**/v3a2.orca_pid
+**/v3a2.supervisor_pid
+**/v3a2.exit_status
+**/v3a2.xyz
+**/v3a2_trj.xyz
+
+# Additional ORCA runtime intermediates
+*.bas[0-9]*
+*.carthess
+*.property.txt
+*.hostnames
+*.densitiesinfo
+*.cpscfdata.tmp.*
+*.diis*.tmp.*
+*.soscfv.tmp.*
+*.propint.tmp.*

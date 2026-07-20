@@ -1,0 +1,11 @@
+QM_F06 UPPER V3-A restart4 prepared.
+Failed execution: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_boundary_v3a_executions/v3a_20260717T160520
+Source frame: Coordinates from ORCA-job v3a_boundary_relax E -590.405885379486
+Atoms: 30
+Restart XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/QM_F06_UPPER_BOUNDARY_V3/orca_v3_workflow/restart4/v3a_restart4_start.xyz
+Restart input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/QM_F06_UPPER_BOUNDARY_V3/orca_v3_workflow/restart4/v3a_restart4.inp
+nprocs: 4
+MaxCore: 2500 MB/process
+GBW reused: False
+Input SHA256: 6267fac0b2059f4587140eb260592fc33b47d35f6f1d96d28ebacb44cadf52d6
+Execution authorized: False

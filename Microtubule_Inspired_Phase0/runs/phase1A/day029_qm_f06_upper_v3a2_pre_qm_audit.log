@@ -1,0 +1,36 @@
+==============================================================================
+QM_F06 UPPER V3-A2 PRE-QM AUDIT
+==============================================================================
+atom_count                              : PASS
+composition                             : PASS
+critical_atom_identity                  : PASS
+only_caps_14_17_released                : PASS
+center_remains_fixed                    : PASS
+caps_are_mobile                         : PASS
+fixed_count                             : PASS
+mobile_count                            : PASS
+local_NH_distances                      : PASS
+geminal_HH_resolved                     : PASS
+local_HNH_angle                         : PASS
+center_heavy_bond                       : PASS
+single_connected_component              : PASS
+no_unresolved_hard_contacts             : PASS
+charge_multiplicity                     : PASS
+resources                               : PASS
+fresh_scf                               : PASS
+input_has_geometry                      : PASS
+preparation_summary_consistent          : PASS
+
+Composition: {'B': 8, 'N': 7, 'H': 15}
+Atom count: 30
+Fixed atoms: 18
+Mobile atoms: 12
+N-H14: 1.010000000003787
+N-H17: 1.0100000000545872
+H14-H17: 1.7493713156802946
+H14-N11-H17: 119.99999999831802
+Hard contacts: 0
+
+Decision: QM_F06_UPPER_V3A2_PRE_QM_GATE_PASS_ORCA_EXECUTION_AUTHORIZED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/QM_F06_UPPER_BOUNDARY_V3/orca_v3a2_workflow/pre_qm_audit/QM_F06_UPPER_V3A2_PRE_QM_AUDIT.json
+Contacts: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/QM_F06_UPPER_BOUNDARY_V3/orca_v3a2_workflow/pre_qm_audit/QM_F06_UPPER_V3A2_contacts.csv
