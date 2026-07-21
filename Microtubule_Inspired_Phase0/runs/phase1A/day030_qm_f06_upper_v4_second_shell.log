@@ -1,0 +1,25 @@
+==============================================================================
+QM_F06 UPPER V4 SECOND-SHELL AUDIT
+==============================================================================
+Second-shell atoms: ['P:1580', 'P:1582', 'P:1638', 'P:1642', 'S:1738']
+First-shell heavy cuts: 13
+Second-shell heavy cuts: 14
+Cuts closed by second shell: 7
+New cuts after second shell: 8
+New boundary atoms inside model: ['P:1580', 'P:1582', 'P:1638', 'P:1642', 'S:1738']
+Newly exposed outside atoms: ['BR4:UPPER:14:1', 'P:1521', 'P:1523', 'P:1525', 'P:1579', 'P:1585', 'P:1637']
+
+NEW HEAVY-HEAVY CUTS AFTER SECOND SHELL
+S:1738                   -- BR4:UPPER:14:1           [E:3062]
+P:1580                   -- P:1521                   [E:2283]
+P:1580                   -- P:1523                   [E:2285]
+P:1582                   -- P:1523                   [E:2286]
+P:1582                   -- P:1525                   [E:2288]
+P:1638                   -- P:1579                   [E:2370]
+P:1642                   -- P:1585                   [E:2378]
+S:1738                   -- P:1637                   [E:2577]
+
+Decision: QM_F06_UPPER_V4_SECOND_HEAVY_SHELL_AUDITED_FINAL_CLOSURE_PENDING
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_second_shell/QM_F06_UPPER_V4_SECOND_SHELL_AUDIT.json
+Cuts: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_second_shell/QM_F06_UPPER_V4_second_shell_cuts.csv
+V4 construction authorized: False

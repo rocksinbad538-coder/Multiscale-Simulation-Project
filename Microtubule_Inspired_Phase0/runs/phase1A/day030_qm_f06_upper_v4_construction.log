@@ -1,0 +1,22 @@
+==============================================================================
+QM_F06 UPPER V4 CONSTRUCTION
+==============================================================================
+Retained V3 atoms: 27
+Restored real atoms: 12
+New artificial caps: 7
+Final atom count: 46
+Composition: {'B': 15, 'N': 11, 'H': 20}
+
+Atom-count gate: True
+Composition gate: True
+Defective-cap removal gate: True
+Restored-atom gate: True
+New-cap gate: True
+
+Decision: QM_F06_UPPER_V4_START_GEOMETRY_CONSTRUCTED_PRE_QM_AUDIT_REQUIRED
+XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_construction/QM_F06_UPPER_V4_start.xyz
+Map: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_construction/QM_F06_UPPER_V4_atom_role_provenance_map.csv
+Caps: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_construction/QM_F06_UPPER_V4_artificial_caps.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_construction/QM_F06_UPPER_V4_CONSTRUCTION_REPORT.json
+Pre-QM audit authorized: True
+ORCA execution authorized: False

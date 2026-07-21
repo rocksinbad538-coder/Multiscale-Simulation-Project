@@ -1,0 +1,40 @@
+==============================================================================
+QM_F06 UPPER V4 EXECUTION PREFLIGHT
+==============================================================================
+input_preparation_decision                : PASS
+input_preparation_overall_pass            : PASS
+input_preparation_authorization           : PASS
+source_hashes_match_report                : PASS
+post_copy_input_hash                      : PASS
+post_copy_xyz_hash                        : PASS
+post_copy_constraint_map_hash             : PASS
+post_copy_report_hash                     : PASS
+keyword_line                              : PASS
+charge                                    : PASS
+multiplicity                              : PASS
+nprocs                                    : PASS
+maxcore                                   : PASS
+scf_maxiter                               : PASS
+geom_maxiter                              : PASS
+coordinate_count                          : PASS
+input_fixed_indices                       : PASS
+map_fixed_indices                         : PASS
+fixed_mobile_partition                    : PASS
+fresh_scf                                 : PASS
+orca_available                            : PASS
+
+Charge / multiplicity: 0 1
+nprocs: 4
+maxcore: 2500
+Coordinate count: 46
+Fixed indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16]
+Forbidden reuse hits: {'moread': False, 'moinp': False, 'gbw_reference': False}
+ORCA executable: /Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca
+
+Decision: QM_F06_UPPER_V4_EXECUTION_PREFLIGHT_PASS
+Execution directory: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_executions/v4_20260721T203656Z
+Manifest: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_executions/v4_20260721T203656Z/QM_F06_UPPER_V4_EXECUTION_MANIFEST.json
+Launch script: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_executions/v4_20260721T203656Z/run_v4_supervised.sh
+
+ORCA execution prepared: True
+ORCA execution started: False

@@ -1,0 +1,33 @@
+==============================================================================
+QM_F06 UPPER V3-A RESTART4 PREFLIGHT
+==============================================================================
+ORCA: /Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca
+Input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/QM_F06_UPPER_BOUNDARY_V3/orca_v3_workflow/restart4/v3a_restart4.inp
+Input SHA256: 6267fac0b2059f4587140eb260592fc33b47d35f6f1d96d28ebacb44cadf52d6
+Execution requested: True
+
+nprocs_4                              : True
+maxcore_2500                          : True
+contains_opt                          : True
+contains_pbe0_d4                      : True
+contains_def2_tzvp                    : True
+contains_rijcosx                      : True
+fresh_scf_guess                       : True
+gbw_not_reused                        : True
+restart_prepared                      : True
+restart_not_executed                  : True
+input_hash_matches                    : True
+
+Preflight decision: PASS
+
+Return code: -15
+Normal termination: False
+SCF converged: True
+Geometry converged: False
+Execution gate: FAIL
+Traceback (most recent call last):
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/run_day028_qm_f06_upper_v3a_restart4.py", line 280, in <module>
+    main()
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/run_day028_qm_f06_upper_v3a_restart4.py", line 256, in main
+    raise RuntimeError(
+RuntimeError: Restart4 failed. Inspect /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_boundary_v3a_restart4_executions/restart4_20260720T111123

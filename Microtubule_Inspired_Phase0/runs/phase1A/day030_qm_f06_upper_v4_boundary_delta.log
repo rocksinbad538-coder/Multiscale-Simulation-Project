@@ -1,0 +1,26 @@
+==============================================================================
+QM_F06 UPPER V4 BOUNDARY-DELTA AUDIT
+==============================================================================
+Baseline V3 heavy cuts: 9
+Proposed V4 heavy cuts: 13
+Pre-existing V3 cuts: 7
+Cuts closed by V4: 2
+Genuinely new V4 cuts: 6
+Newly exposed heavy atoms: ['P:1580', 'P:1582', 'P:1638', 'P:1642', 'S:1738']
+
+NEW V4 HEAVY-HEAVY CUTS
+P:1581                   -- P:1580                   [E:2371]
+P:1581                   -- P:1638                   [E:2372]
+P:1583                   -- P:1582                   [E:2374]
+P:1583                   -- P:1642                   [E:2376]
+P:1639                   -- P:1638                   [E:2440]
+P:1639                   -- S:1738                   [E:2578]
+
+CUTS CLOSED BY V4
+P:1641                   -- P:1640                   [E:2441]
+P:1641                   -- S:1739                   [E:2580]
+
+Decision: QM_F06_UPPER_V4_BOUNDARY_DELTA_DEFINED_CLOSURE_CLASSIFICATION_PENDING
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_boundary_delta/QM_F06_UPPER_V4_BOUNDARY_DELTA.json
+CSV: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_boundary_delta/QM_F06_UPPER_V4_boundary_cut_delta.csv
+V4 construction authorized: False

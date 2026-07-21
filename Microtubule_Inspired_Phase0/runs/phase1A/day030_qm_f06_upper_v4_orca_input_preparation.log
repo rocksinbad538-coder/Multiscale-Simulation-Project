@@ -1,0 +1,33 @@
+==============================================================================
+QM_F06 UPPER V4 ORCA INPUT PREPARATION
+==============================================================================
+constraint_report_authorization       : PASS
+pre_qm_structural_gate                : PASS
+template_keyword_line                 : PASS
+template_parameters                   : PASS
+template_fresh_scf                    : PASS
+atom_count                            : PASS
+composition                           : PASS
+charge                                : PASS
+multiplicity                          : PASS
+electron_parity                       : PASS
+fixed_indices                         : PASS
+fixed_mobile_partition                : PASS
+prepared_fresh_scf                    : PASS
+
+Atom count: 46
+Composition: {'B': 15, 'N': 11, 'H': 20}
+Electron count: 172
+Charge / multiplicity: 0 1
+Fixed atoms: 15
+Mobile atoms: 31
+Fixed indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16]
+Fresh-SCF hits: {'moread': False, 'moinp': False, 'gbw_reference': False}
+
+Decision: QM_F06_UPPER_V4_ORCA_INPUT_PREPARED_EXECUTION_PREFLIGHT_REQUIRED
+Input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_orca_input/v4.inp
+XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_orca_input/v4_start.xyz
+Constraint map: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_orca_input/QM_F06_UPPER_V4_constraint_map.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_orca_input/QM_F06_UPPER_V4_ORCA_INPUT_PREPARATION.json
+Execution preflight authorized: True
+ORCA execution authorized: False

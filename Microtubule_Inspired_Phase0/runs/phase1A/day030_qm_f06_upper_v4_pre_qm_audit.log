@@ -1,0 +1,27 @@
+==============================================================================
+QM_F06 UPPER V4 PRE-QM STRUCTURAL AUDIT
+==============================================================================
+construction_report                     : PASS
+atom_count                              : PASS
+composition                             : PASS
+map_consistency                         : PASS
+single_connected_component              : PASS
+nominal_valence                         : PASS
+artificial_cap_geometry                 : PASS
+S1738_BH2_geometry                      : PASS
+no_unresolved_hard_contacts             : PASS
+
+Composition: {'B': 15, 'N': 11, 'H': 20}
+Atom count: 46
+S:1738 H-B-H angle deg: 94.8573138785082
+Hard contacts: 0
+Valence failures: 0
+Cap failures: 0
+
+Decision: QM_F06_UPPER_V4_PRE_QM_STRUCTURAL_GATE_PASS_CONSTRAINT_DESIGN_AUTHORIZED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_pre_qm_audit/QM_F06_UPPER_V4_PRE_QM_AUDIT.json
+Valence: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_pre_qm_audit/QM_F06_UPPER_V4_valence.csv
+Caps: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_pre_qm_audit/QM_F06_UPPER_V4_cap_audit.csv
+Contacts: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_pre_qm_audit/QM_F06_UPPER_V4_contacts.csv
+Constraint design authorized: True
+ORCA execution authorized: False

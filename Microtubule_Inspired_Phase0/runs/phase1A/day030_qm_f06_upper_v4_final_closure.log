@@ -1,0 +1,30 @@
+==============================================================================
+QM_F06 UPPER V4 FINAL-CLOSURE AUDIT
+==============================================================================
+All boundary centers are B: True
+All direct B-H closures topologically valid: True
+Total artificial H caps required: 8
+Cap-count distribution: {2: 3, 1: 2}
+Shared high-leverage outside atoms: ['P:1523']
+
+BOUNDARY CENTERS
+P:1580       element=B retained_heavy=1 cut_heavy=2 H_caps=2 coord=3 pass=True
+P:1582       element=B retained_heavy=1 cut_heavy=2 H_caps=2 coord=3 pass=True
+P:1638       element=B retained_heavy=2 cut_heavy=1 H_caps=1 coord=3 pass=True
+P:1642       element=B retained_heavy=2 cut_heavy=1 H_caps=1 coord=3 pass=True
+S:1738       element=B retained_heavy=1 cut_heavy=2 H_caps=2 coord=3 pass=True
+
+OUTSIDE ATOM LEVERAGE
+BR4:UPPER:14:1           centers=1 S:1738
+P:1521                   centers=1 P:1580
+P:1523                   centers=2 P:1580|P:1582
+P:1525                   centers=1 P:1582
+P:1579                   centers=1 P:1638
+P:1585                   centers=1 P:1642
+P:1637                   centers=1 S:1738
+
+Decision: QM_F06_UPPER_V4_DIRECT_BH_CLOSURE_TOPOLOGICALLY_POSSIBLE_CHEMICAL_PRECEDENT_COMPARISON_PENDING
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_final_closure/QM_F06_UPPER_V4_FINAL_CLOSURE_AUDIT.json
+Boundary CSV: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_final_closure/QM_F06_UPPER_V4_boundary_centers.csv
+Outside CSV: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_final_closure/QM_F06_UPPER_V4_outside_atom_leverage.csv
+V4 construction authorized: False

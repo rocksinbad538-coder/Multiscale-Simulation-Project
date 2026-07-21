@@ -1,0 +1,28 @@
+==============================================================================
+QM_F06 UPPER V4 RIGID-ALIGNMENT AUDIT
+==============================================================================
+Shared atoms: 21
+Unaligned mean distance A: 93.96540381940353
+Unaligned maximum distance A: 94.23928886822165
+Aligned RMSD A: 0.2743043292342625
+Aligned maximum residual A: 0.9209432497621896
+Rotation determinant: 0.9999999999999996
+Reflection corrected: False
+Alignment gate: FAIL
+Restored bonds: PASS
+
+Rotation matrix:
+[[ 0.9999555   0.00737047 -0.00588914]
+ [-0.00732581  0.99994452  0.00756877]
+ [ 0.0059446  -0.00752529  0.99995401]]
+
+Translation vector A:
+[-38.35182595 -25.74865506 -81.82412367]
+
+Decision: QM_F06_UPPER_V4_RIGID_ALIGNMENT_FAIL_CONSTRUCTION_BLOCKED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_rigid_alignment/QM_F06_UPPER_V4_RIGID_ALIGNMENT_AUDIT.json
+Shared residuals: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_rigid_alignment/QM_F06_UPPER_V4_shared_atom_aligned_residuals.csv
+Transformed source: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_rigid_alignment/QM_F06_UPPER_V4_transformed_source_coordinates.csv
+Restored bonds: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_rigid_alignment/QM_F06_UPPER_V4_transformed_restored_bonds.csv
+V4 construction authorized: False
+ORCA execution authorized: False

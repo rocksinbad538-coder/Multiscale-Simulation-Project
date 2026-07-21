@@ -1,0 +1,58 @@
+==============================================================================
+QM_F06 UPPER BOUNDARY V3-A ORCA PREFLIGHT
+==============================================================================
+ORCA: /Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca
+ORCA SHA256: f9043192a31496e4931fa60df69b513f3922c7510c462e3934e3e2dd16d3e5f0
+Input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_transferability/QM_F06_UPPER_BOUNDARY_V3/orca_v3_workflow/v3a_boundary_relax.inp
+Input SHA256: 71a67b78d3ac5f213740380ff785ee360c7f3b31697fa3a809fb966108a24f98
+Execution requested: True
+
+Input checks:
+  atom_count_30                             : True
+  charge_zero                               : True
+  multiplicity_one                          : True
+  constraint_count_20                       : True
+  constraint_indices_unique                 : True
+  constraint_indices_in_range               : True
+  nprocs_6                                  : True
+  maxcore_2500                              : True
+  contains_pbe0                             : True
+  contains_d4                               : True
+  contains_def2_tzvp                        : True
+  contains_def2_j                           : True
+  contains_rijcosx                          : True
+  contains_tightscf                         : True
+  contains_opt                              : True
+  contains_defgrid3                         : True
+  no_obsolete_grid                          : True
+
+Workflow-state checks:
+  pre_qm_gate_pass                          : True
+  v3a_input_prepared                        : True
+  v3a_not_executed                          : True
+  fixed_atom_count_20                       : True
+  mobile_atom_count_10                      : True
+  nprocs_6                                  : True
+  maxcore_2500                              : True
+  nominal_total_maxcore_15000               : True
+  input_hash_matches_state                  : True
+  memory_gate_pass                          : True
+
+Preflight decision: PASS
+
+==============================================================================
+EXECUTING QM_F06 UPPER BOUNDARY V3-A
+==============================================================================
+Execution directory: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_boundary_v3a_executions/v3a_20260717T160520
+Return code: 0
+Normal termination: False
+SCF converged: True
+Geometry converged: False
+Final energy: -590.405885379486
+V3-A execution gate: FAIL
+Traceback (most recent call last):
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/run_day028_qm_f06_upper_boundary_v3a_orca.py", line 514, in <module>
+    main()
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/run_day028_qm_f06_upper_boundary_v3a_orca.py", line 485, in main
+    raise RuntimeError(
+RuntimeError: UPPER V3-A execution failed validation. Inspect /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day028_qm_f06_upper_boundary_v3a_executions/v3a_20260717T160520

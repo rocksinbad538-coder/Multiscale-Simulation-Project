@@ -1,0 +1,92 @@
+==============================================================================
+BOUNDARY MOTIF PRECEDENT INVENTORY
+==============================================================================
+Total XYZ motifs: 1233
+LOWER motifs: 138
+
+ALL
+B-H     : 510
+B-H2    : 119
+N-H     : 483
+N-H2    : 116
+
+LOWER
+B-H     : 32
+B-H2    : 30
+N-H     : 39
+N-H2    : 37
+
+LOWER B-H2 / N-H examples:
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/QM_F06_LOWER.xyz | center=4 | heavy=2 | H=1.01000000
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/QM_F06_LOWER.xyz | center=6 | heavy=3 | H=1.01000000
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/QM_F06_LOWER_CAPPED.xyz | center=4 | heavy=2 | H=1.01000000
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/QM_F06_LOWER_CAPPED.xyz | center=6 | heavy=3 | H=1.01000000
+B-H2  | runs/phase1A/day026_qm_reference_catalog/QM_F06/QM_F06_LOWER_CAPPED.xyz | center=11 | heavy=1 | H=1.19000000|1.19000000
+B-H2  | runs/phase1A/day026_qm_reference_catalog/QM_F06/QM_F06_LOWER_CAPPED.xyz | center=12 | heavy=2 | H=1.19000000|1.19000000
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/QM_F06_LOWER_CAPPED_REPAIRED.xyz | center=4 | heavy=2 | H=1.01000000
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/QM_F06_LOWER_CAPPED_REPAIRED.xyz | center=6 | heavy=3 | H=1.01000000
+B-H2  | runs/phase1A/day026_qm_reference_catalog/QM_F06/QM_F06_LOWER_CAPPED_REPAIRED.xyz | center=11 | heavy=1 | H=1.19000000|1.19000000
+B-H2  | runs/phase1A/day026_qm_reference_catalog/QM_F06/QM_F06_LOWER_CAPPED_REPAIRED.xyz | center=12 | heavy=2 | H=1.19000000|1.19000000
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage1_20260715T162144/stage1.xyz | center=4 | heavy=3 | H=1.01696098
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage1_20260715T162144/stage1.xyz | center=6 | heavy=2 | H=1.00351643
+B-H2  | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage1_20260715T162144/stage1.xyz | center=11 | heavy=1 | H=1.18999990|1.19000010
+B-H2  | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage1_20260715T162144/stage1.xyz | center=12 | heavy=2 | H=1.18999971|1.18999993
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage1_20260715T162144/stage1_trj.xyz | center=4 | heavy=2 | H=1.01000011
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage1_20260715T162144/stage1_trj.xyz | center=6 | heavy=3 | H=1.00999959
+B-H2  | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage1_20260715T162144/stage1_trj.xyz | center=11 | heavy=1 | H=1.18999992|1.19000000
+B-H2  | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage1_20260715T162144/stage1_trj.xyz | center=12 | heavy=2 | H=1.18999989|1.19000000
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_workflow_dry_run/QM_F06_LOWER_CAPPED_REPAIRED_MOCK_STAGE1_OPT.xyz | center=4 | heavy=2 | H=1.01000000
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_workflow_dry_run/QM_F06_LOWER_CAPPED_REPAIRED_MOCK_STAGE1_OPT.xyz | center=6 | heavy=3 | H=1.01000000
+B-H2  | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_workflow_dry_run/QM_F06_LOWER_CAPPED_REPAIRED_MOCK_STAGE1_OPT.xyz | center=11 | heavy=1 | H=1.19000000|1.19000000
+B-H2  | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_workflow_dry_run/QM_F06_LOWER_CAPPED_REPAIRED_MOCK_STAGE1_OPT.xyz | center=12 | heavy=2 | H=1.19000000|1.19000000
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_workflow_dry_run/QM_F06_LOWER_CAPPED_REPAIRED_MOCK_STAGE2_OPT.xyz | center=4 | heavy=2 | H=1.01000000
+N-H   | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_workflow_dry_run/QM_F06_LOWER_CAPPED_REPAIRED_MOCK_STAGE2_OPT.xyz | center=6 | heavy=3 | H=1.01000000
+B-H2  | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_workflow_dry_run/QM_F06_LOWER_CAPPED_REPAIRED_MOCK_STAGE2_OPT.xyz | center=11 | heavy=1 | H=1.19000000|1.19000000
+B-H2  | runs/phase1A/day026_qm_reference_catalog/QM_F06/orca_workflow_dry_run/QM_F06_LOWER_CAPPED_REPAIRED_MOCK_STAGE2_OPT.xyz | center=12 | heavy=2 | H=1.19000000|1.19000000
+N-H   | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/QM_F06_LOWER_BOUNDARY_V2.xyz | center=2 | heavy=3 | H=1.01244297
+N-H   | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/QM_F06_LOWER_BOUNDARY_V2.xyz | center=4 | heavy=3 | H=1.01713476
+N-H   | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/QM_F06_LOWER_BOUNDARY_V2.xyz | center=6 | heavy=2 | H=1.00230678
+B-H2  | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/QM_F06_LOWER_BOUNDARY_V2.xyz | center=11 | heavy=1 | H=1.19854672|1.20263150
+B-H2  | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/QM_F06_LOWER_BOUNDARY_V2.xyz | center=12 | heavy=2 | H=1.21227730|1.22572682
+N-H   | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/cap02_repair/QM_F06_LOWER_BOUNDARY_V2_REPAIRED.xyz | center=2 | heavy=3 | H=1.01244297
+N-H   | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/cap02_repair/QM_F06_LOWER_BOUNDARY_V2_REPAIRED.xyz | center=4 | heavy=3 | H=1.01713476
+N-H   | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/cap02_repair/QM_F06_LOWER_BOUNDARY_V2_REPAIRED.xyz | center=6 | heavy=2 | H=1.00230678
+B-H2  | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/cap02_repair/QM_F06_LOWER_BOUNDARY_V2_REPAIRED.xyz | center=11 | heavy=1 | H=1.19854672|1.20263150
+B-H2  | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/cap02_repair/QM_F06_LOWER_BOUNDARY_V2_REPAIRED.xyz | center=12 | heavy=2 | H=1.21227730|1.22572682
+N-H   | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_executions/v2a_20260716T143932/v2a_boundary_relax.xyz | center=2 | heavy=3 | H=1.01244303
+N-H   | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_executions/v2a_20260716T143932/v2a_boundary_relax.xyz | center=4 | heavy=3 | H=1.01713477
+N-H   | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_executions/v2a_20260716T143932/v2a_boundary_relax.xyz | center=6 | heavy=2 | H=1.00230678
+B-H2  | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_executions/v2a_20260716T143932/v2a_boundary_relax.xyz | center=11 | heavy=1 | H=1.19854672|1.20263150
+B-H2  | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_executions/v2a_20260716T143932/v2a_boundary_relax.xyz | center=12 | heavy=2 | H=1.21227730|1.22572682
+N-H   | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_executions/v2a_20260716T143932/v2a_boundary_relax_trj.xyz | center=2 | heavy=3 | H=1.01244300
+N-H   | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_executions/v2a_20260716T143932/v2a_boundary_relax_trj.xyz | center=4 | heavy=3 | H=1.01713501
+N-H   | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_executions/v2a_20260716T143932/v2a_boundary_relax_trj.xyz | center=6 | heavy=2 | H=1.00230699
+B-H2  | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_executions/v2a_20260716T143932/v2a_boundary_relax_trj.xyz | center=11 | heavy=1 | H=1.19854627|1.20263169
+B-H2  | runs/phase1A/day027_qm_f06_lower_boundary_redesign/QM_F06_LOWER_BOUNDARY_V2/orca_v2_executions/v2a_20260716T143932/v2a_boundary_relax_trj.xyz | center=12 | heavy=2 | H=1.21227778|1.22572629
+N-H   | runs/phase1A/day027_qm_f06_orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage2_20260716T112154/stage2.xyz | center=4 | heavy=3 | H=1.01713476
+N-H   | runs/phase1A/day027_qm_f06_orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage2_20260716T112154/stage2.xyz | center=6 | heavy=2 | H=1.00230678
+B-H2  | runs/phase1A/day027_qm_f06_orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage2_20260716T112154/stage2.xyz | center=11 | heavy=1 | H=1.19854672|1.20263150
+B-H2  | runs/phase1A/day027_qm_f06_orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage2_20260716T112154/stage2.xyz | center=12 | heavy=2 | H=1.21227730|1.22572682
+N-H   | runs/phase1A/day027_qm_f06_orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage2_20260716T112154/stage2_trj.xyz | center=4 | heavy=3 | H=1.01696090
+N-H   | runs/phase1A/day027_qm_f06_orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage2_20260716T112154/stage2_trj.xyz | center=6 | heavy=2 | H=1.00351577
+B-H2  | runs/phase1A/day027_qm_f06_orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage2_20260716T112154/stage2_trj.xyz | center=11 | heavy=1 | H=1.18999992|1.19000000
+B-H2  | runs/phase1A/day027_qm_f06_orca_executions/QM_F06_LOWER_CAPPED_REPAIRED/stage2_20260716T112154/stage2_trj.xyz | center=12 | heavy=2 | H=1.19000000|1.19000051
+N-H   | runs/phase1A/day028_qm_f06_lower_boundary_v2b_electronic_diagnostic/orca_executions/electronic_diagnostic_20260717T123545/diagnostic.chelpg.xyz | center=2 | heavy=3 | H=1.02398145
+N-H   | runs/phase1A/day028_qm_f06_lower_boundary_v2b_electronic_diagnostic/orca_executions/electronic_diagnostic_20260717T123545/diagnostic.chelpg.xyz | center=4 | heavy=3 | H=1.01739332
+N-H   | runs/phase1A/day028_qm_f06_lower_boundary_v2b_electronic_diagnostic/orca_executions/electronic_diagnostic_20260717T123545/diagnostic.chelpg.xyz | center=6 | heavy=2 | H=1.00359524
+B-H2  | runs/phase1A/day028_qm_f06_lower_boundary_v2b_electronic_diagnostic/orca_executions/electronic_diagnostic_20260717T123545/diagnostic.chelpg.xyz | center=11 | heavy=1 | H=1.19944025|1.20409685
+B-H2  | runs/phase1A/day028_qm_f06_lower_boundary_v2b_electronic_diagnostic/orca_executions/electronic_diagnostic_20260717T123545/diagnostic.chelpg.xyz | center=12 | heavy=2 | H=1.21167847|1.21507078
+N-H   | runs/phase1A/day028_qm_f06_lower_boundary_v2b_executions/v2b_20260717T101410/v2b_partial_relax.xyz | center=2 | heavy=3 | H=1.02398109
+N-H   | runs/phase1A/day028_qm_f06_lower_boundary_v2b_executions/v2b_20260717T101410/v2b_partial_relax.xyz | center=4 | heavy=3 | H=1.01739310
+N-H   | runs/phase1A/day028_qm_f06_lower_boundary_v2b_executions/v2b_20260717T101410/v2b_partial_relax.xyz | center=6 | heavy=2 | H=1.00359547
+B-H2  | runs/phase1A/day028_qm_f06_lower_boundary_v2b_executions/v2b_20260717T101410/v2b_partial_relax.xyz | center=11 | heavy=1 | H=1.19944015|1.20409654
+B-H2  | runs/phase1A/day028_qm_f06_lower_boundary_v2b_executions/v2b_20260717T101410/v2b_partial_relax.xyz | center=12 | heavy=2 | H=1.21167835|1.21507037
+N-H   | runs/phase1A/day028_qm_f06_lower_boundary_v2b_executions/v2b_20260717T101410/v2b_partial_relax_trj.xyz | center=2 | heavy=3 | H=1.01244300
+N-H   | runs/phase1A/day028_qm_f06_lower_boundary_v2b_executions/v2b_20260717T101410/v2b_partial_relax_trj.xyz | center=4 | heavy=3 | H=1.01713501
+N-H   | runs/phase1A/day028_qm_f06_lower_boundary_v2b_executions/v2b_20260717T101410/v2b_partial_relax_trj.xyz | center=6 | heavy=2 | H=1.00230699
+B-H2  | runs/phase1A/day028_qm_f06_lower_boundary_v2b_executions/v2b_20260717T101410/v2b_partial_relax_trj.xyz | center=11 | heavy=1 | H=1.19854627|1.20263169
+B-H2  | runs/phase1A/day028_qm_f06_lower_boundary_v2b_executions/v2b_20260717T101410/v2b_partial_relax_trj.xyz | center=12 | heavy=2 | H=1.21227778|1.22572629
+
+Inventory: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_final_closure/QM_F06_BOUNDARY_MOTIF_PRECEDENT_INVENTORY.csv
+Chemical precedent accepted: False
+V4 construction authorized: False

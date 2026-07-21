@@ -1,0 +1,23 @@
+==============================================================================
+QM_F06 UPPER V4 CONSTRAINT DESIGN
+==============================================================================
+atom_count                            : PASS
+exclusive_fixed_mobile                : PASS
+all_artificial_caps_mobile            : PASS
+all_restored_real_atoms_mobile        : PASS
+no_artificial_cap_fixed               : PASS
+nonempty_fixed_core                   : PASS
+nonempty_mobile_region                : PASS
+
+Atom count: 46
+Fixed atoms: 15
+Mobile atoms: 31
+Artificial caps: 13
+Restored real atoms: 12
+Fixed indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16]
+
+Decision: QM_F06_UPPER_V4_CONSTRAINT_DESIGN_PASS_ORCA_INPUT_PREPARATION_AUTHORIZED
+Map: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_constraint_design/QM_F06_UPPER_V4_constraint_map.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_constraint_design/QM_F06_UPPER_V4_CONSTRAINT_DESIGN.json
+ORCA input preparation authorized: True
+ORCA execution authorized: False

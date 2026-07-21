@@ -1,0 +1,17 @@
+==========================================================================================
+QM_F06 UPPER V4 ALIGNMENT-SUBSET AUDIT
+==========================================================================================
+ALL_SHARED_REAL                    n=21 RMSD=0.27430432923426235 MAX=0.9209432497621914 EVALUATED
+FIXED_SHARED_REAL                  n=15 RMSD=1.0964700428624779e-05 MAX=2.4252321097648248e-05 EVALUATED
+MOBILE_SHARED_REAL                 n= 6 RMSD=0.36901377544688363 MAX=0.5655750371115927 EVALUATED
+FIXED_PARENT_HBN                   n= 2 RMSD=                   MAX=                   INSUFFICIENT_ATOMS
+FIXED_RETAINED_VALIDATED_CORE      n=14 RMSD=1.1320252089764987e-05 MAX=2.4287771953379156e-05 EVALUATED
+
+Best subset: FIXED_SHARED_REAL
+Best RMSD A: 1.0964700428624779e-05
+Best maximum residual A: 2.4252321097648248e-05
+
+Decision: QM_F06_UPPER_V4_ALIGNMENT_SUBSETS_AUDITED_ANCHOR_SELECTION_PENDING
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_alignment_subsets/QM_F06_UPPER_V4_ALIGNMENT_SUBSET_AUDIT.json
+CSV: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_alignment_subsets/QM_F06_UPPER_V4_alignment_subset_metrics.csv
+V4 construction authorized: False

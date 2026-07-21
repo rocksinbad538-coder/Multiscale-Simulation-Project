@@ -1,0 +1,23 @@
+==============================================================================
+QM_F06 UPPER V4 P:1523 SELECTIVE-EXPANSION AUDIT
+==============================================================================
+P:1523 element: N
+P:1523 canonical neighbors: ['P:1522', 'P:1580', 'P:1582']
+
+DIRECT B-H CLOSURE
+Artificial H: 8
+Double-H centers: ['P:1580', 'P:1582', 'S:1738']
+N boundary centers: []
+
+P:1523 SELECTIVE EXPANSION
+Artificial H: 7
+Double-H centers: ['S:1738']
+N boundary centers: ['P:1523']
+P:1523 boundary record: {'center': 'P:1523', 'element': 'N', 'retained_heavy_degree': 2, 'outside_heavy_degree': 1, 'outside_heavy_neighbors': 'P:1522', 'artificial_h_caps_required': 1, 'nominal_coordination_after_caps': 3, 'geminal_double_H_cap': False}
+Artificial-H reduction: 1
+
+Decision: QM_F06_UPPER_V4_P1523_SELECTIVE_EXPANSION_AUDITED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_p1523_selective_expansion/QM_F06_UPPER_V4_P1523_SELECTIVE_EXPANSION.json
+Comparison: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_p1523_selective_expansion/QM_F06_UPPER_V4_P1523_boundary_comparison.csv
+Strategy selected: False
+V4 construction authorized: False

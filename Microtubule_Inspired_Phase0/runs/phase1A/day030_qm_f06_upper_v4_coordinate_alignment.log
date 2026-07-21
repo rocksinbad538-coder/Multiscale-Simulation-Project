@@ -1,0 +1,32 @@
+==============================================================================
+QM_F06 UPPER V4 COORDINATE-ALIGNMENT AUDIT
+==============================================================================
+Source: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_selected_four_atom_refined_full_coordinates.csv
+Mandatory V4 atoms: 12
+Shared real atoms checked: 21
+Maximum shared coordinate delta A: 94.23928886822165
+Shared alignment: FAIL
+Restored bond gate: PASS
+
+RESTORED BONDS
+P:1641                 -- P:1640                 1.45000000 Å B-N          PASS
+P:1641                 -- S:1739                 1.44973000 Å B-N          PASS
+P:1640                 -- P:1581                 1.45141310 Å B-N          PASS
+P:1640                 -- P:1583                 1.45117194 Å B-N          PASS
+S:1739                 -- P:1639                 1.44973000 Å B-N          PASS
+P:1581                 -- P:1580                 1.45000000 Å B-N          PASS
+P:1581                 -- P:1638                 1.45787517 Å B-N          PASS
+P:1583                 -- P:1582                 1.45000000 Å B-N          PASS
+P:1583                 -- P:1642                 1.45062056 Å B-N          PASS
+P:1639                 -- P:1638                 1.45000000 Å B-N          PASS
+P:1639                 -- S:1738                 1.44973000 Å B-N          PASS
+P:1580                 -- P:1523                 1.44640935 Å B-N          PASS
+P:1582                 -- P:1523                 1.44616735 Å B-N          PASS
+S:1739                 -- H4:UPPER:0203:0        1.19000000 Å REAL_R2_B-H  PASS
+
+Decision: QM_F06_UPPER_V4_COORDINATE_ALIGNMENT_FAIL_CONSTRUCTION_BLOCKED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_coordinate_alignment/QM_F06_UPPER_V4_COORDINATE_ALIGNMENT_AUDIT.json
+Shared CSV: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_coordinate_alignment/QM_F06_UPPER_V4_shared_atom_coordinate_deltas.csv
+Bonds CSV: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_coordinate_alignment/QM_F06_UPPER_V4_restored_bond_lengths.csv
+V4 construction authorized: False
+ORCA execution authorized: False

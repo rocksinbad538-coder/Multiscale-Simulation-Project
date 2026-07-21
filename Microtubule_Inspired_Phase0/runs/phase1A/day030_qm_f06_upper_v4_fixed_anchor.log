@@ -1,0 +1,19 @@
+==============================================================================
+QM_F06 UPPER V4 FIXED-ANCHOR FINALIZATION
+==============================================================================
+Anchor: FIXED_SHARED_REAL
+Anchor atoms: 15
+RMSD A: 1.096470042830914e-05
+Maximum residual A: 2.4252321097080356e-05
+Rotation determinant: 1.0000000000000009
+Anchor gate: PASS
+Restored bonds: PASS
+Selected transformed atoms: 12
+
+Decision: QM_F06_UPPER_V4_FIXED_ANCHOR_PASS_TRANSFORMED_RESTORATION_COORDINATES_AUTHORIZED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_fixed_anchor/QM_F06_UPPER_V4_FIXED_ANCHOR_REPORT.json
+Anchor residuals: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_fixed_anchor/QM_F06_UPPER_V4_fixed_anchor_residuals.csv
+Selected transformed coordinates: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_fixed_anchor/QM_F06_UPPER_V4_selected_transformed_coordinates.csv
+Restored bonds: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_fixed_anchor/QM_F06_UPPER_V4_fixed_anchor_restored_bonds.csv
+V4 construction authorized: True
+ORCA execution authorized: False

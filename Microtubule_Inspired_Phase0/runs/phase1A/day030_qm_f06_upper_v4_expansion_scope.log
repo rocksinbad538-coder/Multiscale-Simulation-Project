@@ -1,0 +1,14 @@
+==============================================================================
+QM_F06 UPPER V4 EXPANSION-SCOPE AUDIT
+==============================================================================
+Central-neighbor gate: PASS
+Defective caps removed: ['HCAP:UPPER:01', 'HCAP:UPPER:04']
+Mandatory restoration: ['H4:UPPER:0203:0', 'P:1581', 'P:1583', 'P:1639', 'P:1640', 'S:1739']
+Newly exposed heavy atoms: ['A:UPPER:10:2', 'A:UPPER:10:6', 'A:UPPER:13:1', 'A:UPPER:7:3', 'A:UPPER:7:5', 'P:1580', 'P:1582', 'P:1638', 'P:1642', 'S:1711', 'S:1738']
+Exposed heavy-heavy cuts: 13
+
+Decision: QM_F06_UPPER_V4_FIRST_SHELL_DEFINED_OUTER_BOUNDARY_CLOSURE_PENDING
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_expansion_scope/QM_F06_UPPER_V4_EXPANSION_SCOPE.json
+Nodes: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_expansion_scope/QM_F06_UPPER_V4_candidate_nodes.csv
+Edges: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day030_qm_f06_upper_v4_expansion_scope/QM_F06_UPPER_V4_candidate_edges.csv
+V4 construction authorized: False
