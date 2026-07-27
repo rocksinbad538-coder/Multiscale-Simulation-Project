@@ -1,0 +1,37 @@
+==============================================================================================================
+QM_F06 UPPER V5 SELECTIVE-SUBSET AUDIT
+==============================================================================================================
+Candidate atoms: ['A:UPPER:10:2', 'A:UPPER:13:1', 'BR4:UPPER:14:1', 'BR4:UPPER:14:2', 'P:1636', 'P:1637', 'S:1737']
+Subsets evaluated: 128
+V4 baseline cuts: 13
+
+TOP 15 SUBSETS
+rank=  1 added=3 cuts=14 closed= 2 new= 3 target_remaining=0 multi_centers= 1 BR4:UPPER:14:1+P:1637+S:1737
+rank=  2 added=4 cuts=14 closed= 2 new= 3 target_remaining=0 multi_centers= 1 BR4:UPPER:14:1+BR4:UPPER:14:2+P:1637+S:1737
+rank=  3 added=2 cuts=14 closed= 2 new= 3 target_remaining=0 multi_centers= 2 BR4:UPPER:14:1+P:1637
+rank=  4 added=3 cuts=14 closed= 2 new= 3 target_remaining=0 multi_centers= 2 BR4:UPPER:14:1+BR4:UPPER:14:2+P:1637
+rank=  5 added=3 cuts=15 closed= 2 new= 4 target_remaining=0 multi_centers= 2 BR4:UPPER:14:1+P:1636+P:1637
+rank=  6 added=4 cuts=15 closed= 2 new= 4 target_remaining=0 multi_centers= 2 BR4:UPPER:14:1+BR4:UPPER:14:2+P:1636+P:1637
+rank=  7 added=4 cuts=15 closed= 2 new= 4 target_remaining=0 multi_centers= 2 BR4:UPPER:14:1+P:1636+P:1637+S:1737
+rank=  8 added=5 cuts=15 closed= 2 new= 4 target_remaining=0 multi_centers= 2 BR4:UPPER:14:1+BR4:UPPER:14:2+P:1636+P:1637+S:1737
+rank=  9 added=4 cuts=15 closed= 3 new= 5 target_remaining=0 multi_centers= 2 A:UPPER:10:2+BR4:UPPER:14:1+P:1637+S:1737
+rank= 10 added=4 cuts=15 closed= 3 new= 5 target_remaining=0 multi_centers= 2 A:UPPER:13:1+BR4:UPPER:14:1+P:1637+S:1737
+rank= 11 added=5 cuts=15 closed= 3 new= 5 target_remaining=0 multi_centers= 2 A:UPPER:10:2+BR4:UPPER:14:1+BR4:UPPER:14:2+P:1637+S:1737
+rank= 12 added=5 cuts=15 closed= 3 new= 5 target_remaining=0 multi_centers= 2 A:UPPER:13:1+BR4:UPPER:14:1+BR4:UPPER:14:2+P:1637+S:1737
+rank= 13 added=3 cuts=15 closed= 3 new= 5 target_remaining=0 multi_centers= 3 A:UPPER:10:2+BR4:UPPER:14:1+P:1637
+rank= 14 added=3 cuts=15 closed= 3 new= 5 target_remaining=0 multi_centers= 3 A:UPPER:13:1+BR4:UPPER:14:1+P:1637
+rank= 15 added=4 cuts=15 closed= 3 new= 5 target_remaining=0 multi_centers= 3 A:UPPER:10:2+BR4:UPPER:14:1+BR4:UPPER:14:2+P:1637
+
+Best ranked subset: BR4:UPPER:14:1+P:1637+S:1737
+Best boundary cuts: 14
+Best target cuts remaining: 0
+Best new cuts versus V4: 3
+
+Decision: QM_F06_UPPER_V5_SELECTIVE_SUBSETS_AUDITED_CHEMICAL_MODEL_SELECTION_PENDING
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5_selective_subsets/QM_F06_UPPER_V5_SELECTIVE_SUBSET_AUDIT.json
+Ranking: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5_selective_subsets/QM_F06_UPPER_V5_selective_subset_ranking.csv
+Top cuts: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5_selective_subsets/QM_F06_UPPER_V5_top_subset_boundary_cuts.csv
+
+V5 model selected: False
+V5 construction authorized: False
+ORCA execution authorized: False

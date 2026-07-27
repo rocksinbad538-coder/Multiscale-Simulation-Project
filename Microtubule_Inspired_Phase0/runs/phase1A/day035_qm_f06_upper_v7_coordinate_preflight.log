@@ -1,0 +1,59 @@
+================================================================================================================
+QM_F06 UPPER V7 COORDINATE AND CAP PREFLIGHT
+================================================================================================================
+boundary_provenance_authorized                  : PASS
+fixed_heavy_anchor_count                        : PASS
+alignment_rmsd                                  : PASS
+alignment_maximum_residual                      : PASS
+all_local_coordinates_available                 : PASS
+required_internal_edges_canonical               : PASS
+required_internal_BN_geometry                   : FAIL
+new_cap_geometry                                : PASS
+
+Fixed heavy anchors: 9
+Alignment RMSD A: 1.3654132201485412e-05
+Alignment maximum residual A: 2.4674116424992027e-05
+Rotation determinant: 1.0
+Reflection corrected: False
+
+Canonical heavy-neighbor inventory:
+
+  A:UPPER:13:1 (N):
+    A:UPPER:11:1                 B  inside_V7=False
+    A:UPPER:14:0                 B  inside_V7=True
+    A:UPPER:14:2                 B  inside_V7=True
+
+  A:UPPER:14:0 (B):
+    A:UPPER:13:-1                N  inside_V7=False
+    A:UPPER:13:1                 N  inside_V7=True
+
+Required internal B-N bonds:
+  A:UPPER:13:1                 -- A:UPPER:14:0                 1.449730 Å | PASS
+  A:UPPER:13:1                 -- A:UPPER:14:2                 2.119761 Å | FAIL
+
+Proposed caps:
+
+  HCAPV7:UPPER:A13_1:A11_1
+    owner: A:UPPER:13:1 (N)
+    omitted outside atom: A:UPPER:11:1 (B)
+    owner distance: 1.010000 Å
+    nearest nonowner heavy atom: A:UPPER:14:0
+    clearance: 2.141505 Å
+    gate: PASS
+
+  HCAPV7:UPPER:A14_0:A13_M1
+    owner: A:UPPER:14:0 (B)
+    omitted outside atom: A:UPPER:13:-1 (N)
+    owner distance: 1.190000 Å
+    nearest nonowner heavy atom: A:UPPER:13:1
+    clearance: 2.289759 Å
+    gate: PASS
+
+Decision: QM_F06_UPPER_V7_COORDINATE_PREFLIGHT_FAIL_REVIEW_REQUIRED
+Coordinates: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7_coordinate_preflight/QM_F06_UPPER_V7_transformed_local_coordinates.csv
+Caps: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7_coordinate_preflight/QM_F06_UPPER_V7_proposed_caps.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7_coordinate_preflight/QM_F06_UPPER_V7_COORDINATE_PREFLIGHT.json
+
+Formal V7 construction authorized: False
+ORCA authorized: False
+RESP authorized: False

@@ -1,0 +1,23 @@
+====================================================================================================
+QM_F06 UPPER V7-A ORCA INPUT PREPARATION
+====================================================================================================
+Coordinate mode: EMBEDDED_XYZ
+Charge: 0
+Multiplicity: 1
+Atom count: 52
+Composition: {'B': 17, 'H': 21, 'N': 14}
+Fixed atoms: 12
+Mobile atoms: 40
+Fixed indices: [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14]
+New/repaired atoms mobile: PASS
+
+Input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_orca_input/v7a.inp
+XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_orca_input/v7a_start.xyz
+Constraint map: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_orca_input/QM_F06_UPPER_V7A_constraint_map.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_orca_input/QM_F06_UPPER_V7A_ORCA_INPUT_REPORT.json
+
+Decision: QM_F06_UPPER_V7A_ORCA_INPUT_PREPARED_EXECUTION_AUDIT_REQUIRED
+Execution audit authorized: True
+ORCA execution authorized: False
+RESP authorized: False
+MD authorized: False

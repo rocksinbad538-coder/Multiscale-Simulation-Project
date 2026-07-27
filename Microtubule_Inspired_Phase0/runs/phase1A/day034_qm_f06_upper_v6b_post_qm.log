@@ -1,0 +1,63 @@
+============================================================================================================
+QM_F06 UPPER V6-B FORMAL POST-QM AUDIT
+============================================================================================================
+normal_ORCA_termination_and_optimization_convergence      : PASS
+atom_identity_and_order                                   : PASS
+atom_count                                                : PASS
+composition                                               : PASS
+fixed_atoms_preserved                                     : PASS
+all_nominal_bonds_in_range                                : FAIL
+closure_BN_geometry                                       : PASS
+no_final_geometric_reconnectivity                         : FAIL
+no_final_overcoordinated_atoms                            : FAIL
+single_final_connected_component                          : PASS
+no_final_hard_contacts                                    : PASS
+global_nonnominal_near_contact_gate                       : PASS
+trajectory_available_and_parseable                        : PASS
+
+Final energy Eh: -1120.641930014379
+Atoms: 48
+Composition: {'B': 16, 'H': 19, 'N': 13}
+Maximum fixed displacement A: 2.3684312415151348e-05
+
+Nominal edges: 53
+Geometric edges: 54
+Bond failures: 1
+Closure failures: 0
+Gained edges: 2
+Lost edges: 1
+Overcoordinated atoms: 2
+Connected components: 1
+Hard contacts: 0
+Global near-contact conflicts: 0
+
+Closure B-N bonds:
+  BR4:UPPER:00:3               -- S:1739                       1.497979 Å | margin=0.097979 Å | PASS
+  BR4:UPPER:00:4               -- BR4:UPPER:14:1               1.508308 Å | margin=0.108308 Å | PASS
+
+Trajectory complete frames: 76
+Trajectory diagnostic violation frames: 33
+First trajectory violation frames: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 58, 59, 60, 61, 62]
+
+Bond failures:
+  A:UPPER:14:2                 -- HCAPV2:UPPER:03              1.410212 Å
+
+Nonnominal geometric edges:
+  A:UPPER:14:2 -- P:1641
+  HCAPV2:UPPER:03 -- S:1710
+
+Lost nominal edges:
+  A:UPPER:14:2 -- HCAPV2:UPPER:03
+
+Decision: QM_F06_UPPER_V6B_POST_QM_GATE_FAIL_STRUCTURAL_REVIEW_REQUIRED
+Final XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day034_qm_f06_upper_v6b_post_qm/QM_F06_UPPER_V6B_FINAL.xyz
+Atom audit: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day034_qm_f06_upper_v6b_post_qm/QM_F06_UPPER_V6B_atom_displacements.csv
+Bond audit: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day034_qm_f06_upper_v6b_post_qm/QM_F06_UPPER_V6B_bond_audit.csv
+Contact audit: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day034_qm_f06_upper_v6b_post_qm/QM_F06_UPPER_V6B_contacts.csv
+Trajectory audit: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day034_qm_f06_upper_v6b_post_qm/QM_F06_UPPER_V6B_trajectory_connectivity.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day034_qm_f06_upper_v6b_post_qm/QM_F06_UPPER_V6B_POST_QM_AUDIT.json
+
+RESP input preparation authorized: False
+RESP execution authorized: False
+Force-field adoption authorized: False
+MD authorized: False

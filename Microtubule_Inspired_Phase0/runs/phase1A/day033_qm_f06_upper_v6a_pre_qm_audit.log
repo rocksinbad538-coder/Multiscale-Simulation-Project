@@ -1,0 +1,40 @@
+========================================================================================================
+QM_F06 UPPER V6-A FORMAL PRE-QM AUDIT
+========================================================================================================
+construction_report_present                 : PASS
+atom_count                                  : PASS
+composition                                 : PASS
+nominal_degree_exact                        : PASS
+single_connected_component                  : PASS
+all_nominal_bonds_in_range                  : FAIL
+closure_BN_geometry                         : FAIL
+no_geometric_reconnectivity                 : FAIL
+no_overcoordinated_atoms                    : PASS
+no_hard_contacts                            : PASS
+
+Atoms: 48
+Composition: {'B': 16, 'H': 19, 'N': 13}
+Nominal edges: 53
+Geometric edges: 51
+Degree failures: 0
+Bond failures: 2
+Gained geometric edges: 0
+Lost nominal edges: 2
+Overcoordinated atoms: 0
+Hard contacts: 0
+
+New closure B-N distances:
+  BR4:UPPER:00:3--S:1739                                             2.215105 Å
+  BR4:UPPER:00:4--BR4:UPPER:14:1                                     2.234681 Å
+
+Nominal edges outside range:
+  BR4:UPPER:00:3               -- S:1739                       2.215105 Å
+  BR4:UPPER:00:4               -- BR4:UPPER:14:1               2.234681 Å
+
+Decision: QM_F06_UPPER_V6A_PRE_QM_GATE_FAIL_TOPOLOGY_OR_GEOMETRY_REVIEW_REQUIRED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day033_qm_f06_upper_v6a_pre_qm_audit/QM_F06_UPPER_V6A_PRE_QM_AUDIT.json
+
+ORCA input design authorized: False
+ORCA execution authorized: False
+RESP authorized: False
+MD authorized: False

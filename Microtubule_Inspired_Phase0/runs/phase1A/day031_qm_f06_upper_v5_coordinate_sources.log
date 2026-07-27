@@ -1,0 +1,24 @@
+====================================================================================================
+QM_F06 UPPER V5 COORDINATE-SOURCE AUDIT
+====================================================================================================
+rank= 1 targets=3/3 anchors=15 RMSD=1.0964700428624779e-05 MAX=2.4252321097648248e-05 bonds=True pass=True runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_full_coordinates.csv
+rank= 2 targets=3/3 anchors=15 RMSD=1.0964700428624779e-05 MAX=2.4252321097648248e-05 bonds=True pass=True runs/phase1A/day024_chemical_end_rim_design/28_r2_inner_h_reflected_direction_refinement/r2_selected_four_atom_refined_full_coordinates.csv
+rank= 3 targets=3/3 anchors=10 RMSD=1.3215667677275524e-05 MAX=2.4447188785675343e-05 bonds=True pass=True runs/phase1A/day024_chemical_end_rim_design/19_r2_selected_four_atom_heavy_coordinate_embedding/r2_selected_four_atom_heavy_coordinates.csv
+rank= 4 targets=2/3 anchors= 0 RMSD=None               MAX=None               bonds=False pass=False runs/phase1A/day024_chemical_end_rim_design/08_r2_partial_attachment_annulus_static_coordinate_embedding/r2_partial_attachment_static_coordinates.csv
+   reason: MISSING_TARGETS:BR4:UPPER:14:1
+rank= 5 targets=2/3 anchors= 0 RMSD=None               MAX=None               bonds=False pass=False runs/phase1A/day024_chemical_end_rim_design/12_r2_alternating_bn_trimer_bridge_static_coordinate_embedding/r2_trimer_bridge_static_coordinates.csv
+   reason: MISSING_TARGETS:BR4:UPPER:14:1
+rank= 6 targets=2/3 anchors= 0 RMSD=None               MAX=None               bonds=False pass=False runs/phase1A/day024_chemical_end_rim_design/13_r2_trimer_bridge_conformer_and_h_refinement/r2_trimer_bridge_refined_coordinates.csv
+   reason: MISSING_TARGETS:BR4:UPPER:14:1
+rank= 7 targets=1/3 anchors= 0 RMSD=None               MAX=None               bonds=False pass=False runs/phase1A/day024_chemical_end_rim_design/18_r2_selected_four_atom_exact_conformer_replay/r2_selected_four_atom_exact_bridge_coordinates.csv
+   reason: MISSING_TARGETS:P:1637|S:1737
+
+Selected source: runs/phase1A/day024_chemical_end_rim_design/23_r2_four_atom_hydrogen_coordinate_embedding/r2_selected_four_atom_full_coordinates.csv
+Decision: QM_F06_UPPER_V5_COORDINATE_SOURCE_PASS_TRANSFORMED_COORDINATES_AUTHORIZED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5_coordinate_sources/QM_F06_UPPER_V5_COORDINATE_SOURCE_AUDIT.json
+Ranking: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5_coordinate_sources/QM_F06_UPPER_V5_coordinate_source_ranking.csv
+Transformed coordinates: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5_coordinate_sources/QM_F06_UPPER_V5_selected_transformed_coordinates.csv
+Anchor residuals: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5_coordinate_sources/QM_F06_UPPER_V5_selected_anchor_residuals.csv
+
+V5 construction authorized: True
+ORCA execution authorized: False

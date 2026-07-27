@@ -1,0 +1,30 @@
+================================================================================================
+QM_F06 UPPER V6-A TOPOLOGY CLOSURE
+================================================================================================
+Source atoms: 52
+Retained atoms: 48
+Composition: {'B': 16, 'H': 19, 'N': 13}
+Original nominal edges: 55
+V6-A nominal edges: 53
+Degree failures: 0
+
+Removed hydrogens:
+   H4:UPPER:0116:0
+   H4:UPPER:0117:0
+   H4:UPPER:0170:0
+   H4:UPPER:0203:0
+
+Added B-N closure bonds:
+  BR4:UPPER:00:3 -- S:1739
+  BR4:UPPER:00:4 -- BR4:UPPER:14:1
+
+Decision: QM_F06_UPPER_V6A_TOPOLOGY_CLOSURE_CONSTRUCTED_STRUCTURAL_AUDIT_REQUIRED
+XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day033_qm_f06_upper_v6a_topology_closure/QM_F06_UPPER_V6A_TOPOLOGY_CLOSURE_start.xyz
+Edges: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day033_qm_f06_upper_v6a_topology_closure/QM_F06_UPPER_V6A_nominal_edges.csv
+Map: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day033_qm_f06_upper_v6a_topology_closure/QM_F06_UPPER_V6A_atom_role_provenance_map.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day033_qm_f06_upper_v6a_topology_closure/QM_F06_UPPER_V6A_TOPOLOGY_CLOSURE_REPORT.json
+
+Structural audit authorized: True
+ORCA execution authorized: False
+RESP authorized: False
+MD authorized: False

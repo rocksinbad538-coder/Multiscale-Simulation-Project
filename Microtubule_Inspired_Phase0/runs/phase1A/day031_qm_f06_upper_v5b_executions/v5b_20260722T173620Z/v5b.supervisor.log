@@ -1,0 +1,1 @@
+/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_executions/v5b_20260722T173620Z/run_v5b_supervised.sh: line 13: 22043 Terminated: 15          "/Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca" v5b.inp > v5b.out 2> v5b.stderr

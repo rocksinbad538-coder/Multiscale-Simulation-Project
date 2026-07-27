@@ -1,0 +1,20 @@
+============================================================================================
+QM_F06 UPPER V5-C ORCA INPUT PREPARATION
+============================================================================================
+Coordinate mode: EMBEDDED_XYZ
+Charge: 0
+Multiplicity: 1
+Atom count: 52
+Fixed atoms: 14
+Mobile atoms: 38
+Constraint-map agreement: PASS
+Repaired atoms mobile: PASS
+
+Input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_orca_input/v5c.inp
+XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_orca_input/v5c_start.xyz
+Constraint map: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_orca_input/QM_F06_UPPER_V5C_constraint_map.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_orca_input/QM_F06_UPPER_V5C_ORCA_INPUT_REPORT.json
+
+Decision: QM_F06_UPPER_V5C_ORCA_INPUT_PREPARED_EXECUTION_AUDIT_REQUIRED
+Execution audit authorized: True
+ORCA execution authorized: False

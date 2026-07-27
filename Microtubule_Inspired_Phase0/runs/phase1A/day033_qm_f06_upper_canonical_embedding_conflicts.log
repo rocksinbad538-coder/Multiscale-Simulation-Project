@@ -1,0 +1,44 @@
+==============================================================================================================
+QM_F06 UPPER CANONICAL EMBEDDING CONFLICT AUDIT
+==============================================================================================================
+Coordinates: 2316
+Canonical edges: 3270
+B-N nonedges <= 2.10 A: 46
+Strict B-N nonedge conflicts <= 1.90 A: 17
+
+Closest B-N nonedges:
+  1 | A:LOWER:1:-9                 -- BR4:LOWER:03:2               |  1.59747 A | degrees=3/3 
+  2 | BR4:UPPER:09:1               -- BR4:UPPER:10:4               |  1.60937 A | degrees=3/3 
+  3 | A:UPPER:-1:-9                -- BR4:UPPER:05:3               |  1.62126 A | degrees=3/3 
+  4 | A:UPPER:-13:5                -- BR4:UPPER:10:3               |  1.62878 A | degrees=3/3 
+  5 | A:UPPER:-1:9                 -- BR4:UPPER:11:3               |  1.62952 A | degrees=3/3 
+  6 | A:LOWER:14:4                 -- BR4:LOWER:14:3               |  1.63120 A | degrees=3/3 
+  7 | BR4:LOWER:13:1               -- BR4:LOWER:14:4               |  1.67617 A | degrees=3/3 
+  8 | BR4:UPPER:01:4               -- BR4:UPPER:02:1               |  1.67814 A | degrees=3/3 
+  9 | BR4:UPPER:11:4               -- BR4:UPPER:12:1               |  1.69929 A | degrees=3/3 
+ 10 | BR4:LOWER:03:1               -- BR4:LOWER:04:4               |  1.70047 A | degrees=3/3 
+ 11 | BR4:UPPER:06:4               -- BR4:UPPER:07:1               |  1.72655 A | degrees=3/3 
+ 12 | BR4:UPPER:00:3               -- S:1739                       |  1.76046 A | degrees=3/3 TARGET
+      first H neighbors: H4:UPPER:0116:0
+      second H neighbors: H4:UPPER:0203:0
+ 13 | BR4:LOWER:10:3               -- S:1701                       |  1.76391 A | degrees=3/3 
+ 14 | A:LOWER:-1:-9                -- BR4:LOWER:04:3               |  1.77497 A | degrees=3/3 
+ 15 | BR4:LOWER:09:3               -- S:1697                       |  1.80327 A | degrees=3/3 
+ 16 | BR4:UPPER:00:4               -- BR4:UPPER:14:1               |  1.82446 A | degrees=3/3 TARGET
+      first H neighbors: H4:UPPER:0117:0
+      second H neighbors: H4:UPPER:0170:0
+ 17 | BR4:UPPER:04:1               -- BR4:UPPER:05:4               |  1.84777 A | degrees=3/3 
+ 18 | BR4:LOWER:11:3               -- S:1703                       |  1.90157 A | degrees=3/3 
+ 19 | A:LOWER:1:-9                 -- S:1686                       |  1.92596 A | degrees=3/3 
+ 20 | A:UPPER:-14:-4               -- S:1724                       |  1.92596 A | degrees=3/3 
+ 21 | A:LOWER:1:9                  -- S:1702                       |  1.92788 A | degrees=3/3 
+ 22 | A:UPPER:13:5                 -- S:1738                       |  1.92788 A | degrees=3/3 
+ 23 | A:LOWER:13:5                 -- S:1706                       |  1.92827 A | degrees=3/3 
+ 24 | A:UPPER:1:9                  -- S:1734                       |  1.92827 A | degrees=3/3 
+ 25 | A:LOWER:13:-5                -- S:1682                       |  1.92951 A | degrees=3/3 
+
+Decision: QM_F06_UPPER_CANONICAL_EMBEDDING_CONFLICTS_DETECTED_TOPOLOGY_OR_GEOMETRY_REDESIGN_REQUIRED
+CSV: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day033_qm_f06_upper_canonical_embedding_conflicts/QM_F06_UPPER_canonical_close_nonedges.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day033_qm_f06_upper_canonical_embedding_conflicts/QM_F06_UPPER_CANONICAL_EMBEDDING_CONFLICTS.json
+
+ORCA authorized: False

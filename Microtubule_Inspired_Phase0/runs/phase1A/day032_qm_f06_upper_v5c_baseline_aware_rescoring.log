@@ -1,0 +1,21 @@
+========================================================================================================
+QM_F06 UPPER V5-C BASELINE-AWARE RESCORING
+========================================================================================================
+Candidates analyzed: 1000
+Passing candidates: 497
+Required local bond margin A: 0.04
+
+Best candidate:
+  original rank: 28
+  minimum global margin A: 0.04305971084116367
+  minimum local margin A: 0.16000000000000014
+  local limiting pair: H4:UPPER:0203:0--S:1739
+  local limiting distance A: 1.19
+  minimum nonnominal clearance A: 2.2151051518583413
+  maximum heavy shift A: 0.50274638723017
+  XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_baseline_aware_rescoring/QM_F06_UPPER_V5C_BASELINE_AWARE_START.xyz
+
+Decision: QM_F06_UPPER_V5C_BASELINE_AWARE_CANDIDATE_FOUND_FORMAL_AUDIT_REQUIRED
+Ranking: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_baseline_aware_rescoring/QM_F06_UPPER_V5C_baseline_aware_ranking.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_baseline_aware_rescoring/QM_F06_UPPER_V5C_BASELINE_AWARE_RESCORING.json
+ORCA authorized: False

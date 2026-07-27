@@ -1,0 +1,36 @@
+============================================================================================================
+QM_F06 UPPER V7 BOUNDARY-CUT PROVENANCE AUDIT
+============================================================================================================
+selection_matches_expected_subset               : PASS
+required_canonical_edges_internal               : PASS
+A13_1_external_degree_at_most_one               : PASS
+no_new_multicut_center                          : PASS
+A8_4_multicut_is_inherited                      : PASS
+obsolete_cap_not_in_v6b_real_set                : PASS
+
+V6-B real atoms: 29
+V7 real atoms: 31
+V6-B boundary cuts: 14
+V7 boundary cuts: 15
+
+V6-B multi-cut centers: {'A:UPPER:8:4': 2}
+V7 multi-cut centers: {'A:UPPER:8:4': 2}
+Inherited multi-cut centers: {'A:UPPER:8:4': 2}
+New multi-cut centers: none
+
+A:UPPER:13:1 external degree: 1
+
+V7 new cuts:
+  A:UPPER:13:1                 -- A:UPPER:11:1                
+  A:UPPER:14:0                 -- A:UPPER:13:-1               
+
+Cuts closed by V7:
+  A:UPPER:14:2                 -- A:UPPER:13:1                
+
+Decision: QM_F06_UPPER_V7_BOUNDARY_PROVENANCE_GATE_PASS_CONSTRUCTION_AUTHORIZED
+CSV: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7_boundary_provenance/QM_F06_UPPER_V7_boundary_cut_provenance.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7_boundary_provenance/QM_F06_UPPER_V7_BOUNDARY_PROVENANCE.json
+
+V7 construction authorized: True
+ORCA authorized: False
+RESP authorized: False

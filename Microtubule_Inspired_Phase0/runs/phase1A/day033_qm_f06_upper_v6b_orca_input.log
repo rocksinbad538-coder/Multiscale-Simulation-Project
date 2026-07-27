@@ -1,0 +1,25 @@
+================================================================================================
+QM_F06 UPPER V6-B ORCA INPUT PREPARATION
+================================================================================================
+Coordinate mode: EMBEDDED_XYZ
+Charge: 0
+Multiplicity: 1
+Atom count: 48
+Composition: {'B': 16, 'H': 19, 'N': 13}
+Fixed atoms: 12
+Mobile atoms: 36
+Modified atoms mobile: PASS
+Removed hydrogens absent: PASS
+
+Fixed indices: [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14]
+
+Input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day033_qm_f06_upper_v6b_orca_input/v6b.inp
+XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day033_qm_f06_upper_v6b_orca_input/v6b_start.xyz
+Constraint map: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day033_qm_f06_upper_v6b_orca_input/QM_F06_UPPER_V6B_constraint_map.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day033_qm_f06_upper_v6b_orca_input/QM_F06_UPPER_V6B_ORCA_INPUT_REPORT.json
+
+Decision: QM_F06_UPPER_V6B_ORCA_INPUT_PREPARED_EXECUTION_AUDIT_REQUIRED
+Execution audit authorized: True
+ORCA execution authorized: False
+RESP authorized: False
+MD authorized: False

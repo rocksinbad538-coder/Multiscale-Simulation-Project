@@ -1,0 +1,29 @@
+============================================================================================
+QM_F06 UPPER V5-C FORMAL PRE-QM AUDIT
+============================================================================================
+construction_authorized                   : PASS
+atom_count                                : PASS
+composition                               : PASS
+all_nominal_bonds_in_range                : PASS
+modified_region_bond_margin               : PASS
+no_geometric_reconnectivity               : PASS
+no_overcoordinated_atoms                  : PASS
+single_connected_component                : PASS
+nonnominal_pair_clearance                 : PASS
+no_hard_contacts                          : PASS
+
+Minimum modified-region bond margin A: 0.15999999999958203
+Minimum nonnominal clearance A: 2.2151051518582445
+Bond failures: 0
+Gained geometric bonds: 0
+Lost nominal bonds: 0
+Overcoordinated atoms: 0
+Hard contacts: 0
+
+Decision: QM_F06_UPPER_V5C_PRE_QM_GATE_PASS_ORCA_INPUT_DESIGN_AUTHORIZED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_pre_qm_audit/QM_F06_UPPER_V5C_PRE_QM_AUDIT.json
+
+ORCA input design authorized: True
+ORCA execution authorized: False
+RESP authorized: False
+MD authorized: False

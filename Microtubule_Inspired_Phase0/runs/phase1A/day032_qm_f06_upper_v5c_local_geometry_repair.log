@@ -1,0 +1,32 @@
+====================================================================================================
+QM_F06 UPPER V5-C LOCAL GEOMETRY REPAIR SEARCH
+====================================================================================================
+Samples: 250000
+Valid candidates: 1089
+
+Best candidate:
+  sample_index: 208789
+  score: 215.94091499842008
+  maximum_heavy_shift_A: 0.536488308242123
+  maximum_nominal_bond_midpoint_deviation_A: 0.26870304996800787
+  S1739_BR4_00_3_distance_A: 2.293577116629426
+  BR4_14_1_BR4_00_4_distance_A: 2.3306977643431246
+  S1739_x_A: -0.31370796868568557
+  S1739_y_A: 0.2050632269752618
+  S1739_z_A: -1.127952321717196
+  BR4_14_1_x_A: -3.719818980834245
+  BR4_14_1_y_A: -1.5469269839867943
+  BR4_14_1_z_A: -0.3940760166014922
+  H0203_x_A: -0.029440610110195498
+  H0203_y_A: 1.1162958622712065
+  H0203_z_A: -1.8385486580574013
+  valid: True
+  rank: 1
+
+Best XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_local_geometry_repair/QM_F06_UPPER_V5C_LOCAL_GEOMETRY_REPAIR_BEST.xyz
+
+Decision: QM_F06_UPPER_V5C_LOCAL_REPAIR_CANDIDATE_FOUND_PRE_QM_AUDIT_REQUIRED
+Ranking: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_local_geometry_repair/QM_F06_UPPER_V5C_local_geometry_repair_ranking.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_local_geometry_repair/QM_F06_UPPER_V5C_LOCAL_GEOMETRY_REPAIR.json
+
+ORCA authorized: False

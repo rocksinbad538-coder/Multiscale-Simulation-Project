@@ -1,0 +1,54 @@
+================================================================================================================
+QM_F06 UPPER V7-A FORMAL GLOBAL PRE-QM AUDIT
+================================================================================================================
+construction_decision                               : PASS
+atom_identity_and_order                             : PASS
+atom_count                                          : PASS
+composition                                         : PASS
+nominal_edge_count                                  : PASS
+required_V7A_edges_present                          : PASS
+obsolete_HCAPV2_absent                              : PASS
+nominal_degree_exact                                : PASS
+single_connected_component                          : PASS
+all_nominal_bonds_in_range                          : PASS
+no_geometric_reconnectivity                         : PASS
+no_geometric_overcoordination                       : PASS
+no_hard_contacts                                    : PASS
+modified_region_near_contact_gate                   : PASS
+new_boundary_cap_geometry                           : PASS
+canonical_H0045_geometry                            : PASS
+V6B_failure_mode_eliminated                         : PASS
+
+Atoms: 52
+Composition: {'B': 17, 'H': 21, 'N': 14}
+Nominal edges: 57
+Geometric edges: 57
+Connected components: 1
+Degree failures: 0
+Bond failures: 0
+Gained edges: 0
+Lost edges: 0
+Overcoordinated atoms: 0
+Hard contacts: 0
+Modified-region near-contact failures: 0
+
+Minimum modified-region bond margin A: 0.07278527354397113
+Minimum modified-region nonnominal margin A: 0.08886308170011059
+Limiting modified-region nonnominal pair: S:1710--A:UPPER:13:1
+
+New cap geometry:
+  HCAPV7:UPPER:A13_1:A11_1                   owner=A:UPPER:13:1             distance=1.010000 Å | PASS
+  HCAPV7:UPPER:A14_0:A13_M1                  owner=A:UPPER:14:0             distance=1.190000 Å | PASS
+  H4:UPPER:0045:0                          owner=A:UPPER:14:0         distance=1.190000 Å | PASS
+
+Decision: QM_F06_UPPER_V7A_PRE_QM_GATE_PASS_ORCA_INPUT_DESIGN_AUTHORIZED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_pre_qm_audit/QM_F06_UPPER_V7A_PRE_QM_AUDIT.json
+Bond audit: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_pre_qm_audit/QM_F06_UPPER_V7A_bond_audit.csv
+Contact audit: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_pre_qm_audit/QM_F06_UPPER_V7A_contact_audit.csv
+Valence audit: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_pre_qm_audit/QM_F06_UPPER_V7A_valence_audit.csv
+
+ORCA input design authorized: True
+ORCA execution authorized: False
+RESP authorized: False
+Force-field adoption authorized: False
+MD authorized: False

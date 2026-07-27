@@ -1,0 +1,11 @@
+====================================================================================================
+QM_F06 UPPER V5-C ROBUST CANDIDATE RESCORING
+====================================================================================================
+Input candidates: 1000
+Robust candidates: 0
+Required minimum bond margin A: 0.08
+
+Decision: QM_F06_UPPER_V5C_NO_ROBUST_LOCAL_REPAIR_CANDIDATE
+Ranking: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_robust_rescoring/QM_F06_UPPER_V5C_robust_candidate_ranking.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_robust_rescoring/QM_F06_UPPER_V5C_ROBUST_RESCORING.json
+ORCA authorized: False

@@ -1,0 +1,41 @@
+========================================================================================================
+QM_F06 UPPER V7-A FORMAL CONSTRUCTION
+========================================================================================================
+Atoms: 52
+Composition: {'B': 17, 'H': 21, 'N': 14}
+Nominal edges: 57
+Connected components: 1
+Degree failures: 0
+Inherited fixed atoms: 12
+Maximum retained-coordinate difference A: 0.0
+Maximum repaired-local difference A: 7.301808203281042e-13
+
+Removed atom:
+   HCAPV2:UPPER:03
+
+Added atoms:
+   A:UPPER:13:1
+   A:UPPER:14:0
+   HCAPV7:UPPER:A13_1:A11_1
+   HCAPV7:UPPER:A14_0:A13_M1
+   H4:UPPER:0045:0
+
+Added nominal edges:
+  A:UPPER:13:1                           -- A:UPPER:14:2                           1.449730 Å | CANONICAL_V7_INTERNAL_BN
+  A:UPPER:13:1                           -- A:UPPER:14:0                           1.449730 Å | CANONICAL_V7_INTERNAL_BN
+  A:UPPER:13:1                           -- HCAPV7:UPPER:A13_1:A11_1               1.010000 Å | V7_ARTIFICIAL_BOUNDARY_CAP
+  A:UPPER:14:0                           -- HCAPV7:UPPER:A14_0:A13_M1              1.190000 Å | V7_ARTIFICIAL_BOUNDARY_CAP
+  A:UPPER:14:0                           -- H4:UPPER:0045:0                        1.190000 Å | CANONICAL_ANNULUS_PASSIVANT
+
+Decision: QM_F06_UPPER_V7A_FORMALLY_CONSTRUCTED_GLOBAL_PRE_QM_AUDIT_REQUIRED
+XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_formal_construction/QM_F06_UPPER_V7A_start.xyz
+Map: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_formal_construction/QM_F06_UPPER_V7A_atom_role_provenance_map.csv
+Edges: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_formal_construction/QM_F06_UPPER_V7A_nominal_edges.csv
+Caps: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_formal_construction/QM_F06_UPPER_V7A_boundary_caps.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_formal_construction/QM_F06_UPPER_V7A_CONSTRUCTION_REPORT.json
+
+Global pre-QM audit authorized: True
+ORCA input design authorized: False
+ORCA execution authorized: False
+RESP authorized: False
+MD authorized: False

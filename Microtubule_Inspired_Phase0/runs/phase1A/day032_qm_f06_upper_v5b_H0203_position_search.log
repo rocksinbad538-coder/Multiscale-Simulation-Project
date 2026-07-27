@@ -1,0 +1,24 @@
+================================================================================================
+QM_F06 UPPER V5-B H0203 POSITION SEARCH
+================================================================================================
+Samples: 28800
+Valid single-owner positions: 6852
+
+Best candidate:
+  sample_index: 15201
+  x_A: -0.5141223614282361
+  y_A: 0.9437222309531548
+  z_A: -0.9055945099254443
+  owner_distance_A: 1.19
+  nearest_nonowner_atom: P:1641
+  nearest_nonowner_element: N
+  nearest_nonowner_distance_A: 1.8440136713325297
+  extra_geometric_owners: 
+  hard_contacts: 
+  valid_single_owner_position: True
+  score: 1.8440136713325297
+  rank: 1
+
+Decision: QM_F06_UPPER_V5B_H0203_VALID_SINGLE_OWNER_POSITION_FOUND
+Ranking: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5b_H0203_position_search/QM_F06_UPPER_V5B_H0203_position_ranking.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5b_H0203_position_search/QM_F06_UPPER_V5B_H0203_POSITION_SEARCH.json

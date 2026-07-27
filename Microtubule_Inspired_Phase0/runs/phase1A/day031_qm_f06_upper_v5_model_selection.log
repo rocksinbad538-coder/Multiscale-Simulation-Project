@@ -1,0 +1,24 @@
+==========================================================================================
+QM_F06 UPPER V5 MODEL SELECTION
+==========================================================================================
+subset_identity                             : PASS
+added_atom_count                            : PASS
+boundary_cut_count                          : PASS
+cuts_closed_vs_v4                           : PASS
+new_cuts_vs_v4                              : PASS
+all_target_cuts_closed                      : PASS
+single_multicut_center_remaining            : PASS
+remaining_multicut_is_preexisting           : PASS
+
+Selected subset: BR4:UPPER:14:1+P:1637+S:1737
+Selected real atoms: ['BR4:UPPER:14:1', 'P:1637', 'S:1737']
+Boundary cuts: 14
+Target cuts remaining: 0
+New-region multicut centers: 0
+
+Decision: QM_F06_UPPER_V5_SELECTIVE_MODEL_SELECTED_COORDINATE_VALIDATION_AUTHORIZED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5_model_selection/QM_F06_UPPER_V5_MODEL_SELECTION.json
+
+Coordinate validation authorized: True
+V5 construction authorized: False
+ORCA execution authorized: False

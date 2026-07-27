@@ -1,0 +1,21 @@
+========================================================================================
+QM_F06 UPPER V5-C FORMAL CONSTRUCTION
+========================================================================================
+Atom count: 52
+Composition: {'B': 16, 'N': 13, 'H': 23}
+Repaired atoms:
+   BR4:UPPER:14:1
+   H4:UPPER:0203:0
+   S:1739
+
+Minimum local margin A: 0.16000000000000014
+Nonnominal clearance A: 2.2151051518583413
+Maximum heavy shift A: 0.50274638723017
+
+Decision: QM_F06_UPPER_V5C_CONSTRUCTED_FORMAL_PRE_QM_AUDIT_REQUIRED
+XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_construction/QM_F06_UPPER_V5C_start.xyz
+Map: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_construction/QM_F06_UPPER_V5C_atom_role_provenance_map.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_construction/QM_F06_UPPER_V5C_CONSTRUCTION_REPORT.json
+
+Pre-QM audit authorized: True
+ORCA authorized: False

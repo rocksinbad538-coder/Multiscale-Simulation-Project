@@ -1,0 +1,29 @@
+==================================================================================
+QM_F06 UPPER V5-B PRE-QM STRUCTURAL AUDIT
+==================================================================================
+construction_report                     : PASS
+atom_count                              : PASS
+composition                             : PASS
+map_consistency                         : PASS
+single_connected_component              : PASS
+nominal_valence                         : PASS
+critical_initial_geometry               : PASS
+new_artificial_cap_geometry             : PASS
+no_unresolved_hard_contacts             : PASS
+
+Atom count: 52
+Composition: {'B': 16, 'N': 13, 'H': 23}
+Valence failures: 0
+Critical-geometry failures: 0
+New-cap failures: 0
+Hard contacts: 0
+
+Decision: QM_F06_UPPER_V5B_PRE_QM_STRUCTURAL_GATE_PASS_CONSTRAINT_DESIGN_AUTHORIZED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_pre_qm_audit/QM_F06_UPPER_V5B_PRE_QM_AUDIT.json
+Valence: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_pre_qm_audit/QM_F06_UPPER_V5B_valence.csv
+Critical geometry: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_pre_qm_audit/QM_F06_UPPER_V5B_critical_geometry.csv
+New caps: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_pre_qm_audit/QM_F06_UPPER_V5B_new_cap_audit.csv
+Contacts: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_pre_qm_audit/QM_F06_UPPER_V5B_contacts.csv
+
+Constraint design authorized: True
+ORCA execution authorized: False

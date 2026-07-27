@@ -1,0 +1,47 @@
+==============================================================================
+QM_F06 UPPER V5-B POST-QM AUDIT
+==============================================================================
+Execution: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_executions/v5b_20260722T173620Z
+Geometry source: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_executions/v5b_20260722T173620Z/v5b.xyz
+Trajectory frame index: None
+
+ORCA normal termination: False
+Geometry converged: False
+Error detected: False
+Geometry cycles: 37
+SCF convergences: 37
+Energy points: 37
+Last energy Eh: -1123.031427775007
+
+atom_count                              : PASS
+composition                             : PASS
+single_connected_component              : PASS
+fixed_atoms_unchanged                   : PASS
+all_validated_bonds_preserved           : FAIL
+new_cap_inventory_consistent            : PASS
+all_new_caps_owned                      : PASS
+all_new_cap_bonds_in_range              : PASS
+no_unresolved_hard_contacts             : PASS
+
+Fixed displacement failures: 0
+Bond failures: 1
+Cap failures: 0
+Hard contacts: 0
+New-cap inventory counts (construction/pre-QM/post-QM): 3 3 3
+New-cap inventories consistent: True
+All new caps owned: True
+All new cap bonds in range: True
+Mobile RMS displacement A: 1.103944324133542
+
+Decision: QM_F06_UPPER_V5B_POST_QM_INTERIM_DIAGNOSTIC_ONLY_NO_AUTHORIZATION
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5b_post_qm/QM_F06_UPPER_V5B_POST_QM_AUDIT.json
+Final/latest XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5b_post_qm/QM_F06_UPPER_V5B_FINAL.xyz
+Atom audit: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5b_post_qm/QM_F06_UPPER_V5B_atom_displacements.csv
+Bond audit: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5b_post_qm/QM_F06_UPPER_V5B_bond_audit.csv
+Cap audit: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5b_post_qm/QM_F06_UPPER_V5B_new_cap_audit.csv
+Contact audit: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5b_post_qm/QM_F06_UPPER_V5B_contacts.csv
+
+RESP input preparation authorized: False
+RESP execution authorized: False
+Force-field adoption authorized: False
+MD authorized: False

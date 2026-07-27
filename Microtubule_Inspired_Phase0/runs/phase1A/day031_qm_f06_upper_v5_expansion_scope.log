@@ -1,0 +1,24 @@
+==========================================================================================
+QM_F06 UPPER V5 EXPANSION-SCOPE AUDIT
+==========================================================================================
+V4 real atoms: 33
+V4 artificial caps: 13
+V4 heavy boundary cuts: 13
+
+First-shell new atoms: ['BR4:UPPER:14:1', 'P:1637']
+Second-shell new atoms: ['A:UPPER:10:2', 'A:UPPER:13:1', 'BR4:UPPER:14:2', 'P:1636', 'S:1737']
+
+CANDIDATE MODELS
+V4_REAL_BASELINE               real= 33 new=  0 cuts= 13 new_cuts=  0 closed=  0
+V5_CRITICAL_FIRST_SHELL        real= 35 new=  2 cuts= 14 new_cuts=  3 closed=  2
+V5_CRITICAL_SECOND_SHELL       real= 40 new=  7 cuts= 17 new_cuts=  8 closed=  4
+
+Decision: QM_F06_UPPER_V5_EXPANSION_SCOPE_AUDITED_MODEL_SELECTION_PENDING
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5_expansion_scope/QM_F06_UPPER_V5_EXPANSION_SCOPE.json
+Nodes: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5_expansion_scope/QM_F06_UPPER_V5_candidate_nodes.csv
+Cuts: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5_expansion_scope/QM_F06_UPPER_V5_candidate_boundary_cuts.csv
+Models: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5_expansion_scope/QM_F06_UPPER_V5_candidate_models.csv
+
+V5 model selected: False
+V5 construction authorized: False
+ORCA execution authorized: False

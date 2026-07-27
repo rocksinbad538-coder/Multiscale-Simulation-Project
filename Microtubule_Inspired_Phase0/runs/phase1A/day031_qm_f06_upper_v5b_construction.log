@@ -1,0 +1,32 @@
+==========================================================================================
+QM_F06 UPPER V5-B CONSTRUCTION
+==========================================================================================
+strategy_authorized                   : PASS
+removed_superseded_caps               : PASS
+selected_real_atoms_added             : PASS
+new_caps_constructed                  : PASS
+rebuilt_H_S1739_bond                  : PASS
+rebuilt_H_away_from_P1641             : PASS
+rebuilt_H_away_from_P1639             : PASS
+atom_count                            : PASS
+composition                           : PASS
+
+Removed caps: ['HCAPV4:UPPER:S1738:BR4_14_1', 'HCAPV4:UPPER:S1738:P1637']
+Added real atoms: ['BR4:UPPER:14:1', 'P:1637', 'S:1737']
+Added canonical passivant H: ['H4:UPPER:0170:0', 'H4:UPPER:0202:0']
+New artificial caps: 3
+Final atom count: 52
+Composition: {'B': 16, 'N': 13, 'H': 23}
+
+Rebuilt S1739-H A: 1.1899999999999997
+Rebuilt P1641-H A: 2.28864019547581
+Rebuilt P1639-H A: 2.2886407571743206
+
+Decision: QM_F06_UPPER_V5B_START_GEOMETRY_CONSTRUCTED_PRE_QM_AUDIT_AUTHORIZED
+XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_construction/QM_F06_UPPER_V5B_start.xyz
+Map: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_construction/QM_F06_UPPER_V5B_atom_role_provenance_map.csv
+Caps: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_construction/QM_F06_UPPER_V5B_new_artificial_caps.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_construction/QM_F06_UPPER_V5B_CONSTRUCTION_REPORT.json
+
+Pre-QM audit authorized: True
+ORCA execution authorized: False

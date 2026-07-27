@@ -1,0 +1,32 @@
+========================================================================================================
+QM_F06 UPPER V7-A H0045 REPAIR
+========================================================================================================
+source_atom_count_51                            : PASS
+source_composition_B17_N14_H20                  : PASS
+repaired_atom_count_52                          : PASS
+repaired_composition_B17_N14_H21                : PASS
+H0045_owner_geometry                            : PASS
+H0045_owner_is_nearest_heavy                    : PASS
+H0045_nonnowner_heavy_clearance                 : PASS
+H0045_hydrogen_clearance                        : PASS
+H0045_trigonal_angles                           : PASS
+
+Added atom: H4:UPPER:0045:0
+Owner: A:UPPER:14:0
+Hydrogen xyz A: (3.339159826109, -0.289685480316, 1.119130143711)
+Owner B-H distance A: 1.19
+A13:1--A14:0--H angle deg: 120.0000000000002
+CutCap--A14:0--H angle deg: 120.00000000000017
+Nearest nonowner heavy distance A: 2.2897588896864747
+Nearest existing H distance A: 2.0611404610071213
+Composition: {'B': 17, 'H': 21, 'N': 14}
+
+Decision: QM_F06_UPPER_V7A_H0045_REPAIR_GATE_PASS_FORMAL_CONSTRUCTION_AUTHORIZED
+XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_h0045_repair/QM_F06_UPPER_V7A_H0045_REPAIRED_start.xyz
+Local coordinates: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_h0045_repair/QM_F06_UPPER_V7A_H0045_REPAIRED_local_coordinates.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_h0045_repair/QM_F06_UPPER_V7A_H0045_REPAIR.json
+
+Formal construction authorized: True
+ORCA authorized: False
+RESP authorized: False
+MD authorized: False

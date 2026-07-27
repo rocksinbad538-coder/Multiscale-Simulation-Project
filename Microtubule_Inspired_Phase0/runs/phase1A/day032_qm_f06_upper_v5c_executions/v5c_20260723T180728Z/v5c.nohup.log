@@ -1,0 +1,1 @@
+/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_executions/v5c_20260723T180728Z/run_v5c_supervised.sh: line 36: 52192 Terminated: 15          "$ORCA_BIN" v5c.inp > v5c.out 2> v5c.stderr

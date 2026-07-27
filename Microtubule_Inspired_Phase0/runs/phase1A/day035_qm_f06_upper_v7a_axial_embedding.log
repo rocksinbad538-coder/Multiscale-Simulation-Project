@@ -1,0 +1,25 @@
+================================================================================================================
+QM_F06 UPPER V7-A AXIAL CANONICAL EMBEDDING SEARCH
+================================================================================================================
+Angles evaluated: 1440
+Valid orientations: 42
+
+Best orientation:
+  rank: 1
+  angle degrees: 17.5
+  A13:1--A14:2 A: 1.4497300000000013
+  A13:1--A14:0 A: 1.4497300000000097
+  minimum nonnominal clearance A: 0.08886308170040857
+  limiting pair: A:UPPER:13:1--S:1710
+  composition: {'B': 17, 'H': 20, 'N': 14}
+
+Best XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_axial_embedding/QM_F06_UPPER_V7A_start.xyz
+Best local coordinates: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_axial_embedding/QM_F06_UPPER_V7A_best_local_coordinates.csv
+
+Decision: QM_F06_UPPER_V7A_AXIAL_EMBEDDING_CANDIDATE_FOUND_FORMAL_CONSTRUCTION_REQUIRED
+Ranking: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_axial_embedding/QM_F06_UPPER_V7A_axial_embedding_ranking.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_axial_embedding/QM_F06_UPPER_V7A_AXIAL_EMBEDDING.json
+
+Formal V7 construction authorized: True
+ORCA authorized: False
+RESP authorized: False

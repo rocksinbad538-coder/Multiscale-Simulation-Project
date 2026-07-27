@@ -1,0 +1,63 @@
+======================================================================================================================
+QM_F06 UPPER V7 LOCAL COORDINATE-MISMATCH DIAGNOSTIC
+======================================================================================================================
+
+SOURCE: canonical_source
+Available targets:
+  A:UPPER:13:1                 ( 40.597624,  28.184798,  82.679023)
+  A:UPPER:14:0                 ( 42.047354,  28.184792,  82.679023)
+  A:UPPER:14:2                 ( 39.872754,  26.929298,  82.679023)
+  A:UPPER:13:3                 ( 38.423024,  26.929304,  82.679023)
+  A:UPPER:11:1                 ( 39.872764,  29.440304,  82.679023)
+  A:UPPER:13:-1                ( 42.772224,  29.440293,  82.679023)
+
+Pair distances:
+  A:UPPER:13:1                 -- A:UPPER:14:0                  1.449730 Å
+  A:UPPER:13:1                 -- A:UPPER:14:2                  1.449730 Å
+  A:UPPER:14:2                 -- A:UPPER:13:3                  1.449730 Å
+  A:UPPER:13:1                 -- A:UPPER:11:1                  1.449730 Å
+  A:UPPER:14:0                 -- A:UPPER:13:-1                 1.449730 Å
+
+SOURCE: transformed_v7_local
+Available targets:
+  A:UPPER:13:1                 ( 1.977821,  2.835879,  0.936947)
+  A:UPPER:14:0                 ( 3.427551,  2.835874,  0.936947)
+  A:UPPER:11:1                 ( 1.252960,  4.091385,  0.936945)
+  A:UPPER:13:-1                ( 4.152420,  4.091374,  0.936946)
+
+Pair distances:
+  A:UPPER:13:1                 -- A:UPPER:14:0                  1.449730 Å
+  A:UPPER:13:1                 -- A:UPPER:14:2                 unavailable
+  A:UPPER:14:2                 -- A:UPPER:13:3                 unavailable
+  A:UPPER:13:1                 -- A:UPPER:11:1                  1.449730 Å
+  A:UPPER:14:0                 -- A:UPPER:13:-1                 1.449730 Å
+
+SOURCE: v6b_start
+Available targets:
+  A:UPPER:14:2                 ( 0.895755,  1.013691,  0.890584)
+  A:UPPER:13:3                 (-0.296847,  1.775228,  0.741987)
+
+Pair distances:
+  A:UPPER:13:1                 -- A:UPPER:14:0                 unavailable
+  A:UPPER:13:1                 -- A:UPPER:14:2                 unavailable
+  A:UPPER:14:2                 -- A:UPPER:13:3                  1.422785 Å
+  A:UPPER:13:1                 -- A:UPPER:11:1                 unavailable
+  A:UPPER:14:0                 -- A:UPPER:13:-1                unavailable
+
+SOURCE: v6b_final_rejected
+Available targets:
+  A:UPPER:14:2                 ( 0.609750,  1.430917, -1.085657)
+  A:UPPER:13:3                 (-0.616164,  1.686457, -0.334953)
+
+Pair distances:
+  A:UPPER:13:1                 -- A:UPPER:14:0                 unavailable
+  A:UPPER:13:1                 -- A:UPPER:14:2                 unavailable
+  A:UPPER:14:2                 -- A:UPPER:13:3                  1.460042 Å
+  A:UPPER:13:1                 -- A:UPPER:11:1                 unavailable
+  A:UPPER:14:0                 -- A:UPPER:13:-1                unavailable
+
+Decision: QM_F06_UPPER_V7_LOCAL_COORDINATE_MISMATCH_DIAGNOSED_REPAIR_DESIGN_REQUIRED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7_local_coordinate_mismatch/QM_F06_UPPER_V7_LOCAL_COORDINATE_MISMATCH.json
+
+ORCA authorized: False
+RESP authorized: False

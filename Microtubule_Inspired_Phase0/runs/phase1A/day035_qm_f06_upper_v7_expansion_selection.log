@@ -1,0 +1,57 @@
+============================================================================================================
+QM_F06 UPPER V7 EXPANSION SUBSET SELECTION
+============================================================================================================
+Retained V6-B real atoms: 29
+Local candidate atoms: 6
+Optional atoms: 5
+Subsets evaluated: 32
+
+Local candidate inventory:
+  A:UPPER:10:0                 N  radius=2 type=ANNULUS_INTERIOR
+  A:UPPER:10:2                 N  radius=2 type=ANNULUS_INTERIOR
+  A:UPPER:11:1                 B  radius=1 type=ANNULUS_INTERIOR
+  A:UPPER:13:-1                N  radius=2 type=ANNULUS_INTERIOR
+  A:UPPER:13:1                 N  radius=0 type=ANNULUS_INTERIOR
+  A:UPPER:14:0                 B  radius=1 type=ANNULUS_OUTER_BOUNDARY
+
+Top 15 subsets:
+rank=  1 | added= 2 | cuts=15 | multi= 1 | A13:1 external=1 | score=  12752 | A:UPPER:13:1|A:UPPER:14:0
+rank=  2 | added= 3 | cuts=15 | multi= 1 | A13:1 external=1 | score=  12753 | A:UPPER:10:2|A:UPPER:11:1|A:UPPER:13:1
+rank=  3 | added= 4 | cuts=15 | multi= 1 | A13:1 external=0 | score=  12754 | A:UPPER:10:2|A:UPPER:11:1|A:UPPER:13:1|A:UPPER:14:0
+rank=  4 | added= 2 | cuts=16 | multi= 2 | A13:1 external=1 | score=  22802 | A:UPPER:11:1|A:UPPER:13:1
+rank=  5 | added= 3 | cuts=16 | multi= 2 | A13:1 external=1 | score=  22803 | A:UPPER:10:2|A:UPPER:13:1|A:UPPER:14:0
+rank=  6 | added= 3 | cuts=16 | multi= 2 | A13:1 external=0 | score=  22803 | A:UPPER:11:1|A:UPPER:13:1|A:UPPER:14:0
+rank=  7 | added= 3 | cuts=16 | multi= 2 | A13:1 external=1 | score=  22803 | A:UPPER:13:-1|A:UPPER:13:1|A:UPPER:14:0
+rank=  8 | added= 4 | cuts=16 | multi= 2 | A13:1 external=1 | score=  22804 | A:UPPER:10:0|A:UPPER:10:2|A:UPPER:11:1|A:UPPER:13:1
+rank=  9 | added= 5 | cuts=16 | multi= 2 | A13:1 external=0 | score=  22805 | A:UPPER:10:0|A:UPPER:10:2|A:UPPER:11:1|A:UPPER:13:1|A:UPPER:14:0
+rank= 10 | added= 5 | cuts=16 | multi= 2 | A13:1 external=0 | score=  22805 | A:UPPER:10:2|A:UPPER:11:1|A:UPPER:13:-1|A:UPPER:13:1|A:UPPER:14:0
+rank= 11 | added= 3 | cuts=17 | multi= 2 | A13:1 external=1 | score=  22853 | A:UPPER:10:0|A:UPPER:11:1|A:UPPER:13:1
+rank= 12 | added= 4 | cuts=17 | multi= 2 | A13:1 external=0 | score=  22854 | A:UPPER:10:0|A:UPPER:11:1|A:UPPER:13:1|A:UPPER:14:0
+rank= 13 | added= 3 | cuts=18 | multi= 2 | A13:1 external=1 | score=  23903 | A:UPPER:10:0|A:UPPER:13:1|A:UPPER:14:0
+rank= 14 | added= 4 | cuts=18 | multi= 2 | A13:1 external=1 | score=  23904 | A:UPPER:10:2|A:UPPER:11:1|A:UPPER:13:-1|A:UPPER:13:1
+rank= 15 | added= 4 | cuts=17 | multi= 3 | A13:1 external=1 | score=  32854 | A:UPPER:10:2|A:UPPER:13:-1|A:UPPER:13:1|A:UPPER:14:0
+
+Selected candidate:
+  subset_id: A:UPPER:13:1+A:UPPER:14:0
+  added_atom_count: 2
+  added_atoms: A:UPPER:13:1|A:UPPER:14:0
+  total_real_atom_count: 31
+  boundary_cut_count: 15
+  multi_cut_boundary_center_count: 1
+  maximum_external_heavy_degree: 2
+  multi_cut_boundary_centers: A:UPPER:8:4
+  required_A13_1_A14_2_internal: True
+  A13_1_external_heavy_degree: 1
+  A13_1_single_cut_gate: True
+  no_multi_cut_center_gate: False
+  score: 12752
+  rank: 1
+
+Decision: QM_F06_UPPER_V7_EXPANSION_SUBSET_SELECTED_CONSTRUCTION_REQUIRED
+Ranking: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7_expansion_selection/QM_F06_UPPER_V7_expansion_ranking.csv
+Selected cuts: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7_expansion_selection/QM_F06_UPPER_V7_selected_boundary_cuts.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7_expansion_selection/QM_F06_UPPER_V7_EXPANSION_SELECTION.json
+
+V7 construction authorized: True
+ORCA authorized: False
+RESP authorized: False

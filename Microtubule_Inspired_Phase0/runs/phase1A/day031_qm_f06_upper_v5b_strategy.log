@@ -1,0 +1,29 @@
+==============================================================================================
+QM_F06 UPPER V5-B STRATEGY
+==============================================================================================
+v5_model_selected                               : PASS
+selected_real_atoms_match                       : PASS
+transformed_coordinates_authorized              : PASS
+all_selected_atoms_have_coordinates             : PASS
+superseded_caps_exist_in_v4                     : PASS
+E2915_mobile_endpoint_confirmed                 : PASS
+E2915_fixed_endpoint_confirmed                  : PASS
+P1641_fixed_core_confirmed                      : PASS
+S1739_mobile_confirmed                          : PASS
+H0203_mobile_confirmed                          : PASS
+v4_failure_record_confirmed                     : PASS
+canonical_E2915_rupture_confirmed               : PASS
+hydrogen_transfer_confirmed                     : PASS
+fixed_core_constraints_respected                : PASS
+
+Selected real atoms: ['BR4:UPPER:14:1', 'P:1637', 'S:1737']
+Removed caps: ['HCAPV4:UPPER:S1738:BR4_14_1', 'HCAPV4:UPPER:S1738:P1637']
+Released V4 fixed atoms: ['A:UPPER:14:4']
+Rebuilt passivant: H4:UPPER:0203:0
+Retained fixed N: P:1641
+
+Decision: QM_F06_UPPER_V5B_STRATEGY_PASS_GEOMETRY_CONSTRUCTION_AUTHORIZED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day031_qm_f06_upper_v5b_strategy/QM_F06_UPPER_V5B_STRATEGY.json
+
+V5-B construction authorized: True
+ORCA execution authorized: False

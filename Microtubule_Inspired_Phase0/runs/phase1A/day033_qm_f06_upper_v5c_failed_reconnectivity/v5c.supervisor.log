@@ -1,0 +1,10 @@
+=========================================================
+QM_F06 UPPER V5-C SUPERVISED EXECUTION
+=========================================================
+Started: Thu Jul 23 13:21:32 CDT 2026
+Execution directory: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day032_qm_f06_upper_v5c_executions/v5c_20260723T180728Z
+ORCA binary: /Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca
+ORCA PID: 52192
+Waiting for ORCA...
+Finished: Fri Jul 24 10:10:39 CDT 2026
+Exit status: 143
