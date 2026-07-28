@@ -1,0 +1,44 @@
+================================================================================================================
+QM_F06 UPPER V7-A STEP-1 STRUCTURAL RESTART GATE
+================================================================================================================
+atom_identity_and_order                                   : PASS
+atom_count_52                                             : PASS
+composition_B17_N14_H21                                   : PASS
+fixed_atoms_preserved                                     : PASS
+nominal_edge_count_57                                     : PASS
+all_nominal_bonds_in_range                                : PASS
+no_lost_nominal_edges                                     : PASS
+no_geometric_reconnectivity                               : PASS
+nominal_degree_exact                                      : PASS
+no_geometric_overcoordination                             : PASS
+single_connected_component                                : PASS
+no_hard_contacts                                          : PASS
+modified_region_near_contact_gate                         : PASS
+required_V7A_edges_present                                : PASS
+required_V7A_caps_present                                 : PASS
+obsolete_HCAPV2_absent                                    : PASS
+V6B_forbidden_reconnectivity_absent                       : PASS
+
+Atoms: 52
+Composition: {'B': 17, 'H': 21, 'N': 14}
+Maximum atom displacement A: 0.23493019536066806
+Maximum fixed displacement A: 2.598834078467934e-06
+Nominal edges: 57
+Geometric edges: 57
+Bond failures: 0
+Gained geometric edges: 0
+Lost nominal edges: 0
+Degree failures: 0
+Overcoordinated atoms: 0
+Hard contacts: 0
+Modified-region near-contact failures: 0
+Minimum bond margin A: 0.013025543002073592
+Minimum modified-region nonnominal margin A: 0.10271636451988009
+
+Decision: QM_F06_UPPER_V7A_STEP1_STRUCTURAL_GATE_PASS_SCF_RESTART_DESIGN_AUTHORIZED
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day036_qm_f06_upper_v7a_step1_restart_gate/QM_F06_UPPER_V7A_STEP1_RESTART_GATE.json
+
+SCF restart input design authorized: True
+ORCA restart execution authorized: False
+RESP authorized: False
+MD authorized: False

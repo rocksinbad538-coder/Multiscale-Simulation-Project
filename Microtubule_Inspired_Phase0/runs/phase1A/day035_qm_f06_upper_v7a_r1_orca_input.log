@@ -1,0 +1,30 @@
+========================================================================================================
+QM_F06 UPPER V7-A R1 ORCA INPUT PREPARATION
+========================================================================================================
+Restart gate: QM_F06_UPPER_V7A_STEP1_STRUCTURAL_GATE_PASS_SCF_RESTART_DESIGN_AUTHORIZED
+Atoms: 52
+Composition: {'B': 17, 'H': 21, 'N': 14}
+Charge: 0
+Multiplicity: 1
+Fixed atoms: 12
+Mobile atoms: 40
+Fixed indices: [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14]
+
+SCF strategy: TRAH
+Initial guess: MORead
+Orbital source: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_orca_input/v7a_r1_source.gbw
+GBW copy integrity: PASS
+Coordinate mode: EMBEDDED_XYZ
+
+Input: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_orca_input/v7a_r1.inp
+XYZ: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_orca_input/v7a_r1_start.xyz
+GBW: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_orca_input/v7a_r1_source.gbw
+Map: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_orca_input/QM_F06_UPPER_V7A_R1_constraint_map.csv
+Edges: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_orca_input/QM_F06_UPPER_V7A_R1_nominal_edges.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_orca_input/QM_F06_UPPER_V7A_R1_ORCA_INPUT_REPORT.json
+
+Decision: QM_F06_UPPER_V7A_R1_ORCA_INPUT_PREPARED_EXECUTION_AUDIT_REQUIRED
+Execution audit authorized: True
+ORCA restart execution authorized: False
+RESP authorized: False
+MD authorized: False

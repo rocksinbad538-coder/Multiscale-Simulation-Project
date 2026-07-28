@@ -1,0 +1,20 @@
+================================================================================================================
+QM_F06 UPPER V7-A R1 LIVE TRAJECTORY SEVERITY CLASSIFICATION
+================================================================================================================
+frame=  0 | E=-1200.702289093223 | severity=STRUCTURALLY_CLEAN | bond=none | excess_A=0
+frame=  1 | E=-1200.765216070659 | severity=STRUCTURALLY_CLEAN | bond=none | excess_A=0
+frame=  2 | E=-1200.818798443211 | severity=TRANSIENT_NOMINAL_BOND_WINDOW_WARNING | bond=BR4:UPPER:14:1--S:1738 | excess_A=0.007040104405417136
+frame=  3 | E=-1200.883577922709 | severity=TRANSIENT_NOMINAL_BOND_WINDOW_WARNING | bond=BR4:UPPER:14:1--S:1738 | excess_A=0.01893662450863398
+
+Clean frames: [0, 1]
+Warning frames: [2, 3]
+Critical frames: []
+
+Decision: QM_F06_UPPER_V7A_R1_LIVE_TRAJECTORY_TRANSIENT_BOND_WINDOW_WARNING_CONTINUE_AND_MONITOR
+CSV: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_live_trajectory/QM_F06_UPPER_V7A_R1_live_trajectory_severity.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_live_trajectory/QM_F06_UPPER_V7A_R1_LIVE_TRAJECTORY_SEVERITY.json
+
+Continue current ORCA execution: True
+Final post-QM acceptance authorized: False
+RESP authorized: False
+MD authorized: False

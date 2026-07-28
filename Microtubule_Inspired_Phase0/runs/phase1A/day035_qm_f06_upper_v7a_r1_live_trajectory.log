@@ -1,0 +1,19 @@
+================================================================================================================
+QM_F06 UPPER V7-A R1 LIVE TRAJECTORY STRUCTURAL DIAGNOSTIC
+================================================================================================================
+Complete frames: 4
+Passing frames: 2
+Violation frames: 2
+frame=  0 | E=-1200.702289093223 | edges=57 | lost= 0 | gained= 0 | degree_fail= 0 | components= 1 | hard= 0 | PASS
+frame=  1 | E=-1200.765216070659 | edges=57 | lost= 0 | gained= 0 | degree_fail= 0 | components= 1 | hard= 0 | PASS
+frame=  2 | E=-1200.818798443211 | edges=57 | lost= 0 | gained= 0 | degree_fail= 0 | components= 1 | hard= 0 | FAIL
+frame=  3 | E=-1200.883577922709 | edges=57 | lost= 0 | gained= 0 | degree_fail= 0 | components= 1 | hard= 0 | FAIL
+
+Decision: QM_F06_UPPER_V7A_R1_LIVE_TRAJECTORY_DIAGNOSTIC_VIOLATIONS_DETECTED
+CSV: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_live_trajectory/QM_F06_UPPER_V7A_R1_live_trajectory_audit.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_live_trajectory/QM_F06_UPPER_V7A_R1_LIVE_TRAJECTORY_AUDIT.json
+
+Continue current ORCA execution: False
+Post-QM acceptance authorized: False
+RESP authorized: False
+MD authorized: False

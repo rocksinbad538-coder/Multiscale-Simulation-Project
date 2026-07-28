@@ -1,0 +1,53 @@
+================================================================================================================
+QM_F06 UPPER V7-A R1 ORCA EXECUTION AUDIT
+================================================================================================================
+input_preparation_decision                                    : PASS
+source_execution_marked_immutable                             : PASS
+embedded_xyz_block_present                                    : PASS
+charge_zero                                                   : PASS
+singlet_multiplicity                                          : PASS
+external_xyz_atom_count                                       : PASS
+constraint_map_atom_count                                     : PASS
+nominal_edge_count_57                                         : PASS
+composition_B17_N14_H21                                       : PASS
+atom_identity_and_order                                       : PASS
+embedded_coordinates_match_xyz                                : PASS
+exactly_one_simple_keyword_line                               : PASS
+protocol_PBE0_D4_def2_TZVP                                    : PASS
+exactly_one_scf_block                                         : PASS
+scf_maxiter_500                                               : PASS
+explicit_TRAH                                                 : PASS
+explicit_MORead                                               : PASS
+exactly_one_moinp                                             : PASS
+moinp_file_present                                            : PASS
+gbw_hash_matches_report                                       : PASS
+input_hash_matches_report                                     : PASS
+xyz_hash_matches_report                                       : PASS
+constraint_map_hash_matches_report                            : PASS
+nominal_edges_hash_matches_report                             : PASS
+constraints_match_map                                         : PASS
+fixed_mobile_partition_complete                               : PASS
+parallel_configuration_nprocs_4                               : PASS
+memory_configuration_2500_MB                                  : PASS
+no_xyzfile_directive                                          : PASS
+no_geometry_restart_directive                                 : PASS
+
+Charge: 0
+Multiplicity: 1
+Embedded atoms: 52
+XYZ atoms: 52
+Map atoms: 52
+Nominal edges: 57
+Composition: {'B': 17, 'N': 14, 'H': 21}
+Fixed atoms: 12
+Mobile atoms: 40
+Constraint indices: [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14]
+Maximum embedded/XYZ difference A: 0.0
+MOInp records: ['v7a_r1_source.gbw']
+GBW size bytes: 11099404
+
+Decision: QM_F06_UPPER_V7A_R1_ORCA_EXECUTION_GATE_PASS
+ORCA restart execution authorized: True
+RESP authorized: False
+Force-field adoption authorized: False
+MD authorized: False

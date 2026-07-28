@@ -1,0 +1,37 @@
+================================================================================================================
+QM_F06 UPPER V7-A R1 POST-QM READINESS GATE
+================================================================================================================
+execution_finished                                        : WAIT/FAIL
+classified_status_zero                                    : WAIT/FAIL
+ORCA_shell_status_zero                                    : WAIT/FAIL
+termination_classification_normal                         : WAIT/FAIL
+normal_ORCA_termination_marker                            : WAIT/FAIL
+no_ORCA_error_termination_marker                          : PASS
+optimization_convergence_marker                           : WAIT/FAIL
+final_energy_available                                    : PASS
+final_XYZ_complete_52_atoms                               : PASS
+trajectory_available                                      : PASS
+trajectory_has_complete_frames                            : PASS
+all_complete_frames_have_52_atoms                         : PASS
+optimization_file_available                               : PASS
+stderr_empty                                              : PASS
+
+Execution state: RUNNING
+Exit status: None
+ORCA shell status: None
+Termination classification: PENDING
+Geometry cycles: 5
+SCF convergences: 4
+Latest energy Eh: -1200.883577922709
+Final XYZ present: True
+Final XYZ complete: True
+Trajectory complete frames: 4
+Trajectory incomplete tail: False
+
+Decision: QM_F06_UPPER_V7A_R1_POST_QM_NOT_READY_EXECUTION_RUNNING
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_post_qm/QM_F06_UPPER_V7A_R1_POST_QM_READINESS.json
+
+Post-QM structural audit authorized: False
+RESP input preparation authorized: False
+RESP execution authorized: False
+MD authorized: False

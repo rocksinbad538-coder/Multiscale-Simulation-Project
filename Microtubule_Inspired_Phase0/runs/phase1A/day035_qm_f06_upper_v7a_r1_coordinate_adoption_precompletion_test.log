@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/adopt_day035_qm_f06_upper_v7a_r1_final_coordinates.py", line 721, in <module>
+    main()
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/adopt_day035_qm_f06_upper_v7a_r1_final_coordinates.py", line 189, in main
+    raise RuntimeError(
+RuntimeError: Final post-QM report is not available: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_post_qm/QM_F06_UPPER_V7A_R1_POST_QM_AUDIT.json

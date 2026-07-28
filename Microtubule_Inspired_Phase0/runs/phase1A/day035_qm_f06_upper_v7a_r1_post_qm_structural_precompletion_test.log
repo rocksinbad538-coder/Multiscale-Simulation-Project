@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/audit_day035_qm_f06_upper_v7a_r1_post_qm.py", line 1351, in <module>
+    main()
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/scripts/phase1A/audit_day035_qm_f06_upper_v7a_r1_post_qm.py", line 643, in main
+    raise RuntimeError(
+RuntimeError: Post-QM readiness gate has not passed: QM_F06_UPPER_V7A_R1_POST_QM_NOT_READY_EXECUTION_RUNNING
