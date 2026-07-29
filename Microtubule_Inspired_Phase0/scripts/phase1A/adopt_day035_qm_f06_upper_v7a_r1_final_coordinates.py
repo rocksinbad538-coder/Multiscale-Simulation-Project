@@ -30,6 +30,17 @@ POST_QM_FINAL_XYZ = (
     / "QM_F06_UPPER_V7A_R1_FINAL.xyz"
 )
 
+COORDINATE_CONSISTENCY_DIR = (
+    ROOT
+    / "runs/phase1A/"
+    / "day035_qm_f06_upper_v7a_r1_coordinate_consistency"
+)
+
+COORDINATE_CONSISTENCY_REPORT = (
+    COORDINATE_CONSISTENCY_DIR
+    / "QM_F06_UPPER_V7A_R1_COORDINATE_CONSISTENCY.json"
+)
+
 EXEC_PARENT = (
     ROOT
     / "runs/phase1A/"
@@ -77,6 +88,12 @@ EXPECTED_POST_QM_DECISION = (
     "QM_F06_UPPER_V7A_R1_"
     "POST_QM_GATE_PASS_"
     "RESP_INPUT_PREPARATION_AUTHORIZED"
+)
+
+EXPECTED_COORDINATE_CONSISTENCY_DECISION = (
+    "QM_F06_UPPER_V7A_R1_"
+    "COORDINATE_CONSISTENCY_PASS_"
+    "COORDINATE_ADOPTION_AUTHORIZED"
 )
 
 EXPECTED_ATOM_COUNT = 52
@@ -233,6 +250,48 @@ def main() -> None:
             f"{POST_QM_FINAL_XYZ}"
         )
 
+    if not COORDINATE_CONSISTENCY_REPORT.is_file():
+        raise RuntimeError(
+            "Coordinate-consistency report is not available: "
+            f"{COORDINATE_CONSISTENCY_REPORT}"
+        )
+
+    coordinate_consistency = json.loads(
+        COORDINATE_CONSISTENCY_REPORT.read_text(
+            encoding="utf-8"
+        )
+    )
+
+    coordinate_consistency_decision = (
+        coordinate_consistency.get(
+            "decision"
+        )
+    )
+
+    coordinate_adoption_authorized = (
+        coordinate_consistency.get(
+            "authorizations",
+            {},
+        ).get(
+            "coordinate_adoption_authorized"
+        )
+        is True
+    )
+
+    if (
+        coordinate_consistency_decision
+        != EXPECTED_COORDINATE_CONSISTENCY_DECISION
+        or not coordinate_adoption_authorized
+    ):
+        raise RuntimeError(
+            "Final coordinate adoption is not authorized "
+            "by the coordinate-consistency gate: "
+            f"decision={coordinate_consistency_decision}; "
+            f"coordinate_adoption_authorized="
+            f"{coordinate_adoption_authorized}"
+        )
+
+
     if not LATEST_EXECUTION_FILE.is_file():
         raise RuntimeError(
             "Latest R1 execution pointer is missing: "
@@ -303,6 +362,14 @@ def main() -> None:
         post_qm_decision
         == EXPECTED_POST_QM_DECISION
         and post_qm_authorized
+    )
+
+    gates[
+        "coordinate_consistency_gate_authorizes_adoption"
+    ] = (
+        coordinate_consistency_decision
+        == EXPECTED_COORDINATE_CONSISTENCY_DECISION
+        and coordinate_adoption_authorized
     )
 
     gates["audited_XYZ_atom_count_52"] = (
@@ -641,6 +708,21 @@ def main() -> None:
                 False
             ),
             "MD_authorized": False,
+        },
+
+        "upstream_coordinate_consistency_gate": {
+            "report": str(
+                COORDINATE_CONSISTENCY_REPORT
+            ),
+            "decision": (
+                coordinate_consistency_decision
+            ),
+            "coordinate_adoption_authorized": (
+                coordinate_adoption_authorized
+            ),
+            "expected_decision": (
+                EXPECTED_COORDINATE_CONSISTENCY_DECISION
+            ),
         },
     }
 
