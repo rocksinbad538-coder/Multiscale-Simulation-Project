@@ -228,6 +228,12 @@ def main() -> None:
         is True
     )
 
+    post_qm_execution_directory = (
+        post_qm.get(
+            "execution_directory"
+        )
+    )
+
     if (
         post_qm_decision
         != EXPECTED_POST_QM_DECISION
@@ -278,6 +284,15 @@ def main() -> None:
         is True
     )
 
+    coordinate_consistency_execution_directory = (
+        coordinate_consistency.get(
+            "execution",
+            {},
+        ).get(
+            "execution_directory"
+        )
+    )
+
     if (
         coordinate_consistency_decision
         != EXPECTED_COORDINATE_CONSISTENCY_DECISION
@@ -308,6 +323,29 @@ def main() -> None:
         ROOT
         / execution_relative
     )
+
+    if (
+        post_qm_execution_directory
+        != str(execution_dir)
+    ):
+        raise RuntimeError(
+            "Post-QM report and current execution pointer "
+            "refer to different executions: "
+            f"post_QM={post_qm_execution_directory}; "
+            f"current={execution_dir}"
+        )
+
+    if (
+        coordinate_consistency_execution_directory
+        != str(execution_dir)
+    ):
+        raise RuntimeError(
+            "Coordinate-consistency report and current "
+            "execution pointer refer to different executions: "
+            "coordinate_consistency="
+            f"{coordinate_consistency_execution_directory}; "
+            f"current={execution_dir}"
+        )
 
     source_map = (
         execution_dir
@@ -625,6 +663,25 @@ def main() -> None:
         "post_QM_decision": (
             post_qm_decision
         ),
+        "upstream_execution_binding": {
+            "current_execution_directory": str(
+                execution_dir
+            ),
+            "post_QM_execution_directory": (
+                post_qm_execution_directory
+            ),
+            "coordinate_consistency_execution_directory": (
+                coordinate_consistency_execution_directory
+            ),
+            "post_QM_execution_identity_match": (
+                post_qm_execution_directory
+                == str(execution_dir)
+            ),
+            "coordinate_consistency_execution_identity_match": (
+                coordinate_consistency_execution_directory
+                == str(execution_dir)
+            ),
+        },
         "coordinate_source": str(
             POST_QM_FINAL_XYZ
         ),

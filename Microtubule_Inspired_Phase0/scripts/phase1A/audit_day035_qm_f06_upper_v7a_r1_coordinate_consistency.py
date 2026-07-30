@@ -68,7 +68,9 @@ EXPECTED_POST_QM_DECISION = (
 
 EXPECTED_ATOM_COUNT = 52
 
-COORDINATE_IDENTITY_TOLERANCE_A = 5.0e-12
+ORCA_XYZ_IDENTITY_TOLERANCE_A = 5.0e-12
+
+TEXT_COORDINATE_IDENTITY_TOLERANCE_A = 1.0e-6
 
 PASS_DECISION = (
     "QM_F06_UPPER_V7A_R1_"
@@ -343,6 +345,7 @@ def compare_coordinate_sets(
     candidate_name: str,
     reference_atoms: list[dict],
     candidate_atoms: list[dict],
+    identity_tolerance_A: float,
 ) -> dict:
 
     result = {
@@ -360,7 +363,7 @@ def compare_coordinate_sets(
         "maximum_displacement_dy_A": None,
         "maximum_displacement_dz_A": None,
         "coordinate_identity_tolerance_A": (
-            COORDINATE_IDENTITY_TOLERANCE_A
+            identity_tolerance_A
         ),
         "coordinate_identity_pass": False,
         "difference_rows": [],
@@ -439,7 +442,7 @@ def compare_coordinate_sets(
             "displacement_A": displacement,
             "within_identity_tolerance": (
                 displacement
-                <= COORDINATE_IDENTITY_TOLERANCE_A
+                <= identity_tolerance_A
             ),
         }
 
@@ -493,7 +496,7 @@ def compare_coordinate_sets(
 
     result["coordinate_identity_pass"] = (
         maximum_displacement
-        <= COORDINATE_IDENTITY_TOLERANCE_A
+        <= identity_tolerance_A
     )
 
     if not result["coordinate_identity_pass"]:
@@ -549,6 +552,12 @@ def main() -> None:
         is True
     )
 
+    post_qm_execution_directory = (
+        post_qm.get(
+            "execution_directory"
+        )
+    )
+
     if (
         post_qm_decision
         != EXPECTED_POST_QM_DECISION
@@ -580,6 +589,17 @@ def main() -> None:
         ROOT
         / execution_relative
     )
+
+    if (
+        post_qm_execution_directory
+        != str(execution_dir)
+    ):
+        raise RuntimeError(
+            "Post-QM report and current execution pointer "
+            "refer to different executions: "
+            f"post_QM={post_qm_execution_directory}; "
+            f"current={execution_dir}"
+        )
 
     source_orca_xyz = (
         execution_dir
@@ -721,6 +741,7 @@ def main() -> None:
             "orca_xyz",
             post_qm_atoms,
             orca_xyz_atoms,
+            ORCA_XYZ_IDENTITY_TOLERANCE_A,
         )
     )
 
@@ -730,6 +751,7 @@ def main() -> None:
             "last_trajectory_frame",
             post_qm_atoms,
             trajectory_atoms,
+            TEXT_COORDINATE_IDENTITY_TOLERANCE_A,
         )
     )
 
@@ -739,6 +761,7 @@ def main() -> None:
             "last_orca_output_coordinate_block",
             post_qm_atoms,
             orca_output_atoms,
+            TEXT_COORDINATE_IDENTITY_TOLERANCE_A,
         )
     )
 
@@ -840,13 +863,26 @@ def main() -> None:
             "expected_decision": (
                 EXPECTED_POST_QM_DECISION
             ),
+            "execution_directory": (
+                post_qm_execution_directory
+            ),
+            "execution_identity_match": (
+                post_qm_execution_directory
+                == str(execution_dir)
+            ),
         },
         "configuration": {
             "expected_atom_count": (
                 EXPECTED_ATOM_COUNT
             ),
-            "coordinate_identity_tolerance_A": (
-                COORDINATE_IDENTITY_TOLERANCE_A
+            "ORCA_XYZ_identity_tolerance_A": (
+                ORCA_XYZ_IDENTITY_TOLERANCE_A
+            ),
+            "text_coordinate_identity_tolerance_A": (
+                TEXT_COORDINATE_IDENTITY_TOLERANCE_A
+            ),
+            "tolerance_policy": (
+                "SOURCE_SPECIFIC_TEXT_PRECISION"
             ),
             "comparison_reference": (
                 "post_qm_final_xyz"
@@ -914,6 +950,7 @@ def main() -> None:
             ),
             "RESP_input_preparation_authorized": False,
             "RESP_execution_authorized": False,
+            "force_field_adoption_authorized": False,
             "MD_authorized": False,
         },
         "outputs": {

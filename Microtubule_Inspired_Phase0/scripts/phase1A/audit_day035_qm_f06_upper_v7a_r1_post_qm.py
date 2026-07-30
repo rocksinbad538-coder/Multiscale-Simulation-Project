@@ -636,13 +636,35 @@ def main() -> None:
         )
     )
 
+    readiness_decision = readiness.get(
+        "decision"
+    )
+
+    readiness_authorized = (
+        readiness.get(
+            "authorizations",
+            {},
+        ).get(
+            "post_QM_structural_audit_authorized"
+        )
+        is True
+    )
+
     if (
-        readiness.get("decision")
+        readiness_decision
         != EXPECTED_READINESS_DECISION
+        or not readiness_authorized
     ):
         raise RuntimeError(
             "Post-QM readiness gate has not passed: "
-            f"{readiness.get('decision')}"
+            f"decision={readiness_decision}; "
+            "post_QM_structural_audit_authorized="
+            f"{readiness_authorized}"
+        )
+
+    if not LATEST_FILE.is_file():
+        raise RuntimeError(
+            f"Missing execution pointer: {LATEST_FILE}"
         )
 
     execution_relative = (
@@ -651,7 +673,32 @@ def main() -> None:
         .strip()
     )
 
-    execution_dir = ROOT / execution_relative
+    if not execution_relative:
+        raise RuntimeError(
+            f"Empty execution pointer: {LATEST_FILE}"
+        )
+
+    execution_dir = (
+        ROOT
+        / execution_relative
+    )
+
+    readiness_execution_directory = (
+        readiness.get(
+            "execution_directory"
+        )
+    )
+
+    if (
+        readiness_execution_directory
+        != str(execution_dir)
+    ):
+        raise RuntimeError(
+            "Readiness report and current execution pointer "
+            "refer to different executions: "
+            f"readiness={readiness_execution_directory}; "
+            f"current={execution_dir}"
+        )
 
     start_path = (
         execution_dir
@@ -1098,6 +1145,24 @@ def main() -> None:
         "execution_directory": str(
             execution_dir
         ),
+        "upstream_readiness": {
+            "report": str(
+                READINESS_REPORT
+            ),
+            "decision": (
+                readiness_decision
+            ),
+            "post_QM_structural_audit_authorized": (
+                readiness_authorized
+            ),
+            "execution_directory": (
+                readiness_execution_directory
+            ),
+            "execution_identity_match": (
+                readiness_execution_directory
+                == str(execution_dir)
+            ),
+        },
         "decision": decision,
         "gates": gates,
         "summary": {
