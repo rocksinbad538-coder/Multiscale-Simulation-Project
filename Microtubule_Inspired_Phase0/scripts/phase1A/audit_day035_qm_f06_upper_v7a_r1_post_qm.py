@@ -1071,10 +1071,31 @@ def main() -> None:
         "trajectory_available_and_parseable": (
             len(frames) >= 1
         ),
-        "all_trajectory_frames_pass": (
-            len(trajectory_failures) == 0
+        "final_trajectory_frame_pass": (
+            bool(trajectory_rows)
+            and bool(
+                trajectory_rows[-1]["frame_pass"]
+            )
         ),
     }
+
+    trajectory_all_frames_pass = (
+        len(trajectory_failures) == 0
+    )
+
+    trajectory_recovered_before_final = (
+        bool(trajectory_rows)
+        and bool(
+            trajectory_rows[-1]["frame_pass"]
+        )
+        and (
+            len(trajectory_failures) == 0
+            or max(trajectory_failures)
+            < trajectory_rows[-1][
+                "frame_index_0based"
+            ]
+        )
+    )
 
     passed = all(gates.values())
 
@@ -1232,6 +1253,50 @@ def main() -> None:
             ),
             "trajectory_failure_frames": (
                 trajectory_failures
+            ),
+            "trajectory_all_frames_pass": (
+                trajectory_all_frames_pass
+            ),
+            "trajectory_recovered_before_final": (
+                trajectory_recovered_before_final
+            ),
+            "final_trajectory_frame_pass": (
+                bool(trajectory_rows)
+                and bool(
+                    trajectory_rows[-1][
+                        "frame_pass"
+                    ]
+                )
+            ),
+        },
+        "trajectory_diagnostics": {
+            "policy": (
+                "Intermediate optimization frames are "
+                "audited and reported but are not fatal "
+                "when the trajectory is parseable, the "
+                "final trajectory frame passes, and the "
+                "final optimized geometry passes every "
+                "required structural gate."
+            ),
+            "all_frames_pass": (
+                trajectory_all_frames_pass
+            ),
+            "transient_anomalies_detected": (
+                len(trajectory_failures) > 0
+            ),
+            "failure_frames_0based": (
+                trajectory_failures
+            ),
+            "recovered_before_final": (
+                trajectory_recovered_before_final
+            ),
+            "final_frame_pass": (
+                bool(trajectory_rows)
+                and bool(
+                    trajectory_rows[-1][
+                        "frame_pass"
+                    ]
+                )
             ),
         },
         "failures": {

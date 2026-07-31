@@ -107,3 +107,59 @@ Any adopted charge set must be checked for:
 - UPPER fragment construction/optimization: **PENDING**
 - Charge adoption: **NOT AUTHORIZED**
 - Force-field parameter adoption: **NOT AUTHORIZED**
+
+## Status update — 2026-07-31
+
+The UPPER fragment is no longer pending.
+
+`QM_F06_UPPER_V7A_R1` has completed:
+
+- ORCA geometry optimization;
+- normal ORCA termination;
+- independent post-QM structural acceptance;
+- final-coordinate consistency validation;
+- coordinate adoption with SHA256 provenance;
+- RESP input-design validation;
+- Day036 RESP preparation.
+
+The accepted UPPER reference contains 52 atoms with composition
+B17N14H21. It includes 37 real atoms and 15 artificial QM boundary
+caps.
+
+Artificial caps remain part of the finite QM electrostatic model but
+are excluded from direct transfer into the full scaffold and from
+transferable atom-type averages.
+
+No non-singleton charge-equivalence restraints have yet been enforced.
+Candidate equivalence groups require joint topology and local-geometry
+validation across LOWER and UPPER fragments.
+
+The independent ORCA CHELPG input preflight has passed. The ESP
+single-point execution is formally authorized.
+
+RESP input generation, RESP fitting, charge adoption, force-field
+adoption and molecular dynamics remain unauthorized until their
+respective downstream gates pass.
+
+## ESP result update — 2026-07-31
+
+The authorized QM_F06 UPPER V7-A R1 ORCA CHELPG single-point
+calculation completed successfully.
+
+- SCF converged after 17 cycles.
+- Final energy: -1201.445434386447 Eh.
+- ORCA terminated normally.
+- Shell exit status: 0.
+- Standard error output: empty.
+- The CHELPG charge block was generated and independently audited.
+- Input identity and geometry provenance remained intact.
+
+CHELPG is itself an ESP-fitted charge model. Its fitted atomic charges
+are retained as diagnostic electronic-property results.
+
+Before AmberTools RESP input generation can be authorized, a separate
+stage must demonstrate how the raw ORCA electrostatic-potential data
+will be extracted or converted into the ESP format consumed by RESP.
+
+RESP input generation, RESP execution, charge adoption, force-field
+adoption and molecular dynamics remain unauthorized.
