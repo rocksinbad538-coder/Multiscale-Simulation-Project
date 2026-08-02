@@ -1,0 +1,48 @@
+================================================================================================================
+QM_F06 UPPER V7-A R1 TRANSIENT N-B CONTACT ANALYSIS
+================================================================================================================
+Contact: A:UPPER:13:1 (N) -- S:1710 (B)
+Geometric threshold A: 1.900000
+Complete frames: 26
+
+frame=  0 | E=  -1200.702289093223 | d_NB=2.002716488 A | margin=+0.102716488 A | GEOMETRIC_EDGE_ABSENT
+frame=  1 | E=  -1200.765216070659 | d_NB=2.013875685 A | margin=+0.113875685 A | GEOMETRIC_EDGE_ABSENT
+frame=  2 | E=  -1200.818798443211 | d_NB=2.019402322 A | margin=+0.119402322 A | GEOMETRIC_EDGE_ABSENT
+frame=  3 | E=  -1200.883577922709 | d_NB=2.026069065 A | margin=+0.126069065 A | GEOMETRIC_EDGE_ABSENT
+frame=  4 | E=  -1201.012285097567 | d_NB=2.030454228 A | margin=+0.130454228 A | GEOMETRIC_EDGE_ABSENT
+frame=  5 | E=  -1201.071831004545 | d_NB=2.015910393 A | margin=+0.115910393 A | GEOMETRIC_EDGE_ABSENT
+frame=  6 | E=  -1201.116029260309 | d_NB=2.001729026 A | margin=+0.101729026 A | GEOMETRIC_EDGE_ABSENT
+frame=  7 | E=  -1201.158175845924 | d_NB=1.986371984 A | margin=+0.086371984 A | GEOMETRIC_EDGE_ABSENT
+frame=  8 | E=  -1201.210658233453 | d_NB=1.963247962 A | margin=+0.063247962 A | GEOMETRIC_EDGE_ABSENT
+frame=  9 | E=  -1201.253437132445 | d_NB=1.942644988 A | margin=+0.042644988 A | GEOMETRIC_EDGE_ABSENT
+frame= 10 | E=  -1201.285771708854 | d_NB=1.925165109 A | margin=+0.025165109 A | GEOMETRIC_EDGE_ABSENT
+frame= 11 | E=  -1201.308641357972 | d_NB=1.914643913 A | margin=+0.014643913 A | GEOMETRIC_EDGE_ABSENT
+frame= 12 | E=  -1201.325178604104 | d_NB=1.908416353 A | margin=+0.008416353 A | GEOMETRIC_EDGE_ABSENT
+frame= 13 | E=  -1201.337424003872 | d_NB=1.902311781 A | margin=+0.002311781 A | GEOMETRIC_EDGE_ABSENT
+frame= 14 | E=  -1201.347271839645 | d_NB=1.893217512 A | margin=-0.006782488 A | GEOMETRIC_EDGE_PRESENT
+frame= 15 | E=  -1201.355234736729 | d_NB=1.879051031 A | margin=-0.020948969 A | GEOMETRIC_EDGE_PRESENT
+frame= 16 | E=  -1201.362144695018 | d_NB=1.865393066 A | margin=-0.034606934 A | GEOMETRIC_EDGE_PRESENT
+frame= 17 | E=  -1201.368034023485 | d_NB=1.853248859 A | margin=-0.046751141 A | GEOMETRIC_EDGE_PRESENT
+frame= 18 | E=  -1201.374879603358 | d_NB=1.850537315 A | margin=-0.049462685 A | GEOMETRIC_EDGE_PRESENT
+frame= 19 | E=  -1201.382040531067 | d_NB=1.858631355 A | margin=-0.041368645 A | GEOMETRIC_EDGE_PRESENT
+frame= 20 | E=  -1201.388341665175 | d_NB=1.877580157 A | margin=-0.022419843 A | GEOMETRIC_EDGE_PRESENT
+frame= 21 | E=  -1201.393547231445 | d_NB=1.901281104 A | margin=+0.001281104 A | GEOMETRIC_EDGE_ABSENT
+frame= 22 | E=  -1201.397271032672 | d_NB=1.929233198 A | margin=+0.029233198 A | GEOMETRIC_EDGE_ABSENT
+frame= 23 | E=  -1201.399981297001 | d_NB=1.954663030 A | margin=+0.054663030 A | GEOMETRIC_EDGE_ABSENT
+frame= 24 | E=  -1201.402008165279 | d_NB=1.981868352 A | margin=+0.081868352 A | GEOMETRIC_EDGE_ABSENT
+frame= 25 | E=  -1201.403261370249 | d_NB=1.996461508 A | margin=+0.096461508 A | GEOMETRIC_EDGE_ABSENT
+
+Geometric-edge-present frames: [14, 15, 16, 17, 18, 19, 20]
+Minimum distance: 1.850537315 A at frame 18
+Minimum margin: -0.049462685 A
+Latest frame: 25
+Latest distance: 1.996461508 A
+Latest margin: +0.096461508 A
+Contact absent in latest frame: True
+
+CSV: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_transient_nb_contact/QM_F06_UPPER_V7A_R1_transient_NB_contact.csv
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_transient_nb_contact/QM_F06_UPPER_V7A_R1_TRANSIENT_NB_CONTACT.json
+
+Post-QM acceptance authorized: False
+RESP authorized: False
+MD authorized: False

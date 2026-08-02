@@ -32,3 +32,7 @@ vmd_frames/
 # Editor
 .vscode/
 .idea/
+
+# Runtime process identifiers
+*.orca_pid
+*.supervisor_pid

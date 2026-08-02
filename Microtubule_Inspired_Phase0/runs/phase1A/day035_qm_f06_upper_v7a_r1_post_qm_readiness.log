@@ -20,12 +20,12 @@ Execution state: RUNNING
 Exit status: None
 ORCA shell status: None
 Termination classification: PENDING
-Geometry cycles: 5
-SCF convergences: 4
-Latest energy Eh: -1200.883577922709
+Geometry cycles: 27
+SCF convergences: 26
+Latest energy Eh: -1201.403261370249
 Final XYZ present: True
 Final XYZ complete: True
-Trajectory complete frames: 4
+Trajectory complete frames: 26
 Trajectory incomplete tail: False
 
 Decision: QM_F06_UPPER_V7A_R1_POST_QM_NOT_READY_EXECUTION_RUNNING

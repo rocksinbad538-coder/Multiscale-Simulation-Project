@@ -1,0 +1,27 @@
+================================================================================================================
+QM_F06 UPPER V7-A R1 EXECUTION-CONTINUATION GATE
+================================================================================================================
+execution_running                                   : PASS
+latest_frame_clean                                  : PASS
+latest_no_lost_edges                                : PASS
+latest_no_gained_edges                              : PASS
+latest_no_degree_failures                           : PASS
+latest_single_component                             : PASS
+latest_no_hard_contacts                             : PASS
+latest_required_V7A_edges_present                   : PASS
+latest_V6B_forbidden_pair_absent                    : PASS
+sufficient_consecutive_clean_frames                 : PASS
+
+Latest complete frame: 25
+Latest energy Eh: -1201.403261370249
+Consecutive clean tail: [21, 22, 23, 24, 25]
+Historical warning frames: [2, 3, 4]
+Historical critical frames: [14, 15, 16, 17, 18, 19, 20]
+
+Decision: QM_F06_UPPER_V7A_R1_CURRENT_EXECUTION_CONTINUE
+Report: /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day035_qm_f06_upper_v7a_r1_execution_continuation/QM_F06_UPPER_V7A_R1_EXECUTION_CONTINUATION.json
+
+Continue current ORCA execution: True
+Post-QM acceptance authorized: False
+RESP authorized: False
+MD authorized: False
