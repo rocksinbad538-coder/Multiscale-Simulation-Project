@@ -1,0 +1,17 @@
+At line 734 of file /Users/runner/miniforge3/conda-bld/ambertools_1740608170851/work/AmberTools/src/etc/resp.F (unit = 5, file = 'QM_F06_UPPER_V7A_R1_resp1.in')
+Fortran runtime error: End of file
+
+Error termination. Backtrace:
+#0  0x188184010
+#1  0x188184e0c
+#2  0x1881859ab
+#3  0x188431800
+#4  0x188431dda
+#5  0x18842df19
+#6  0x188433621
+#7  0x18843473c
+#8  0x10c3108c0
+#9  0x10c312119
+#10  0x10c3131d3
+#11  0x10c313376
+#12  0x7ff81566c52f
