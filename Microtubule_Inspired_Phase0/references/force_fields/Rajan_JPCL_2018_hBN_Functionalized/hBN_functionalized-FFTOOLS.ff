@@ -1,0 +1,38 @@
+# hBN (kJ/mol, A, deg), J. Phys. Chem. Lett. 2018, 9, 7, 1584–1591
+# Ananth Govind Rajan, ananthgr@iisc.ac.in
+
+ATOMS
+#   type  m/uma    q/e    pot   pars(A, kJ/mol)
+B   B    10.811    0.907   lj    3.3087   0.2897
+N   N    14.007   -0.907   lj    3.2174   0.1979
+HB   HB    1.0078   0.189    lj    2.42   0.29288
+HN   HN    1.0078   0.189    lj    2.42   0.25104
+     
+
+BONDS
+# i j    pot    re/A    ka/kJmol-1
+B  N    harm    1.32   2488.8
+B  HB    harm    1.20   2112.85
+N  HN    harm    1.02   4315.23
+
+
+ANGLES
+# i  j   k    pot    th/deg   ka/kjmol-1
+B    N   B   harm    120.0     588.7
+N    B   N   harm    120.0     230.9
+B    N   HN   harm    119.0     197.25
+N    B   HB   harm    119.9     250.89
+
+IMPROPER
+# i  j  k  l    pot   th/deg   ka/kjmol-1
+B  B  N   B     harm   0.0       258.0
+N  N  B   N     harm   0.0       657.5
+
+DIHEDRALS
+# i  j   k   l  pot    Kchi    n   delta
+#N   B   O   H   charmm  12.456  1   60
+#1     0.678     2     180     0.0  # N-B-N-HN
+#2     1.705     2     180     0.0  # B-N-B-HB
+N   B   N   HN   opls  0.0  0.0  0.0  0.0
+B   N   B   HB   opls  0.0  0.0  0.0  0.0
+

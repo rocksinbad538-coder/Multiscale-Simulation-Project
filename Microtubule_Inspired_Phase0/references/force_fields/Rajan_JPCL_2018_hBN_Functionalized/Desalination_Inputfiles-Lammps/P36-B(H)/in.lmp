@@ -1,0 +1,151 @@
+# created by fftool
+
+units real
+boundary p p p
+
+atom_style full
+bond_style harmonic
+angle_style harmonic
+improper_style harmonic
+dihedral_style charmm
+
+special_bonds lj/coul 0.0 0.0 0.0
+
+pair_style hybrid lj/cut/tip4p/long 2 3 1 1 0.1546 12.0 12.0
+pair_modify tail yes
+kspace_style pppm/tip4p 1.0e-5
+
+read_data data.lmp
+
+include pair.lmp
+variable v1 equal step
+variable v2 equal temp
+variable v3 equal vol
+variable v4 equal etotal
+variable v5 equal press
+variable v6 equal lx
+variable v7 equal ly
+variable v8 equal lz
+variable v9 equal ecoul
+variable v10 equal evdwl
+variable v11 equal pxx
+variable v12 equal pyy
+variable v13 equal pzz
+variable num_feedeq_na equal "count(na,leftreserviour)"
+variable num_feedeq_cl equal "count(cl,leftreserviour)"
+variable water_counteq_left equal "count(ox,leftreserviour)"
+variable water_counteq_right equal "count(ox,rightreserviour)"
+
+
+#Defining the groups
+group leftgraphene id 1:416
+group rightgraphene id 8353:8768
+group hBNsheet id 6461:6852
+group water type 2 3
+group ox type 2
+group Nacl type 4 5 
+group na type 4
+group cl type 5
+group saltwater type 2 3 4 5
+group bn type 6 7 8
+group waterbn type 2 3 6 7 8
+
+#Defining the regions
+region leftreserviour block INF INF INF INF INF 75 units box
+region rightreserviour block INF INF INF INF 75 INF units box
+region Innerhbnsheet cylinder z 15.11551766340 17.47752724928 12 INF INF units box
+
+#Creating a cylindrical region and subtracting that from the hBN sheet
+group cylinderhbnsheet region Innerhbnsheet
+group boundaryhbn intersect cylinderhbnsheet hBNsheet 
+group moveable union leftgraphene rightgraphene water Nacl boundaryhbn
+
+variable TK equal 298.15
+variable PBAR equal 1.0
+
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+
+# ------------- Setup ----------------
+# For the equilibration phase, keep the piston rigid.
+
+fix left_graphene leftgraphene setforce 0.0 0.0 0.0
+fix right_graphene rightgraphene setforce 0.0 0.0 0.0
+
+#-----Setforce command can be used to freeze atoms in the simulation by zeroing their force-----
+
+fix freezewater saltwater setforce 0.0 0.0 0.0 
+
+# .............Energy Minimization step........
+
+minimize 1.0e-4 1.0e-6 1000 1000
+unfix freezewater
+unfix left_graphene
+unfix right_graphene
+reset_timestep 0
+
+#-------Shake command to constrain bonds--------
+fix SHAKE water shake 0.0001 100 0 b 1 a 1
+
+#------Velocity initialization--------
+velocity saltwater create ${TK} 65473261 dist gaussian
+velocity boundaryhbn create ${TK} 15473261 dist gaussian
+
+#---Timestep in fs----
+
+timestep 1.0
+
+# ------------- Equilibration ----------------
+
+fix left_equ_graphene leftgraphene setforce 0.0 0.0 NULL # NULL here means do not alter the force component in that dimension
+fix right_equ_graphene rightgraphene setforce 0.0 0.0 NULL
+fix f_on_left leftgraphene aveforce NULL NULL 0.398710965e-4
+fix f_on_right rightgraphene aveforce NULL NULL -0.398710965e-4
+
+
+#-----Printing variables----
+
+fix VARIABLESEQ all print 10000 "${v1}     ${v2}     ${v3}     ${v4}     ${v5}     ${v6}     ${v7}     ${v8}     ${water_counteq_left}     ${water_counteq_right}     ${num_feedeq_na}     ${num_feedeq_cl} " file variables_one.lmp screen no
+
+fix VARIABLESEQU all print 10000 "${v9}     ${v10}       ${v11}     ${v12}     ${v13} " file variables_two.lmp screen no
+
+#-------NPT integration for Equilibration step------
+
+fix TPSTAT moveable npt temp ${TK} ${TK} 100 x ${PBAR} ${PBAR} 1000 y ${PBAR} ${PBAR} 1000
+
+thermo 1000
+thermo_style custom step temp epair emol etotal evdwl press vol lx ly lz v_num_feedeq_cl v_num_feedeq_na v_water_counteq_left v_water_counteq_right
+dump equilibdump all custom 1000  equilibrum.lammpstrj id mol type element q xu yu zu
+dump_modify equilibdump element C O H Na Cl B N HB
+
+run 50000
+print "Equilibration completed."
+unfix TPSTAT
+unfix f_on_left
+unfix f_on_right
+unfix left_equ_graphene
+unfix right_equ_graphene
+undump equilibdump
+reset_timestep 0
+
+#Performing constant NPT integration to update position, velocity, orientation at each timestep for body particles in the group
+
+# ------------- Production run--------
+fix left_equ_graphene leftgraphene setforce 0.0 0.0 NULL # NULL here means do not alter the force component in that dimension
+fix right_equ_graphene rightgraphene setforce 0.0 0.0 NULL
+fix f_on_left leftgraphene aveforce NULL NULL 196.7485639e-4
+fix f_on_right rightgraphene aveforce NULL NULL -0.398710965e-4
+fix TPSTAT_p moveable npt temp ${TK} ${TK} 100 x ${PBAR} ${PBAR} 1000 y ${PBAR} ${PBAR} 1000
+
+
+thermo 2000
+
+thermo_style custom step temp epair emol etotal evdwl press vol lx ly lz v_num_feedeq_cl v_num_feedeq_na v_water_counteq_left v_water_counteq_right
+restart 1000000 dynamics.restart
+
+dump TRAJ all custom 10000 dump.lammpstrj id mol type element q xu yu zu
+dump_modify TRAJ element C O H Na Cl B N HB
+
+run 9000000
+
+write_data data.eq.lmp

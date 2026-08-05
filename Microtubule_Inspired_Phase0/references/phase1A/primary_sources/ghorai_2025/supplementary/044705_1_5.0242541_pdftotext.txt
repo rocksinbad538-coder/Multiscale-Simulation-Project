@@ -1,0 +1,937 @@
+  The Journal
+                                                                                                 ARTICLE          pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+
+     Molecular dynamics simulations of functionalized
+     hBN nanopores in water: Ab initio force field
+     and implications for water desalination
+     Cite as: J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541
+     Submitted: 5 October 2024 • Accepted: 30 December 2024 •
+     Published Online: 29 January 2025
+
+     Sagar Ghorai,             Pradeep Dhondi,              and Ananth Govind Rajana)
+
+     AFFILIATIONS
+     Department of Chemical Engineering, Indian Institute of Science, Bengaluru, Karnataka 560012, India
+
+     Note: This paper is part of the JCP Special Topic on Molecular Dynamics, Methods and Applications 60 Years After Rahman.
+     a)
+        Author to whom correspondence should be addressed: ananthgr@iisc.ac.in
+
+
+     ABSTRACT
+     Heteropolar two-dimensional materials, including hexagonal boron nitride (hBN), are promising candidates for seawater desalination and
+     osmotic power harvesting, but previous simulation studies have considered bare, unterminated nanopores in molecular dynamics (MD)
+
+
+
+
+                                                                                                                                                         15 July 2026 17:04:39
+     simulations. There is presently a lack of force fields to describe functionalized nanoporous hBN in aqueous media. To address this gap, we
+     conduct density functional theory (DFT)-based ab initio MD simulations of hBN nanopores surrounded by water molecules. The results
+     reveal a high propensity for hydrogen (H) and hydroxyl (OH) functionalization at boron edges, while nitrogen edges are functionalized
+     with H and occasionally with oxygen (O), highlighting a route to tune membranes. We demonstrate the role of the Grotthuss mechanism
+     during the functionalization of hBN edges in water. We develop high-fidelity force fields for H- and OH-functionalized hBN nanopores using
+     potential energy surface fitting based on DFT calculations. The nonbonded parameters for H functionalization are obtained by training a
+     force field for borazine (B3 N3 H6 ). We find that the proposed force field enables stable MD simulations of water/ion transport through B-
+     and N-terminated hBN nanopores. Our results also indicate that previous studies that considered bare nanopores without functional groups
+     overestimated the water flux and underestimated the ionic rejection of nanoporous hBN. Overall, our work is expected to enable the realistic
+     modeling of edge-functionalized hBN in aqueous media for various application areas.
+     Published under an exclusive license by AIP Publishing. https://doi.org/10.1063/5.0242541
+
+
+
+
+     INTRODUCTION                                                             modeling the interactions between solid surfaces and liquids
+                                                                              becomes pivotal, where defects, surface roughness, and chemical
+           Advancements in the synthesis and characterization of mate-        functional groups can exert profound effects on a 2D material’s
+     rials have brought to the fore an array of two-dimensional (2D)          interfacial properties.14
+     materials characterized by exceptional properties and diverse appli-           The significance of atomic-scale defects and surface rough-
+     cations. Among these, hexagonal boron nitride (hBN) has garnered         ness in influencing wetting behavior and frictional properties on
+     significant attention as a versatile 2D material exhibiting unique       hBN surfaces has garnered increasing attention.15–17 The potential
+     properties such as a heteropolar composition, insulating behav-          of nanoporous hBN as a desalination membrane also prompted
+     ior, and atomically smooth structure.1 Its distinctive attributes find   an exploration into the impact of grain boundaries on desalina-
+     utility across a spectrum of fields, ranging from seawater desali-       tion performance.11 For technological applications, the fabrication
+     nation2 and osmotic power harvesting3 to biological sensing,4,5          of large-area 2D materials is desirable, and chemical vapor depo-
+     (opto)electronic devices,6 catalysis7–9 and separation processes.10,11   sition (CVD) processes stand out as the most effective means.18,19
+     In many of these applications, a crucial aspect involves under-          In the realm of CVD synthesis for hBN, commonly used precursors
+     standing the wetting and fluidic properties at the interface of 2D       include ammonia-borane or hydrazine and borazine.20–22 The pres-
+     materials such as hBN with liquids, which is essential for optimizing    ence of hydrogen (H) atoms in the precursors leaves the possibility
+     their real-world performance.12,13 Within this context, accurately       of H functionalization on the grown 2D layers or within nanopores.
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                162, 044705-1
+Published under an exclusive license by AIP Publishing
+  The Journal
+                                                                                                  ARTICLE              pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+     Similarly, the exposed edges of nanoporous hBN membranes are            nanopores in hBN, we carry out accurate AIMD simulations of hBN
+     highly susceptible to H and hydroxyl (OH) functionalization in the      nanopores in the presence of water molecules and also develop a
+     presence of water.16 Despite the well-studied effects of different      high-fidelity FF for hBN with H and OH functional groups. We also
+     defects in hBN on various interfacial phenomena and desalination        apply the developed force field to compare water and ion permeation
+     performance,15–17 the influence of H and OH groups at hBN edges         via functionalized and bare nanopores in hBN.
+     remains poorly understood due to the absence of suitable atomistic
+     models for functionalized hBN.10 Although models for distinct aro-
+     matic systems, such as the C–H bond in benzene and the C–OH             COMPUTATIONAL METHODS
+     bond in phenol, have been employed to simulate functionalized
+     graphene (involving C–H and C–OH bonds),23 a similar approach           DFT calculations
+     was not possible so far for H- and OH-functionalized hBN due to              All the ab initio DFT calculations were performed using
+     the lack of parameters for borazine. Furthermore, while accurate        the mixed Gaussian and plane waves (GPW) approach as imple-
+     ab initio molecular dynamics (AIMD) simulations have previously         mented in the cp2k program package.26 We used the gener-
+     been employed to understand the interactions of water with pris-        alized gradient approximation Perdew–Burke–Ernzerhof (PBE)
+     tine hBN,24 no such effort has been made for nanoporous hBN,            exchange–correlation functional27 and double-zeta short-range
+     which is an essential precursor for understanding the usage of hBN      molecularly optimized (MOLOPT) basis sets28 for valence elec-
+     in osmotic power harvesting and seawater desalination. Therefore,       trons and Godecker–Teter–Hutter (GTH) pseudopotentials for the
+     in this study, we embark on a comprehensive ab initio study of          nuclei and core electrons.29 The dispersion corrections were incor-
+     functionalized nanoporous hBN, including AIMD simulations of the        porated considering Grimme’s D3 approach.30 The partial charge
+     functionalization process, the development of a high-fidelity force     on each atom was determined via the density derived atomic point
+     field (FF) for H- and OH-functionalized hBN systems via electronic      (DDAP) charges scheme.31 More details regarding the DFT cal-
+     density functional theory (DFT) calculations, and the application of    culations can be found in the supplementary material, which also
+     the FF in classical molecular dynamics (MD) simulations to under-       outlines the DDAP parameters used (Table S1) and a charge rescal-
+     stand water and ion permeation through realistic models of hBN          ing scheme used to match the DFT and the partial-charge-based
+     nanopores.                                                              electric potentials for the desalination study utilizing MD sim-
+           Previously, most simulation studies of water and ion per-         ulations (Figs. S1–S5). Note that we primarily used the default
+     meation through hBN considered unfunctionalized, i.e., bare
+
+
+
+
+                                                                                                                                                              15 July 2026 17:04:39
+                                                                             DDAP parameters in cp2k, as presented in Table S1, in this
+     nanopores.2,10,11,25 Jafarzadeh et al. incorporated OH groups at        study.
+     N edges and H groups at B edges to simulate the effects of H and
+     OH functionalization,10 although we show here, through AIMD
+     simulations, that the edge structure of functionalized hBN is much      Form of the FF for functionalized hBN
+     different. Moreover, electrostatic interactions, which are crucial
+     at hBN surfaces, were not modeled adequately in their study, in              We built the FF upon the stable pristine hBN FF developed by
+     addition to the use of approximate FF parameters for these func-        Govind Rajan et al.,24 which accurately predicted water-hBN bind-
+     tional groups. In another study, a reactive force field (ReaxFF)        ing energies in excellent agreement with reference-quality quantum
+     was employed by Verma et al. to understand the behavior of              Monte Carlo (QMC) calculations.32 The total potential energy of
+     water molecules inside an hBN nanopore.16 Other studies exam-           the system (U sys ) is obtained as the sum of the bonded (U bonded )
+     ined the wetting and frictional properties of hBN with defects          and the nonbonded (U nonbonded ) potential energies. The bonded
+     and exposed edges without considering functional groups at the          interactions involve two-body (U bond ), three-body (U angle ), and four-
+     edges due to the lack of force-field parameters to model such           body (U dihedral or U improper ) terms. The two-body and three body
+     systems.15,17 Indeed, there exists no study that has examined with      terms are approximated as harmonic potentials with a quadratic
+     first-principles accuracy, the functionalization of hBN nanopores       energy penalty upon deviating from the equilibrium bond length or
+     in water and their effect on water and ion permeation through           angle measure, as follows: Ubonds = ∑bonds 21 kbi (li − l0i )2 and Uangles
+     chemically functionalized nanopores via the use of classical force      = ∑angles 12 kθi (θi − θ0i )2 , where kbi denotes the force constant, li is
+     fields.                                                                 the instantaneous length, and l0i is the equilibrium length of the
+           In this regard, the interaction of defective hBN with the pro-    ith bond; kθi denotes the force constant, θi is the instantaneous
+     tons and hydroxide ions in water is particularly intriguing, offering   measure, and θ0i is the equilibrium measure of the ith angle. The
+     pathways to manipulate its surface properties and interfacial behav-    four-body improper dihedral term ensures the planarity of the bulk
+     ior. The investigation of H- and OH-functionalized hBN interfaces       hBN regions and is also modeled as a harmonic potential: Uimpropers
+     holds significant promise due to the distinctive modifications they     = ∑impropers 21 kχi (χi − χ0i )2 , where kχi denotes the force constant, χ i
+     introduce. Both functionalizations can impact surface wetting, mod-     is the instantaneous measure, and χ 0i is the equilibrium measure
+     ulate surface polarity, and promote hydrogen bonding interactions.      of the ith improper dihedral. Finally, the four-body dihedral, used
+     Therefore, understanding the interplay between these functional         for modeling the flexibility of the functional groups at the edges
+     groups at different types of hBN edges is pivotal for tailoring its     of the nanopores, is represented by a periodic potential involving
+     properties for various applications, with a specific focus here on      the cosine of the deviation between a multiple of the instantaneous
+     water desalination. Accordingly, to bridge the knowledge gaps per-      dihedral angle (nφi ) and the equilibrium torsional angle, φ0i , as
+     taining to the structure of functionalized hBN and the role of          Udihedrals = ∑dihedrals kφi (1 + cos (nφi − φ0i )), where kφi is the dihedral
+     functional groups in modulating water and ion transport through         constant of the ith dihedral.
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                     162, 044705-2
+Published under an exclusive license by AIP Publishing
+  The Journal
+                                                                                                                      ARTICLE               pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+          The nonbonded interactions are intermolecular interactions                          We employed the force field for B and N atoms by Govind Rajan
+     between two atoms and are represented as the sum of a 6–12                               et al.,24 encompassing all bonded and nonbonded parameters for
+     Lennard-Jones (LJ) potential, representing van der Waals attrac-                         hBN. Our current work provides bonded parameters for func-
+     tion and exchange repulsion, and a Coulombic term representing                           tionalized groups at the pore edges and nonbonded parameters
+     the interactions between partial charges on the atoms as Unonbonded                      for H functionalization. Furthermore, the LJ parameters for the
+                         σ    6     σ   12      qq                                            O attached to N and OH attached to B were taken from the
+     = ∑pairs {−4ϵij [( rijij ) − ( rijij ) ] + 4πεi 0 rj ij }, where ϵij and σ ij are the
+                                                                                              OPLS/AA force field for C–OH in phenol,40 while those for Na+ and
+     LJ parameters for the interactions between the ith and jth atoms,                        Cl− ions were adapted from Zeron et al.41 For carbon atoms in
+     qi is the partial charge on the ith atom, ε0 is the permittivity                         pistons, we utilized Cheng and Steele’s LJ parameters.42 Water
+     of free space, and rij is the distance between the ith and the jth                       molecules were represented using the four-site rigid TIP4P/2005
+     atoms. As mentioned later, note that LJ parameters for interactions                      model.43 The interactions between atoms of different types were cal-
+     between different atom types were obtained using geometric mean                                                                                      √
+                              √                √                                              culated using geometric-mean combining rules, i.e., ϵij = ϵii ϵjj and
+     combining rules as σij = σii σjj and ϵij = ϵii ϵjj .                                           √
+                                                                                              σij = σii σjj , where σ denotes the distance at which the interatomic
+                                                                                              LJ potential is zero and ϵ denotes the LJ well-depth parameter. The
+                                                                                              force field parameters are presented in Tables I, II, and S2.
+     Force field fitting and MD simulations
+                                                                                                    For the desalination simulations, the initial system configu-
+          All the molecular mechanics simulations to fit the ab initio                        ration included the membrane, saltwater on the feed side, and
+     potential energy surface were performed using the General Utility                        freshwater on the permeate side, within a simulation box of 160 Å
+     Lattice Program (GULP).33,34 The LJ interactions were cut off at a                       in the z direction (perpendicular to the membrane) and a cross-
+     distance of 12 Å and 1–2, 1–3, and 1–4 LJ/electrostatic interactions                     sectional area of ∼32 × ∼34 Å2 in the xy plane (parallel to the
+     were excluded. Long-range electrostatic interactions were included                       membrane). The hBN membrane was fixed at z = 75 Å, and rigid
+     using the Ewald summation method35 within GULP. We performed                             pistons were initially positioned at z = 5 and 97 Å. For the feed-side
+     MD simulations using the Large-scale Atomic/Molecular Mas-                               region of the simulation box, we included 2000 water molecules, 22
+     sively Parallel Simulator (LAMMPS) package36,37 for fitting the                          Na+ ions, and 22 Cl− ions, resulting in a salt concentration of 35.7
+     LJ parameters of B–H and N–H functionalization and providing                             g/l, which closely resembles the salinity of seawater (∼35 g/l). On the
+     insights into the water desalination performance. Within LAMMPS,                         permeate (pure water) side, 500 water molecules were added. During
+     long-range electrostatic interactions were included via the                              each simulation, the atoms within the nanoporous hBN membrane
+
+
+
+
+                                                                                                                                                                                      15 July 2026 17:04:39
+     particle-particle–particle-mesh (PPPM) technique,38 and the                              were allowed to vibrate, excluding those closest to the periodic
+     SHAKE algorithm39 was employed to simulate rigid bonds and                               boundary. This setup ensured that the hBN sheet remained fixed at
+     angles. Other details regarding the LJ interactions remained the                         z = 75 Å while freely deforming in response to the forces exerted by
+     same. All the MD simulations were performed with a 1 fs time                             the water molecules and ions in the solution. To apply the desired
+     step. Periodic boundary conditions were applied in all directions.                       pressure on the feed side (along the +z direction) and the permeate
+
+
+
+
+      FIG. 1. System considered for AIMD simulations and the ensuing results. (a) Front view and (b) side view of the initial configuration. (c) A snapshot after 6 ps AIMD
+      simulation for the pore with B-terminated edges (atoms with 12.5 Å < z < 17 Å are shown to highlight the edge functional groups). Variation of the (d) DFT energy (ΔE) and
+      (e) temperature throughout the simulation for the pore with B-terminated edges. (f) A snapshot after 6 ps AIMD simulation for the pore with N-terminated edges (atoms with
+      12.5 Å < z < 18 Å are shown for highlighting the edge functional groups). Variation of the (g) DFT energy and (h) temperature throughout the simulation for the pore with
+      N-terminated edges. Color code: B: pink, N: blue, H: white, and O: red.
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                                             162, 044705-3
+Published under an exclusive license by AIP Publishing
+  The Journal
+                                                                                                        ARTICLE            pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+     side (along the −z direction), a constant external force (F) was                     The B-terminated nanopore displayed alternative H and
+     applied to the atoms of both pistons as F = PA/n, where P denotes              OH functionalization after a 6 ps MD simulation [Fig. 1(c)]. Due to
+     the required pressure, A is the area of the piston, and n is the num-          the highly reactive nature of the exposed edges, at the outset of the
+     ber of atoms constituting the piston sheet. This was achieved using            AIMD simulation, boron atoms at the corners of the triangular pores
+     the command fix aveforce in LAMMPS. Following energy mini-                     immediately approached and formed weak B–B bonds. Although
+     mization, the system was equilibrated in the NPxy T ensemble by                shorter B–B distances close to a B–B single bond were restricted due
+     maintaining the pressure of the simulation box to be 1 atm in the lat-         to geometrical constraints, these weak B–B interactions limited edge
+     eral directions. During this period, a pressure of 1 atm was applied           functionalization at the corners of the triangular pores throughout
+     on the permeate and feed side pistons for 50 ps. After equilibration,          the simulation. The continuous decrease in potential energy until
+     during the production run, a uniform pressure (P) of 50 MPa was                3 ps can be attributed to the exposed edge functionalization, and
+     applied to the feed-side piston along the flow direction, while atmo-          a plateau after 3 ps highlighted the chemical inertness of the func-
+     spheric pressure (1 atm) was applied to the permeate-side piston               tionalized pores. The first OH functionalization took place after
+     along the direction opposite to the flow. The system was still main-           470 fs, followed by continuous H and OH functionalization until
+     tained in the NPxy T ensemble, with a pressure of 1 atm in the x and y         1 ps, reflected in the steep decrease in the energy. A total of four
+     directions.                                                                    H and four OH functionalizations occurred before 1 ps. Inter-
+           During the production simulation run, 200 water molecules,               estingly, although H and OH functionalization occurred at alter-
+     constituting 10% of the total water molecules on the feed side, were           native positions, in two cases, the nearest H and OH originated
+     permitted to traverse the membrane to the permeate side. This                  from the same water molecule, while in two other cases, H
+     ensured that the salinity of the water on the feed side was minimally          and OH came from different water molecules, and H+ traversed
+     impacted. In our simulations, we calculated the water permeability             through the H2 O channels via the Grotthuss mechanism. The
+     (defined as the volume of water permeated per unit time, mem-                  fifth and final pairs of H and OH functionalization completed at
+     brane area, and pressure), individual ion rejection, and overall salt          1.4 and 2.8 ps, respectively, through the Grotthuss mechanism. A
+     rejection for different aqueous salt solutions. The percentage of pos-         few snapshots for the functionalization process of a B-terminated
+     itive/negative/total ion rejection was calculated at a time t using the        pore along with their respective DFT energies are shown in
+                    N              (t)                                              Fig. S6.
+     formula (1 − Nions,permeate
+                       ions,feed (0)
+                                       ) × 100, where the subscript “ions” refers
+     to the type of ions for which the rejection percentage is being                      A markedly different picture emerged from the functional-
+                                                                                    ization of the N-terminated edge, where one of the B–N rings at
+
+
+
+
+                                                                                                                                                                  15 July 2026 17:04:39
+     calculated. Note that 100% rejection indicates that the total num-
+     ber of ions passing from the feed side to the permeate side is                 one of the triangular corners (in particular, the bottom-left one)
+     zero.                                                                          broke, releasing a stable N2 molecule and creating four exposed
+                                                                                    boron centers with diverse edge functionalization [Fig. 1(f)]. In total,
+                                                                                    10 N–H, two N–O, and two B–OH groups, and one B–O–B group
+     RESULTS AND DISCUSSION                                                         were observed at the end of 6 ps of the AIMD simulation. In
+                                                                                    addition, two basal plane boron atoms underwent OH functional-
+     Insights into the mechanism of functionalization
+     of hBN from AIMD simulations                                                   ization. At 315 fs, two nearby N centers brought one H2 O molecule
+                                                                                    closer, initiating N–H and N–OH functionalization. At 400 fs, the
+          To unravel the mechanisms and extent of edge func-                        second N–H functionalization occurred, with the OH group remain-
+     tionalization in the presence of water, we conducted AIMD                      ing in the H2 O matrix. Due to the highly acidic nature of the H
+     simulations focusing on triangular nanopores with boron and                    atom present in the NO–H group, at 650 fs, the OH-functionalized
+     nitrogen-terminated edges (Fig. 1). This choice is supported by                N-center released its proton to a nearby H2 O, which eventually
+     experimental observations and computational evidence indicating                reached the next N-center and made it N–H functionalized. At
+     a high likelihood of N-terminated triangular pores in hBN, while               700 fs, one of the N–H hydrogens shifted to the hydroxyl (OH)
+     the potential existence of B-terminated triangular pores is also               group present in the H2 O matrix due to the polar nature of the
+     plausible.44–48 The initial system for AIMD consisted of a simula-             N–H bond and the reactivity of an unstable hydroxyl group present
+     tion box with a dimension of 30 Å in the direction perpendicular to            in the H2 O matrix. However, at 850 fs, the proton returned to
+     the hBN layer (z) and periodic in the lateral directions (i.e., along          the N–H group. Notably, the N edge exhibited a greater propen-
+     the x–y plane) with an area of 25.1 × 26.1 Å2 . The hBN membrane               sity for N–H functionalization, as evidenced by the occurrence of a
+     was fixed at z = 15 Å, and a 50 molecule water slab was placed on              total of 10 N–H and 2 N–O functionalizations after a 6 ps AIMD
+     either side of the pore with a 2 Å gap between the sheet and the               run, leaving many OH groups in the H2 O matrix. The continu-
+     water slab [Figs. 1(a) and 1(b)]. We constructed a slightly denser             ous generation of OH groups assisted in N2 removal from one
+     water slab with dimensions of 18 × 17 × 4 Å, which covered the                 of the corners by forming four undercoordinated B atoms hous-
+     pore, indicating a volume of 24.5 Å3 for each H2 O molecule, slightly          ing unstable OH fragments through the formation of 2 B–OH and
+     lower than that of liquid water (∼30 Å3 ). We used electronic DFT              one B–O–B groups. This allowed the formation of strong N–N
+     at the generalized gradient approximation level of theory to model             bonds, which commenced at 875 fs, leading to the final removal of
+     the quantum-mechanical exchange and correlation energy of the                  N2 . Two extra reactive OH groups functionalized two basal plane
+     atomic system. More simulation details are provided in Computa-                boron atoms. No further reactions were observed from 3 to 6 ps. A
+     tional Methods. A minimal temperature fluctuation around 298.15 K              few snapshots for the functionalization process of an N-terminated
+     after 50 steps of the AIMD simulation demonstrated the overall                 pore along with their respective DFT energies are shown in
+     stability of the system dynamics [Figs. 1(e) and 1(h)].                        Fig. S7.
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                         162, 044705-4
+Published under an exclusive license by AIP Publishing
+  The Journal
+                                                                                                                        ARTICLE                pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+          Further verification of the chemical inertness of the func-                           atoms hydrogenated except for two nearby B centers with the adja-
+     tionalized nanopores was conducted using AIMD simulations on                               cent OH functional group [Fig. 2(b)], and an O group on one of the
+     H-functionalized B- and N-terminated nanopores (Fig. S8). No                               N edge atoms with the rest of the edge atoms hydrogenated
+     chemical reactivity was observed in the nanopores during a 3 ps                            [Fig. 2(c)], were obtained through geometry optimization using DFT
+     AIMD run. Based on all these AIMD simulations, our study suggests                          until the force on each atom was less than 0.0003 hartree/bohr. We
+     that B-terminated edges have the potential for H and OH func-                              considered zigzag edges as these are commonly observed in hBN
+     tionalization, whereas N-terminated edges exhibit the possibility of                       sheets. In the case of the OH functional group, full hydrogenation
+     mostly H and some O functionalization. Therefore, we developed                             was avoided to prevent steric repulsion during the in-plane N–B–O
+     FF parameters for all the new bonds, angles, and dihedrals obtained                        angle perturbation for obtaining the N–B–O force-field parameters
+     upon edge functionalization by H on B and N edges, the OH group                            (vide infra). Subsequently, we performed DDAP charge calculations
+     on the B edge, and the O group on the N edge [Figs. 2(a)–2(c);                             to obtain the partial charge on each atom [Fig. 2(d)]. The default
+     Tables I and II] on top of the previously developed FF for hBN.24                          DDAP parameters generated charges that upon uniform rescaling
+     The iterative procedure for developing the FF is shown in Fig. 3,                          accurately matched the point-charge-based electric potentials along
+     and the steps involved are discussed in detail in the following                            the direction perpendicular to the hBN sheet with the DFT potential.
+     sections.                                                                                  The electric potential was determined at two different edge sides, the
+                                                                                                NH side [Fig. 2(e)] and the BH side [Fig. 2(f)], at a distance z > 2.5 Å
+                                                                                                above the surface, as indicated in Fig. 2(a) by the red dots. The elec-
+     Geometry optimization and partial
+                                                                                                tric potential was positive above the NH side and was negative above
+     charge calculations
+                                                                                                the BH side of the hBN sheet as H atoms attached to N adopt posi-
+           Initially, the ground-state structures for various edge function-                    tive partial charges, whereas the H atoms attached to B have negative
+     alization configurations, namely, H on B and N edges [Fig. 2(a)],                          partial charges due to the electronegativity of the atoms following
+     OH group on one of the B edge atoms with the remaining edge                                the order N > H > B.49 The different signs of the electric potentials
+
+
+
+
+                                                                                                                                                                                         15 July 2026 17:04:39
+
+
+
+
+      FIG. 2. (a) Optimized structure of H-functionalized zigzag edges of an hBN sheet. The two red dots highlight the positions where the electric potential was generated at a
+      distance z > 2.5 Å above the surface up to a height of 10 Å. The sheet is positioned at z = 0 Å in the plot. (b) Optimized structure of an OH-functionalized hBN sheet at one
+      of the zigzag B edges considered to obtain FF parameters for B–OH functionalization; full hydrogenation was avoided to prevent steric repulsion during in-plane N–B–O
+      angle perturbation for obtaining the N–B–O FF parameters. (c) Optimized structure of an O-functionalized hBN sheet at one of the zigzag N edges considered to obtain FF
+      parameters for N–O functionalization. (d) Partial charge distribution [in elementary charge units (e)] calculated using the default DDAP parameters for the H-functionalized
+      hBN sheet. Color code: B: pink, N: blue, H: white, and O: red. [(e) and (f)] DFT-predicted and partial-charge-predicted electric potentials on the (e) NH side and (f) BH side
+      of the H-functionalized hBN sheet, as shown in Fig. 2(a).
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                                                162, 044705-5
+Published under an exclusive license by AIP Publishing
+  The Journal
+                                                                                                               ARTICLE                  pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+     above the BH and NH edges have implications on the electrostatic                    TABLE II. Proposed nonbonded force-field parameters for simulating functionalized
+     forces that are operative when hBN comes into contact with water                    hBN sheets.
+     and ions.                                                                           Atoms                 σ(Å)                     kJ
+                                                                                                                                     ϵ( mol )                  Reference
+
+     Potential energy surface (PES) fitting                                              HN                     2.42                0.251 04                This work
+                                                                                         ON                     3.12                0.711 28                OPLS/AA40
+           An iterative PES fitting strategy was adopted for the FF devel-               OB                     3.12                0.711 28                OPLS/AA40
+     opment. The PES was fitted using a sequence of geometries obtained                  HO                     0.0                 0.0                     OPLS/AA40
+     by perturbing the bonds, angle, and dihedrals from their equilibrium                HB                     2.42                0.292 88                This work
+     values stepwise with their corresponding energies obtained from the
+     DFT calculations (Figs. 3 and 4). As remarked before, the GULP
+     package was used to fit the PES.33,34 A tar file is included as part of
+     the supplementary material providing LAMMPS input/output files                                                  f    f         f
+                                                                                         the final parameters kb , kθ , and kφ (Table I) using the obtained
+     for implementing the force field in MD simulations. We used rela-                                i
+     tive energies for fitting, with the equilibrium structure having zero               values of σHB,HN   and ϵiHB,HN . These new bonded parameters were
+                                                                                                                                            f            f
+     energy, as enforced by utilizing the “shift” option in GULP. This                   used to revise the LJ parameters to σHB,HN and ϵHB,HN (Table II).
+     option adds a constant energy term to all the structures. Initially,                                                                                        i
+                                                                                         The iterative procedure was subsequently stopped as σHB,HN                   and
+     we used the σ and ϵ parameters of benzene from the optimized                           f                 i                   f
+                                                                                         σHB,HN as well as ϵHB,HN and ϵHB,HN were found to be the same,
+     potentials for liquid simulations/all atom (OPLS/AA)40 force field                  respectively. The quality of fitting was measured by the sum of
+     as the LJ parameters for the HN and HB atoms in GULP for fit-
+                                                                                         squares (S) as S = ∑Ni=1obs wi ( f iobs − f icalc )2 , where N obs is the number
+     ting the PES to obtain the bonded FF parameters kib , kiθ , and kiφ
+     (Table S3), where the superscript i indicates the initial FF para-                  of data points used in FF training, f icalc and f iobs are the fitted (force
+     meters. Starting with the initial force field parameters, i.e., kib , kiθ ,         field) and true (DFT) values of the system energy, respectively, and
+                                                                                         wi (=1) is the weighting factor. Figure 4 shows plots that compare the
+     and kiφ with σHB,HN = σHCbenzene
+                                      and ϵHB,HN = ϵbenzene
+                                                    HC      , we derived more
+                                                                                         DFT-predicted potential energy and the force-field-predicted quan-
+     realistic nonbonded parameters, σ and ϵ, by fitting them to match
+                                                                                         tity for each bond, angle, and dihedral considered. We adopted the
+     the density and heat of vaporization of the borazine molecule, as
+                                                                                         LJ parameters for the O atoms in the N–O and B–OH groups from
+     elaborated in the subsection titled Obtaining LJ parameters for HB
+
+
+
+
+                                                                                                                                                                               15 July 2026 17:04:39
+                                                                                         the OPLS/AA force field for the O atom in the C–OH group of phe-
+     and HN atoms. Next, we refined the bonded parameters to obtain
+                                                                                         nol. The LJ parameters for O atoms in both N–O and B–OH groups
+                                                                                         were considered to be the same since both bonds are single bonds
+
+     TABLE I. Proposed bonded force-field parameters for simulating functionalized hBN
+     sheets.
+
+                                                                             Sum
+                                                   f
+     Bond               l0 (Å)                 kb (kJ mol−1 Å−2 )         of squares
+     B–H                1.197                          2112.9             0.002
+     N–H                1.017                          4315.2             0.006 4
+     B–OH               1.369                          4003.1             0.002 2
+     O–H                1.007                          3313.0             0.001 6
+     N–O                1.31                           4607.3             0.077 3
+
+                                                                             Sum
+                                               f
+     Angle              θ0 (○ )            kθ (kJ mol−1 rad−2 )           of squares
+     N–B–H              119.9                           250.9             0.000 02
+     B–N–H               119                            197.3             0.000 06
+     N–B–O              120.3                           502.3             0.008 52
+     B–O–H              104.2                           438.4             0.000 44
+     B–N–O              119.6                           307.9             0.000 26
+
+                                                                             Sum
+                                                          f
+     Dihedral                     n, φ0 (○ )             kφ (kJ mol−1 )   of squares
+     B–N–B–HB                     2,180                         14.2      0.003 6
+     N–B–N–HN                     2,180                          5.7      0.000 9
+     B–N–B–OB                     2,180                         19.4      0.004 3
+     N–B–OB–HO                    2,180                         17.4      0.026 9         FIG. 3. Iterative procedure followed for developing the FF. The program packages
+     N–B–N–ON                     2,180                         14.4      0.001 2         used at each step are also indicated.
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                                      162, 044705-6
+Published under an exclusive license by AIP Publishing
+  The Journal
+                                                                                                                            ARTICLE                 pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+
+
+                                                                                                                                                                                               15 July 2026 17:04:39
+
+
+
+
+      FIG. 4. Potential energy surface fitting plots for the (a) B–H bond (step size of 0.005 Å with 20 steps in either direction), (b) N–B–H angle (step size of 0.5○ with 20 steps in
+      either direction), (c) and (d) B–N–B–H dihedral (step size of 3○ with 15 steps in either direction; an average of the two nearly identical values is taken for the dihedral constant.
+      The highlighted atoms indicate the sequence of atom selection for the dihedral angle variations.), (e) N–H bond (step size of 0.005 Å with 20 steps in either direction), (f)
+      B–N–H angle (step size of 0.5○ with 20 steps in either direction), (g) and (h) N–B–N–H dihedral (step size of 3○ with 15 steps in either direction; an average of the two
+      nearly identical values is taken for the dihedral constant), (i) B–OH bond (step size of 0.005 Å with 20 steps in either direction), (j) N–B–OH angle (step size of 0.5○ with 20
+      steps in either direction), (k) B–N–B–OH dihedral (step size of 3○ with 15 steps in either direction), (l) BO–H bond (step size of 0.005 Å with 15 steps in either direction), (m)
+      B–O–H angle (step size of 0.5○ with 20 steps in either direction), (n) N–B–O–H dihedral (step size of 10○ and 36 steps for complete 360○ rotation), (o) N–O bond (step size
+      of 0.005 Å with 20 steps in either direction), (p) B–N–O angle (step size of 0.5○ with 20 steps in either direction), and (q) N–B–N–O dihedral (step size of 3○ with 15 steps in
+      either direction). Color code: B: pink, N: blue, H: white, and O: red.
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                                                      162, 044705-7
+Published under an exclusive license by AIP Publishing
+  The Journal
+                                                                                                                        ARTICLE                pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+     with lengths of 1.31 and 1.369 Å, respectively. In addition, the nature                    respectively, both in the isothermal–isobaric (NPT) ensemble, main-
+     of the O atom remains the same, with the DDAP charges on O being                           taining a pressure of 1 atm and a temperature of 298.15 K using
+     −0.382e and −0.446e, respectively.                                                         the Nose–Hoover thermostat and barostat.53–55 The total energy
+                                                                                                (U Liquid ) of every 2000th time step was averaged and used to cal-
+                                                                                                culate the heat of vaporization of the borazine molecule, and the
+                                                                                                density of the same time steps was averaged to get the liquid borazine
+     Obtaining LJ parameters for HB and HN atoms                                                density. The heat of vaporization (∆H v ) is the energy required to
+          We fit the nonbonded interaction parameters (σ, ϵ) for the                            move a liquid molecule into the gaseous state and is defined as
+     HN (hydrogen attached to nitrogen) and HB (hydrogen attached                               follows:
+     to boron) atoms by targeting to accurately predict the density                                                                           ULiquid
+     and heat of vaporization of the borazine molecule (B3 N3 H6 ) in                                                ΔHv = (UVapour − (               )) + RT,
+                                                                                                                                                N
+     MD simulations.50,51 In the case of the vapor-phase simulations,
+     we modeled a single borazine molecule, which was packed in a                               where U Vapor and U Liquid are determined by performing MD simu-
+     cubic simulation box with a length of 20 Å, as shown in Fig. 5(a).                         lations for liquid and vapor phases, respectively. The parameters R,
+     The equilibration and production runs for the vapor phase were                             N, and T are the universal gas constant (R = 8.314 J mol−1 K−1 ),
+     performed using the canonical (NVT) ensemble with a Langevin                               the number of molecules in the liquid phase simulation (N = 200),
+     thermostat52 to maintain the desired system temperature for 1 and                          and the temperature of the system (T = 298.15 K), respectively. As
+     2.5 ns, respectively. For the liquid simulations, a system contain-                        presented in Table III, we obtained excellent match between the
+     ing 200 borazine molecules was initially packed in a cubic box                             experimental and MD-predicted density and heat of vaporization of
+     (33 000 Å3 ) with a density equal to 810 kg m−3 using PACKMOL,                             borazine. Not only that, the MD simulations of functionalized hBN
+     as shown in Fig. 5(b). First, the system was brought to equilib-                           were stable using these parameters for the LJ interactions of HB and
+     rium and then we performed a production run for 2 and 5.5 ns,                              HN atoms.
+
+
+
+
+                                                                                                                                                                                         15 July 2026 17:04:39
+
+
+
+
+      FIG. 5. Obtaining nonbonded parameters for BH and NH atoms using the density and heat of vaporization of borazine. (a) A single molecule of borazine was used in the
+      vapor-phase simulations and (b) 200 molecules of borazine were considered for the liquid-phase simulations with an initial density equal to value 810 kg m−3 . Color code:
+      B: pink, N: blue, and H: white. (c) and (d) MD results for (c) the heat of vaporization (kcal/mol) and (d) the density of borazine with various LJ parameters for HN (blue
+                                                                                                                                  benzene
+      squares) and HB (red circles) atoms where the bonded parameters used in the simulation are calculated using σHB,HN = σHC            and ϵHB,HN = ϵbenzene
+                                                                                                                                                        HC      in GULP. (e) and (f)
+      MD results for (e) the heat of vaporization (kcal/mol) and (f) density of borazine with various LJ parameters for HN (blue squares) and HB (red circles) atoms where the
+                                                                                 i
+      bonded parameter used in the simulation are calculated using σHB,HN = σHB/HN     and ϵHB,HN = ϵiHB/HN in GULP.
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                                                162, 044705-8
+Published under an exclusive license by AIP Publishing
+  The Journal
+                                                                                                                     ARTICLE              pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+     TABLE III. Density and heat of vaporization from MD simulations compared to             parameters. Furthermore, the liquid density was ∼0.8613 ± 0.0005
+     experimental values for the borazine molecule.                                          g/cc [Fig. 5(f)], which is close to the experimental value. It is cru-
+                                                                                                                                    f    f    f         f
+                                                                   MD simulations            cial to note that the parameters σHN , ϵHN , σHB , and ϵHB remained
+                                                                                                                               i     i     i       i
+     Borazine properties                  Experimental50,51         (this work)              equal to the initial values σHN , ϵHN , σHB , and ϵHB , respectively.
+                                                                                             However, a significant difference was observed between the simu-
+     Density ( ccg )                         0.824–0.898           0.8613 ± 0.0005                                                                   f    f        f
+                                                                                             lations with kib , kiθ , and kiφ values and those with kb , kθ , and kφ
+     Heat of vaporization ( kcal
+                            mol
+                                 )               7.01               6.963 ± 0.0073           values. While fewer data points matched the experimental heat of
+                                                                                             vaporization and fell within the experimental density range when
+                                                                                             using the initial parameters, more data points closely aligned with
+                                                                                             the experimental values when using the refined parameters, par-
+          First, we employed the initial bonded parameters kib , kiθ , and
+      i                                                                                      ticularly with σ = 2.42 Å and ϵ = 0.06–0.07 kcal/mol for both
+     kφ in MD simulations, systematically varying σ and ϵ values for HN                      HN and HB atoms [Figs. 5(c)–5(e)]. Therefore, our proposed
+     and HB atoms within the ranges of σ = 2.32–2.92 Å and ϵ = 0.03–0.07                                               f   f          f
+                                                                                             FF parameters are kb , kθ , and kφ as presented in Table I and
+     kcal/mol. For each combination of σ and ϵ values, such as σ = 2.42 Å                      f                 f                                        f
+     and ϵ = 0.04 kcal/mol for HN, and σ = 2.42 Å and ϵ = 0.03 kcal/mol                      σHN = 2.42 Å, ϵHN = 0.06 kcal/mol, along with σHB = 2.42 Å, and
+                                                                                              f
+     for HB, we obtained the corresponding density and heat of vaporiza-                     ϵHB = 0.07 kcal/mol, as presented in Table II. We utilized this FF in
+                                             i
+     tion values. The combination of σHN         = 2.42 Å, ϵiHN = 0.06 kcal/mol              the following to examine how the water flow rate and salt rejection
+                   i                   i
+     along with σHB = 2.42 Å and ϵHB = 0.07 kcal/mol resulted in a cal-                      are affected by the presence of edge functionalization in triangular
+     culated heat of vaporization for borazine of 7.017 kcal/mol and a                       hBN nanopores.
+     liquid density of 0.8613 g/cc, closely matching experimental values
+     for borazine [Table III, Figs. 5(c) and 5(d)].50 Subsequently, we uti-                  Effect of hBN nanopore functionalization on water
+                                               i
+     lized these obtained parameters (σHN        , ϵiHN , σHB
+                                                           i
+                                                              , and ϵiHB ) to refine         and ion transport
+     the bonded parameters in GULP to obtain the final bonded para-
+                           f   f          f
+     meters, denoted as kb , kθ , and kφ . The increase in ϵ values, i.e., ϵiHN                   We proceeded to evaluate the role played by functional groups
+           i                      benzene                                                    in modulating water and ion transport via triangular nanopores in
+     and ϵHB compared to the ϵHC            value led to a decrease in the final
+                                                                                             hBN. MD simulations were conducted on hydrogen-functionalized
+     bonded force constant parameters (Table S3). Using these refined
+
+
+
+
+                                                                                                                                                                                   15 July 2026 17:04:39
+                                                                                             and unfunctionalized hBN membranes with B- and N-terminated
+     bonded parameters, we once again varied the σ and ϵ values for HN
+                                                                     f                       nanopores. The simulation setup is shown in Fig. 6(a), and the
+     and HB atoms within the same ranges. Notably, at σHN = 2.42 Å,                          nanopores modeled are shown in Fig. 6(b). First, to test the stability
+       f                            f                    f
+     ϵHN = 0.06 kcal/mol and σHB = 2.42 Å, ϵHB = 0.07 kcal/mol, the                          of the fitted force-field parameters, MD simulations were performed
+     heat of vaporization for borazine was 6.963 ± 0.0073 kcal/mol,                          providing insights into bond length fluctuations with the developed
+     which is slightly lower than with the initial bonded parameters                         parameters. As shown in Fig. S9, the average B–H and N–H bond
+     [Fig. 5(e)]. This is due to the lower magnitude of the final bonded                     lengths remained stable with the FF developed in the current work,
+
+
+
+
+      FIG. 6. (a) Schematic of a water desalination simulation setup confined by graphene pistons for a NaCl aqueous solution. The setup consists of a saline water reservoir
+      (feed side) and a pure water reservoir (permeate side), which are separated by a nanoporous hBN membrane. The feed side is subjected to a pressure of P = 50 MPa,
+      while the permeate side has a pressure of Patm = 1.013 bar. Boron and nitrogen in the hBN sheet are represented as spheres that are bonded to each other. (b) The hBN
+      nanopores with functionalized and unfunctionalized nitrogen- and boron-terminated pores are P36–N (pore with 36 {21 B, 15 N} atoms removed exposing N edges) and
+      P36–N(H) (pore with 36 atoms removed and functionalized with 12 hydrogen atoms on the edge N atoms); P36–B (pore with 36 {21 N, 15 B} atoms removed exposing N
+      edges) and P36–B(H) (pore with 36 atoms removed and functionalized with 12 hydrogen atoms on the edge B atoms). Color code: B: pink, N: blue, H: white, O: red, and C:
+      cyan.
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                                          162, 044705-9
+Published under an exclusive license by AIP Publishing
+  The Journal
+                                                                                                 ARTICLE            pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+     fluctuating around their equilibrium values over the simulation time     (298.15 K), and ρ(z) is the density at position z. As shown in Fig. 8,
+     for P36–B(H) and P36–N(H) pores. The simulations were stable till        the PMF plots are consistent with the water permeance for various
+     at least up to 20 ns.                                                    N and B terminated nanopores used in the simulation and follow
+           The results for the water permeance and salt rejection via hBN     the order P36–N < P36–B < P36–B(H) < P36–N(H), which implies
+     nanopores formed by removing 36 atoms from the material lattice          that the free energy barrier for P36–N is the lowest resulting in high
+     are shown in Fig. 7. As shown in Fig. 7, the water permeance in our      water permeance through the P36–N pore.
+     study follows the order P36–N > P36–B > P36–B(H) > P36–N(H)                    Recently, Gao et al. used MD simulations to investigate the
+     for a NaCl salt solution. Thus, the fastest water permeation occurs      performance of unfunctionalized nanoporous hBN as a membrane
+     through the unfunctionalized pores formed by removing 36 atoms           in water desalination applications.2 Their study focused on trian-
+     from hBN. However, hydrogen functionalization leads to a reduc-          gular pores with 16 and 25 removed atoms from bulk hBN sheets.
+     tion in water flow, approximately by a factor of 3 to 5. Note            The results indicate that N-terminated pores exhibited higher water
+     that the triangular pore with 36 removed atoms has not been              permeance and less salt rejection than B-terminated pores of sim-
+     explored in previous literature, which has focused on pores with         ilar pore size. This trend is consistent with our MD results, where
+     up to 25 removed atoms.2,10,11,25 Interestingly, the N-terminated        the water permeance is higher for the P36–N pore than for the
+     unfunctionalized pores show a slightly higher water flux than the        P36–B pore but has slightly less salt rejection. This may be due to
+     B-terminated ones. To understand the change in the water perme-          the stronger van der Waals attraction between water molecules and
+     ance rate through different edge terminated nanopores, we calcu-         nitrogen atoms compared to water and boron atoms at the edges,
+     lated the one-dimensional (1D) potential of mean force (PMF) along       resulting in increased water permeance by reducing the water barrier
+     the z direction, as shown in Fig. 8. The PMF describes the free energy   near the pore. However, note that although previous studies consid-
+     profile [F(z)] for a water molecule passing through a nanoporous         ered unfunctionalized hBN, our AIMD simulations (see above) show
+     hBN membrane and was calculated using the Boltzmann sampling             that such a structure cannot exist in an aqueous environment. It has
+     method. Mathematically, the potential of mean force [PMF, F(z)]          been shown by Cohen-Tanugi and Grossman23 using functional-
+     was obtained as F(z) = −RT ln[ρ(z)], where R is the universal gas        ized graphene as a desalination membrane that functional groups
+     constant (R = 8.314 J mol−1 K−1 ), T is the temperature of the system    such as H and OH at nanopore edges can provide high salt rejection
+
+
+
+
+                                                                                                                                                              15 July 2026 17:04:39
+                                                                                                                 FIG. 7. MD simulation results for NaCl
+                                                                                                                 aqueous salt solution separation for
+                                                                                                                 nanopores formed by removing 36
+                                                                                                                 atoms from the hBN sheet (P36) and
+                                                                                                                 edge terminations with H functionaliza-
+                                                                                                                 tion. Water permeance (L cm−2 day−1
+                                                                                                                 MPa−1 ) rates from the feed side to
+                                                                                                                 permeate side for (a) N-terminated
+                                                                                                                 and (d) B-terminated nanopores.
+                                                                                                                 Overall salt rejection percentage for
+                                                                                                                 (b) N-terminated and (e) B-terminated
+                                                                                                                 nanopores. In all the considered hBN
+                                                                                                                 models, the nanopore concentration
+                                                                                                                 (i.e., pore density) in the hBN layer was
+                                                                                                                 ∼0.088 nm−2 . The results for function-
+                                                                                                                 alized and unfunctionalized pores are
+                                                                                                                 separated into two regions by the black
+                                                                                                                 dashed line. Hydrogen-functionalized
+                                                                                                                 pore results are highlighted with
+                                                                                                                 the light yellow background, while
+                                                                                                                 unfunctionalized pore results are
+                                                                                                                 represented with the white background.
+                                                                                                                 Various (c) N-terminated and (f)
+                                                                                                                 B-terminated pores are displayed with
+                                                                                                                 the species (ions/water) that pass
+                                                                                                                 through the pore readily.
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                    162, 044705-10
+Published under an exclusive license by AIP Publishing
+  The Journal
+                                                                                                                 ARTICLE            pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+                                                                                              and the default DDAP charges. Although Case 1 produces a pos-
+                                                                                              itive charge on the B edge, the lower magnitude of edge charges
+                                                                                              (Fig. S11) reduces the electrostatic interactions between the B atoms
+                                                                                              and water molecules, resulting in decreased water permeance but
+                                                                                              slightly improved salt rejection. We also performed simulations
+                                                                                              allowing more water molecules to pass (40% of the total water
+                                                                                              molecules on the feed side) through the nanopore, which led to
+                                                                                              slightly lowered overall salt rejection and water flux, although both
+                                                                                              quantities remained within the respective error bars shown in Figs.
+                                                                                              S13 and 7.
+
+                                                                                              CONCLUSIONS
+                                                                                                    In summary, we carried out a comprehensive investigation
+                                                                                              into the mechanisms of formation and force fields for function-
+                                                                                              alized hBN, demonstrating the use of the developed high-fidelity
+      FIG. 8. Free energy barrier (PMF) for water along the flow direction (z axis) through   force fields to investigate nanoscale water and ion transport through
+      different edge terminated nanopores in hBN sheets. Trends are consistent with the       nanoporous hBN. In particular, we examined for the first time, the
+      water permeance for different hBN models and follow the order P36–N < P36–B
+                                                                                              propensity of nanoporous hBN to functionalize in aqueous envi-
+      < P36–B(H) < P36–N(H) for N and B terminated pores. In the simulations, the hBN
+      membrane is kept at Z = 75 Å.
+                                                                                              ronments using accurate AIMD simulations. We showed that the
+                                                                                              bare hBN nanopores are unstable toward aqueous environments
+                                                                                              and undergo rapid functionalization, indicating that previous sim-
+                                                                                              ulation results considering unfunctionalized hBN nanopores need
+     and water permeance, which is higher than that of current commer-                        to be revisited. Our precise AIMD simulations highlight that the
+     cially available RO and nanofiltration membranes.56–59 However, the                      bare boron centers have high propensity for H and OH functional-
+     potential of hBN for similar functionalization had not been explored                     ization, while N centers undergo primarily H functionalization and
+     due to the lack of a classical potential for such functional groups in                   occasionally O functionalization. We also found that once the pores
+
+
+
+
+                                                                                                                                                                            15 July 2026 17:04:39
+     hBN prior to the present work. Interestingly, unfunctionalized hBN                       are functionalized, the pore atoms show inertness toward water.
+     pores already demonstrate superior water permeance compared                              Subsequently, using extensive DFT calculations to determine the
+     to unfunctionalized graphene and MoS2 .11,58,60 Thus, assessing the                      ab initio potential energy surface, we developed a force field for all
+     impact of functionalization in hBN is of paramount importance in                         the newly formed bonds, angles, and dihedrals upon functionaliza-
+     desalination studies, particularly in understanding water flow and                       tion of hBN nanopores to form B–H, B–OH, N–H, and N–O groups.
+     salt rejection performance.61 In this regard, our study will enable                      We further fit the nonbonded parameters for HB and HN atoms and
+     accurate MD simulations of functionalized hBN nanopores11 and                            used the resultant force field to investigate the water permeance and
+     BN nanotubes62 in future research. In terms of the salt rejection                        salt rejection of functionalized hBN nanopores. This is a significant
+     performance, for the case of the P36 nanopore considered here,                           advance as previous MD studies all considered unfunctionalized
+     we found that functionalization can increase the salt rejection via                      hBN nanopores, which cannot exist in an aqueous environment, as
+     B-terminated pores [Fig. 7(e)], whereas it did not impact much the                       showed by our AIMD simulations. We showed that functionalized
+     salt rejection through N-terminated ones [Fig. 7(b)]. Accordingly,                       hBN nanopores demonstrate slower water permeation, as rational-
+     future works can focus on understanding the physics behind the                           ized by PMF calculations. Nevertheless, for salt rejection, we showed
+     relationship between edge termination and salt rejection for func-                       that functionalization can even increase it for some nanopores.
+     tionalized nanopores in hBN. Note that the individual ion rejections                     Overall, our comprehensive investigation of nanoporous hBN sheds
+     (Na+ , Cl− ) are shown in Fig. S10.                                                      light on the functionalization chemistry of the material, provides a
+           Interestingly, for the P36–B pore, the default DDAP parameters                     new force field for functionalized hBN, and reveals the impact of
+     assigned a negative charge magnitude to the B edge atoms, which                          functional groups on seawater desalination. The work also lays the
+     appeared unphysical [Fig. S4(a)]. However, functionalization with                        foundation for developing force fields for other post-graphene 2D
+     H atoms resulted in a positive charge magnitude on B atoms and                           materials with functional groups, which can contribute to the accu-
+     a corresponding negative charge on the H atoms within the same                           rate modeling of functionalized 2D materials in various application
+     DDAP framework [Fig. S4(b)]. The same framework also led to                              areas.
+     appropriate signs on charges for both the unfunctionalized and
+     H-functionalized P36–N pore (Fig. S5). Nevertheless, we tested a
+     few more DDAP cases for the unfunctionalized P36–B pore by
+                                                                                              SUPPLEMENTARY MATERIAL
+     changing DDAP parameters (e.g., GCUT and NUM_GAUSS). The
+     parameter case that produced a positive charge magnitude on the                               See the supplementary material for details on the DFT-based
+     B edge while consistently matching the DFT and MD potentials                             partial charge calculations, partial charge distributions for the
+     was selected for further desalination studies (denoted as “Case 1”                       considered hBN nanopores, snapshots of the AIMD simulations
+     in Table S1; also see Fig. S11 for the charges). In Fig. S12, we com-                    demonstrating the functionalization of hBN nanopores, information
+     pare the desalination performance of P36–B with Case 1 charges                           about the FF used in the water desalination simulations, individual
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                                  162, 044705-11
+Published under an exclusive license by AIP Publishing
+  The Journal
+                                                                                                                    ARTICLE                pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+                                                                                            6
+     ion rejection data, analysis of the stability of MD simulations per-                     J. D. Caldwell, I. Aharonovich, G. Cassabois, J. H. Edgar, B. Gil, and D. N.
+     formed using the proposed force field, analysis of water permeance                     Basov, “Photonics with hexagonal boron nitride,” Nat. Rev. Mater. 4(8), 552–567
+     and salt rejection using longer simulation times, a tar file contain-                  (2019).
+                                                                                            7
+     ing LAMMPS input/output files for implementing the force field for                       K. Uosaki, G. Elumalai, H. Noguchi, T. Masuda, A. Lyalin, A. Nakayama, and
+                                                                                            T. Taketsugu, “Boron nitride nanosheet on gold as an electrocatalyst for oxygen
+     functionalized hBN and cp2k input/output files for partial charge                      reduction reaction: Theoretical suggestion and experimental proof,” J. Am. Chem.
+     calculations, and a zip file containing MD simulation movies.                          Soc. 136(18), 6542–6545 (2014).
+                                                                                            8
+                                                                                              R. Han, J. Diao, S. Kumar, A. Lyalin, T. Taketsugu, G. Casillas, C. Richardson,
+                                                                                            F. Liu, C. W. Yoon, H. Liu, X. Sun, and Z. Huang, “Boron nitride for enhanced
+     ACKNOWLEDGMENTS                                                                        oxidative dehydrogenation of ethylbenzene,” J. Energy Chem. 57, 477–484
+                                                                                            (2021).
+          We acknowledge financial support from the Science and Engi-                       9
+                                                                                              Y. Lu, B. Li, N. Xu, Z. Zhou, Y. Xiao, Y. Jiang, T. Li, S. Hu, Y. Gong, and Y.
+     neering Research Board (SERB) via a Core Research under Grant                          Cao, “One-atom-thick hexagonal boron nitride Co-catalyst for enhanced oxygen
+     No. CRG/2021/002792. A.G.R. acknowledges the Infosys Foun-                             evolution reactions,” Nat. Commun. 14(1), 6965 (2023).
+                                                                                            10
+     dation, Bengaluru, for an Infosys Young Investigator grant. D.P.                          R. Jafarzadeh, J. Azamat, H. Erfan-Niya, and M. Hosseini, “Molecular insights
+                                                                                            into effective water desalination through functionalized nanoporous boron nitride
+     acknowledges the Ministry of Education for a Ph.D. research fellow-
+                                                                                            nanosheet membranes,” Appl. Surf. Sci. 471, 921–928 (2019).
+     ship. We ackowledge the Supercomputer Education and Research                           11
+                                                                                               B. B. Sharma and A. Govind Rajan, “How grain boundaries and interfacial
+     Centre at the Indian Institute of Science for computational facilities.                electrostatic interactions modulate water desalination via nanoporous hexagonal
+                                                                                            boron nitride,” J. Phys. Chem. B 126(6), 1284–1300 (2022).
+                                                                                            12
+                                                                                               E. Wagemann, Y. Wang, S. Das, and S. K. Mitra, “On the wetting translucency
+     AUTHOR DECLARATIONS                                                                    of hexagonal boron nitride,” Phys. Chem. Chem. Phys. 22(15), 7710–7718 (2020).
+                                                                                            13
+                                                                                               X. Li, H. Qiu, X. Liu, J. Yin, and W. Guo, “Wettability of supported monolayer
+     Conflict of Interest                                                                   hexagonal boron nitride in air,” Adv. Funct. Mater. 27(19), 1603181 (2017).
+                                                                                            14
+                                                                                               S. Faucher, N. Aluru, M. Z. Bazant, D. Blankschtein, A. H. Brozena, J. Cum-
+           The authors have no conflicts to disclose.                                       ings, J. Pedro De Souza, M. Elimelech, R. Epsztein, J. T. Fourkas, A. G. Rajan,
+                                                                                            H. J. Kulik, A. Levy, A. Majumdar, C. Martin, M. McEldrew, R. P. Misra, A. Noy,
+     Author Contributions                                                                   T. A. Pham, M. Reed, E. Schwegler, Z. Siwy, Y. Wang, and M. Strano, “Critical
+                                                                                            knowledge gaps in mass transport through single-digit nanopores: A review and
+           S.G. and D.P. contributed equally to this paper.                                 perspective,” J. Phys. Chem. C 123(35), 21309–21326 (2019).
+
+
+
+
+                                                                                                                                                                                      15 July 2026 17:04:39
+                                                                                            15
+                                                                                               A. Seal and A. Govind Rajan, “Modulating water slip using atomic-scale
+                                                                                            defects: Friction on realistic hexagonal boron nitride surfaces,” Nano Lett. 21(19),
+     Sagar Ghorai: Conceptualization (equal); Data curation (equal);
+                                                                                            8008–8016 (2021).
+     Formal analysis (equal); Investigation (equal); Writing – original                     16
+                                                                                               A. Verma, W. Zhang, and A. C. T. van Duin, “ReaxFF reactive molecu-
+     draft (equal); Writing – review & editing (equal). Pradeep Dhondi:                     lar dynamics simulations to study the interfacial dynamics between defective
+     Conceptualization (equal); Data curation (equal); Formal analy-                        H-BN nanosheets and water nanodroplets,” Phys. Chem. Chem. Phys. 23(18),
+     sis (equal); Investigation (equal); Writing – original draft (equal);                  10822–10834 (2021).
+                                                                                            17
+     Writing – review & editing (equal). Ananth Govind Rajan: Concep-                          A. Kumar Verma and A. Govind Rajan, “Surface roughness explains the
+     tualization (lead); Funding acquisition (lead); Methodology (lead);                    observed water contact angle and slip length on 2D hexagonal boron nitride,”
+                                                                                            Langmuir 38(30), 9210–9220 (2022).
+     Project administration (lead); Resources (lead); Supervision (lead);                   18
+                                                                                               S. Bhowmik and A. Govind Rajan, “Chemical vapor deposition of 2D materials:
+     Writing – original draft (equal); Writing – review & editing (equal).                  A review of modeling, simulation, and machine learning studies,” iScience 25(3),
+                                                                                            103832 (2022).
+                                                                                            19
+     DATA AVAILABILITY                                                                         S. Ghorai and A. Govind Rajan, “From molecular precursors to MoS2 monolay-
+                                                                                            ers: Nanoscale mechanism of organometallic chemical vapor deposition,” Chem.
+         The data that support the findings of this study are available                     Mater. 36(6), 2698–2710 (2024).
+                                                                                            20
+     from the corresponding author upon reasonable request.                                    L. Song, L. Ci, H. Lu, P. B. Sorokin, C. Jin, J. Ni, A. G. Kvashnin, D. G. Kvashnin,
+                                                                                            J. Lou, B. I. Yakobson, and P. M. Ajayan, “Large scale growth and characteri-
+                                                                                            zation of atomic hexagonal boron nitride layers,” Nano Lett. 10(8), 3209–3215
+                                                                                            (2010).
+     REFERENCES                                                                             21
+                                                                                               P. R. Kidambi, R. Blume, J. Kling, J. B. Wagner, C. Baehtz, R. S. Weatherup,
+     1                                                                                      R. Schloegl, B. C. Bayer, and S. Hofmann, “In situ observations during chemical
+       D. Golberg, Y. Bando, Y. Huang, T. Terao, M. Mitome, C. Tang, and C. Zhi,
+     “Boron nitride nanotubes and nanosheets,” ACS Nano 4(6), 2979–2993 (2010).             vapor deposition of hexagonal boron nitride on polycrystalline copper,” Chem.
+     2
+       H. Gao, Q. Shi, D. Rao, Y. Zhang, J. Su, Y. Liu, Y. Wang, K. Deng, and R. Lu,        Mater. 26(22), 6380–6392 (2014).
+                                                                                            22
+     “Rational design and strain engineering of nanoporous boron nitride nanosheet             H. Liu, C. Y. You, J. Li, P. R. Galligan, J. You, Z. Liu, Y. Cai, and Z. Luo,
+     membranes for water desalination,” J. Phys. Chem. C 121(40), 22105–22113               “Synthesis of hexagonal boron nitrides by chemical vapor deposition and their
+     (2017).                                                                                use as single photon emitters,” Nano Mater. Sci. 3(3), 291–312 (2021).
+     3                                                                                      23
+       A. Siria, P. Poncharal, A.-L. Biance, R. Fulcrand, X. Blase, S. T. Purcell, and L.      D. Cohen-Tanugi and J. C. Grossman, “Water desalination across nanoporous
+     Bocquet, “Giant osmotic energy conversion measured in a single transmembrane           graphene,” Nano Lett. 12(7), 3602–3608 (2012).
+                                                                                            24
+     boron nitride nanotube,” Nature 494(7438), 455–458 (2013).                                A. Govind Rajan, M. S. Strano, and D. Blankschtein, “Ab initio molecular
+     4                                                                                      dynamics and lattice dynamics-based force field for modeling hexagonal boron
+       A. F. Khan, D. A. C. Brownson, E. P. Randviir, G. C. Smith, and C. E. Banks,
+     “2D hexagonal boron nitride (2D-hBN) explored for the electrochemical sensing          nitride in mechanical and interfacial applications,” J. Phys. Chem. Lett. 9(7),
+     of dopamine,” Anal. Chem. 88(19), 9729–9737 (2016).                                    1584–1591 (2018).
+     5                                                                                      25
+       M. B. Panchal and S. H. Upadhyay, “Single walled boron nitride nanotube-based           X. Davoy, A. Gellé, J.-C. Lebreton, H. Tabuteau, A. Soldera, A. Szymczyk, and A.
+     biosensor: An atomistic finite element modelling approach,” IET Nanobiotechnol.        Ghoufi, “High water flux with ions sieving in a desalination 2D sub-nanoporous
+     8(3), 149–156 (2014).                                                                  boron nitride material,” ACS Omega 3(6), 6305–6310 (2018).
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                                           162, 044705-12
+Published under an exclusive license by AIP Publishing
+  The Journal
+                                                                                                                        ARTICLE                 pubs.aip.org/aip/jcp
+  of Chemical Physics
+
+
+     26                                                                                         44
+        T. D. Kühne, M. Iannuzzi, M. Del Ben, V. V. Rybkin, P. Seewald, F. Stein, T.               J. Kotakoski, C. H. Jin, O. Lehtinen, K. Suenaga, and A. V. Krashenin-
+     Laino, R. Z. Khaliullin, O. Schütt, F. Schiffmann, D. Golze, J. Wilhelm, S. Chulkov,       nikov, “Electron knock-on damage in hexagonal boron nitride monolayers,”
+     M. H. Bani-Hashemian, V. Weber, U. Borštnik, M. Taillefumier, A. S. Jakobovits,           Phys. Rev. B 82(11), 113404 (2010).
+                                                                                                45
+     A. Lazzaro, H. Pabst, T. Müller, R. Schade, M. Guidon, S. Andermatt, N. Holm-                 G. H. Ryu, H. J. Park, J. Ryou, J. Park, J. Lee, G. Kim, H. S. Shin, C. W. Bielawski,
+     berg, G. K. Schenter, A. Hehn, A. Bussy, F. Belleflamme, G. Tabacchi, A. Glöß,             R. S. Ruoff, S. Hong, and Z. Lee, “Atomic-scale dynamics of triangular hole growth
+     M. Lass, I. Bethune, C. J. Mundy, C. Plessl, M. Watkins, J. VandeVondele, M.               in monolayer hexagonal boron nitride under electron irradiation,” Nanoscale
+     Krack, and J. Hutter, “CP2K: An electronic structure and molecular dynamics soft-          7(24), 10600–10605 (2015).
+                                                                                                46
+     ware package - quickstep: Efficient and accurate electronic structure calculations,”          S. M. Gilbert, G. Dunn, A. Azizi, T. Pham, B. Shevitski, E. Dimitrov, S. Liu,
+     J. Chem. Phys. 152(19), 194103 (2020).                                                     S. Aloni, and A. Zettl, “Fabrication of subnanometer-precision nanopores in
+     27
+        J. P. Perdew, K. Burke, and M. Ernzerhof, “Generalized gradient approximation           hexagonal boron nitride,” Sci. Rep. 7, 15096 (2017).
+                                                                                                47
+     made simple,” Phys. Rev. Lett. 77(18), 3865–3868 (1996).                                      A. Govind Rajan, K. S. Silmore, J. Swett, A. W. Robertson, J. H. Warner, D.
+     28                                                                                         Blankschtein, and M. S. Strano, “Addressing the isomer cataloguing problem for
+        J. VandeVondele and J. Hutter, “Gaussian basis sets for accurate calculations on
+     molecular systems in gas and condensed phases,” J. Chem. Phys. 127(11), 114105             nanopores in two-dimensional materials,” Nat. Mater. 18(2), 129–135 (2019).
+                                                                                                48
+     (2007).                                                                                       D. Kozawa, A. G. Rajan, S. X. Li, T. Ichihara, V. B. Koman, Y. Zeng, M.
+     29                                                                                         Kuehne, S. K. Iyemperumal, K. S. Silmore, D. Parviz, P. Liu, A. T. Liu, S. Faucher,
+        S. Goedecker, M. Teter, and J. Hutter, “Separable dual-space Gaussian
+     pseudopotentials,” Phys. Rev. B 54(3), 1703–1710 (1996).                                   Z. Yuan, W. Xu, J. H. Warner, D. Blankschtein, and M. S. Strano, “Observation
+     30
+        S. Grimme, J. Antony, S. Ehrlich, and H. Krieg, “A consistent and accurate              and spectral assignment of a family of hexagonal boron nitride lattice defects,”
+     ab initio parametrization of density functional dispersion correction (DFT-D) for          arXiv:1909.11738 (2019).
+                                                                                                49
+     the 94 elements H-Pu,” J. Chem. Phys. 132(15), 154104 (2010).                                 M. Rahm, T. Zeng, and R. Hoffmann, “Electronegativity seen as the ground-
+     31
+        P. E. Blöchl, “Electrostatic decoupling of periodic images of plane-wave-               state average valence electron binding energy,” J. Am. Chem. Soc. 141(1), 342–351
+     expanded densities and derived atomic point charges,” J. Chem. Phys. 103(17),              (2019).
+                                                                                                50
+     7422–7428 (1995).                                                                             M. V. Kilday, W. L. Johnson, and E. J. Prosen, “Heat of combustion of borazine,
+     32                                                                                         B3 N3 H6 ,” J. Res. Natl. Bur. Stand. Sect. Phys. Chem. 65A(2), 101–104 (1961).
+        Y. S. Al-Hamdani, M. Ma, D. Alfè, O. A. Von Lilienfeld, and A. Michaelides,             51
+     “Communication: Water on hexagonal boron nitride from diffusion Monte                         BORAZINE CAS No. 6569-51-3 https://www.chemicalbook.com/Product
+     Carlo,” J. Chem. Phys. 142(18), 181101 (2015).                                             ChemicalPropertiesCB4117135_EN.htm (accessed 28 July 2024).
+                                                                                                52
+     33
+        J. D. Gale, “Gulp: A computer program for the symmetry-adapted simulation of               T. Schneider and E. Stoll, “Molecular-dynamics study of a three-dimensional
+     solids,” J. Chem. Soc., Faraday Trans. 93(4), 629–637 (1997).                              one-component model for distortive phase transitions,” Phys. Rev. B 17(3),
+     34                                                                                         1302–1322 (1978).
+        J. D. Gale and A. L. Rohl, “The general utility lattice program (GULP),”                53
+                                                                                                   S. Nosé, “A unified formulation of the constant temperature molecular
+     Mol. Simul. 29(5), 291–341 (2003).
+     35                                                                                         dynamics methods,” J. Chem. Phys. 81(1), 511–519 (1984).
+
+
+
+
+                                                                                                                                                                                           15 July 2026 17:04:39
+        P. P. Ewald, “Die Berechnung optischer und elektrostatischer Gitterpotentiale,”         54
+                                                                                                   W. G. Hoover, “Canonical dynamics: Equilibrium phase-space distributions,”
+     Ann. Phys. 369(3), 253–287 (1921).
+     36                                                                                         Phys. Rev. A 31(3), 1695–1697 (1985).
+        S. Plimpton, “Fast parallel algorithms for short-range molecular dynamics,”             55
+                                                                                                   W. Shinoda, M. Shiga, and M. Mikami, “Rapid estimation of elastic constants
+     J. Comput. Phys. 117(1), 1–19 (1995).
+     37                                                                                         by molecular dynamics simulation under constant stress,” Phys. Rev. B 69(13),
+        A. P. Thompson, H. M. Aktulga, R. Berger, D. S. Bolintineanu, W. M. Brown,              134103 (2004).
+     P. S. Crozier, P. J. In ’T Veld, A. Kohlmeyer, S. G. Moore, T. D. Nguyen, R. Shan,         56
+                                                                                                   J. R. Werber, C. O. Osuji, and M. Elimelech, “Materials for next-generation
+     M. J. Stevens, J. Tranchida, C. Trott, and S. J. Plimpton, “LAMMPS - a flexible
+                                                                                                desalination and water purification membranes,” Nat. Rev. Mater. 1(5), 16018
+     simulation tool for particle-based materials modeling at the atomic, meso, and             (2016).
+     continuum scales,” Comput. Phys. Commun. 271, 108171 (2022).                               57
+     38                                                                                            K. Falk, F. Sedlmeier, L. Joly, R. R. Netz, and L. Bocquet, “Molecular origin
+        R. W. Hockney and J. W. Eastwood, “Particle-particle-particle-mesh (P3M)                of fast water transport in carbon nanotube membranes: Superlubricity versus
+     algorithms,” in Computer Simulation Using Particles (CRC Press, 1988),                     curvature dependent friction,” Nano Lett. 10(10), 4067–4073 (2010).
+     pp. 267–304.                                                                               58
+     39
+                                                                                                   S. P. Surwade, S. N. Smirnov, I. V. Vlassiouk, R. R. Unocic, G. M. Veith, S. Dai,
+        J.-P. Ryckaert, G. Ciccotti, and H. J. C. Berendsen, “Numerical integration of the      and S. M. Mahurin, “Water desalination using nanoporous single-layer graphene,”
+     cartesian equations of motion of a system with constraints: Molecular dynamics             Nat. Nanotechnol. 10(5), 459–464 (2015).
+     of n-alkanes,” J. Comput. Phys. 23(3), 327–341 (1977).                                     59
+                                                                                                   G. Guillen and E. M. V. Hoek, “Modeling the impacts of feed spacer geometry on
+     40
+        W. L. Jorgensen, D. S. Maxwell, and J. Tirado-Rives, “Development and testing           reverse osmosis and nanofiltration processes,” Chem. Eng. J. 149(1–3), 221–231
+     of the OPLS all-atom force field on conformational energetics and properties of            (2009).
+     organic liquids,” J. Am. Chem. Soc. 118(45), 11225–11236 (1996).                           60
+                                                                                                   M. Heiranian, A. B. Farimani, and N. R. Aluru, “Water desalination with a
+     41
+        I. M. Zeron, J. L. F. Abascal, and C. Vega, “A force field of Li+ , Na+ , K+ , Mg2+ ,   single-layer MoS2 nanopore,” Nat. Commun. 6(1), 8616 (2015).
+     Ca2+ , Cl− , and SO4 2− in aqueous solution based on the TIP4P/2005 water model            61
+                                                                                                   J. R. Werber, A. Deshmukh, and M. Elimelech, “The critical need for increased
+     and scaled charges for the ions,” J. Chem. Phys. 151(13), 134504 (2019).                   selectivity, not increased water permeability, for desalination membranes,”
+     42
+        A. Cheng and W. A. Steele, “Computer simulation of ammonia on graphite. I.              Environ. Sci. Technol. Lett. 3(4), 112–120 (2016).
+     Low temperature structure of monolayer and bilayer films,” J. Chem. Phys. 92(6),           62
+                                                                                                   S. Kumar and A. Govind Rajan, “Predicting quantum-mechanical par-
+     3858–3866 (1990).                                                                          tial charges in arbitrarily long boron nitride nanotubes to accurately simu-
+     43
+        J. L. F. Abascal and C. Vega, “A general purpose model for the condensed phases         late nanoscale water transport,” J. Chem. Theory Comput. 20(8), 3298–3307
+     of water: TIP4P/2005,” J. Chem. Phys. 123(23), 234505 (2005).                              (2024).
+
+
+
+
+J. Chem. Phys. 162, 044705 (2025); doi: 10.1063/5.0242541                                                                                                                162, 044705-13
+Published under an exclusive license by AIP Publishing
+
