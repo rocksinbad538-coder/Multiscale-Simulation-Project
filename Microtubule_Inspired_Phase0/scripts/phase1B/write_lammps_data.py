@@ -33,6 +33,25 @@ tables = model["type_tables"]
 outfile = RUN / "data.lammps"
 
 
+atoms = model["system"]["atoms"]
+
+xs = [float(a["x_A"]) for a in atoms]
+ys = [float(a["y_A"]) for a in atoms]
+zs = [float(a["z_A"]) for a in atoms]
+
+MARGIN = 5.0
+
+xlo = min(xs) - MARGIN
+xhi = max(xs) + MARGIN
+
+ylo = min(ys) - MARGIN
+yhi = max(ys) + MARGIN
+
+zlo = min(zs) - MARGIN
+zhi = max(zs) + MARGIN
+
+
+
 def writeln(f="", fp=None):
     fp.write(f"{f}\n")
 
@@ -54,6 +73,12 @@ def write_header(fp):
     writeln(f"{len(tables['angles'])} angle types", fp)
     writeln(f"{len(tables['impropers'])} improper types", fp)
     writeln(f"{len(tables['dihedrals'])} dihedral types", fp)
+    writeln("", fp)
+
+    writeln(f"{xlo:12.6f} {xhi:12.6f} xlo xhi", fp)
+    writeln(f"{ylo:12.6f} {yhi:12.6f} ylo yhi", fp)
+    writeln(f"{zlo:12.6f} {zhi:12.6f} zlo zhi", fp)
+
     writeln("", fp)
 
 
@@ -228,7 +253,7 @@ def write_atoms(fp):
 
         typ = atom_type_ids[atom["forcefield_type"]]
 
-        q = float(atom["RESP_charge"])
+        q = float(atom["RESP_charge_e"])
 
         x = float(atom["x_A"])
         y = float(atom["y_A"])

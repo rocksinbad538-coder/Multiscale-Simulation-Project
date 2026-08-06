@@ -55,19 +55,15 @@ with open(INPUT) as f:
 
             continue
 
-        atoms.append({
+        atom=dict(row)
 
-            "atom_id":row["atom_id"],
+        atom["forcefield_type"]=row["proposed_forcefield_type"]
 
-            "element":row["element"],
+        atom["RESP_charge_e"]=float(row["RESP_stage1_charge_e"])
 
-            "forcefield_type":row["proposed_forcefield_type"],
+        atom["role"]=row["atom_role"]
 
-            "RESP_charge_e":float(row["RESP_stage1_charge_e"]),
-
-            "role":row["atom_role"]
-
-        })
+        atoms.append(atom)
 
 print("="*100)
 print("DAY041 / PHASE1B-A1")
