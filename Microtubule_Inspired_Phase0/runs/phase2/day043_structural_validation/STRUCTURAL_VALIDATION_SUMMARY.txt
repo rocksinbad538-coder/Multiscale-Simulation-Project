@@ -1,0 +1,28 @@
+================================================================================
+PHASE2 STRUCTURAL VALIDATION SUMMARY
+================================================================================
+
+MODEL
+Atoms      : 37
+Bonds      : 42
+Angles     : 64
+Impropers  : 17
+Dihedrals  : 97
+
+RELAXATION
+RMSD              : 2.410703 Å
+Mean displacement : 2.185631 Å
+Maximum shift     : 5.104315 Å
+
+Mean bond ΔL      : 0.117382 Å
+Maximum bond ΔL   : 0.270422 Å
+
+Mean angle Δθ     : 7.912139 deg
+Maximum angle Δθ  : 47.834963 deg
+
+STATUS
+Topology validation ........ PASS
+LAMMPS import .............. PASS
+Energy evaluation .......... PASS
+Geometry relaxation ........ PASS
+Ready for Molecular Dynamics PASS
