@@ -1,0 +1,73 @@
+
+reset_timestep 0
+
+thermo 100
+
+min_style cg
+
+minimize 1.0e-8 1.0e-8 5000 10000
+Generated 6 of 6 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 3 3 3
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 13.68 | 13.68 | 13.68 Mbytes
+   Step          Temp          PotEng         KinEng         TotEng         E_bond        E_angle        E_dihed        E_impro         E_vdwl         Press     
+         0   0              4063.555       0              4063.555       1755.8461      1475.8865      0              796.90264      34.919709     -139881.87    
+       100   0              46.518885      0              46.518885      3.5032579      17.019747      0              6.1702781      19.825602      85.454442    
+       200   0              37.450028      0              37.450028      0.96715111     12.747204      0              3.7336897      20.001982      60.828695    
+       300   0              28.932902      0              28.932902      1.0414129      7.7912465      0              2.0134446      18.086798     -264.42394    
+       400   0              19.77968       0              19.77968       0.42134566     2.0049118      0              0.32710733     17.026315     -7.9570176    
+       500   0              17.946071      0              17.946071      0.30584463     1.3990153      0              0.10216728     16.139044     -24.204161    
+       600   0              16.914068      0              16.914068      0.24948324     0.94697627     0              0.077462714    15.640146      47.828586    
+       700   0              16.492621      0              16.492621      0.24534183     0.83257188     0              0.049876063    15.364832     -81.964075    
+       781   0              16.343312      0              16.343312      0.21696368     0.78182367     0              0.041998877    15.302526      6.4046235    
+Loop time of 0.0653876 on 1 procs for 781 steps with 37 atoms
+
+99.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+      4063.55503168128   16.3433119577595   16.3433119577595
+  Force two-norm initial, final = 6340.0493 2.1740238
+  Force max component initial, final = 2963.5929 0.60341073
+  Final line search alpha, max atom move = 8.1655973e-09 4.927209e-09
+  Iterations, force evaluations = 781 1632
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.038565   | 0.038565   | 0.038565   |   0.0 | 58.98
+Bond    | 0.015112   | 0.015112   | 0.015112   |   0.0 | 23.11
+Neigh   | 0.0012873  | 0.0012873  | 0.0012873  |   0.0 |  1.97
+Comm    | 0.0073467  | 0.0073467  | 0.0073467  |   0.0 | 11.24
+Output  | 6.8634e-05 | 6.8634e-05 | 6.8634e-05 |   0.0 |  0.10
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.003008   |            |       |  4.60
+
+Nlocal:             37 ave          37 max          37 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:            953 ave         953 max         953 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:            946 ave         946 max         946 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 946
+Ave neighs/atom = 25.567568
+Ave special neighs/atom = 10
+Neighbor list builds = 8
+Dangerous builds = 0
+
+write_data minimized.data
+System init for write_data ...
+Generated 6 of 6 mixed pair_coeff terms from geometric mixing rule
+Total wall time: 0:00:00

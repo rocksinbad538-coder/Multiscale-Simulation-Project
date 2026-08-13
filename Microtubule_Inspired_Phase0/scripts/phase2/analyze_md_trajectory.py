@@ -7,31 +7,29 @@ import math
 import pathlib
 import csv
 
+from md_analysis.paths import get_paths
+from md_analysis.io import read_lammps_dump
+
+from md_analysis.geometry import (
+    centroid,
+    radius_of_gyration,
+    bounding_box,
+)
+
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 
-XYZ = (
-    ROOT
-    / "runs"
-    / "phase2"
-    / "day044_md_protocol"
-    / "production.xyz"
-)
+PATHS = get_paths()
 
-OUT = (
-    ROOT
-    / "runs"
-    / "phase2"
-    / "day045_md_analysis"
-)
+OUT = PATHS["OUT"]
 
 OUT.mkdir(
     parents=True,
     exist_ok=True,
 )
 
-def read_xyz_frames():
+def _legacy_read_lammps_dump():
 
-    with open(XYZ) as f:
+    with open(PATHS["XYZ"]) as f:
         lines = [line.rstrip() for line in f]
 
     frames = []
@@ -80,7 +78,7 @@ def read_xyz_frames():
     return frames
 
 
-def center_of_mass(frame):
+def _legacy_center_of_mass(frame):
 
     n = len(frame["atoms"])
 
@@ -91,7 +89,7 @@ def center_of_mass(frame):
     return cx, cy, cz
 
 
-def radius_of_gyration(frame):
+def _legacy_radius_of_gyration(frame):
 
     cx, cy, cz = center_of_mass(frame)
 
@@ -143,7 +141,7 @@ def max_displacement(frame, reference):
     return m
 
 
-def bounding_box(frame):
+def _legacy_bounding_box(frame):
 
     xs = [a["x"] for a in frame["atoms"]]
     ys = [a["y"] for a in frame["atoms"]]
@@ -163,7 +161,7 @@ def bounding_box(frame):
     }
 
 
-frames = read_xyz_frames()
+frames = read_lammps_dump(PATHS["XYZ"])
 
 print("=" * 90)
 print("DAY045 / PHASE2-A17")
@@ -187,11 +185,11 @@ summary = []
 
 for frame in frames:
 
-    com = center_of_mass(frame)
+    com = centroid(frame['atoms'])
 
-    rg = radius_of_gyration(frame)
+    rg = radius_of_gyration(frame['atoms'])
 
-    box = bounding_box(frame)
+    box = bounding_box(frame['atoms'])
 
     summary.append({
 

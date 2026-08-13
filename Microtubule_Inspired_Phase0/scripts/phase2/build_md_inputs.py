@@ -24,6 +24,23 @@ OUT = (
 
 cfg = json.loads(PROTOCOL.read_text())
 
+# ------------------------------------------------------------------
+# Automatic conversion of physical simulation times into MD steps
+# ------------------------------------------------------------------
+
+HEATING_STEPS = int(
+    cfg["heating_ps"] * 1000.0 / cfg["timestep_fs"]
+)
+
+EQUILIBRATION_STEPS = int(
+    cfg["equilibration_ps"] * 1000.0 / cfg["timestep_fs"]
+)
+
+PRODUCTION_STEPS = int(
+    cfg["production_ns"] * 1_000_000.0 / cfg["timestep_fs"]
+)
+
+
 
 def ps_to_steps(ps):
     return int(ps * 1000.0 / cfg["timestep_fs"])
@@ -154,7 +171,7 @@ thermo {cfg["thermo_every"]}
 
 dump 1 all custom {cfg["dump_every"]} production.xyz id type x y z\n\ndump_modify 1 sort id\n\nrestart {cfg["restart_every"]} production.restart
 
-run {ps_to_steps(cfg["heating_ps"])}0\n\nunfix 1
+run {ns_to_steps(cfg["production_ns"])}\n\nunfix 1
 """
 )
 

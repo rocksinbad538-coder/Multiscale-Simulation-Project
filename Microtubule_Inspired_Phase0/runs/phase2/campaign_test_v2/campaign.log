@@ -1,0 +1,6 @@
+=== 300K ===
+   in.minimize     PASS (0.52 s)
+   in.heating      PASS (6.47 s)
+   in.nvt          PASS (29.25 s)
+   in.production   PASS (0.22 s)
+/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase2/campaign_test_v2/300K/campaign_report.json

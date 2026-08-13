@@ -36,6 +36,6 @@ dump_modify 1 sort id
 
 restart 1000 production.restart
 
-run 2000000
+run 4000000
 
 unfix 1

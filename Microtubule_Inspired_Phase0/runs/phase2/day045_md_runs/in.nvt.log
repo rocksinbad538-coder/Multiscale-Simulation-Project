@@ -10053,21 +10053,21 @@ Per MPI rank memory allocation (min/avg/max) = 12.56 | 12.56 | 12.56 Mbytes
     999800   284.27436      52.214066      30.505243      82.719309      16.919119      13.171962      0              5.0855298      17.037456     -2329.4464    
     999900   372.38394      46.740772      39.960209      86.700981      13.360148      9.8186687      0              5.700683       17.861272     -1068.546     
    1000000   324.18472      55.424817      34.78799       90.212807      14.066926      14.370898      0              6.8755362      20.111457      152.6316     
-Loop time of 29.7996 on 1 procs for 1000000 steps with 37 atoms
+Loop time of 27.7767 on 1 procs for 1000000 steps with 37 atoms
 
-Performance: 724.842 ns/day, 0.033 hours/ns, 33557.481 timesteps/s, 1.242 Matom-step/s
-96.7% CPU use with 1 MPI tasks x no OpenMP threads
+Performance: 777.631 ns/day, 0.031 hours/ns, 36001.435 timesteps/s, 1.332 Matom-step/s
+99.1% CPU use with 1 MPI tasks x no OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 12.908     | 12.908     | 12.908     |   0.0 | 43.32
-Bond    | 8.2687     | 8.2687     | 8.2687     |   0.0 | 27.75
-Neigh   | 0.79537    | 0.79537    | 0.79537    |   0.0 |  2.67
-Comm    | 4.3253     | 4.3253     | 4.3253     |   0.0 | 14.51
-Output  | 1.0007     | 1.0007     | 1.0007     |   0.0 |  3.36
-Modify  | 1.4284     | 1.4284     | 1.4284     |   0.0 |  4.79
-Other   |            | 1.073      |            |       |  3.60
+Pair    | 12.106     | 12.106     | 12.106     |   0.0 | 43.58
+Bond    | 7.7174     | 7.7174     | 7.7174     |   0.0 | 27.78
+Neigh   | 0.76587    | 0.76587    | 0.76587    |   0.0 |  2.76
+Comm    | 4.1133     | 4.1133     | 4.1133     |   0.0 | 14.81
+Output  | 0.75764    | 0.75764    | 0.75764    |   0.0 |  2.73
+Modify  | 1.3184     | 1.3184     | 1.3184     |   0.0 |  4.75
+Other   |            | 0.9978     |            |       |  3.59
 
 Nlocal:             37 ave          37 max          37 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
@@ -10083,5 +10083,5 @@ Neighbor list builds = 4707
 Dangerous builds = 0
 System init for write_data ...
 Generated 6 of 6 mixed pair_coeff terms from geometric mixing rule
-Total wall time: 0:00:29
+Total wall time: 0:00:27
 

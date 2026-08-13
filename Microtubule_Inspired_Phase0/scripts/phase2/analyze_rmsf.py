@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+from md_analysis.paths import get_paths
 import json
 import pathlib
 
@@ -11,20 +12,11 @@ import pandas as pd
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 
-TRAJECTORY = (
-    ROOT
-    / "runs"
-    / "phase2"
-    / "day044_md_protocol"
-    / "production.xyz"
-)
+PATHS = get_paths()
 
-OUT = (
-    ROOT
-    / "runs"
-    / "phase2"
-    / "day045_md_analysis"
-)
+TRAJECTORY = PATHS["XYZ"]
+
+OUT = PATHS["OUT"]
 
 OUT.mkdir(
     parents=True,

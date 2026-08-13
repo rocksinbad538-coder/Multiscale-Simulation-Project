@@ -30,7 +30,7 @@ Finding 1-2 1-3 1-4 neighbors ...
     17 = max # of 1-4 neighbors
     17 = max # of special neighbors
   special bonds CPU = 0.000 seconds
-  read_data CPU = 0.004 seconds
+  read_data CPU = 0.005 seconds
 Generated 6 of 6 mixed pair_coeff terms from geometric mixing rule
 Neighbor list info ...
   update: every = 1 steps, delay = 0 steps, check = yes
@@ -58,9 +58,9 @@ Per MPI rank memory allocation (min/avg/max) = 13.68 | 13.68 | 13.68 Mbytes
        600   0              16.914068      0              16.914068      0.24948324     0.94697627     0              0.077462714    15.640146      47.828586    
        700   0              16.492621      0              16.492621      0.24534183     0.83257188     0              0.049876063    15.364832     -81.964075    
        781   0              16.343312      0              16.343312      0.21696368     0.78182367     0              0.041998877    15.302526      6.4046235    
-Loop time of 0.0584393 on 1 procs for 781 steps with 37 atoms
+Loop time of 0.0613445 on 1 procs for 781 steps with 37 atoms
 
-100.0% CPU use with 1 MPI tasks x no OpenMP threads
+99.9% CPU use with 1 MPI tasks x no OpenMP threads
 
 Minimization stats:
   Stopping criterion = linesearch alpha is zero
@@ -74,13 +74,13 @@ Minimization stats:
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 0.033132   | 0.033132   | 0.033132   |   0.0 | 56.69
-Bond    | 0.014224   | 0.014224   | 0.014224   |   0.0 | 24.34
-Neigh   | 0.0012659  | 0.0012659  | 0.0012659  |   0.0 |  2.17
-Comm    | 0.0070296  | 0.0070296  | 0.0070296  |   0.0 | 12.03
-Output  | 4.8279e-05 | 4.8279e-05 | 4.8279e-05 |   0.0 |  0.08
+Pair    | 0.035861   | 0.035861   | 0.035861   |   0.0 | 58.46
+Bond    | 0.01407    | 0.01407    | 0.01407    |   0.0 | 22.94
+Neigh   | 0.0012966  | 0.0012966  | 0.0012966  |   0.0 |  2.11
+Comm    | 0.0072733  | 0.0072733  | 0.0072733  |   0.0 | 11.86
+Output  | 5.9033e-05 | 5.9033e-05 | 5.9033e-05 |   0.0 |  0.10
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.002739   |            |       |  4.69
+Other   |            | 0.002785   |            |       |  4.54
 
 Nlocal:             37 ave          37 max          37 min
 Histogram: 1 0 0 0 0 0 0 0 0 0

@@ -32,7 +32,7 @@ Finding 1-2 1-3 1-4 neighbors ...
     17 = max # of 1-4 neighbors
     17 = max # of special neighbors
   special bonds CPU = 0.000 seconds
-  read_data CPU = 0.005 seconds
+  read_data CPU = 0.008 seconds
 Generated 6 of 6 mixed pair_coeff terms from geometric mixing rule
 Neighbor list info ...
   update: every = 1 steps, delay = 0 steps, check = yes
@@ -20053,21 +20053,21 @@ Per MPI rank memory allocation (min/avg/max) = 12.55 | 12.55 | 12.55 Mbytes
    1999800   240.68381      37.686115      25.827577      63.513692      8.694255       10.896973      0              2.2877938      15.807094     -603.42426    
    1999900   235.93705      36.719181      25.318207      62.037388      10.004049      7.1426807      0              4.1033505      15.469101     -3760.1968    
    2000000   199.47162      39.073562      21.405132      60.478695      10.561877      9.0905601      0              3.7072281      15.713897     -2384.5439    
-Loop time of 62.992 on 1 procs for 2000000 steps with 37 atoms
+Loop time of 61.7588 on 1 procs for 2000000 steps with 37 atoms
 
-Performance: 685.801 ns/day, 0.035 hours/ns, 31750.060 timesteps/s, 1.175 Matom-step/s
-94.9% CPU use with 1 MPI tasks x no OpenMP threads
+Performance: 699.495 ns/day, 0.034 hours/ns, 32384.024 timesteps/s, 1.198 Matom-step/s
+96.1% CPU use with 1 MPI tasks x no OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 27.203     | 27.203     | 27.203     |   0.0 | 43.18
-Bond    | 16.344     | 16.344     | 16.344     |   0.0 | 25.95
-Neigh   | 1.8465     | 1.8465     | 1.8465     |   0.0 |  2.93
-Comm    | 9.0386     | 9.0386     | 9.0386     |   0.0 | 14.35
-Output  | 3.0854     | 3.0854     | 3.0854     |   0.0 |  4.90
-Modify  | 3.2052     | 3.2052     | 3.2052     |   0.0 |  5.09
-Other   |            | 2.269      |            |       |  3.60
+Pair    | 27.055     | 27.055     | 27.055     |   0.0 | 43.81
+Bond    | 15.948     | 15.948     | 15.948     |   0.0 | 25.82
+Neigh   | 1.7956     | 1.7956     | 1.7956     |   0.0 |  2.91
+Comm    | 8.7867     | 8.7867     | 8.7867     |   0.0 | 14.23
+Output  | 3.2739     | 3.2739     | 3.2739     |   0.0 |  5.30
+Modify  | 2.8403     | 2.8403     | 2.8403     |   0.0 |  4.60
+Other   |            | 2.06       |            |       |  3.33
 
 Nlocal:             37 ave          37 max          37 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
@@ -20081,5 +20081,5 @@ Ave neighs/atom = 25.594595
 Ave special neighs/atom = 10
 Neighbor list builds = 10303
 Dangerous builds = 0
-Total wall time: 0:01:03
+Total wall time: 0:01:01
 

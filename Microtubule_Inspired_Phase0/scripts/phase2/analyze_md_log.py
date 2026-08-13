@@ -3,25 +3,17 @@
 from __future__ import annotations
 
 import csv
+from md_analysis.paths import get_paths
 import json
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 
-LOG = (
-    ROOT
-    / "runs"
-    / "phase2"
-    / "day045_md_runs"
-    / "in.production.log"
-)
+PATHS = get_paths()
 
-OUT = (
-    ROOT
-    / "runs"
-    / "phase2"
-    / "day045_md_analysis"
-)
+OUT = PATHS["OUT"]
+
+LOG = PATHS["LOG"]
 
 OUT.mkdir(
     parents=True,

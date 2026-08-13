@@ -1,0 +1,43 @@
+units real
+atom_style full
+
+boundary p p p
+
+pair_style lj/cut 12.0
+
+bond_style harmonic
+angle_style harmonic
+dihedral_style zero nocoeff
+improper_style harmonic
+
+special_bonds lj/coul 0.0 0.0 0.5
+
+read_data minimized.data
+
+neighbor 2.0 bin
+neigh_modify every 1 delay 0 check yes
+
+timestep 0.25
+
+thermo_style custom step temp pe ke etotal ebond eangle edihed eimp evdwl press
+
+
+log heating.log
+
+reset_timestep 0
+
+velocity all create 250 12345 mom yes rot yes dist gaussian
+
+fix 1 all nvt temp 250 250 100.0
+
+thermo 100
+
+dump 1 all custom 100 heating.xyz id type x y z
+
+dump_modify 1 sort id
+
+run 200000
+
+write_data heated.data
+
+unfix 1
