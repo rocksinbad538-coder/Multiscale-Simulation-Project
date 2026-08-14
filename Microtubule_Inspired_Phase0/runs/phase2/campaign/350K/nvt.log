@@ -10026,21 +10026,21 @@ Per MPI rank memory allocation (min/avg/max) = 12.56 | 12.56 | 12.56 Mbytes
     999800   291.36326      49.039599      31.265947      80.305546      11.906968      14.316158      0              6.1424905      16.673982     -1692.3969    
     999900   292.91324      47.562146      31.432274      78.99442       12.868881      9.4873753      0              4.7880591      20.41783       4091.9916    
    1000000   317.08395      43.892192      34.026013      77.918205      10.785384      13.416792      0              2.4088899      17.281126      1744.6564    
-Loop time of 27.9038 on 1 procs for 1000000 steps with 37 atoms
+Loop time of 28.1212 on 1 procs for 1000000 steps with 37 atoms
 
-Performance: 774.089 ns/day, 0.031 hours/ns, 35837.439 timesteps/s, 1.326 Matom-step/s
-99.4% CPU use with 1 MPI tasks x no OpenMP threads
+Performance: 768.104 ns/day, 0.031 hours/ns, 35560.356 timesteps/s, 1.316 Matom-step/s
+97.9% CPU use with 1 MPI tasks x no OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 12.32      | 12.32      | 12.32      |   0.0 | 44.15
-Bond    | 7.7047     | 7.7047     | 7.7047     |   0.0 | 27.61
-Neigh   | 0.83287    | 0.83287    | 0.83287    |   0.0 |  2.98
-Comm    | 4.049      | 4.049      | 4.049      |   0.0 | 14.51
-Output  | 0.72135    | 0.72135    | 0.72135    |   0.0 |  2.59
-Modify  | 1.2807     | 1.2807     | 1.2807     |   0.0 |  4.59
-Other   |            | 0.9948     |            |       |  3.57
+Pair    | 11.428     | 11.428     | 11.428     |   0.0 | 40.64
+Bond    | 7.9365     | 7.9365     | 7.9365     |   0.0 | 28.22
+Neigh   | 0.85816    | 0.85816    | 0.85816    |   0.0 |  3.05
+Comm    | 4.3665     | 4.3665     | 4.3665     |   0.0 | 15.53
+Output  | 1.0295     | 1.0295     | 1.0295     |   0.0 |  3.66
+Modify  | 1.44       | 1.44       | 1.44       |   0.0 |  5.12
+Other   |            | 1.062      |            |       |  3.78
 
 Nlocal:             37 ave          37 max          37 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
@@ -10060,4 +10060,4 @@ System init for write_data ...
 Generated 6 of 6 mixed pair_coeff terms from geometric mixing rule
 
 unfix 1
-Total wall time: 0:00:27
+Total wall time: 0:00:28

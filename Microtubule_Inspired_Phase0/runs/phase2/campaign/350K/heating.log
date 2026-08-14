@@ -2028,21 +2028,21 @@ Per MPI rank memory allocation (min/avg/max) = 12.56 | 12.56 | 12.56 Mbytes
     199800   329.54479      39.86262       35.363176      75.225796      13.415247      7.7614487      0              2.2120403      16.473885      350.49238    
     199900   263.6761       47.149901      28.294862      75.444763      15.291404      10.667652      0              4.3311117      16.859734      1433.8664    
     200000   273.53958      46.868943      29.353303      76.222245      13.911871      10.717451      0              6.2307903      16.00883       1220.6454    
-Loop time of 5.72256 on 1 procs for 200000 steps with 37 atoms
+Loop time of 5.7212 on 1 procs for 200000 steps with 37 atoms
 
-Performance: 754.907 ns/day, 0.032 hours/ns, 34949.412 timesteps/s, 1.293 Matom-step/s
-99.4% CPU use with 1 MPI tasks x no OpenMP threads
+Performance: 755.086 ns/day, 0.032 hours/ns, 34957.697 timesteps/s, 1.293 Matom-step/s
+97.7% CPU use with 1 MPI tasks x no OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 2.5729     | 2.5729     | 2.5729     |   0.0 | 44.96
-Bond    | 1.549      | 1.549      | 1.549      |   0.0 | 27.07
-Neigh   | 0.1789     | 0.1789     | 0.1789     |   0.0 |  3.13
-Comm    | 0.82406    | 0.82406    | 0.82406    |   0.0 | 14.40
-Output  | 0.13636    | 0.13636    | 0.13636    |   0.0 |  2.38
-Modify  | 0.26034    | 0.26034    | 0.26034    |   0.0 |  4.55
-Other   |            | 0.201      |            |       |  3.51
+Pair    | 2.3402     | 2.3402     | 2.3402     |   0.0 | 40.90
+Bond    | 1.5839     | 1.5839     | 1.5839     |   0.0 | 27.68
+Neigh   | 0.18629    | 0.18629    | 0.18629    |   0.0 |  3.26
+Comm    | 0.88506    | 0.88506    | 0.88506    |   0.0 | 15.47
+Output  | 0.22712    | 0.22712    | 0.22712    |   0.0 |  3.97
+Modify  | 0.28444    | 0.28444    | 0.28444    |   0.0 |  4.97
+Other   |            | 0.2142     |            |       |  3.74
 
 Nlocal:             37 ave          37 max          37 min
 Histogram: 1 0 0 0 0 0 0 0 0 0

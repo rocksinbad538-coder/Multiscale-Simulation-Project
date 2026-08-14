@@ -1,30 +1,30 @@
 === 150K ===
-   in.minimize     PASS (0.27 s)
-   in.heating      PASS (5.71 s)
-   in.nvt          PASS (27.50 s)
-   in.production   PASS (118.28 s)
+   in.minimize     PASS (0.31 s)
+   in.heating      PASS (6.17 s)
+   in.nvt          PASS (28.13 s)
+   in.production   PASS (123.56 s)
 /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase2/campaign/150K/campaign_report.json
 === 200K ===
-   in.minimize     PASS (0.27 s)
-   in.heating      PASS (5.82 s)
-   in.nvt          PASS (28.07 s)
-   in.production   PASS (117.82 s)
+   in.minimize     PASS (0.31 s)
+   in.heating      PASS (5.83 s)
+   in.nvt          PASS (27.70 s)
+   in.production   PASS (120.26 s)
 /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase2/campaign/200K/campaign_report.json
 === 250K ===
-   in.minimize     PASS (0.28 s)
-   in.heating      PASS (5.66 s)
-   in.nvt          PASS (27.90 s)
-   in.production   PASS (114.77 s)
+   in.minimize     PASS (0.32 s)
+   in.heating      PASS (6.26 s)
+   in.nvt          PASS (29.73 s)
+   in.production   PASS (125.01 s)
 /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase2/campaign/250K/campaign_report.json
 === 300K ===
-   in.minimize     PASS (0.27 s)
+   in.minimize     PASS (0.31 s)
    in.heating      PASS (5.56 s)
-   in.nvt          PASS (28.41 s)
-   in.production   PASS (115.72 s)
+   in.nvt          PASS (28.50 s)
+   in.production   PASS (126.08 s)
 /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase2/campaign/300K/campaign_report.json
 === 350K ===
-   in.minimize     PASS (0.26 s)
-   in.heating      PASS (5.93 s)
-   in.nvt          PASS (28.13 s)
-   in.production   PASS (118.15 s)
+   in.minimize     PASS (0.32 s)
+   in.heating      PASS (5.94 s)
+   in.nvt          PASS (28.33 s)
+   in.production   PASS (131.86 s)
 /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase2/campaign/350K/campaign_report.json

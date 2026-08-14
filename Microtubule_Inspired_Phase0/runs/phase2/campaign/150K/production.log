@@ -5,7 +5,7 @@ fix 1 all nvt temp 150 150 100.0
 
 thermo 100
 
-dump 1 all custom 100 production.xyz id type x y z
+dump 1 all custom 100 production.xyz id mol type q x y z ix iy iz vx vy vz
 
 dump_modify 1 sort id
 
@@ -40028,21 +40028,21 @@ Per MPI rank memory allocation (min/avg/max) = 12.56 | 12.56 | 12.56 Mbytes
    3999800   158.31528      29.683082      16.98868       46.671762      6.9073819      3.7460055      0              2.4113911      16.618304     -2214.8144    
    3999900   132.37843      32.190473      14.205419      46.395892      7.1494881      5.7362159      0              3.9663445      15.338424     -2108.6204    
    4000000   142.46581      30.808597      15.287887      46.096483      5.2832317      5.7721646      0              3.5019881      16.251212      151.59372    
-Loop time of 118.081 on 1 procs for 4000000 steps with 37 atoms
+Loop time of 123.364 on 1 procs for 4000000 steps with 37 atoms
 
-Performance: 731.700 ns/day, 0.033 hours/ns, 33875.017 timesteps/s, 1.253 Matom-step/s
-98.1% CPU use with 1 MPI tasks x no OpenMP threads
+Performance: 700.364 ns/day, 0.034 hours/ns, 32424.269 timesteps/s, 1.200 Matom-step/s
+93.7% CPU use with 1 MPI tasks x no OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 52.669     | 52.669     | 52.669     |   0.0 | 44.60
-Bond    | 31.762     | 31.762     | 31.762     |   0.0 | 26.90
-Neigh   | 2.5139     | 2.5139     | 2.5139     |   0.0 |  2.13
-Comm    | 16.892     | 16.892     | 16.892     |   0.0 | 14.31
-Output  | 4.4895     | 4.4895     | 4.4895     |   0.0 |  3.80
-Modify  | 5.5571     | 5.5571     | 5.5571     |   0.0 |  4.71
-Other   |            | 4.197      |            |       |  3.55
+Pair    | 50.597     | 50.597     | 50.597     |   0.0 | 41.01
+Bond    | 31.663     | 31.663     | 31.663     |   0.0 | 25.67
+Neigh   | 2.4987     | 2.4987     | 2.4987     |   0.0 |  2.03
+Comm    | 16.545     | 16.545     | 16.545     |   0.0 | 13.41
+Output  | 12.443     | 12.443     | 12.443     |   0.0 | 10.09
+Modify  | 5.427      | 5.427      | 5.427      |   0.0 |  4.40
+Other   |            | 4.192      |            |       |  3.40
 
 Nlocal:             37 ave          37 max          37 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
@@ -40058,4 +40058,4 @@ Neighbor list builds = 14973
 Dangerous builds = 0
 
 unfix 1
-Total wall time: 0:01:58
+Total wall time: 0:02:03

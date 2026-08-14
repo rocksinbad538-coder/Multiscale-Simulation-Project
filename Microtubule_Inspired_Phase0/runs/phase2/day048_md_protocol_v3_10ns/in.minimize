@@ -1,0 +1,35 @@
+units real
+atom_style full
+
+boundary p p p
+
+pair_style lj/cut 12.0
+
+bond_style harmonic
+angle_style harmonic
+dihedral_style zero nocoeff
+improper_style harmonic
+
+special_bonds lj/coul 0.0 0.0 0.5
+
+read_data ../../phase1B/day041_lammps_export/data.lammps
+
+neighbor 2.0 bin
+neigh_modify every 1 delay 0 check yes
+
+timestep 0.25
+
+thermo_style custom step temp pe ke etotal ebond eangle edihed eimp evdwl press
+
+
+log minimize.log
+
+reset_timestep 0
+
+thermo 100
+
+min_style cg
+
+minimize 1.0e-8 1.0e-8 5000 10000
+
+write_data minimized.data

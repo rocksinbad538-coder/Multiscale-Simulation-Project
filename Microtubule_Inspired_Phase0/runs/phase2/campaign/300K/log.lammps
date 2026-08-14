@@ -47,7 +47,7 @@ Finding 1-2 1-3 1-4 neighbors ...
     17 = max # of 1-4 neighbors
     17 = max # of special neighbors
   special bonds CPU = 0.000 seconds
-  read_data CPU = 0.005 seconds
+  read_data CPU = 0.006 seconds
 
 neighbor 2.0 bin
 neigh_modify every 1 delay 0 check yes

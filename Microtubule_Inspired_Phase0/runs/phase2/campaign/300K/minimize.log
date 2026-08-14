@@ -30,9 +30,9 @@ Per MPI rank memory allocation (min/avg/max) = 13.68 | 13.68 | 13.68 Mbytes
        600   0              16.914068      0              16.914068      0.24948324     0.94697627     0              0.077462714    15.640146      47.828586    
        700   0              16.492621      0              16.492621      0.24534183     0.83257188     0              0.049876063    15.364832     -81.964075    
        781   0              16.343312      0              16.343312      0.21696368     0.78182367     0              0.041998877    15.302526      6.4046235    
-Loop time of 0.0697327 on 1 procs for 781 steps with 37 atoms
+Loop time of 0.0624927 on 1 procs for 781 steps with 37 atoms
 
-99.7% CPU use with 1 MPI tasks x no OpenMP threads
+99.9% CPU use with 1 MPI tasks x no OpenMP threads
 
 Minimization stats:
   Stopping criterion = linesearch alpha is zero
@@ -46,13 +46,13 @@ Minimization stats:
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 0.041561   | 0.041561   | 0.041561   |   0.0 | 59.60
-Bond    | 0.01549    | 0.01549    | 0.01549    |   0.0 | 22.21
-Neigh   | 0.0013703  | 0.0013703  | 0.0013703  |   0.0 |  1.97
-Comm    | 0.0078695  | 0.0078695  | 0.0078695  |   0.0 | 11.29
-Output  | 8.4763e-05 | 8.4763e-05 | 8.4763e-05 |   0.0 |  0.12
+Pair    | 0.036284   | 0.036284   | 0.036284   |   0.0 | 58.06
+Bond    | 0.014851   | 0.014851   | 0.014851   |   0.0 | 23.76
+Neigh   | 0.0013897  | 0.0013897  | 0.0013897  |   0.0 |  2.22
+Comm    | 0.0070184  | 0.0070184  | 0.0070184  |   0.0 | 11.23
+Output  | 6.1962e-05 | 6.1962e-05 | 6.1962e-05 |   0.0 |  0.10
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.003357   |            |       |  4.81
+Other   |            | 0.002888   |            |       |  4.62
 
 Nlocal:             37 ave          37 max          37 min
 Histogram: 1 0 0 0 0 0 0 0 0 0

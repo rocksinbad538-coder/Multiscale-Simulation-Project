@@ -1,0 +1,60 @@
+LAMMPS (10 Dec 2025)
+units real
+atom_style full
+
+boundary p p p
+
+pair_style lj/cut 12.0
+
+bond_style harmonic
+angle_style harmonic
+dihedral_style zero nocoeff
+improper_style harmonic
+
+special_bonds lj/coul 0.0 0.0 0.5
+
+read_data equilibrated.data
+Reading data file ...
+  orthogonal box = (-10.450439 -7.859276 -10.619224) to (8.357685 8.898672 6.948941)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  37 atoms
+  reading velocities ...
+  37 velocities
+  scanning bonds ...
+  3 = max bonds/atom
+  scanning angles ...
+  3 = max angles/atom
+  scanning dihedrals ...
+  12 = max dihedrals/atom
+  scanning impropers ...
+  2 = max impropers/atom
+  orthogonal box = (-10.450439 -7.859276 -10.619224) to (8.357685 8.898672 6.948941)
+  1 by 1 by 1 MPI processor grid
+  reading bonds ...
+  42 bonds
+  reading angles ...
+  64 angles
+  reading dihedrals ...
+  97 dihedrals
+  reading impropers ...
+  17 impropers
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0.5     
+  special bond factors coul:  0        0        0.5     
+     3 = max # of 1-2 neighbors
+     6 = max # of 1-3 neighbors
+    17 = max # of 1-4 neighbors
+    17 = max # of special neighbors
+  special bonds CPU = 0.000 seconds
+  read_data CPU = 0.008 seconds
+
+neighbor 2.0 bin
+neigh_modify every 1 delay 0 check yes
+
+timestep 0.25
+
+thermo_style custom step temp pe ke etotal ebond eangle edihed eimp evdwl press
+
+
+log production.log
