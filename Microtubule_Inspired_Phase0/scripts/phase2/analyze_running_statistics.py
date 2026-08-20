@@ -12,7 +12,7 @@ from md_analysis.statistics import running_average, running_std
 
 ROOT = Path(__file__).resolve().parents[2]
 
-CAMPAIGN = ROOT / "runs" / "phase2" / "campaign"
+CAMPAIGN = ROOT / "runs" / "phase2" / "campaign_phase5_corrected"
 
 OUT = CAMPAIGN / "running_statistics"
 

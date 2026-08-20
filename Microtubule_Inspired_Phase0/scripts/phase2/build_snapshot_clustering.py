@@ -11,9 +11,9 @@ from sklearn.cluster import KMeans
 
 ROOT = Path(__file__).resolve().parents[2]
 
-DATA = ROOT/"runs"/"phase2"/"campaign"/"snapshot_descriptors"/"snapshot_descriptor_matrix.csv"
+DATA = ROOT/"runs"/"phase2"/"campaign_phase5_corrected"/"snapshot_descriptors"/"snapshot_descriptor_matrix.csv"
 
-OUT = ROOT/"runs"/"phase2"/"campaign"/"snapshot_clustering"
+OUT = ROOT/"runs"/"phase2"/"campaign_phase5_corrected"/"snapshot_clustering"
 
 OUT.mkdir(exist_ok=True)
 

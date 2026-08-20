@@ -7,11 +7,11 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
 
-REP = ROOT/"runs"/"phase2"/"campaign"/"snapshot_clustering"/"cluster_representatives.csv"
+REP = ROOT/"runs"/"phase2"/"campaign_phase5_corrected"/"snapshot_clustering"/"cluster_representatives.csv"
 
-SOURCE = ROOT/"runs"/"phase2"/"campaign"/"representative_ensemble"
+SOURCE = ROOT/"runs"/"phase2"/"campaign_phase5_corrected"/"representative_ensemble"
 
-OUT = ROOT/"runs"/"phase2"/"campaign"/"tddft_selected_structures"
+OUT = ROOT/"runs"/"phase2"/"campaign_phase5_corrected"/"tddft_selected_structures"
 
 OUT.mkdir(exist_ok=True)
 

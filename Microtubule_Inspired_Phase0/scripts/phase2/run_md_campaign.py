@@ -5,11 +5,18 @@ from __future__ import annotations
 import pathlib
 import shutil
 import re
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 
-PROTOCOL = ROOT / "runs" / "phase2" / "day047_md_protocol_v2"
-CAMPAIGN = ROOT / "runs" / "phase2" / "campaign"
+PROTOCOL = ROOT / "runs" / "phase2" / "day049_md_protocol_v4_20ns"
+DEFAULT_CAMPAIGN = ROOT / "runs" / "phase2" / "campaign"
+
+CAMPAIGN = (
+    pathlib.Path(sys.argv[1]).resolve()
+    if len(sys.argv) > 1
+    else DEFAULT_CAMPAIGN
+)
 
 TEMPERATURES = [150, 200, 250, 300, 350]
 

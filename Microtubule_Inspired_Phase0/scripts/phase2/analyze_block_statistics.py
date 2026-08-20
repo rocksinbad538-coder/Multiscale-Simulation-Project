@@ -11,7 +11,7 @@ from md_analysis.statistics import block_statistics
 
 ROOT = Path(__file__).resolve().parents[2]
 
-CAMPAIGN = ROOT / "runs" / "phase2" / "campaign"
+CAMPAIGN = ROOT / "runs" / "phase2" / "campaign_phase5_corrected"
 
 OUT = CAMPAIGN / "block_statistics"
 

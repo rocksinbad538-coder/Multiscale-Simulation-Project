@@ -9,9 +9,9 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
 
-META = ROOT/"runs"/"phase2"/"campaign"/"campaign_meta_summary.csv"
+META = ROOT/"runs"/"phase2"/"campaign_phase5_corrected"/"campaign_meta_summary.csv"
 
-OUT = ROOT/"runs"/"phase2"/"campaign"/"temperature_statistics"
+OUT = ROOT/"runs"/"phase2"/"campaign_phase5_corrected"/"temperature_statistics"
 
 OUT.mkdir(exist_ok=True)
 

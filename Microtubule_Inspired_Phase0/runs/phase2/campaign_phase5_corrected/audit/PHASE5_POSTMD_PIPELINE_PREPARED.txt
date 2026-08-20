@@ -1,0 +1,37 @@
+PHASE5_POSTMD_PIPELINE_PREPARED
+
+MD:
+- corrected Hamiltonian validated
+- 20 ns x 5 temperature campaign launched
+- production coordinates: xu yu zu
+- restart interval: 0.5 ns
+
+COORDINATE PIPELINE:
+- unwrapped coordinates enabled
+- xu/yu/zu parser canonicalization validated
+- deterministic atom-ID ordering validated
+- geometry analysis validated
+- Kabsch aligned RMSD validated
+
+STATISTICS:
+- Geyer IPS autocorrelation estimator implemented
+- AR(1) analytical validation passed
+- tau_int / statistical inefficiency / N_eff available
+- automated equilibration gate prepared
+- statistically independent snapshot extraction prepared
+
+PCA / TDDFT:
+- corrected campaign paths propagated
+- Kabsch-aligned PCA preprocessing prepared
+- clustering path prepared
+- TDDFT selection path prepared
+- robust dump-to-XYZ exporter prepared
+- XYZ validation hardened
+- provenance audit hardened
+
+IMPORTANT:
+- downstream analysis has NOT been executed on incomplete trajectories
+- ORCA / TDDFT has NOT been launched
+- before post-MD processing, review trajectory-analysis memory scaling
+  because the 20 ns trajectories contain approximately 800,000 frames
+  per temperature at dump_every=100

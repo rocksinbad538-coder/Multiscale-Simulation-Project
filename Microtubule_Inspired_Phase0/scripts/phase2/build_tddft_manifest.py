@@ -5,9 +5,9 @@ import json
 
 ROOT = Path(__file__).resolve().parents[2]
 
-ENSEMBLE = ROOT/"runs"/"phase2"/"campaign"/"representative_ensemble"
+ENSEMBLE = ROOT/"runs"/"phase2"/"campaign_phase5_corrected"/"representative_ensemble"
 
-OUT = ROOT/"runs"/"phase2"/"campaign"/"tddft_manifest"
+OUT = ROOT/"runs"/"phase2"/"campaign_phase5_corrected"/"tddft_manifest"
 
 OUT.mkdir(exist_ok=True)
 

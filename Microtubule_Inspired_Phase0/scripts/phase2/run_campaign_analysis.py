@@ -6,7 +6,7 @@ import shutil
 
 ROOT = Path(__file__).resolve().parents[2]
 
-CAMPAIGN = ROOT / "runs" / "phase2" / "campaign"
+CAMPAIGN = ROOT / "runs" / "phase2" / "campaign_phase5_corrected"
 
 WORK = ROOT / "runs" / "phase2" / "day044_md_protocol"
 
@@ -21,7 +21,7 @@ scripts = [
     "build_md_scientific_report.py",
 ]
 
-for folder in sorted(CAMPAIGN.iterdir()):
+for folder in sorted(CAMPAIGN.glob("*K")):
 
     if not folder.is_dir():
         continue
@@ -53,7 +53,23 @@ for folder in sorted(CAMPAIGN.iterdir()):
     dest.mkdir(exist_ok=True)
 
     for f in ANALYSIS.iterdir():
-        shutil.copy2(f, dest/f.name)
+
+        target = dest / f.name
+
+        if f.is_dir():
+
+            shutil.copytree(
+                f,
+                target,
+                dirs_exist_ok=True
+            )
+
+        else:
+
+            shutil.copy2(
+                f,
+                target
+            )
 
 print()
 print("="*80)

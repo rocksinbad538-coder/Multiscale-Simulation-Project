@@ -10,7 +10,7 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[2]
-CAMPAIGN = ROOT / "runs" / "phase2" / "campaign"
+CAMPAIGN = ROOT / "runs" / "phase2" / "campaign_phase5_corrected"
 
 TAIL_WINDOWS = [0.10, 0.20, 0.30]
 

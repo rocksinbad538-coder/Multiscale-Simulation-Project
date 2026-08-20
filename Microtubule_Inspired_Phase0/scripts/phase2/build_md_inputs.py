@@ -173,7 +173,7 @@ fix 1 all nvt temp 300.0 300.0 100.0
 
 thermo {cfg["thermo_every"]}
 
-dump 1 all custom {cfg["dump_every"]} production.xyz id type x y z\n\ndump_modify 1 sort id\n\nrestart {cfg["restart_every"]} production.restart
+dump 1 all custom {cfg["dump_every"]} production.xyz id type xu yu zu\n\ndump_modify 1 sort id\n\nrestart {cfg["restart_every"]} production.restart
 
 run {ns_to_steps(cfg["production_ns"])}\n\nunfix 1
 """
