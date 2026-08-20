@@ -20,6 +20,17 @@ ROOT
 "PHASE1B_PARAMETER_MAPPING.csv"
 )
 
+ADOPTED = (
+ROOT
+/"runs"
+/
+"phase1A"
+/
+"day039_phase1A_F_charge_model_closure"
+/
+"QM_F06_UPPER_V7A_R1_PHASE1A_F_ADOPTED_WORKING_CHARGES.csv"
+)
+
 RUN = (
 ROOT
 /"runs"
@@ -43,6 +54,20 @@ def utc():
         .replace("+00:00","Z")
     )
 
+adopted_charge={}
+
+with open(ADOPTED) as f:
+
+    reader=csv.DictReader(f)
+
+    for row in reader:
+
+        adopted_charge[
+            row["atom_id"]
+        ]=float(
+            row["adopted_working_charge_e"]
+        )
+
 atoms=[]
 
 with open(INPUT) as f:
@@ -59,7 +84,7 @@ with open(INPUT) as f:
 
         atom["forcefield_type"]=row["proposed_forcefield_type"]
 
-        atom["RESP_charge_e"]=float(row["RESP_stage1_charge_e"])
+        atom["RESP_charge_e"]=adopted_charge[row["atom_id"]]
 
         atom["role"]=row["atom_role"]
 

@@ -5,6 +5,8 @@ from __future__ import annotations
 import pathlib
 import json
 import collections
+
+HARMONIC_K_KJMOL_TO_LAMMPS_REAL = 1.0 / (2.0 * 4.184)
 import datetime
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
@@ -71,11 +73,19 @@ for bond in system["bonds"]:
 
     key=frozenset((t1,t2))
 
-    ff,r0,k=bond_ff[key]
+    ff,r0,k_source=bond_ff[key]
 
     bond["parameter_type"]=ff
     bond["r0_A"]=r0
-    bond["k_kJmol_A2"]=k
+
+    # Canonical literature value before engine-specific conversion.
+    bond["k_source_kJmol_A2"]=k_source
+
+    # LAMMPS harmonic uses E = K(r-r0)^2, i.e. the conventional
+    # 1/2 factor is already included in K.  units real => kcal/mol.
+    bond["k_lammps_real_kcalmol_A2"] = (
+        k_source * HARMONIC_K_KJMOL_TO_LAMMPS_REAL
+    )
 
     hist[ff]+=1
 

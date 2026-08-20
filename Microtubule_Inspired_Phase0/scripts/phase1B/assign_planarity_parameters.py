@@ -5,6 +5,8 @@ from __future__ import annotations
 import pathlib
 import json
 import collections
+
+HARMONIC_K_KJMOL_TO_LAMMPS_REAL = 1.0 / (2.0 * 4.184)
 import datetime
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
@@ -53,13 +55,19 @@ for imp in system["impropers"]:
 
         imp["parameter_type"] = "B_PLANAR"
         imp["theta0_deg"] = 0.0
-        imp["k_kJmol"] = 258.0
+        imp["k_source_kJmol"] = 258.0
+        imp["k_lammps_real_kcalmol"] = (
+            258.0 * HARMONIC_K_KJMOL_TO_LAMMPS_REAL
+        )
 
     elif ctype == "N":
 
         imp["parameter_type"] = "N_PLANAR"
         imp["theta0_deg"] = 0.0
-        imp["k_kJmol"] = 657.5
+        imp["k_source_kJmol"] = 657.5
+        imp["k_lammps_real_kcalmol"] = (
+            657.5 * HARMONIC_K_KJMOL_TO_LAMMPS_REAL
+        )
 
     improper_hist[imp["parameter_type"]] += 1
 

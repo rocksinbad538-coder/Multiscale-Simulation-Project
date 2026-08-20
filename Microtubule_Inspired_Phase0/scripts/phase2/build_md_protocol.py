@@ -29,9 +29,15 @@ protocol = {
 
     "atom_style": "full",
 
-    "pair_style": "lj/cut",
+    "pair_style": "lj/cut/coul/long",
 
     "pair_cutoff_A": 12.0,
+
+    "kspace_style": "pppm",
+
+    "kspace_accuracy": 1.0e-5,
+
+    "pair_mixing_rule": "geometric",
 
     "bond_style": "harmonic",
 
@@ -69,7 +75,17 @@ protocol = {
 
     "dump_every": 100,
 
-    "restart_every": 1000
+    "restart_every": 1000,
+
+    "heating_ps": 50.0,
+
+    "equilibration_ps": 250.0,
+
+    "production_ns": 1.0,
+
+    "temperature_initial_K": 10.0,
+
+    "temperature_final_K": 300.0
 
 }
 

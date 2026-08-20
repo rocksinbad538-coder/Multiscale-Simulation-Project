@@ -145,25 +145,44 @@ def write_pair_coeffs(fp):
 
 def write_bond_coeffs(fp):
 
-    coeff = {
+    coeff = {}
 
-        1:(2488.80,1.32),
+    for bond in model["system"]["bonds"]:
 
-        2:(2112.85,1.20),
+        name = bond["parameter_type"]
 
-        3:(4315.23,1.02)
+        value = (
+            float(bond["k_lammps_real_kcalmol_A2"]),
+            float(bond["r0_A"]),
+        )
 
-    }
+        if name in coeff and coeff[name] != value:
+            raise RuntimeError(
+                f"Inconsistent bond parameters for {name}: "
+                f"{coeff[name]} vs {value}"
+            )
+
+        coeff[name] = value
+
+    reverse = {v:k for k,v in tables["bonds"].items()}
+
+    if set(coeff) != set(reverse.values()):
+        raise RuntimeError(
+            "Bond coefficient/type-table mismatch: "
+            f"coeff={sorted(coeff)} "
+            f"table={sorted(reverse.values())}"
+        )
 
     writeln("Bond Coeffs", fp)
     writeln("", fp)
 
-    for idx in sorted(coeff):
+    for idx in sorted(reverse):
 
-        k,r = coeff[idx]
+        name = reverse[idx]
+        k,r = coeff[name]
 
         writeln(
-            f"{idx:3d} {k:10.2f} {r:8.3f}",
+            f"{idx:3d} {k:12.6f} {r:10.6f} # {name}",
             fp
         )
 
@@ -172,27 +191,44 @@ def write_bond_coeffs(fp):
 
 def write_angle_coeffs(fp):
 
-    coeff = {
+    coeff = {}
 
-        1:(588.70,120.0),
+    for angle in model["system"]["angles"]:
 
-        2:(230.90,120.0),
+        name = angle["parameter_type"]
 
-        3:(197.25,119.0),
+        value = (
+            float(angle["k_lammps_real_kcalmol_rad2"]),
+            float(angle["theta0_deg"]),
+        )
 
-        4:(250.89,119.9)
+        if name in coeff and coeff[name] != value:
+            raise RuntimeError(
+                f"Inconsistent angle parameters for {name}: "
+                f"{coeff[name]} vs {value}"
+            )
 
-    }
+        coeff[name] = value
+
+    reverse = {v:k for k,v in tables["angles"].items()}
+
+    if set(coeff) != set(reverse.values()):
+        raise RuntimeError(
+            "Angle coefficient/type-table mismatch: "
+            f"coeff={sorted(coeff)} "
+            f"table={sorted(reverse.values())}"
+        )
 
     writeln("Angle Coeffs", fp)
     writeln("", fp)
 
-    for idx in sorted(coeff):
+    for idx in sorted(reverse):
 
-        k,t = coeff[idx]
+        name = reverse[idx]
+        k,theta = coeff[name]
 
         writeln(
-            f"{idx:3d} {k:10.2f} {t:8.3f}",
+            f"{idx:3d} {k:12.6f} {theta:10.6f} # {name}",
             fp
         )
 
@@ -201,27 +237,49 @@ def write_angle_coeffs(fp):
 
 def write_improper_coeffs(fp):
 
-    coeff = {
+    coeff = {}
 
-        1:(258.0,0.0),
+    for imp in model["system"]["impropers"]:
 
-        2:(657.5,0.0)
+        name = imp["parameter_type"]
 
-    }
+        value = (
+            float(imp["k_lammps_real_kcalmol"]),
+            float(imp["theta0_deg"]),
+        )
+
+        if name in coeff and coeff[name] != value:
+            raise RuntimeError(
+                f"Inconsistent improper parameters for {name}: "
+                f"{coeff[name]} vs {value}"
+            )
+
+        coeff[name] = value
+
+    reverse = {v:k for k,v in tables["impropers"].items()}
+
+    if set(coeff) != set(reverse.values()):
+        raise RuntimeError(
+            "Improper coefficient/type-table mismatch: "
+            f"coeff={sorted(coeff)} "
+            f"table={sorted(reverse.values())}"
+        )
 
     writeln("Improper Coeffs", fp)
     writeln("", fp)
 
-    for idx in sorted(coeff):
+    for idx in sorted(reverse):
 
-        k,t = coeff[idx]
+        name = reverse[idx]
+        k,theta = coeff[name]
 
         writeln(
-            f"{idx:3d} {k:10.2f} {t:8.3f}",
+            f"{idx:3d} {k:12.6f} {theta:10.6f} # {name}",
             fp
         )
 
     writeln("", fp)
+
 
 
 def write_dihedral_coeffs(fp):

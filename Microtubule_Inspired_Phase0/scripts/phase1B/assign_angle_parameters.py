@@ -5,6 +5,8 @@ from __future__ import annotations
 import pathlib
 import json
 import collections
+
+HARMONIC_K_KJMOL_TO_LAMMPS_REAL = 1.0 / (2.0 * 4.184)
 import datetime
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
@@ -89,13 +91,20 @@ for a in system["angles"]:
 
     ff=angle_lookup[key]
 
-    theta,k=parameters[ff]
+    theta,k_source=parameters[ff]
 
     aa=dict(a)
 
     aa["parameter_type"]=ff
     aa["theta0_deg"]=theta
-    aa["k_kJmol_rad2"]=k
+
+    # Canonical literature value before engine-specific conversion.
+    aa["k_source_kJmol_rad2"]=k_source
+
+    # LAMMPS harmonic uses E = K(theta-theta0)^2 and units real.
+    aa["k_lammps_real_kcalmol_rad2"] = (
+        k_source * HARMONIC_K_KJMOL_TO_LAMMPS_REAL
+    )
 
     hist[ff]+=1
 

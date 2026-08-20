@@ -1,0 +1,109 @@
+==========================================================================================
+PHASE5 MD CORRECTION — FINAL VALIDATION CHECKPOINT
+==========================================================================================
+
+STATUS
+------
+PHASE5_MD_CORRECTION_VALIDATED
+
+FINAL AUDIT
+-----------
+20/20 checks PASS
+AUDIT_STATUS=0
+
+SYSTEM
+------
+Atoms:       37
+Bonds:       42
+Angles:      64
+Impropers:   17
+Dihedrals:   97
+
+RESP total charge before LAMMPS serialization:
+-1.316855749301e-16 e
+
+LAMMPS serialized total charge:
+-2.999999987666e-08 e
+
+FORCE FIELD
+-----------
+Reference:
+Rajan et al., J. Phys. Chem. Lett. 2018, 9, 1584-1591
+and accompanying published force-field / LAMMPS files.
+
+Bonded coefficients were corrected to the LAMMPS harmonic convention
+used by the reference implementation.
+
+Validated representative coefficients:
+
+B-N bond:
+297.418738 kcal mol^-1 A^-2
+
+B-HB bond:
+252.491635 kcal mol^-1 A^-2
+
+B-N-B angle:
+70.351338 kcal mol^-1 rad^-2
+
+N-B-N angle:
+27.593212 kcal mol^-1 rad^-2
+
+N-B-HB angle:
+29.982075 kcal mol^-1 rad^-2
+
+B_PLANAR improper:
+30.831740 kcal mol^-1
+
+N_PLANAR improper:
+78.573136 kcal mol^-1
+
+NONBONDED HAMILTONIAN
+---------------------
+pair_style       lj/cut/coul/long 12.0
+pair_modify      mix geometric
+kspace_style     pppm 1e-05
+special_bonds    lj/coul 0.0 0.0 0.0
+
+LAMMPS VALIDATION
+-----------------
+LAMMPS version:
+10 Dec 2025
+
+PPPM initialized successfully.
+
+Generated mixed pair coefficients:
+geometric mixing rule
+
+Dangerous neighbor builds:
+0
+
+Minimization completed successfully.
+
+Initial potential energy:
+715.570289081108 kcal/mol
+
+Final potential energy:
+219.343279299182 kcal/mol
+
+Initial force two-norm:
+787.19432
+
+Final force two-norm:
+0.42587663
+
+Iterations:
+754
+
+Force evaluations:
+1536
+
+LAMMPS execution status:
+0
+
+FINAL DECISION
+--------------
+The corrected Phase5 MD Hamiltonian and force-field serialization
+are operational and internally validated.
+
+PHASE5_MD_CORRECTION_VALIDATED
+==========================================================================================

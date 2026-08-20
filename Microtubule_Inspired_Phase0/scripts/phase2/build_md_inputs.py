@@ -63,12 +63,16 @@ boundary p p p
 
 pair_style {cfg["pair_style"]} {cfg["pair_cutoff_A"]}
 
+pair_modify mix {cfg["pair_mixing_rule"]}
+
+kspace_style {cfg["kspace_style"]} {cfg["kspace_accuracy"]}
+
 bond_style {cfg["bond_style"]}
 angle_style {cfg["angle_style"]}
 dihedral_style {cfg["dihedral_style"]} nocoeff
 improper_style {cfg["improper_style"]}
 
-special_bonds lj/coul 0.0 0.0 0.5
+special_bonds lj/coul 0.0 0.0 0.0
 
 read_data {datafile}
 
