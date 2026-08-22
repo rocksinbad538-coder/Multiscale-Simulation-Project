@@ -28,8 +28,11 @@ STAGES = [
     "in.production",
 ]
 
+# Only physical temperature directories are campaign targets.
+# This prevents audit/, analysis/, or other downstream directories
+# from being interpreted as MD jobs.
 temperatures = sorted(
-    d for d in CAMPAIGN.iterdir()
+    d for d in CAMPAIGN.glob("*K")
     if d.is_dir()
 )
 

@@ -68,42 +68,100 @@ def running_std(x):
 
 def autocorrelation(x, max_lag=None):
     """
-    Normalized autocorrelation function.
+    Normalized autocorrelation function computed by FFT.
+
+    The estimator preserves the previous unbiased-lag covariance
+    convention:
+
+        C(k) =
+            sum_i (x_i-mean)(x_{i+k}-mean) / (N-k)
+
+        rho(k) = C(k) / C(0)
+
+    Computational complexity is O(N log N), rather than O(N^2).
 
     Returns rho(k) for k = 0 ... max_lag.
     """
-    x = np.asarray(x, dtype=float)
+
+    x = np.asarray(
+        x,
+        dtype=float,
+    )
 
     if x.ndim != 1:
-        raise ValueError("autocorrelation expects a 1D array")
+        raise ValueError(
+            "autocorrelation expects a 1D array"
+        )
 
     n = len(x)
 
     if n < 2:
-        raise ValueError("At least two samples are required")
+        raise ValueError(
+            "At least two samples are required"
+        )
 
     x = x - np.mean(x)
 
-    variance = np.dot(x, x) / n
+    variance = (
+        np.dot(x, x) / n
+    )
+
+    if not np.isfinite(variance):
+        raise ValueError(
+            "Non-finite variance."
+        )
 
     if variance <= 0.0:
-        return np.ones(1, dtype=float)
+        return np.ones(
+            1,
+            dtype=float,
+        )
 
     if max_lag is None:
-        max_lag = min(n - 1, n // 2)
+        max_lag = min(
+            n - 1,
+            n // 2,
+        )
 
-    max_lag = int(min(max_lag, n - 1))
+    max_lag = int(
+        min(
+            max_lag,
+            n - 1,
+        )
+    )
 
-    rho = np.empty(max_lag + 1, dtype=float)
+    # Zero padding to at least 2N prevents circular
+    # convolution from contaminating positive lags.
+    nfft = 1 << (
+        (2 * n - 1).bit_length()
+    )
+
+    spectrum = np.fft.rfft(
+        x,
+        n=nfft,
+    )
+
+    raw = np.fft.irfft(
+        spectrum * np.conjugate(spectrum),
+        n=nfft,
+    )[:max_lag + 1]
+
+    denominators = (
+        n
+        - np.arange(
+            max_lag + 1,
+            dtype=float,
+        )
+    )
+
+    covariance = (
+        raw / denominators
+    )
+
+    rho = covariance / variance
+
+    # Enforce exact normalization at lag zero.
     rho[0] = 1.0
-
-    for lag in range(1, max_lag + 1):
-        covariance = np.dot(
-            x[:-lag],
-            x[lag:]
-        ) / (n - lag)
-
-        rho[lag] = covariance / variance
 
     return rho
 
