@@ -1,0 +1,79 @@
+====================================================================================================================================================
+PHASE5-F43A — CONFINED-WATER RESIDENCE AND TRANSLATIONAL DIFFUSION
+DELIVERABLE_TARGET=M2.4_RESIDENCE + M2.5_DIFFUSION
+SOURCE=EXISTING_ACCEPTED_MOBILE_MD_TRAJECTORY
+====================================================================================================================================================
+
+[1] INPUT DISCOVERY
+------------------------------------------------------------------------------------------------------------------------
+TPR=FOUND path=Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/08_nvt_mobile_100ps.tpr
+XTC=FOUND path=Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/08_nvt_mobile_100ps.xtc
+NDX=FOUND path=Microtubule_Inspired_Phase0/runs/phase1A/day020_confined_water_axial_radial_density/confined_water_analysis_groups.ndx
+PROFILE_BOUNDARIES=FOUND path=Microtubule_Inspired_Phase0/runs/phase1A/day020_confined_water_axial_radial_density/profile_guided_classification/profile_guided_boundaries.csv
+
+[2] INDEX-GROUP AUDIT
+------------------------------------------------------------------------------------------------------------------------
+GROUP=AxisMinus N=180
+GROUP=AxisPlus N=180
+GROUP=Water_O N=16634
+GROUP=HBN N=1680
+GROUP=PYR_all N=104
+GROUP=PYR_1 N=26
+GROUP=PYR_2 N=26
+GROUP=PYR_3 N=26
+GROUP=PYR_4 N=26
+GROUP=Water_H N=33268
+GROUP=Water_M N=16634
+SELECTED_HBN_GROUP=HBN
+HBN_ATOMS=1680
+
+[3] TRAJECTORY AUDIT
+------------------------------------------------------------------------------------------------------------------------
+N_ATOMS=68320
+N_FRAMES=201
+SELECTED_WATER_O_GROUP=Water_O
+WATER_OXYGENS=16634
+
+[4] CONFINED-REGION CONTRACT
+------------------------------------------------------------------------------------------------------------------------
+BOUNDARY_ROWS=2
+BOUNDARY_ROW={'boundary_type': 'radial', 'recovery_fraction': '0.5', 'minimum_radius_nm': '1.17462', 'minimum_density_nm^-3': '22.9167675224327', 'inner_plateau_density_nm^-3': '32.60140139242769', 'outer_plateau_density_nm^-3': '32.60061837269627', 'inner_target_density_nm^-3': '27.759084457430195', 'outer_target_density_nm^-3': '27.758692947564484', 'inner_boundary_nm': '0.9233449823072346', 'outer_boundary_nm': '1.453565072237276', 'interfacial_width_nm': '0.5302200899300413', 'HBN_mean_radius_nm': '1.1991257007481553', 'HBN_p05_radius_nm': '1.1986694938787432', 'HBN_p95_radius_nm': '1.1996007206103714', 'inner_fraction': '', 'outer_fraction': '', 'central_density_nm^-3': '', 'left_outside_density_nm^-3': '', 'right_outside_density_nm^-3': '', 'left_inner_target_nm^-3': '', 'left_outer_target_nm^-3': '', 'right_inner_target_nm^-3': '', 'right_outer_target_nm^-3': '', 'left_outer_boundary_nm': '', 'left_inner_boundary_nm': '', 'right_inner_boundary_nm': '', 'right_outer_boundary_nm': '', 'left_transition_width_nm': '', 'right_transition_width_nm': '', 'HBN_lower_boundary_nm': '', 'HBN_upper_boundary_nm': ''}
+BOUNDARY_ROW={'boundary_type': 'axial', 'recovery_fraction': '', 'minimum_radius_nm': '', 'minimum_density_nm^-3': '', 'inner_plateau_density_nm^-3': '', 'outer_plateau_density_nm^-3': '', 'inner_target_density_nm^-3': '', 'outer_target_density_nm^-3': '', 'inner_boundary_nm': '', 'outer_boundary_nm': '', 'interfacial_width_nm': '', 'HBN_mean_radius_nm': '', 'HBN_p05_radius_nm': '', 'HBN_p95_radius_nm': '', 'inner_fraction': '0.8', 'outer_fraction': '0.2', 'central_density_nm^-3': '32.81725719892076', 'left_outside_density_nm^-3': '12.810847380041555', 'right_outside_density_nm^-3': '16.84346928163567', 'left_inner_target_nm^-3': '28.81597523514492', 'left_outer_target_nm^-3': '16.812129343817396', 'right_inner_target_nm^-3': '29.622499615463738', 'right_outer_target_nm^-3': '20.03822686509269', 'left_outer_boundary_nm': '-3.1120073587854518', 'left_inner_boundary_nm': '-2.1984788595550815', 'right_inner_boundary_nm': '2.5193177766311203', 'right_outer_boundary_nm': '3.3741222799447073', 'left_transition_width_nm': '0.9135284992303703', 'right_transition_width_nm': '0.8548045033135869', 'HBN_lower_boundary_nm': '-3.04521428571429', 'HBN_upper_boundary_nm': '3.045785714285711'}
+RADIAL_BOUNDARY_CANDIDATES=
+RADIAL_BOUNDARY_SOURCE=DOCUMENTED_DAY020_DEPLETION_MINIMUM_FALLBACK
+R_CUT_NM=1.174620000
+AXIS_REFERENCE=(+0.06170259,+0.08238295,+0.99468882)
+REFERENCE_CENTER_A=(36.360395,36.099145,52.621520)
+Z_MIN_NM=-3.048957869
+Z_MAX_NM=3.053406701
+Z_SPAN_NM=6.102364569
+CONFINED_REGION=CORE_LUMEN: r<=profile_guided_radial_wall_boundary AND HBN_reference_zmin<=z<=HBN_reference_zmax
+
+[5] FIRST PASS — CONFINED-WATER OCCUPANCY
+------------------------------------------------------------------------------------------------------------------------
+FRAME=0/200 TIME_PS=0.000000 N_CONFINED=1
+FRAME=20/200 TIME_PS=10.000000 N_CONFINED=0
+FRAME=40/200 TIME_PS=20.000000 N_CONFINED=1
+FRAME=60/200 TIME_PS=30.000000 N_CONFINED=1
+FRAME=80/200 TIME_PS=40.000000 N_CONFINED=2
+FRAME=100/200 TIME_PS=50.000000 N_CONFINED=3
+FRAME=120/200 TIME_PS=60.000000 N_CONFINED=2
+FRAME=140/200 TIME_PS=70.000000 N_CONFINED=4
+FRAME=160/200 TIME_PS=80.000000 N_CONFINED=4
+FRAME=180/200 TIME_PS=90.000000 N_CONFINED=0
+FRAME=200/200 TIME_PS=100.000000 N_CONFINED=0
+FRAME_DT_PS=0.500000000
+MEAN_CONFINED_WATERS=2.552239
+MIN_CONFINED_WATERS=0
+MAX_CONFINED_WATERS=14
+WATERS_EVER_IN_CORE_LUMEN=83/16634
+
+[6] RESIDENCE CORRELATION
+------------------------------------------------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase2/campaign_phase5_corrected/project_closure_control/f43a_confined_water_transport/run_F43A_confined_water_transport.py", line 556, in <module>
+    np.trapz(
+    ^^^^^^^^
+  File "/Users/alejandro/miniforge3/envs/mt_phase0/lib/python3.12/site-packages/numpy/__init__.py", line 792, in __getattr__
+    raise AttributeError(f"module {__name__!r} has no attribute {attr!r}")
+AttributeError: module 'numpy' has no attribute 'trapz'. Did you mean: 'trace'?

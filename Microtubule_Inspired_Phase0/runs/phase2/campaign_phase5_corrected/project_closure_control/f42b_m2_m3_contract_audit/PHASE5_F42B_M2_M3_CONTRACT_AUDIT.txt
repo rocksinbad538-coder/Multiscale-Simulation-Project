@@ -1,0 +1,17 @@
+PHASE5-F42B — M2/M3 SCIENTIFIC CONTRACT AUDIT
+================================================================================
+
+M2.3_water_density: COMPLETE_CANDIDATE
+M2.4_residence_time: COMPLETE_CANDIDATE
+M2.5_water_diffusion: COMPLETE_CANDIDATE
+M2.6_hydrogen_bonds: COMPLETE_CANDIDATE
+M3.1_dipole_orientation: COMPLETE_CANDIDATE
+M3.2_dipole_autocorrelation: COMPLETE_CANDIDATE
+M3.3_relaxation: COMPLETE_CANDIDATE
+M3.4_spectral_density: PARTIAL_PROXY_ONLY
+M3.5_dielectric_response: COMPLETE_CANDIDATE
+
+MISSING:
+
+PARTIAL:
+- M3.4_spectral_density

@@ -1,0 +1,135 @@
+========================================================================================================================================================
+PHASE5-F43A5 — VALIDATED CONFINED-WATER RESIDENCE / MSD / DIFFUSION
+DELIVERABLE_TARGET=M2.4_RESIDENCE + M2.5_DIFFUSION
+COORDINATE_CONTRACT=VALIDATED_F43A4_DENSMAP_AXIS_PBC
+========================================================================================================================================================
+
+[1] INPUT AUDIT
+------------------------------------------------------------------------------------------------------------------------
+TPR=FOUND path=Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/08_nvt_mobile_100ps.tpr
+XTC=FOUND path=Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/08_nvt_mobile_100ps.xtc
+NDX=FOUND path=Microtubule_Inspired_Phase0/runs/phase1A/day020_confined_water_axial_radial_density/confined_water_analysis_groups.ndx
+BOUNDARIES=FOUND path=Microtubule_Inspired_Phase0/runs/phase1A/day020_confined_water_axial_radial_density/profile_guided_classification/profile_guided_boundaries.csv
+GROUP=AxisMinus N=180
+GROUP=AxisPlus N=180
+GROUP=HBN N=1680
+GROUP=Water_O N=16634
+
+[2] PROFILE-GUIDED REGION CONTRACT
+------------------------------------------------------------------------------------------------------------------------
+PRIMARY_R_MAX_NM=0.923344982
+PRIMARY_Z_MIN_NM=-2.198478860
+PRIMARY_Z_MAX_NM=2.519317777
+
+PRIMARY_REGION=PROFILE_GUIDED_LUMEN_CORE
+SECONDARY_SENSITIVITY_REGION=RADIAL_DEPLETION_MINIMUM_OVER_HBN_SPAN
+
+[3] TRAJECTORY
+------------------------------------------------------------------------------------------------------------------------
+N_FRAMES=201
+N_WATER_O=16634
+
+[4] REFERENCE FRAME
+------------------------------------------------------------------------------------------------------------------------
+CENTER0_A=(36.365286,36.137477,2.619207)
+AXIS0=(+0.074392721,+0.099064611,-0.992296289)
+AXIS_LENGTH0_NM=4.591245282
+
+[5] OCCUPANCY PASS
+------------------------------------------------------------------------------------------------------------------------
+FRAME=  0 T=   0.000ps Ncore= 335 Nsensitivity= 525
+FRAME= 20 T=  10.000ps Ncore= 318 Nsensitivity= 503
+FRAME= 40 T=  20.000ps Ncore= 320 Nsensitivity= 524
+FRAME= 60 T=  30.000ps Ncore= 336 Nsensitivity= 537
+FRAME= 80 T=  40.000ps Ncore= 328 Nsensitivity= 531
+FRAME=100 T=  50.000ps Ncore= 336 Nsensitivity= 524
+FRAME=120 T=  60.000ps Ncore= 335 Nsensitivity= 527
+FRAME=140 T=  70.000ps Ncore= 342 Nsensitivity= 539
+FRAME=160 T=  80.000ps Ncore= 332 Nsensitivity= 539
+FRAME=180 T=  90.000ps Ncore= 331 Nsensitivity= 529
+FRAME=200 T= 100.000ps Ncore= 298 Nsensitivity= 488
+
+FRAME_DT_PS=0.500000000
+PRIMARY_MEAN_OCCUPANCY=329.482587
+PRIMARY_SD_OCCUPANCY=10.396199
+PRIMARY_MIN_OCCUPANCY=296
+PRIMARY_MAX_OCCUPANCY=356
+SENSITIVITY_MEAN_OCCUPANCY=525.940299
+F43A4_OCCUPANCY_REGRESSION=PASS
+
+[6] RESIDENCE CORRELATION
+------------------------------------------------------------------------------------------------------------------------
+C_RES_INTEGRAL_0_50.0PS=35.682945796 ps
+S_CONT_INTEGRAL_0_50.0PS=25.674991672 ps
+C_RES_1E_PS=NOT_REACHED
+S_CONT_1E_PS=39.000000000
+C_RES_50PS=0.582080977
+S_CONT_50PS=0.304103293
+
+[7] CONTINUOUS RESIDENCE EVENTS
+------------------------------------------------------------------------------------------------------------------------
+CONTINUOUS_EVENTS=4056
+EVENT_MEAN_PS=8.163954635
+EVENT_MEDIAN_PS=1.500000000
+EVENT_P95_PS=47.125000000
+EVENT_MAX_PS=100.500000000
+
+[8] BODY-FRAME COORDINATE PASS
+------------------------------------------------------------------------------------------------------------------------
+WATERS_EVER_IN_PRIMARY_CORE=790/16634
+FRAME=  0 HBN_ALIGNMENT_RMS_A=0.000000
+FRAME= 40 HBN_ALIGNMENT_RMS_A=9.467846
+FRAME= 80 HBN_ALIGNMENT_RMS_A=9.471659
+FRAME=120 HBN_ALIGNMENT_RMS_A=11.210190
+FRAME=160 HBN_ALIGNMENT_RMS_A=10.063245
+FRAME=200 HBN_ALIGNMENT_RMS_A=4.941822
+
+[9] CONTINUOUS-CONFINEMENT MSD
+------------------------------------------------------------------------------------------------------------------------
+MSD_VALID_LAGS=100/100
+MSD_MAX_VALID_LAG_PS=50.000000
+MSD_MAX_VALID_LAG_SAMPLES=10057
+
+[10] DIFFUSIVE-REGIME SCAN
+------------------------------------------------------------------------------------------------------------------------
+WINDOW=5.500-15.000ps N=20 D3=2.254387e-09 R2_3D=0.99989 Dz=2.166429e-09 R2z=0.99945 Dperp=2.298366e-09 R2perp=0.99990
+WINDOW=10.500-20.000ps N=20 D3=2.117627e-09 R2_3D=0.99964 Dz=2.138502e-09 R2z=0.99951 Dperp=2.107189e-09 R2perp=0.99864
+WINDOW=13.000-25.000ps N=25 D3=1.989708e-09 R2_3D=0.99925 Dz=2.142297e-09 R2z=0.99963 Dperp=1.913413e-09 R2perp=0.99862
+WINDOW=17.000-33.000ps N=33 D3=1.871048e-09 R2_3D=0.99940 Dz=2.135261e-09 R2z=0.99967 Dperp=1.738942e-09 R2perp=0.99894
+WINDOW=25.500-40.000ps N=30 D3=1.689573e-09 R2_3D=0.99925 Dz=1.972364e-09 R2z=0.99910 Dperp=1.548177e-09 R2perp=0.99912
+
+DIFFUSION_WINDOW_SELECTED=5.500-15.000 ps
+D_3D_M2_S=2.254386862e-09
+D_PARALLEL_M2_S=2.166429192e-09
+D_PERP_M2_S=2.298365657e-09
+DIFFUSION_STATUS=LINEAR_REGIME_DETECTED
+
+[11] REGION-SENSITIVITY SUMMARY
+------------------------------------------------------------------------------------------------------------------------
+PROFILE_CORE_MEAN=329.482587
+DEPLETION_MINIMUM_HBN_SPAN_MEAN=525.940299
+POPULATION_RATIO_SENSITIVITY_TO_PRIMARY=1.596261
+
+[12] OUTPUT
+------------------------------------------------------------------------------------------------------------------------
+WROTE=Microtubule_Inspired_Phase0/runs/phase2/campaign_phase5_corrected/project_closure_control/f43a5_confined_transport/M2_4_CONFINED_WATER_RESIDENCE.csv
+WROTE=Microtubule_Inspired_Phase0/runs/phase2/campaign_phase5_corrected/project_closure_control/f43a5_confined_transport/M2_4_CONTINUOUS_RESIDENCE_EVENTS.csv
+WROTE=Microtubule_Inspired_Phase0/runs/phase2/campaign_phase5_corrected/project_closure_control/f43a5_confined_transport/M2_5_CONFINED_WATER_MSD.csv
+WROTE=Microtubule_Inspired_Phase0/runs/phase2/campaign_phase5_corrected/project_closure_control/f43a5_confined_transport/M2_5_DIFFUSION_WINDOW_SCAN.csv
+WROTE=Microtubule_Inspired_Phase0/runs/phase2/campaign_phase5_corrected/project_closure_control/f43a5_confined_transport/PHASE5_F43A5_CONFINED_WATER_TRANSPORT.json
+
+[13] FINAL SCIENTIFIC GATE
+------------------------------------------------------------------------------------------------------------------------
+M2_4_RESIDENCE_CORRELATION=COMPUTED
+M2_4_RESIDENCE_STATUS=FINITE_WINDOW_ONLY
+M2_5_DIFFUSION_STATUS=LINEAR_REGIME_CANDIDATE_IDENTIFIED
+M2_6_HYDROGEN_BONDS=PENDING_F43B
+NEW_MD_SIMULATIONS=0
+SOURCE_FILES_MODIFIED=NO
+F43A5_STATUS=0
+NEXT_ACTION=SCIENTIFIC_INTERPRETATION_AND_F43B_HBOND_GATE
+
+========================================================================================================================================================
+PHASE5-F43A5 COMPLETE
+TERMINAL_REMAINS_OPEN=YES
+========================================================================================================================================================

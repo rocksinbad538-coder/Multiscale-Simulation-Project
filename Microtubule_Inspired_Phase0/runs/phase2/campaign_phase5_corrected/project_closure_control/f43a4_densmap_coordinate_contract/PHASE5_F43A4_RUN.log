@@ -1,0 +1,145 @@
+====================================================================================================================================================
+PHASE5-F43A4 — EXACT DENSMAP AXIS / PBC COORDINATE-CONTRACT VALIDATION
+PURPOSE=REPRODUCE_DAY020_GEOMETRY_BEFORE_RESIDENCE_OR_DIFFUSION
+====================================================================================================================================================
+
+[1] INPUT AUDIT
+------------------------------------------------------------------------------------------------------------------------
+GROUP=AxisMinus N=180
+GROUP=AxisPlus N=180
+GROUP=Water_O N=16634
+GROUP=HBN N=1680
+FROZEN_TPR=Microtubule_Inspired_Phase0/runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.tpr
+FROZEN_XTC=Microtubule_Inspired_Phase0/runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.xtc
+MOBILE_TPR=Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/08_nvt_mobile_100ps.tpr
+MOBILE_XTC=Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/08_nvt_mobile_100ps.xtc
+
+[2A] DAY020 PROFILE-GUIDED REGION SUMMARY
+------------------------------------------------------------------------------------------------------------------------
+FILE=Microtubule_Inspired_Phase0/runs/phase1A/day020_confined_water_axial_radial_density/profile_guided_classification/profile_guided_region_summary.csv
+ROWS=4
+{'region': 'lumen_core', 'display_name': 'Lumen core', 'cell_count': '1692', 'volume_nm^3': '11.979215734728884', 'volume_fraction': '0.06527790991066079', 'average_water_count': '393.28934960419014', 'water_count_fraction': '0.07546178939809828', 'volume_weighted_density_nm^-3': '32.830976443975956', 'radial_recovery_fraction': '0.5', 'axial_inner_fraction': '0.8', 'axial_outer_fraction': '0.2'}
+{'region': 'interfacial_shell', 'display_name': 'Interfacial shell', 'cell_count': '1034', 'volume_nm^3': '19.114933079462542', 'volume_fraction': '0.10416231806327894', 'average_water_count': '488.9141710488449', 'water_count_fraction': '0.09380965502006225', 'volume_weighted_density_nm^-3': '25.577603071712755', 'radial_recovery_fraction': '0.5', 'axial_inner_fraction': '0.8', 'axial_outer_fraction': '0.2'}
+{'region': 'mouth_transitions', 'display_name': 'Mouth transitions', 'cell_count': '1015', 'volume_nm^3': '11.57754680520759', 'volume_fraction': '0.0630891098442935', 'average_water_count': '105.66614090953021', 'water_count_fraction': '0.02027452835895405', 'volume_weighted_density_nm^-3': '9.12681612843936', 'radial_recovery_fraction': '0.5', 'axial_inner_fraction': '0.8', 'axial_outer_fraction': '0.2'}
+{'region': 'exterior', 'display_name': 'Exterior', 'cell_count': '4899', 'volume_nm^3': '140.839322903155', 'volume_fraction': '0.7674706621817668', 'average_water_count': '4223.898476208383', 'water_count_fraction': '0.8104540272228855', 'volume_weighted_density_nm^-3': '29.990903031483985', 'radial_recovery_fraction': '0.5', 'axial_inner_fraction': '0.8', 'axial_outer_fraction': '0.2'}
+
+[2B] DAY020 OPERATIONAL REGION SUMMARY
+------------------------------------------------------------------------------------------------------------------------
+FILE=Microtubule_Inspired_Phase0/runs/phase1A/day020_confined_water_axial_radial_density/regional_classification/confined_water_region_summary.csv
+ROWS=4
+{'region': 'interior_core', 'display_name': 'Interior core', 'cell_count': '1900', 'volume_nm^3': '14.19912234292828', 'volume_fraction': '0.07737476723329924', 'average_water_count': '454.5967981245943', 'water_count_fraction': '0.0872250618422606', 'volume_weighted_density_nm^-3': '32.015837820497495', 'interface_half_width_nm': '0.25', 'mouth_half_width_nm': '0.5', 'tube_half_length_nm': '3.0090000000000003', 'wall_radius_nm': '1.1991257007481553'}
+{'region': 'interfacial_shell', 'display_name': 'Interfacial shell', 'cell_count': '1000', 'volume_nm^3': '18.879724263034632', 'volume_fraction': '0.10288060311056615', 'average_water_count': '448.01433077482824', 'water_count_fraction': '0.08596206103797284', 'volume_weighted_density_nm^-3': '23.729919173237793', 'interface_half_width_nm': '0.25', 'mouth_half_width_nm': '0.5', 'tube_half_length_nm': '3.0090000000000003', 'wall_radius_nm': '1.1991257007481553'}
+{'region': 'mouth_zones', 'display_name': 'Mouth zones', 'cell_count': '1160', 'volume_nm^3': '13.231472633212594', 'volume_fraction': '0.07210178843613366', 'average_water_count': '108.87009950460073', 'water_count_fraction': '0.020889282989316565', 'volume_weighted_density_nm^-3': '8.228116591597193', 'interface_half_width_nm': '0.25', 'mouth_half_width_nm': '0.5', 'tube_half_length_nm': '3.0090000000000003', 'wall_radius_nm': '1.1991257007481553'}
+{'region': 'exterior', 'display_name': 'Exterior', 'cell_count': '4580', 'volume_nm^3': '137.20069928337847', 'volume_fraction': '0.7476428412200008', 'average_water_count': '4200.286909366925', 'water_count_fraction': '0.8059235941304501', 'volume_weighted_density_nm^-3': '30.61418003921048', 'interface_half_width_nm': '0.25', 'mouth_half_width_nm': '0.5', 'tube_half_length_nm': '3.0090000000000003', 'wall_radius_nm': '1.1991257007481553'}
+
+[3] PROFILE-GUIDED BOUNDARY CONTRACT
+------------------------------------------------------------------------------------------------------------------------
+R_MIN_NM=1.174620000
+R_INNER_NM=0.923344982
+R_OUTER_NM=1.453565072
+Z_LEFT_OUTER_NM=-3.112007359
+Z_LEFT_INNER_NM=-2.198478860
+Z_RIGHT_INNER_NM=2.519317777
+Z_RIGHT_OUTER_NM=3.374122280
+Z_HBN_LOW_NM=-3.045214286
+Z_HBN_HIGH_NM=3.045785714
+
+[4] FROZEN — DAY020 RECONSTRUCTION
+========================================================================================================================
+
+[TRAJECTORY] FROZEN_DAY020_REFERENCE
+------------------------------------------------------------------------------------------------------------------------
+N_FRAMES=201
+
+FIRST_FRAME_DENSMAP_GEOMETRY
+CENTER_A=(36.973336,36.973336,0.094231)
+AXIS=(+0.000000001,-0.000000001,-1.000000000)
+AXIS_LENGTH_NM=4.579500115
+
+FIRST_FRAME_COUNTS
+PROFILE_INTERIOR_CORE=409
+INNER_RADIUS_HBN_SPAN=506
+MINIMUM_RADIUS_CENTRAL=586
+MINIMUM_RADIUS_HBN_SPAN=683
+PROFILE_INTERFACIAL_SHELL=456
+PROFILE_ANALYSIS_CYLINDER=990
+
+TIME_AVERAGED_COUNTS
+PROFILE_INTERIOR_CORE MEAN=414.293532 SD=9.666354 MIN=381 MAX=437
+INNER_RADIUS_HBN_SPAN MEAN=498.467662 SD=36.473281 MIN=382 MAX=536
+MINIMUM_RADIUS_CENTRAL MEAN=612.208955 SD=12.665943 MIN=574 MAX=641
+MINIMUM_RADIUS_HBN_SPAN MEAN=696.656716 SD=37.976922 MIN=574 MAX=744
+PROFILE_INTERFACIAL_SHELL MEAN=473.457711 SD=11.138198 MIN=447 MAX=511
+PROFILE_ANALYSIS_CYLINDER MEAN=993.796020 SD=46.156941 MIN=841 MAX=1042
+
+AXIS_STABILITY
+MEAN_AXIS=(+0.000000001,-0.000000001,-1.000000000)
+AXIS_LENGTH_MEAN_NM=4.579500115
+AXIS_LENGTH_SD_NM=0.000000000
+CENTER_MEAN_A=(36.973336,36.973336,0.094231)
+
+[5] MOBILE — SAME DENSMAP CONTRACT
+========================================================================================================================
+
+[TRAJECTORY] MOBILE_DAY021
+------------------------------------------------------------------------------------------------------------------------
+N_FRAMES=201
+
+FIRST_FRAME_DENSMAP_GEOMETRY
+CENTER_A=(36.365286,36.137477,2.619207)
+AXIS=(+0.074392721,+0.099064611,-0.992296289)
+AXIS_LENGTH_NM=4.591245282
+
+FIRST_FRAME_COUNTS
+PROFILE_INTERIOR_CORE=335
+INNER_RADIUS_HBN_SPAN=335
+MINIMUM_RADIUS_CENTRAL=525
+MINIMUM_RADIUS_HBN_SPAN=525
+PROFILE_INTERFACIAL_SHELL=454
+PROFILE_ANALYSIS_CYLINDER=802
+
+TIME_AVERAGED_COUNTS
+PROFILE_INTERIOR_CORE MEAN=329.482587 SD=10.396199 MIN=296 MAX=356
+INNER_RADIUS_HBN_SPAN MEAN=329.562189 SD=10.455494 MIN=296 MAX=357
+MINIMUM_RADIUS_CENTRAL MEAN=525.825871 SD=12.556454 MIN=488 MAX=558
+MINIMUM_RADIUS_HBN_SPAN MEAN=525.940299 SD=12.629189 MIN=488 MAX=558
+PROFILE_INTERFACIAL_SHELL MEAN=477.661692 SD=9.352271 MIN=454 MAX=506
+PROFILE_ANALYSIS_CYLINDER MEAN=817.975124 SD=14.493598 MIN=772 MAX=850
+
+AXIS_STABILITY
+MEAN_AXIS=(+0.104604577,+0.047164803,-0.992253544)
+AXIS_LENGTH_MEAN_NM=4.590167903
+AXIS_LENGTH_SD_NM=0.028486835
+CENTER_MEAN_A=(36.849840,36.068211,2.980687)
+
+[6] CROSS-TRAJECTORY COMPARISON
+------------------------------------------------------------------------------------------------------------------------
+PROFILE_INTERIOR_CORE FROZEN_MEAN=414.293532 MOBILE_MEAN=329.482587 DELTA=-84.810945
+INNER_RADIUS_HBN_SPAN FROZEN_MEAN=498.467662 MOBILE_MEAN=329.562189 DELTA=-168.905473
+MINIMUM_RADIUS_CENTRAL FROZEN_MEAN=612.208955 MOBILE_MEAN=525.825871 DELTA=-86.383085
+MINIMUM_RADIUS_HBN_SPAN FROZEN_MEAN=696.656716 MOBILE_MEAN=525.940299 DELTA=-170.716418
+PROFILE_INTERFACIAL_SHELL FROZEN_MEAN=473.457711 MOBILE_MEAN=477.661692 DELTA=+4.203980
+PROFILE_ANALYSIS_CYLINDER FROZEN_MEAN=993.796020 MOBILE_MEAN=817.975124 DELTA=-175.820896
+
+[7] COORDINATE-CONTRACT SANITY GATE
+------------------------------------------------------------------------------------------------------------------------
+FROZEN_PROFILE_CORE_MEAN=414.293532
+MOBILE_PROFILE_CORE_MEAN=329.482587
+DENSMAP_COORDINATE_CONTRACT=PLAUSIBLE_PASS
+
+WROTE=Microtubule_Inspired_Phase0/runs/phase2/campaign_phase5_corrected/project_closure_control/f43a4_densmap_coordinate_contract/PHASE5_F43A4_DENSMAP_COORDINATE_CONTRACT.json
+
+[9] FINAL DECISION
+------------------------------------------------------------------------------------------------------------------------
+F43A4_COORDINATE_CONTRACT=PASS
+OLD_PCA_SELECTOR=REJECTED
+F43A_RESIDENCE_DIFFUSION=AUTHORIZED_FOR_REIMPLEMENTATION_WITH_DENSMAP_CONTRACT
+NEXT_ACTION=F43A5_RESIDENCE_AND_MSD_WITH_VALIDATED_COORDINATES
+NEW_MD_SIMULATIONS=0
+SOURCE_FILES_MODIFIED=NO
+F43A4_STATUS=0
+
+====================================================================================================================================================
+PHASE5-F43A4 COMPLETE
+TERMINAL_REMAINS_OPEN=YES
+====================================================================================================================================================

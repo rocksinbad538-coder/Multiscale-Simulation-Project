@@ -1,0 +1,14 @@
+PHASE5-F42C — M2/M3 PHYSICAL-QUANTITY EVIDENCE ADJUDICATION
+========================================================================================
+
+M2.3_water_density: strong evidence complete
+M3.1_dipole_orientation: strong evidence complete
+M3.2_dipole_autocorrelation: strong evidence complete
+M3.4_spectral_density: partial proxy only
+
+REQUIRES PROVENANCE ADJUDICATION:
+- M2.4_residence_time
+- M2.5_water_diffusion
+- M2.6_water_hydrogen_bonds
+- M3.3_dipole_relaxation_time
+- M3.5_dielectric_response

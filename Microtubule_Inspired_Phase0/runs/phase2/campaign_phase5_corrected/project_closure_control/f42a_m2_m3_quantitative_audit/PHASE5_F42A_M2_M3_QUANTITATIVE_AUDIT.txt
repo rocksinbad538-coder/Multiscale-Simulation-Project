@@ -1,0 +1,12 @@
+PHASE5-F42A — M2/M3 QUANTITATIVE AUDIT
+================================================================================
+
+M2.3_water_density: QUANTITATIVE_FILES_FOUND
+M2.4_residence_time: NO_RESULT_FILE_FOUND
+M2.5_water_diffusion: QUANTITATIVE_FILES_FOUND
+M2.6_hydrogen_bonds: QUANTITATIVE_FILES_FOUND
+M3.1_dipole_orientation: QUANTITATIVE_FILES_FOUND
+M3.2_dipole_autocorrelation: QUANTITATIVE_FILES_FOUND
+M3.3_relaxation: QUANTITATIVE_FILES_FOUND
+M3.4_spectral_density: QUANTITATIVE_FILES_FOUND
+M3.5_dielectric_response: NO_RESULT_FILE_FOUND

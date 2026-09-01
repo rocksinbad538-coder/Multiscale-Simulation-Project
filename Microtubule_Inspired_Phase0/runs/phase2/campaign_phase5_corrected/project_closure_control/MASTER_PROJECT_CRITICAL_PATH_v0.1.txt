@@ -1,0 +1,25 @@
+MULTISCALE SIMULATION — PROJECT CLOSURE CONTROL
+================================================================================
+
+MILESTONE STATUS
+--------------------------------------------------------------------------------
+M1: CLOSEABLE
+M2: PARTIAL_ADVANCED
+M3: PARTIAL_REQUIRES_QUANTITATIVE_AUDIT
+M4: ACTIVE_PRODUCTION
+M5: WAITING_FOR_CORRECTED_M4
+M6: MAJOR_OPEN_GAP
+
+CRITICAL PATH
+--------------------------------------------------------------------------------
+01. F39: complete 15-structure corrected M6-TDA ensemble
+02. Finalize M4 master dataset (150 states)
+03. Character-track relevant electronic state families and quantify disorder
+04. Revalidate/recompute Jij with corrected electronic parameters
+05. Assemble final excitonic Hamiltonian
+06. Reparameterize and execute canonical M5 dynamics
+07. Close quantitative M2 confined-water gaps
+08. Close quantitative M3 dipolar/dielectric gaps
+09. Construct epsilon(omega) continuum parameterization
+10. Build/solve COMSOL THz/microwave model
+11. Freeze final figures/tables/scripts/data and write report
