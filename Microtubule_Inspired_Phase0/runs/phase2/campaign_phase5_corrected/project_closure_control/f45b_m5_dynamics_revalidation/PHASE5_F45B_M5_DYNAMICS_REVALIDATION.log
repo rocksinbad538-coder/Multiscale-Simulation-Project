@@ -1,0 +1,204 @@
+========================================================================================================================
+PHASE5-F45B — EXISTING M5 OPEN-SYSTEM DYNAMICS REVALIDATION
+PURPOSE=VERIFY_EXISTING_DYNAMICS_AGAINST_F45A_FROZEN_BRIGHT4_HAMILTONIAN
+========================================================================================================================
+
+[1] REUSABLE DYNAMICS SCRIPTS
+------------------------------------------------------------------------------------------------------------------------
+FOUND=Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py
+FOUND=Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_haken_strobl_dephasing_sensitivity.py
+FOUND=Microtubule_Inspired_Phase0/scripts/phase1A/run_day020_bright_haken_strobl_high_dephasing.py
+FOUND=Microtubule_Inspired_Phase0/scripts/phase1A/run_day020_bright_detailed_balance_relaxation_sensitivity.py
+
+[2] EXISTING DYNAMICS PRODUCT DISCOVERY
+------------------------------------------------------------------------------------------------------------------------
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/dephasing_crossover_summary.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/dephasing_population_trajectories.npz
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/ensemble_population_dephasing_statistics.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/frame_dephasing_metrics.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/HAKEN_STROBL_DEPHASING_SENSITIVITY_DAY019.md
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/initial_state_dephasing_summary.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_quasistatic_coherent_dynamics/BRIGHT_QUASISTATIC_COHERENT_DYNAMICS_DAY019.md
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_quasistatic_coherent_dynamics/diagonal_ensemble_populations.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_quasistatic_coherent_dynamics/ensemble_population_statistics.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_quasistatic_coherent_dynamics/frame_coherent_dynamics_metrics.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_quasistatic_coherent_dynamics/point_vs_tdcac_population_difference.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_quasistatic_coherent_dynamics/population_trajectories.npz
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/logs/run_day019_bright_haken_strobl_dephasing_sensitivity.log
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_nto_inputs/logs/run_day019_bright_quasistatic_coherent_dynamics.log
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/COMBINED_DEPHASING_RELAXATION_DAY020.md
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/combined_mechanism_figures/fig_day020_final_PYR5_vs_dephasing.pdf
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/combined_mechanism_figures/fig_day020_final_PYR5_vs_dephasing.png
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/combined_mechanism_figures/fig_day020_PYR4_gateway_vs_dephasing.pdf
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/combined_mechanism_figures/fig_day020_PYR4_gateway_vs_dephasing.png
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/combined_mechanism_figures/fig_day020_steady_PYR5_vs_dephasing.pdf
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/combined_mechanism_figures/fig_day020_steady_PYR5_vs_dephasing.png
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/combined_population_trajectories.npz
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_combined_dephasing_relaxation/run_day020_combined_dephasing_relaxation.log
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation/DETAILED_BALANCE_RELAXATION_DAY020.md
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation/ensemble_relaxation_trajectories.npz
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation/equilibrium_populations.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation/frame_relaxation_metrics.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation/relaxation_coarse_graining_audit/RELAXATION_COARSE_GRAINING_DAY020.md
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation/relaxation_coarse_graining_audit/run_day020_relaxation_coarse_graining.log
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation/relaxation_pathway_audit/PYR5_pathway_summary.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation/relaxation_pathway_audit/RELAXATION_PATHWAY_AUDIT_DAY020.md
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation/relaxation_pathway_audit/run_day020_relaxation_pathway_audit.log
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation/run_day020_detailed_balance_relaxation.log
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/dephasing_crossover_summary.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/dephasing_population_trajectories.npz
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/ensemble_population_dephasing_statistics.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/frame_dephasing_metrics.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/HAKEN_STROBL_HIGH_DEPHASING_DAY020.md
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/initial_state_dephasing_summary.csv
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/run_day020_high_dephasing.log
+
+[3] COHERENT DYNAMICS SUMMARY
+------------------------------------------------------------------------------------------------------------------------
+
+FILE=Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_quasistatic_coherent_dynamics/BRIGHT_QUASISTATIC_COHERENT_DYNAMICS_DAY019.md
+# Day019 quasi-static coherent bright-state dynamics
+
+## Protocol
+
+- Twenty-one solvent snapshots were propagated independently as frozen Hamiltonian realizations.
+- Exact unitary propagation was used; no numerical time integrator or interpolation between solvent frames was introduced.
+- Propagation interval: 0-20.000 ps.
+- Output interval: 0.005 ps.
+- Initial conditions: one localized excitation on each of the four bright local states.
+- Compared models: point-transition-dipole and TDC-AC finite-size-corrected bright Hamiltonians.
+
+## Numerical validation
+
+- Maximum population-norm error: 3.553e-15.
+- Frames per model and initial condition: 21/21.
+- Maximum absolute difference between ensemble-mean point and corrected populations: 5.124317e-02.
+- Difference maximum context: initial PYR2_bright, target PYR2_bright, time 16.915 ps.
+
+## Corrected-model ensemble summary
+
+| Initial state | Minimum ensemble survival | Time (ps) | Mean diagonal-ensemble survival |
+|---|---:|---:|---:|
+| PYR2_bright | 0.873483 | 5.805 | 0.919967 |
+| PYR3_bright | 0.856748 | 17.145 | 0.903037 |
+| PYR4_bright | 0.905243 | 8.415 | 0.939477 |
+| PYR5_bright | 0.999914 | 0.020 | 0.999955 |
+
+## PYR5 coherent-accessibility audit
+
+- Maximum ensemble-mean PYR5 population from a PYR2/PYR3/PYR4 localized initial excitation: 8.200093e-05.
+- Maximum mean diagonal-ensemble PYR5 population from those three initial conditions: 4.179469e-05.
+- Maximum PYR5 population in any individual snapshot from a high-energy initial state: 1.083852e-04 (initial PYR4_bright, frame 014).
+
+The large PYR5 energy offset suppresses direct coherent transfer into PYR5 in the present closed-system model. This result does not exclude bath-assisted downhill relaxation, which is absent from unitary propagation.
+
+## Interpretation boundary
+
+Damping of ensemble-averaged oscillations in this analysis is inhomogeneous dephasing caused by averaging over static Hamiltonian realizations. It is not a microscopic decoherence rate. The calculation contains no population relaxation, pure-dephasing operator, spectral density, or sequential 5 ps solvent dynamics. Near-resonant PYR2-PYR3-PYR4 frames can support transient coherent mixing, whereas PYR5 remains energetically isolated in the closed bright-state model.
+
+FILE=Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_quasistatic_coherent_dynamics/coherent_dynamics_summary.csv
+NOT_FOUND
+
+[4] HAKEN-STROBL DEPHASING SUMMARY
+------------------------------------------------------------------------------------------------------------------------
+
+FILE=Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/BRIGHT_HAKEN_STROBL_DEPHASING_SENSITIVITY_DAY019.md
+NOT_FOUND
+
+FILE=Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/dephasing_sensitivity_summary.csv
+NOT_FOUND
+
+[5] HIGH-DEPHASING / ZENO SEARCH
+------------------------------------------------------------------------------------------------------------------------
+
+FILE=Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/BRIGHT_HAKEN_STROBL_HIGH_DEPHASING_DAY020.md
+NOT_FOUND
+
+FILE=Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/high_dephasing_summary.csv
+NOT_FOUND
+
+[6] DETAILED-BALANCE RELAXATION
+------------------------------------------------------------------------------------------------------------------------
+
+FILE=Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation_sensitivity/BRIGHT_DETAILED_BALANCE_RELAXATION_DAY020.md
+NOT_FOUND
+
+FILE=Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_detailed_balance_relaxation_sensitivity/detailed_balance_relaxation_summary.csv
+NOT_FOUND
+
+[7] INPUT HAMILTONIAN IDENTITY
+------------------------------------------------------------------------------------------------------------------------
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:24:    "hamiltonian_snapshots_bright4"
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:35:    OUTPUT_ROOT / "point_vs_tdcac_population_difference.csv"
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:60:    "point_dipole",
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:61:    "tdcac_corrected",
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:180:            "H_point_dipole_frame*.dat"
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:186:            "H_bright4_tdcac_frame*.dat"
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:441:        "point_dipole": point_hamiltonians,
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:442:        "tdcac_corrected": (
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:932:                    "point_dipole",
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:942:                    "tdcac_corrected",
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:1085:            "tdcac_corrected",
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:1118:                "tdcac_corrected",
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_quasistatic_coherent_dynamics.py:1254:                "tdcac_corrected",
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_haken_strobl_dephasing_sensitivity.py:27:    "hamiltonian_snapshots_bright4"
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_haken_strobl_dephasing_sensitivity.py:171:        HAMILTONIAN_ROOT.glob("H_bright4_tdcac_frame*.dat")
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day019_bright_haken_strobl_dephasing_sensitivity.py:719:            "tdcac_corrected__initial_"
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day020_bright_haken_strobl_high_dephasing.py:27:    "hamiltonian_snapshots_bright4"
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day020_bright_haken_strobl_high_dephasing.py:171:        HAMILTONIAN_ROOT.glob("H_bright4_tdcac_frame*.dat")
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day020_bright_haken_strobl_high_dephasing.py:719:            "tdcac_corrected__initial_"
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day020_bright_detailed_balance_relaxation_sensitivity.py:26:    "hamiltonian_snapshots_bright4"
+Microtubule_Inspired_Phase0/scripts/phase1A/run_day020_bright_detailed_balance_relaxation_sensitivity.py:164:            "H_bright4_tdcac_frame*.dat"
+
+[8] NUMERICAL VALIDATION MARKERS
+------------------------------------------------------------------------------------------------------------------------
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_quasistatic_coherent_dynamics/BRIGHT_QUASISTATIC_COHERENT_DYNAMICS_DAY019.md:12:## Numerical validation
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/HAKEN_STROBL_DEPHASING_SENSITIVITY_DAY019.md:13:## Numerical validation
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/HAKEN_STROBL_DEPHASING_SENSITIVITY_DAY019.md:15:- Maximum trace error: 2.005e-13.
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/HAKEN_STROBL_DEPHASING_SENSITIVITY_DAY019.md:16:- Maximum Hermiticity error: 1.091e-13.
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/HAKEN_STROBL_DEPHASING_SENSITIVITY_DAY019.md:17:- Minimum sampled density-matrix eigenvalue: -2.801e-14.
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/HAKEN_STROBL_DEPHASING_SENSITIVITY_DAY019.md:19:- Overall numerical validation: PASS.
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/numerical_validation.csv:1:scipy_version,n_gamma_values,n_frames,n_initial_states,n_time_points,maximum_trace_error,maximum_hermiticity_error,minimum_sampled_density_eigenvalue,minimum_raw_population,maximum_raw_population,gamma0_maximum_population_error_vs_coherent_reference,trace_validation_pass,hermiticity_validation_pass,positivity_validation_pass,gamma0_reference_validation_pass
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_haken_strobl_dephasing_sensitivity/frame_dephasing_metrics.csv:1:gamma_phi_ps_inv,dephasing_time_ps,frame,snapshot_time_ps,initial_state,minimum_survival_probability,time_of_minimum_survival_ps,time_average_survival_probability,final_survival_probability,time_integrated_l1_coherence,maximum_trace_error,maximum_sampled_hermiticity_error,minimum_sampled_density_eigenvalue,maximum_population_PYR2_bright,time_of_maximum_PYR2_bright_ps,time_average_PYR2_bright,final_population_PYR2_bright,maximum_population_PYR3_bright,time_of_maximum_PYR3_bright_ps,time_average_PYR3_bright,final_population_PYR3_bright,maximum_population_PYR4_bright,time_of_maximum_PYR4_bright_ps,time_average_PYR4_bright,final_population_PYR4_bright,maximum_population_PYR5_bright,time_of_maximum_PYR5_bright_ps,time_average_PYR5_bright,final_population_PYR5_bright
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/run_day020_high_dephasing.log:24:Maximum trace error: 2.296e-13
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/run_day020_high_dephasing.log:29:Overall numerical validation: PASS
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/numerical_validation.csv:1:scipy_version,n_gamma_values,n_frames,n_initial_states,n_time_points,maximum_trace_error,maximum_hermiticity_error,minimum_sampled_density_eigenvalue,minimum_raw_population,maximum_raw_population,gamma0_maximum_population_error_vs_coherent_reference,trace_validation_pass,hermiticity_validation_pass,positivity_validation_pass,gamma0_reference_validation_pass
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/frame_dephasing_metrics.csv:1:gamma_phi_ps_inv,dephasing_time_ps,frame,snapshot_time_ps,initial_state,minimum_survival_probability,time_of_minimum_survival_ps,time_average_survival_probability,final_survival_probability,time_integrated_l1_coherence,maximum_trace_error,maximum_sampled_hermiticity_error,minimum_sampled_density_eigenvalue,maximum_population_PYR2_bright,time_of_maximum_PYR2_bright_ps,time_average_PYR2_bright,final_population_PYR2_bright,maximum_population_PYR3_bright,time_of_maximum_PYR3_bright_ps,time_average_PYR3_bright,final_population_PYR3_bright,maximum_population_PYR4_bright,time_of_maximum_PYR4_bright_ps,time_average_PYR4_bright,final_population_PYR4_bright,maximum_population_PYR5_bright,time_of_maximum_PYR5_bright_ps,time_average_PYR5_bright,final_population_PYR5_bright
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/HAKEN_STROBL_HIGH_DEPHASING_DAY020.md:13:## Numerical validation
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/HAKEN_STROBL_HIGH_DEPHASING_DAY020.md:15:- Maximum trace error: 2.296e-13.
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/HAKEN_STROBL_HIGH_DEPHASING_DAY020.md:16:- Maximum Hermiticity error: 1.091e-13.
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/HAKEN_STROBL_HIGH_DEPHASING_DAY020.md:17:- Minimum sampled density-matrix eigenvalue: -2.801e-14.
+Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day020_bright_haken_strobl_high_dephasing/HAKEN_STROBL_HIGH_DEPHASING_DAY020.md:19:- Overall numerical validation: PASS.
+
+[9] F45A FROZEN CONTRACT
+------------------------------------------------------------------------------------------------------------------------
+PRIMARY_MODEL=4_STATE_TRACKED_BRIGHT
+PRIMARY_HAMILTONIAN=BRIGHT4_TDCAC_CORRECTED_21_FRAME_ENSEMBLE
+SENSITIVITY_MODEL=FULL8_HYBRID
+REGIME=WEAK_COUPLING_STRONG_ENERGETIC_DETUNING
+JMAX_MEV=1.424239200
+MIN_LOCAL_GAP_MEV=53.000
+MAX_DIAGONAL_SD_MEV=16.034
+PYR5_OFFSET_MEV=308.794
+
+[10] SCIENTIFIC QUESTIONS
+------------------------------------------------------------------------------------------------------------------------
+Q1=Were existing M5 dynamics propagated from the same bright4 TDCAC-corrected Hamiltonians?
+Q2=What is the maximum coherent population transfer into PYR5?
+Q3=What transient beating/coherence survives within PYR2-PYR4?
+Q4=At what dephasing rate does redistribution peak or enter Zeno suppression?
+Q5=Does detailed-balance relaxation materially increase PYR5 accessibility?
+Q6=Are inferred relaxation rates phenomenological or microscopically derived?
+Q7=Can existing results close M5 without new dynamics?
+
+[11] SAFETY
+------------------------------------------------------------------------------------------------------------------------
+READ_ONLY_ANALYSIS=YES
+NEW_DYNAMICS_SIMULATIONS=0
+SOURCE_FILES_MODIFIED=NO
+HAMILTONIAN_MODIFIED=NO
+
+========================================================================================================================
+PHASE5-F45B COMPLETE
+TERMINAL_REMAINS_OPEN=YES
+========================================================================================================================

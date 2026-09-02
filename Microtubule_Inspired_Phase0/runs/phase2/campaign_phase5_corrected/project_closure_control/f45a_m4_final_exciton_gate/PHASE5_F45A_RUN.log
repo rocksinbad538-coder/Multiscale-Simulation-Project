@@ -1,0 +1,99 @@
+========================================================================================================================================================
+PHASE5-F45A — FINAL M4 EXCITONIC PARAMETERIZATION / M5 HANDOFF
+PURPOSE=CLOSE_M4_AND_FREEZE_THE_PHYSICAL_MODEL_FOR_OPEN_SYSTEM_DYNAMICS
+========================================================================================================================================================
+
+[1] SOURCE AUDIT
+--------------------------------------------------------------------------------------------------------------
+POINT_COUPLINGS=FOUND path=Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_point_transition_dipole_couplings/point_dipole_couplings_long.csv
+POINT_REPORT=FOUND path=Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_point_transition_dipole_couplings/POINT_TRANSITION_DIPOLE_BASELINE_DAY019.md
+FINITE_SIZE_REPORT=FOUND path=Microtubule_Inspired_Phase0/runs/phase1A/day016_md_bath_extraction/day019_bright_finite_size_corrected_hamiltonians/BRIGHT_FINITE_SIZE_CORRECTED_HAMILTONIANS_DAY019.md
+
+[2] COUPLING SCALE
+------------------------------------------------------------------------------------------------------------------------
+bright-bright          N=126 MEAN_ABS=0.733840326 meV MAX_ABS=1.424239200 meV
+bright-alternate       N=252 MEAN_ABS=0.085615404 meV MAX_ABS=0.406455757 meV
+alternate-alternate    N=126 MEAN_ABS=0.010112418 meV MAX_ABS=0.070390836 meV
+
+[3] ENERGY / DISORDER SCALES
+------------------------------------------------------------------------------------------------------------------------
+MIN_LOCAL_S1_S2_GAP_MEV=53.000000
+MAX_DIAGONAL_ENERGY_SD_MEV=16.034000
+PYR5_MEAN_OFFSET_MEV=308.794000
+
+[4] DIMENSIONLESS REGIME METRICS
+----------------------------------------------------------------------------------------------------------------------------------
+JMAX_OVER_MIN_GAP=2.687243774e-02
+JBRIGHT_OVER_MIN_GAP=2.687243774e-02
+JMIXED_OVER_MIN_GAP=7.668976555e-03
+JALTERNATE_OVER_MIN_GAP=1.328128973e-03
+JMAX_OVER_MAX_DIAGONAL_SD=8.882619435e-02
+JBRIGHT_OVER_PYR5_OFFSET=4.612263192e-03
+
+[5] BRIGHT-BRIGHT NETWORK
+-------------------------------------------------------------------------------------------------------------------------------------------------
+PYR2-PYR3 <J>=-1.169367 meV SD=0.026714 <|J|>=1.169367 MAX=1.201115
+PYR2-PYR4 <J>=+0.256270 meV SD=0.005164 <|J|>=0.256270 MAX=0.260616
+PYR2-PYR5 <J>=+0.075082 meV SD=0.004144 <|J|>=0.075082 MAX=0.081270
+PYR3-PYR4 <J>=+1.228828 meV SD=0.017616 <|J|>=1.228828 MAX=1.266366
+PYR3-PYR5 <J>=+0.285290 meV SD=0.003874 <|J|>=0.285290 MAX=0.291032
+PYR4-PYR5 <J>=-1.388204 meV SD=0.026909 <|J|>=1.388204 MAX=1.424239
+
+[6] FINITE-SIZE BENCHMARK
+------------------------------------------------------------------------------------------------------------------------
+MAX_COUPLING_CORRECTION_MEV=0.067962
+MAX_EIGENVALUE_SHIFT_MEV=0.042075
+MIN_EIGENVECTOR_OVERLAP=0.9998556977
+
+[7] PHYSICAL MODEL DECISION
+----------------------------------------------------------------------------------------------------------------------------------
+EXCITONIC_REGIME=WEAK_COUPLING_STRONG_ENERGETIC_DETUNING
+PRIMARY_PRODUCTION_MODEL=4_STATE_TRACKED_BRIGHT
+SENSITIVITY_MODEL=8_STATE_S1_S2
+BRIGHT_STATE_IDENTITY=CONFIGURATION_NTO_TRACKED
+ROOT_INDEX_AS_STATE_IDENTITY=FORBIDDEN
+PYR5_SITE_OFFSET=STRUCTURAL_GEOMETRY_DOMINATED
+DIELECTRIC_SCREENING_EFFECT=SENSITIVITY_PARAMETER_EXPECTED_TO_REDUCE_COUPLING
+
+[8] MILESTONE 4 FINALIZATION
+----------------------------------------------------------------------------------------------------------------------------------
+M4_1_ACTIVE_SITE_SELECTION=PASS_PYR2_PYR5
+M4_2_ELECTRONIC_REFERENCE=PASS_PYRENE_SPECIFIC
+M4_3_EXCITED_STATE_CALCULATIONS=PASS_84_EMBEDDED_PLUS_VACUUM_NTO
+M4_4_SITE_ENERGIES=PASS_21_FRAME_TRACKED_ENSEMBLE
+M4_5_TRANSITION_DIPOLES=PASS_21_FRAME_PHASE_ALIGNED
+M4_6_EXCITONIC_COUPLINGS=PASS_POINT_DIPOLE_PLUS_BRIGHT_TDCAC_BENCHMARK
+M4_7_HAMILTONIAN=PASS_21_FRAME_BRIGHT4_AND_FULL8_SENSITIVITY
+M4_8_OPTICAL_STATE_CHARACTER=PASS_NTO_AND_OSCILLATOR_STRENGTHS
+
+M4_EXCITONIC_PARAMETERIZATION=PASS
+
+[9] M5 OPEN-SYSTEM DYNAMICS HANDOFF
+--------------------------------------------------------------------------------------------------------------------------------------------
+M5_PRIMARY_HAMILTONIAN=BRIGHT4_TDCAC_CORRECTED_21_FRAME_ENSEMBLE
+M5_SENSITIVITY_HAMILTONIAN=FULL8_HYBRID_21_FRAME_ENSEMBLE
+M5_REQUIRED_ANALYSIS=POPULATION_DYNAMICS
+M5_REQUIRED_ANALYSIS=TRANSFER_PATHWAYS
+M5_REQUIRED_ANALYSIS=DEPHASING_SENSITIVITY
+M5_REQUIRED_ANALYSIS=DISORDER_SENSITIVITY
+M5_REQUIRED_ANALYSIS=DIELECTRIC_COUPLING_SENSITIVITY
+M5_REQUIRED_ANALYSIS=EXCITONIC_FEASIBILITY_CLASSIFICATION
+
+[10] WRITE FINAL M4 HANDOFF
+------------------------------------------------------------------------------------------------------------------------
+WROTE=Microtubule_Inspired_Phase0/runs/phase2/campaign_phase5_corrected/project_closure_control/f45a_m4_final_exciton_gate/M4_FINAL_BRIGHT_COUPLING_NETWORK.csv
+WROTE=Microtubule_Inspired_Phase0/runs/phase2/campaign_phase5_corrected/project_closure_control/f45a_m4_final_exciton_gate/PHASE5_F45A_M4_FINAL_EXCITON_GATE.json
+
+[11] FINAL GATE
+----------------------------------------------------------------------------------------------------------------------------------
+F45A_M4_FINAL_GATE=PASS
+NEXT_MILESTONE=M5_EXCITON_DYNAMICS_AND_THERMAL_SENSITIVITY
+NEXT_ACTION=F45B_EXISTING_M5_DYNAMICS_AUDIT_AND_REVALIDATION
+NEW_QM_CALCULATIONS=0
+SOURCE_FILES_MODIFIED=NO
+F45A_STATUS=0
+
+========================================================================================================================================================
+PHASE5-F45A COMPLETE
+TERMINAL_REMAINS_OPEN=YES
+========================================================================================================================================================

@@ -1,0 +1,13 @@
+MILESTONE 5 FINAL SCIENTIFIC GATE
+=================================
+
+Status: PASS
+Primary model: 4_STATE_TRACKED_BRIGHT
+Sensitivity model: 8_STATE_S1_S2
+Regime: WEAK_COUPLING_STRONG_ENERGETIC_DETUNING
+
+Primary conclusion:
+Coherent long-range transfer to PYR5 is not supported by the validated Hamiltonian. PYR2-PYR4 form a rapidly mixed upper manifold, while PYR5 behaves as a structurally detuned low-energy sink accessible primarily through bath-assisted relaxation, with PYR4 as the dominant gateway.
+
+Limitations:
+Dephasing and relaxation rates remain phenomenological sensitivity parameters; absolute capture times are therefore not microscopic predictions.
