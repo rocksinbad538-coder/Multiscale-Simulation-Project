@@ -36,3 +36,6 @@ vmd_frames/
 # Runtime process identifiers
 *.orca_pid
 *.supervisor_pid
+
+# Transient LAMMPS production restart checkpoints
+Microtubule_Inspired_Phase0/runs/phase2/campaign/*/production.restart.*
