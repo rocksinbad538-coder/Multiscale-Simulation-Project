@@ -1,0 +1,27 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -deffnm runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps
+
+Reading file runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.tpr, VERSION 2025.4 (single precision)
+Changing nstlist from 20 to 100, rlist from 1.2 to 1.256
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+starting mdrun 'Architecture-removed matched TIP4P/2005 water control'
+200000 steps,    100.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    42982.491     3581.875     1200.0
+                         59:41
+                 (ns/day)    (hour/ns)
+Performance:        2.412        9.950
+
+GROMACS reminds you: "If You See Me Getting High, Knock Me Down" (Red Hot Chili Peppers)
+

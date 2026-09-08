@@ -1,0 +1,74 @@
+notes/day_006.md:11:Day 005 showed that the BN-like polar scaffold preserves radial water confinement both without field and under fieldZ, whereas BN-neutralized and carbon-like neutral matched controls lose radial confinement. Day 006 tests whether the BN-like polar confinement remains stable over a longer trajectory.
+notes/day_006.md:69:A Day 006 comparison figure was generated to place the BN-like polar 50k field-free extension against the Day 005 matched controls.
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_table_based_xtc_parser.py:26:    / "matched_frozen_control_144ps"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_table_based_xtc_parser.py:39:STAGE = "matched_frozen_control_144ps"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_table_based_xtc_parser.py:43:    / "matched_frozen_control_144ps_static_summary.csv"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_table_based_xtc_parser.py:89:    / "run_matched_frozen_control_144ps_mdrun_console.log"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_table_based_xtc_parser.py:94:    / "run_matched_frozen_control_144ps_xtc_check.log"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_table_based_xtc_parser.py:99:    / "matched_frozen_control_temperature.xvg"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_table_based_xtc_parser.py:104:    / "matched_frozen_control_potential.xvg"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_table_based_xtc_parser.py:109:    / "matched_frozen_control_pressure.xvg"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_table_based_xtc_parser.py:114:    / "matched_frozen_control_144ps_execution_summary.csv"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_table_based_xtc_parser.py:462:        "run_matched_frozen_control_144ps_"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_table_based_xtc_parser.py:467:        "run_matched_frozen_control_144ps_"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_table_based_xtc_parser.py:1234:- matched frozen control: **44-144 ps**
+scripts/phase1A/audit_day022_matched_frozen_control_inputs_backup_before_stream_separation.py:64:    / "matched_frozen_control_144ps"
+scripts/phase1A/audit_day022_matched_frozen_control_inputs_backup_before_stream_separation.py:80:    / "matched_frozen_control_input_audit_summary.csv"
+scripts/phase1A/run_day022_matched_frozen_control_144ps.py:26:    / "matched_frozen_control_144ps"
+scripts/phase1A/run_day022_matched_frozen_control_144ps.py:39:STAGE = "matched_frozen_control_144ps"
+scripts/phase1A/run_day022_matched_frozen_control_144ps.py:43:    / "matched_frozen_control_144ps_static_summary.csv"
+scripts/phase1A/run_day022_matched_frozen_control_144ps.py:89:    / "run_matched_frozen_control_144ps_mdrun_console.log"
+scripts/phase1A/run_day022_matched_frozen_control_144ps.py:94:    / "run_matched_frozen_control_144ps_xtc_check.log"
+scripts/phase1A/run_day022_matched_frozen_control_144ps.py:99:    / "matched_frozen_control_temperature.xvg"
+scripts/phase1A/run_day022_matched_frozen_control_144ps.py:104:    / "matched_frozen_control_potential.xvg"
+scripts/phase1A/run_day022_matched_frozen_control_144ps.py:109:    / "matched_frozen_control_pressure.xvg"
+scripts/phase1A/run_day022_matched_frozen_control_144ps.py:114:    / "matched_frozen_control_144ps_execution_summary.csv"
+scripts/phase1A/run_day022_matched_frozen_control_144ps.py:462:        "run_matched_frozen_control_144ps_"
+scripts/phase1A/run_day022_matched_frozen_control_144ps.py:467:        "run_matched_frozen_control_144ps_"
+scripts/phase1A/run_day022_matched_frozen_control_144ps.py:1353:- matched frozen control: **44-144 ps**
+scripts/phase1A/audit_day023_confinement_design_inputs.py:63:    / "matched_frozen_control_144ps/execution/"
+scripts/phase1A/audit_day023_confinement_design_inputs.py:64:    "matched_frozen_control_144ps.tpr"
+scripts/phase1A/audit_day023_confinement_design_inputs.py:69:    / "matched_frozen_control_144ps/execution/"
+scripts/phase1A/audit_day023_confinement_design_inputs.py:70:    "matched_frozen_control_144ps.xtc"
+scripts/phase1A/reconcile_day022_stage08_mobile_100ps_acceptance.py:432:- Radius difference versus frozen control:
+scripts/phase1A/reconcile_day022_stage08_mobile_100ps_acceptance.py:434:- Length difference versus frozen control:
+scripts/phase1A/recover_day022_matched_frozen_control_144ps_validation.py:17:    "run_day022_matched_frozen_control_144ps.py"
+scripts/phase1A/recover_day022_matched_frozen_control_144ps_validation.py:32:            "matched_frozen_control_runner",
+scripts/phase1A/audit_day022_matched_frozen_control_inputs_backup_before_robust_tpr_parser.py:64:    / "matched_frozen_control_144ps"
+scripts/phase1A/audit_day022_matched_frozen_control_inputs_backup_before_robust_tpr_parser.py:80:    / "matched_frozen_control_input_audit_summary.csv"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_robust_xtc_parser.py:26:    / "matched_frozen_control_144ps"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_robust_xtc_parser.py:39:STAGE = "matched_frozen_control_144ps"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_robust_xtc_parser.py:43:    / "matched_frozen_control_144ps_static_summary.csv"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_robust_xtc_parser.py:89:    / "run_matched_frozen_control_144ps_mdrun_console.log"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_robust_xtc_parser.py:94:    / "run_matched_frozen_control_144ps_xtc_check.log"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_robust_xtc_parser.py:99:    / "matched_frozen_control_temperature.xvg"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_robust_xtc_parser.py:104:    / "matched_frozen_control_potential.xvg"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_robust_xtc_parser.py:109:    / "matched_frozen_control_pressure.xvg"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_robust_xtc_parser.py:114:    / "matched_frozen_control_144ps_execution_summary.csv"
+scripts/phase1A/run_day022_matched_frozen_control_144ps_backup_before_robust_xtc_parser.py:1093:- matched frozen control: **44-144 ps**
+scripts/phase1A/prepare_day022_matched_frozen_control_144ps.py:27:    / "matched_frozen_control_144ps"
+scripts/phase1A/prepare_day022_matched_frozen_control_144ps.py:75:    "audit_day022_matched_frozen_control_inputs.py"
+scripts/phase1A/prepare_day022_matched_frozen_control_144ps.py:78:TARGET_STAGE = "matched_frozen_control_144ps"
+scripts/phase1A/prepare_day022_matched_frozen_control_144ps.py:117:    / "matched_frozen_control_tpr_dump_stdout.txt"
+scripts/phase1A/prepare_day022_matched_frozen_control_144ps.py:122:    / "matched_frozen_control_tpr_dump_stderr.txt"
+scripts/phase1A/prepare_day022_matched_frozen_control_144ps.py:127:    / "matched_frozen_control_144ps_static_summary.csv"
+scripts/phase1A/prepare_day022_matched_frozen_control_144ps.py:360:                "; Day022 matched frozen control"
+scripts/phase1A/prepare_day022_matched_frozen_control_144ps.py:1073:        "144ps preparation completed."
+scripts/phase1A/analyze_day022_matched_mobile_vs_frozen_water.py:36:    / "matched_frozen_control_144ps/execution"
+scripts/phase1A/analyze_day022_matched_mobile_vs_frozen_water.py:46:    / "matched_frozen_44_144ps_frames"
+scripts/phase1A/analyze_day022_matched_mobile_vs_frozen_water.py:51:    / "matched_frozen_44_144ps_extraction.log"
+scripts/phase1A/analyze_day022_matched_mobile_vs_frozen_water.py:916:The pressure of the frozen control is retained as a diagnostic only.
+scripts/phase1A/audit_day022_matched_frozen_control_inputs.py:64:    / "matched_frozen_control_144ps"
+scripts/phase1A/audit_day022_matched_frozen_control_inputs.py:80:    / "matched_frozen_control_input_audit_summary.csv"
+runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/prepared_input/matched_frozen_control_144ps.mdp:37:; Day022 matched frozen control
+runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_144ps_mdout.mdp:2:;	File '/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_144ps_mdout.mdp' was generated
+runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_144ps_mdout.mdp:14:;	  gmx grompp -f /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/prepared_input/matched_frozen_control_144ps.mdp -c /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/01_em_k10000/01_em_k10000.gro -r /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/execution/01_em_k10000/01_em_k10000.gro -p /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/topology/hbn_pyrene_mobile_release.top -n /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/protocol_inputs/mobile_release_index.ndx -o /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_144ps.tpr -po /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_144ps_mdout.mdp -pp /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_144ps_processed.top -maxwarn 0
+runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_tpr_dump_stdout.txt:1:/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_144ps.tpr:
+runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_tpr_dump_stderr.txt:5:Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation
+runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_tpr_dump_stderr.txt:7:  gmx dump -s /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_144ps.tpr
+runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_tpr_dump_stderr.txt:9:Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_144ps.tpr, VERSION 2025.4 (single precision)
+runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_tpr_dump_stderr.txt:10:Reading file /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase1A/day021_mobile_restraint_protocol/matched_frozen_control_144ps/static_validation/matched_frozen_control_144ps.tpr, VERSION 2025.4 (single precision)
+runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/matched_mobile_vs_frozen_water/MATCHED_PAIRED_WATER_AUDIT_DAY022.md:46:The pressure of the frozen control is retained as a diagnostic only.
+runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/STAGE08_MOBILE_100PS_ACCEPTANCE_DAY022.md:24:- Radius difference versus frozen control:
+runs/phase1A/day021_mobile_restraint_protocol/execution/08_nvt_mobile_100ps/STAGE08_MOBILE_100PS_ACCEPTANCE_DAY022.md:26:- Length difference versus frozen control:
+runs/phase1A/day021_mobile_restraint_protocol/DAY022_TECHNICAL_CLOSEOUT.md:45:- frozen control: 44–144 ps;

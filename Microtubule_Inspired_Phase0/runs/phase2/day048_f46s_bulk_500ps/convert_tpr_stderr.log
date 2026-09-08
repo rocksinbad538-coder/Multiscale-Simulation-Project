@@ -1,0 +1,12 @@
+                   :-) GROMACS - gmx convert-tpr, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx convert-tpr -s runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.tpr -extend 400 -o runs/phase2/day048_f46s_bulk_500ps/bulk_target_500ps.tpr
+
+Reading file runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.tpr, VERSION 2025.4 (single precision)
+
+GROMACS reminds you: "You Leave Me Dry" (P.J. Harvey)
+

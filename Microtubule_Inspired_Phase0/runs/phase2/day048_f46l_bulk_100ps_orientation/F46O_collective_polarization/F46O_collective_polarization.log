@@ -1,0 +1,79 @@
+======================================================================
+F46O — CHARGE-WEIGHTED COLLECTIVE WATER POLARIZATION
+POSTPROCESSING ONLY
+======================================================================
+
+LOADING_ENGINEERED=YES
+
+LOADING_BULK=YES
+
+========================================================================
+F46O FULL TRAJECTORY COLLECTIVE POLARIZATION
+========================================================================
+
+ENGINEERED
+N_WATER=16634
+VOLUME_NM3=547.747619629
+MEAN_M_D=-338.941199666,-5.132724781,75.494118269
+SD_M_D=347.878702169,229.165312928,298.791875936
+TRACE_FLUCTUATION_TENSOR=144.845572684290
+FLUCTUATION_XX=66.698213362516
+FLUCTUATION_YY=28.943848940064
+FLUCTUATION_ZZ=49.203510381710
+C_M_2PS=0.772485453383
+C_M_5PS=0.531052838839
+C_M_10PS=0.262696742135
+C_M_20PS=-0.049370473264
+FIRST_ZERO_INTEGRAL_PS=6.612114996905
+FIRST_ZERO_TIME_PS=17.5
+
+BULK
+N_WATER=16634
+VOLUME_NM3=501.540008545
+MEAN_M_D=-199.887456960,-55.217864350,90.165342581
+SD_M_D=430.472738787,238.481981703,241.384981679
+TRACE_FLUCTUATION_TENSOR=180.842921318837
+FLUCTUATION_XX=111.538484938640
+FLUCTUATION_YY=34.232969878300
+FLUCTUATION_ZZ=35.071466501897
+C_M_2PS=0.785593197451
+C_M_5PS=0.533810872240
+C_M_10PS=0.273482422047
+C_M_20PS=-0.040649895379
+FIRST_ZERO_INTEGRAL_PS=6.647480007664
+FIRST_ZERO_TIME_PS=17.0
+
+========================================================================
+F46O WINDOWED COLLECTIVE STATIONARITY
+========================================================================
+    system  start_ps  end_ps    C_2ps     C_5ps    C_10ps  integral_5ps  integral_10ps  first_zero_integral_ps  first_zero_time_ps
+engineered         0     100 0.772485  0.531053  0.262697      3.659416       5.562409                6.612115                17.5
+engineered        25     100 0.665788  0.278287 -0.078630      3.004590       3.302596                3.385458                 8.5
+engineered        50     100 0.672302  0.291419 -0.061563      3.003761       3.453272                3.487774                 9.0
+engineered        75     100 0.483820 -0.056708 -0.294750      1.959535       0.948090                1.980707                 4.5
+      bulk         0     100 0.785593  0.533811  0.273482      3.734313       5.636680                6.647480                17.0
+      bulk        25     100 0.649317  0.324082 -0.074104      3.027203       3.479290                3.554994                 8.5
+      bulk        50     100 0.600559  0.337184 -0.177917      2.904844       3.203700                3.428712                 8.0
+      bulk        75     100 0.434415  0.123540 -0.378563      2.072992       1.143902                2.138197                 6.5
+
+========================================================================
+F46O ENGINEERED/BULK FLUCTUATION RATIOS
+========================================================================
+TRACE_RATIO_ENGINEERED_OVER_BULK=0.800946874934
+XX_RATIO_ENGINEERED_OVER_BULK=0.597983856417
+YY_RATIO_ENGINEERED_OVER_BULK=0.845496287438
+ZZ_RATIO_ENGINEERED_OVER_BULK=1.402949898860
+
+SUMMARY_FILE=runs/phase2/day048_f46l_bulk_100ps_orientation/F46O_collective_polarization/F46O_summary.json
+F46O_ANALYSIS_COMPLETE=YES
+
+F46O_ANALYSIS_STATUS=0
+F46O_GATE=PASS
+
+======================================================================
+F46O SAFE ANALYSIS FINISHED
+NEW_MD_SIMULATIONS=0
+NEW_QM_CALCULATIONS=0
+NEW_EXCITON_DYNAMICS=0
+DIELECTRIC_CONSTANT_CLAIM=NOT_YET
+======================================================================

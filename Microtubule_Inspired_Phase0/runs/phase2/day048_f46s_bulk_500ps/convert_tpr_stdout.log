@@ -1,0 +1,18 @@
+Input file:
+  Run start step                                     0     
+  Run start time                                     0 ps  
+  Step to be made during run                    200000     
+  Runtime for the run                              100 ps  
+  Run end step                                  200000     
+  Run end time                                     100 ps  
+
+Extending remaining runtime by 400 ps
+
+Output file:
+  Run start step                                     0     
+  Run start time                                     0 ps  
+  Step to be made during run                   1000000     
+  Runtime for the run                              500 ps  
+  Run end step                                 1000000     
+  Run end time                                     500 ps  
+

@@ -1,0 +1,150 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -deffnm runs/phase2/day048_f46j_bulk_density_equilibration/em
+
+Reading file runs/phase2/day048_f46j_bulk_density_equilibration/em.tpr, VERSION 2025.4 (single precision)
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+02
+   Number of steps    =        50000
+
+step 10: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 14: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 20: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 24: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 29: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 34: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 39: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 43: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 49: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 53: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 58: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 63: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 68: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 73: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 76: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 82: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 87: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+
+Back Off! I just backed up step87b.pdb to ./#step87b.pdb.1#
+
+Back Off! I just backed up step87c.pdb to ./#step87c.pdb.1#
+Wrote pdb files with previous and current coordinates
+
+step 92: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+
+Back Off! I just backed up step92b.pdb to ./#step92b.pdb.1#
+
+Back Off! I just backed up step92c.pdb to ./#step92c.pdb.1#
+Wrote pdb files with previous and current coordinates
+
+step 96: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 101: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 106: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 110: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 115: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 120: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 130: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 158: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 173: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 183: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+step 269: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+Wrote pdb files with previous and current coordinates
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to Fmax < 100 in 473 steps
+Potential Energy  = -9.4086350e+05
+Maximum force     =  9.1174355e+01 on atom 17850
+Norm of force     =  3.0919412e+00
+
+GROMACS reminds you: "Oh My God ! It's the Funky Shit" (Beastie Boys)
+

@@ -1,0 +1,180 @@
+======================================================================
+F46L SAFE RECOVERY
+NO MD RERUN
+TERMINAL WILL NOT BE CLOSED BY THIS SCRIPT
+======================================================================
+
+######################################################################
+# 1. FILE INVENTORY
+######################################################################
+EXISTS=YES
+-rw-r--r--@ 1 alejandro  staff   163K Sep  5 14:17 runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.log
+EXISTS=YES
+-rw-r--r--@ 1 alejandro  staff    43M Sep  5 14:17 runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.xtc
+EXISTS=YES
+-rw-r--r--@ 1 alejandro  staff   170K Sep  5 14:17 runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.edr
+EXISTS=YES
+-rw-r--r--@ 1 alejandro  staff   4.4M Sep  5 14:17 runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.gro
+EXISTS=YES
+-rw-r--r--@ 1 alejandro  staff   1.5M Sep  5 14:17 runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.cpt
+EXISTS=YES
+-rw-r--r--@ 1 alejandro  staff   1.5M Sep  5 13:17 runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.tpr
+EXISTS=NO runs/phase2/day048_f46l_bulk_100ps_orientation/analyze_F46L.py
+
+######################################################################
+# 2. MDRUN COMPLETION CHECK
+######################################################################
+
+----- FINAL 60 LOG LINES -----
+ Spread Q Bspline                    851665.058304     1703330.117     0.2
+ Gather F Bspline                    851665.058304     5109990.350     0.7
+ 3D-FFT                             2202220.611048    17617764.888     2.3
+ Solve PME                            30960.154800     1981449.907     0.3
+ Reset In Box                           133.072000         399.216     0.0
+ CG-CoM                                 133.138536         399.416     0.0
+ Virial                                 133.228581        2398.114     0.0
+ Stop-CM                                133.138536        1331.385     0.0
+ Calc-Ekin                              266.277072        7189.481     0.0
+ Constraint-V                          9980.449902       89824.049     0.0
+ Constraint-Vir                          99.853902        2396.494     0.0
+ Settle                                3326.816634     1230922.155     0.2
+ Virtual Site 3                        3360.101268      124323.747     0.0
+-----------------------------------------------------------------------------
+ Total                                               752151695.514   100.0
+-----------------------------------------------------------------------------
+
+
+    D O M A I N   D E C O M P O S I T I O N   S T A T I S T I C S
+
+ av. #atoms communicated per step for force:  2 x 0.0
+
+
+      R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+On 1 MPI rank, each using 12 OpenMP threads
+
+ Activity:              Num   Num      Call    Wall time         Giga-Cycles
+                        Ranks Threads  Count      (s)         total sum    %
+--------------------------------------------------------------------------------
+ Domain decomp.            1   12       2000       9.658        300.406   0.3
+ Vsite constr.             1   12     200001       9.287        288.861   0.3
+ Neighbor search           1   12       2001      40.105       1247.387   1.1
+ Force                     1   12     200001    2833.073      88117.570  79.1
+ PME mesh                  1   12     200001     565.885      17600.809  15.8
+ NB X/F buffer ops.        1   12     400002      48.233       1500.206   1.3
+ Vsite spread              1   12     202002      14.558        452.802   0.4
+ Write traj.               1   12        203       1.322         41.115   0.0
+ Update                    1   12     200001      35.834       1114.537   1.0
+ Constraints               1   12     200001      19.991        621.768   0.6
+ Kinetic energy            1   12       4001       0.511         15.883   0.0
+ Rest                                              3.419        106.339   0.1
+--------------------------------------------------------------------------------
+ Total                                          3581.875     111407.683 100.0
+--------------------------------------------------------------------------------
+ Breakdown of PME mesh activities
+--------------------------------------------------------------------------------
+ PME spread                1   12     200001     230.472       7168.422   6.4
+ PME gather                1   12     200001     141.592       4403.955   4.0
+ PME 3D-FFT                1   12     400002     179.511       5583.351   5.0
+ PME solve Elec            1   12     200001      13.356        415.423   0.4
+--------------------------------------------------------------------------------
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    42982.491     3581.875     1200.0
+                         59:41
+                 (ns/day)    (hour/ns)
+Performance:        2.412        9.950
+Finished mdrun on rank 0 Sat Sep  5 14:17:26 2026
+
+
+----- COMPLETION MARKERS -----
+       Time:    42982.491     3581.875     1200.0
+Performance:        2.412        9.950
+Finished mdrun on rank 0 Sat Sep  5 14:17:26 2026
+
+######################################################################
+# 3. TRAJECTORY COMPLETENESS
+######################################################################
+N_ATOMS=66536
+N_RESIDUES=16634
+N_FRAMES=201
+FIRST_TIME_PS=0.000000000
+LAST_TIME_PS=100.000000000
+FRAME_SPACING_MEAN_PS=0.500000000
+FRAME_SPACING_MIN_PS=0.500000000
+FRAME_SPACING_MAX_PS=0.500000000
+N_WATER=16634
+FRAME_COUNT_GATE=PASS
+DURATION_GATE=PASS
+SAMPLING_GATE=PASS
+WATER_COUNT_GATE=PASS
+PRODUCTION_TRAJECTORY_GATE=PASS
+TRAJECTORY_PYTHON_STATUS=0
+
+TRAJECTORY_OK=YES
+
+######################################################################
+# 4. THERMODYNAMIC RECOVERY
+######################################################################
+GMX=/usr/local/gromacs/bin/gmx
+TEMPERATURE_EXTRACTION_STATUS=0
+PRESSURE_EXTRACTION_STATUS=0
+DENSITY_EXTRACTION_STATUS=1
+POTENTIAL_EXTRACTION_STATUS=0
+
+------------------------------------------------------------
+F46L RECOVERED THERMODYNAMIC SUMMARY
+------------------------------------------------------------
+TEMP_K_MEAN=300.106063556110
+TEMP_K_SD=1.265500689815
+TEMP_K_TAIL20_MEAN=300.198115197531
+TEMP_K_TAIL20_SD=1.374989649281
+PRESSURE_BAR_MEAN=42.666326528678
+PRESSURE_BAR_SD=99.424243479921
+PRESSURE_BAR_TAIL20_MEAN=67.528621938272
+PRESSURE_BAR_TAIL20_SD=90.350589806643
+DENSITY_KG_M3_DATA=UNAVAILABLE
+POTENTIAL_KJ_MOL_MEAN=-789011.798472568626
+POTENTIAL_KJ_MOL_SD=812.692981143319
+POTENTIAL_KJ_MOL_TAIL20_MEAN=-789282.954475308652
+POTENTIAL_KJ_MOL_TAIL20_SD=742.248681360684
+
+######################################################################
+# 5. EXISTING ANALYSIS PRODUCTS
+######################################################################
+EXISTS=NO runs/phase2/day048_f46l_bulk_100ps_orientation/F46L_analysis.log
+EXISTS=NO runs/phase2/day048_f46l_bulk_100ps_orientation/F46L_analysis_recovered.log
+EXISTS=NO runs/phase2/day048_f46l_bulk_100ps_orientation/F46L_summary.json
+EXISTS=NO runs/phase2/day048_f46l_bulk_100ps_orientation/engineered_C1_C2.csv
+EXISTS=NO runs/phase2/day048_f46l_bulk_100ps_orientation/bulk_C1_C2.csv
+EXISTS=NO runs/phase2/day048_f46l_bulk_100ps_orientation/F46L_matched_25ps_blocks.csv
+
+######################################################################
+# 6. ANALYSIS RECOVERY DECISION
+######################################################################
+ANALYSIS_ALLOWED=YES
+ANALYSIS_SCRIPT=NOT_FOUND
+ANALYSIS_EXECUTED=NO
+
+######################################################################
+# 7. FINAL RESULT EXTRACTION
+######################################################################
+FINAL_ANALYSIS_LOG=NOT_AVAILABLE
+
+######################################################################
+# 8. PERFORMANCE
+######################################################################
+       Time:    42982.491     3581.875     1200.0
+Performance:        2.412        9.950
+
+======================================================================
+F46L SAFE RECOVERY FINISHED
+MD_RERUN=NO
+TRAJECTORY_OK=YES
+RECOVERY_LOG=runs/phase2/day048_f46l_bulk_100ps_orientation/F46L_RECOVERY_SAFE.log
+======================================================================
+
+IMPORTANT:
+This script is finished.
+Your interactive terminal should remain open.
+

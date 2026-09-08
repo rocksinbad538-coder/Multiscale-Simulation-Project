@@ -1,0 +1,26 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -s runs/phase2/day049_f46w_bulk_independent_replicas/R3/equil_20ps.tpr -deffnm runs/phase2/day049_f46w_bulk_independent_replicas/R3/equil_20ps
+
+Reading file runs/phase2/day049_f46w_bulk_independent_replicas/R3/equil_20ps.tpr, VERSION 2025.4 (single precision)
+Changing nstlist from 20 to 100, rlist from 1.2 to 1.256
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+starting mdrun 'Architecture-removed matched TIP4P/2005 water control'
+40000 steps,     20.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     8474.891      706.241     1200.0
+                 (ns/day)    (hour/ns)
+Performance:        2.447        9.809
+
+GROMACS reminds you: "We Have No Money" (E. Clementi)
+

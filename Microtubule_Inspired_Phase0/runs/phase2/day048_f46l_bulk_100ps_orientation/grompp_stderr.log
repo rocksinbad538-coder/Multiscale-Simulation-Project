@@ -1,0 +1,14 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx grompp -f runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.mdp -c runs/phase2/day048_f46k_bulk_npt_continuation/npt_continue_25ps.gro -t runs/phase2/day048_f46k_bulk_npt_continuation/npt_continue_25ps.cpt -p runs/phase2/day048_f46l_bulk_100ps_orientation/bulk_water.top -o runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.tpr -po runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps_mdout.mdp -pp runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps_processed.top -maxwarn 0
+
+Generating 1-4 interactions: fudge = 1
+Number of degrees of freedom in T-Coupling group System is 99801.00
+Last frame         -1 time   25.000   
+
+GROMACS reminds you: "I Want to Know Right Now" (Meatloaf)
+

@@ -1,0 +1,14 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx grompp -f runs/phase2/day048_f46k_bulk_npt_continuation/npt_continue_25ps.mdp -c runs/phase2/day048_f46j_bulk_density_equilibration/npt_25ps.gro -t runs/phase2/day048_f46j_bulk_density_equilibration/npt_25ps.cpt -p runs/phase2/day048_f46k_bulk_npt_continuation/bulk_water.top -o runs/phase2/day048_f46k_bulk_npt_continuation/npt_continue_25ps.tpr -po runs/phase2/day048_f46k_bulk_npt_continuation/npt_continue_25ps_mdout.mdp -maxwarn 0
+
+Generating 1-4 interactions: fudge = 1
+Number of degrees of freedom in T-Coupling group System is 99801.00
+Last frame         -1 time   25.000   
+
+GROMACS reminds you: "If all it takes to motivate you is a fancy picture and quote, you probably have a very easy job. The type of job computers will soon be doing." (Anonymous)
+

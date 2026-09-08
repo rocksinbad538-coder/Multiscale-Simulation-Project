@@ -1,0 +1,18 @@
+   integrator                     = md
+   dt                             = 0.0005
+   nsteps                         = 200000
+   comm-mode                      = None
+   nstlog                         = 500
+   nstenergy                      = 500
+   nstxout-compressed             = 1000
+   coulombtype                    = PME
+   rcoulomb-switch                = 0
+   rcoulomb                       = 1.2
+   rvdw-switch                    = 0
+   rvdw                           = 1.2
+   tcoupl                         = V-rescale
+   nsttcouple                     = 100
+   continuation                   = false
+   ref-t:         300
+   tau-t:           1
+   nfreeze:           Y           Y           Y           Y           Y           Y           N           N           N

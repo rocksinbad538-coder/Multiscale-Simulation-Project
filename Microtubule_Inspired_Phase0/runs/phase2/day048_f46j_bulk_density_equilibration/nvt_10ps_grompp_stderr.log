@@ -1,0 +1,13 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx grompp -f runs/phase2/day048_f46j_bulk_density_equilibration/nvt_10ps.mdp -c runs/phase2/day048_f46j_bulk_density_equilibration/em.gro -p runs/phase2/day048_f46j_bulk_density_equilibration/bulk_water.top -o runs/phase2/day048_f46j_bulk_density_equilibration/nvt_10ps.tpr -po runs/phase2/day048_f46j_bulk_density_equilibration/nvt_10ps_mdout.mdp -maxwarn 0
+
+Generating 1-4 interactions: fudge = 1
+Number of degrees of freedom in T-Coupling group System is 99801.00
+
+GROMACS reminds you: "Oh My God ! It's the Funky Shit" (Beastie Boys)
+

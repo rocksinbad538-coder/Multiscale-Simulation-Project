@@ -1,0 +1,54 @@
+35:def discover_extension(directory, prefix):
+55:def load_segment(tpr, xtc):
+104:    for ts in u.trajectory:
+159:def combine_segments(
+187:    # Deduplicate by absolute trajectory time.
+234:def fluctuation_tensor(
+273:    tensor = (
+284:        tensor,
+289:def tensor_metrics(T):
+336:def connected_corr(M):
+382:def first_zero_integral(
+410:def integral_to(
+432:def analyze_windows(
+453:        T, V = fluctuation_tensor(
+458:        met = tensor_metrics(T)
+462:            "window_type": "cumulative",
+472:    # Independent 50 ps blocks
+484:        T,V = fluctuation_tensor(
+489:        met = tensor_metrics(T)
+493:            "window_type": "block50",
+503:    # Independent 100 ps blocks
+515:        T,V = fluctuation_tensor(
+520:        met = tensor_metrics(T)
+524:            "window_type": "block100",
+537:def correlation_windows(
+545:    windows = [
+552:    for start,end in windows:
+614:def main():
+631:    out = root / "F46R_collective_200ps"
+749:    tensors = []
+750:    correlations = []
+762:            combine_segments(
+815:                f"{label}: incomplete 0-200 ps trajectory"
+818:        T,V = fluctuation_tensor(
+823:        met = tensor_metrics(T)
+833:            "tensor": met,
+847:        tw = analyze_windows(
+854:        cw = correlation_windows(
+860:        tensors.append(tw)
+861:        correlations.append(cw)
+869:            f"{label}_collective_C_M_200ps.csv",
+874:        tensors,
+879:        correlations,
+884:        out/"F46R_tensor_convergence.csv",
+889:        out/"F46R_collective_correlation_windows.csv",
+909:            r["tensor"].items()
+945:            tdf.window_type
+973:            tdf.window_type
+974:            =="block100"
+1001:    E = full["engineered"]["tensor"]
+1002:    B = full["bulk"]["tensor"]
+1065:        "bulk_isotropy_gate":
+1077:                "The engineered frozen-solute trajectory "
+1087:                "requires collective convergence."

@@ -1,0 +1,14 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx grompp -f runs/phase2/day048_f46j_bulk_density_equilibration/em.mdp -c runs/phase2/day048_f46i_architecture_removed_control/architecture_removed_water_only.gro -p runs/phase2/day048_f46j_bulk_density_equilibration/bulk_water.top -o runs/phase2/day048_f46j_bulk_density_equilibration/em.tpr -po runs/phase2/day048_f46j_bulk_density_equilibration/em_mdout.mdp -pp runs/phase2/day048_f46j_bulk_density_equilibration/em_processed.top -maxwarn 0
+
+Generating 1-4 interactions: fudge = 1
+Number of degrees of freedom in T-Coupling group rest is 99801.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+GROMACS reminds you: "It's Not Dark Yet, But It's Getting There" (Bob Dylan)
+

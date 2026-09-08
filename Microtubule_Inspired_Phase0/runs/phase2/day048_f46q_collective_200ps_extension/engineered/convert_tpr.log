@@ -1,0 +1,30 @@
+                   :-) GROMACS - gmx convert-tpr, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx convert-tpr -s runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.tpr -extend 100 -o runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_200ps.tpr
+
+Reading file runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.tpr, VERSION 2025.4 (single precision)
+
+GROMACS reminds you: "Your Proposal is Accepted" (Men In Black)
+
+Input file:
+  Run start step                                     0     
+  Run start time                                     0 ps  
+  Step to be made during run                    200000     
+  Runtime for the run                              100 ps  
+  Run end step                                  200000     
+  Run end time                                     100 ps  
+
+Extending remaining runtime by 100 ps
+
+Output file:
+  Run start step                                     0     
+  Run start time                                     0 ps  
+  Step to be made during run                    400000     
+  Runtime for the run                              200 ps  
+  Run end step                                  400000     
+  Run end time                                     200 ps  
+

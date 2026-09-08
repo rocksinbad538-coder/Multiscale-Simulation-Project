@@ -1,0 +1,37 @@
+Setting the LD random seed to -305660041
+
+Generated 6 of the 6 non-bonded parameter combinations
+
+Generated 6 of the 6 1-4 parameter combinations
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Taking velocities from 'equil_20ps.gro'
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+Analysing residue names:
+There are: 16634      Water residues
+
+The largest distance between excluded atoms is 0.153 nm between atom 32774 and 32775
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+
+Calculated rlist for 1x1 atom pair-list as 1.216 nm, buffer size 0.016 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.200 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+
+Reading Coordinates, Velocities and Box size from old trajectory
+
+Will read whole trajectory
+
+Using frame at t = 20 ps
+
+Starting time for run is 0 ps
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 60x60x84, spacing 0.120 0.120 0.116
+
+Estimate for the relative computational load of the PME mesh part: 0.13
+
+This run will generate roughly 201 Mb of data

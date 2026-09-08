@@ -1,0 +1,26 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -deffnm runs/phase2/day048_f46j_bulk_density_equilibration/nvt_10ps
+
+Reading file runs/phase2/day048_f46j_bulk_density_equilibration/nvt_10ps.tpr, VERSION 2025.4 (single precision)
+Changing nstlist from 20 to 100, rlist from 1.2 to 1.255
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+starting mdrun 'Architecture-removed matched TIP4P/2005 water control'
+20000 steps,     10.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     4171.034      347.586     1200.0
+                 (ns/day)    (hour/ns)
+Performance:        2.486        9.655
+
+GROMACS reminds you: "Discovery: A couple of months in the laboratory can frequently save a couple of hours in the library." (Anonymous)
+

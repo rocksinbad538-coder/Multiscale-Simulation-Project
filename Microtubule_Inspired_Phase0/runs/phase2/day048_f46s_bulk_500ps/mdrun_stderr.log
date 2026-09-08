@@ -1,0 +1,27 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -s runs/phase2/day048_f46s_bulk_500ps/bulk_target_500ps.tpr -cpi runs/phase2/day048_f46q_collective_200ps_extension/bulk/bulk_extend_100ps.cpt -deffnm runs/phase2/day048_f46s_bulk_500ps/bulk_500ps -noappend
+
+Reading file runs/phase2/day048_f46s_bulk_500ps/bulk_target_500ps.tpr, VERSION 2025.4 (single precision)
+Changing nstlist from 20 to 100, rlist from 1.2 to 1.256
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+starting mdrun 'Architecture-removed matched TIP4P/2005 water control'
+1000000 steps,    500.0 ps (continuing from step 400000,    200.0 ps).
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:   278807.691    23233.974     1200.0
+                         6h27:13
+                 (ns/day)    (hour/ns)
+Performance:        1.116       21.513
+
+GROMACS reminds you: "It's Unacceptable That Chocolate Makes You Fat" (MI 3)
+

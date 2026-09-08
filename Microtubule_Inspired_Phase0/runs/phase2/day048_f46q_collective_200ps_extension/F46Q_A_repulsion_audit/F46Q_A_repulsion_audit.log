@@ -1,0 +1,157 @@
+======================================================================
+F46Q-A — ENGINEERED REPULSION / GEOMETRY AUDIT
+READ-ONLY
+======================================================================
+
+######################################################################
+# 1. ENERGY COMPONENTS — ORIGINAL FINAL 10 ps
+######################################################################
+Opened runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  Kinetic-En.     12  Total-Energy  
+ 13  Conserved-En.   14  Temperature     15  Pressure        16  Vir-XX        
+ 17  Vir-XY          18  Vir-XZ          19  Vir-YX          20  Vir-YY        
+ 21  Vir-YZ          22  Vir-ZX          23  Vir-ZY          24  Vir-ZZ        
+ 25  Pres-XX         26  Pres-XY         27  Pres-XZ         28  Pres-YX       
+ 29  Pres-YY         30  Pres-YZ         31  Pres-ZX         32  Pres-ZY       
+ 33  Pres-ZZ         34  #Surf*SurfTen   35  T-System        36  Lamb-System   
+
+String 'LJ (SR)' does not match anything
+String '(SR)' does not match anything
+String 'Coulomb (SR)' does not match anything
+String '(SR)' does not match anything
+String 'Coul. recip.' does not match anything
+String 'recip.' does not match anything
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.250         Reading energy frame      2 time    0.500         Reading energy frame      3 time    0.750         Reading energy frame      4 time    1.000         Reading energy frame      5 time    1.250         Reading energy frame      6 time    1.500         Reading energy frame      7 time    1.750         Reading energy frame      8 time    2.000         Reading energy frame      9 time    2.250         Reading energy frame     10 time    2.500         Reading energy frame     11 time    2.750         Reading energy frame     12 time    3.000         Reading energy frame     13 time    3.250         Reading energy frame     14 time    3.500         Reading energy frame     15 time    3.750         Reading energy frame     16 time    4.000         Reading energy frame     17 time    4.250         Reading energy frame     18 time    4.500         Reading energy frame     19 time    4.750         Reading energy frame     20 time    5.000         Reading energy frame     30 time    7.500         Reading energy frame     40 time   10.000         Reading energy frame     50 time   12.500         Reading energy frame     60 time   15.000         Reading energy frame     70 time   17.500         Reading energy frame     80 time   20.000         Reading energy frame     90 time   22.500         Reading energy frame    100 time   25.000         Reading energy frame    110 time   27.500         Reading energy frame    120 time   30.000         Reading energy frame    130 time   32.500         Reading energy frame    140 time   35.000         Reading energy frame    150 time   37.500         Reading energy frame    160 time   40.000         Reading energy frame    170 time   42.500         Reading energy frame    180 time   45.000         Reading energy frame    190 time   47.500         Reading energy frame    200 time   50.000         Reading energy frame    300 time   75.000         Reading energy frame    400 time  100.000         Last energy frame read 400 time  100.000         
+
+GROMACS reminds you: "I'll Master Your Language, and In the Meantime I'll Create My Own" (Tricky)
+
+
+Statistics over 20001 steps [ 90.0000 through 100.0000 ps ], 3 data sets
+All statistics are over 201 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                3.7606e+06        160    531.665     637.99  (kJ/mol)
+Temperature                 299.739       0.31    1.26924  -0.266535  (K)
+Pressure                     553012         18    87.5833    19.9347  (bar)
+
+######################################################################
+# 2. ENERGY COMPONENTS — EXTENSION FIRST AVAILABLE WINDOW
+######################################################################
+EXTENSION_EDR=runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_extend_100ps.part0002.edr
+Opened runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_extend_100ps.part0002.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  Kinetic-En.     12  Total-Energy  
+ 13  Conserved-En.   14  Temperature     15  Pressure        16  Vir-XX        
+ 17  Vir-XY          18  Vir-XZ          19  Vir-YX          20  Vir-YY        
+ 21  Vir-YZ          22  Vir-ZX          23  Vir-ZY          24  Vir-ZZ        
+ 25  Pres-XX         26  Pres-XY         27  Pres-XZ         28  Pres-YX       
+ 29  Pres-YY         30  Pres-YZ         31  Pres-ZX         32  Pres-ZY       
+ 33  Pres-ZZ         34  #Surf*SurfTen   35  T-System        36  Lamb-System   
+
+String 'LJ (SR)' does not match anything
+String '(SR)' does not match anything
+String 'Coulomb (SR)' does not match anything
+String '(SR)' does not match anything
+String 'Coul. recip.' does not match anything
+String 'recip.' does not match anything
+Reading energy frame      0 time  100.000         Reading energy frame      1 time  100.250         Reading energy frame      2 time  100.500         Reading energy frame      3 time  100.750         Reading energy frame      4 time  101.000         Reading energy frame      5 time  101.250         Reading energy frame      6 time  101.500         Reading energy frame      7 time  101.750         Reading energy frame      8 time  102.000         Reading energy frame      9 time  102.250         Reading energy frame     10 time  102.500         Reading energy frame     11 time  102.750         Reading energy frame     12 time  103.000         Reading energy frame     13 time  103.250         Reading energy frame     14 time  103.500         Reading energy frame     15 time  103.750         Reading energy frame     16 time  104.000         Reading energy frame     17 time  104.250         Reading energy frame     18 time  104.500         Reading energy frame     19 time  104.750         Reading energy frame     20 time  105.000         Reading energy frame     30 time  107.500         Reading energy frame     40 time  110.000         
+
+GROMACS reminds you: "I'll Master Your Language, and In the Meantime I'll Create My Own" (Tricky)
+
+
+Statistics over 20001 steps [ 100.0000 through 110.0000 ps ], 3 data sets
+All statistics are over 201 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                3.76054e+06        290     788.98   -1546.29  (kJ/mol)
+Temperature                 300.342       0.22     1.1899  -0.839745  (K)
+Pressure                     553087          7    75.6792    36.5314  (bar)
+
+######################################################################
+# 3. GEOMETRIC CONTACT AUDIT AT 100 ps
+######################################################################
+FRAME=200
+TIME_PS=100.0
+
+RESNAME INVENTORY
+RESNAME=HBN N_ATOMS=1680
+RESNAME=PYR N_ATOMS=104
+RESNAME=SOL N_ATOMS=66536
+
+N_WATER_O=16634
+N_NONWATER_ATOMS=1784
+N_HBN_ATOMS=1680
+N_PYR_ATOMS=104
+
+PAIR=WATER_O_vs_NONWATER
+MIN_NM=0.24548950726205368
+P001_NM=0.7343610572462116
+P01_NM=1.3480517405948396
+N_LT_0P10=0
+N_LT_0P15=0
+N_LT_0P20=0
+N_LT_0P25=2
+MIN_PAIR_A=index:44908,name:OW,resname:SOL,resid:10787
+MIN_PAIR_B=index:1703,name:H7,resname:PYR,resid:2
+
+PAIR=WATER_O_vs_HBN
+MIN_NM=0.2629673052293953
+P001_NM=0.7428337504219792
+P01_NM=1.355896449885656
+N_LT_0P10=0
+N_LT_0P15=0
+N_LT_0P20=0
+N_LT_0P25=0
+MIN_PAIR_A=index:30328,name:OW,resname:SOL,resid:7142
+MIN_PAIR_B=index:1669,name:N1670,resname:HBN,resid:1
+
+PAIR=WATER_O_vs_PYR
+MIN_NM=0.24548950726205368
+P001_NM=0.6283700801065515
+P01_NM=1.2295545854989975
+N_LT_0P10=0
+N_LT_0P15=0
+N_LT_0P20=0
+N_LT_0P25=2
+MIN_PAIR_A=index:44908,name:OW,resname:SOL,resid:10787
+MIN_PAIR_B=index:1703,name:H7,resname:PYR,resid:2
+
+WATER_OO_SANITY
+WATER_OO_NEAREST_MIN_NM=0.246406262
+WATER_OO_NEAREST_MEAN_NM=0.271790173
+WATER_OO_NEAREST_P01_NM=0.254683827
+WATER_OO_COUNT_LT_0P20_NM=0
+WATER_OO_COUNT_LT_0P22_NM=0
+
+F46Q_A_GEOMETRY_ANALYSIS_COMPLETE=YES
+
+GEOMETRY_ANALYSIS_STATUS=0
+
+######################################################################
+# 4. CURRENT MD PROGRESS
+######################################################################
+CURRENT_STEP=365500
+CURRENT_TIME_PS=182.750
+ENGINEERED_EXTENSION_PERCENT=82.75
+ENGINEERED_REMAINING_PS=17.250
+
+======================================================================
+F46Q-A AUDIT FINISHED
+FILES_MODIFIED_BY_MD=NO
+ACTIVE_MD_INTERRUPTED=NO
+======================================================================

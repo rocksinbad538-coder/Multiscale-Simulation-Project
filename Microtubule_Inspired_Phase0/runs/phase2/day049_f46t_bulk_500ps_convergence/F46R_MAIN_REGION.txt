@@ -1,0 +1,341 @@
+    return pd.DataFrame(rows)
+
+
+def correlation_windows(
+    system,
+    time,
+    M,
+):
+
+    rows = []
+
+    windows = [
+        (0,200),
+        (50,200),
+        (100,200),
+        (150,200),
+    ]
+
+    for start,end in windows:
+
+        mask = (
+            (time >= start)
+            & (time <= end)
+        )
+
+        t = (
+            time[mask]
+            - time[mask][0]
+        )
+
+        X = M[mask]
+
+        C, origins = (
+            connected_corr(X)
+        )
+
+        iz,zt = (
+            first_zero_integral(
+                t,C
+            )
+        )
+
+        def at(x):
+            return float(
+                C[
+                    np.argmin(
+                        np.abs(t-x)
+                    )
+                ]
+            )
+
+        rows.append({
+            "system": system,
+            "start_ps": start,
+            "end_ps": end,
+            "duration_ps": end-start,
+            "C_2ps": at(2),
+            "C_5ps": at(5),
+            "C_10ps": at(10),
+            "integral_5ps":
+                integral_to(
+                    t,C,5
+                ),
+            "integral_10ps":
+                integral_to(
+                    t,C,10
+                ),
+            "first_zero_integral_ps":
+                iz,
+            "first_zero_time_ps":
+                zt,
+        })
+
+    return pd.DataFrame(rows)
+
+
+# ======================================================================
+# MAIN
+# ======================================================================
+
+def main():
+
+    ap = argparse.ArgumentParser()
+
+    ap.add_argument(
+        "--root",
+        required=True,
+    )
+
+    ap.add_argument(
+        "--preflight-only",
+        action="store_true",
+    )
+
+    args = ap.parse_args()
+
+    root = Path(args.root)
+    out = root / "F46R_collective_200ps"
+
+    out.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    phase_root = Path(
+        "runs/phase1A/accepted/"
+        "hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute"
+    )
+
+    bulk_root = Path(
+        "runs/phase2/day048_f46l_bulk_100ps_orientation"
+    )
+
+    eng_ext_dir = (
+        root/"engineered"
+    )
+
+    bulk_ext_dir = (
+        root/"bulk"
+    )
+
+    eng_ext = discover_extension(
+        eng_ext_dir,
+        "engineered_extend_100ps",
+    )
+
+    bulk_ext = discover_extension(
+        bulk_ext_dir,
+        "bulk_extend_100ps",
+    )
+
+    print("="*76)
+    print("F46R — 0-200 ps COLLECTIVE POLARIZATION ANALYSIS")
+    print("="*76)
+
+    print(
+        f"ENGINEERED_EXTENSION_XTC={eng_ext}"
+    )
+
+    print(
+        f"BULK_EXTENSION_XTC={bulk_ext}"
+    )
+
+    if args.preflight_only:
+
+        print(
+            "ENGINEERED_EXTENSION_AVAILABLE="
+            + (
+                "YES"
+                if eng_ext is not None
+                else "NO"
+            )
+        )
+
+        print(
+            "BULK_EXTENSION_AVAILABLE="
+            + (
+                "YES"
+                if bulk_ext is not None
+                else "NO"
+            )
+        )
+
+        print(
+            "F46R_PREFLIGHT_COMPLETE=YES"
+        )
+
+        return
+
+    if eng_ext is None:
+        raise RuntimeError(
+            "Engineered extension XTC missing."
+        )
+
+    if bulk_ext is None:
+        raise RuntimeError(
+            "Bulk extension XTC missing."
+        )
+
+    systems = {
+        "engineered": {
+            "orig_tpr":
+                phase_root/
+                "nvt_100ps_frozenSolute.tpr",
+
+            "orig_xtc":
+                phase_root/
+                "nvt_100ps_frozenSolute.xtc",
+
+            "ext_tpr":
+                eng_ext_dir/
+                "engineered_200ps.tpr",
+
+            "ext_xtc":
+                eng_ext,
+        },
+
+        "bulk": {
+            "orig_tpr":
+                bulk_root/
+                "nvt_bulk_100ps.tpr",
+
+            "orig_xtc":
+                bulk_root/
+                "nvt_bulk_100ps.xtc",
+
+            "ext_tpr":
+                bulk_ext_dir/
+                "bulk_200ps.tpr",
+
+            "ext_xtc":
+                bulk_ext,
+        },
+    }
+
+    tensors = []
+    correlations = []
+
+    full = {}
+
+    for label,dat in systems.items():
+
+        print()
+        print(
+            f"LOADING_{label.upper()}=YES"
+        )
+
+        time,M,boxes,nwater = (
+            combine_segments(
+                dat["orig_tpr"],
+                dat["orig_xtc"],
+                dat["ext_tpr"],
+                dat["ext_xtc"],
+            )
+        )
+
+        print(
+            f"{label.upper()}_N_WATER="
+            f"{nwater}"
+        )
+
+        print(
+            f"{label.upper()}_N_FRAMES="
+            f"{len(time)}"
+        )
+
+        print(
+            f"{label.upper()}_FIRST_PS="
+            f"{time[0]}"
+        )
+
+        print(
+            f"{label.upper()}_LAST_PS="
+            f"{time[-1]}"
+        )
+
+        dt = np.diff(time)
+
+        complete = (
+            len(time) == 401
+            and abs(time[0]) < 1e-4
+            and abs(time[-1]-200) < 1e-4
+            and np.allclose(
+                dt,
+                0.5,
+                atol=1e-4,
+                rtol=0,
+            )
+        )
+
+        print(
+            f"{label.upper()}_TRAJECTORY_GATE="
+            + (
+                "PASS"
+                if complete
+                else "FAIL"
+            )
+        )
+
+        if not complete:
+            raise RuntimeError(
+                f"{label}: incomplete 0-200 ps trajectory"
+            )
+
+        T,V = fluctuation_tensor(
+            M,
+            boxes,
+        )
+
+        met = tensor_metrics(T)
+
+        C,origins = connected_corr(M)
+
+        iz,zt = first_zero_integral(
+            time,
+            C,
+        )
+
+        full[label] = {
+            "tensor": met,
+            "volume_nm3": V,
+            "first_zero_integral_ps":
+                iz,
+            "first_zero_time_ps":
+                zt,
+            "C_2ps":
+                float(C[4]),
+            "C_5ps":
+                float(C[10]),
+            "C_10ps":
+                float(C[20]),
+        }
+
+        tw = analyze_windows(
+            label,
+            time,
+            M,
+            boxes,
+        )
+
+        cw = correlation_windows(
+            label,
+            time,
+            M,
+        )
+
+        tensors.append(tw)
+        correlations.append(cw)
+
+        pd.DataFrame({
+            "time_ps": time,
+            "C_M_connected": C,
+            "n_origins": origins,
+        }).to_csv(
+            out/
+            f"{label}_collective_C_M_200ps.csv",
+            index=False,
+        )
+
+    tdf = pd.concat(
+        tensors,

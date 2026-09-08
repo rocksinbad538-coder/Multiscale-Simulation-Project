@@ -1,0 +1,36 @@
+                      :-) GROMACS - gmx energy, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx energy -f runs/phase2/day048_f46j_bulk_density_equilibration/npt_25ps.edr -o runs/phase2/day048_f46j_bulk_density_equilibration/density.xvg
+
+Opened runs/phase2/day048_f46j_bulk_density_equilibration/npt_25ps.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  LJ-(SR)          2  Coulomb-(SR)     3  Coul.-recip.     4  Potential     
+  5  Kinetic-En.      6  Total-Energy     7  Conserved-En.    8  Temperature   
+  9  Pressure        10  Box-X           11  Box-Y           12  Box-Z         
+ 13  Volume          14  Density         15  pV              16  Enthalpy      
+ 17  Vir-XX          18  Vir-XY          19  Vir-XZ          20  Vir-YX        
+ 21  Vir-YY          22  Vir-YZ          23  Vir-ZX          24  Vir-ZY        
+ 25  Vir-ZZ          26  Pres-XX         27  Pres-XY         28  Pres-XZ       
+ 29  Pres-YX         30  Pres-YY         31  Pres-YZ         32  Pres-ZX       
+ 33  Pres-ZY         34  Pres-ZZ         35  #Surf*SurfTen   36  T-System      
+ 37  Lamb-System   
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    0.250         Reading energy frame      2 time    0.500         Reading energy frame      3 time    0.750         Reading energy frame      4 time    1.000         Reading energy frame      5 time    1.250         Reading energy frame      6 time    1.500         Reading energy frame      7 time    1.750         Reading energy frame      8 time    2.000         Reading energy frame      9 time    2.250         Reading energy frame     10 time    2.500         Reading energy frame     11 time    2.750         Reading energy frame     12 time    3.000         Reading energy frame     13 time    3.250         Reading energy frame     14 time    3.500         Reading energy frame     15 time    3.750         Reading energy frame     16 time    4.000         Reading energy frame     17 time    4.250         Reading energy frame     18 time    4.500         Reading energy frame     19 time    4.750         Reading energy frame     20 time    5.000         Reading energy frame     30 time    7.500         Reading energy frame     40 time   10.000         Reading energy frame     50 time   12.500         Reading energy frame     60 time   15.000         Reading energy frame     70 time   17.500         Reading energy frame     80 time   20.000         Reading energy frame     90 time   22.500         Reading energy frame    100 time   25.000         Last energy frame read 100 time   25.000         
+
+GROMACS reminds you: "It's easy to remember: a half a kT is equal to five fourths of a kJ/mol." (Anders Gabrielsson)
+
+
+Statistics over 50001 steps [ 0.0000 through 25.0000 ps ], 1 data sets
+All statistics are over 501 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Density                     939.934          8    16.4277    56.5385  (kg/m^3)

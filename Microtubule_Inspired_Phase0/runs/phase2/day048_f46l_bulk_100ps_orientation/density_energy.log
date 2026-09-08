@@ -1,0 +1,35 @@
+                      :-) GROMACS - gmx energy, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx energy -f runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.edr -o runs/phase2/day048_f46l_bulk_100ps_orientation/density.xvg
+
+Opened runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  LJ-(SR)          2  Coulomb-(SR)     3  Coul.-recip.     4  Potential     
+  5  Kinetic-En.      6  Total-Energy     7  Conserved-En.    8  Temperature   
+  9  Pressure        10  Vir-XX          11  Vir-XY          12  Vir-XZ        
+ 13  Vir-YX          14  Vir-YY          15  Vir-YZ          16  Vir-ZX        
+ 17  Vir-ZY          18  Vir-ZZ          19  Pres-XX         20  Pres-XY       
+ 21  Pres-XZ         22  Pres-YX         23  Pres-YY         24  Pres-YZ       
+ 25  Pres-ZX         26  Pres-ZY         27  Pres-ZZ         28  #Surf*SurfTen 
+ 29  T-System        30  Lamb-System   
+
+String 'Density' does not match anything
+
+-------------------------------------------------------
+Program:     gmx energy, version 2025.4
+Source file: src/gromacs/gmxana/gmx_energy.cpp (line 314)
+
+Fatal error:
+No energy terms selected
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------

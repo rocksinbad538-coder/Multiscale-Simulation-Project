@@ -1,0 +1,8 @@
+============================================================================
+F46R — 0-200 ps COLLECTIVE POLARIZATION ANALYSIS
+============================================================================
+ENGINEERED_EXTENSION_XTC=/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_extend_100ps.part0002.xtc
+BULK_EXTENSION_XTC=/Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase2/day048_f46q_collective_200ps_extension/bulk/bulk_extend_100ps.part0002.xtc
+ENGINEERED_EXTENSION_AVAILABLE=YES
+BULK_EXTENSION_AVAILABLE=YES
+F46R_PREFLIGHT_COMPLETE=YES

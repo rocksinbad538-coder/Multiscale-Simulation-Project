@@ -1,0 +1,13 @@
+                      :-) GROMACS - gmx grompp, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0/runs/phase2/day049_f46w_bulk_independent_replicas/R3
+Command line:
+  gmx grompp -f equil_20ps.mdp -c equilibrated_start.gro -p bulk_water.top -o equil_20ps.tpr -po equil_20ps_mdout.mdp
+
+Generating 1-4 interactions: fudge = 1
+Number of degrees of freedom in T-Coupling group System is 99801.00
+
+GROMACS reminds you: "Requiem, bring the dissident from slumber" (Bad Religion)
+

@@ -1,0 +1,26 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -deffnm runs/phase2/day048_f46j_bulk_density_equilibration/npt_25ps
+
+Reading file runs/phase2/day048_f46j_bulk_density_equilibration/npt_25ps.tpr, VERSION 2025.4 (single precision)
+Changing nstlist from 20 to 100, rlist from 1.2 to 1.254
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+starting mdrun 'Architecture-removed matched TIP4P/2005 water control'
+50000 steps,     25.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    10686.354      890.531     1200.0
+                 (ns/day)    (hour/ns)
+Performance:        2.426        9.895
+
+GROMACS reminds you: "It's easy to remember: a half a kT is equal to five fourths of a kJ/mol." (Anders Gabrielsson)
+

@@ -1,0 +1,40 @@
+                      :-) GROMACS - gmx energy, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx energy -f runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_extend_100ps.part0002.edr -b 100 -e 110 -o runs/phase2/day048_f46q_collective_200ps_extension/F46Q_B_solute_repulsion_audit/extension_100_110_energy.xvg
+
+Opened runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_extend_100ps.part0002.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Per.-Imp.-Dih.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Coulomb-(SR)  
+  9  Coul.-recip.    10  Potential       11  Kinetic-En.     12  Total-Energy  
+ 13  Conserved-En.   14  Temperature     15  Pressure        16  Vir-XX        
+ 17  Vir-XY          18  Vir-XZ          19  Vir-YX          20  Vir-YY        
+ 21  Vir-YZ          22  Vir-ZX          23  Vir-ZY          24  Vir-ZZ        
+ 25  Pres-XX         26  Pres-XY         27  Pres-XZ         28  Pres-YX       
+ 29  Pres-YY         30  Pres-YZ         31  Pres-ZX         32  Pres-ZY       
+ 33  Pres-ZZ         34  #Surf*SurfTen   35  T-System        36  Lamb-System   
+
+Reading energy frame      0 time  100.000         Reading energy frame      1 time  100.250         Reading energy frame      2 time  100.500         Reading energy frame      3 time  100.750         Reading energy frame      4 time  101.000         Reading energy frame      5 time  101.250         Reading energy frame      6 time  101.500         Reading energy frame      7 time  101.750         Reading energy frame      8 time  102.000         Reading energy frame      9 time  102.250         Reading energy frame     10 time  102.500         Reading energy frame     11 time  102.750         Reading energy frame     12 time  103.000         Reading energy frame     13 time  103.250         Reading energy frame     14 time  103.500         Reading energy frame     15 time  103.750         Reading energy frame     16 time  104.000         Reading energy frame     17 time  104.250         Reading energy frame     18 time  104.500         Reading energy frame     19 time  104.750         Reading energy frame     20 time  105.000         Reading energy frame     30 time  107.500         Reading energy frame     40 time  110.000         
+
+GROMACS reminds you: "Contemplating answers that could break my bonds." (Peter Hammill)
+
+
+Statistics over 20001 steps [ 100.0000 through 110.0000 ps ], 6 data sets
+All statistics are over 201 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+LJ (SR)                  4.68522e+06        190    864.237    893.248  (kJ/mol)
+Coulomb (SR)                -927264        470    1379.48   -2408.43  (kJ/mol)
+Coul. recip.                2292.51        5.4    47.2754   -31.1063  (kJ/mol)
+Potential                3.76054e+06        290     788.98   -1546.29  (kJ/mol)
+Temperature                 300.342       0.22     1.1899  -0.839745  (K)
+Pressure                     553087          7    75.6792    36.5314  (bar)

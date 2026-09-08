@@ -1,0 +1,26 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /Users/alejandro/projects/Multiscale-Simulation-Project/Microtubule_Inspired_Phase0
+Command line:
+  gmx mdrun -deffnm runs/phase2/day048_f46k_bulk_npt_continuation/npt_continue_25ps
+
+Reading file runs/phase2/day048_f46k_bulk_npt_continuation/npt_continue_25ps.tpr, VERSION 2025.4 (single precision)
+Changing nstlist from 20 to 100, rlist from 1.2 to 1.255
+
+Using 1 MPI thread
+Using 12 OpenMP threads 
+
+starting mdrun 'Architecture-removed matched TIP4P/2005 water control'
+50000 steps,     25.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    10672.688      889.391     1200.0
+                 (ns/day)    (hour/ns)
+Performance:        2.429        9.882
+
+GROMACS reminds you: "I'd be Safe and Warm if I was in L.A." (The Mamas and the Papas)
+

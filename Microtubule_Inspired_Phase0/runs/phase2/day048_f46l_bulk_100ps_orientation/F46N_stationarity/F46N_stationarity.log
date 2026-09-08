@@ -1,0 +1,87 @@
+======================================================================
+F46N — ORIENTATIONAL RELAXATION STATIONARITY AUDIT
+POSTPROCESSING ONLY
+======================================================================
+LOADING_ENGINEERED=YES
+LOADING_BULK=YES
+
+========================================================================
+F46N WINDOW RESULTS
+========================================================================
+    system  start_ps  end_ps  duration_ps  fit_limit_ps  C1_tau_kww_ps  C1_beta  C1_tau_integrated_ps  C1_integral_10ps  C2_tau_kww_ps  C2_beta  C2_tau_integrated_ps  C2_integral_10ps
+engineered         0     100          100          20.0       4.996634 0.807472              5.624045          4.291810       1.444430 0.640294              2.007254          1.878039
+engineered        25     100           75          20.0       4.772255 0.800397              5.405059          4.173938       1.356859 0.638730              1.890861          1.785614
+engineered        50     100           50          20.0       4.728630 0.802134              5.347376          4.150834       1.347730 0.638048              1.880449          1.777109
+engineered        75     100           25          10.0       4.716334 0.771025              5.492636          4.115691       1.324901 0.630333              1.875032          1.753733
+      bulk         0     100          100          20.0       4.562582 0.808491              5.130959          4.061565       1.303085 0.647760              1.787234          1.706778
+      bulk        25     100           75          20.0       4.575333 0.807090              5.151552          4.068422       1.305045 0.647756              1.789934          1.708861
+      bulk        50     100           50          20.0       4.600897 0.806317              5.183824          4.083283       1.310590 0.647257              1.799091          1.717179
+      bulk        75     100           25          10.0       4.700800 0.768163              5.490435          4.108089       1.312597 0.635483              1.839991          1.730710
+
+========================================================================
+ENGINEERED / BULK RATIOS BY WINDOW
+========================================================================
+
+WINDOW_PS=0-100
+C1_tau_integrated_ps_RATIO=1.096100172454
+C1_tau_integrated_ps_PERCENT=9.610017
+C1_integral_10ps_RATIO=1.056688803284
+C1_integral_10ps_PERCENT=5.668880
+C2_tau_integrated_ps_RATIO=1.123106010411
+C2_tau_integrated_ps_PERCENT=12.310601
+C2_integral_10ps_RATIO=1.100342222167
+C2_integral_10ps_PERCENT=10.034222
+
+WINDOW_PS=25-100
+C1_tau_integrated_ps_RATIO=1.049209840170
+C1_tau_integrated_ps_PERCENT=4.920984
+C1_integral_10ps_RATIO=1.025935387489
+C1_integral_10ps_PERCENT=2.593539
+C2_tau_integrated_ps_RATIO=1.056385641742
+C2_tau_integrated_ps_PERCENT=5.638564
+C2_integral_10ps_RATIO=1.044914656207
+C2_integral_10ps_PERCENT=4.491466
+
+WINDOW_PS=50-100
+C1_tau_integrated_ps_RATIO=1.031550565022
+C1_tau_integrated_ps_PERCENT=3.155057
+C1_integral_10ps_RATIO=1.016543309308
+C1_integral_10ps_PERCENT=1.654331
+C2_tau_integrated_ps_RATIO=1.045221188776
+C2_tau_integrated_ps_PERCENT=4.522119
+C2_integral_10ps_RATIO=1.034900360666
+C2_integral_10ps_PERCENT=3.490036
+
+WINDOW_PS=75-100
+C1_tau_integrated_ps_RATIO=1.000400896943
+C1_tau_integrated_ps_PERCENT=0.040090
+C1_integral_10ps_RATIO=1.001850448099
+C1_integral_10ps_PERCENT=0.185045
+C2_tau_integrated_ps_RATIO=1.019044419686
+C2_tau_integrated_ps_PERCENT=1.904442
+C2_integral_10ps_RATIO=1.013302674807
+C2_integral_10ps_PERCENT=1.330267
+
+========================================================================
+STATIONARITY DIAGNOSTIC
+========================================================================
+C1_tau_integrated_ps_PERCENT_SEQUENCE=9.610017,4.920984,3.155057,0.040090
+C1_tau_integrated_ps_MONOTONIC_DECLINE=YES
+C1_integral_10ps_PERCENT_SEQUENCE=5.668880,2.593539,1.654331,0.185045
+C1_integral_10ps_MONOTONIC_DECLINE=YES
+C2_tau_integrated_ps_PERCENT_SEQUENCE=12.310601,5.638564,4.522119,1.904442
+C2_tau_integrated_ps_MONOTONIC_DECLINE=YES
+C2_integral_10ps_PERCENT_SEQUENCE=10.034222,4.491466,3.490036,1.330267
+C2_integral_10ps_MONOTONIC_DECLINE=YES
+
+F46N_ANALYSIS_COMPLETE=YES
+
+F46N_ANALYSIS_STATUS=0
+F46N_GATE=PASS
+
+======================================================================
+F46N SAFE ANALYSIS FINISHED
+NEW_MD_SIMULATIONS=0
+NEW_QM_CALCULATIONS=0
+NEW_EXCITON_DYNAMICS=0
+======================================================================

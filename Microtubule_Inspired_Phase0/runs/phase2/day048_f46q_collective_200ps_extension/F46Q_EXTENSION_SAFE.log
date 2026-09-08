@@ -1,0 +1,121 @@
+======================================================================
+F46Q — COLLECTIVE POLARIZATION SAMPLING EXTENSION
+ENGINEERED + BULK
+100 ps -> 200 ps cumulative
+======================================================================
+GMX=/usr/local/gromacs/bin/gmx
+
+######################################################################
+# 1. PREFLIGHT
+######################################################################
+INPUT_EXISTS=YES runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.tpr
+INPUT_EXISTS=YES runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.cpt
+INPUT_EXISTS=YES runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.xtc
+INPUT_EXISTS=YES runs/phase1A/accepted/hybrid_hydrated_gap45_pyr5shift_clean032_nvt_100ps_frozenSolute/nvt_100ps_frozenSolute.gro
+INPUT_EXISTS=YES runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.tpr
+INPUT_EXISTS=YES runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.cpt
+INPUT_EXISTS=YES runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.xtc
+INPUT_EXISTS=YES runs/phase2/day048_f46l_bulk_100ps_orientation/nvt_bulk_100ps.gro
+
+INPUT_GATE=YES
+
+######################################################################
+# 2. VERIFY ORIGINAL 100 ps ENDPOINTS
+######################################################################
+ENGINEERED_N_FRAMES=201
+ENGINEERED_FIRST_PS=0.0
+ENGINEERED_LAST_PS=100.0
+ENGINEERED_100PS_GATE=PASS
+BULK_N_FRAMES=201
+BULK_FIRST_PS=0.0
+BULK_LAST_PS=100.0
+BULK_100PS_GATE=PASS
+ORIGINAL_TRAJECTORIES_GATE=PASS
+ORIGINAL_CHECK_STATUS=0
+
+######################################################################
+# 3. EXTEND VALIDATED TPRS BY +100 ps
+######################################################################
+ENGINEERED_CONVERT_TPR_STATUS=0
+BULK_CONVERT_TPR_STATUS=0
+
+######################################################################
+# 4. ENGINEERED: 100 -> 200 ps
+######################################################################
+ENGINEERED_EXTENSION_START=Sat Sep  5 15:51:48 CDT 2026
+ENGINEERED_MDRUN_STATUS=0
+ENGINEERED_EXTENSION_END=Sun Sep  6 14:34:19 CDT 2026
+F46Q_ENGINEERED_GATE=PASS
+
+----- ENGINEERED completion -----
+grep: runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_extend_100ps.log: No such file or directory
+
+######################################################################
+# 5. BULK: 100 -> 200 ps
+######################################################################
+BULK_EXTENSION_START=Sun Sep  6 14:34:19 CDT 2026
+BULK_MDRUN_STATUS=0
+BULK_EXTENSION_END=Sun Sep  6 15:43:56 CDT 2026
+F46Q_BULK_GATE=PASS
+
+----- BULK completion -----
+grep: runs/phase2/day048_f46q_collective_200ps_extension/bulk/bulk_extend_100ps.log: No such file or directory
+
+######################################################################
+# 6. EXTENSION OUTPUT INVENTORY
+######################################################################
+-rw-r--r--@ 1 alejandro  staff   4.5M Sep  6 14:34 runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_extend_100ps.part0002.gro
+-rw-r--r--@ 1 alejandro  staff     0B Sep  5 15:51 runs/phase2/day048_f46q_collective_200ps_extension/engineered/mdrun_stdout.log
+-rw-r--r--@ 1 alejandro  staff   240K Sep  6 14:34 runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_extend_100ps.part0002.log
+-rw-r--r--@ 1 alejandro  staff    45M Sep  6 14:34 runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_extend_100ps.part0002.xtc
+-rw-r--r--@ 1 alejandro  staff   1.6M Sep  6 14:34 runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_extend_100ps.cpt
+-rw-r--r--@ 1 alejandro  staff   1.5K Sep  5 15:51 runs/phase2/day048_f46q_collective_200ps_extension/engineered/convert_tpr.log
+-rw-r--r--@ 1 alejandro  staff   1.4K Sep  6 14:34 runs/phase2/day048_f46q_collective_200ps_extension/engineered/mdrun_stderr.log
+-rw-r--r--@ 1 alejandro  staff   1.6M Sep  6 14:34 runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_extend_100ps_prev.cpt
+-rw-r--r--@ 1 alejandro  staff     0B Sep  6 14:34 runs/phase2/day048_f46q_collective_200ps_extension/bulk/mdrun_stdout.log
+-rw-r--r--@ 1 alejandro  staff   1.4K Sep  5 15:51 runs/phase2/day048_f46q_collective_200ps_extension/bulk/convert_tpr.log
+-rw-r--r--@ 1 alejandro  staff   4.4M Sep  6 15:43 runs/phase2/day048_f46q_collective_200ps_extension/bulk/bulk_extend_100ps.part0002.gro
+-rw-r--r--@ 1 alejandro  staff   1.1K Sep  6 15:43 runs/phase2/day048_f46q_collective_200ps_extension/bulk/mdrun_stderr.log
+-rw-r--r--@ 1 alejandro  staff   1.5M Sep  6 15:43 runs/phase2/day048_f46q_collective_200ps_extension/bulk/bulk_extend_100ps_prev.cpt
+-rw-r--r--@ 1 alejandro  staff   1.5M Sep  6 15:43 runs/phase2/day048_f46q_collective_200ps_extension/bulk/bulk_extend_100ps.cpt
+-rw-r--r--@ 1 alejandro  staff    43M Sep  6 15:43 runs/phase2/day048_f46q_collective_200ps_extension/bulk/bulk_extend_100ps.part0002.xtc
+-rw-r--r--@ 1 alejandro  staff   164K Sep  6 15:43 runs/phase2/day048_f46q_collective_200ps_extension/bulk/bulk_extend_100ps.part0002.log
+
+######################################################################
+# 7. EXTENSION TRAJECTORY VALIDATION
+######################################################################
+
+ENGINEERED_XTC_CANDIDATES=1
+ENGINEERED_EXTENSION_XTC=runs/phase2/day048_f46q_collective_200ps_extension/engineered/engineered_extend_100ps.part0002.xtc
+ENGINEERED_EXTENSION_N_FRAMES=201
+ENGINEERED_EXTENSION_FIRST_PS=100.0
+ENGINEERED_EXTENSION_LAST_PS=200.0
+ENGINEERED_EXTENSION_DT_PS=0.5
+ENGINEERED_EXTENSION_GATE=PASS
+
+BULK_XTC_CANDIDATES=1
+BULK_EXTENSION_XTC=runs/phase2/day048_f46q_collective_200ps_extension/bulk/bulk_extend_100ps.part0002.xtc
+BULK_EXTENSION_N_FRAMES=201
+BULK_EXTENSION_FIRST_PS=100.0
+BULK_EXTENSION_LAST_PS=200.0
+BULK_EXTENSION_DT_PS=0.5
+BULK_EXTENSION_GATE=PASS
+
+F46Q_TRAJECTORY_GATE=PASS
+
+TRAJECTORY_VALIDATION_STATUS=0
+F46Q_MD_EXTENSION=COMPLETE
+
+F46Q_NEXT_STEP=
+CONCATENATE_0_200PS_AND_RETEST_COLLECTIVE_ISOTROPY
+
+F46Q_GATE=POSTRUN_REVIEW_REQUIRED
+
+======================================================================
+F46Q SAFE EXTENSION FINISHED
+TARGET_CUMULATIVE_TIME_PS=200
+NEW_QM_CALCULATIONS=0
+NEW_EXCITON_DYNAMICS=0
+DIELECTRIC_RESPONSE_NOT_YET_EXTRACTED=YES
+LOG=runs/phase2/day048_f46q_collective_200ps_extension/F46Q_EXTENSION_SAFE.log
+======================================================================
