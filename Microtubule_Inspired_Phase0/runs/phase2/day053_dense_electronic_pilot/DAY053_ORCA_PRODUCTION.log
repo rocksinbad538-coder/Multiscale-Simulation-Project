@@ -1,0 +1,30 @@
+========================================================================
+DAY053 DENSE ELECTRONIC PILOT
+ORCA = /Users/alejandro/projects/orca_6_1_1_macosx_intel_openmpi411/orca
+MAX_CONCURRENT = 2
+NEW_JOBS = 20
+ANCHOR_SKIPPED = dense000_PYR3,dense000_PYR4
+========================================================================
+dense001_PYR4 RC=0 NORMAL=True STATUS=PASS
+dense001_PYR3 RC=0 NORMAL=True STATUS=PASS
+dense002_PYR3 RC=0 NORMAL=True STATUS=PASS
+dense002_PYR4 RC=0 NORMAL=True STATUS=PASS
+dense003_PYR3 RC=0 NORMAL=True STATUS=PASS
+dense003_PYR4 RC=0 NORMAL=True STATUS=PASS
+dense004_PYR3 RC=0 NORMAL=True STATUS=PASS
+dense004_PYR4 RC=0 NORMAL=True STATUS=PASS
+dense005_PYR3 RC=0 NORMAL=True STATUS=PASS
+dense005_PYR4 RC=0 NORMAL=True STATUS=PASS
+dense006_PYR4 RC=0 NORMAL=True STATUS=PASS
+dense006_PYR3 RC=0 NORMAL=True STATUS=PASS
+dense007_PYR3 RC=0 NORMAL=True STATUS=PASS
+dense007_PYR4 RC=0 NORMAL=True STATUS=PASS
+dense008_PYR4 RC=0 NORMAL=True STATUS=PASS
+dense008_PYR3 RC=0 NORMAL=True STATUS=PASS
+dense009_PYR3 RC=0 NORMAL=True STATUS=PASS
+dense009_PYR4 RC=0 NORMAL=True STATUS=PASS
+dense010_PYR3 RC=0 NORMAL=True STATUS=PASS
+dense010_PYR4 RC=0 NORMAL=True STATUS=PASS
+========================================================================
+FAILED_JOBS = 0
+PRODUCTION_GATE = PASS

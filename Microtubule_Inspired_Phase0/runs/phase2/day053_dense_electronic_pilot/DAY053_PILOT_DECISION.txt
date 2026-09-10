@@ -1,0 +1,29 @@
+DAY053 DENSE ELECTRONIC PILOT DECISION
+
+ORCA production:
+20/20 new jobs PASS.
+
+State tracking:
+PASS.
+PYR3 tracked root: S2.
+PYR4 tracked root: S2.
+Minimum HOMO-LUMO character weight: 0.820503.
+Accepted threshold: 0.70.
+
+50-fs gap statistics:
+Mean PYR3-PYR4 gap = -18.636364 meV.
+Gap SD = 12.371522 meV.
+Mean absolute 50-fs step = 15.500000 meV.
+Maximum absolute 50-fs step = 36.000000 meV.
+Max-step / gap-SD ratio = 2.909909.
+Lag-1 correlation = -0.266103.
+
+Decision:
+50-fs electronic sampling is NOT accepted as converged for microscopic bath characterization.
+
+Interpretation boundary:
+This result demonstrates insufficient temporal resolution at 50 fs for the present purpose.
+It does NOT yet establish a microscopic correlation time or coherence lifetime.
+
+Next step:
+Refine the same 100.00-100.50 ps window using denser electronic sampling, beginning with a 20-fs design and preserving the accepted M4 state-tracking protocol.
